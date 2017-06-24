@@ -1,0 +1,86 @@
+﻿@model Chords.ViewModels.ChordDecorator
+<h4>Chord layouts:</h4>
+<p>
+@Model.Layouts.Length results
+@foreach(var layout in Model.Layouts)
+{
+    <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 chord-layout" title="@layout.GuitarChordType @@ fret @layout.Fret @if(!layout.Complete){@Html.Raw("(partial)")}">
+        @if (layout.Complete)
+        {
+            <div class="chordlayout">@Html.Raw(layout.ToString().Replace("\n", "<br />"))</div>
+        }
+        else
+        {
+            <div class="chordlayout incomplete">@Html.Raw(layout.ToString().Replace("\n", "<br />"))</div>
+        }
+        <div class="chordschema">
+        @for(var f = 0; f < 5; f++)
+        {
+            if (f == 0)
+            {
+                <div style="font-family: monospace;">@{
+                    @Html.Raw(string.Format("[{0}]&nbsp;{1}", layout.RenderingFret, layout.RenderingFret < 10 ? "&nbsp;" : ""))
+                    if (layout.RenderingFret == 0)
+                    {
+                        @Html.Raw("=")
+                    }
+                    else
+                    {
+                        @Html.Raw("-")
+                    }
+                    for(var s = 0; s < 6; s++)
+                    {
+                        if(layout.Positions[s] == "0" ||
+                           layout.Positions[s] == "X")
+                        {
+                            if (layout.Positions[s] == "X")
+                            {
+                                @Html.Raw("<span class=\"X\">X</span>")
+                            }
+                            else
+                            {
+                                @Html.Raw("<span class=\"O\">O</span>")
+                            }
+                            if (layout.RenderingFret == 0)
+                            {
+                                @Html.Raw("=")
+                            }
+                            else
+                            {
+                                @Html.Raw("-")
+                            }
+                        }
+                        else if (layout.RenderingFret == 0)
+                        {
+                            @Html.Raw("==")
+                        }
+                        else
+                        {
+                            @Html.Raw("--")
+                        }
+                    }               
+                }
+                </div>
+                continue;
+            }
+            <div style="font-family: monospace;">@Html.Raw(string.Format("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|"))@{
+                for(var s = 0; s < 6; s++)
+                {
+                    if(layout.IntPositions[s] == layout.RenderingFret + f)
+                    {
+                        @Html.Raw("<span class=\"O\">O</span>")
+                    }
+                    else
+                    {
+                        @Html.Raw("&nbsp;")
+                    }
+                    @Html.Raw("|")
+                }
+            }
+            </div>
+            <div style="font-family: monospace;">@Html.Raw(string.Format("[{0}]&nbsp;{1}", layout.RenderingFret + f, layout.RenderingFret + f < 10 ? "&nbsp;" : ""))-------------</div>
+        }
+        </div>
+    </div>
+}
+</p>

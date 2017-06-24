@@ -1,0 +1,49 @@
+﻿@model Chords.Models.Chord
+@{
+    var otherSymbols = Model.Symbols.Skip(1);
+    var parameters = ViewData["parameters"] as Chords.ViewModels.ShowChordParams;
+}
+<h2>@Model.Symbols[0]</h2>
+
+@if (otherSymbols.Any())
+{
+    <h4>Other symbols:</h4>
+    foreach(var otherSymbol in otherSymbols)
+    {
+        <span>@otherSymbol</span>
+    }
+}
+<h4>Chord intervals:</h4>
+<p>
+@foreach(var interval in Model.Intervals)
+{
+	<span>@interval</span>
+}
+</p>
+
+<h4>Chord notes:</h4>
+<p>
+@foreach(var note in Model.Notes)
+{
+	<span>@note</span>
+}
+</p>
+<div class="error" id="error"></div>
+<div id="loader"></div>
+<div id="layouts" class="animate-bottom"></div>
+<script type="text/javascript">
+	$(document).ready(function(){
+	    $.ajax({
+	        url: '@Html.Raw(Url.Action("ShowChordLayouts", parameters))',
+	        type: 'get',
+	        success: function (data) {
+                $('#loader').hide();
+	            $('#layouts').html(data);
+	            $('#layouts').show();
+	        },
+            error: function (xhr, status, message) {
+	            $('#error').html(message);
+	        }
+        });
+	});
+</script>

@@ -1,0 +1,23 @@
+﻿@using Chords.Models
+@{
+    ViewData["Title"] = "Home Page";
+}
+@using(Html.BeginForm("ShowChord", "Home", FormMethod.Get))
+{
+    @Html.DropDownList("root", null, new { title="Root" })
+    @Html.DropDownList("type", null, new { title="Chord type" })
+    @Html.DropDownList("conv", null, new { title="Naming convention", onchange="updateNamingConvention(this.value);" })
+    <input type="submit" value="Find" />
+    <br />
+    <input type="checkbox" name="partial" value="true" checked="checked" /> @Html.Raw("Allow partial chords")
+    <input type="checkbox" name="special" value="true" /> @Html.Raw("Allow special chords")
+}
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="error">@TempData["ErrorMessage"]</div>
+}
+<script type="text/javascript">
+	function updateNamingConvention(value) {
+	    location = "@Url.Action("Index")?conv=" + value;
+	}
+</script>
