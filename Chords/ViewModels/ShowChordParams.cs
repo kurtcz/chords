@@ -1,5 +1,5 @@
 ﻿using System;
-using Chords.Models;
+using Chords.Core.Models;
 
 namespace Chords.ViewModels
 {

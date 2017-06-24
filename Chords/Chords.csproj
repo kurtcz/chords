@@ -17,9 +17,9 @@
 
 
   <ItemGroup>
-    <Folder Include="Models\" />
-    <Folder Include="Extensions\" />
     <Folder Include="ViewModels\" />
-    <Folder Include="Attributes\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Chords.Core\Chords.Core.csproj" />
   </ItemGroup>
 </Project>

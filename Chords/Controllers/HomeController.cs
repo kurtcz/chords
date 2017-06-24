@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Caching.Memory;
-using Chords.Models;
+using Chords.Core.Models;
 using Chords.ViewModels;
 
 namespace Chords.Controllers
@@ -13,9 +13,9 @@ namespace Chords.Controllers
         public HomeController(IMemoryCache cache)
         {
             _cache = cache;
-        }
+		}
 
-        public IActionResult Index([FromQuery] NamingConvention conv)
+		public IActionResult Index([FromQuery] NamingConvention conv)
         {
             ViewData["conv"] = Helper.NamingConventionList(conv);
             ViewData["root"] = Helper.Notes[conv];
@@ -34,11 +34,19 @@ namespace Chords.Controllers
 			try
 			{
 				var id = $"{parameters.root}{parameters.@type}";
-				var chord = Chord.Parse(id, parameters.conv);
+                Chord chord;
+
+                if (!Chord.TryParse(id, parameters.conv, out chord))
+                {
+                    TempData["ErrorMessage"] = $"{id} is not a valid chord";
+					return RedirectToAction("Index");
+                }
+
+                var chordDecorator = new ChordDecorator(chord, parameters.conv);
 
                 ViewData["parameters"] = parameters;
 
-				return View(chord);
+				return View(chordDecorator);
 			}
 			catch (Exception ex)
 			{
@@ -65,10 +73,16 @@ namespace Chords.Controllers
 				try
 				{
                     var chordSymbol = $"{parameters.root}{parameters.@type}";
-                    var chord = Chord.Parse(chordSymbol, parameters.conv);
-					var chordDecorator = new ChordDecorator(chord, parameters.special, parameters.@partial);
+                    Chord chord;
 
-					return chordDecorator;
+                    if (!Chord.TryParse(chordSymbol, parameters.conv, out chord))
+                    {
+                        return null;
+                    }
+                    var chordDecorator = new ChordDecorator(chord, parameters.conv);
+                    var layouts = chordDecorator.GenerateLayouts(parameters.special, parameters.@partial);
+
+                    return layouts;
 				}
 				catch (Exception)
 				{

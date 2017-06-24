@@ -1,7 +1,7 @@
 ﻿using System;
-using Chords.Attributes;
+using Chords.Core.Attributes;
 
-namespace Chords.Models
+namespace Chords.Core.Models
 {
 	public enum Tone
 	{

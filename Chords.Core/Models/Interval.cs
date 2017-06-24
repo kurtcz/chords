@@ -1,7 +1,7 @@
 ﻿using System;
-using Chords.Attributes;
+using Chords.Core.Attributes;
 
-namespace Chords.Models
+namespace Chords.Core.Models
 {
 	//P: Perfect, m: Minor, M: Major, d: Diminished, A: Augmented
 	public enum Interval
@@ -20,7 +20,7 @@ namespace Chords.Models
         P12, 
         [Descriptor("15")]
         P15,
-        [Descriptor("min2")]
+        [Descriptor("m2")]
         m2, 
         [Descriptor("m3")]
         m3, 
@@ -36,23 +36,51 @@ namespace Chords.Models
         m13, 
         [Descriptor("m14")]
         m14, 
-		[Descriptor("maj2")]
+		[Descriptor("2")]
 		M2,
-		[Descriptor("maj3")]
+		[Descriptor("3")]
 		M3,
-		[Descriptor("maj6")]
+		[Descriptor("6")]
 		M6,
-		[Descriptor("maj7")]
+		[Descriptor("7")]
 		M7,
-		[Descriptor("maj9")]
+		[Descriptor("9")]
 		M9,
-		[Descriptor("maj10")]
+		[Descriptor("10")]
 		M10,
-		[Descriptor("maj13")]
+		[Descriptor("13")]
 		M13,
-		[Descriptor("maj14")]
+		[Descriptor("14")]
 		M14,
-		[Descriptor("#1")]
+		[Descriptor("b2")]
+		d2,
+		[Descriptor("b3")]
+		d3,
+		[Descriptor("b4")]
+		d4,
+		[Descriptor("b5")]
+		d5,
+		[Descriptor("b6")]
+		d6,
+		[Descriptor("b7")]
+		d7,
+		[Descriptor("b8")]
+		d8,
+		[Descriptor("b9")]
+		d9,
+		[Descriptor("b10")]
+		d10,
+		[Descriptor("b11")]
+		d11,
+		[Descriptor("b12")]
+		d12,
+		[Descriptor("b13")]
+		d13,
+		[Descriptor("b14")]
+		d14,
+		[Descriptor("b15")]
+		d15,
+        [Descriptor("#1")]
         A1, 
         [Descriptor("#2")]
         A2, 
@@ -81,34 +109,6 @@ namespace Chords.Models
         [Descriptor("#14")]
         A14, 
         [Descriptor("#15")]
-        A15,
-        [Descriptor("b2")]
-        d2, 
-        [Descriptor("b3")] 
-        d3, 
-        [Descriptor("b4")] 
-        d4, 
-        [Descriptor("b5")] 
-        d5, 
-        [Descriptor("b6")] 
-        d6, 
-        [Descriptor("b7")] 
-        d7, 
-        [Descriptor("b8")] 
-        d8, 
-        [Descriptor("b9")] 
-        d9, 
-        [Descriptor("b10")] 
-        d10, 
-        [Descriptor("b11")] 
-        d11, 
-        [Descriptor("b12")] 
-        d12, 
-        [Descriptor("b13")] 
-        d13, 
-        [Descriptor("b14")] 
-        d14, 
-        [Descriptor("b15")] 
-        d15
+        A15
     }
 }

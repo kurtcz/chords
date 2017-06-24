@@ -1,8 +1,8 @@
-﻿@model Chords.ViewModels.ChordDecorator
+﻿@model Chords.ViewModels.GuitarChordLayoutDecorator[]
 <h4>Chord layouts:</h4>
 <p>
-@Model.Layouts.Length results
-@foreach(var layout in Model.Layouts)
+@Model.Length results
+@foreach(var layout in Model)
 {
     <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 chord-layout" title="@layout.GuitarChordType @@ fret @layout.Fret @if(!layout.Complete){@Html.Raw("(partial)")}">
         @if (layout.Complete)

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Chords.Attributes
+namespace Chords.Core.Attributes
 {
     [AttributeUsage(AttributeTargets.All)]
 	public class DescriptorAttribute : Attribute

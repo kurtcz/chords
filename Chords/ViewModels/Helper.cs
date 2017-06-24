@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using Chords.Extensions;
-using Chords.Models;
+using Chords.Core.Extensions;
+using Chords.Core.Models;
 
 namespace Chords.ViewModels
 {
@@ -14,8 +14,8 @@ namespace Chords.ViewModels
 				.Cast<ChordType>()
 				.Select(i => new SelectListItem
 				{
-					Text = i.ToDescription(),
-					Value = i.ToDescription(returnNullIfNoOrEmptyDescription: true) ?? string.Empty
+                    Text = i.ToDescription() ?? i.ToString(),
+					Value = i.ToDescription() ?? string.Empty
 				});
 
 		public static readonly Dictionary<NamingConvention, SelectList> Notes = new Dictionary<NamingConvention, SelectList>

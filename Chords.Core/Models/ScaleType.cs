@@ -1,8 +1,9 @@
 ﻿using System;
-namespace Chords.Models
+namespace Chords.Core.Models
 {
     public enum ScaleType
     {
+        Chromatic,
         Major,
         Minor
     }
