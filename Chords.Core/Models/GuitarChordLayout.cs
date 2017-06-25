@@ -50,7 +50,7 @@ namespace Chords.Core.Models
                 {
                     var note = _strings[s].NoteAtChromaticDistance(pos);
 
-                    if (chord.Notes.Any(i => i == note))
+                    if (chord.Notes.Any(i => Note.Normalize(i) == note))
                     {
                         positionsPerString[s].Add(pos);
                     }
@@ -139,7 +139,7 @@ namespace Chords.Core.Models
 					continue;
 				}
                 var note = _strings[s].NoteAtChromaticDistance(Positions[s]);
-                var noteFromChord = _chord.Notes.FirstOrDefault(i => i == note);
+                var noteFromChord = _chord.Notes.FirstOrDefault(i => Note.Normalize(i) == note);
 
                 if (noteFromChord != null)
 				{

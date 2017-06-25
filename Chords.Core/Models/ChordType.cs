@@ -5,6 +5,7 @@ namespace Chords.Core.Models
 {
 	public enum ChordType
 	{
+        [Descriptor("")]
 		Major,
         [Descriptor("mi", "m")]
 		Minor,
@@ -40,7 +41,7 @@ namespace Chords.Core.Models
 		DominantSeventhSharp11,
 		[Descriptor("7sus4")]
         SeventhSus4,
-        [Descriptor("dim7")]
+        [Descriptor("dim7", "°7")]
         DiminishedSeventh,
         [Descriptor("sus2")]
 		Sus2,

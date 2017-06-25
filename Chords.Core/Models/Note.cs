@@ -131,33 +131,12 @@ namespace Chords.Core.Models
                 return normalizedNote;
             }
 
-            if (normalizedNote.Tone < tone)
-            {
-                switch (normalizedNote.Accidental)
-                {
-                    case Accidental.Natural:
-                        if (normalizedNote.Tone == Tone.E || normalizedNote.Tone == Tone.B)
-                        {
-                            return new Note(tone, Accidental.Flat);
-                        }
-                        return new Note(tone, Accidental.DoubleFlat);
-                    case Accidental.Sharp:
-						return new Note(tone, Accidental.Flat);
-				}
-            }
-            else //tone < normalizedNote.Tone
-			{
-				switch (normalizedNote.Accidental)
-				{
-					case Accidental.Natural:
-						if (normalizedNote.Tone == Tone.C || normalizedNote.Tone == Tone.F)
-						{
-							return new Note(tone, Accidental.Sharp);
-						}
-						return new Note(tone, Accidental.DoubleSharp);
-				}
-			}
-            throw new InvalidOperationException();
+			var note = new Note(tone);
+            int correction = tone > normalizedNote.Tone
+                              ? -normalizedNote.ChromaticDistance(note)
+                              : -note.ChromaticDistance(normalizedNote);
+
+            return new Note(tone, (Accidental)correction);
 		}
 
         public static bool TryParse(string str, NamingConvention conv, out Note note)
@@ -181,7 +160,7 @@ namespace Chords.Core.Models
                 var description = t.GetDescriptions().ToArray()[(int)conv];
 
                 if (description.Length <= str.Length &&
-                    description == str.Substring(0, description.Length).ToUpper())
+                    description.Equals(str.Substring(0, description.Length), StringComparison.OrdinalIgnoreCase))
                 {
                     accidentalOffset = description.Length;
                     tone = t;
@@ -194,7 +173,7 @@ namespace Chords.Core.Models
             }
             foreach(var accidental in Enum.GetValues(typeof(Accidental)).Cast<Accidental>())
             {
-                var description = accidental.ToDescription();
+                var description = accidental.ToDescription() ?? string.Empty;
 
                 if (description.Length == str.Length - accidentalOffset &&
                     description == str.Substring(accidentalOffset))
@@ -231,7 +210,7 @@ namespace Chords.Core.Models
                 return false;
             }
 
-            return this.ChromaticDistance(other) == 0;
+            return this.ChromaticDistance(other) == 0 && this.Tone == other.Tone;
         }
 
         public override int GetHashCode()
@@ -274,7 +253,7 @@ namespace Chords.Core.Models
                 return "B";
             }
 
-            return string.Format("{0}{1}", Tone.GetDescriptions().ToArray()[(int)conv], Accidental.ToDescription());
+            return string.Format("{0}{1}", Tone.GetDescriptions().ToArray()[(int)conv], Accidental.ToDescription() ?? string.Empty);
         }
 
         public override string ToString()

@@ -11,12 +11,32 @@
     <input type="checkbox" name="partial" value="true" checked="checked" /> @Html.Raw("Allow partial chords")
     <input type="checkbox" name="special" value="true" /> @Html.Raw("Allow special chords")
 }
-@if (TempData["ErrorMessage"] != null)
-{
-    <div class="error">@TempData["ErrorMessage"]</div>
-}
+<div class="error">@TempData["ErrorMessage"]</div>
+<div id="findresult"></div>
 <script type="text/javascript">
 	function updateNamingConvention(value) {
 	    location = "@Url.Action("Index")?conv=" + value;
 	}
+	$("form").submit(function() {
+        $.ajax({
+            url: '@Html.Raw(Url.Action("ShowChord"))',
+            type: 'get',
+            data: $(this).serialize(),
+            success: function (data) {
+                $('#error').hide();
+                $('#findresult').html(data);
+                $('#findresult').show();
+            },
+            error: function (xhr, status, message) {
+                var response = xhr.responseText.trim();
+                if (!response) {
+                    response = message;
+                }
+                $('#findresult').hide();
+                $('#error').html(response);
+                $('#error').show();
+            }
+        });
+	    return false;
+	});
 </script>

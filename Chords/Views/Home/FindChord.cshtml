@@ -1,0 +1,40 @@
+﻿@model string
+<form onsubmit="return false;" autocomplete="off">
+	@Html.TextBox("sequence", Model, new { placeholder = "Start typing chord notes"})
+    @Html.DropDownList("conv", null, new { title="Naming convention", onchange="find();" })
+</form>
+<div id="error" class="error"></div>
+<div id="findresult"></div>
+<script type="text/javascript">
+    $('#sequence').ready(find).on('input', find);
+	function find() {
+	    var sequence = $('#sequence').val();
+	    if (!sequence.trim()) {
+	        $('#error').hide();
+	        $('#findresult').hide();
+	    }
+        $.ajax({
+            url: '@Html.Raw(Url.Action("FindChord"))',
+	        type: 'get',
+	        data: {
+	            sequence: sequence,
+	            conv: $('#conv').val()
+	        },
+            type: 'get',
+            success: function (data) {
+                $('#error').hide();
+                $('#findresult').html(data);
+                $('#findresult').show();
+            },
+            error: function (xhr, status, message) {
+	            var response = xhr.responseText.trim();
+	            if (!response) {
+	                response = message;
+	            }
+                $('#findresult').hide();
+                $('#error').html(response);
+                $('#error').show();
+            }
+        });
+    }
+</script>

@@ -9,7 +9,6 @@ namespace Chords.Core.Models
 	{
 		public Note Root { get; private set; }
 		public ChordType ChordType { get; private set; }
-		public string[] Symbols { get; private set; }
         public Interval[] Intervals { get; private set; }
 		public Note[] Notes { get; private set; }
         public Note[] NonMandatoryNotes { get; private set; }
@@ -28,12 +27,27 @@ namespace Chords.Core.Models
 			NonMandatoryNotes = ChordType.ToNonMandatoryIntervals()
 										 .Select(i => Root.NoteAtInterval(i))
 										 .ToArray();
-			Symbols = ChordType.GetDescriptions()
-							   .Select(i => $"{Notes[0]}{i}")
-                               .ToArray();
 		}
 
-        public static bool TryParse(string str, NamingConvention conv, out Chord chord)
+		public static Chord Find(Note[] notes)
+		{
+            foreach(var note in notes)
+            {
+                foreach(var chordType in Enum.GetValues(typeof(ChordType)).Cast<ChordType>())
+                {
+                    var chord = new Chord(note, chordType);
+
+                    if (notes.OrderBy(i => i.Tone).SequenceEqual(chord.Notes.OrderBy(i => i.Tone)))
+                    {
+                        return chord;
+                    }
+                }
+            }
+
+            return null;
+		}
+
+		public static bool TryParse(string str, NamingConvention conv, out Chord chord)
 		{
             chord = null;
             if (string.IsNullOrWhiteSpace(str) || !Enum.IsDefined(typeof(NamingConvention), conv))
@@ -44,12 +58,12 @@ namespace Chords.Core.Models
             Note root = null;
 			var chordTypeOffset = 0;
 
-            foreach (var n in Note.AllNotes)
+            foreach (var n in Note.AllNotes.OrderByDescending(i => i.ToString()))
             {
                 var notestr = n.ToString(conv);
 
                 if (notestr.Length <= str.Length &&
-                    notestr == str.Substring(0, notestr.Length))
+                    notestr.Equals(str.Substring(0, notestr.Length), StringComparison.OrdinalIgnoreCase))
                 {
                     root = n;
                     chordTypeOffset = notestr.Length;
@@ -64,7 +78,8 @@ namespace Chords.Core.Models
 			{
 				var descriptions = chordType.GetDescriptions();
 
-                if (descriptions.Any(i => i.Equals(str.Substring(chordTypeOffset), StringComparison.OrdinalIgnoreCase)))
+                if (descriptions.Any(i => i.Equals(str.Substring(chordTypeOffset), StringComparison.OrdinalIgnoreCase)) ||
+                    chordType.ToString().Equals(str.Substring(chordTypeOffset), StringComparison.OrdinalIgnoreCase))
 				{
                     chord = new Chord(root, chordType);
 

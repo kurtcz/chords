@@ -8,18 +8,32 @@ namespace Chords.ViewModels
     {
         private Chord _chord;
         private NamingConvention _namingConvention;
-		
+
         public Note Root => _chord.Root;
         public ChordType ChordType => _chord.ChordType;
-        public string[] Symbols => _chord.Symbols;
         public string[] Intervals => _chord.Intervals
                                            .Select(i => i.ToDescription())
                                            .ToArray();
         public string[] Notes => _chord.Notes
                                        .Select(i => i.ToString(_namingConvention))
                                        .ToArray();
+		public string[] Symbols
+		{
+			get
+			{
+				var symbols = _chord.ChordType.GetDescriptions()
+									.Select(i => string.Format("{0}{1}", _chord.Notes[0].ToString(_namingConvention), i))
+									.ToArray();
+				if (symbols.Length == 0)
+				{
+					symbols = new[] { _chord.Notes[0].ToString(_namingConvention) };
+				}
 
-        public ChordDecorator(Chord chord, NamingConvention namingConvention = NamingConvention.English)
+				return symbols;
+			}
+		}
+
+		public ChordDecorator(Chord chord, NamingConvention namingConvention)
         {
             _chord = chord;
             _namingConvention = namingConvention;

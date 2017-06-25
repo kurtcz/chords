@@ -28,7 +28,7 @@
 	<span>@note</span>
 }
 </p>
-<div class="error" id="error"></div>
+<div id="error" class="error"></div>
 <div id="loader"></div>
 <div id="layouts" class="animate-bottom"></div>
 <script type="text/javascript">
@@ -42,7 +42,11 @@
 	            $('#layouts').show();
 	        },
             error: function (xhr, status, message) {
-	            $('#error').html(message);
+                var response = xhr.responseText.trim();
+                if (!response) {
+                    response = message;
+                }
+	            $('#error').html(response);
 	        }
         });
 	});

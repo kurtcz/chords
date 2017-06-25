@@ -3,6 +3,9 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Caching.Memory;
 using Chords.Core.Models;
 using Chords.ViewModels;
+using System.Linq;
+using Chords.Core.Extensions;
+using Microsoft.AspNetCore.Http;
 
 namespace Chords.Controllers
 {
@@ -13,6 +16,11 @@ namespace Chords.Controllers
         public HomeController(IMemoryCache cache)
         {
             _cache = cache;
+		}
+
+        private bool IsAjax()
+        {
+            return Request.Headers["x-requested-with"] == "XMLHttpRequest";
 		}
 
 		public IActionResult Index([FromQuery] NamingConvention conv)
@@ -26,7 +34,7 @@ namespace Chords.Controllers
 
         public IActionResult ShowChord([FromQuery] ShowChordParams parameters)
 		{
-			if (parameters == null || string.IsNullOrWhiteSpace(parameters.root))
+			if (string.IsNullOrWhiteSpace(parameters.root))
 			{
 				return RedirectToAction("Index");
 			}
@@ -34,9 +42,9 @@ namespace Chords.Controllers
 			try
 			{
 				var id = $"{parameters.root}{parameters.@type}";
-                Chord chord;
+				Chord chord;
 
-                if (!Chord.TryParse(id, parameters.conv, out chord))
+				if (!Chord.TryParse(id, parameters.conv, out chord))
                 {
                     TempData["ErrorMessage"] = $"{id} is not a valid chord";
 					return RedirectToAction("Index");
@@ -44,6 +52,8 @@ namespace Chords.Controllers
 
                 var chordDecorator = new ChordDecorator(chord, parameters.conv);
 
+                parameters.root = chord.Root.ToString(parameters.conv);
+                parameters.@type = chord.ChordType.ToDescription();
                 ViewData["parameters"] = parameters;
 
 				return View(chordDecorator);
@@ -61,13 +71,12 @@ namespace Chords.Controllers
 			{
                 return BadRequest();
 			}
+            if (!IsAjax())
+			{
+				return BadRequest();
+			}
 
-            if (Request.Headers["x-requested-with"] != "XMLHttpRequest")
-            {
-                return BadRequest();
-            }
-
-            var cacheId = parameters.ToString();
+			var cacheId = parameters.ToString();
 			var result = _cache.GetOrCreate(cacheId, entry =>
 			{
 				try
@@ -95,6 +104,47 @@ namespace Chords.Controllers
 			}
 
             return PartialView(result);
+        }
+
+        public IActionResult FindChord([FromQuery] string sequence, [FromQuery] NamingConvention conv)
+        {
+            ViewData["conv"] = Helper.NamingConventionList(conv);
+            if (sequence == null)
+            {
+                if (IsAjax())
+                {
+                    return new EmptyResult();
+                }
+                return View("FindChord", string.Empty);
+            }
+
+            var tokens = sequence.Split(new [] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+            Note note;
+            var notes = tokens.Select(i => Note.TryParse(i, conv, out note) ? note : null)
+                              .Where(i => i != null)
+                              .ToArray();
+            var chord = Chord.Find(notes);
+
+			if (chord == null)
+			{
+                return StatusCode(StatusCodes.Status404NotFound, "No chord found");
+			}
+			
+            var chordDecorator = chord != null ? new ChordDecorator(chord, conv) : null;
+
+            ViewData["sequence"] = sequence;
+			ViewData["parameters"] = new ShowChordParams
+			{
+                root = chord.Root.ToString(conv),
+                @type = chord.ChordType.ToDescription(),
+                @partial = true,
+                conv = conv
+			};
+			if (IsAjax())
+            {
+                return PartialView("ShowChord", chordDecorator);
+            }
+            return View("FindChord", sequence);
         }
 
 		public IActionResult Error()

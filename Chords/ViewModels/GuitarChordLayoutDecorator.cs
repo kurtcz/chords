@@ -10,7 +10,7 @@ namespace Chords.ViewModels
         private GuitarChordLayout _layout;
 		private NamingConvention _namingConvention;
 
-        public string GuitarChordType => _layout.GuitarChordType.ToDescription();
+        public string GuitarChordType => _layout.GuitarChordType.ToDescription() ?? _layout.GuitarChordType.ToString();
         public int[] IntPositions => _layout.Positions;
         public string[] Positions => _layout.Positions
                                             .Select(i => i < 0 ? "X" : i.ToString())
