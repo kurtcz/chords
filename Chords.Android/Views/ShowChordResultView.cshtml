@@ -1,0 +1,88 @@
+﻿@inherits PortableRazor.ViewBase
+@model Chords.Android.Models.ShowChordResultModel
+@{
+    var otherSymbols = Model.ChordDecorator.Symbols.Skip(1);
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="bootstrap.min.css" />
+</head>
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <span class="navbar-brand">Guitar Chords</span>
+            </div>
+                
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="hybrid:ShowChord">Show chord</a></li>
+                    <li><a href="hybrid:FindChord">Find chord</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <script src="jquery.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+		<!-- Main content start -->
+	    <h2>@Model.ChordDecorator.Symbols[0]</h2>
+
+		@if (otherSymbols.Any())
+		{
+		    <h4>Other symbols:</h4>
+		    foreach(var otherSymbol in otherSymbols)
+		    {
+		        <span>@otherSymbol</span>
+		    }
+		}
+		<h4>Chord intervals:</h4>
+		<p>
+		@foreach(var interval in Model.ChordDecorator.Intervals)
+		{
+		    <span>@interval</span>
+		}
+		</p>
+
+		<h4>Chord notes:</h4>
+		<p>
+		@foreach(var note in Model.ChordDecorator.Notes)
+		{
+		    <span>@note</span>
+		}
+		</p>
+		<div id="error" class="error">@Model.Error</div>
+		<div id="loader"></div>
+		<script>
+			$(document).ready(function (){
+                $.ajax({
+                    url: 'hybrid:ShowChordLayouts',
+                    type: 'get',
+                    data: {
+                        root: '@Model.Parameters["root"]',
+                        type: '@Model.Parameters["type"]',
+                        partial: '@Model.Parameters["partial"]',
+                        special: '@Model.Parameters["special"]',
+                        conv: '@Model.Parameters["conv"]'
+                    }
+				});
+			});
+		</script>
+        <!-- Main content end -->	
+
+    </div>
+    <hr />
+    <footer>
+        <p>&copy; 2017 - Tomáš Němec</p>
+    </footer>
+</body>
+</html>

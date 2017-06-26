@@ -1,4 +1,4 @@
-﻿@model Model1
+﻿@*@model Model1*@
 <html>
 	<head>
 		<link rel="stylesheet" href="style.css" />
@@ -34,7 +34,8 @@
 				
 				<div data-role="content">
 
-					<h1 id="label">@Model.Text</h1>
+					@*<h4 id="label">@Model.Text</h4>*@
+					<h4 id="label">Model.Text</h4>
 
 					<input type="text" id="textbox" name="textbox" />
 

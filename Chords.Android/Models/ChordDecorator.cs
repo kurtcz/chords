@@ -1,22 +1,23 @@
-﻿﻿﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using Chords.Core.Extensions;
 using Chords.Core.Models;
 
-namespace Chords.ViewModels
+namespace Chords.Android.Models
 {
-    public class ChordDecorator
-    {
-        private Chord _chord;
-        private NamingConvention _namingConvention;
+	public class ChordDecorator
+	{
+		private Chord _chord;
+		private NamingConvention _namingConvention;
 
-        public Note Root => _chord.Root;
-        public ChordType ChordType => _chord.ChordType;
-        public string[] Intervals => _chord.Intervals
-                                           .Select(i => i.ToDescription())
-                                           .ToArray();
-        public string[] Notes => _chord.Notes
-                                       .Select(i => i.ToString(_namingConvention))
-                                       .ToArray();
+		public Note Root => _chord.Root;
+		public ChordType ChordType => _chord.ChordType;
+		public string[] Intervals => _chord.Intervals
+										   .Select(i => i.ToDescription())
+										   .ToArray();
+		public string[] Notes => _chord.Notes
+									   .Select(i => i.ToString(_namingConvention))
+									   .ToArray();
 		public string[] Symbols
 		{
 			get
@@ -34,13 +35,13 @@ namespace Chords.ViewModels
 		}
 
 		public ChordDecorator(Chord chord, NamingConvention namingConvention)
-        {
-            _chord = chord;
-            _namingConvention = namingConvention;
+		{
+			_chord = chord;
+			_namingConvention = namingConvention;
 		}
 
-        public GuitarChordLayoutDecorator[] GenerateLayouts(bool allowSpecial, bool allowPartial)
-        {
+		public GuitarChordLayoutDecorator[] GenerateLayouts(bool allowSpecial, bool allowPartial)
+		{
 			return GuitarChordLayout.Generate(_chord, allowSpecial, allowPartial)
 									.OrderBy(i => i.GuitarChordType)
 									.Select(i => new GuitarChordLayoutDecorator(i, _namingConvention))
@@ -49,5 +50,5 @@ namespace Chords.ViewModels
 									.ThenBy(i => (i.Notes[0] == _chord.Root ? 0 : 1))
 									.ToArray();
 		}
-    }
+	}
 }
