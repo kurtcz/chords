@@ -22,6 +22,12 @@ using System.Text.RegularExpressions;
 #line default
 #line hidden
 
+#line 3 "FindChordView.cshtml"
+using PortableRazor.Web.Mvc;
+
+#line default
+#line hidden
+
 
 [System.CodeDom.Compiler.GeneratedCodeAttribute("RazorTemplatePreprocessor", "2.6.0.0")]
 public partial class FindChordView : PortableRazor.ViewBase
@@ -29,7 +35,7 @@ public partial class FindChordView : PortableRazor.ViewBase
 
 #line hidden
 
-#line 3 "FindChordView.cshtml"
+#line 4 "FindChordView.cshtml"
 public Chords.Android.Models.FindChordModel Model { get; set; }
 
 #line default
@@ -38,6 +44,8 @@ public Chords.Android.Models.FindChordModel Model { get; set; }
 
 public override void Execute()
 {
+WriteLiteral("﻿");
+
 WriteLiteral("<!DOCTYPE html>\n<html>\n<head>\n    <link");
 
 WriteLiteral(" rel=\"stylesheet\"");
@@ -98,7 +106,7 @@ WriteLiteral("></span>\n                </button>\n                <span");
 
 WriteLiteral(" class=\"navbar-brand\"");
 
-WriteLiteral(">Guitar Chords</span>\n            </div>\n                \n            <div");
+WriteLiteral(">Find Chord</span>\n            </div>\n                \n            <div");
 
 WriteLiteral(" class=\"navbar-collapse collapse\"");
 
@@ -129,81 +137,92 @@ WriteLiteral(" src=\"bootstrap-toggle.min.js\"");
 
 WriteLiteral("></script>\n    <div");
 
-WriteLiteral(" class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12\"");
+WriteLiteral(" class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 main-content\"");
 
-WriteLiteral(">\n\n\t\t<!-- Main content start -->\n\t\t<form");
+WriteLiteral(">\n\n\t\t<!-- Main content start -->\n        <nav");
 
-WriteLiteral(" action=\"hybrid:FindChord\"");
+WriteLiteral(" class=\"navbar navbar-inverse\"");
 
-WriteLiteral(">\n\t\t\t<div");
+WriteLiteral(">\n            <div");
 
-WriteLiteral(" style=\"margin-top:20px;\"");
+WriteLiteral(" class=\"container\"");
 
-WriteLiteral(">\n\t\t        <select");
+WriteLiteral(">\n                <div");
 
-WriteLiteral(" name=\"conv\"");
+WriteLiteral(" class=\"navbar-header\"");
 
-WriteLiteral(" title=\"Naming convention\"");
+WriteLiteral(">\n                    <button");
 
-WriteLiteral(" style=\"width:100%; display:none;\"");
+WriteLiteral(" type=\"button\"");
 
-WriteLiteral(" onchange=\"updateNamingConvention(this.value);\"");
+WriteLiteral(" class=\"navbar-toggle\"");
+
+WriteLiteral(" data-toggle=\"collapse\"");
+
+WriteLiteral(" data-target=\".navbar-conv-collapse\"");
+
+WriteLiteral(">\n                        <span");
+
+WriteLiteral(" class=\"sr-only\"");
+
+WriteLiteral(">Toggle naming convention</span>\n                        <span");
+
+WriteLiteral(" class=\"icon-bar\"");
+
+WriteLiteral("></span>\n                        <span");
+
+WriteLiteral(" class=\"icon-bar\"");
+
+WriteLiteral("></span>\n                        <span");
+
+WriteLiteral(" class=\"icon-bar\"");
+
+WriteLiteral("></span>\n                    </button>\n                    <span");
+
+WriteLiteral(" class=\"navbar-brand\"");
+
+WriteLiteral(" id=\"navbar-conv\"");
+
+WriteLiteral(">");
+
+
+#line 48 "FindChordView.cshtml"
+                                                           Write(Model.conv);
+
+
+#line default
+#line hidden
+WriteLiteral("</span>\n                </div>\n                    \n                <div");
+
+WriteLiteral(" class=\"navbar-conv-collapse collapse\"");
+
+WriteLiteral(">\n                    <ul");
+
+WriteLiteral(" class=\"nav navbar-nav\"");
 
 WriteLiteral(">\n");
 
 
-#line 41 "FindChordView.cshtml"
-		        
+#line 53 "FindChordView.cshtml"
+                    
 
 #line default
 #line hidden
 
-#line 41 "FindChordView.cshtml"
-                 foreach(var conv in Model.NamingConventions)
-		        {
-		            if (Model.conv == conv)
-		            {
+#line 53 "FindChordView.cshtml"
+                     foreach(var conv in @Model.NamingConventions)
+                    {
 
 
 #line default
 #line hidden
-WriteLiteral("\t\t                <option");
+WriteLiteral("                        <li><a");
 
-WriteAttribute ("value", " value=\"", "\""
+WriteAttribute ("href", " href=\"", "\""
+, Tuple.Create<string,object,bool> ("", "hybrid:FindChord?conv=", true)
 
-#line 45 "FindChordView.cshtml"
-, Tuple.Create<string,object,bool> ("", conv
-
-#line default
-#line hidden
-, false)
-);
-WriteLiteral(" selected>");
-
-
-#line 45 "FindChordView.cshtml"
-                                                  Write(conv);
-
-
-#line default
-#line hidden
-WriteLiteral("</option>\n");
-
-
-#line 46 "FindChordView.cshtml"
-		            }
-		            else
-		            {
-
-
-#line default
-#line hidden
-WriteLiteral("\t\t                <option");
-
-WriteAttribute ("value", " value=\"", "\""
-
-#line 49 "FindChordView.cshtml"
-, Tuple.Create<string,object,bool> ("", conv
+#line 55 "FindChordView.cshtml"
+                    , Tuple.Create<string,object,bool> ("", conv
 
 #line default
 #line hidden
@@ -212,43 +231,84 @@ WriteAttribute ("value", " value=\"", "\""
 WriteLiteral(">");
 
 
-#line 49 "FindChordView.cshtml"
-                                         Write(conv);
+#line 55 "FindChordView.cshtml"
+                                                             Write(conv);
 
 
 #line default
 #line hidden
-WriteLiteral("</option>\n");
+WriteLiteral("</a></li>\n");
 
 
-#line 50 "FindChordView.cshtml"
-		            }
-		        }
+#line 56 "FindChordView.cshtml"
+                    }
 
 
 #line default
 #line hidden
-WriteLiteral("\t\t        </select>\n            </div>\n\t\t\t<div");
+WriteLiteral("                    </ul>\n                </div>\n            </div>\n        </nav" +
+">\n\t\t<form");
+
+WriteLiteral(" action=\"hybrid:FindChord\"");
+
+WriteLiteral(">\n\t\t\t<input");
+
+WriteLiteral(" type=\"hidden\"");
+
+WriteLiteral(" name=\"conv\"");
+
+WriteAttribute ("value", " value=\"", "\""
+
+#line 62 "FindChordView.cshtml"
+             , Tuple.Create<string,object,bool> ("", Model.conv
+
+#line default
+#line hidden
+, false)
+);
+WriteLiteral(" />\n\t\t\t<div");
+
+WriteLiteral(" class=\"text-center\"");
 
 WriteLiteral(" style=\"margin-top:20px;\"");
 
 WriteLiteral(">\n");
 
 
-#line 55 "FindChordView.cshtml"
+#line 64 "FindChordView.cshtml"
 			
 
 #line default
 #line hidden
 
-#line 55 "FindChordView.cshtml"
+#line 64 "FindChordView.cshtml"
              for(var i = 0; i < Model.AllNotes[Model.conv].Length; i++)
 			{
+				var note = Regex.Replace(Model.AllNotes[Model.conv][i].ToString(), "<.*?>", string.Empty);
+                if (i % 5 == 0)
+                {
+                    
+
+#line default
+#line hidden
+
+#line 69 "FindChordView.cshtml"
+                Write(new HtmlString("\t\t\t\t\t<div style=\"padding-bottom:5px;\">\n"));
 
 
 #line default
 #line hidden
-WriteLiteral("\t\t\t\t<input");
+
+#line 69 "FindChordView.cshtml"
+                                                                                        
+                }
+				if (Model.SelectedNotes != null && Model.SelectedNotes.Contains(note))
+				{
+
+
+#line default
+#line hidden
+WriteLiteral("                    <input");
 
 WriteLiteral(" type=\"checkbox\"");
 
@@ -256,20 +316,22 @@ WriteLiteral(" name=\"note\"");
 
 WriteAttribute ("value", " value=\"", "\""
 
-#line 57 "FindChordView.cshtml"
-                    , Tuple.Create<string,object,bool> ("", Regex.Replace(Model.AllNotes[Model.conv][i].ToString(), "<.*?>", String.Empty)
+#line 73 "FindChordView.cshtml"
+                       , Tuple.Create<string,object,bool> ("", note
 
 #line default
 #line hidden
 , false)
 );
+WriteLiteral(" checked=\"checked\"");
+
 WriteLiteral(" data-toggle=\"toggle\"");
 
 WriteLiteral(" data-on=\"");
 
 
-#line 57 "FindChordView.cshtml"
-                                                                                                                                                                       Write(Model.AllNotes[Model.conv][i]);
+#line 73 "FindChordView.cshtml"
+                                                                                                                 Write(Model.AllNotes[Model.conv][i]);
 
 
 #line default
@@ -279,8 +341,8 @@ WriteLiteral("\"");
 WriteLiteral(" data-off=\"");
 
 
-#line 57 "FindChordView.cshtml"
-                                                                                                                                                                                                                   Write(Model.AllNotes[Model.conv][i]);
+#line 73 "FindChordView.cshtml"
+                                                                                                                                                             Write(Model.AllNotes[Model.conv][i]);
 
 
 #line default
@@ -294,17 +356,86 @@ WriteLiteral(" style=\"display:none;\"");
 WriteLiteral(" />\n");
 
 
-#line 58 "FindChordView.cshtml"
-				if (i % 5 == 4)
+#line 74 "FindChordView.cshtml"
+				}
+				else
 				{
 
 
 #line default
 #line hidden
-WriteLiteral("\t\t\t\t    <br />\n");
+WriteLiteral("                    <input");
+
+WriteLiteral(" type=\"checkbox\"");
+
+WriteLiteral(" name=\"note\"");
+
+WriteAttribute ("value", " value=\"", "\""
+
+#line 77 "FindChordView.cshtml"
+                       , Tuple.Create<string,object,bool> ("", note
+
+#line default
+#line hidden
+, false)
+);
+WriteLiteral(" data-toggle=\"toggle\"");
+
+WriteLiteral(" data-on=\"");
 
 
-#line 61 "FindChordView.cshtml"
+#line 77 "FindChordView.cshtml"
+                                                                                               Write(Model.AllNotes[Model.conv][i]);
+
+
+#line default
+#line hidden
+WriteLiteral("\"");
+
+WriteLiteral(" data-off=\"");
+
+
+#line 77 "FindChordView.cshtml"
+                                                                                                                                           Write(Model.AllNotes[Model.conv][i]);
+
+
+#line default
+#line hidden
+WriteLiteral("\"");
+
+WriteLiteral(" data-width=\"100px;\"");
+
+WriteLiteral(" style=\"display:none;\"");
+
+WriteLiteral(" />\n");
+
+
+#line 78 "FindChordView.cshtml"
+				}
+
+
+#line default
+#line hidden
+WriteLiteral("                <span></span>\n");
+
+
+#line 80 "FindChordView.cshtml"
+				if (i % 5 == 4)
+				{					
+				    
+
+#line default
+#line hidden
+
+#line 82 "FindChordView.cshtml"
+                Write(new HtmlString("\t\t\t\t\t</div>\n"));
+
+
+#line default
+#line hidden
+
+#line 82 "FindChordView.cshtml"
+                                                           
 				}
 			}
 
@@ -315,17 +446,30 @@ WriteLiteral("            </div>\n\t\t\t<div");
 
 WriteLiteral(" style=\"margin-top:20px;\"");
 
-WriteLiteral(">\n\t\t\t    <input");
+WriteLiteral(">\n\t\t\t\t<button");
 
-WriteLiteral(" type=\"submit\"");
+WriteLiteral(" type=\"button\"");
 
-WriteLiteral(" style=\"width:100%;\"");
+WriteLiteral(" class=\"btn btn-default btn-lg\"");
 
-WriteLiteral(" value=\"Find\"");
+WriteLiteral(" style=\"width:100%; display: none;\"");
 
-WriteLiteral(" style=\"display:none;\"");
+WriteLiteral(" onclick=\"$(\'form\').submit();\"");
 
-WriteLiteral(" />\n\t\t\t</div>\n\t\t</form>\n        <script");
+WriteLiteral(">Find</button>\n\t\t\t</div>\n\t\t</form>\n\t\t<div");
+
+WriteLiteral(" class=\"error\"");
+
+WriteLiteral(">");
+
+
+#line 90 "FindChordView.cshtml"
+                      Write(Model.Error);
+
+
+#line default
+#line hidden
+WriteLiteral("</div>\n        <script");
 
 WriteLiteral(" type=\"text/javascript\"");
 
@@ -334,7 +478,7 @@ WriteLiteral(@">
                 location = 'hybrid:FindChord?conv=' + value;
             }
 			$(document).ready(function(){
-				$(""input,select"").show();
+				$(""input,button"").show();
 			});
         </script>
 		<!-- Main content end -->

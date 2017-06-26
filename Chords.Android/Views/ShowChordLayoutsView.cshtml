@@ -1,7 +1,7 @@
 ﻿@inherits PortableRazor.ViewBase
 @model Chords.Android.Models.ShowChordLayoutsModel
 @{
-    var otherSymbols = Model.ChordDecorator.Symbols.Skip(1);
+    var otherSymbols = Model.ChordDecorator != null ? Model.ChordDecorator.Symbols.Skip(1) : new string[0];
 }
 <!DOCTYPE html>
 <html>
@@ -19,7 +19,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <span class="navbar-brand">Guitar Chords</span>
+                <span class="navbar-brand">Show Chord</span>
             </div>
                 
             <div class="navbar-collapse collapse">
@@ -32,65 +32,69 @@
     </nav>
     <script src="jquery.min.js"></script>
     <script src="bootstrap.min.js"></script>
-    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 main-content">
 
         <!-- Main content start -->
-        <h2>@Model.ChordDecorator.Symbols[0]</h2>
+		@if (Model.ChordDecorator != null)
+	    {
+	        <h2>@Model.ChordDecorator.Symbols[0]</h2>
 
-        @if (otherSymbols.Any())
-        {
-            <h4>Other symbols:</h4>
-            foreach(var otherSymbol in otherSymbols)
-            {
-                <span>@otherSymbol</span>
-            }
-        }
-        <h4>Chord intervals:</h4>
-        <p>
-        @foreach(var interval in Model.ChordDecorator.Intervals)
-        {
-            <span>@interval</span>
-        }
-        </p>
+	        if (otherSymbols.Any())
+	        {
+	            <h4>Other symbols:</h4>
+	            foreach(var otherSymbol in otherSymbols)
+	            {
+	                <span>@otherSymbol</span>
+	            }
+	        }
+	        <h4>Chord intervals:</h4>
+	        <p>
+	        @foreach(var interval in Model.ChordDecorator.Intervals)
+	        {
+	            <span>@interval</span>
+	        }
+	        </p>
 
-        <h4>Chord notes:</h4>
-        <p>
-        @foreach(var note in Model.ChordDecorator.Notes)
-        {
-            <span>@note</span>
-        }
-        </p>
-        <div id="error" class="error">@Model.Error</div>
-        <div id="loader"></div>
-        <div id="layouts" class="animate-bottom">
-        @if (Model.Layouts != null)
-        {
-            <h4>Chord layouts:</h4>
-            <p>
-                @Model.Layouts.Length results
-                @foreach(var layout in Model.Layouts)
-                {
-                    <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 chord-layout">
-                        @if (layout.Complete)
-                        {
-                            <div class="chordlayout">@(layout.ToHtmlString())</div>
-                        }
-                        else
-                        {
-                            <div class="chordlayout incomplete">@(layout.ToHtmlString())</div>
-                        }
-                        <div class="chordschema">
-                        @(layout.Schema)
-                        </div>
-                    </div>
-                }
-            </p>
-            <script type="text/javascript">
-                $('#loader').hide();
-                $('#layouts').show();
-            </script>
-        }
-    <!-- Main content end -->   
+	        <h4>Chord notes:</h4>
+	        <p>
+	        @foreach(var note in Model.ChordDecorator.Notes)
+	        {
+	            <span>@note</span>
+	        }
+	        </p>
+	        <div id="error" class="error">@Model.Error</div>
+	        <div id="loader"></div>
+	        <div id="layouts" class="animate-bottom">
+	        @if (Model.Layouts != null)
+	        {
+	            <h4>Chord layouts:</h4>
+	            <p>
+	                @Model.Layouts.Length results
+	                @foreach(var layout in Model.Layouts)
+	                {
+	                    <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 chord-layout">
+	                        @if (layout.Complete)
+	                        {
+	                            <div class="chordlayout">@(layout.ToHtmlString())</div>
+	                        }
+	                        else
+	                        {
+	                            <div class="chordlayout incomplete">@(layout.ToHtmlString())</div>
+	                        }
+	                        <div class="chordschema">
+	                        @(layout.Schema)
+	                        </div>
+	                    </div>
+	                }
+	            </p>
+	            <script type="text/javascript">
+	                $('#loader').hide();
+	                $('#layouts').show();
+	            </script>
+	        }
+			</div>
+		}
+        <!-- Main content end -->   
 
     </div>
     <hr />

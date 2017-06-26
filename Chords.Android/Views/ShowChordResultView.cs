@@ -35,7 +35,8 @@ public override void Execute()
 
 #line 3 "ShowChordResultView.cshtml"
   
-    var otherSymbols = Model.ChordDecorator.Symbols.Skip(1);
+    var symbol = Model?.ChordDecorator?.Symbols[0];
+    var otherSymbols = Model.ChordDecorator != null ? Model.ChordDecorator.Symbols.Skip(1) : new string[0];
 
 
 #line default
@@ -94,7 +95,7 @@ WriteLiteral("></span>\n                </button>\n                <span");
 
 WriteLiteral(" class=\"navbar-brand\"");
 
-WriteLiteral(">Guitar Chords</span>\n            </div>\n                \n            <div");
+WriteLiteral(">Show Chord</span>\n            </div>\n                \n            <div");
 
 WriteLiteral(" class=\"navbar-collapse collapse\"");
 
@@ -121,117 +122,96 @@ WriteLiteral(" src=\"bootstrap.min.js\"");
 
 WriteLiteral("></script>\n    <div");
 
-WriteLiteral(" class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12\"");
+WriteLiteral(" class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 main-content\"");
 
-WriteLiteral(">\n\n\t\t<!-- Main content start -->\n\t    <h2>");
-
-
-#line 38 "ShowChordResultView.cshtml"
-       Write(Model.ChordDecorator.Symbols[0]);
+WriteLiteral(">\n\n\t\t<!-- Main content start -->\n");
 
 
-#line default
-#line hidden
-WriteLiteral("</h2>\n\n");
-
-
-#line 40 "ShowChordResultView.cshtml"
-		
+#line 39 "ShowChordResultView.cshtml"
+        
 
 #line default
 #line hidden
 
-#line 40 "ShowChordResultView.cshtml"
-         if (otherSymbols.Any())
+#line 39 "ShowChordResultView.cshtml"
+         if (Model.ChordDecorator != null)
 		{
 
 
 #line default
 #line hidden
-WriteLiteral("\t\t    <h4>Other symbols:</h4>\n");
+WriteLiteral("\t\t    <h2>");
 
 
-#line 43 "ShowChordResultView.cshtml"
-		    foreach(var otherSymbol in otherSymbols)
-		    {
-
-
-#line default
-#line hidden
-WriteLiteral("\t\t        <span>");
-
-
-#line 45 "ShowChordResultView.cshtml"
-                 Write(otherSymbol);
+#line 41 "ShowChordResultView.cshtml"
+           Write(symbol);
 
 
 #line default
 #line hidden
-WriteLiteral("</span>\n");
+WriteLiteral("</h2>\n");
+
+
+#line 42 "ShowChordResultView.cshtml"
+
+			if (otherSymbols.Any())
+			{
+
+
+#line default
+#line hidden
+WriteLiteral("\t\t\t    <h4>Other symbols:</h4>\n");
 
 
 #line 46 "ShowChordResultView.cshtml"
-		    }
-		}
+			    foreach(var otherSymbol in otherSymbols)
+			    {
 
 
 #line default
 #line hidden
-WriteLiteral("\t\t<h4>Chord intervals:</h4>\n\t\t<p>\n");
+WriteLiteral("\t\t\t        <span>");
 
 
-#line 50 "ShowChordResultView.cshtml"
-		
-
-#line default
-#line hidden
-
-#line 50 "ShowChordResultView.cshtml"
-         foreach(var interval in Model.ChordDecorator.Intervals)
-		{
-
-
-#line default
-#line hidden
-WriteLiteral("\t\t    <span>");
-
-
-#line 52 "ShowChordResultView.cshtml"
-             Write(interval);
+#line 48 "ShowChordResultView.cshtml"
+                     Write(otherSymbol);
 
 
 #line default
 #line hidden
 WriteLiteral("</span>\n");
+
+
+#line 49 "ShowChordResultView.cshtml"
+			    }
+			}
+
+
+#line default
+#line hidden
+WriteLiteral("\t\t\t<h4>Chord intervals:</h4>\n");
+
+WriteLiteral("\t\t\t<p>\n");
 
 
 #line 53 "ShowChordResultView.cshtml"
-		}
-
-
-#line default
-#line hidden
-WriteLiteral("\t\t</p>\n\n\t\t<h4>Chord notes:</h4>\n\t\t<p>\n");
-
-
-#line 58 "ShowChordResultView.cshtml"
-		
+			
 
 #line default
 #line hidden
 
-#line 58 "ShowChordResultView.cshtml"
-         foreach(var note in Model.ChordDecorator.Notes)
-		{
+#line 53 "ShowChordResultView.cshtml"
+             foreach(var interval in Model.ChordDecorator.Intervals)
+			{
 
 
 #line default
 #line hidden
-WriteLiteral("\t\t    <span>");
+WriteLiteral("\t\t\t    <span>");
 
 
-#line 60 "ShowChordResultView.cshtml"
-             Write(note);
+#line 55 "ShowChordResultView.cshtml"
+                 Write(interval);
 
 
 #line default
@@ -239,13 +219,67 @@ WriteLiteral("\t\t    <span>");
 WriteLiteral("</span>\n");
 
 
+#line 56 "ShowChordResultView.cshtml"
+			}
+
+
+#line default
+#line hidden
+WriteLiteral("\t\t\t</p>\n");
+
+
+#line 58 "ShowChordResultView.cshtml"
+
+
+
+#line default
+#line hidden
+WriteLiteral("\t\t\t<h4>Chord notes:</h4>\n");
+
+WriteLiteral("\t\t\t<p>\n");
+
+
 #line 61 "ShowChordResultView.cshtml"
+			
+
+#line default
+#line hidden
+
+#line 61 "ShowChordResultView.cshtml"
+             foreach(var note in Model.ChordDecorator.Notes)
+			{
+
+
+#line default
+#line hidden
+WriteLiteral("\t\t\t    <span>");
+
+
+#line 63 "ShowChordResultView.cshtml"
+                 Write(note);
+
+
+#line default
+#line hidden
+WriteLiteral("</span>\n");
+
+
+#line 64 "ShowChordResultView.cshtml"
+			}
+
+
+#line default
+#line hidden
+WriteLiteral("\t\t\t</p>\n");
+
+
+#line 66 "ShowChordResultView.cshtml"
 		}
 
 
 #line default
 #line hidden
-WriteLiteral("\t\t</p>\n\t\t<div");
+WriteLiteral("\t\t<div");
 
 WriteLiteral(" id=\"error\"");
 
@@ -254,66 +288,92 @@ WriteLiteral(" class=\"error\"");
 WriteLiteral(">");
 
 
-#line 63 "ShowChordResultView.cshtml"
+#line 67 "ShowChordResultView.cshtml"
                                  Write(Model.Error);
 
 
 #line default
 #line hidden
-WriteLiteral("</div>\n\t\t<div");
+WriteLiteral("</div>\n");
+
+
+#line 68 "ShowChordResultView.cshtml"
+        
+
+#line default
+#line hidden
+
+#line 68 "ShowChordResultView.cshtml"
+         if (string.IsNullOrEmpty(Model.Error))
+		{
+
+
+#line default
+#line hidden
+WriteLiteral("\t\t\t<div");
 
 WriteLiteral(" id=\"loader\"");
 
-WriteLiteral("></div>\n\t\t<script>\n\t\t\t$(document).ready(function (){\n                $.ajax({\n   " +
-"                 url: \'hybrid:ShowChordLayouts\',\n                    type: \'get\'" +
-",\n                    data: {\n                        root: \'");
+WriteLiteral("></div>\n");
+
+WriteLiteral("\t\t\t<script>\n\t\t\t\t$(document).ready(function (){\n\t                $.ajax({\n\t       " +
+"             url: \'hybrid:ShowChordLayouts\',\n\t                    type: \'get\',\n\t" +
+"                    data: {\n\t                        root: \'");
 
 
-#line 71 "ShowChordResultView.cshtml"
-                          Write(Model.Parameters["root"]);
-
-
-#line default
-#line hidden
-WriteLiteral("\',\n                        type: \'");
-
-
-#line 72 "ShowChordResultView.cshtml"
-                          Write(Model.Parameters["type"]);
+#line 77 "ShowChordResultView.cshtml"
+                              Write(Model.Parameters["root"]);
 
 
 #line default
 #line hidden
-WriteLiteral("\',\n                        partial: \'");
+WriteLiteral("\',\n\t                        type: \'");
 
 
-#line 73 "ShowChordResultView.cshtml"
-                             Write(Model.Parameters["partial"]);
-
-
-#line default
-#line hidden
-WriteLiteral("\',\n                        special: \'");
-
-
-#line 74 "ShowChordResultView.cshtml"
-                             Write(Model.Parameters["special"]);
+#line 78 "ShowChordResultView.cshtml"
+                              Write(Model.Parameters["type"]);
 
 
 #line default
 #line hidden
-WriteLiteral("\',\n                        conv: \'");
+WriteLiteral("\',\n\t                        partial: \'");
 
 
-#line 75 "ShowChordResultView.cshtml"
-                          Write(Model.Parameters["conv"]);
+#line 79 "ShowChordResultView.cshtml"
+                                 Write(Model.Parameters["partial"]);
 
 
 #line default
 #line hidden
-WriteLiteral("\'\n                    }\n\t\t\t\t});\n\t\t\t});\n\t\t</script>\n        <!-- Main content end " +
-"-->\t\n\n    </div>\n    <hr />\n    <footer>\n        <p>&copy; 2017 - Tomáš Němec</p" +
-">\n    </footer>\n</body>\n</html>\n");
+WriteLiteral("\',\n\t                        special: \'");
+
+
+#line 80 "ShowChordResultView.cshtml"
+                                 Write(Model.Parameters["special"]);
+
+
+#line default
+#line hidden
+WriteLiteral("\',\n\t                        conv: \'");
+
+
+#line 81 "ShowChordResultView.cshtml"
+                              Write(Model.Parameters["conv"]);
+
+
+#line default
+#line hidden
+WriteLiteral("\'\n\t                    }\n\t\t\t\t\t});\n\t\t\t\t});\n\t\t\t</script>\n");
+
+
+#line 86 "ShowChordResultView.cshtml"
+		}
+
+
+#line default
+#line hidden
+WriteLiteral("        <!-- Main content end -->\t\n\n    </div>\n    <hr />\n    <footer>\n        <p" +
+">&copy; 2017 - Tomáš Němec</p>\n    </footer>\n</body>\n</html>\n");
 
 }
 }

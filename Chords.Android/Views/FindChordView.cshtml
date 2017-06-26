@@ -1,5 +1,6 @@
-﻿@inherits PortableRazor.ViewBase
+﻿﻿@inherits PortableRazor.ViewBase
 @using System.Text.RegularExpressions
+@using PortableRazor.Web.Mvc
 @model Chords.Android.Models.FindChordModel
 <!DOCTYPE html>
 <html>
@@ -18,7 +19,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <span class="navbar-brand">Guitar Chords</span>
+                <span class="navbar-brand">Find Chord</span>
             </div>
                 
             <div class="navbar-collapse collapse">
@@ -32,45 +33,67 @@
     <script src="jquery.min.js"></script>
     <script src="bootstrap.min.js"></script>
 	<script src="bootstrap-toggle.min.js"></script>
-    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 main-content">
 
 		<!-- Main content start -->
-		<form action="hybrid:FindChord">
-			<div style="margin-top:20px;">
-		        <select name="conv" title="Naming convention" style="width:100%; display:none;" onchange="updateNamingConvention(this.value);">
-		        @foreach(var conv in Model.NamingConventions)
-		        {
-		            if (Model.conv == conv)
-		            {
-		                <option value="@conv" selected>@conv</option>
-		            }
-		            else
-		            {
-		                <option value="@conv">@conv</option>
-		            }
-		        }
-		        </select>
+        <nav class="navbar navbar-inverse">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-conv-collapse">
+                        <span class="sr-only">Toggle naming convention</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <span class="navbar-brand" id="navbar-conv">@Model.conv</span>
+                </div>
+                    
+                <div class="navbar-conv-collapse collapse">
+                    <ul class="nav navbar-nav">
+                    @foreach(var conv in @Model.NamingConventions)
+                    {
+                        <li><a href="hybrid:FindChord?conv=@conv">@conv</a></li>
+                    }
+                    </ul>
+                </div>
             </div>
-			<div style="margin-top:20px;">
+        </nav>
+		<form action="hybrid:FindChord">
+			<input type="hidden" name="conv" value="@Model.conv" />
+			<div class="text-center" style="margin-top:20px;">
 			@for(var i = 0; i < Model.AllNotes[Model.conv].Length; i++)
 			{
-				<input type="checkbox" name="note" value="@(Regex.Replace(Model.AllNotes[Model.conv][i].ToString(), "<.*?>", String.Empty))" data-toggle="toggle" data-on="@(Model.AllNotes[Model.conv][i])" data-off="@(Model.AllNotes[Model.conv][i])" data-width="100px;" style="display:none;" />
-				if (i % 5 == 4)
+				var note = Regex.Replace(Model.AllNotes[Model.conv][i].ToString(), "<.*?>", string.Empty);
+                if (i % 5 == 0)
+                {
+                    @(new HtmlString("\t\t\t\t\t<div style=\"padding-bottom:5px;\">\n"))
+                }
+				if (Model.SelectedNotes != null && Model.SelectedNotes.Contains(note))
 				{
-				    <br />
+                    <input type="checkbox" name="note" value="@note" checked="checked" data-toggle="toggle" data-on="@(Model.AllNotes[Model.conv][i])" data-off="@(Model.AllNotes[Model.conv][i])" data-width="100px;" style="display:none;" />
+				}
+				else
+				{
+                    <input type="checkbox" name="note" value="@note" data-toggle="toggle" data-on="@(Model.AllNotes[Model.conv][i])" data-off="@(Model.AllNotes[Model.conv][i])" data-width="100px;" style="display:none;" />
+				}
+                <span></span>
+				if (i % 5 == 4)
+				{					
+				    @(new HtmlString("\t\t\t\t\t</div>\n"))
 				}
 			}
             </div>
 			<div style="margin-top:20px;">
-			    <input type="submit" style="width:100%;" value="Find" style="display:none;" />
+				<button type="button" class="btn btn-default btn-lg" style="width:100%; display: none;" onclick="$('form').submit();">Find</button>
 			</div>
 		</form>
+		<div class="error">@Model.Error</div>
         <script type="text/javascript">				
             function updateNamingConvention(value) {
                 location = 'hybrid:FindChord?conv=' + value;
             }
 			$(document).ready(function(){
-				$("input,select").show();
+				$("input,button").show();
 			});
         </script>
 		<!-- Main content end -->

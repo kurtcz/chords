@@ -14,12 +14,8 @@ body {
     padding-bottom: 20px;
 }
 
-/* Wrapping element */
-/* Set some basic padding to keep content from hitting the edges */
-.body-content {
-    padding-top: 5px;
-    padding-left: 15px;
-    padding-right: 15px;
+.main-content {
+    padding-bottom: 30px;
 }
 
 /* Set widths on the form inputs since otherwise they're 100% wide */

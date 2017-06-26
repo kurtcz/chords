@@ -19,6 +19,9 @@ namespace Chords.Android
     [Activity(Label = "Guitar Chords", MainLauncher = true, Icon = "@mipmap/icon")]
     public class MainActivity : Activity
     {
+        private static Bundle _bundle;
+        private WebView _webView;
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -26,14 +29,29 @@ namespace Chords.Android
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main);
 
-            var webView = FindViewById<WebView>(Resource.Id.webView);
-            webView.Settings.JavaScriptEnabled = true;
+			_webView = FindViewById<WebView>(Resource.Id.webView);
+            _webView.Settings.JavaScriptEnabled = true;
 
             // Use subclassed WebViewClient to intercept hybrid native calls
             var viewClient = new HybridWebViewClient();
-            webView.SetWebViewClient(viewClient);
+            _webView.SetWebViewClient(viewClient);
 
-            viewClient.ShowChord(webView, new NameValueCollection());
+            if (_bundle == null)
+            {
+                viewClient.ShowChord(_webView, new NameValueCollection());
+            }
+            else
+            {
+                _webView.RestoreState(_bundle);
+            }
+        }
+
+        protected override void OnPause()
+        {
+            base.OnPause();
+
+            _bundle = new Bundle();
+            _webView.SaveState(_bundle);
         }
 
         private class HybridWebViewClient : WebViewClient
@@ -104,7 +122,7 @@ namespace Chords.Android
 
 					if (!Chord.TryParse(id, showChordParams.NamingConvention, out chord))
 					{
-						resultModel.Error = $"{id} is not a valid chord";
+                        resultModel.Error = $"{id} is not a valid chord in {showChordParams.NamingConvention} naming convention";
 					}
                     else
                     {
@@ -183,7 +201,7 @@ namespace Chords.Android
                         ShowChord(webView, parameters);
                         return;
                     }
-                    var model = new FindChordModel { conv = chordParams.NamingConvention, Error = "No chord found" };
+                    var model = new FindChordModel { conv = chordParams.NamingConvention, SelectedNotes = tokens, Error = "No chord found" };
 					var template = new FindChordView() { Model = model };
 
 					page = template.GenerateString();

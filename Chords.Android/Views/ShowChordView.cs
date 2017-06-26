@@ -44,6 +44,12 @@ WriteLiteral(" rel=\"stylesheet\"");
 
 WriteLiteral(" href=\"bootstrap.min.css\"");
 
+WriteLiteral(" />\n    <link");
+
+WriteLiteral(" rel=\"stylesheet\"");
+
+WriteLiteral(" href=\"bootstrap-toggle.min.css\"");
+
 WriteLiteral(" />\n</head>\n<body>\n    <nav");
 
 WriteLiteral(" class=\"navbar navbar-inverse navbar-fixed-top\"");
@@ -82,11 +88,11 @@ WriteLiteral("></span>\n                    <span");
 
 WriteLiteral(" class=\"icon-bar\"");
 
-WriteLiteral("></span>\n                </button>\n\t\t\t\t<span");
+WriteLiteral("></span>\n                </button>\n                <span");
 
 WriteLiteral(" class=\"navbar-brand\"");
 
-WriteLiteral(">Guitar Chords</span>\n            </div>\n\t\t\t\t\n            <div");
+WriteLiteral(">Show Chord</span>\n            </div>\n                \n            <div");
 
 WriteLiteral(" class=\"navbar-collapse collapse\"");
 
@@ -111,179 +117,315 @@ WriteLiteral("></script>\n\t<script");
 
 WriteLiteral(" src=\"bootstrap.min.js\"");
 
+WriteLiteral("></script>\n\t<script");
+
+WriteLiteral(" src=\"bootstrap-toggle.min.js\"");
+
 WriteLiteral("></script>\n    <div");
 
-WriteLiteral(" class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12\"");
+WriteLiteral(" class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 main-content\"");
 
-WriteLiteral(">\n\n\t\t<!-- Main content start -->\n\t\t<form");
+WriteLiteral(">\n\n\t\t<!-- Main content start -->\n\t    <nav");
 
-WriteLiteral(" action=\"hybrid:ShowChord\"");
+WriteLiteral(" class=\"navbar navbar-inverse\"");
 
-WriteLiteral(">\n\t\t\t<select");
+WriteLiteral(">\n\t        <div");
 
-WriteLiteral(" name=\"root\"");
+WriteLiteral(" class=\"container\"");
 
-WriteLiteral(" title=\"Root\"");
+WriteLiteral(">\n\t            <div");
 
-WriteLiteral(">\n");
+WriteLiteral(" class=\"navbar-header\"");
 
+WriteLiteral(">\n\t                <button");
 
-#line 37 "ShowChordView.cshtml"
-			
+WriteLiteral(" type=\"button\"");
 
-#line default
-#line hidden
+WriteLiteral(" class=\"navbar-toggle\"");
 
-#line 37 "ShowChordView.cshtml"
-             foreach(var note in Model.Notes[Model.conv])
-			{
+WriteLiteral(" data-toggle=\"collapse\"");
 
+WriteLiteral(" data-target=\".navbar-root-collapse\"");
 
-#line default
-#line hidden
-WriteLiteral("                <option");
+WriteLiteral(">\n\t                    <span");
 
-WriteAttribute ("value", " value=\"", "\""
+WriteLiteral(" class=\"sr-only\"");
 
-#line 39 "ShowChordView.cshtml"
-, Tuple.Create<string,object,bool> ("", note
+WriteLiteral(">Toggle root</span>\n\t                    <span");
 
-#line default
-#line hidden
-, false)
-);
+WriteLiteral(" class=\"icon-bar\"");
+
+WriteLiteral("></span>\n\t                    <span");
+
+WriteLiteral(" class=\"icon-bar\"");
+
+WriteLiteral("></span>\n\t                    <span");
+
+WriteLiteral(" class=\"icon-bar\"");
+
+WriteLiteral("></span>\n\t                </button>\n\t                <span");
+
+WriteLiteral(" class=\"navbar-brand\"");
+
+WriteLiteral(" id=\"navbar-root\"");
+
 WriteLiteral(">");
-
-
-#line 39 "ShowChordView.cshtml"
-                                 Write(note);
-
-
-#line default
-#line hidden
-WriteLiteral("</option>\n");
-
-
-#line 40 "ShowChordView.cshtml"
-			}
-
-
-#line default
-#line hidden
-WriteLiteral("\t\t\t</select>\n            <select");
-
-WriteLiteral(" name=\"type\"");
-
-WriteLiteral(" title=\"Chord type\"");
-
-WriteLiteral(">\n");
-
-
-#line 43 "ShowChordView.cshtml"
-            
-
-#line default
-#line hidden
-
-#line 43 "ShowChordView.cshtml"
-             foreach(var kvp in Model.ChordTypeList)
-            {
-
-
-#line default
-#line hidden
-WriteLiteral("                <option");
-
-WriteAttribute ("value", " value=\"", "\""
-
-#line 45 "ShowChordView.cshtml"
-, Tuple.Create<string,object,bool> ("", kvp.Value
-
-#line default
-#line hidden
-, false)
-);
-WriteLiteral(">");
-
-
-#line 45 "ShowChordView.cshtml"
-                                      Write(kvp.Key);
-
-
-#line default
-#line hidden
-WriteLiteral("</option>\n");
 
 
 #line 46 "ShowChordView.cshtml"
-            }
+                                                           Write(Model.Notes[Model.conv][1]);
 
 
 #line default
 #line hidden
-WriteLiteral("            </select>\n            <select");
+WriteLiteral("</span>\n\t            </div>\n\t                \n\t            <div");
 
-WriteLiteral(" name=\"conv\"");
+WriteLiteral(" class=\"navbar-root-collapse collapse\"");
 
-WriteLiteral(" title=\"Naming convention\"");
+WriteLiteral(">\n\t                <ul");
 
-WriteLiteral(" onchange=\"updateNamingConvention(this.value);\"");
+WriteLiteral(" class=\"nav navbar-nav\"");
 
 WriteLiteral(">\n");
 
 
-#line 49 "ShowChordView.cshtml"
-            
+#line 51 "ShowChordView.cshtml"
+					
 
 #line default
 #line hidden
 
-#line 49 "ShowChordView.cshtml"
-             foreach(var conv in Model.NamingConventions)
-            {
-				if (Model.conv == conv)
-				{
+#line 51 "ShowChordView.cshtml"
+                     foreach(var note in @Model.Notes[Model.conv])
+					{
 
 
 #line default
 #line hidden
-WriteLiteral("                    <option");
+WriteLiteral("                        <li><a");
 
-WriteAttribute ("value", " value=\"", "\""
+WriteAttribute ("onclick", " onclick=\"", "\""
+, Tuple.Create<string,object,bool> ("", "updateRoot(\'", true)
 
 #line 53 "ShowChordView.cshtml"
-, Tuple.Create<string,object,bool> ("", conv
+              , Tuple.Create<string,object,bool> ("", note
 
 #line default
 #line hidden
 , false)
+, Tuple.Create<string,object,bool> ("", "\');", true)
 );
-WriteLiteral(" selected>");
+WriteLiteral(" data-toggle=\"collapse\"");
+
+WriteLiteral(" data-target=\".navbar-root-collapse\"");
+
+WriteLiteral(">");
 
 
 #line 53 "ShowChordView.cshtml"
-                                              Write(conv);
+                                                                                                                      Write(note);
 
 
 #line default
 #line hidden
-WriteLiteral("</option>\n");
+WriteLiteral("</a></li>\n");
 
 
 #line 54 "ShowChordView.cshtml"
-				}
-				else
-				{
+					}
 
 
 #line default
 #line hidden
-WriteLiteral("                    <option");
+WriteLiteral("\t                </ul>\n\t            </div>\n\t        </div>\n\t    </nav>\n        <n" +
+"av");
 
-WriteAttribute ("value", " value=\"", "\""
+WriteLiteral(" class=\"navbar navbar-inverse\"");
 
-#line 57 "ShowChordView.cshtml"
-, Tuple.Create<string,object,bool> ("", conv
+WriteLiteral(">\n            <div");
+
+WriteLiteral(" class=\"container\"");
+
+WriteLiteral(">\n                <div");
+
+WriteLiteral(" class=\"navbar-header\"");
+
+WriteLiteral(">\n                    <button");
+
+WriteLiteral(" type=\"button\"");
+
+WriteLiteral(" class=\"navbar-toggle\"");
+
+WriteLiteral(" data-toggle=\"collapse\"");
+
+WriteLiteral(" data-target=\".navbar-type-collapse\"");
+
+WriteLiteral(">\n                        <span");
+
+WriteLiteral(" class=\"sr-only\"");
+
+WriteLiteral(">Toggle chord type</span>\n                        <span");
+
+WriteLiteral(" class=\"icon-bar\"");
+
+WriteLiteral("></span>\n                        <span");
+
+WriteLiteral(" class=\"icon-bar\"");
+
+WriteLiteral("></span>\n                        <span");
+
+WriteLiteral(" class=\"icon-bar\"");
+
+WriteLiteral("></span>\n                    </button>\n                    <span");
+
+WriteLiteral(" class=\"navbar-brand\"");
+
+WriteLiteral(" id=\"navbar-type\"");
+
+WriteLiteral(">Major</span>\n                </div>\n                    \n                <div");
+
+WriteLiteral(" class=\"navbar-type-collapse collapse\"");
+
+WriteLiteral(">\n                    <ul");
+
+WriteLiteral(" class=\"nav navbar-nav\"");
+
+WriteLiteral(">\n");
+
+
+#line 73 "ShowChordView.cshtml"
+                    
+
+#line default
+#line hidden
+
+#line 73 "ShowChordView.cshtml"
+                     foreach(var type in @Model.ChordTypeList)
+                    {
+
+
+#line default
+#line hidden
+WriteLiteral("                        <li><a");
+
+WriteAttribute ("onclick", " onclick=\"", "\""
+, Tuple.Create<string,object,bool> ("", "updateChordType(\'", true)
+
+#line 75 "ShowChordView.cshtml"
+                   , Tuple.Create<string,object,bool> ("", type.Value
+
+#line default
+#line hidden
+, false)
+, Tuple.Create<string,object,bool> ("", "\');", true)
+);
+WriteLiteral(" data-toggle=\"collapse\"");
+
+WriteLiteral(" data-target=\".navbar-type-collapse\"");
+
+WriteLiteral(">");
+
+
+#line 75 "ShowChordView.cshtml"
+                                                                                                                                  Write(type.Key);
+
+
+#line default
+#line hidden
+WriteLiteral("</a></li>\n");
+
+
+#line 76 "ShowChordView.cshtml"
+                    }
+
+
+#line default
+#line hidden
+WriteLiteral("                    </ul>\n                </div>\n            </div>\n        </nav" +
+">\n        <nav");
+
+WriteLiteral(" class=\"navbar navbar-inverse\"");
+
+WriteLiteral(">\n            <div");
+
+WriteLiteral(" class=\"container\"");
+
+WriteLiteral(">\n                <div");
+
+WriteLiteral(" class=\"navbar-header\"");
+
+WriteLiteral(">\n                    <button");
+
+WriteLiteral(" type=\"button\"");
+
+WriteLiteral(" class=\"navbar-toggle\"");
+
+WriteLiteral(" data-toggle=\"collapse\"");
+
+WriteLiteral(" data-target=\".navbar-conv-collapse\"");
+
+WriteLiteral(">\n                        <span");
+
+WriteLiteral(" class=\"sr-only\"");
+
+WriteLiteral(">Toggle naming convention</span>\n                        <span");
+
+WriteLiteral(" class=\"icon-bar\"");
+
+WriteLiteral("></span>\n                        <span");
+
+WriteLiteral(" class=\"icon-bar\"");
+
+WriteLiteral("></span>\n                        <span");
+
+WriteLiteral(" class=\"icon-bar\"");
+
+WriteLiteral("></span>\n                    </button>\n                    <span");
+
+WriteLiteral(" class=\"navbar-brand\"");
+
+WriteLiteral(" id=\"navbar-conv\"");
+
+WriteLiteral(">");
+
+
+#line 90 "ShowChordView.cshtml"
+                                                           Write(Model.conv);
+
+
+#line default
+#line hidden
+WriteLiteral("</span>\n                </div>\n                    \n                <div");
+
+WriteLiteral(" class=\"navbar-conv-collapse collapse\"");
+
+WriteLiteral(">\n                    <ul");
+
+WriteLiteral(" class=\"nav navbar-nav\"");
+
+WriteLiteral(">\n");
+
+
+#line 95 "ShowChordView.cshtml"
+                    
+
+#line default
+#line hidden
+
+#line 95 "ShowChordView.cshtml"
+                     foreach(var conv in @Model.NamingConventions)
+                    {
+
+
+#line default
+#line hidden
+WriteLiteral("                        <li><a");
+
+WriteAttribute ("href", " href=\"", "\""
+, Tuple.Create<string,object,bool> ("", "hybrid:ShowChord?conv=", true)
+
+#line 97 "ShowChordView.cshtml"
+                    , Tuple.Create<string,object,bool> ("", conv
 
 #line default
 #line hidden
@@ -292,29 +434,79 @@ WriteAttribute ("value", " value=\"", "\""
 WriteLiteral(">");
 
 
-#line 57 "ShowChordView.cshtml"
-                                     Write(conv);
+#line 97 "ShowChordView.cshtml"
+                                                             Write(conv);
 
 
 #line default
 #line hidden
-WriteLiteral("</option>\n");
+WriteLiteral("</a></li>\n");
 
 
-#line 58 "ShowChordView.cshtml"
-				}
-            }
+#line 98 "ShowChordView.cshtml"
+                    }
 
 
 #line default
 #line hidden
-WriteLiteral("            </select>\n\t\t    <input");
+WriteLiteral("                    </ul>\n                </div>\n            </div>\n        </nav" +
+">\n\t\t<form");
 
-WriteLiteral(" type=\"submit\"");
+WriteLiteral(" action=\"hybrid:ShowChord\"");
 
-WriteLiteral(" value=\"Find\"");
+WriteLiteral(">\n\t\t\t<input");
 
-WriteLiteral(" />\n\t\t    <br />\n\t\t    <input");
+WriteLiteral(" type=\"hidden\"");
+
+WriteLiteral(" name=\"root\"");
+
+WriteLiteral(" id=\"root\"");
+
+WriteAttribute ("value", " value=\"", "\""
+
+#line 104 "ShowChordView.cshtml"
+                       , Tuple.Create<string,object,bool> ("", Model.Notes[Model.conv][1]
+
+#line default
+#line hidden
+, false)
+);
+WriteLiteral(" />\n            <input");
+
+WriteLiteral(" type=\"hidden\"");
+
+WriteLiteral(" name=\"type\"");
+
+WriteLiteral(" id=\"type\"");
+
+WriteLiteral(" value=\"\"");
+
+WriteLiteral(" />\n\t\t\t<input");
+
+WriteLiteral(" type=\"hidden\"");
+
+WriteLiteral(" name=\"conv\"");
+
+WriteLiteral(" id=\"conv\"");
+
+WriteAttribute ("value", " value=\"", "\""
+
+#line 106 "ShowChordView.cshtml"
+                       , Tuple.Create<string,object,bool> ("", Model.conv
+
+#line default
+#line hidden
+, false)
+);
+WriteLiteral(" />\n\t\t\t<div");
+
+WriteLiteral(" style=\"margin-bottom: 20px\"");
+
+WriteLiteral(">\n\t\t\t\t<span");
+
+WriteLiteral(" class=\"col-xs-9 col-sm-9 col-md-9 col-lg-9\"");
+
+WriteLiteral(">Allow partial chords</span>\n\t            <input");
 
 WriteLiteral(" type=\"checkbox\"");
 
@@ -322,9 +514,23 @@ WriteLiteral(" name=\"partial\"");
 
 WriteLiteral(" value=\"true\"");
 
+WriteLiteral(" data-toggle=\"toggle\"");
+
+WriteLiteral(" data-on=\"Yes\"");
+
+WriteLiteral(" data-off=\"No\"");
+
 WriteLiteral(" checked=\"checked\"");
 
-WriteLiteral(" /> Allow partial chords\n\t\t    <input");
+WriteLiteral(" />\n            </div>\n\t\t\t<div");
+
+WriteLiteral(" style=\"margin-bottom: 20px\"");
+
+WriteLiteral(">\n\t\t\t\t<span");
+
+WriteLiteral(" class=\"col-xs-9 col-sm-9 col-md-9 col-lg-9\"");
+
+WriteLiteral(">Allow special chords</span>\n\t            <input");
 
 WriteLiteral(" type=\"checkbox\"");
 
@@ -332,7 +538,23 @@ WriteLiteral(" name=\"special\"");
 
 WriteLiteral(" value=\"true\"");
 
-WriteLiteral(" /> Allow special chords\n\t\t</form>\n\t\t<div");
+WriteLiteral(" data-toggle=\"toggle\"");
+
+WriteLiteral(" data-on=\"Yes\"");
+
+WriteLiteral(" data-off=\"No\"");
+
+WriteLiteral(" />\n            </div>\n\t\t\t<button");
+
+WriteLiteral(" type=\"button\"");
+
+WriteLiteral(" class=\"btn btn-default btn-lg\"");
+
+WriteLiteral(" style=\"width:100%\"");
+
+WriteLiteral(" onclick=\"$(\'form\').submit();\"");
+
+WriteLiteral(">Find</button>\n\t\t</form>\n\t\t<div");
 
 WriteLiteral(" class=\"error\"");
 
@@ -345,9 +567,14 @@ WriteLiteral("></div>\n\t\t<script");
 WriteLiteral(" type=\"text/javascript\"");
 
 WriteLiteral(@">
-		    function updateNamingConvention(value) {
-		        location = 'hybrid:ShowChord?conv=' + value;
-		    }
+			function updateRoot(value) {
+				$('#navbar-root').html(value);
+				$('#root').val(value);
+			}
+            function updateChordType(value) {
+                $('#navbar-type').html(value);
+                $('#type').val(value);
+            }
 		</script>
 		<!-- Main content end -->
 			
