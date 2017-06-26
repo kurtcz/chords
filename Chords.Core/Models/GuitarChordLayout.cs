@@ -33,7 +33,7 @@ namespace Chords.Core.Models
 
         public static IEnumerable<GuitarChordLayout> Generate(Chord chord, bool allowSpecial, bool allowPartial)
         {
-			var results = new ConcurrentBag<GuitarChordLayout>();
+            var results = new ConcurrentBag<GuitarChordLayout>();
             var positionsPerString = new HashSet<int>[6];
 
             //for each string find all positions corresponding to notes from the given chord
@@ -54,8 +54,8 @@ namespace Chords.Core.Models
                     {
                         positionsPerString[s].Add(pos);
                     }
-				}
-			}
+                }
+            }
 
             var layouts = GenerateLayouts(positionsPerString).ToArray();
             var guitarChordTypes = Enum.GetValues(typeof(GuitarChordType))
@@ -63,6 +63,7 @@ namespace Chords.Core.Models
                                        .Where(i => allowSpecial || i != GuitarChordType.Special)
                                        .ToList();
             Parallel.ForEach(layouts, layout =>
+            //foreach(var layout in layouts)
             {
                 foreach (var guitarChordType in guitarChordTypes)
                 {
@@ -89,6 +90,7 @@ namespace Chords.Core.Models
                     }
                 }
             });
+            //}
 
             return results.Distinct();
         }
@@ -179,15 +181,23 @@ namespace Chords.Core.Models
 			{
 				return false;
 			}
-			////for special chords it is not possible to hold more than 4 notes
+			//for special chords it is not possible to hold more than 4 notes
+            //unless we hold them in a barre position in which case we have up to 3 fingers remaining
 			if (GuitarChordType == GuitarChordType.Special &&
-				Positions.Count(i => i > 0) > 4)
+				Positions.Count(i => i > 0) > 4 &&
+                ((Positions[0] > X &&
+                  Positions.Count(i => i != Positions[0] &&
+                                       i > 0) > 3) ||
+				 (Positions[0] == X &&
+                  Positions[1] > X &&
+                  Positions.Count(i => i != Positions[1] &&
+                                       i > 0) > 3)))
 			{
 				return false;
 			}
-			//special chords (with silent strings in the middle) shall not contain any empty strings
+			//special chords (with silent strings in the middle) shall not contain more than two silent strings
 			if (GuitarChordType == GuitarChordType.Special &&
-				Positions.Any(i => i == 0))
+				Positions.Count(i => i == X) > 2)
 			{
 				return false;
 			}
@@ -227,7 +237,18 @@ namespace Chords.Core.Models
                  GuitarChordType == GuitarChordType.Special) &&
                 emptyPositions.Any())
             {
-				return false;
+                //exception for special type chords held in a barre way
+                if (GuitarChordType != GuitarChordType.Special ||
+                    (Positions[0] > 0 &&
+                     Positions.Count(i => i > Positions[0]) > 3) ||
+					(Positions[0] == X &&
+                     Positions[1] > 0 &&
+                     Positions.Count(i => i > Positions[1]) > 3) ||
+                    (Positions.Where(i => i > 0).Distinct().Count() > 3))
+
+				{
+                    return false;
+                }
             }
 			//chords that do not span all strings may not use low strings
 			if ((GuitarChordType == GuitarChordType.FiveString ||
