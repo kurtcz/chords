@@ -18,7 +18,7 @@ using System.Threading;
 
 namespace Chords.Android
 {
-    [Activity(Label = "Guitar Chords", MainLauncher = true, Icon = "@mipmap/icon")]
+    [Activity(Label = "Chords", MainLauncher = true, Icon = "@mipmap/icon")]
     public class MainActivity : Activity
     {
         private static Bundle _bundle;
