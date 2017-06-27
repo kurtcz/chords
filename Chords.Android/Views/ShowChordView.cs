@@ -328,7 +328,16 @@ WriteAttribute ("onclick", " onclick=\"", "\""
 , Tuple.Create<string,object,bool> ("", "updateChordType(\'", true)
 
 #line 75 "ShowChordView.cshtml"
-                   , Tuple.Create<string,object,bool> ("", type.Value
+                  , Tuple.Create<string,object,bool> ("", type.Key
+
+#line default
+#line hidden
+, false)
+, Tuple.Create<string,object,bool> ("", "\',", true)
+, Tuple.Create<string,object,bool> (" ", "\'", true)
+
+#line 75 "ShowChordView.cshtml"
+                               , Tuple.Create<string,object,bool> ("", type.Value
 
 #line default
 #line hidden
@@ -343,7 +352,7 @@ WriteLiteral(">");
 
 
 #line 75 "ShowChordView.cshtml"
-                                                                                                                                  Write(type.Key);
+                                                                                                                                             Write(type.Key);
 
 
 #line default
@@ -587,8 +596,8 @@ WriteLiteral(@">
 				$('#navbar-root').html(value);
 				$('#root').val(value);
 			}
-            function updateChordType(value) {
-                $('#navbar-type').html(value);
+            function updateChordType(text, value) {
+                $('#navbar-type').html(text);
                 $('#type').val(value);
             }
 		</script>

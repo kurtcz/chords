@@ -72,7 +72,7 @@
                     <ul class="nav navbar-nav">
                     @foreach(var type in @Model.ChordTypeList)
                     {
-                        <li><a onclick="updateChordType('@(type.Value)');" data-toggle="collapse" data-target=".navbar-type-collapse">@(type.Key)</a></li>
+                        <li><a onclick="updateChordType('@type.Key', '@type.Value');" data-toggle="collapse" data-target=".navbar-type-collapse">@(type.Key)</a></li>
                     }
                     </ul>
                 </div>
@@ -121,8 +121,8 @@
 				$('#navbar-root').html(value);
 				$('#root').val(value);
 			}
-            function updateChordType(value) {
-                $('#navbar-type').html(value);
+            function updateChordType(text, value) {
+                $('#navbar-type').html(text);
                 $('#type').val(value);
             }
 		</script>

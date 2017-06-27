@@ -77,7 +77,9 @@ namespace Chords.Core.Models
                     {
                         result.Notes = result.GetUsedNotes();
                         result.Complete = result.Notes.Distinct().Count() == result._chord.Notes.Count();
-                        result.Fret = result.Positions.Where(i => i > 0).Min();
+                        result.Fret = result.Positions.Any(i => i > 0)
+                                        ? result.Positions.Where(i => i > 0).Min()
+                                        : 0;
                         //if possible try to render normal chords from the 1st fret
                         if (guitarChordType != GuitarChordType.SixStringBarre &&
                             guitarChordType != GuitarChordType.FiveStringBarre &&

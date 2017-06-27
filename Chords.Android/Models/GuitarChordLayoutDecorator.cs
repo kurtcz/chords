@@ -1,4 +1,4 @@
-﻿using System;
+﻿﻿using System;
 using System.Linq;
 using System.Text;
 using Chords.Core.Extensions;
@@ -44,7 +44,7 @@ namespace Chords.Android.Models
                     if (f == 0)
                     {
                         sb.AppendFormat("<div style=\"font-family: monospace;\">[{0}]&nbsp;{1}", RenderingFret, RenderingFret < 10 ? "&nbsp;" : "");
-                        sb.Append(RenderingFret == 0 ? "=" : "-");
+                        sb.Append(RenderingFret == 0 ? "<span style=\"font-weight:bold;\">=</span>" : "-");
 
                         for (var s = 0; s < 6; s++)
                         {
@@ -52,11 +52,11 @@ namespace Chords.Android.Models
                                 IntPositions[s] == GuitarChordLayout.X)
                             {
                                 sb.AppendFormat("<span class=\"{0}\">{0}</span>", IntPositions[s] == GuitarChordLayout.X ? "X" : "O");
-                                sb.Append(RenderingFret == 0 ? "=" : "-");
+                                sb.Append(RenderingFret == 0 ? "<span style=\"font-weight:bold;\">=</span>" : "-");
                             }
                             else
                             {
-                                sb.Append(RenderingFret == 0 ? "==" : "--");
+                                sb.Append(RenderingFret == 0 ? "<span style=\"font-weight:bold;\">==</span>" : "--");
                             }
                         }
                         sb.AppendLine("</div>");
