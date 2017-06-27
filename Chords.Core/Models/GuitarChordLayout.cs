@@ -1,4 +1,5 @@
-﻿﻿using System;
+﻿//#define TESTING
+using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,15 +11,15 @@ namespace Chords.Core.Models
     {
         public const int X = -1;       //this symbol denotes a silent string
         private Chord _chord;
-        private static readonly Note[] _strings = 
-		{
+        private static readonly Note[] _strings =
+        {
             new Note(Tone.E),
-			new Note(Tone.A),
-			new Note(Tone.D),
-			new Note(Tone.G),
-			new Note(Tone.B),
-			new Note(Tone.E)
-		};
+            new Note(Tone.A),
+            new Note(Tone.D),
+            new Note(Tone.G),
+            new Note(Tone.B),
+            new Note(Tone.E)
+        };
 
         public int[] Positions { get; private set; } = new int[6];
         public GuitarChordType GuitarChordType { get; private set; }
@@ -62,8 +63,11 @@ namespace Chords.Core.Models
                                        .Cast<GuitarChordType>()
                                        .Where(i => allowSpecial || i != GuitarChordType.Special)
                                        .ToList();
+#if !TESTING
             Parallel.ForEach(layouts, layout =>
-            //foreach(var layout in layouts)
+#else
+            foreach(var layout in layouts)
+#endif
             {
                 foreach (var guitarChordType in guitarChordTypes)
                 {
@@ -91,8 +95,11 @@ namespace Chords.Core.Models
                         results.Add(result);
                     }
                 }
+#if !TESTING
             });
-            //}
+#else
+            }
+#endif
 
             return results.Distinct();
         }
@@ -168,6 +175,13 @@ namespace Chords.Core.Models
 			{
 				return false;
 			}
+            //do not allow same notes to follow each other immediately
+            if (usedNotes.Select((i, idx) => new { Note = i, Index = idx })
+                         .Any(i => i.Index < usedNotes.Length - 1 &&
+                                   i.Note.Tone == usedNotes[i.Index + 1].Tone))
+            {
+                return false;
+            }
             //distance between positions should not exceed 4 frets
             var usedPositions = Positions.Where(i => i > 0);
             var maxUsedPosition = usedPositions.Any() ? usedPositions.Max() : 0;
