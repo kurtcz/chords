@@ -119,9 +119,16 @@
     <AndroidResource Include="Resources\mipmap-xhdpi\Icon.png" />
     <AndroidResource Include="Resources\mipmap-xxhdpi\Icon.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\Icon.png" />
+    <AndroidResource Include="Resources\raw\A5.ogg" />
+    <AndroidResource Include="Resources\raw\B2.ogg" />
+    <AndroidResource Include="Resources\raw\D4.ogg" />
+    <AndroidResource Include="Resources\raw\E1.ogg" />
+    <AndroidResource Include="Resources\raw\E6.ogg" />
+    <AndroidResource Include="Resources\raw\G3.ogg" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />
+    <Folder Include="Resources\raw\" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\style.css" />

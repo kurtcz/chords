@@ -72,7 +72,9 @@
 	                @Model.Layouts.Length results
 	                @foreach(var layout in Model.Layouts)
 	                {
-	                    <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 chord-layout">
+					    var positions = string.Join(",", layout.IntPositions.Select(i => i.ToString()).ToArray());
+					
+	                    <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 chord-layout" onclick="playChord('@positions');">
 	                        @if (layout.Complete)
 	                        {
 	                            <div class="chordlayout">@(layout.ToHtmlString())</div>
@@ -90,6 +92,15 @@
 	            <script type="text/javascript">
 	                $('#loader').hide();
 	                $('#layouts').show();
+					function playChord(positions) {
+	                    $.ajax({
+	                        url: 'hybrid:PlayChord',
+	                        type: 'get',
+	                        data: {
+	                            positions: positions
+	                        }
+	                    });
+					}
 	            </script>
 	        }
 			</div>

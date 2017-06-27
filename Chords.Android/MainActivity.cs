@@ -1,6 +1,7 @@
 ﻿﻿using System;
 using Android.App;
 using Android.Content;
+using Android.Media;
 using Android.Runtime;
 using Android.Views;
 using Android.Webkit;
@@ -13,6 +14,7 @@ using Chords.Android.Models;
 using Chords.Android.Views;
 using Chords.Core.Extensions;
 using Chords.Core.Models;
+using System.Threading;
 
 namespace Chords.Android
 {
@@ -21,6 +23,32 @@ namespace Chords.Android
     {
         private static Bundle _bundle;
         private WebView _webView;
+		private static SoundPool _soundPool;
+        private static int[] _soundIds;
+        private static float[] _pitchRates =
+        {
+            1,
+            16/15f,
+            9/8f,
+            6/5f,
+            5/4f,
+            4/3f,
+            45/32f,
+            3/2f,
+            8/5f,
+            5/3f,
+            16/9f,
+            15/8f
+        };
+        private static int[] _nextStringPosition =
+        {
+            5,
+            5,
+            5,
+            4,
+            4,
+            int.MaxValue
+        };
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -36,6 +64,17 @@ namespace Chords.Android
             var viewClient = new HybridWebViewClient();
             _webView.SetWebViewClient(viewClient);
 
+            if (_soundPool == null)
+            {
+                _soundPool = new SoundPool(6, Stream.Music, 0);
+                _soundIds = new int[6];
+                _soundIds[0] = _soundPool.Load(Application, Resource.Raw.E6, 1);
+                _soundIds[1] = _soundPool.Load(Application, Resource.Raw.A5, 1);
+                _soundIds[2] = _soundPool.Load(Application, Resource.Raw.D4, 1);
+                _soundIds[3] = _soundPool.Load(Application, Resource.Raw.G3, 1);
+                _soundIds[4] = _soundPool.Load(Application, Resource.Raw.B2, 1);
+                _soundIds[5] = _soundPool.Load(Application, Resource.Raw.E1, 1);
+            }
             if (_bundle == null)
             {
                 viewClient.ShowChord(_webView, new NameValueCollection());
@@ -56,7 +95,7 @@ namespace Chords.Android
 
         private class HybridWebViewClient : WebViewClient
         {
-            public override void OnReceivedError(WebView view, IWebResourceRequest request, WebResourceError error)
+			public override void OnReceivedError(WebView view, IWebResourceRequest request, WebResourceError error)
             {
                 //Hack to handle $.ajax('hybrid:xxx'); calls that are failing with ERR_UNKNOWN_URL_SCHEME
 				var scheme = "hybrid:";
@@ -98,6 +137,10 @@ namespace Chords.Android
 				{
 					FindChord(webView, parameters);
 				}
+                else if (method == "PlayChord")
+                {
+					PlayChord(parameters);
+                }
 				else
                 {
                     return false;
@@ -228,6 +271,39 @@ namespace Chords.Android
 				// Load the rendered HTML into the view with a base URL 
 				// that points to the root of the bundled Assets folder
 				webView.LoadDataWithBaseURL("file:///android_asset/", page, "text/html", "UTF-8", null);
+			}
+
+            public void PlayChord(NameValueCollection parameters)
+            {
+                var intPositions = parameters["positions"]?.Split(',')?.Select(i => int.Parse(i))?.ToArray();
+
+                if (intPositions == null)
+                {
+                    return;
+                }
+                for (var n = 0; n < 2; n++)
+                {
+					for (var i = 0; i < intPositions.Length; i++)
+					{
+						var halfSteps = intPositions[i];
+
+						if (halfSteps >= 0)
+						{
+							var playRate = (halfSteps / _pitchRates.Length + 1) * _pitchRates[halfSteps % _pitchRates.Length];
+
+							_soundPool.Play(_soundIds[i], 1, 1, 0, 0, playRate);
+                            if (n == 0)
+                            {
+								Thread.Sleep(300);
+							}
+                            else
+                            {
+								Thread.Sleep(100);
+							}
+						}
+					}
+                    Thread.Sleep(300);
+				}
 			}
 
 			public void UpdateLabel(WebView webView, NameValueCollection parameters)
