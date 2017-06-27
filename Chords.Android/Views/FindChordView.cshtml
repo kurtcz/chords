@@ -2,6 +2,9 @@
 @using System.Text.RegularExpressions
 @using PortableRazor.Web.Mvc
 @model Chords.Android.Models.FindChordModel
+@{
+    var notes = Model.SelectedNotes != null ? string.Join(",", Model.SelectedNotes) : string.Empty;
+}
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,8 +27,8 @@
                 
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="hybrid:ShowChord">Show chord</a></li>
-                    <li><a href="hybrid:FindChord">Find chord</a></li>
+                    <li><a href="hybrid:ShowChord?conv=@Model.conv">Show chord</a></li>
+                    <li><a href="hybrid:FindChord?conv=@Model.conv">Find chord</a></li>
                 </ul>
             </div>
         </div>
@@ -52,14 +55,49 @@
                     <ul class="nav navbar-nav">
                     @foreach(var conv in @Model.NamingConventions)
                     {
-                        <li><a href="hybrid:FindChord?conv=@conv">@conv</a></li>
+						if (Model.Strict)
+						{
+	                        <li><a href="hybrid:FindChord?conv=@conv&strict=true&oldconv=@Model.conv&note=@notes">@conv</a></li>
+    					}
+						else
+						{
+                            <li><a href="hybrid:FindChord?conv=@conv&strict=false&oldconv=@Model.conv&note=@notes">@conv</a></li>
+						}
                     }
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <nav class="navbar navbar-inverse">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-strict-collapse">
+                        <span class="sr-only">Toggle naming convention</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+					@if (Model.Strict)
+					{
+                        <span class="navbar-brand" id="navbar-strict">Strict (@Model.Notes[Model.conv][1]<sub>#</sub> = @Model.Notes[Model.conv][4]<sub>b</sub>)</span>
+					}
+					else
+					{
+                        <span class="navbar-brand" id="navbar-strict">Loose (@Model.Notes[Model.conv][1]<sub>#</sub> ≠ @Model.Notes[Model.conv][4]<sub>b</sub>)</span>
+					}
+                </div>
+                    
+                <div class="navbar-strict-collapse collapse">
+                    <ul class="nav navbar-nav">
+						<li><a href="hybrid:FindChord?conv=@Model.conv&strict=true&oldconv=@Model.conv&note=@notes">Strict (@Model.Notes[Model.conv][1]<sub>#</sub> = @Model.Notes[Model.conv][4]<sub>b</sub>)</a></li>
+                        <li><a href="hybrid:FindChord?conv=@Model.conv&strict=false&oldconv=@Model.conv&note=@notes">Loose (@Model.Notes[Model.conv][1]<sub>#</sub> ≠ @Model.Notes[Model.conv][4]<sub>b</sub>)</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
 		<form action="hybrid:FindChord">
 			<input type="hidden" name="conv" value="@Model.conv" />
+			<input type="hidden" name="strict" value="@(Model.Strict ? "true": "false")" />
 			<div class="text-center" style="margin-top:20px;">
 			@for(var i = 0; i < Model.AllNotes[Model.conv].Length; i++)
 			{

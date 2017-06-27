@@ -178,7 +178,11 @@ namespace Chords.Android
                 if (string.IsNullOrWhiteSpace(parameters["note"]))
                 {
                     var chordParams = new ChordParams(parameters);
-                    var model = new FindChordModel { conv = chordParams.NamingConvention };
+                    var model = new FindChordModel
+                    {
+                        conv = chordParams.NamingConvention, 
+                        Strict = chordParams.Strict
+                    };
                     var template = new FindChordView() { Model = model };
 
                     page = template.GenerateString();
@@ -191,7 +195,14 @@ namespace Chords.Android
                     var notes = tokens.Select(i => Note.TryParse(i, chordParams.NamingConvention, out note) ? note : null)
                                       .Where(i => i != null)
                                       .ToArray();
-                    var chord = Chord.Find(notes);
+
+                    if (!notes.Any())
+                    {
+						notes = tokens.Select(i => Note.TryParse(i, chordParams.OldNamingConvention, out note) ? note : null)
+									  .Where(i => i != null)
+									  .ToArray();
+					}
+                    var chord = Chord.Find(notes, chordParams.Strict);
 
                     if (chord != null)
                     {
@@ -201,7 +212,14 @@ namespace Chords.Android
                         ShowChord(webView, parameters);
                         return;
                     }
-                    var model = new FindChordModel { conv = chordParams.NamingConvention, SelectedNotes = tokens, Error = "No chord found" };
+					var model = new FindChordModel
+                    {
+                        conv = chordParams.NamingConvention, 
+                        Strict = chordParams.Strict,
+                        SelectedNotes = notes.Select(i => i.ToString(chordParams.NamingConvention))
+                                             .ToArray(),
+                        Error = "No chord found"
+                    };
 					var template = new FindChordView() { Model = model };
 
 					page = template.GenerateString();

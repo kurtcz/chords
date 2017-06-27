@@ -106,7 +106,7 @@ namespace Chords.Controllers
             return PartialView(result);
         }
 
-        public IActionResult FindChord([FromQuery] string sequence, [FromQuery] NamingConvention conv)
+        public IActionResult FindChord([FromQuery] string sequence, [FromQuery] NamingConvention conv, [FromQuery] bool strict)
         {
             ViewData["conv"] = Helper.NamingConventionList(conv);
             if (sequence == null)
@@ -123,7 +123,7 @@ namespace Chords.Controllers
             var notes = tokens.Select(i => Note.TryParse(i, conv, out note) ? note : null)
                               .Where(i => i != null)
                               .ToArray();
-            var chord = Chord.Find(notes);
+            var chord = Chord.Find(notes, strict);
 
 			if (chord == null)
 			{

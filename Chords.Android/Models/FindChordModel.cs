@@ -10,6 +10,7 @@ namespace Chords.Android.Models
     public class FindChordModel
     {
 		public NamingConvention conv { get; set; }
+        public bool Strict { get; set; }
         public string[] SelectedNotes { get; set; }
 		public Dictionary<NamingConvention, string[]> Notes = new Dictionary<NamingConvention, string[]>
 		{

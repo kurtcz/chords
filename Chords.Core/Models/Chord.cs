@@ -29,7 +29,7 @@ namespace Chords.Core.Models
 										 .ToArray();
 		}
 
-		public static Chord Find(Note[] notes)
+		public static Chord Find(Note[] notes, bool strict)
 		{
             foreach(var note in notes)
             {
@@ -37,7 +37,10 @@ namespace Chords.Core.Models
                 {
                     var chord = new Chord(note, chordType);
 
-                    if (notes.OrderBy(i => i.Tone).SequenceEqual(chord.Notes.OrderBy(i => i.Tone)))
+                    //if (notes.OrderBy(i => i.Tone).SequenceEqual(chord.Notes.OrderBy(i => i.Tone)))
+                    if (chord.Notes.Length == notes.Length &&
+                        chord.Notes.All(i => notes.Any(j => i == j ||
+                                                            (!strict && Note.Normalize(i) == Note.Normalize(j)))))
                     {
                         return chord;
                     }

@@ -104,12 +104,28 @@ WriteLiteral(" class=\"nav navbar-nav\"");
 
 WriteLiteral(">\n                    <li><a");
 
-WriteLiteral(" href=\"hybrid:ShowChord\"");
+WriteAttribute ("href", " href=\"", "\""
+, Tuple.Create<string,object,bool> ("", "hybrid:ShowChord?conv=", true)
 
+#line 27 "ShowChordLayoutsView.cshtml"
+                , Tuple.Create<string,object,bool> ("", Model.Parameters["conv"]
+
+#line default
+#line hidden
+, false)
+);
 WriteLiteral(">Show chord</a></li>\n                    <li><a");
 
-WriteLiteral(" href=\"hybrid:FindChord\"");
+WriteAttribute ("href", " href=\"", "\""
+, Tuple.Create<string,object,bool> ("", "hybrid:FindChord?conv=", true)
 
+#line 28 "ShowChordLayoutsView.cshtml"
+                , Tuple.Create<string,object,bool> ("", Model.Parameters["conv"]
+
+#line default
+#line hidden
+, false)
+);
 WriteLiteral(">Find chord</a></li>\n                </ul>\n            </div>\n        </div>\n    " +
 "</nav>\n    <script");
 
