@@ -16,6 +16,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
+#line 2 "ShowChordView.cshtml"
+using Chords.Core.Extensions;
+
+#line default
+#line hidden
+
 
 [System.CodeDom.Compiler.GeneratedCodeAttribute("RazorTemplatePreprocessor", "2.6.0.0")]
 public partial class ShowChordView : PortableRazor.ViewBase
@@ -23,7 +29,7 @@ public partial class ShowChordView : PortableRazor.ViewBase
 
 #line hidden
 
-#line 2 "ShowChordView.cshtml"
+#line 3 "ShowChordView.cshtml"
 public Chords.Android.Models.ShowChordModel Model { get; set; }
 
 #line default
@@ -105,7 +111,7 @@ WriteLiteral(">\n                    <li><a");
 WriteAttribute ("href", " href=\"", "\""
 , Tuple.Create<string,object,bool> ("", "hybrid:ShowChord?conv=", true)
 
-#line 25 "ShowChordView.cshtml"
+#line 26 "ShowChordView.cshtml"
                 , Tuple.Create<string,object,bool> ("", Model.conv
 
 #line default
@@ -117,7 +123,7 @@ WriteLiteral(">Show chord</a></li>\n                    <li><a");
 WriteAttribute ("href", " href=\"", "\""
 , Tuple.Create<string,object,bool> ("", "hybrid:FindChord?conv=", true)
 
-#line 26 "ShowChordView.cshtml"
+#line 27 "ShowChordView.cshtml"
                 , Tuple.Create<string,object,bool> ("", Model.conv
 
 #line default
@@ -188,7 +194,7 @@ WriteLiteral(" id=\"navbar-root\"");
 WriteLiteral(">");
 
 
-#line 46 "ShowChordView.cshtml"
+#line 47 "ShowChordView.cshtml"
                                                            Write(Model.Notes[Model.conv][1]);
 
 
@@ -205,13 +211,13 @@ WriteLiteral(" class=\"nav navbar-nav\"");
 WriteLiteral(">\n");
 
 
-#line 51 "ShowChordView.cshtml"
+#line 52 "ShowChordView.cshtml"
 					
 
 #line default
 #line hidden
 
-#line 51 "ShowChordView.cshtml"
+#line 52 "ShowChordView.cshtml"
                      foreach(var note in @Model.Notes[Model.conv])
 					{
 
@@ -223,7 +229,7 @@ WriteLiteral("                        <li><a");
 WriteAttribute ("onclick", " onclick=\"", "\""
 , Tuple.Create<string,object,bool> ("", "updateRoot(\'", true)
 
-#line 53 "ShowChordView.cshtml"
+#line 54 "ShowChordView.cshtml"
               , Tuple.Create<string,object,bool> ("", note
 
 #line default
@@ -238,7 +244,7 @@ WriteLiteral(" data-target=\".navbar-root-collapse\"");
 WriteLiteral(">");
 
 
-#line 53 "ShowChordView.cshtml"
+#line 54 "ShowChordView.cshtml"
                                                                                                                       Write(note);
 
 
@@ -247,7 +253,7 @@ WriteLiteral(">");
 WriteLiteral("</a></li>\n");
 
 
-#line 54 "ShowChordView.cshtml"
+#line 55 "ShowChordView.cshtml"
 					}
 
 
@@ -309,13 +315,13 @@ WriteLiteral(" class=\"nav navbar-nav\"");
 WriteLiteral(">\n");
 
 
-#line 73 "ShowChordView.cshtml"
+#line 74 "ShowChordView.cshtml"
                     
 
 #line default
 #line hidden
 
-#line 73 "ShowChordView.cshtml"
+#line 74 "ShowChordView.cshtml"
                      foreach(var type in @Model.ChordTypeList)
                     {
 
@@ -327,7 +333,7 @@ WriteLiteral("                        <li><a");
 WriteAttribute ("onclick", " onclick=\"", "\""
 , Tuple.Create<string,object,bool> ("", "updateChordType(\'", true)
 
-#line 75 "ShowChordView.cshtml"
+#line 76 "ShowChordView.cshtml"
                   , Tuple.Create<string,object,bool> ("", type.Key
 
 #line default
@@ -336,7 +342,7 @@ WriteAttribute ("onclick", " onclick=\"", "\""
 , Tuple.Create<string,object,bool> ("", "\',", true)
 , Tuple.Create<string,object,bool> (" ", "\'", true)
 
-#line 75 "ShowChordView.cshtml"
+#line 76 "ShowChordView.cshtml"
                                , Tuple.Create<string,object,bool> ("", type.Value
 
 #line default
@@ -351,7 +357,7 @@ WriteLiteral(" data-target=\".navbar-type-collapse\"");
 WriteLiteral(">");
 
 
-#line 75 "ShowChordView.cshtml"
+#line 76 "ShowChordView.cshtml"
                                                                                                                                              Write(type.Key);
 
 
@@ -360,7 +366,7 @@ WriteLiteral(">");
 WriteLiteral("</a></li>\n");
 
 
-#line 76 "ShowChordView.cshtml"
+#line 77 "ShowChordView.cshtml"
                     }
 
 
@@ -414,8 +420,8 @@ WriteLiteral(" id=\"navbar-conv\"");
 WriteLiteral(">");
 
 
-#line 90 "ShowChordView.cshtml"
-                                                           Write(Model.conv);
+#line 91 "ShowChordView.cshtml"
+                                                            Write(Model.conv.ToDescription());
 
 
 #line default
@@ -431,13 +437,13 @@ WriteLiteral(" class=\"nav navbar-nav\"");
 WriteLiteral(">\n");
 
 
-#line 95 "ShowChordView.cshtml"
+#line 96 "ShowChordView.cshtml"
                     
 
 #line default
 #line hidden
 
-#line 95 "ShowChordView.cshtml"
+#line 96 "ShowChordView.cshtml"
                      foreach(var conv in @Model.NamingConventions)
                     {
 
@@ -449,7 +455,7 @@ WriteLiteral("                        <li><a");
 WriteAttribute ("href", " href=\"", "\""
 , Tuple.Create<string,object,bool> ("", "hybrid:ShowChord?conv=", true)
 
-#line 97 "ShowChordView.cshtml"
+#line 98 "ShowChordView.cshtml"
                     , Tuple.Create<string,object,bool> ("", conv
 
 #line default
@@ -459,8 +465,8 @@ WriteAttribute ("href", " href=\"", "\""
 WriteLiteral(">");
 
 
-#line 97 "ShowChordView.cshtml"
-                                                             Write(conv);
+#line 98 "ShowChordView.cshtml"
+                                                              Write(conv.ToDescription());
 
 
 #line default
@@ -468,7 +474,7 @@ WriteLiteral(">");
 WriteLiteral("</a></li>\n");
 
 
-#line 98 "ShowChordView.cshtml"
+#line 99 "ShowChordView.cshtml"
                     }
 
 
@@ -489,7 +495,7 @@ WriteLiteral(" id=\"root\"");
 
 WriteAttribute ("value", " value=\"", "\""
 
-#line 104 "ShowChordView.cshtml"
+#line 105 "ShowChordView.cshtml"
                        , Tuple.Create<string,object,bool> ("", Model.Notes[Model.conv][1]
 
 #line default
@@ -516,7 +522,7 @@ WriteLiteral(" id=\"conv\"");
 
 WriteAttribute ("value", " value=\"", "\""
 
-#line 106 "ShowChordView.cshtml"
+#line 107 "ShowChordView.cshtml"
                        , Tuple.Create<string,object,bool> ("", Model.conv
 
 #line default

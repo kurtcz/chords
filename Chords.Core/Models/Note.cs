@@ -95,14 +95,22 @@ namespace Chords.Core.Models
 					}
                     return note;
                 case Accidental.Flat:
-                    if (note.Tone == Tone.F || note.Tone == Tone.C)
+                    if (note.Tone == Tone.F)
                     {
-                        return new Note(Tones[(Array.IndexOf(Tones, note.Tone) - 1) % NumberOfTones], Accidental.Natural);
+                        return new Note(Tone.E, Accidental.Natural);
                     }
+                    if (note.Tone == Tone.C)
+                    {
+						return new Note(Tone.B, Accidental.Natural);
+					}
                     return new Note(Tones[(Array.IndexOf(Tones, note.Tone) - 1) % NumberOfTones], Accidental.Sharp);
                 case Accidental.DoubleSharp:
                     return new Note(Tones[(Array.IndexOf(Tones, note.Tone) + 1) % NumberOfTones], Accidental.Natural);
 				case Accidental.DoubleFlat:
+                    if (note.Tone == Tone.C)
+                    {
+                        return new Note(Tone.B, Accidental.Natural);
+                    }
 					return new Note(Tones[(Array.IndexOf(Tones, note.Tone) - 1) % NumberOfTones], Accidental.Natural);
 			}
             throw new ArgumentException();
@@ -136,6 +144,10 @@ namespace Chords.Core.Models
                               ? -normalizedNote.ChromaticDistance(note)
                               : -note.ChromaticDistance(normalizedNote);
 
+            if (correction < (int)Accidental.DoubleFlat)
+            {
+                correction += NumberOfHalfTones;
+            }
             return new Note(tone, (Accidental)correction);
 		}
 

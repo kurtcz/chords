@@ -1,4 +1,5 @@
 ﻿@inherits PortableRazor.ViewBase
+@using Chords.Core.Extensions
 @model Chords.Android.Models.ShowChordModel
 <!DOCTYPE html>
 <html>
@@ -87,14 +88,14 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <span class="navbar-brand" id="navbar-conv">@Model.conv</span>
+                    <span class="navbar-brand" id="navbar-conv">@(Model.conv.ToDescription())</span>
                 </div>
                     
                 <div class="navbar-conv-collapse collapse">
                     <ul class="nav navbar-nav">
                     @foreach(var conv in @Model.NamingConventions)
                     {
-                        <li><a href="hybrid:ShowChord?conv=@conv">@conv</a></li>
+                        <li><a href="hybrid:ShowChord?conv=@conv">@(conv.ToDescription())</a></li>
                     }
                     </ul>
                 </div>
