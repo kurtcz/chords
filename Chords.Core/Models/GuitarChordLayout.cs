@@ -8,7 +8,7 @@ namespace Chords.Core.Models
 {
     public class GuitarChordLayout
     {
-        const int X = -1;       //this symbol denotes a silent string
+        public const int X = -1;       //this symbol denotes a silent string
         private Chord _chord;
         private static readonly Note[] _strings = 
 		{

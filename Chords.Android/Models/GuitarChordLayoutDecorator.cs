@@ -48,10 +48,10 @@ namespace Chords.Android.Models
 
                         for (var s = 0; s < 6; s++)
                         {
-                            if (Positions[s] == "0" ||
-                                Positions[s] == "X")
+                            if (IntPositions[s] == 0 ||
+                                IntPositions[s] == GuitarChordLayout.X)
                             {
-                                sb.AppendFormat("<span class=\"{0}\">{0}</span>", Positions[s]);
+                                sb.AppendFormat("<span class=\"{0}\">{0}</span>", IntPositions[s] == GuitarChordLayout.X ? "X" : "O");
                                 sb.Append(RenderingFret == 0 ? "=" : "-");
                             }
                             else
