@@ -1,4 +1,4 @@
-﻿//#define TESTING
+﻿#define TESTING
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
@@ -59,6 +59,10 @@ namespace Chords.Core.Models
             }
 
             var layouts = GenerateLayouts(positionsPerString).ToArray();
+#if TESTING
+            var k = 0;
+            layouts = layouts.Skip(k).ToArray();
+#endif
             var guitarChordTypes = Enum.GetValues(typeof(GuitarChordType))
                                        .Cast<GuitarChordType>()
                                        .Where(i => allowSpecial || i != GuitarChordType.Special)
@@ -227,7 +231,8 @@ namespace Chords.Core.Models
 			if (GuitarChordType == GuitarChordType.FiveString &&
 				((Positions[0] == X &&
 				  Positions.Count(i => i == X) > 1) ||
-				 Positions.Any(i => i == X)))
+                 (Positions[0] != X &&
+                  Positions.Any(i => i == X))))
 			{
 				return false;
 			}

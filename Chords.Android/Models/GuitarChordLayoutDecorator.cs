@@ -34,6 +34,89 @@ namespace Chords.Android.Models
 		}
 
         public HtmlString Schema
+        {
+            get
+            {
+				var sb = new StringBuilder();
+                var fret0 = string.Join(" ", new[]
+                {
+                    "M", "20", "20",
+                    "h", "75"
+                });
+                var frets = string.Join(" ", new[]
+                {
+                    "M", "20", "20",
+                    "v", "120",
+                    "M", "35", "20",
+                    "v", "120",
+					"M", "50", "20",
+					"v", "120",
+					"M", "65", "20",
+					"v", "120",
+					"M", "80", "20",
+					"v", "120",
+					"M", "95", "20",
+					"v", "120",
+					"M", "20", "20",
+                    "h", "75",
+					"M", "20", "50",
+					"h", "75",
+					"M", "20", "80",
+					"h", "75",
+					"M", "20", "110",
+					"h", "75",
+					"M", "20", "140",
+					"h", "75"
+				});
+                sb.AppendLine("\t<svg width=\"150\" height=\"150\" style=\"display:block;\">");
+                sb.AppendFormat("\t\t<path d=\"{0}\" fill=\"none\" stroke=\"{1}\" stroke-width=\"1\" />\n", frets, Complete ? "black" : "grey");
+                if (RenderingFret == 0)
+                {
+                    sb.AppendFormat("\t\t<path d=\"{0}\" fill=\"{1}\" stroke=\"{1}\" stroke-width=\"2\" />\n", fret0, Complete ? "black" : "grey");
+                }
+                var notes = ToString().Split(' ');
+
+                for (var s = 0; s < 6; s++)
+                {
+                    if (notes[s] == "X")
+                    {
+                        continue;
+                    }
+                    sb.AppendFormat("\t\t<text x=\"{0}\", y=\"{1}\" font-size=\"12\" fill=\"{2}\" stroke=\"{2}\" stroke-width=\"1\" text-anchor=\"middle\">{3}</text>\n", 
+                                    20 + s * 15, 10, Complete ? "black" : "grey", notes[s]);
+                }
+				for (var s = 0; s < 6; s++)
+				{
+					if (IntPositions[s] == GuitarChordLayout.X)
+                    {
+                        sb.AppendFormat("\t\t<line x1=\"{0}\" y1=\"{1}\" x2=\"{2}\" y2=\"{3}\" fill=\"red\" stroke=\"red\" stroke-width=\"3\" />\n",
+                                        20 + s * 15 - 5, 20 - 5,
+                                        20 + s * 15 + 5, 20 + 5);
+						sb.AppendFormat("\t\t<line x1=\"{0}\" y1=\"{1}\" x2=\"{2}\" y2=\"{3}\" fill=\"red\" stroke=\"red\" stroke-width=\"3\" />\n",
+										20 + s * 15 - 5, 20 + 5,
+										20 + s * 15 + 5, 20 - 5);
+					}
+                    else if (IntPositions[s] == 0)
+                    {
+						sb.AppendFormat("\t\t<circle cx=\"{0}\" cy=\"{1}\" r=\"5\" fill=\"blue\" stroke=\"none\" />\n", 20 + s * 15, 20);
+					}
+                    else
+					{
+                        sb.AppendFormat("\t\t<circle cx=\"{0}\" cy=\"{1}\" r=\"5\" fill=\"blue\" stroke=\"none\" />\n", 20 + s * 15, 5 + (IntPositions[s] - RenderingFret) * 30);
+					}
+				}
+                for (var f = 0; f < 5; f++)
+                {
+                    sb.AppendFormat("\t\t<text x=\"{0}\" y=\"{1}\" text-anchor=\"end\" fill=\"{2}\" stroke=\"none\" font-size=\"10\">{3}</text>",
+                                     10, 23 + f * 30, Complete ? "black" : "grey", RenderingFret + f);
+                }
+                sb.AppendLine("\t</svg>");
+
+				return new HtmlString(sb.ToString());
+            }
+        }
+
+        public HtmlString OldSchema
         { 
             get
             {
@@ -84,13 +167,28 @@ namespace Chords.Android.Models
 			}
         }
 
-		public HtmlString ToHtmlString()
-		{
-			return new HtmlString(ToString().Replace("\n", "<br />\n"));
-		}
 		public override string ToString()
 		{
-			return string.Format("{0}\n{1}", _layout, string.Join(" ", Notes.Select(i => i.ToString(_namingConvention))));
+            var sb = new StringBuilder();
+            var k = 0;
+
+            for (var s = 0; s < 6; s++)
+            {
+                if (IntPositions[s] == -1)
+                {
+                    sb.Append("X");
+                }
+                else
+                {
+                    sb.Append(Notes[k++].ToString(_namingConvention));
+                }
+                if (s < 5)
+                {
+                    sb.Append(" ");
+                }
+            }
+
+            return sb.ToString();
 		}
 	}
 }

@@ -76,17 +76,7 @@
 					    var positions = string.Join(",", layout.IntPositions.Select(i => i.ToString()).ToArray());
 					
 	                    <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 chord-layout" onclick="playChord('@positions');">
-	                        @if (layout.Complete)
-	                        {
-	                            <div class="chordlayout">@(layout.ToHtmlString())</div>
-	                        }
-	                        else
-	                        {
-	                            <div class="chordlayout incomplete">@(layout.ToHtmlString())</div>
-	                        }
-	                        <div class="chordschema">
 	                        @(layout.Schema)
-	                        </div>
 	                    </div>
 	                }
 	            </p>

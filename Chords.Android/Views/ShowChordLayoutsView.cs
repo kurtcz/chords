@@ -392,85 +392,19 @@ WriteAttribute ("onclick", " onclick=\"", "\""
 );
 WriteLiteral(">\n");
 
-
-#line 79 "ShowChordLayoutsView.cshtml"
-	                        
-
-#line default
-#line hidden
-
-#line 79 "ShowChordLayoutsView.cshtml"
-                             if (layout.Complete)
-	                        {
-
-
-#line default
-#line hidden
-WriteLiteral("\t                            <div");
-
-WriteLiteral(" class=\"chordlayout\"");
-
-WriteLiteral(">");
-
-
-#line 81 "ShowChordLayoutsView.cshtml"
-                                                     Write(layout.ToHtmlString());
-
-
-#line default
-#line hidden
-WriteLiteral("</div>\n");
-
-
-#line 82 "ShowChordLayoutsView.cshtml"
-	                        }
-	                        else
-	                        {
-
-
-#line default
-#line hidden
-WriteLiteral("\t                            <div");
-
-WriteLiteral(" class=\"chordlayout incomplete\"");
-
-WriteLiteral(">");
-
-
-#line 85 "ShowChordLayoutsView.cshtml"
-                                                                Write(layout.ToHtmlString());
-
-
-#line default
-#line hidden
-WriteLiteral("</div>\n");
-
-
-#line 86 "ShowChordLayoutsView.cshtml"
-	                        }
-
-
-#line default
-#line hidden
-WriteLiteral("\t                        <div");
-
-WriteLiteral(" class=\"chordschema\"");
-
-WriteLiteral(">\n");
-
 WriteLiteral("\t                        ");
 
 
-#line 88 "ShowChordLayoutsView.cshtml"
+#line 79 "ShowChordLayoutsView.cshtml"
                         Write(layout.Schema);
 
 
 #line default
 #line hidden
-WriteLiteral("\n\t                        </div>\n\t                    </div>\n");
+WriteLiteral("\n\t                    </div>\n");
 
 
-#line 91 "ShowChordLayoutsView.cshtml"
+#line 81 "ShowChordLayoutsView.cshtml"
 	                }
 
 
@@ -498,7 +432,7 @@ WriteLiteral(@">
 ");
 
 
-#line 106 "ShowChordLayoutsView.cshtml"
+#line 96 "ShowChordLayoutsView.cshtml"
 	        }
 
 
@@ -507,7 +441,7 @@ WriteLiteral(@">
 WriteLiteral("\t\t\t</div>\n");
 
 
-#line 108 "ShowChordLayoutsView.cshtml"
+#line 98 "ShowChordLayoutsView.cshtml"
 		}
 
 
