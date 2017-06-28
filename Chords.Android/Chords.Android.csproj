@@ -83,6 +83,10 @@
     </Compile>
     <Compile Include="Models\ShowChordLayoutsModel.cs" />
     <Compile Include="Models\FindChordModel.cs" />
+    <Compile Include="Views\CircleView.cs">
+      <DependentUpon>CircleView.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CircleModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -109,6 +113,10 @@
     <None Include="Views\ShowChordLayoutsView.cshtml">
       <Generator>RazorTemplatePreprocessor</Generator>
       <LastGenOutput>ShowChordLayoutsView.cs</LastGenOutput>
+    </None>
+    <None Include="Views\CircleView.cshtml">
+      <Generator>RazorTemplatePreprocessor</Generator>
+      <LastGenOutput>CircleView.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <ItemGroup>

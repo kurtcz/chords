@@ -8,8 +8,23 @@ namespace Chords.Core.Models
     {
         const int NumberOfTones = 7;
         const int NumberOfHalfTones = 12;
+        private static readonly float[] PitchRates =
+		{
+			1,
+			16/15f,
+			9/8f,
+			6/5f,
+			5/4f,
+			4/3f,
+			45/32f,
+			3/2f,
+			8/5f,
+			5/3f,
+			16/9f,
+			15/8f
+		};
 
-        private static readonly Tone[] Tones = Enum.GetValues(typeof(Tone))
+		private static readonly Tone[] Tones = Enum.GetValues(typeof(Tone))
                                                    .Cast<Tone>()
                                                    .ToArray();
         public static readonly Note[] AllNotes = Enum.GetValues(typeof(Tone))
@@ -120,7 +135,7 @@ namespace Chords.Core.Models
         {
             if (halftones < 0)
             {
-                throw new ArgumentException();
+                halftones += NumberOfHalfTones;
             }
             var self = Normalize(this);
                            
@@ -140,9 +155,26 @@ namespace Chords.Core.Models
             }
 
 			var note = new Note(tone);
-            int correction = tone > normalizedNote.Tone
-                              ? -normalizedNote.ChromaticDistance(note)
-                              : -note.ChromaticDistance(normalizedNote);
+            int correction;
+
+            if (tone == Tone.B && normalizedNote.Tone == Tone.C ||
+                tone == Tone.E && normalizedNote.Tone == Tone.F)
+            {
+                correction = note.ChromaticDistance(normalizedNote);
+            }
+			else if (tone == Tone.C && normalizedNote.Tone == Tone.B ||
+                     tone == Tone.F && normalizedNote.Tone == Tone.E)
+            {
+				correction = -normalizedNote.ChromaticDistance(note);
+			}
+            else if (tone > normalizedNote.Tone)
+            {
+                correction = -normalizedNote.ChromaticDistance(note);
+            }
+            else
+            {
+                correction = -note.ChromaticDistance(normalizedNote);
+            }
 
             if (correction < (int)Accidental.DoubleFlat)
             {
@@ -150,6 +182,11 @@ namespace Chords.Core.Models
             }
             return new Note(tone, (Accidental)correction);
 		}
+
+        public static float HalfStepsToPlayRate(int halfSteps)
+        {
+            return (1 + halfSteps / PitchRates.Length) * PitchRates[halfSteps % PitchRates.Length];
+        }
 
         public static bool TryParse(string str, NamingConvention conv, out Note note)
         {

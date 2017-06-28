@@ -1,0 +1,210 @@
+﻿﻿@inherits PortableRazor.ViewBase
+@using PortableRazor.Web.Mvc
+@using Chords.Core.Extensions
+@model Chords.Android.Models.CircleModel
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="bootstrap.min.css" />
+    <link rel="stylesheet" href="bootstrap-toggle.min.css" />
+</head>
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <span class="navbar-brand">Circle of Fifths</span>
+            </div>
+                
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="hybrid:ShowChord?conv=@Model.conv">Show chord</a></li>
+                    <li><a href="hybrid:FindChord?conv=@Model.conv">Find chord</a></li>
+					<li><a href="hybrid:Circle?conv=@Model.conv">Circle of Fifths</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <script src="jquery.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <script src="bootstrap-toggle.min.js"></script>
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 main-content">
+
+        <!-- Main content start -->
+        <nav class="navbar navbar-inverse">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-conv-collapse">
+                        <span class="sr-only">Toggle naming convention</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <span class="navbar-brand" id="navbar-conv">@(Model.conv.ToDescription())</span>
+                </div>
+                    
+                <div class="navbar-conv-collapse collapse">
+                    <ul class="nav navbar-nav">
+                    @foreach(var conv in @Model.NamingConventions)
+                    {
+                        <li><a href="hybrid:Circle?conv=@conv">@(conv.ToDescription())</a></li>
+                    }
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="error">@Model.Error</div>
+		<div style="text-align: center;">
+			<svg class="circle-svg" width="320" height="320">
+				@for(var i = 1; i <= 12; i++)
+				{
+					var idx = i <= 6 ? Model.index + i - 1 : Model.index + i - 1 - 12;
+					if (idx < 0)
+					{
+					    idx += 12;
+					}
+					else if (idx >= Model.MajorCircle[Model.conv].Length)
+					{
+					    idx -= 12;
+					}
+					var id = Model.MajorCircle[Model.conv][idx];
+					var color = i == 1 || i == 2  || i == 12 ? "#4d89d5" : "black";
+
+                    @(new HtmlString($"\t\t\t\t<path id=\"arc-maj-{i}\" fill=\"none\" stroke=\"{color}\" onclick=\"location.href='hybrid:PlayChord?conv={Model.conv}&id={id}';\" />\n"))
+                    @(new HtmlString($"\t\t\t\t<text id=\"text-maj-{i}\" text-anchor=\"middle\" stroke=\"none\" fill=\"white\" font-size=\"24\" onclick=\"location.href='hybrid:PlayChord?conv={Model.conv}&id={id}';\">{id}</text>\n"))
+				}
+                @for(var i = 1; i <= 12; i++)
+                {
+                    var idx = (Model.index + i - 1) % 12;
+					var id = Model.MinorCircle[Model.conv][idx];
+                    var color = i == 1 || i == 2 || i == 12 ? "#4d89d5" : "black";
+
+					@(new HtmlString($"\t\t\t\t<path id=\"arc-min-{i}\" fill=\"none\" stroke=\"{color}\" onclick=\"location.href='hybrid:PlayChord?conv={Model.conv}&id={id}';\" />\n"))
+                    @(new HtmlString($"\t\t\t\t<text id=\"text-min-{i}\" text-anchor=\"middle\" stroke=\"none\" fill=\"white\" font-size=\"16\" onclick=\"location.href='hybrid:PlayChord?conv={Model.conv}&id={id}';\">{id}</text>\n"))
+                }
+                @for(var i = 1; i <= 12; i++)
+                {
+                    var idx = (Model.index + i - 1) % 12;
+					var id = Model.DiminishedCircle[Model.conv][idx];
+                    var color = i == 1 ? "#4d89d5" : "black";
+                    
+                    @(new HtmlString($"\t\t\t\t<path id=\"arc-dim-{i}\" fill=\"none\" stroke=\"{color}\" onclick=\"location.href='hybrid:PlayChord?conv={Model.conv}&id={id}';\" />\n"))
+                    @(new HtmlString($"\t\t\t\t<text id=\"text-dim-{i}\" text-anchor=\"middle\" stroke=\"none\" fill=\"white\" font-size=\"14\" onclick=\"location.href='hybrid:PlayChord?conv={Model.conv}&id={id}';\">{id}</text>\n"))
+                }
+                @for(var i = 1; i <= 12; i++)
+                {
+                    @(new HtmlString($"\t\t\t\t<line id=\"line-{i}\" />\n"))
+                }
+				<text id="signature" x="160" y="170" fill="#4d89d5" stroke="none" font-size="32" text-anchor="middle">@(Model.Signature)</text>
+				@if (Model.index > 1)
+				{
+				    <path id="prev" fill="#4d89d5" stroke="none" onclick="location.href='hybrid:Circle?conv=@Model.conv&index=@(Model.index-1)';" />
+				}
+				@if (Model.index < 15)
+				{
+				    <path id="next" fill="#4d89d5" stroke="none" onclick="location.href='hybrid:Circle?conv=@Model.conv&index=@(Model.index+1)';" />
+				}
+			</svg>
+		</div>
+        <script type="text/javascript">
+			function polarToCartesian(centerX, centerY, radius, angleInDegrees) {
+			  var angleInRadians = (angleInDegrees-90) * Math.PI / 180.0;
+
+			  return {
+			    x: centerX + (radius * Math.cos(angleInRadians)),
+			    y: centerY + (radius * Math.sin(angleInRadians))
+			  };
+			}
+
+			function describeArc(x, y, radius, startAngle, endAngle){
+
+			    var start = polarToCartesian(x, y, radius, endAngle);
+			    var end = polarToCartesian(x, y, radius, startAngle);
+
+			    var largeArcFlag = endAngle - startAngle <= 180 ? "0" : "1";
+
+			    var d = [
+			        "M", start.x, start.y, 
+			        "A", radius, radius, 0, largeArcFlag, 0, end.x, end.y
+			    ].join(" ");
+
+			    return d;       
+			}
+
+			function playChord(value) {
+                $.ajax({
+                    url: 'hybrid:PlayChord',
+                    type: 'get',
+                    data: {
+                        id: value
+                    }
+                });
+			}
+
+			$(document).ready(function() {
+				var x = 160;
+				var y = 160;
+
+				for(var i = 1; i <= 12; i++) {
+				    var midAngle = (i - 1) * 360 / 12;
+                    var startAngle = ((i - 1.5) * 360) / 12;
+				    var endAngle = ((i - 0.5) * 360) / 12;
+
+				    $('#arc-maj-' + i).attr('d', describeArc(x, y, 135, startAngle, endAngle));
+				    $('#arc-min-' + i).attr('d', describeArc(x, y, 100, startAngle, endAngle));
+				    $('#arc-dim-' + i).attr('d', describeArc(x, y, 65, startAngle, endAngle));
+                    
+				    $('#arc-maj-' + i).attr('stroke-width', '30');
+				    $('#arc-min-' + i).attr('stroke-width', '30');
+				    $('#arc-dim-' + i).attr('stroke-width', '30');
+
+				    var end = polarToCartesian(x, y, 160, endAngle);
+                
+                    $('#line-' + i).attr('x1', x);
+                    $('#line-' + i).attr('y1', y);
+                    $('#line-' + i).attr('x2', end.x);
+                    $('#line-' + i).attr('y2', end.y);
+				    $('#line-' + i).attr('stroke', 'white');
+				    $('#line-' + i).attr('fill', 'white');
+				    $('#line-' + i).attr('stroke-width', 3);
+
+				    var pos = polarToCartesian(x, y, 125, midAngle);
+				    $('#text-maj-' + i).attr('transform', 'translate(' + pos.x + ', ' + pos.y + ') rotate(' + midAngle + ')');
+				    pos = polarToCartesian(x, y, 95, midAngle);
+				    $('#text-min-' + i).attr('transform', 'translate(' + pos.x + ', ' + pos.y + ') rotate(' + midAngle + ')');
+				    pos = polarToCartesian(x, y, 60, midAngle);
+				    $('#text-dim-' + i).attr('transform', 'translate(' + pos.x + ', ' + pos.y + ') rotate(' + midAngle + ')');
+				}
+				var arrowSize = 40;
+				var prev = [
+				    "M", 0, 2 * y - arrowSize / 2,
+				    "l", arrowSize, -arrowSize / 2,
+				    "v ", arrowSize,
+				    "Z"
+				].join(" ");
+                var next = [
+                    "M", 2 * x, 2 * y - arrowSize / 2,
+                    "l", -arrowSize, arrowSize / 2,
+                    "v ", -arrowSize,
+                    "Z"
+                ].join(" ");
+				
+				$('#prev').attr('d', prev);
+				$('#next').attr('d', next);
+			});
+		</script>
+        <!-- Main content end -->
+            
+    </div>
+    <hr />
+    <footer>
+        <p>&copy; 2017 - Tomáš Němec</p>
+    </footer>
+</body>
+</html>

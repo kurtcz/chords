@@ -25,21 +25,6 @@ namespace Chords.Android
         private WebView _webView;
 		private static SoundPool _soundPool;
         private static int[] _soundIds;
-        private static float[] _pitchRates =
-        {
-            1,
-            16/15f,
-            9/8f,
-            6/5f,
-            5/4f,
-            4/3f,
-            45/32f,
-            3/2f,
-            8/5f,
-            5/3f,
-            16/9f,
-            15/8f
-        };
         private static int[] _nextStringPosition =
         {
             5,
@@ -141,6 +126,10 @@ namespace Chords.Android
                 {
 					PlayChord(parameters);
                 }
+				else if (method == "Circle")
+				{
+                    CircleOfFifths(webView, parameters);
+				}
 				else
                 {
                     return false;
@@ -275,6 +264,35 @@ namespace Chords.Android
 
             public void PlayChord(NameValueCollection parameters)
             {
+                var chordParams = new ChordParams(parameters);
+                var id = parameters["id"];
+
+                if (!string.IsNullOrEmpty(id))
+                {
+                    Chord chord;
+
+                    if (!Chord.TryParse(id, chordParams.NamingConvention, out chord))
+                    {
+                        return;
+                    }
+					var c = new Note(Core.Models.Tone.C);
+                    var minDistance = 3 + c.ChromaticDistance(chord.Notes[0]);
+
+					foreach(var note in chord.Notes)
+                    {
+						var pos = 3 + c.ChromaticDistance(note);
+
+                        if (pos < minDistance)
+                        {
+                            pos += 12;
+                        }
+                        var playRate = Note.HalfStepsToPlayRate(pos);
+
+                        _soundPool.Play(_soundIds[1], 1, 1, 0, 0, playRate);
+                        Thread.Sleep(50);
+                    }
+                    return;
+                }
                 var intPositions = parameters["positions"]?.Split(',')?.Select(i => int.Parse(i))?.ToArray();
 
                 if (intPositions == null)
@@ -289,21 +307,31 @@ namespace Chords.Android
 
 						if (halfSteps >= 0)
 						{
-							var playRate = (halfSteps / _pitchRates.Length + 1) * _pitchRates[halfSteps % _pitchRates.Length];
+                            var playRate = Note.HalfStepsToPlayRate(halfSteps);
 
 							_soundPool.Play(_soundIds[i], 1, 1, 0, 0, playRate);
                             if (n == 0)
                             {
-								Thread.Sleep(300);
+								Thread.Sleep(200);
 							}
                             else
                             {
-								Thread.Sleep(100);
+								Thread.Sleep(50);
 							}
 						}
 					}
-                    Thread.Sleep(300);
+                    Thread.Sleep(200);
 				}
+			}
+
+            public void CircleOfFifths(WebView webView, NameValueCollection parameters)
+            {
+                var model = new CircleModel(parameters);
+				var template = new CircleView() { Model = model };
+				var page = template.GenerateString();
+				// Load the rendered HTML into the view with a base URL 
+				// that points to the root of the bundled Assets folder
+				webView.LoadDataWithBaseURL("file:///android_asset/", page, "text/html", "UTF-8", null);
 			}
 
 			public void UpdateLabel(WebView webView, NameValueCollection parameters)
