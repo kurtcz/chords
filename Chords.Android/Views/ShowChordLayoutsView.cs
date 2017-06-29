@@ -138,7 +138,7 @@ WriteAttribute ("href", " href=\"", "\""
 #line hidden
 , false)
 );
-WriteLiteral(">Circle of Fifths</a></li>\n                </ul>\n            </div>\n        </div" +
+WriteLiteral(">Circle of fifths</a></li>\n                </ul>\n            </div>\n        </div" +
 ">\n    </nav>\n    <script");
 
 WriteLiteral(" src=\"jquery.min.js\"");

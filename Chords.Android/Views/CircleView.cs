@@ -106,7 +106,7 @@ WriteLiteral("></span>\n                </button>\n                <span");
 
 WriteLiteral(" class=\"navbar-brand\"");
 
-WriteLiteral(">Circle of Fifths</span>\n            </div>\n                \n            <div");
+WriteLiteral(">Circle of fifths</span>\n            </div>\n                \n            <div");
 
 WriteLiteral(" class=\"navbar-collapse collapse\"");
 
@@ -151,7 +151,7 @@ WriteAttribute ("href", " href=\"", "\""
 , false)
 , Tuple.Create<string,object,bool> ("", "&index=Model.index", true)
 );
-WriteLiteral(">Circle of Fifths</a></li>\n                </ul>\n            </div>\n        </div" +
+WriteLiteral(">Circle of fifths</a></li>\n                </ul>\n            </div>\n        </div" +
 ">\n    </nav>\n    <script");
 
 WriteLiteral(" src=\"jquery.min.js\"");
@@ -316,35 +316,36 @@ WriteLiteral(">\n");
 					var idx = (i + 5) % 12;
 					var id = Model.MajorCircle[Model.conv][idx];
 					var color = i == 1 || i == 2  || i == 12 ? "#4d89d5" : "black";
-
+					var textColor = i == 1 ? "orange" : "white";
+					
                     
 
 #line default
 #line hidden
 
-#line 71 "CircleView.cshtml"
+#line 72 "CircleView.cshtml"
                 Write(new HtmlString($"\t\t\t\t<path id=\"arc-maj-{i}\" fill=\"none\" stroke=\"{color}\" onclick=\"location.href='hybrid:PlayChord?conv={Model.conv}&id={id}';\" />\n"));
 
 
 #line default
 #line hidden
 
-#line 71 "CircleView.cshtml"
+#line 72 "CircleView.cshtml"
                                                                                                                                                                                         
                     
 
 #line default
 #line hidden
 
-#line 72 "CircleView.cshtml"
-                Write(new HtmlString($"\t\t\t\t<text id=\"text-maj-{i}\" text-anchor=\"middle\" stroke=\"none\" fill=\"white\" font-size=\"24\" onclick=\"location.href='hybrid:PlayChord?conv={Model.conv}&id={id}';\">{id}</text>\n"));
+#line 73 "CircleView.cshtml"
+                Write(new HtmlString($"\t\t\t\t<text id=\"text-maj-{i}\" text-anchor=\"middle\" stroke=\"none\" fill=\"{textColor}\" font-size=\"24\" onclick=\"location.href='hybrid:PlayChord?conv={Model.conv}&id={id}';\">{id}</text>\n"));
 
 
 #line default
 #line hidden
 
-#line 72 "CircleView.cshtml"
-                                                                                                                                                                                                                                        
+#line 73 "CircleView.cshtml"
+                                                                                                                                                                                                                                              
 				}
 
 
@@ -353,41 +354,42 @@ WriteLiteral(">\n");
 WriteLiteral("                ");
 
 
-#line 74 "CircleView.cshtml"
+#line 75 "CircleView.cshtml"
                  for(var i = 1; i <= 12; i++)
                 {
                     var idx = (i + 5) % 12;
 					var id = Model.MinorCircle[Model.conv][idx];
                     var color = i == 1 || i == 2 || i == 12 ? "#4d89d5" : "black";
+					var textColor = i == 1 ? "orange" : "white";
 
 					
 
 #line default
 #line hidden
 
-#line 80 "CircleView.cshtml"
+#line 82 "CircleView.cshtml"
                 Write(new HtmlString($"\t\t\t\t<path id=\"arc-min-{i}\" fill=\"none\" stroke=\"{color}\" onclick=\"location.href='hybrid:PlayChord?conv={Model.conv}&id={id}';\" />\n"));
 
 
 #line default
 #line hidden
 
-#line 80 "CircleView.cshtml"
+#line 82 "CircleView.cshtml"
                                                                                                                                                                                         
                     
 
 #line default
 #line hidden
 
-#line 81 "CircleView.cshtml"
-                Write(new HtmlString($"\t\t\t\t<text id=\"text-min-{i}\" text-anchor=\"middle\" stroke=\"none\" fill=\"white\" font-size=\"16\" onclick=\"location.href='hybrid:PlayChord?conv={Model.conv}&id={id}';\">{id}</text>\n"));
+#line 83 "CircleView.cshtml"
+                Write(new HtmlString($"\t\t\t\t<text id=\"text-min-{i}\" text-anchor=\"middle\" stroke=\"none\" fill=\"{textColor}\" font-size=\"16\" onclick=\"location.href='hybrid:PlayChord?conv={Model.conv}&id={id}';\">{id}</text>\n"));
 
 
 #line default
 #line hidden
 
-#line 81 "CircleView.cshtml"
-                                                                                                                                                                                                                                        
+#line 83 "CircleView.cshtml"
+                                                                                                                                                                                                                                              
                 }
 
 
@@ -396,7 +398,7 @@ WriteLiteral("                ");
 WriteLiteral("                ");
 
 
-#line 83 "CircleView.cshtml"
+#line 85 "CircleView.cshtml"
                  for(var i = 1; i <= 12; i++)
                 {
                     var idx = (i + 5) % 12;
@@ -408,28 +410,28 @@ WriteLiteral("                ");
 #line default
 #line hidden
 
-#line 89 "CircleView.cshtml"
+#line 91 "CircleView.cshtml"
                 Write(new HtmlString($"\t\t\t\t<path id=\"arc-dim-{i}\" fill=\"none\" stroke=\"{color}\" onclick=\"location.href='hybrid:PlayChord?conv={Model.conv}&id={id}';\" />\n"));
 
 
 #line default
 #line hidden
 
-#line 89 "CircleView.cshtml"
+#line 91 "CircleView.cshtml"
                                                                                                                                                                                         
                     
 
 #line default
 #line hidden
 
-#line 90 "CircleView.cshtml"
+#line 92 "CircleView.cshtml"
                 Write(new HtmlString($"\t\t\t\t<text id=\"text-dim-{i}\" text-anchor=\"middle\" stroke=\"none\" fill=\"white\" font-size=\"14\" onclick=\"location.href='hybrid:PlayChord?conv={Model.conv}&id={id}';\">{id}</text>\n"));
 
 
 #line default
 #line hidden
 
-#line 90 "CircleView.cshtml"
+#line 92 "CircleView.cshtml"
                                                                                                                                                                                                                                         
                 }
 
@@ -439,7 +441,7 @@ WriteLiteral("                ");
 WriteLiteral("                ");
 
 
-#line 92 "CircleView.cshtml"
+#line 94 "CircleView.cshtml"
                  for(var i = 1; i <= 12; i++)
                 {
                     
@@ -447,14 +449,14 @@ WriteLiteral("                ");
 #line default
 #line hidden
 
-#line 94 "CircleView.cshtml"
+#line 96 "CircleView.cshtml"
                 Write(new HtmlString($"\t\t\t\t<line id=\"line-{i}\" />\n"));
 
 
 #line default
 #line hidden
 
-#line 94 "CircleView.cshtml"
+#line 96 "CircleView.cshtml"
                                                                             
                 }
 
@@ -480,7 +482,7 @@ WriteLiteral(" text-anchor=\"middle\"");
 WriteLiteral(">");
 
 
-#line 96 "CircleView.cshtml"
+#line 98 "CircleView.cshtml"
                                                                                                                   Write(Model.Signature);
 
 
@@ -489,13 +491,13 @@ WriteLiteral(">");
 WriteLiteral("</text>\n");
 
 
-#line 97 "CircleView.cshtml"
+#line 99 "CircleView.cshtml"
 				
 
 #line default
 #line hidden
 
-#line 97 "CircleView.cshtml"
+#line 99 "CircleView.cshtml"
                  if (Model.index > 6)
 				{
 
@@ -513,7 +515,7 @@ WriteLiteral(" stroke=\"none\"");
 WriteAttribute ("onclick", " onclick=\"", "\""
 , Tuple.Create<string,object,bool> ("", "location.href=\'hybrid:Circle?conv=", true)
 
-#line 99 "CircleView.cshtml"
+#line 101 "CircleView.cshtml"
                                                                      , Tuple.Create<string,object,bool> ("", Model.conv
 
 #line default
@@ -521,7 +523,7 @@ WriteAttribute ("onclick", " onclick=\"", "\""
 , false)
 , Tuple.Create<string,object,bool> ("", "&index=", true)
 
-#line 99 "CircleView.cshtml"
+#line 101 "CircleView.cshtml"
                                                                                         , Tuple.Create<string,object,bool> ("", Model.index-1
 
 #line default
@@ -532,7 +534,7 @@ WriteAttribute ("onclick", " onclick=\"", "\""
 WriteLiteral(" />\n");
 
 
-#line 100 "CircleView.cshtml"
+#line 102 "CircleView.cshtml"
 				}
 
 
@@ -541,7 +543,7 @@ WriteLiteral(" />\n");
 WriteLiteral("\t\t\t\t");
 
 
-#line 101 "CircleView.cshtml"
+#line 103 "CircleView.cshtml"
                  if (Model.index < 20)
 				{
 
@@ -559,7 +561,7 @@ WriteLiteral(" stroke=\"none\"");
 WriteAttribute ("onclick", " onclick=\"", "\""
 , Tuple.Create<string,object,bool> ("", "location.href=\'hybrid:Circle?conv=", true)
 
-#line 103 "CircleView.cshtml"
+#line 105 "CircleView.cshtml"
                                                                      , Tuple.Create<string,object,bool> ("", Model.conv
 
 #line default
@@ -567,7 +569,7 @@ WriteAttribute ("onclick", " onclick=\"", "\""
 , false)
 , Tuple.Create<string,object,bool> ("", "&index=", true)
 
-#line 103 "CircleView.cshtml"
+#line 105 "CircleView.cshtml"
                                                                                         , Tuple.Create<string,object,bool> ("", Model.index+1
 
 #line default
@@ -578,7 +580,7 @@ WriteAttribute ("onclick", " onclick=\"", "\""
 WriteLiteral(" />\n");
 
 
-#line 104 "CircleView.cshtml"
+#line 106 "CircleView.cshtml"
 				}
 
 
