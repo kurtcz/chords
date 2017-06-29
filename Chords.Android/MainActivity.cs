@@ -39,8 +39,8 @@ namespace Chords.Android
         {
             base.OnCreate(savedInstanceState);
 
-            // Set our view from the "main" layout resource
-            SetContentView(Resource.Layout.Main);
+			// Set our view from the "main" layout resource
+			SetContentView(Resource.Layout.Main);
 
 			_webView = FindViewById<WebView>(Resource.Id.webView);
             _webView.Settings.JavaScriptEnabled = true;

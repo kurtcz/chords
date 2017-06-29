@@ -26,7 +26,7 @@
                 <ul class="nav navbar-nav">
                     <li><a href="hybrid:ShowChord?conv=@Model.conv">Show chord</a></li>
                     <li><a href="hybrid:FindChord?conv=@Model.conv">Find chord</a></li>
-					<li><a href="hybrid:Circle?conv=@Model.conv">Circle of Fifths</a></li>
+					<li><a href="hybrid:Circle?conv=@Model.conv&index=Model.index">Circle of Fifths</a></li>
                 </ul>
             </div>
         </div>
@@ -64,15 +64,7 @@
 			<svg class="circle-svg" width="320" height="320">
 				@for(var i = 1; i <= 12; i++)
 				{
-					var idx = i <= 6 ? Model.index + i - 1 : Model.index + i - 1 - 12;
-					if (idx < 0)
-					{
-					    idx += 12;
-					}
-					else if (idx >= Model.MajorCircle[Model.conv].Length)
-					{
-					    idx -= 12;
-					}
+					var idx = (i + 5) % 12;
 					var id = Model.MajorCircle[Model.conv][idx];
 					var color = i == 1 || i == 2  || i == 12 ? "#4d89d5" : "black";
 
@@ -81,7 +73,7 @@
 				}
                 @for(var i = 1; i <= 12; i++)
                 {
-                    var idx = (Model.index + i - 1) % 12;
+                    var idx = (i + 5) % 12;
 					var id = Model.MinorCircle[Model.conv][idx];
                     var color = i == 1 || i == 2 || i == 12 ? "#4d89d5" : "black";
 
@@ -90,7 +82,7 @@
                 }
                 @for(var i = 1; i <= 12; i++)
                 {
-                    var idx = (Model.index + i - 1) % 12;
+                    var idx = (i + 5) % 12;
 					var id = Model.DiminishedCircle[Model.conv][idx];
                     var color = i == 1 ? "#4d89d5" : "black";
                     
@@ -102,11 +94,11 @@
                     @(new HtmlString($"\t\t\t\t<line id=\"line-{i}\" />\n"))
                 }
 				<text id="signature" x="160" y="170" fill="#4d89d5" stroke="none" font-size="32" text-anchor="middle">@(Model.Signature)</text>
-				@if (Model.index > 1)
+				@if (Model.index > 6)
 				{
 				    <path id="prev" fill="#4d89d5" stroke="none" onclick="location.href='hybrid:Circle?conv=@Model.conv&index=@(Model.index-1)';" />
 				}
-				@if (Model.index < 15)
+				@if (Model.index < 20)
 				{
 				    <path id="next" fill="#4d89d5" stroke="none" onclick="location.href='hybrid:Circle?conv=@Model.conv&index=@(Model.index+1)';" />
 				}
