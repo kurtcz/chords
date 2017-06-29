@@ -98,7 +98,7 @@ namespace Chords.Android.Models
 					}
                     else if (IntPositions[s] == 0)
                     {
-						sb.AppendFormat("\t\t<circle cx=\"{0}\" cy=\"{1}\" r=\"5\" fill=\"blue\" stroke=\"none\" />\n", 20 + s * 20, 20);
+						sb.AppendFormat("\t\t<circle cx=\"{0}\" cy=\"{1}\" r=\"5\" fill=\"white\" stroke=\"blue\" stoke-width=\"2\" />\n", 20 + s * 20, 20);
 					}
                     else
 					{
