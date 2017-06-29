@@ -41,34 +41,34 @@ namespace Chords.Android.Models
                 var fret0 = string.Join(" ", new[]
                 {
                     "M", "20", "20",
-                    "h", "75"
+                    "h", "100"
                 });
                 var frets = string.Join(" ", new[]
                 {
                     "M", "20", "20",
-                    "v", "120",
-                    "M", "35", "20",
-                    "v", "120",
-					"M", "50", "20",
-					"v", "120",
-					"M", "65", "20",
-					"v", "120",
+                    "v", "160",
+                    "M", "40", "20",
+                    "v", "160",
+					"M", "60", "20",
+					"v", "160",
 					"M", "80", "20",
-					"v", "120",
-					"M", "95", "20",
-					"v", "120",
+					"v", "160",
+					"M", "100", "20",
+					"v", "160",
+					"M", "120", "20",
+					"v", "160",
 					"M", "20", "20",
-                    "h", "75",
-					"M", "20", "50",
-					"h", "75",
-					"M", "20", "80",
-					"h", "75",
-					"M", "20", "110",
-					"h", "75",
+                    "h", "100",
+					"M", "20", "60",
+					"h", "100",
+					"M", "20", "100",
+					"h", "100",
 					"M", "20", "140",
-					"h", "75"
+					"h", "100",
+					"M", "20", "180",
+					"h", "100"
 				});
-                sb.AppendLine("\t<svg width=\"150\" height=\"150\" style=\"display:block;\">");
+                sb.AppendLine("\t<svg width=\"150\" height=\"200\" style=\"display:block;\">");
                 sb.AppendFormat("\t\t<path d=\"{0}\" fill=\"none\" stroke=\"{1}\" stroke-width=\"1\" />\n", frets, Complete ? "black" : "grey");
                 if (RenderingFret == 0)
                 {
@@ -83,32 +83,32 @@ namespace Chords.Android.Models
                         continue;
                     }
                     sb.AppendFormat("\t\t<text x=\"{0}\", y=\"{1}\" font-size=\"12\" fill=\"{2}\" stroke=\"{2}\" stroke-width=\"1\" text-anchor=\"middle\">{3}</text>\n", 
-                                    20 + s * 15, 10, Complete ? "black" : "grey", notes[s]);
+                                    20 + s * 20, 10, Complete ? "black" : "grey", notes[s]);
                 }
 				for (var s = 0; s < 6; s++)
 				{
 					if (IntPositions[s] == GuitarChordLayout.X)
                     {
                         sb.AppendFormat("\t\t<line x1=\"{0}\" y1=\"{1}\" x2=\"{2}\" y2=\"{3}\" fill=\"red\" stroke=\"red\" stroke-width=\"3\" />\n",
-                                        20 + s * 15 - 5, 20 - 5,
-                                        20 + s * 15 + 5, 20 + 5);
+                                        20 + s * 20 - 5, 20 - 5,
+                                        20 + s * 20 + 5, 20 + 5);
 						sb.AppendFormat("\t\t<line x1=\"{0}\" y1=\"{1}\" x2=\"{2}\" y2=\"{3}\" fill=\"red\" stroke=\"red\" stroke-width=\"3\" />\n",
-										20 + s * 15 - 5, 20 + 5,
-										20 + s * 15 + 5, 20 - 5);
+										20 + s * 20 - 5, 20 + 5,
+										20 + s * 20 + 5, 20 - 5);
 					}
                     else if (IntPositions[s] == 0)
                     {
-						sb.AppendFormat("\t\t<circle cx=\"{0}\" cy=\"{1}\" r=\"5\" fill=\"blue\" stroke=\"none\" />\n", 20 + s * 15, 20);
+						sb.AppendFormat("\t\t<circle cx=\"{0}\" cy=\"{1}\" r=\"5\" fill=\"blue\" stroke=\"none\" />\n", 20 + s * 20, 20);
 					}
                     else
 					{
-                        sb.AppendFormat("\t\t<circle cx=\"{0}\" cy=\"{1}\" r=\"5\" fill=\"blue\" stroke=\"none\" />\n", 20 + s * 15, 5 + (IntPositions[s] - RenderingFret) * 30);
+                        sb.AppendFormat("\t\t<circle cx=\"{0}\" cy=\"{1}\" r=\"5\" fill=\"blue\" stroke=\"none\" />\n", 20 + s * 20, (IntPositions[s] - RenderingFret) * 40);
 					}
 				}
                 for (var f = 0; f < 5; f++)
                 {
                     sb.AppendFormat("\t\t<text x=\"{0}\" y=\"{1}\" text-anchor=\"end\" fill=\"{2}\" stroke=\"none\" font-size=\"10\">{3}</text>",
-                                     10, 23 + f * 30, Complete ? "black" : "grey", RenderingFret + f);
+                                     10, 23 + f * 40, Complete ? "black" : "grey", RenderingFret + f);
                 }
                 sb.AppendLine("\t</svg>");
 
