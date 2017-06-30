@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Chords.Core.Extensions;
+using Newtonsoft.Json;
 
 namespace Chords.Core.Models
 {
@@ -9,14 +10,18 @@ namespace Chords.Core.Models
 	{
 		public Note Root { get; private set; }
 		public ChordType ChordType { get; private set; }
+        [JsonIgnore]
         public Interval[] Intervals { get; private set; }
+        [JsonIgnore]
 		public Note[] Notes { get; private set; }
+        [JsonIgnore]
         public Note[] NonMandatoryNotes { get; private set; }
 
 		private Chord()
         {
         }
 
+        [JsonConstructor]
         public Chord(Note root, ChordType chordType)
         {
             Root = root;
@@ -91,6 +96,30 @@ namespace Chords.Core.Models
 
             return false;
 		}
+
+        public override bool Equals(object obj)
+        {
+            var other = obj as Chord;
+
+            if(other == null)
+            {
+                return false;
+            }
+
+            return this.Root == other.Root && this.ChordType == other.ChordType;
+        }
+
+        public override int GetHashCode()
+        {
+            unchecked
+            {
+                var result = Root.GetHashCode();
+
+                result = (result * 397) ^ ChordType.GetHashCode();
+
+                return result;
+            }
+        }
 
         public override string ToString()
         {

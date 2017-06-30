@@ -15,6 +15,7 @@ using Chords.Android.Views;
 using Chords.Core.Extensions;
 using Chords.Core.Models;
 using System.Threading;
+using System.Collections.Generic;
 
 namespace Chords.Android
 {
@@ -39,8 +40,30 @@ namespace Chords.Android
         {
             base.OnCreate(savedInstanceState);
 
-			// Set our view from the "main" layout resource
-			SetContentView(Resource.Layout.Main);
+   //         var note = new Note(Core.Models.Tone.C);
+   //         var chord = new Chord(note, ChordType.Major);
+   //         var layout = new GuitarChordLayout(chord, new []{-1,3,2,0,1,-1});
+
+   //         var key = new Dictionary<Chord, string> { { chord, "test" } };
+   //         var val = new HashSet<GuitarChordLayout>(new[] { layout });
+   //         var chords = new Dictionary<Chord, HashSet<GuitarChordLayout>> { { chord, new HashSet<GuitarChordLayout>(new[] { layout }) } };
+
+   //         var ser = Newtonsoft.Json.JsonConvert.SerializeObject(note);
+			//var note2 = Newtonsoft.Json.JsonConvert.DeserializeObject<Note>(ser);
+			//ser = Newtonsoft.Json.JsonConvert.SerializeObject(chord);
+   //         var chord2 = Newtonsoft.Json.JsonConvert.DeserializeObject<Chord>(ser);
+   //         ser = Newtonsoft.Json.JsonConvert.SerializeObject(layout);
+   //         var layout2 = Newtonsoft.Json.JsonConvert.DeserializeObject<GuitarChordLayout>(ser);
+
+   //         ser = Newtonsoft.Json.JsonConvert.SerializeObject(key.ToArray());
+   //         var key2 = Newtonsoft.Json.JsonConvert.DeserializeObject<IEnumerable<KeyValuePair<Chord, string>>>(ser).ToDictionary(k => k.Key, v => v.Value);
+			//ser = Newtonsoft.Json.JsonConvert.SerializeObject(val);
+			//var val2 = Newtonsoft.Json.JsonConvert.DeserializeObject<HashSet<GuitarChordLayout>>(ser);
+   //         ser = Newtonsoft.Json.JsonConvert.SerializeObject(chords.ToArray());
+			//var chords2 = Newtonsoft.Json.JsonConvert.DeserializeObject<IEnumerable<KeyValuePair<Chord, HashSet<GuitarChordLayout>>>>(ser).ToDictionary(k => k.Key, v => v.Value);
+
+            // Set our view from the "main" layout resource
+            SetContentView(Resource.Layout.Main);
 
 			_webView = FindViewById<WebView>(Resource.Id.webView);
             _webView.Settings.JavaScriptEnabled = true;
@@ -124,13 +147,21 @@ namespace Chords.Android
 				}
                 else if (method == "PlayChord")
                 {
-					PlayChord(parameters);
+					PlayChord(webView, parameters);
                 }
 				else if (method == "Circle")
 				{
                     CircleOfFifths(webView, parameters);
 				}
-				else
+                else if (method == "AddToFavorites")
+                {
+                    AddToFavorites(webView, parameters);
+                }
+				else if (method == "RemoveFromFavorites")
+				{
+					RemoveFromFavorites(webView, parameters);
+				}
+                else
                 {
                     return false;
                 }
@@ -193,7 +224,10 @@ namespace Chords.Android
 				else
 				{
 					model.ChordDecorator = new ChordDecorator(chord, showChordParams.NamingConvention);
-                    model.Layouts = model.ChordDecorator.GenerateLayouts(showChordParams.Special, showChordParams.Partial);
+                    model.Layouts = model.ChordDecorator
+                                         .GenerateLayouts(showChordParams.Special, showChordParams.Partial)
+                        .OrderBy(i => i.Favorite ? 0 : 1)
+                        .ToArray();
                 }
 				var template = new ShowChordLayoutsView { Model = model };
                 var page = template.GenerateString();
@@ -262,7 +296,7 @@ namespace Chords.Android
 				webView.LoadDataWithBaseURL("file:///android_asset/", page, "text/html", "UTF-8", null);
 			}
 
-            public void PlayChord(NameValueCollection parameters)
+            public void PlayChord(WebView webView, NameValueCollection parameters)
             {
                 var chordParams = new ChordParams(parameters);
                 var id = parameters["id"];
@@ -334,24 +368,53 @@ namespace Chords.Android
 				webView.LoadDataWithBaseURL("file:///android_asset/", page, "text/html", "UTF-8", null);
 			}
 
-			public void UpdateLabel(WebView webView, NameValueCollection parameters)
-			{
-				var textbox = parameters["textbox"];
+            public void AddToFavorites(WebView webView, NameValueCollection parameters)
+            {
+                var chordParams = new ChordParams(parameters);
+                var tokens = parameters["positions"].Split(',');
+                var positions = tokens.Select(i => int.Parse(i)).ToArray();
+                var id = $"{chordParams.Root}{chordParams.ChordType}";
+                Chord chord;
 
-				// Add some text to our string here so that we know something
-				// happened on the native part of the round trip.
-				var prepended = $"C# says: {textbox}";
+                if (!Chord.TryParse(id, chordParams.NamingConvention, out chord))
+                {
+                    return;
+                }
+                var layout = new GuitarChordLayout(chord, positions);
+                if (!Favorites.Chords.ContainsKey(chord))
+                {
+                    Favorites.Chords.Add(chord, new HashSet<GuitarChordLayout>());
+                }
+                Favorites.Chords[chord].Add(layout);
+                Favorites.Save();
 
-				// Build some javascript using the C#-modified result
-				var js = $"SetLabelText('{prepended}');";
+                var js = string.Format("setFavorite('.chord-layout[data-positions=\"{0}\"]', '{1}');", parameters["positions"], true);
+                webView.LoadUrl("javascript:" + js);
+			}
 
+            public void RemoveFromFavorites(WebView webView, NameValueCollection parameters)
+            {
+				var chordParams = new ChordParams(parameters);
+				var tokens = parameters["positions"].Split(',');
+				var positions = tokens.Select(i => int.Parse(i)).ToArray();
+				var id = $"{chordParams.Root}{chordParams.ChordType}";
+				Chord chord;
+
+				if (!Chord.TryParse(id, chordParams.NamingConvention, out chord))
+				{
+					return;
+				}
+				var layout = new GuitarChordLayout(chord, positions);
+				if (!Favorites.Chords.ContainsKey(chord))
+				{
+                    return;
+				}
+                Favorites.Chords[chord].Remove(layout);
+                Favorites.Save();
+
+                var js = string.Format("setFavorite('.chord-layout[data-positions=\"{0}\"]', '{1}');", parameters["positions"], false);
 				webView.LoadUrl("javascript:" + js);
 			}
 		}
-    }
-
-    public abstract partial class ShowChordResultViewBase
-    {
-        
     }
 }

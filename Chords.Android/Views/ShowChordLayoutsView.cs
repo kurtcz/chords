@@ -36,11 +36,13 @@ public override void Execute()
 #line 3 "ShowChordLayoutsView.cshtml"
   
     var otherSymbols = Model.ChordDecorator != null ? Model.ChordDecorator.Symbols.Skip(1) : new string[0];
+    //onclick="playChord('@positions');" 
 
 
 #line default
 #line hidden
-WriteLiteral("\n<!DOCTYPE html>\n<html>\n<head>\n    <link");
+WriteLiteral("\n<!DOCTYPE html>\n<html>\n<head>\n\t<!--link rel=\"stylesheet\" href=\"jquery.mobile-1.4" +
+".5.min.css\" /-->\n    <link");
 
 WriteLiteral(" rel=\"stylesheet\"");
 
@@ -107,7 +109,7 @@ WriteLiteral(">\n                    <li><a");
 WriteAttribute ("href", " href=\"", "\""
 , Tuple.Create<string,object,bool> ("", "hybrid:ShowChord?conv=", true)
 
-#line 27 "ShowChordLayoutsView.cshtml"
+#line 29 "ShowChordLayoutsView.cshtml"
                 , Tuple.Create<string,object,bool> ("", Model.Parameters["conv"]
 
 #line default
@@ -119,7 +121,7 @@ WriteLiteral(">Show chord</a></li>\n                    <li><a");
 WriteAttribute ("href", " href=\"", "\""
 , Tuple.Create<string,object,bool> ("", "hybrid:FindChord?conv=", true)
 
-#line 28 "ShowChordLayoutsView.cshtml"
+#line 30 "ShowChordLayoutsView.cshtml"
                 , Tuple.Create<string,object,bool> ("", Model.Parameters["conv"]
 
 #line default
@@ -131,7 +133,7 @@ WriteLiteral(">Find chord</a></li>\n\t\t\t\t\t<li><a");
 WriteAttribute ("href", " href=\"", "\""
 , Tuple.Create<string,object,bool> ("", "hybrid:Circle?conv=", true)
 
-#line 29 "ShowChordLayoutsView.cshtml"
+#line 31 "ShowChordLayoutsView.cshtml"
              , Tuple.Create<string,object,bool> ("", Model.Parameters["conv"]
 
 #line default
@@ -142,6 +144,10 @@ WriteLiteral(">Circle of fifths</a></li>\n                </ul>\n            </d
 ">\n    </nav>\n    <script");
 
 WriteLiteral(" src=\"jquery.min.js\"");
+
+WriteLiteral("></script>\n\t<script");
+
+WriteLiteral(" src=\"jquery.mobile-1.4.5.min.js\"");
 
 WriteLiteral("></script>\n    <script");
 
@@ -154,13 +160,13 @@ WriteLiteral(" class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 main-content\"");
 WriteLiteral(">\n\n        <!-- Main content start -->\n");
 
 
-#line 39 "ShowChordLayoutsView.cshtml"
+#line 42 "ShowChordLayoutsView.cshtml"
 		
 
 #line default
 #line hidden
 
-#line 39 "ShowChordLayoutsView.cshtml"
+#line 42 "ShowChordLayoutsView.cshtml"
          if (Model.ChordDecorator != null)
 	    {
 
@@ -170,7 +176,7 @@ WriteLiteral(">\n\n        <!-- Main content start -->\n");
 WriteLiteral("\t        <h2>");
 
 
-#line 41 "ShowChordLayoutsView.cshtml"
+#line 44 "ShowChordLayoutsView.cshtml"
            Write(Model.ChordDecorator.Symbols[0]);
 
 
@@ -179,7 +185,7 @@ WriteLiteral("\t        <h2>");
 WriteLiteral("</h2>\n");
 
 
-#line 42 "ShowChordLayoutsView.cshtml"
+#line 45 "ShowChordLayoutsView.cshtml"
 
 	        if (otherSymbols.Any())
 	        {
@@ -190,7 +196,7 @@ WriteLiteral("</h2>\n");
 WriteLiteral("\t            <h4>Other symbols:</h4>\n");
 
 
-#line 46 "ShowChordLayoutsView.cshtml"
+#line 49 "ShowChordLayoutsView.cshtml"
 	            foreach(var otherSymbol in otherSymbols)
 	            {
 
@@ -200,7 +206,7 @@ WriteLiteral("\t            <h4>Other symbols:</h4>\n");
 WriteLiteral("\t                <span>");
 
 
-#line 48 "ShowChordLayoutsView.cshtml"
+#line 51 "ShowChordLayoutsView.cshtml"
                      Write(otherSymbol);
 
 
@@ -209,7 +215,7 @@ WriteLiteral("\t                <span>");
 WriteLiteral("</span>\n");
 
 
-#line 49 "ShowChordLayoutsView.cshtml"
+#line 52 "ShowChordLayoutsView.cshtml"
 	            }
 	        }
 
@@ -221,13 +227,13 @@ WriteLiteral("\t        <h4>Chord intervals:</h4>\n");
 WriteLiteral("\t        <p>\n");
 
 
-#line 53 "ShowChordLayoutsView.cshtml"
+#line 56 "ShowChordLayoutsView.cshtml"
 	        
 
 #line default
 #line hidden
 
-#line 53 "ShowChordLayoutsView.cshtml"
+#line 56 "ShowChordLayoutsView.cshtml"
              foreach(var interval in Model.ChordDecorator.Intervals)
 	        {
 
@@ -237,7 +243,7 @@ WriteLiteral("\t        <p>\n");
 WriteLiteral("\t            <span>");
 
 
-#line 55 "ShowChordLayoutsView.cshtml"
+#line 58 "ShowChordLayoutsView.cshtml"
                  Write(interval);
 
 
@@ -246,7 +252,7 @@ WriteLiteral("\t            <span>");
 WriteLiteral("</span>\n");
 
 
-#line 56 "ShowChordLayoutsView.cshtml"
+#line 59 "ShowChordLayoutsView.cshtml"
 	        }
 
 
@@ -255,7 +261,7 @@ WriteLiteral("</span>\n");
 WriteLiteral("\t        </p>\n");
 
 
-#line 58 "ShowChordLayoutsView.cshtml"
+#line 61 "ShowChordLayoutsView.cshtml"
 
 
 
@@ -266,13 +272,13 @@ WriteLiteral("\t        <h4>Chord notes:</h4>\n");
 WriteLiteral("\t        <p>\n");
 
 
-#line 61 "ShowChordLayoutsView.cshtml"
+#line 64 "ShowChordLayoutsView.cshtml"
 	        
 
 #line default
 #line hidden
 
-#line 61 "ShowChordLayoutsView.cshtml"
+#line 64 "ShowChordLayoutsView.cshtml"
              foreach(var note in Model.ChordDecorator.Notes)
 	        {
 
@@ -282,7 +288,7 @@ WriteLiteral("\t        <p>\n");
 WriteLiteral("\t            <span>");
 
 
-#line 63 "ShowChordLayoutsView.cshtml"
+#line 66 "ShowChordLayoutsView.cshtml"
                  Write(note);
 
 
@@ -291,7 +297,7 @@ WriteLiteral("\t            <span>");
 WriteLiteral("</span>\n");
 
 
-#line 64 "ShowChordLayoutsView.cshtml"
+#line 67 "ShowChordLayoutsView.cshtml"
 	        }
 
 
@@ -308,7 +314,7 @@ WriteLiteral(" class=\"error\"");
 WriteLiteral(">");
 
 
-#line 66 "ShowChordLayoutsView.cshtml"
+#line 69 "ShowChordLayoutsView.cshtml"
                                      Write(Model.Error);
 
 
@@ -331,13 +337,13 @@ WriteLiteral(" class=\"animate-bottom\"");
 WriteLiteral(">\n");
 
 
-#line 69 "ShowChordLayoutsView.cshtml"
+#line 72 "ShowChordLayoutsView.cshtml"
 	        
 
 #line default
 #line hidden
 
-#line 69 "ShowChordLayoutsView.cshtml"
+#line 72 "ShowChordLayoutsView.cshtml"
              if (Model.Layouts != null)
 	        {
 
@@ -351,7 +357,7 @@ WriteLiteral("\t            <p>\n");
 WriteLiteral("\t                ");
 
 
-#line 73 "ShowChordLayoutsView.cshtml"
+#line 76 "ShowChordLayoutsView.cshtml"
                Write(Model.Layouts.Length);
 
 
@@ -360,13 +366,13 @@ WriteLiteral("\t                ");
 WriteLiteral(" results\n");
 
 
-#line 74 "ShowChordLayoutsView.cshtml"
+#line 77 "ShowChordLayoutsView.cshtml"
 	                
 
 #line default
 #line hidden
 
-#line 74 "ShowChordLayoutsView.cshtml"
+#line 77 "ShowChordLayoutsView.cshtml"
                      foreach(var layout in Model.Layouts)
 	                {
 					    var positions = string.Join(",", layout.IntPositions.Select(i => i.ToString()).ToArray());
@@ -379,11 +385,33 @@ WriteLiteral("\t                    <div");
 
 WriteLiteral(" class=\"col-xs-6 col-sm-4 col-md-3 col-lg-2 chord-layout\"");
 
+WriteLiteral(" data-favorite=\"");
+
+
+#line 81 "ShowChordLayoutsView.cshtml"
+                                                                                                 Write(layout.Favorite);
+
+
+#line default
+#line hidden
+WriteLiteral("\"");
+
+WriteLiteral(" data-positions=\"");
+
+
+#line 81 "ShowChordLayoutsView.cshtml"
+                                                                                                                                    Write(positions);
+
+
+#line default
+#line hidden
+WriteLiteral("\"");
+
 WriteAttribute ("onclick", " onclick=\"", "\""
 , Tuple.Create<string,object,bool> ("", "playChord(\'", true)
 
-#line 78 "ShowChordLayoutsView.cshtml"
-                                                                   , Tuple.Create<string,object,bool> ("", positions
+#line 81 "ShowChordLayoutsView.cshtml"
+                                                                                                                                  , Tuple.Create<string,object,bool> ("", positions
 
 #line default
 #line hidden
@@ -395,7 +423,7 @@ WriteLiteral(">\n");
 WriteLiteral("\t                        ");
 
 
-#line 79 "ShowChordLayoutsView.cshtml"
+#line 82 "ShowChordLayoutsView.cshtml"
                         Write(layout.Schema);
 
 
@@ -404,7 +432,7 @@ WriteLiteral("\t                        ");
 WriteLiteral("\n\t                    </div>\n");
 
 
-#line 81 "ShowChordLayoutsView.cshtml"
+#line 84 "ShowChordLayoutsView.cshtml"
 	                }
 
 
@@ -428,11 +456,53 @@ WriteLiteral(@">
 	                        }
 	                    });
 					}
-	            </script>
-");
+					function setFavorite(selector, value) {
+					    //location.href='hybrid:xyz?selector='+selector+'&value='+value;
+					    $(selector).attr('data-favorite', value);
+					}
+					$(function(){
+					    $.event.special.tap.tapholdThreshold = 500;
+					    $.event.special.tap.emitTapOnTaphold = false;
+					    $('.chord-layout').bind('taphold', function(){
+                            var positions = $(this).attr('data-positions');
+					        var favorite = $(this).attr('data-favorite') == ""True"";
+
+					        $.ajax({
+	                            url: favorite ? 'hybrid:RemoveFromFavorites' : 'hybrid:AddToFavorites',
+	                            type: 'get',
+	                            data: {
+					                root: '");
 
 
-#line 96 "ShowChordLayoutsView.cshtml"
+#line 113 "ShowChordLayoutsView.cshtml"
+                                      Write(Model.ChordDecorator.Root);
+
+
+#line default
+#line hidden
+WriteLiteral("\',\n\t\t\t\t\t                chordType: \'");
+
+
+#line 114 "ShowChordLayoutsView.cshtml"
+                                           Write(Model.ChordDecorator.ChordType);
+
+
+#line default
+#line hidden
+WriteLiteral("\',\n\t\t\t\t\t                conv: \'");
+
+
+#line 115 "ShowChordLayoutsView.cshtml"
+                                      Write(Model.Parameters["conv"]);
+
+
+#line default
+#line hidden
+WriteLiteral("\',\n\t\t\t\t\t                positions: positions\n\t                            }\n\t    " +
+"                    });\n\t\t\t\t\t    });\n\t\t\t\t\t});\n            </script>\n");
+
+
+#line 122 "ShowChordLayoutsView.cshtml"
 	        }
 
 
@@ -441,7 +511,7 @@ WriteLiteral(@">
 WriteLiteral("\t\t\t</div>\n");
 
 
-#line 98 "ShowChordLayoutsView.cshtml"
+#line 124 "ShowChordLayoutsView.cshtml"
 		}
 
 

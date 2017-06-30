@@ -2,10 +2,12 @@
 @model Chords.Android.Models.ShowChordLayoutsModel
 @{
     var otherSymbols = Model.ChordDecorator != null ? Model.ChordDecorator.Symbols.Skip(1) : new string[0];
+    //onclick="playChord('@positions');" 
 }
 <!DOCTYPE html>
 <html>
 <head>
+	<!--link rel="stylesheet" href="jquery.mobile-1.4.5.min.css" /-->
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="bootstrap.min.css" />
 </head>
@@ -32,6 +34,7 @@
         </div>
     </nav>
     <script src="jquery.min.js"></script>
+	<script src="jquery.mobile-1.4.5.min.js"></script>
     <script src="bootstrap.min.js"></script>
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 main-content">
 
@@ -75,7 +78,7 @@
 	                {
 					    var positions = string.Join(",", layout.IntPositions.Select(i => i.ToString()).ToArray());
 					
-	                    <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 chord-layout" onclick="playChord('@positions');">
+	                    <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 chord-layout" data-favorite="@(layout.Favorite)" data-positions="@positions" onclick="playChord('@positions');">
 	                        @(layout.Schema)
 	                    </div>
 	                }
@@ -92,7 +95,30 @@
 	                        }
 	                    });
 					}
-	            </script>
+					function setFavorite(selector, value) {
+					    //location.href='hybrid:xyz?selector='+selector+'&value='+value;
+					    $(selector).attr('data-favorite', value);
+					}
+					$(function(){
+					    $.event.special.tap.tapholdThreshold = 500;
+					    $.event.special.tap.emitTapOnTaphold = false;
+					    $('.chord-layout').bind('taphold', function(){
+                            var positions = $(this).attr('data-positions');
+					        var favorite = $(this).attr('data-favorite') == "True";
+
+					        $.ajax({
+	                            url: favorite ? 'hybrid:RemoveFromFavorites' : 'hybrid:AddToFavorites',
+	                            type: 'get',
+	                            data: {
+					                root: '@Model.ChordDecorator.Root',
+					                chordType: '@Model.ChordDecorator.ChordType',
+					                conv: '@Model.Parameters["conv"]',
+					                positions: positions
+	                            }
+	                        });
+					    });
+					});
+            </script>
 	        }
 			</div>
 		}

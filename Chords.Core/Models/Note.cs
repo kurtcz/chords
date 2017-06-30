@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using Chords.Core.Extensions;
+using Newtonsoft.Json;
 
 namespace Chords.Core.Models
 {
@@ -56,7 +57,8 @@ namespace Chords.Core.Models
         {
         }
 
-        public Note(Tone tone, Accidental accidental)
+		[JsonConstructor]
+		public Note(Tone tone, Accidental accidental)
         {
             Tone = tone;
             Accidental = accidental;

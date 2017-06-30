@@ -9,8 +9,8 @@ namespace Chords.Android.Models
 {
 	public class GuitarChordLayoutDecorator
 	{
-		private GuitarChordLayout _layout;
-		private NamingConvention _namingConvention;
+		private readonly GuitarChordLayout _layout;
+		private readonly NamingConvention _namingConvention;
 
 		public string GuitarChordType => _layout.GuitarChordType.ToDescription() ?? _layout.GuitarChordType.ToString();
 		public int[] IntPositions => _layout.Positions;
@@ -21,6 +21,7 @@ namespace Chords.Android.Models
 		public int Fret => _layout.Fret;
 		public bool Complete => _layout.Complete;
 		public int RenderingFret { get; }
+        public bool Favorite => Favorites.Chords.Keys.Any(i => Favorites.Chords[i].Contains(_layout));
 
 		public GuitarChordLayoutDecorator(GuitarChordLayout layout, NamingConvention namingConvention = NamingConvention.English)
 		{
@@ -38,6 +39,15 @@ namespace Chords.Android.Models
             get
             {
 				var sb = new StringBuilder();
+				var star = string.Join(" ", new[]
+				{
+					"M", "130", "23",
+					"l", "7", "-23",
+                    "l", "7", "23",
+                    "l", "-19", "-14",
+                    "h", "24",
+                    "Z"
+				});
                 var fret0 = string.Join(" ", new[]
                 {
                     "M", "20", "20",
@@ -68,7 +78,8 @@ namespace Chords.Android.Models
 					"M", "20", "180",
 					"h", "100"
 				});
-                sb.AppendLine("\t<svg width=\"150\" height=\"200\" style=\"display:block;\">");
+                sb.AppendLine("\t<svg width=\"160\" height=\"200\" style=\"display:block;\">");
+                sb.AppendFormat("\t\t<path class=\"star\" fill=\"#F8D64E\" d=\"{0}\" />\n", star);
                 sb.AppendFormat("\t\t<path d=\"{0}\" fill=\"none\" stroke=\"{1}\" stroke-width=\"1\" />\n", frets, Complete ? "black" : "grey");
                 if (RenderingFret == 0)
                 {
@@ -116,57 +127,6 @@ namespace Chords.Android.Models
             }
         }
 
-        public HtmlString OldSchema
-        { 
-            get
-            {
-                var sb = new StringBuilder();
-
-                for (var f = 0; f < 5; f++)
-                {
-                    if (f == 0)
-                    {
-                        sb.AppendFormat("<div style=\"font-family: monospace;\">[{0}]&nbsp;{1}", RenderingFret, RenderingFret < 10 ? "&nbsp;" : "");
-                        sb.Append(RenderingFret == 0 ? "<span style=\"font-weight:bold;\">=</span>" : "-");
-
-                        for (var s = 0; s < 6; s++)
-                        {
-                            if (IntPositions[s] == 0 ||
-                                IntPositions[s] == GuitarChordLayout.X)
-                            {
-                                sb.AppendFormat("<span class=\"{0}\">{0}</span>", IntPositions[s] == GuitarChordLayout.X ? "X" : "O");
-                                sb.Append(RenderingFret == 0 ? "<span style=\"font-weight:bold;\">=</span>" : "-");
-                            }
-                            else
-                            {
-                                sb.Append(RenderingFret == 0 ? "<span style=\"font-weight:bold;\">==</span>" : "--");
-                            }
-                        }
-                        sb.AppendLine("</div>");
-                        continue;
-                    }
-                    sb.AppendFormat("<div style=\"font-family: monospace;\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|");
-                    for (var s = 0; s < 6; s++)
-                    {
-                        if (IntPositions[s] == RenderingFret + f)
-                        {
-                            sb.Append("<span class=\"O\">O</span>");
-                        }
-                        else
-                        {
-                            sb.Append("&nbsp;");
-                        }
-                        sb.Append("|");
-                    }
-                    sb.AppendLine("</div>");
-                    sb.AppendFormat("<div style=\"font-family: monospace;\">[{0}]&nbsp;{1}-------------</div>\n",
-                                    RenderingFret + f, RenderingFret + f < 10 ? "&nbsp;" : "");
-                }
-
-				return new HtmlString(sb.ToString());
-			}
-        }
-
 		public override string ToString()
 		{
             var sb = new StringBuilder();
@@ -190,5 +150,22 @@ namespace Chords.Android.Models
 
             return sb.ToString();
 		}
+
+        public override int GetHashCode()
+        {
+            return _layout.GetHashCode();
+        }
+
+        public override bool Equals(object obj)
+        {
+            var other = obj as GuitarChordLayoutDecorator;
+
+            if (other == null)
+            {
+                return false;
+            }
+
+            return this._layout.Equals(other._layout);
+        }
 	}
 }

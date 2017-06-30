@@ -4,13 +4,13 @@ using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 
 namespace Chords.Core.Models
 {
     public class GuitarChordLayout
     {
         public const int X = -1;       //this symbol denotes a silent string
-        private Chord _chord;
         private static readonly Note[] _strings =
         {
             new Note(Tone.E),
@@ -21,16 +21,32 @@ namespace Chords.Core.Models
             new Note(Tone.E)
         };
 
-        public int[] Positions { get; private set; } = new int[6];
+        public Chord Chord { get; private set; }
+		public int[] Positions { get; private set; } = new int[6];
         public GuitarChordType GuitarChordType { get; private set; }
+        [JsonIgnore]
         public int Fret { get; private set; }
+        [JsonIgnore]
         public Note[] Notes { get; private set; }
+        [JsonIgnore]
         public bool Complete { get; private set; }
 
-        private GuitarChordLayout(Chord chord)
+        public GuitarChordLayout(Chord chord, int[] positions)
         {
-            _chord = chord;
-        }
+            Chord = chord;
+            Positions = positions;
+
+			Notes = GetUsedNotes();
+			Complete = Notes.Distinct().Count() == Chord.Notes.Count();
+			Fret = Positions.Any(i => i > 0)
+					? Positions.Where(i => i > 0).Min()
+					: 0;
+			//if possible try to render chords from the 1st fret
+			if (Positions.All(i => i <= 4))
+			{
+				Fret = 1;
+			}
+		}
 
         public static IEnumerable<GuitarChordLayout> Generate(Chord chord, bool allowSpecial, bool allowPartial)
         {
@@ -75,27 +91,13 @@ namespace Chords.Core.Models
             {
                 foreach (var guitarChordType in guitarChordTypes)
                 {
-                    var result = new GuitarChordLayout(chord)
+                    var result = new GuitarChordLayout(chord, layout)
                     {
-                        GuitarChordType = guitarChordType,
-                        Positions = layout
+                        GuitarChordType = guitarChordType
                     };
 
                     if (result.IsValid(allowPartial))
                     {
-                        result.Notes = result.GetUsedNotes();
-                        result.Complete = result.Notes.Distinct().Count() == result._chord.Notes.Count();
-                        result.Fret = result.Positions.Any(i => i > 0)
-                                        ? result.Positions.Where(i => i > 0).Min()
-                                        : 0;
-                        //if possible try to render normal chords from the 1st fret
-                        if (guitarChordType != GuitarChordType.SixStringBarre &&
-                            guitarChordType != GuitarChordType.FiveStringBarre &&
-                            result.Fret <= 4 &&
-                            result.Positions.All(i => i <= 4))
-                        {
-                            result.Fret = 1;
-                        }
                         results.Add(result);
                     }
                 }
@@ -154,7 +156,7 @@ namespace Chords.Core.Models
 					continue;
 				}
                 var note = _strings[s].NoteAtChromaticDistance(Positions[s]);
-                var noteFromChord = _chord.Notes.FirstOrDefault(i => Note.Normalize(i) == note);
+                var noteFromChord = Chord.Notes.FirstOrDefault(i => Note.Normalize(i) == note);
 
                 if (noteFromChord != null)
 				{
@@ -169,20 +171,19 @@ namespace Chords.Core.Models
         {
             //have we managed to find all the notes from the given chord?
             //if not we may leave out one note
-            var usedNotes = GetUsedNotes();
             if ((!allowPartial && 
-                 _chord.Notes.Any(i => !usedNotes.Contains(i))) ||
-                _chord.Notes.Any(i => !usedNotes.Contains(i) &&
-                                      !_chord.NonMandatoryNotes.Contains(i)) ||
-				_chord.Notes.Count(i => !usedNotes.Contains(i) &&
-									    _chord.NonMandatoryNotes.Contains(i)) > 1)
+                 Chord.Notes.Any(i => !Notes.Contains(i))) ||
+                Chord.Notes.Any(i => !Notes.Contains(i) &&
+                                      !Chord.NonMandatoryNotes.Contains(i)) ||
+				Chord.Notes.Count(i => !Notes.Contains(i) &&
+									    Chord.NonMandatoryNotes.Contains(i)) > 1)
 			{
 				return false;
 			}
             //do not allow same notes to follow each other immediately
-            if (usedNotes.Select((i, idx) => new { Note = i, Index = idx })
-                         .Any(i => i.Index < usedNotes.Length - 1 &&
-                                   i.Note.Tone == usedNotes[i.Index + 1].Tone))
+            if (Notes.Select((i, idx) => new { Note = i, Index = idx })
+                         .Any(i => i.Index < Notes.Length - 1 &&
+                                   i.Note.Tone == Notes[i.Index + 1].Tone))
             {
                 return false;
             }
