@@ -1,4 +1,5 @@
-﻿@inherits PortableRazor.ViewBase
+﻿@using Chords.Core.Extensions
+@inherits PortableRazor.ViewBase
 @model Chords.Android.Models.ShowChordLayoutsModel
 @{
     var otherSymbols = Model.ChordDecorator != null ? Model.ChordDecorator.Symbols.Skip(1) : new string[0];
@@ -29,6 +30,7 @@
                     <li><a href="hybrid:ShowChord?conv=@Model.Parameters["conv"]">Show chord</a></li>
                     <li><a href="hybrid:FindChord?conv=@Model.Parameters["conv"]">Find chord</a></li>
 					<li><a href="hybrid:Circle?conv=@Model.Parameters["conv"]">Circle of fifths</a></li>
+					<li><a href="hybrid:FavoriteChords?conv=@Model.Parameters["conv"]">Favourite chords</a></li>
                 </ul>
             </div>
         </div>
@@ -96,10 +98,10 @@
 	                    });
 					}
 					function setFavorite(selector, value) {
-					    //location.href='hybrid:xyz?selector='+selector+'&value='+value;
 					    $(selector).attr('data-favorite', value);
 					}
 					$(function(){
+					    $('.ui-loader').hide();
 					    $.event.special.tap.tapholdThreshold = 500;
 					    $.event.special.tap.emitTapOnTaphold = false;
 					    $('.chord-layout').bind('taphold', function(){
@@ -111,7 +113,7 @@
 	                            type: 'get',
 	                            data: {
 					                root: '@Model.ChordDecorator.Root',
-					                chordType: '@Model.ChordDecorator.ChordType',
+					                type: '@Model.ChordDecorator.ChordType.ToDescription()',
 					                conv: '@Model.Parameters["conv"]',
 					                positions: positions
 	                            }

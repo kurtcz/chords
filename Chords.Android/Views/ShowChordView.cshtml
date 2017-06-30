@@ -26,6 +26,7 @@
                     <li><a href="hybrid:ShowChord?conv=@Model.conv">Show chord</a></li>
                     <li><a href="hybrid:FindChord?conv=@Model.conv">Find chord</a></li>
 					<li><a href="hybrid:Circle?conv=@Model.conv">Circle of fifths</a></li>
+					<li><a href="hybrid:FavoriteChords?conv=@Model.conv">Favourite chords</a></li>
                 </ul>
             </div>
         </div>
@@ -45,7 +46,7 @@
 	                    <span class="icon-bar"></span>
 	                    <span class="icon-bar"></span>
 	                </button>
-	                <span class="navbar-brand" id="navbar-root">@Model.Notes[Model.conv][1]</span>
+	                <span class="navbar-brand" id="navbar-root">@(Model.Root?.ToString(Model.conv) ?? Model.Notes[Model.conv][1])</span>
 	            </div>
 	                
 	            <div class="navbar-root-collapse collapse">
@@ -67,7 +68,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <span class="navbar-brand" id="navbar-type">Major</span>
+                    <span class="navbar-brand" id="navbar-type">@(Model.ChordType.ToDescription() ?? "Major")</span>
                 </div>
                     
                 <div class="navbar-type-collapse collapse">
@@ -103,8 +104,8 @@
             </div>
         </nav>
 		<form action="hybrid:ShowChord">
-			<input type="hidden" name="root" id="root" value="@Model.Notes[Model.conv][1]" />
-            <input type="hidden" name="type" id="type" value="" />
+			<input type="hidden" name="root" id="root" value="@(Model.Root?.ToString(Model.conv) ?? Model.Notes[Model.conv][1])" />
+            <input type="hidden" name="type" id="type" value="@(Model.ChordType.ToDescription() ?? string.Empty)" />
 			<input type="hidden" name="conv" id="conv" value="@Model.conv" />
 			<div style="margin-bottom: 20px">
 				<span class="col-xs-9 col-sm-9 col-md-9 col-lg-9">Allow partial chords</span>

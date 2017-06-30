@@ -40,28 +40,7 @@ namespace Chords.Android
         {
             base.OnCreate(savedInstanceState);
 
-   //         var note = new Note(Core.Models.Tone.C);
-   //         var chord = new Chord(note, ChordType.Major);
-   //         var layout = new GuitarChordLayout(chord, new []{-1,3,2,0,1,-1});
-
-   //         var key = new Dictionary<Chord, string> { { chord, "test" } };
-   //         var val = new HashSet<GuitarChordLayout>(new[] { layout });
-   //         var chords = new Dictionary<Chord, HashSet<GuitarChordLayout>> { { chord, new HashSet<GuitarChordLayout>(new[] { layout }) } };
-
-   //         var ser = Newtonsoft.Json.JsonConvert.SerializeObject(note);
-			//var note2 = Newtonsoft.Json.JsonConvert.DeserializeObject<Note>(ser);
-			//ser = Newtonsoft.Json.JsonConvert.SerializeObject(chord);
-   //         var chord2 = Newtonsoft.Json.JsonConvert.DeserializeObject<Chord>(ser);
-   //         ser = Newtonsoft.Json.JsonConvert.SerializeObject(layout);
-   //         var layout2 = Newtonsoft.Json.JsonConvert.DeserializeObject<GuitarChordLayout>(ser);
-
-   //         ser = Newtonsoft.Json.JsonConvert.SerializeObject(key.ToArray());
-   //         var key2 = Newtonsoft.Json.JsonConvert.DeserializeObject<IEnumerable<KeyValuePair<Chord, string>>>(ser).ToDictionary(k => k.Key, v => v.Value);
-			//ser = Newtonsoft.Json.JsonConvert.SerializeObject(val);
-			//var val2 = Newtonsoft.Json.JsonConvert.DeserializeObject<HashSet<GuitarChordLayout>>(ser);
-   //         ser = Newtonsoft.Json.JsonConvert.SerializeObject(chords.ToArray());
-			//var chords2 = Newtonsoft.Json.JsonConvert.DeserializeObject<IEnumerable<KeyValuePair<Chord, HashSet<GuitarChordLayout>>>>(ser).ToDictionary(k => k.Key, v => v.Value);
-
+            Favorites.Init();
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main);
 
@@ -161,6 +140,10 @@ namespace Chords.Android
 				{
 					RemoveFromFavorites(webView, parameters);
 				}
+                else if (method == "FavoriteChords")
+                {
+                    FavoriteChords(webView, parameters);
+                }
                 else
                 {
                     return false;
@@ -168,11 +151,14 @@ namespace Chords.Android
 				return true;
             }
 
+            private Note _currentRoot;
+            private ChordType _currentChordType;
+
             public void ShowChord(WebView webView, NameValueCollection parameters)
             {
 				string page;
 				var showChordParams = new ChordParams(parameters);
-                var model = new ShowChordModel { conv = showChordParams.NamingConvention };
+                var model = new ShowChordModel { Root = _currentRoot, ChordType = _currentChordType, conv = showChordParams.NamingConvention };
                 var resultModel = new ShowChordResultModel
                 {
                     Parameters = parameters
@@ -189,6 +175,8 @@ namespace Chords.Android
 					}
                     else
                     {
+                        _currentRoot = chord.Root;
+                        _currentChordType = chord.ChordType;
 						resultModel.ChordDecorator = new ChordDecorator(chord, showChordParams.NamingConvention);
 					}
 					var template = new ShowChordResultView { Model = resultModel };
@@ -415,6 +403,25 @@ namespace Chords.Android
                 var js = string.Format("setFavorite('.chord-layout[data-positions=\"{0}\"]', '{1}');", parameters["positions"], false);
 				webView.LoadUrl("javascript:" + js);
 			}
+
+            public void FavoriteChords(WebView webView, NameValueCollection parameters)
+            {
+                var model = new FavoriteChordsModel(parameters);
+
+                model.Chords = Favorites.Chords
+                                        .Select(kvp => new KeyValuePair<ChordDecorator, GuitarChordLayoutDecorator[]>(
+                                                            new ChordDecorator(kvp.Key, model.conv),
+                                                            kvp.Value.Select(i => new GuitarChordLayoutDecorator(i, model.conv)).ToArray()))
+                                        .OrderBy(i => i.Key.Root.Tone)
+                                        .ThenBy(i => i.Key.Root.Accidental)
+										.ThenBy(i => i.Key.ChordType);
+				var template = new FavoriteChordsView() { Model = model };
+				var page = template.GenerateString();
+
+				// Load the rendered HTML into the view with a base URL 
+				// that points to the root of the bundled Assets folder
+				webView.LoadDataWithBaseURL("file:///android_asset/", page, "text/html", "UTF-8", null);
+            }
 		}
     }
 }

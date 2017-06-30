@@ -30,6 +30,10 @@ namespace Chords.Android
 			}
 		}
 
+        public static void Init()
+        {
+        }
+
         public static void Save()
         {
 			try

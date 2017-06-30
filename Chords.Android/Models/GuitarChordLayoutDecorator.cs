@@ -118,7 +118,7 @@ namespace Chords.Android.Models
 				}
                 for (var f = 0; f < 5; f++)
                 {
-                    sb.AppendFormat("\t\t<text x=\"{0}\" y=\"{1}\" text-anchor=\"end\" fill=\"{2}\" stroke=\"none\" font-size=\"10\">{3}</text>",
+                    sb.AppendFormat("\t\t<text x=\"{0}\" y=\"{1}\" text-anchor=\"end\" fill=\"{2}\" stroke=\"none\" font-size=\"10\">{3}</text>\n",
                                      10, 23 + f * 40, Complete ? "black" : "grey", RenderingFret + f);
                 }
                 sb.AppendLine("\t</svg>");
@@ -132,7 +132,7 @@ namespace Chords.Android.Models
             var sb = new StringBuilder();
             var k = 0;
 
-            for (var s = 0; s < 6; s++)
+            for (var s = 0; s < 6 && k < Notes.Length; s++)
             {
                 if (IntPositions[s] == -1)
                 {

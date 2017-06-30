@@ -164,7 +164,19 @@ WriteAttribute ("href", " href=\"", "\""
 #line hidden
 , false)
 );
-WriteLiteral(">Circle of fifths</a></li>\n                </ul>\n            </div>\n        </div" +
+WriteLiteral(">Circle of fifths</a></li>\n\t\t\t\t\t<li><a");
+
+WriteAttribute ("href", " href=\"", "\""
+, Tuple.Create<string,object,bool> ("", "hybrid:FavoriteChords?conv=", true)
+
+#line 34 "FindChordView.cshtml"
+                     , Tuple.Create<string,object,bool> ("", Model.conv
+
+#line default
+#line hidden
+, false)
+);
+WriteLiteral(">Favourite chords</a></li>\n                </ul>\n            </div>\n        </div" +
 ">\n    </nav>\n    <script");
 
 WriteLiteral(" src=\"jquery.min.js\"");
@@ -228,7 +240,7 @@ WriteLiteral(" id=\"navbar-conv\"");
 WriteLiteral(">");
 
 
-#line 53 "FindChordView.cshtml"
+#line 54 "FindChordView.cshtml"
                                                             Write(Model.conv.ToDescription());
 
 
@@ -245,13 +257,13 @@ WriteLiteral(" class=\"nav navbar-nav\"");
 WriteLiteral(">\n");
 
 
-#line 58 "FindChordView.cshtml"
+#line 59 "FindChordView.cshtml"
                     
 
 #line default
 #line hidden
 
-#line 58 "FindChordView.cshtml"
+#line 59 "FindChordView.cshtml"
                      foreach(var conv in @Model.NamingConventions)
                     {
 						if (Model.Strict)
@@ -265,7 +277,7 @@ WriteLiteral("\t                        <li><a");
 WriteAttribute ("href", " href=\"", "\""
 , Tuple.Create<string,object,bool> ("", "hybrid:FindChord?conv=", true)
 
-#line 62 "FindChordView.cshtml"
+#line 63 "FindChordView.cshtml"
                         , Tuple.Create<string,object,bool> ("", conv
 
 #line default
@@ -273,7 +285,7 @@ WriteAttribute ("href", " href=\"", "\""
 , false)
 , Tuple.Create<string,object,bool> ("", "&strict=true&oldconv=", true)
 
-#line 62 "FindChordView.cshtml"
+#line 63 "FindChordView.cshtml"
                                                   , Tuple.Create<string,object,bool> ("", Model.conv
 
 #line default
@@ -281,7 +293,7 @@ WriteAttribute ("href", " href=\"", "\""
 , false)
 , Tuple.Create<string,object,bool> ("", "&note=", true)
 
-#line 62 "FindChordView.cshtml"
+#line 63 "FindChordView.cshtml"
                                                                    , Tuple.Create<string,object,bool> ("", notes
 
 #line default
@@ -291,7 +303,7 @@ WriteAttribute ("href", " href=\"", "\""
 WriteLiteral(">");
 
 
-#line 62 "FindChordView.cshtml"
+#line 63 "FindChordView.cshtml"
                                                                                                               Write(conv.ToDescription());
 
 
@@ -300,7 +312,7 @@ WriteLiteral(">");
 WriteLiteral("</a></li>\n");
 
 
-#line 63 "FindChordView.cshtml"
+#line 64 "FindChordView.cshtml"
     					}
 						else
 						{
@@ -313,7 +325,7 @@ WriteLiteral("                            <li><a");
 WriteAttribute ("href", " href=\"", "\""
 , Tuple.Create<string,object,bool> ("", "hybrid:FindChord?conv=", true)
 
-#line 66 "FindChordView.cshtml"
+#line 67 "FindChordView.cshtml"
                         , Tuple.Create<string,object,bool> ("", conv
 
 #line default
@@ -321,7 +333,7 @@ WriteAttribute ("href", " href=\"", "\""
 , false)
 , Tuple.Create<string,object,bool> ("", "&strict=false&oldconv=", true)
 
-#line 66 "FindChordView.cshtml"
+#line 67 "FindChordView.cshtml"
                                                    , Tuple.Create<string,object,bool> ("", Model.conv
 
 #line default
@@ -329,7 +341,7 @@ WriteAttribute ("href", " href=\"", "\""
 , false)
 , Tuple.Create<string,object,bool> ("", "&note=", true)
 
-#line 66 "FindChordView.cshtml"
+#line 67 "FindChordView.cshtml"
                                                                     , Tuple.Create<string,object,bool> ("", notes
 
 #line default
@@ -339,7 +351,7 @@ WriteAttribute ("href", " href=\"", "\""
 WriteLiteral(">");
 
 
-#line 66 "FindChordView.cshtml"
+#line 67 "FindChordView.cshtml"
                                                                                                                Write(conv.ToDescription());
 
 
@@ -348,7 +360,7 @@ WriteLiteral(">");
 WriteLiteral("</a></li>\n");
 
 
-#line 67 "FindChordView.cshtml"
+#line 68 "FindChordView.cshtml"
 						}
                     }
 
@@ -397,13 +409,13 @@ WriteLiteral(" class=\"icon-bar\"");
 WriteLiteral("></span>\n                    </button>\n");
 
 
-#line 82 "FindChordView.cshtml"
+#line 83 "FindChordView.cshtml"
 					
 
 #line default
 #line hidden
 
-#line 82 "FindChordView.cshtml"
+#line 83 "FindChordView.cshtml"
                      if (Model.Strict)
 					{
 
@@ -419,7 +431,7 @@ WriteLiteral(" id=\"navbar-strict\"");
 WriteLiteral(">Strict mode (");
 
 
-#line 84 "FindChordView.cshtml"
+#line 85 "FindChordView.cshtml"
                                                                               Write(Model.Notes[Model.conv][1]);
 
 
@@ -428,7 +440,7 @@ WriteLiteral(">Strict mode (");
 WriteLiteral("<sub>#</sub> ≠ ");
 
 
-#line 84 "FindChordView.cshtml"
+#line 85 "FindChordView.cshtml"
                                                                                                                         Write(Model.Notes[Model.conv][4]);
 
 
@@ -437,7 +449,7 @@ WriteLiteral("<sub>#</sub> ≠ ");
 WriteLiteral("<sub>b</sub>)</span>\n");
 
 
-#line 85 "FindChordView.cshtml"
+#line 86 "FindChordView.cshtml"
 					}
 					else
 					{
@@ -454,7 +466,7 @@ WriteLiteral(" id=\"navbar-strict\"");
 WriteLiteral(">Loose mode (");
 
 
-#line 88 "FindChordView.cshtml"
+#line 89 "FindChordView.cshtml"
                                                                              Write(Model.Notes[Model.conv][1]);
 
 
@@ -463,7 +475,7 @@ WriteLiteral(">Loose mode (");
 WriteLiteral("<sub>#</sub> = ");
 
 
-#line 88 "FindChordView.cshtml"
+#line 89 "FindChordView.cshtml"
                                                                                                                        Write(Model.Notes[Model.conv][4]);
 
 
@@ -472,7 +484,7 @@ WriteLiteral("<sub>#</sub> = ");
 WriteLiteral("<sub>b</sub>)</span>\n");
 
 
-#line 89 "FindChordView.cshtml"
+#line 90 "FindChordView.cshtml"
 					}
 
 
@@ -491,7 +503,7 @@ WriteLiteral(">\n\t\t\t\t\t\t<li><a");
 WriteAttribute ("href", " href=\"", "\""
 , Tuple.Create<string,object,bool> ("", "hybrid:FindChord?conv=", true)
 
-#line 94 "FindChordView.cshtml"
+#line 95 "FindChordView.cshtml"
                     , Tuple.Create<string,object,bool> ("", Model.conv
 
 #line default
@@ -499,7 +511,7 @@ WriteAttribute ("href", " href=\"", "\""
 , false)
 , Tuple.Create<string,object,bool> ("", "&strict=true&oldconv=", true)
 
-#line 94 "FindChordView.cshtml"
+#line 95 "FindChordView.cshtml"
                                                     , Tuple.Create<string,object,bool> ("", Model.conv
 
 #line default
@@ -507,7 +519,7 @@ WriteAttribute ("href", " href=\"", "\""
 , false)
 , Tuple.Create<string,object,bool> ("", "&note=", true)
 
-#line 94 "FindChordView.cshtml"
+#line 95 "FindChordView.cshtml"
                                                                      , Tuple.Create<string,object,bool> ("", notes
 
 #line default
@@ -517,7 +529,7 @@ WriteAttribute ("href", " href=\"", "\""
 WriteLiteral(">Strict (");
 
 
-#line 94 "FindChordView.cshtml"
+#line 95 "FindChordView.cshtml"
                                                                                                                        Write(Model.Notes[Model.conv][1]);
 
 
@@ -526,7 +538,7 @@ WriteLiteral(">Strict (");
 WriteLiteral("<sub>#</sub> ≠ ");
 
 
-#line 94 "FindChordView.cshtml"
+#line 95 "FindChordView.cshtml"
                                                                                                                                                                  Write(Model.Notes[Model.conv][4]);
 
 
@@ -537,7 +549,7 @@ WriteLiteral("<sub>b</sub>)</a></li>\n                        <li><a");
 WriteAttribute ("href", " href=\"", "\""
 , Tuple.Create<string,object,bool> ("", "hybrid:FindChord?conv=", true)
 
-#line 95 "FindChordView.cshtml"
+#line 96 "FindChordView.cshtml"
                     , Tuple.Create<string,object,bool> ("", Model.conv
 
 #line default
@@ -545,7 +557,7 @@ WriteAttribute ("href", " href=\"", "\""
 , false)
 , Tuple.Create<string,object,bool> ("", "&strict=false&oldconv=", true)
 
-#line 95 "FindChordView.cshtml"
+#line 96 "FindChordView.cshtml"
                                                      , Tuple.Create<string,object,bool> ("", Model.conv
 
 #line default
@@ -553,7 +565,7 @@ WriteAttribute ("href", " href=\"", "\""
 , false)
 , Tuple.Create<string,object,bool> ("", "&note=", true)
 
-#line 95 "FindChordView.cshtml"
+#line 96 "FindChordView.cshtml"
                                                                       , Tuple.Create<string,object,bool> ("", notes
 
 #line default
@@ -563,7 +575,7 @@ WriteAttribute ("href", " href=\"", "\""
 WriteLiteral(">Loose (");
 
 
-#line 95 "FindChordView.cshtml"
+#line 96 "FindChordView.cshtml"
                                                                                                                        Write(Model.Notes[Model.conv][1]);
 
 
@@ -572,7 +584,7 @@ WriteLiteral(">Loose (");
 WriteLiteral("<sub>#</sub> = ");
 
 
-#line 95 "FindChordView.cshtml"
+#line 96 "FindChordView.cshtml"
                                                                                                                                                                  Write(Model.Notes[Model.conv][4]);
 
 
@@ -591,7 +603,7 @@ WriteLiteral(" name=\"conv\"");
 
 WriteAttribute ("value", " value=\"", "\""
 
-#line 101 "FindChordView.cshtml"
+#line 102 "FindChordView.cshtml"
              , Tuple.Create<string,object,bool> ("", Model.conv
 
 #line default
@@ -606,7 +618,7 @@ WriteLiteral(" name=\"strict\"");
 
 WriteAttribute ("value", " value=\"", "\""
 
-#line 102 "FindChordView.cshtml"
+#line 103 "FindChordView.cshtml"
                 , Tuple.Create<string,object,bool> ("", Model.Strict ? "true": "false"
 
 #line default
@@ -622,13 +634,13 @@ WriteLiteral(" style=\"margin-top:20px;\"");
 WriteLiteral(">\n");
 
 
-#line 104 "FindChordView.cshtml"
+#line 105 "FindChordView.cshtml"
 			
 
 #line default
 #line hidden
 
-#line 104 "FindChordView.cshtml"
+#line 105 "FindChordView.cshtml"
              for(var i = 0; i < Model.AllNotes[Model.conv].Length; i++)
 			{
 				var note = Regex.Replace(Model.AllNotes[Model.conv][i].ToString(), "<.*?>", string.Empty);
@@ -639,14 +651,14 @@ WriteLiteral(">\n");
 #line default
 #line hidden
 
-#line 109 "FindChordView.cshtml"
+#line 110 "FindChordView.cshtml"
                 Write(new HtmlString("\t\t\t\t\t<div style=\"padding-bottom:5px;\">\n"));
 
 
 #line default
 #line hidden
 
-#line 109 "FindChordView.cshtml"
+#line 110 "FindChordView.cshtml"
                                                                                         
                 }
 				if (Model.SelectedNotes != null && Model.SelectedNotes.Contains(note))
@@ -663,7 +675,7 @@ WriteLiteral(" name=\"note\"");
 
 WriteAttribute ("value", " value=\"", "\""
 
-#line 113 "FindChordView.cshtml"
+#line 114 "FindChordView.cshtml"
                        , Tuple.Create<string,object,bool> ("", note
 
 #line default
@@ -677,7 +689,7 @@ WriteLiteral(" data-toggle=\"toggle\"");
 WriteLiteral(" data-on=\"");
 
 
-#line 113 "FindChordView.cshtml"
+#line 114 "FindChordView.cshtml"
                                                                                                                  Write(Model.AllNotes[Model.conv][i]);
 
 
@@ -688,7 +700,7 @@ WriteLiteral("\"");
 WriteLiteral(" data-off=\"");
 
 
-#line 113 "FindChordView.cshtml"
+#line 114 "FindChordView.cshtml"
                                                                                                                                                              Write(Model.AllNotes[Model.conv][i]);
 
 
@@ -703,7 +715,7 @@ WriteLiteral(" style=\"display:none;\"");
 WriteLiteral(" />\n");
 
 
-#line 114 "FindChordView.cshtml"
+#line 115 "FindChordView.cshtml"
 				}
 				else
 				{
@@ -719,7 +731,7 @@ WriteLiteral(" name=\"note\"");
 
 WriteAttribute ("value", " value=\"", "\""
 
-#line 117 "FindChordView.cshtml"
+#line 118 "FindChordView.cshtml"
                        , Tuple.Create<string,object,bool> ("", note
 
 #line default
@@ -731,7 +743,7 @@ WriteLiteral(" data-toggle=\"toggle\"");
 WriteLiteral(" data-on=\"");
 
 
-#line 117 "FindChordView.cshtml"
+#line 118 "FindChordView.cshtml"
                                                                                                Write(Model.AllNotes[Model.conv][i]);
 
 
@@ -742,7 +754,7 @@ WriteLiteral("\"");
 WriteLiteral(" data-off=\"");
 
 
-#line 117 "FindChordView.cshtml"
+#line 118 "FindChordView.cshtml"
                                                                                                                                            Write(Model.AllNotes[Model.conv][i]);
 
 
@@ -757,7 +769,7 @@ WriteLiteral(" style=\"display:none;\"");
 WriteLiteral(" />\n");
 
 
-#line 118 "FindChordView.cshtml"
+#line 119 "FindChordView.cshtml"
 				}
 
 
@@ -766,7 +778,7 @@ WriteLiteral(" />\n");
 WriteLiteral("                <span></span>\n");
 
 
-#line 120 "FindChordView.cshtml"
+#line 121 "FindChordView.cshtml"
 				if (i % 5 == 4)
 				{					
 				    
@@ -774,14 +786,14 @@ WriteLiteral("                <span></span>\n");
 #line default
 #line hidden
 
-#line 122 "FindChordView.cshtml"
+#line 123 "FindChordView.cshtml"
                 Write(new HtmlString("\t\t\t\t\t</div>\n"));
 
 
 #line default
 #line hidden
 
-#line 122 "FindChordView.cshtml"
+#line 123 "FindChordView.cshtml"
                                                            
 				}
 			}
@@ -810,7 +822,7 @@ WriteLiteral(" class=\"error\"");
 WriteLiteral(">");
 
 
-#line 130 "FindChordView.cshtml"
+#line 131 "FindChordView.cshtml"
                       Write(Model.Error);
 
 

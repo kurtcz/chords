@@ -91,6 +91,10 @@
     </Compile>
     <Compile Include="Models\CircleModel.cs" />
     <Compile Include="Favorites.cs" />
+    <Compile Include="Views\FavoriteChordsView.cs">
+      <DependentUpon>FavoriteChordsView.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FavoriteChordsModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -116,6 +120,10 @@
     <None Include="Views\CircleView.cshtml">
       <Generator>RazorTemplatePreprocessor</Generator>
       <LastGenOutput>CircleView.cs</LastGenOutput>
+    </None>
+    <None Include="Views\FavoriteChordsView.cshtml">
+      <Generator>RazorTemplatePreprocessor</Generator>
+      <LastGenOutput>FavoriteChordsView.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <ItemGroup>
