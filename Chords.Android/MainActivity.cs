@@ -412,6 +412,7 @@ namespace Chords.Android
                                         .Select(kvp => new KeyValuePair<ChordDecorator, GuitarChordLayoutDecorator[]>(
                                                             new ChordDecorator(kvp.Key, model.conv),
                                                             kvp.Value.Select(i => new GuitarChordLayoutDecorator(i, model.conv)).ToArray()))
+                                        .Where(i => i.Value.Any())
                                         .OrderBy(i => i.Key.Root.Tone)
                                         .ThenBy(i => i.Key.Root.Accidental)
 										.ThenBy(i => i.Key.ChordType);

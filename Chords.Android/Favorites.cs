@@ -32,13 +32,14 @@ namespace Chords.Android
 
         public static void Init()
         {
+            //calling this method will force the static constructor to be invoked
         }
 
         public static void Save()
         {
 			try
 			{
-                var data = JsonConvert.SerializeObject(Chords.ToArray());
+                var data = JsonConvert.SerializeObject(Chords.Where(i => i.Value.Any()));
 
                 CreateDirectoryForFilePath(FilePath);
                 File.WriteAllText(FilePath, data);
