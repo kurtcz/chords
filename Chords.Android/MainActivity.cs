@@ -50,7 +50,7 @@ namespace Chords.Android
             // Use subclassed WebViewClient to intercept hybrid native calls
             var viewClient = new HybridWebViewClient();
             _webView.SetWebViewClient(viewClient);
-
+            _webView.LongClick += (object sender, View.LongClickEventArgs e) => { e.Handled = true; };
             if (_soundPool == null)
             {
                 _soundPool = new SoundPool(6, Stream.Music, 0);
@@ -421,6 +421,11 @@ namespace Chords.Android
 				// Load the rendered HTML into the view with a base URL 
 				// that points to the root of the bundled Assets folder
 				webView.LoadDataWithBaseURL("file:///android_asset/", page, "text/html", "UTF-8", null);
+            }
+
+            public bool LongClick(View v)
+            {
+                return true;
             }
 		}
     }
