@@ -51,6 +51,7 @@ namespace Chords.Android
             var viewClient = new HybridWebViewClient();
             _webView.SetWebViewClient(viewClient);
             _webView.LongClick += (object sender, View.LongClickEventArgs e) => { e.Handled = true; };
+
             if (_soundPool == null)
             {
                 _soundPool = new SoundPool(6, Stream.Music, 0);
@@ -78,6 +79,20 @@ namespace Chords.Android
 
             _bundle = new Bundle();
             _webView.SaveState(_bundle);
+        }
+
+        public override bool OnKeyDown(Keycode keyCode, KeyEvent e)
+        {
+            if (e.Action == KeyEventActions.Down &&
+                keyCode == Keycode.Back &&
+                _webView.CanGoBack())
+            {
+                _webView.GoBack();
+
+                return true;
+            }
+
+            return base.OnKeyDown(keyCode, e);
         }
 
         private class HybridWebViewClient : WebViewClient

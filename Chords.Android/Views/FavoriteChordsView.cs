@@ -366,7 +366,7 @@ WriteLiteral(@">
             }
             $(function(){
 			    $('.ui-loader').hide();
-                $.event.special.tap.tapholdThreshold = 500;
+                $.event.special.tap.tapholdThreshold = 300;
                 $.event.special.tap.emitTapOnTaphold = false;
                 $('.chord-layout').bind('taphold', function(){				    
 				    var root = $(this).attr('data-root');
