@@ -10,7 +10,9 @@ namespace Chords.Android.Models
     {
         public Note Root { get; set; }
         public ChordType ChordType { get; set; }
-        public readonly Dictionary<string, string> ChordTypeList = Enum.GetValues(typeof(ChordType))
+		public Note[] AllRoots { get; set; }
+		public ChordType[] AllChordTypes { get; set; }
+		public readonly Dictionary<string, string> ChordTypeList = Enum.GetValues(typeof(ChordType))
 												                       .Cast<ChordType>()
 												                       .Select(i => new
 												                       {

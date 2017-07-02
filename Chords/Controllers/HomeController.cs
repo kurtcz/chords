@@ -123,20 +123,20 @@ namespace Chords.Controllers
             var notes = tokens.Select(i => Note.TryParse(i, conv, out note) ? note : null)
                               .Where(i => i != null)
                               .ToArray();
-            var chord = Chord.Find(notes, strict);
+            var chords = Chord.Find(notes, strict);
 
-			if (chord == null)
+			if (!chords.Any())
 			{
                 return StatusCode(StatusCodes.Status404NotFound, "No chord found");
 			}
 			
-            var chordDecorator = chord != null ? new ChordDecorator(chord, conv) : null;
+            var chordDecorator = chords[0] != null ? new ChordDecorator(chords[0], conv) : null;
 
             ViewData["sequence"] = sequence;
 			ViewData["parameters"] = new ShowChordParams
 			{
-                root = chord.Root.ToString(conv),
-                @type = chord.ChordType.ToDescription(),
+                root = chords[0].Root.ToString(conv),
+                @type = chords[0].ChordType.ToDescription(),
                 @partial = true,
                 conv = conv
 			};

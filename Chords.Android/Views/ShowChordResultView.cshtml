@@ -1,8 +1,11 @@
-﻿@inherits PortableRazor.ViewBase
+﻿@using PortableRazor.Web.Mvc
+@inherits PortableRazor.ViewBase
 @model Chords.Android.Models.ShowChordResultModel
 @{
     var symbol = Model?.ChordDecorator?.Symbols[0];
     var otherSymbols = Model.ChordDecorator != null ? Model.ChordDecorator.Symbols.Skip(1) : new string[0];
+    var allRoots = Model.Parameters["roots"]?.Split(',');
+    var allChordTypes = Model.Parameters["types"]?.Split(',');
 }
 <!DOCTYPE html>
 <html>
@@ -20,13 +23,13 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <span class="navbar-brand">Show Chord</span>
+                <span class="navbar-brand">Show chord chart</span>
             </div>
                 
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="hybrid:ShowChord?conv=@Model.Parameters["conv"]">Show chord</a></li>
-                    <li><a href="hybrid:FindChord?conv=@Model.Parameters["conv"]">Find chord</a></li>
+                    <li><a href="hybrid:ShowChord?conv=@Model.Parameters["conv"]">Show chord chart</a></li>
+                    <li><a href="hybrid:FindChord?conv=@Model.Parameters["conv"]">Find chord name</a></li>
 					<li><a href="hybrid:Circle?conv=@Model.Parameters["conv"]">Circle of fifths</a></li>
 					<li><a href="hybrid:FavoriteChords?conv=@Model.Parameters["conv"]">Favourite chords</a></li>
                 </ul>
@@ -38,6 +41,15 @@
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 main-content">
 
 		<!-- Main content start -->
+		@if (allRoots!= null && allRoots.Length > 1)
+		{
+			@(new HtmlString("<h4 style=\"float: right;\">Chords found:\n"))
+			for(var i = 0; i < allRoots.Length; i++)
+			{
+                <a href="hybrid:ShowChord?root=@(allRoots[i])&type=@(allChordTypes[i])&roots=@(Model.Parameters["roots"])&types=@(Model.Parameters["types"])&partial=@(Model.Parameters["partial"])&special=@(Model.Parameters["special"])&conv=@(Model.Parameters["conv"])">@(allRoots[i])@(allChordTypes[i])</a>
+			}
+            @(new HtmlString("\n</h4>\n"))
+		}
         @if (Model.ChordDecorator != null)
 		{
 		    <h2>@symbol</h2>
@@ -78,6 +90,8 @@
 	                    data: {
 	                        root: '@Model.Parameters["root"]',
 	                        type: '@Model.Parameters["type"]',
+                            roots: '@Model.Parameters["roots"]',
+                            types: '@Model.Parameters["types"]',
 	                        partial: '@Model.Parameters["partial"]',
 	                        special: '@Model.Parameters["special"]',
 	                        conv: '@Model.Parameters["conv"]'

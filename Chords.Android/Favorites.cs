@@ -37,17 +37,10 @@ namespace Chords.Android
 
         public static void Save()
         {
-			try
-			{
-                var data = JsonConvert.SerializeObject(Chords.Where(i => i.Value.Any()));
+            var data = JsonConvert.SerializeObject(Chords.Where(i => i.Value.Any()));
 
-                CreateDirectoryForFilePath(FilePath);
-                File.WriteAllText(FilePath, data);
-			}
-			catch (Exception e)
-			{
-				System.Diagnostics.Debug.WriteLine(string.Format("Cannot save favorites\n{0}", e.Message));
-			}
+            CreateDirectoryForFilePath(FilePath);
+            File.WriteAllText(FilePath, data);
         }
 
 		private static void CreateDirectoryForFilePath(string path)

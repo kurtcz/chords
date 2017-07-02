@@ -8,7 +8,9 @@ namespace Chords.Android.Models
     {
 		public string Root { get; set; }
 		public string ChordType { get; set; }
-		public bool Partial { get; set; }
+        public string[] AllRoots { get; set; }
+        public string[] AllChordTypes { get; set; }
+        public bool Partial { get; set; }
 		public bool Special { get; set; }
         public bool Strict { get; set; }
 		public NamingConvention NamingConvention { get; set; }
@@ -49,6 +51,8 @@ namespace Chords.Android.Models
 			Strict = strict;
 			Root = parameters["root"];
             ChordType = parameters["type"];
+            AllRoots = parameters["roots"]?.Split(',') ?? new string[0];
+            AllChordTypes = parameters["types"]?.Split(',') ?? new string[0];
 		}
 	}
 }

@@ -16,6 +16,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
+#line 1 "ShowChordResultView.cshtml"
+using PortableRazor.Web.Mvc;
+
+#line default
+#line hidden
+
 
 [System.CodeDom.Compiler.GeneratedCodeAttribute("RazorTemplatePreprocessor", "2.6.0.0")]
 public partial class ShowChordResultView : PortableRazor.ViewBase
@@ -23,7 +29,7 @@ public partial class ShowChordResultView : PortableRazor.ViewBase
 
 #line hidden
 
-#line 2 "ShowChordResultView.cshtml"
+#line 3 "ShowChordResultView.cshtml"
 public Chords.Android.Models.ShowChordResultModel Model { get; set; }
 
 #line default
@@ -33,10 +39,12 @@ public Chords.Android.Models.ShowChordResultModel Model { get; set; }
 public override void Execute()
 {
 
-#line 3 "ShowChordResultView.cshtml"
+#line 4 "ShowChordResultView.cshtml"
   
     var symbol = Model?.ChordDecorator?.Symbols[0];
     var otherSymbols = Model.ChordDecorator != null ? Model.ChordDecorator.Symbols.Skip(1) : new string[0];
+    var allRoots = Model.Parameters["roots"]?.Split(',');
+    var allChordTypes = Model.Parameters["types"]?.Split(',');
 
 
 #line default
@@ -95,7 +103,7 @@ WriteLiteral("></span>\n                </button>\n                <span");
 
 WriteLiteral(" class=\"navbar-brand\"");
 
-WriteLiteral(">Show Chord</span>\n            </div>\n                \n            <div");
+WriteLiteral(">Show chord chart</span>\n            </div>\n                \n            <div");
 
 WriteLiteral(" class=\"navbar-collapse collapse\"");
 
@@ -108,31 +116,31 @@ WriteLiteral(">\n                    <li><a");
 WriteAttribute ("href", " href=\"", "\""
 , Tuple.Create<string,object,bool> ("", "hybrid:ShowChord?conv=", true)
 
-#line 28 "ShowChordResultView.cshtml"
+#line 31 "ShowChordResultView.cshtml"
                 , Tuple.Create<string,object,bool> ("", Model.Parameters["conv"]
 
 #line default
 #line hidden
 , false)
 );
-WriteLiteral(">Show chord</a></li>\n                    <li><a");
+WriteLiteral(">Show chord chart</a></li>\n                    <li><a");
 
 WriteAttribute ("href", " href=\"", "\""
 , Tuple.Create<string,object,bool> ("", "hybrid:FindChord?conv=", true)
 
-#line 29 "ShowChordResultView.cshtml"
+#line 32 "ShowChordResultView.cshtml"
                 , Tuple.Create<string,object,bool> ("", Model.Parameters["conv"]
 
 #line default
 #line hidden
 , false)
 );
-WriteLiteral(">Find chord</a></li>\n\t\t\t\t\t<li><a");
+WriteLiteral(">Find chord name</a></li>\n\t\t\t\t\t<li><a");
 
 WriteAttribute ("href", " href=\"", "\""
 , Tuple.Create<string,object,bool> ("", "hybrid:Circle?conv=", true)
 
-#line 30 "ShowChordResultView.cshtml"
+#line 33 "ShowChordResultView.cshtml"
              , Tuple.Create<string,object,bool> ("", Model.Parameters["conv"]
 
 #line default
@@ -144,7 +152,7 @@ WriteLiteral(">Circle of fifths</a></li>\n\t\t\t\t\t<li><a");
 WriteAttribute ("href", " href=\"", "\""
 , Tuple.Create<string,object,bool> ("", "hybrid:FavoriteChords?conv=", true)
 
-#line 31 "ShowChordResultView.cshtml"
+#line 34 "ShowChordResultView.cshtml"
                      , Tuple.Create<string,object,bool> ("", Model.Parameters["conv"]
 
 #line default
@@ -167,13 +175,139 @@ WriteLiteral(" class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 main-content\"");
 WriteLiteral(">\n\n\t\t<!-- Main content start -->\n");
 
 
-#line 41 "ShowChordResultView.cshtml"
-        
+#line 44 "ShowChordResultView.cshtml"
+		
 
 #line default
 #line hidden
 
-#line 41 "ShowChordResultView.cshtml"
+#line 44 "ShowChordResultView.cshtml"
+         if (allRoots!= null && allRoots.Length > 1)
+		{
+			
+
+#line default
+#line hidden
+
+#line 46 "ShowChordResultView.cshtml"
+        Write(new HtmlString("<h4 style=\"float: right;\">Chords found:\n"));
+
+
+#line default
+#line hidden
+
+#line 46 "ShowChordResultView.cshtml"
+                                                                            
+			for(var i = 0; i < allRoots.Length; i++)
+			{
+
+
+#line default
+#line hidden
+WriteLiteral("                <a");
+
+WriteAttribute ("href", " href=\"", "\""
+, Tuple.Create<string,object,bool> ("", "hybrid:ShowChord?root=", true)
+
+#line 49 "ShowChordResultView.cshtml"
+         , Tuple.Create<string,object,bool> ("", allRoots[i]
+
+#line default
+#line hidden
+, false)
+, Tuple.Create<string,object,bool> ("", "&type=", true)
+
+#line 49 "ShowChordResultView.cshtml"
+                             , Tuple.Create<string,object,bool> ("", allChordTypes[i]
+
+#line default
+#line hidden
+, false)
+, Tuple.Create<string,object,bool> ("", "&roots=", true)
+
+#line 49 "ShowChordResultView.cshtml"
+                                                       , Tuple.Create<string,object,bool> ("", Model.Parameters["roots"]
+
+#line default
+#line hidden
+, false)
+, Tuple.Create<string,object,bool> ("", "&types=", true)
+
+#line 49 "ShowChordResultView.cshtml"
+                                                                                          , Tuple.Create<string,object,bool> ("", Model.Parameters["types"]
+
+#line default
+#line hidden
+, false)
+, Tuple.Create<string,object,bool> ("", "&partial=", true)
+
+#line 49 "ShowChordResultView.cshtml"
+                                                                                                                               , Tuple.Create<string,object,bool> ("", Model.Parameters["partial"]
+
+#line default
+#line hidden
+, false)
+, Tuple.Create<string,object,bool> ("", "&special=", true)
+
+#line 49 "ShowChordResultView.cshtml"
+                                                                                                                                                                      , Tuple.Create<string,object,bool> ("", Model.Parameters["special"]
+
+#line default
+#line hidden
+, false)
+, Tuple.Create<string,object,bool> ("", "&conv=", true)
+
+#line 49 "ShowChordResultView.cshtml"
+                                                                                                                                                                                                          , Tuple.Create<string,object,bool> ("", Model.Parameters["conv"]
+
+#line default
+#line hidden
+, false)
+);
+WriteLiteral(">");
+
+
+#line 49 "ShowChordResultView.cshtml"
+                                                                                                                                                                                                                                                                         Write(allRoots[i]);
+
+
+#line default
+#line hidden
+
+#line 49 "ShowChordResultView.cshtml"
+                                                                                                                                                                                                                                                                                       Write(allChordTypes[i]);
+
+
+#line default
+#line hidden
+WriteLiteral("</a>\n");
+
+
+#line 50 "ShowChordResultView.cshtml"
+			}
+            
+
+#line default
+#line hidden
+
+#line 51 "ShowChordResultView.cshtml"
+        Write(new HtmlString("\n</h4>\n"));
+
+
+#line default
+#line hidden
+
+#line 51 "ShowChordResultView.cshtml"
+                                          
+		}
+
+
+#line default
+#line hidden
+WriteLiteral("        ");
+
+
+#line 53 "ShowChordResultView.cshtml"
          if (Model.ChordDecorator != null)
 		{
 
@@ -183,7 +317,7 @@ WriteLiteral(">\n\n\t\t<!-- Main content start -->\n");
 WriteLiteral("\t\t    <h2>");
 
 
-#line 43 "ShowChordResultView.cshtml"
+#line 55 "ShowChordResultView.cshtml"
            Write(symbol);
 
 
@@ -192,7 +326,7 @@ WriteLiteral("\t\t    <h2>");
 WriteLiteral("</h2>\n");
 
 
-#line 44 "ShowChordResultView.cshtml"
+#line 56 "ShowChordResultView.cshtml"
 
 			if (otherSymbols.Any())
 			{
@@ -203,7 +337,7 @@ WriteLiteral("</h2>\n");
 WriteLiteral("\t\t\t    <h4>Other symbols:</h4>\n");
 
 
-#line 48 "ShowChordResultView.cshtml"
+#line 60 "ShowChordResultView.cshtml"
 			    foreach(var otherSymbol in otherSymbols)
 			    {
 
@@ -213,7 +347,7 @@ WriteLiteral("\t\t\t    <h4>Other symbols:</h4>\n");
 WriteLiteral("\t\t\t        <span>");
 
 
-#line 50 "ShowChordResultView.cshtml"
+#line 62 "ShowChordResultView.cshtml"
                      Write(otherSymbol);
 
 
@@ -222,7 +356,7 @@ WriteLiteral("\t\t\t        <span>");
 WriteLiteral("</span>\n");
 
 
-#line 51 "ShowChordResultView.cshtml"
+#line 63 "ShowChordResultView.cshtml"
 			    }
 			}
 
@@ -234,13 +368,13 @@ WriteLiteral("\t\t\t<h4>Chord intervals:</h4>\n");
 WriteLiteral("\t\t\t<p>\n");
 
 
-#line 55 "ShowChordResultView.cshtml"
+#line 67 "ShowChordResultView.cshtml"
 			
 
 #line default
 #line hidden
 
-#line 55 "ShowChordResultView.cshtml"
+#line 67 "ShowChordResultView.cshtml"
              foreach(var interval in Model.ChordDecorator.Intervals)
 			{
 
@@ -250,7 +384,7 @@ WriteLiteral("\t\t\t<p>\n");
 WriteLiteral("\t\t\t    <span>");
 
 
-#line 57 "ShowChordResultView.cshtml"
+#line 69 "ShowChordResultView.cshtml"
                  Write(interval);
 
 
@@ -259,7 +393,7 @@ WriteLiteral("\t\t\t    <span>");
 WriteLiteral("</span>\n");
 
 
-#line 58 "ShowChordResultView.cshtml"
+#line 70 "ShowChordResultView.cshtml"
 			}
 
 
@@ -268,7 +402,7 @@ WriteLiteral("</span>\n");
 WriteLiteral("\t\t\t</p>\n");
 
 
-#line 60 "ShowChordResultView.cshtml"
+#line 72 "ShowChordResultView.cshtml"
 
 
 
@@ -279,13 +413,13 @@ WriteLiteral("\t\t\t<h4>Chord notes:</h4>\n");
 WriteLiteral("\t\t\t<p>\n");
 
 
-#line 63 "ShowChordResultView.cshtml"
+#line 75 "ShowChordResultView.cshtml"
 			
 
 #line default
 #line hidden
 
-#line 63 "ShowChordResultView.cshtml"
+#line 75 "ShowChordResultView.cshtml"
              foreach(var note in Model.ChordDecorator.Notes)
 			{
 
@@ -295,7 +429,7 @@ WriteLiteral("\t\t\t<p>\n");
 WriteLiteral("\t\t\t    <span>");
 
 
-#line 65 "ShowChordResultView.cshtml"
+#line 77 "ShowChordResultView.cshtml"
                  Write(note);
 
 
@@ -304,7 +438,7 @@ WriteLiteral("\t\t\t    <span>");
 WriteLiteral("</span>\n");
 
 
-#line 66 "ShowChordResultView.cshtml"
+#line 78 "ShowChordResultView.cshtml"
 			}
 
 
@@ -313,7 +447,7 @@ WriteLiteral("</span>\n");
 WriteLiteral("\t\t\t</p>\n");
 
 
-#line 68 "ShowChordResultView.cshtml"
+#line 80 "ShowChordResultView.cshtml"
 		}
 
 
@@ -328,7 +462,7 @@ WriteLiteral(" class=\"error\"");
 WriteLiteral(">");
 
 
-#line 69 "ShowChordResultView.cshtml"
+#line 81 "ShowChordResultView.cshtml"
                                  Write(Model.Error);
 
 
@@ -337,13 +471,13 @@ WriteLiteral(">");
 WriteLiteral("</div>\n");
 
 
-#line 70 "ShowChordResultView.cshtml"
+#line 82 "ShowChordResultView.cshtml"
         
 
 #line default
 #line hidden
 
-#line 70 "ShowChordResultView.cshtml"
+#line 82 "ShowChordResultView.cshtml"
          if (string.IsNullOrEmpty(Model.Error))
 		{
 
@@ -361,7 +495,7 @@ WriteLiteral("\t\t\t<script>\n\t\t\t\t$(document).ready(function (){\n\t        
 "                    data: {\n\t                        root: \'");
 
 
-#line 79 "ShowChordResultView.cshtml"
+#line 91 "ShowChordResultView.cshtml"
                               Write(Model.Parameters["root"]);
 
 
@@ -370,8 +504,26 @@ WriteLiteral("\t\t\t<script>\n\t\t\t\t$(document).ready(function (){\n\t        
 WriteLiteral("\',\n\t                        type: \'");
 
 
-#line 80 "ShowChordResultView.cshtml"
+#line 92 "ShowChordResultView.cshtml"
                               Write(Model.Parameters["type"]);
+
+
+#line default
+#line hidden
+WriteLiteral("\',\n                            roots: \'");
+
+
+#line 93 "ShowChordResultView.cshtml"
+                               Write(Model.Parameters["roots"]);
+
+
+#line default
+#line hidden
+WriteLiteral("\',\n                            types: \'");
+
+
+#line 94 "ShowChordResultView.cshtml"
+                               Write(Model.Parameters["types"]);
 
 
 #line default
@@ -379,7 +531,7 @@ WriteLiteral("\',\n\t                        type: \'");
 WriteLiteral("\',\n\t                        partial: \'");
 
 
-#line 81 "ShowChordResultView.cshtml"
+#line 95 "ShowChordResultView.cshtml"
                                  Write(Model.Parameters["partial"]);
 
 
@@ -388,7 +540,7 @@ WriteLiteral("\',\n\t                        partial: \'");
 WriteLiteral("\',\n\t                        special: \'");
 
 
-#line 82 "ShowChordResultView.cshtml"
+#line 96 "ShowChordResultView.cshtml"
                                  Write(Model.Parameters["special"]);
 
 
@@ -397,7 +549,7 @@ WriteLiteral("\',\n\t                        special: \'");
 WriteLiteral("\',\n\t                        conv: \'");
 
 
-#line 83 "ShowChordResultView.cshtml"
+#line 97 "ShowChordResultView.cshtml"
                               Write(Model.Parameters["conv"]);
 
 
@@ -406,7 +558,7 @@ WriteLiteral("\',\n\t                        conv: \'");
 WriteLiteral("\'\n\t                    }\n\t\t\t\t\t});\n\t\t\t\t});\n\t\t\t</script>\n");
 
 
-#line 88 "ShowChordResultView.cshtml"
+#line 102 "ShowChordResultView.cshtml"
 		}
 
 

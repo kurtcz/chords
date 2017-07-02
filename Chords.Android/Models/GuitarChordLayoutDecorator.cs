@@ -21,7 +21,8 @@ namespace Chords.Android.Models
 		public int Fret => _layout.Fret;
 		public bool Complete => _layout.Complete;
 		public int RenderingFret { get; }
-        public bool Favorite => Favorites.Chords.Keys.Any(i => Favorites.Chords[i].Contains(_layout));
+        public bool Favorite => Favorites.Chords.ContainsKey(_layout.Chord) &&
+                                Favorites.Chords[_layout.Chord].Contains(_layout);
 
 		public GuitarChordLayoutDecorator(GuitarChordLayout layout, NamingConvention namingConvention = NamingConvention.English)
 		{

@@ -34,8 +34,10 @@ namespace Chords.Core.Models
 										 .ToArray();
 		}
 
-		public static Chord Find(Note[] notes, bool strict)
+		public static Chord[] Find(Note[] notes, bool strict)
 		{
+            var results = new List<Chord>();
+
             foreach(var note in notes)
             {
                 foreach(var chordType in Enum.GetValues(typeof(ChordType)).Cast<ChordType>())
@@ -46,12 +48,13 @@ namespace Chords.Core.Models
                         chord.Notes.All(i => notes.Any(j => i == j ||
                                                             (!strict && Note.Normalize(i) == Note.Normalize(j)))))
                     {
-                        return chord;
+                        results.Add(chord);
                     }
                 }
             }
 
-            return null;
+            return results.OrderBy(i => i.ChordType)
+                          .ToArray();
 		}
 
 		public static bool TryParse(string str, NamingConvention conv, out Chord chord)

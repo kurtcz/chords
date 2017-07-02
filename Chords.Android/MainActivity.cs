@@ -62,6 +62,23 @@ namespace Chords.Android
                 _soundIds[3] = _soundPool.Load(Application, Resource.Raw.G3, 1);
                 _soundIds[4] = _soundPool.Load(Application, Resource.Raw.B2, 1);
                 _soundIds[5] = _soundPool.Load(Application, Resource.Raw.E1, 1);
+                //Task.Run(() =>
+                //{
+				//	//var chords = new []{ "G7", "D7", "E7b9", "D7", "G#7", "G7" };
+				//	//var lengths = new[] { 500, 300, 100, 200, 800, 400 };
+				//	var chords = new []{ "A#7", "A7" };
+				//	var lengths = new[] { 500, 400 };
+				//	var parameters = new NameValueCollection();
+
+				//	for (var i = 0; i < chords.Length; i++)
+                //    {
+                //        Thread.Sleep(lengths[i]);
+                //        parameters.Clear();
+                //        parameters.Add("id", chords[i]);
+                //        parameters.Add("volume", "0.2");
+                //        viewClient.PlayChord(_webView, parameters);
+                //    }
+                //});
             }
             if (_bundle == null)
             {
@@ -99,12 +116,14 @@ namespace Chords.Android
         {
 			public override void OnReceivedError(WebView view, IWebResourceRequest request, WebResourceError error)
             {
-                //Hack to handle $.ajax('hybrid:xxx'); calls that are failing with ERR_UNKNOWN_URL_SCHEME
+				//Hack to handle $.ajax('hybrid:xxx'); calls that are failing with ERR_UNKNOWN_URL_SCHEME
+                //Alternatively we could also override ShouldInterceptRequest()
 				var scheme = "hybrid:";
                 var url = request.Url.ToString();
 
                 if (url.StartsWith(scheme))
                 {
+                    //fetch the page in the background thread as this is an ajax call so we do not want to block the webview
                     Task.Run(() => ShouldOverrideUrlLoading(view, url));
                 }
                 else
@@ -119,7 +138,9 @@ namespace Chords.Android
                 var scheme = "hybrid:";
 
                 if (!url.StartsWith(scheme))
+                {
                     return false;
+                }
 
                 // This handler will treat everything between the protocol and "?"
                 // as the method name.  The querystring has all of the parameters.
@@ -168,12 +189,21 @@ namespace Chords.Android
 
             private Note _currentRoot;
             private ChordType _currentChordType;
+			private Note[] _currentRoots;
+			private ChordType[] _currentChordTypes;
 
-            public void ShowChord(WebView webView, NameValueCollection parameters)
+			public void ShowChord(WebView webView, NameValueCollection parameters)
             {
 				string page;
 				var showChordParams = new ChordParams(parameters);
-                var model = new ShowChordModel { Root = _currentRoot, ChordType = _currentChordType, conv = showChordParams.NamingConvention };
+                var model = new ShowChordModel
+                {
+                    Root = _currentRoot,
+                    ChordType = _currentChordType, 
+                    AllRoots = _currentRoots,
+                    AllChordTypes = _currentChordTypes,
+                    conv = showChordParams.NamingConvention
+                };
                 var resultModel = new ShowChordResultModel
                 {
                     Parameters = parameters
@@ -193,6 +223,7 @@ namespace Chords.Android
                         _currentRoot = chord.Root;
                         _currentChordType = chord.ChordType;
 						resultModel.ChordDecorator = new ChordDecorator(chord, showChordParams.NamingConvention);
+                        resultModel.Parameters = parameters;
 					}
 					var template = new ShowChordResultView { Model = resultModel };
 					
@@ -271,14 +302,21 @@ namespace Chords.Android
 									  .Where(i => i != null)
 									  .ToArray();
 					}
-                    var chord = Chord.Find(notes, chordParams.Strict);
+                    var chords = Chord.Find(notes, chordParams.Strict);
 
-                    if (chord != null)
+                    if (chords.Length > 0)
                     {
+                        var chord = chords.First();
+
                         parameters.Add("root", chord.Root.ToString(chordParams.NamingConvention));
-                        parameters.Add("type", chord.ChordType.ToDescription());
-                        parameters.Add("partial", "true");
-                        ShowChord(webView, parameters);
+						parameters.Add("type", chord.ChordType.ToDescription());
+                        if (chords.Length > 1)
+                        {
+                            parameters.Add("roots", string.Join(",", chords.Select(i => i.Root.ToString(chordParams.NamingConvention))));
+                            parameters.Add("types", string.Join(",", chords.Select(i => i.ChordType.ToDescription())));
+                        }
+						parameters.Add("partial", "true");
+						ShowChord(webView, parameters);
                         return;
                     }
 					var model = new FindChordModel
@@ -303,7 +341,12 @@ namespace Chords.Android
             {
                 var chordParams = new ChordParams(parameters);
                 var id = parameters["id"];
+                float volume;
 
+                if (!float.TryParse(parameters["volume"], out volume))
+                {
+                    volume = 1f;
+                }
                 if (!string.IsNullOrEmpty(id))
                 {
                     Chord chord;
@@ -325,7 +368,7 @@ namespace Chords.Android
                         }
                         var playRate = Note.HalfStepsToPlayRate(pos);
 
-                        _soundPool.Play(_soundIds[1], 1, 1, 0, 0, playRate);
+                        _soundPool.Play(_soundIds[1], volume, volume, 0, 0, playRate);
                         Thread.Sleep(50);
                     }
                     return;
@@ -346,7 +389,7 @@ namespace Chords.Android
 						{
                             var playRate = Note.HalfStepsToPlayRate(halfSteps);
 
-							_soundPool.Play(_soundIds[i], 1, 1, 0, 0, playRate);
+							_soundPool.Play(_soundIds[i], volume, volume, 0, 0, playRate);
                             if (n == 0)
                             {
 								Thread.Sleep(200);
@@ -383,16 +426,23 @@ namespace Chords.Android
                 {
                     return;
                 }
-                var layout = new GuitarChordLayout(chord, positions);
-                if (!Favorites.Chords.ContainsKey(chord))
+                try
                 {
-                    Favorites.Chords.Add(chord, new HashSet<GuitarChordLayout>());
-                }
-                Favorites.Chords[chord].Add(layout);
-                Favorites.Save();
+					var layout = new GuitarChordLayout(chord, positions);
+					if (!Favorites.Chords.ContainsKey(chord))
+					{
+						Favorites.Chords.Add(chord, new HashSet<GuitarChordLayout>());
+					}
+					Favorites.Chords[chord].Add(layout);
+					Favorites.Save();
 
-                var js = string.Format("setFavorite('.chord-layout[data-positions=\"{0}\"]', '{1}');", parameters["positions"], true);
-                webView.LoadUrl("javascript:" + js);
+					var js = string.Format("setFavorite('.chord-layout[data-positions=\"{0}\"]', '{1}');", parameters["positions"], true);
+					webView.LoadUrl("javascript:" + js);
+				}
+                catch(Exception e)
+                {
+                    System.Diagnostics.Debug.WriteLine($"Cannot save favorites\n{e.Message}");
+                }
 			}
 
             public void RemoveFromFavorites(WebView webView, NameValueCollection parameters)
@@ -407,16 +457,23 @@ namespace Chords.Android
 				{
 					return;
 				}
-				var layout = new GuitarChordLayout(chord, positions);
 				if (!Favorites.Chords.ContainsKey(chord))
 				{
-                    return;
+					return;
 				}
-                Favorites.Chords[chord].Remove(layout);
-                Favorites.Save();
+                try
+                {
+                    var layout = new GuitarChordLayout(chord, positions);
+                    Favorites.Chords[chord].Remove(layout);
+                    Favorites.Save();
 
-                var js = string.Format("setFavorite('.chord-layout[data-positions=\"{0}\"]', '{1}');", parameters["positions"], false);
-				webView.LoadUrl("javascript:" + js);
+                    var js = string.Format("setFavorite('.chord-layout[data-positions=\"{0}\"]', '{1}');", parameters["positions"], false);
+                    webView.LoadUrl("javascript:" + js);
+                }
+				catch (Exception e)
+				{
+					System.Diagnostics.Debug.WriteLine($"Cannot save favorites\n{e.Message}");
+				}
 			}
 
             public void FavoriteChords(WebView webView, NameValueCollection parameters)

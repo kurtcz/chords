@@ -124,7 +124,7 @@ WriteAttribute ("href", " href=\"", "\""
 #line hidden
 , false)
 );
-WriteLiteral(">Show chord</a></li>\n                    <li><a");
+WriteLiteral(">Show chord chart</a></li>\n                    <li><a");
 
 WriteAttribute ("href", " href=\"", "\""
 , Tuple.Create<string,object,bool> ("", "hybrid:FindChord?conv=", true)
@@ -136,7 +136,7 @@ WriteAttribute ("href", " href=\"", "\""
 #line hidden
 , false)
 );
-WriteLiteral(">Find chord</a></li>\n                    <li><a");
+WriteLiteral(">Find chord name</a></li>\n                    <li><a");
 
 WriteAttribute ("href", " href=\"", "\""
 , Tuple.Create<string,object,bool> ("", "hybrid:Circle?conv=", true)
