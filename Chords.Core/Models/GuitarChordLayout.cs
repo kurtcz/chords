@@ -1,4 +1,6 @@
-﻿#define TESTING
+﻿#if DEBUG
+//﻿#define TESTING
+#endif
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
@@ -20,8 +22,14 @@ namespace Chords.Core.Models
             new Note(Tone.B),
             new Note(Tone.E)
         };
+        private static readonly Note[][] _stringNotes =
+            Enumerable.Range(0, 6)
+                      .Select(s => Enumerable.Range(0, 15)
+                                             .Select(i => _strings[s].NoteAtChromaticDistance(i))
+                                             .ToArray())
+                      .ToArray();
 
-        public Chord Chord { get; private set; }
+		public Chord Chord { get; private set; }
 		public int[] Positions { get; private set; } = new int[6];
         public GuitarChordType GuitarChordType { get; private set; }
         [JsonIgnore]
@@ -95,16 +103,15 @@ namespace Chords.Core.Models
                     {
                         GuitarChordType = guitarChordType
                     };
-
-                    if (result.IsValid(allowPartial))
+                    var b = result.IsValid(allowPartial);
+                    if (b)
                     {
                         results.Add(result);
                     }
                 }
+			}
 #if !TESTING
-            });
-#else
-            }
+            );
 #endif
 
             return results.Distinct();
@@ -117,6 +124,7 @@ namespace Chords.Core.Models
 
         private static IEnumerable<int[]> GetPositionsForStrings(HashSet<int>[] positionsPerString, int s)
         {
+            
             if (s == positionsPerString.Length - 1)
             {
                 foreach (var pos in positionsPerString[s])
@@ -124,7 +132,6 @@ namespace Chords.Core.Models
 					var positions = Enumerable.Repeat(X, 6).ToArray();
 
                     positions[s] = pos;
-
                     yield return positions;
                 }
                 yield break;
@@ -139,15 +146,23 @@ namespace Chords.Core.Models
 
                     pos0.CopyTo(positions, 0);
                     positions[s] = pos;
-
-                    yield return positions;
+                    if (s == 0 && positions[0] == -1 && positions[1] == 3 && positions[2] == 2 && positions[3] == 3 && positions[4] == 1 && positions[5] == 0)
+                    {
+                        s = s + 1 - 1;
+                    }
+                    //TODO: implement 1st 3 checks from IsValid() here
+                    if ((pos == X && (s == 0 || positions[s + 1] != X)) ||
+                        (pos != X && (positions[s + 1] == X || _stringNotes[s+1][positions[s + 1]] != _stringNotes[s][positions[s]])))
+                    {
+                        yield return positions;
+                    }
                 }
             }
 		}
 
         private Note[] GetUsedNotes()
         {
-			var notesUsed = new List<Note>();
+            var notesUsed = new List<Note>(6);
 
 			for (var s = 0; s < 6; s++)
 			{
@@ -155,12 +170,12 @@ namespace Chords.Core.Models
 				{
 					continue;
 				}
-                var note = _strings[s].NoteAtChromaticDistance(Positions[s]);
-                var noteFromChord = Chord.Notes.FirstOrDefault(i => Note.Normalize(i) == note);
+                var note = _stringNotes[s][Positions[s]];
+                var noteIndex = Array.IndexOf(Chord.NormalizedNotes, note);
 
-                if (noteFromChord != null)
+                if (noteIndex >= 0)
 				{
-					notesUsed.Add(noteFromChord);
+					notesUsed.Add(Chord.Notes[noteIndex]);
 				}
 			}
 
@@ -174,9 +189,9 @@ namespace Chords.Core.Models
             if ((!allowPartial && 
                  Chord.Notes.Any(i => !Notes.Contains(i))) ||
                 Chord.Notes.Any(i => !Notes.Contains(i) &&
-                                      !Chord.NonMandatoryNotes.Contains(i)) ||
+                                     !Chord.NonMandatoryNotes.Contains(i)) ||
 				Chord.Notes.Count(i => !Notes.Contains(i) &&
-									    Chord.NonMandatoryNotes.Contains(i)) > 1)
+									   Chord.NonMandatoryNotes.Contains(i)) > 1)
 			{
 				return false;
 			}

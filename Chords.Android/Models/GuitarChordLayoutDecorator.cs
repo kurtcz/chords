@@ -17,7 +17,7 @@ namespace Chords.Android.Models
 		public string[] Positions => _layout.Positions
 											.Select(i => i < 0 ? "X" : i.ToString())
 											.ToArray();
-		public Note[] Notes => _layout.Notes;
+        public Note[] Notes => _layout.Notes.ToArray();
 		public int Fret => _layout.Fret;
 		public bool Complete => _layout.Complete;
 		public int RenderingFret { get; }

@@ -200,14 +200,14 @@ WriteLiteral(">\n\n        <!-- Main content start -->\n");
 #line hidden
 
 #line 48 "ShowChordLayoutsView.cshtml"
-        Write(new HtmlString("<h4 style=\"float: right;\">Chords found:\n"));
+        Write(new HtmlString("<h4 class=\"other-chords\">Chords found:\n"));
 
 
 #line default
 #line hidden
 
 #line 48 "ShowChordLayoutsView.cshtml"
-                                                                            
+                                                                           
             for(var i = 0; i < allRoots.Length; i++)
             {
 

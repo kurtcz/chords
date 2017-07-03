@@ -45,7 +45,7 @@
         <!-- Main content start -->
         @if (allRoots!= null && allRoots.Length > 1)
         {
-            @(new HtmlString("<h4 style=\"float: right;\">Chords found:\n"))
+            @(new HtmlString("<h4 class=\"other-chords\">Chords found:\n"))
             for(var i = 0; i < allRoots.Length; i++)
             {
                 <a href="hybrid:ShowChord?root=@(allRoots[i])&type=@(allChordTypes[i])&roots=@(Model.Parameters["roots"])&types=@(Model.Parameters["types"])&partial=@(Model.Parameters["partial"])&special=@(Model.Parameters["special"])&conv=@(Model.Parameters["conv"])">@(allRoots[i])@(allChordTypes[i])</a>

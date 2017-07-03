@@ -189,8 +189,6 @@ namespace Chords.Android
 
             private Note _currentRoot;
             private ChordType _currentChordType;
-			private Note[] _currentRoots;
-			private ChordType[] _currentChordTypes;
 
 			public void ShowChord(WebView webView, NameValueCollection parameters)
             {
@@ -200,8 +198,6 @@ namespace Chords.Android
                 {
                     Root = _currentRoot,
                     ChordType = _currentChordType, 
-                    AllRoots = _currentRoots,
-                    AllChordTypes = _currentChordTypes,
                     conv = showChordParams.NamingConvention
                 };
                 var resultModel = new ShowChordResultModel

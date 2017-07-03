@@ -15,6 +15,8 @@ namespace Chords.Core.Models
         [JsonIgnore]
 		public Note[] Notes { get; private set; }
         [JsonIgnore]
+        public Note[] NormalizedNotes { get; private set; }
+        [JsonIgnore]
         public Note[] NonMandatoryNotes { get; private set; }
 
 		private Chord()
@@ -29,6 +31,8 @@ namespace Chords.Core.Models
 			Intervals = ChordType.ToIntervals();
 			Notes = Intervals.Select(i => Root.NoteAtInterval(i))
 							 .ToArray();
+            NormalizedNotes = Notes.Select(i => Note.Normalize(i))
+                                   .ToArray();
 			NonMandatoryNotes = ChordType.ToNonMandatoryIntervals()
 										 .Select(i => Root.NoteAtInterval(i))
 										 .ToArray();
