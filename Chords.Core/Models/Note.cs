@@ -9,20 +9,22 @@ namespace Chords.Core.Models
     {
         const int NumberOfTones = 7;
         const int NumberOfHalfTones = 12;
-        private static readonly float[] PitchRates =
+        const float _12thRootOf2 = 1.0594630943592952646f;
+        private static readonly float[] PitchRates =            
 		{
 			1,
-			16/15f,
-			9/8f,
-			6/5f,
-			5/4f,
-			4/3f,
-			45/32f,
-			3/2f,
-			8/5f,
-			5/3f,
-			16/9f,
-			15/8f
+            _12thRootOf2,
+            _12thRootOf2 * _12thRootOf2,
+			_12thRootOf2 * _12thRootOf2 * _12thRootOf2,
+            _12thRootOf2 * _12thRootOf2 * _12thRootOf2 * _12thRootOf2,
+			_12thRootOf2 * _12thRootOf2 * _12thRootOf2 * _12thRootOf2 * _12thRootOf2,
+			_12thRootOf2 * _12thRootOf2 * _12thRootOf2 * _12thRootOf2 * _12thRootOf2 * _12thRootOf2,
+			_12thRootOf2 * _12thRootOf2 * _12thRootOf2 * _12thRootOf2 * _12thRootOf2 * _12thRootOf2 * _12thRootOf2,
+			_12thRootOf2 * _12thRootOf2 * _12thRootOf2 * _12thRootOf2 * _12thRootOf2 * _12thRootOf2 * _12thRootOf2 * _12thRootOf2,
+			_12thRootOf2 * _12thRootOf2 * _12thRootOf2 * _12thRootOf2 * _12thRootOf2 * _12thRootOf2 * _12thRootOf2 * _12thRootOf2 * _12thRootOf2,
+			_12thRootOf2 * _12thRootOf2 * _12thRootOf2 * _12thRootOf2 * _12thRootOf2 * _12thRootOf2 * _12thRootOf2 * _12thRootOf2 * _12thRootOf2 * _12thRootOf2,
+			_12thRootOf2 * _12thRootOf2 * _12thRootOf2 * _12thRootOf2 * _12thRootOf2 * _12thRootOf2 * _12thRootOf2 * _12thRootOf2 * _12thRootOf2 * _12thRootOf2 * _12thRootOf2,
+			2
 		};
 
 		private static readonly Tone[] Tones = Enum.GetValues(typeof(Tone))
