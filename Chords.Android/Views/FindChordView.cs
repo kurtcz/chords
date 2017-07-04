@@ -394,7 +394,7 @@ WriteLiteral(">\n                        <span");
 
 WriteLiteral(" class=\"sr-only\"");
 
-WriteLiteral(">Toggle naming convention</span>\n                        <span");
+WriteLiteral(">Toggle mode</span>\n                        <span");
 
 WriteLiteral(" class=\"icon-bar\"");
 
