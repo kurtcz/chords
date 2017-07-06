@@ -12,12 +12,26 @@ namespace Chords.Android.Models
 		public NamingConvention conv { get; set; }
         public bool Strict { get; set; }
         public string[] SelectedNotes { get; set; }
-		public Dictionary<NamingConvention, string[]> Notes = new Dictionary<NamingConvention, string[]>
-		{
-			{ NamingConvention.English, new [] { "Cb", "C", "C#", "Db", "D", "D#", "Eb", "E", "E#", "Fb", "F", "F#", "Gb", "G", "G#", "Ab", "A", "A#", "Bb", "B" } },
-			{ NamingConvention.German, new [] { "Cb", "C", "C#", "Db", "D", "D#", "Eb", "E", "E#", "Fb", "F", "F#", "Gb", "G", "G#", "Ab", "A", "A#", "B", "H" } },
-			{ NamingConvention.Latin, new [] { "Dob", "Do", "Do#", "Reb", "Re", "Re#", "Mib", "Mi", "Mi#", "Fab", "Fa", "Fa#", "Solb", "Sol", "Sol#", "Lab", "La", "La#", "Sib", "Si" } }
-		};
+        public readonly Note[] Notes =
+        {
+            new Note(Tone.C, Accidental.Flat),
+            new Note(Tone.C),
+            new Note(Tone.C, Accidental.Sharp),
+            new Note(Tone.D, Accidental.Flat),
+            new Note(Tone.D),
+            new Note(Tone.D, Accidental.Sharp),
+            new Note(Tone.E, Accidental.Flat),
+            new Note(Tone.E),
+            new Note(Tone.F),
+            new Note(Tone.F, Accidental.Sharp),
+            new Note(Tone.G, Accidental.Flat),
+            new Note(Tone.G),
+            new Note(Tone.G, Accidental.Sharp),
+            new Note(Tone.A, Accidental.Flat),
+            new Note(Tone.A),
+            new Note(Tone.A, Accidental.Sharp),
+            new Note(Tone.B)
+        };
         public readonly Dictionary<NamingConvention, HtmlString[]> AllNotes =
             Enum.GetValues(typeof(NamingConvention))
                 .Cast<NamingConvention>()

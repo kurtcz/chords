@@ -4,8 +4,8 @@
 @{
     var symbol = Model?.ChordDecorator?.Symbols[0];
     var otherSymbols = Model.ChordDecorator != null ? Model.ChordDecorator.Symbols.Skip(1) : new string[0];
-    var allRoots = Model.Parameters["roots"]?.Split(',');
-    var allChordTypes = Model.Parameters["types"]?.Split(',');
+    var allRoots = Model.AllRoots != null ? string.Join(",", Model.AllRoots.Select(i => i.ToString())) : string.Empty;
+    var allChordTypes = Model.AllChordTypes != null ? string.Join(",", Model.AllChordTypes) : string.Empty;
 }
 <!DOCTYPE html>
 <html>
@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="bootstrap.min.css" />
 </head>
 <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
+    <nav class="navbar navbar-inverse">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -28,10 +28,11 @@
                 
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="hybrid:ShowChord?conv=@Model.Parameters["conv"]">Show chord chart</a></li>
-                    <li><a href="hybrid:FindChord?conv=@Model.Parameters["conv"]">Find chord name</a></li>
-					<li><a href="hybrid:Circle?conv=@Model.Parameters["conv"]">Circle of fifths</a></li>
-					<li><a href="hybrid:FavoriteChords?conv=@Model.Parameters["conv"]">Favourite chords</a></li>
+                    <li><a href="hybrid:ShowChord">Show chord chart</a></li>
+                    <li><a href="hybrid:FindChord">Find chord name</a></li>
+                    <li><a href="hybrid:FavoriteChords">Favourite chords</a></li>
+                    <li><a href="hybrid:Circle">Circle of fifths</a></li>
+                    <li><a href="hybrid:Settings">Settings</a></li>
                 </ul>
             </div>
         </div>
@@ -41,12 +42,12 @@
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 main-content">
 
 		<!-- Main content start -->
-		@if (allRoots!= null && allRoots.Length > 1)
-		{
+		@if (Model.AllRoots!= null && Model.AllRoots.Length > 1)
+		{			
 			@(new HtmlString("<h4 class=\"other-chords\">Chords found:\n"))
-			for(var i = 0; i < allRoots.Length; i++)
+			for(var i = 0; i < Model.AllRoots.Length; i++)
 			{
-                <a href="hybrid:ShowChord?root=@(allRoots[i])&type=@(allChordTypes[i])&roots=@(Model.Parameters["roots"])&types=@(Model.Parameters["types"])&partial=@(Model.Parameters["partial"])&special=@(Model.Parameters["special"])&conv=@(Model.Parameters["conv"])">@(allRoots[i])@(allChordTypes[i])</a>
+                <a href="hybrid:ShowChord?root=@(Model.AllRoots[i])&type=@(Model.AllChordTypes[i])&roots=@(allRoots)&types=@(allChordTypes)&partial=@(Model.AllowPartial)&special=@(Model.AllowSpecial)&conv=@(Model.conv)">@(Model.AllRoots[i].ToString(Model.conv))@(Model.AllChordTypes[i])</a>
 			}
             @(new HtmlString("\n</h4>\n"))
 		}
@@ -88,13 +89,13 @@
 	                    url: 'hybrid:ShowChordLayouts',
 	                    type: 'get',
 	                    data: {
-	                        root: '@Model.Parameters["root"]',
-	                        type: '@Model.Parameters["type"]',
-                            roots: '@Model.Parameters["roots"]',
-                            types: '@Model.Parameters["types"]',
-	                        partial: '@Model.Parameters["partial"]',
-	                        special: '@Model.Parameters["special"]',
-	                        conv: '@Model.Parameters["conv"]'
+	                        root: '@Model.Root',
+	                        type: '@Model.ChordType',
+                            roots: '@allRoots',
+                            types: '@allChordTypes',
+	                        partial: '@Model.AllowPartial',
+	                        special: '@Model.AllowSpecial',
+	                        conv: '@Model.conv'
 	                    }
 					});
 				});

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="bootstrap.min.css" />
+    <link rel="stylesheet" href="bootstrap-toggle.min.css" />       
+</head>
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <span class="navbar-brand">Setings</span>
+            </div>
+                
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="hybrid:ShowChord">Show chord chart</a></li>
+                    <li><a href="hybrid:FindChord">Find chord name</a></li>
+                    <li><a href="hybrid:FavoriteChords">Favourite chords</a></li>
+                    <li><a href="hybrid:Circle">Circle of fifths</a></li>
+                    <li><a href="hybrid:Settings">Settings</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <script src="jquery.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <script src="bootstrap-toggle.min.js"></script>
+    <script src="bootstrap-slider.js"></script>
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 main-content">
+
+        <!-- Main content start -->
+        <nav class="navbar navbar-inverse">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-conv-collapse">
+                        <span class="sr-only">Toggle naming convention</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <span class="navbar-brand" id="navbar-conv">German notation</span>
+                </div>
+                    
+                <div class="navbar-conv-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="hybrid:Settings?conv=English">English notation <sub>(C-D-E-F-G-A-B)</sub></a></li>
+                        <li><a href="hybrid:Settings?conv=German">German notation <sub>(C-D-E-F-G-A-H)</sub></a></li>
+                        <li><a href="hybrid:Settings?conv=Latin">Latin notation <sub>(Do-Re-Mi-Fa-Sol-La-Si)</sub></a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <nav class="navbar navbar-inverse">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-types-collapse">
+                        <span class="sr-only">Toggle chord types</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <span class="navbar-brand" id="navbar-types">All chords</span>
+                </div>
+                    
+                <div class="navbar-types-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="hybrid:Settings?basictypes=true">Basic chords</a></li>
+                        <li><a href="hybrid:Settings?basictypes=false">All chords</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="row">
+            <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">Highest fret:</div>
+            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                <div id="maxfret-badge" class="badge badge-inverse">10</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <input type="range" id="maxfret" value="10" min="1" max="15" step="1" />
+            </div>
+        </div>
+        <div class="row" style="margin-bottom: 20px;">
+            <span class="col-xs-9 col-sm-9 col-md-9 col-lg-9">Allow barre chords</span>
+            <span class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                <input type="checkbox" id="barre" name="barre" value="true" data-toggle="toggle" data-on="Yes" data-off="No" checked="checked" style="display: none;" />
+            </span>
+        </div>
+        <div class="row" style="margin-bottom: 20px;">
+            <span class="col-xs-9 col-sm-9 col-md-9 col-lg-9">Allow chords with muted high strings</span>
+            <span class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                <input type="checkbox" id="special" name="special" value="true" data-toggle="toggle" data-on="Yes" data-off="No" style="display: none;" />
+            </span>
+        </div>
+        <div class="error"></div>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('#barre').show();
+                $('#special').show();
+                $('#maxfret').on('input', function(){
+                    var val = $(this).val();
+                    $('#maxfret-badge').html(val);
+                });
+                $('#maxfret').on('change', function(){
+                    var val = $(this).val();
+                    location.href = 'hybrid:Settings?maxfret=' + val;
+                });
+                $('#barre').on('change', function(){
+                    var val = $(this).prop('checked');
+                    location.href = 'hybrid:Settings?barre=' + val;
+                });
+                $('#special').on('change', function(){
+                    var val = $(this).prop('checked');
+                    location.href = 'hybrid:Settings?special=' + val;
+                });
+            });
+        </script>
+        <!-- Main content end -->
+            
+    </div>
+    <hr />
+    <footer>
+        <p>&copy; 2017 - Tomáš Němec</p>
+    </footer>
+</body>
+</html>

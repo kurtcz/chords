@@ -95,6 +95,10 @@
       <DependentUpon>FavoriteChordsView.cshtml</DependentUpon>
     </Compile>
     <Compile Include="Models\FavoriteChordsModel.cs" />
+    <Compile Include="Views\SettingsView.cs">
+      <DependentUpon>SettingsView.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SettingsModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -124,6 +128,10 @@
     <None Include="Views\FavoriteChordsView.cshtml">
       <Generator>RazorTemplatePreprocessor</Generator>
       <LastGenOutput>FavoriteChordsView.cs</LastGenOutput>
+    </None>
+    <None Include="Views\SettingsView.cshtml">
+      <Generator>RazorTemplatePreprocessor</Generator>
+      <LastGenOutput>SettingsView.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <ItemGroup>

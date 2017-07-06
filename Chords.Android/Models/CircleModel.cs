@@ -46,14 +46,8 @@ namespace Chords.Android.Models
 
         public CircleModel(NameValueCollection parameters)
         {
-            NamingConvention conv;
             int index;
 
-            if (!Enum.TryParse(parameters["conv"], out conv))
-            {
-                conv = NamingConvention.English;
-            }
-            this.conv = conv;
             if (!int.TryParse(parameters["index"], out index))
             {
                 index = 13;

@@ -1,4 +1,4 @@
-﻿#if DEBUG
+﻿﻿#if DEBUG
 //﻿#define TESTING
 #endif
 using System;
@@ -24,7 +24,7 @@ namespace Chords.Core.Models
         };
         private static readonly Note[][] _stringNotes =
             Enumerable.Range(0, 6)
-                      .Select(s => Enumerable.Range(0, 15)
+                      .Select(s => Enumerable.Range(0, 15 + 4)
                                              .Select(i => _strings[s].NoteAtChromaticDistance(i))
                                              .ToArray())
                       .ToArray();
@@ -56,7 +56,7 @@ namespace Chords.Core.Models
 			}
 		}
 
-        public static IEnumerable<GuitarChordLayout> Generate(Chord chord, bool allowSpecial, bool allowPartial)
+        public static IEnumerable<GuitarChordLayout> Generate(Chord chord, bool allowBarre, bool allowSpecial, bool allowPartial, int maxFret)
         {
             var results = new ConcurrentBag<GuitarChordLayout>();
             var positionsPerString = new HashSet<int>[6];
@@ -71,7 +71,7 @@ namespace Chords.Core.Models
                 {
                     positionsPerString[s].Add(0);
                 }
-                for (var pos = 1; pos <= 10; pos++)
+                for (var pos = 1; pos <= maxFret + 3; pos++)
                 {
                     var note = _strings[s].NoteAtChromaticDistance(pos);
 
@@ -89,7 +89,9 @@ namespace Chords.Core.Models
 #endif
             var guitarChordTypes = Enum.GetValues(typeof(GuitarChordType))
                                        .Cast<GuitarChordType>()
-                                       .Where(i => allowSpecial || i != GuitarChordType.Special)
+                                       .Where(i => (allowSpecial || i != GuitarChordType.Special) &&
+                                                   (allowBarre || (i != GuitarChordType.SixStringBarre &&
+                                                                   i != GuitarChordType.FiveStringBarre)))
                                        .ToList();
 #if !TESTING
             Parallel.ForEach(layouts, layout =>
@@ -103,7 +105,8 @@ namespace Chords.Core.Models
                     {
                         GuitarChordType = guitarChordType
                     };
-                    var b = result.IsValid(allowPartial);
+                    var b = result.IsValid(allowPartial) &&
+                            result.Fret <= maxFret;
                     if (b)
                     {
                         results.Add(result);
@@ -146,10 +149,6 @@ namespace Chords.Core.Models
 
                     pos0.CopyTo(positions, 0);
                     positions[s] = pos;
-                    if (s == 0 && positions[0] == -1 && positions[1] == 3 && positions[2] == 2 && positions[3] == 3 && positions[4] == 1 && positions[5] == 0)
-                    {
-                        s = s + 1 - 1;
-                    }
                     //TODO: implement 1st 3 checks from IsValid() here
                     if ((pos == X && (s == 0 || positions[s + 1] != X)) ||
                         (pos != X && (positions[s + 1] == X || _stringNotes[s+1][positions[s + 1]] != _stringNotes[s][positions[s]])))

@@ -13,27 +13,13 @@ namespace Chords.Android.Models
         public bool Partial { get; set; }
 		public bool Special { get; set; }
         public bool Strict { get; set; }
-		public NamingConvention NamingConvention { get; set; }
-        public NamingConvention OldNamingConvention { get; set; }
 
         public ChordParams(NameValueCollection parameters)
         {
-			NamingConvention conv;
-            NamingConvention oldconv;
             bool part;
             bool spec;
             bool strict;
 
-			if (!Enum.TryParse(parameters["conv"], out conv))
-			{
-				conv = NamingConvention.English;
-			}
-            NamingConvention = conv;
-			if (!Enum.TryParse(parameters["oldconv"], out oldconv))
-			{
-				oldconv = NamingConvention.English;
-			}
-			OldNamingConvention = oldconv;
 			if (!bool.TryParse(parameters["partial"], out part))
             {
                 part = false;

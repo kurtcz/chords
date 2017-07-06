@@ -1,4 +1,4 @@
-﻿@inherits PortableRazor.ViewBase
+﻿﻿@inherits PortableRazor.ViewBase
 @using Chords.Core.Extensions
 @model Chords.Android.Models.ShowChordModel
 <!DOCTYPE html>
@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="bootstrap-toggle.min.css" />
 </head>
 <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
+    <nav class="navbar navbar-inverse">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -23,10 +23,11 @@
                 
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="hybrid:ShowChord?conv=@Model.conv">Show chord chart</a></li>
-                    <li><a href="hybrid:FindChord?conv=@Model.conv">Find chord name</a></li>
-					<li><a href="hybrid:Circle?conv=@Model.conv">Circle of fifths</a></li>
-					<li><a href="hybrid:FavoriteChords?conv=@Model.conv">Favourite chords</a></li>
+                    <li><a href="hybrid:ShowChord">Show chord chart</a></li>
+                    <li><a href="hybrid:FindChord">Find chord name</a></li>
+                    <li><a href="hybrid:FavoriteChords">Favourite chords</a></li>
+					<li><a href="hybrid:Circle">Circle of fifths</a></li>
+					<li><a href="hybrid:Settings">Settings</a></li>
                 </ul>
             </div>
         </div>
@@ -46,14 +47,14 @@
 	                    <span class="icon-bar"></span>
 	                    <span class="icon-bar"></span>
 	                </button>
-	                <span class="navbar-brand" id="navbar-root">@(Model.Root?.ToString(Model.conv) ?? Model.Notes[Model.conv][1])</span>
+	                <span class="navbar-brand" id="navbar-root">@(Model.Root?.ToString(Model.conv) ?? Model.Notes[1].ToString(Model.conv))</span>
 	            </div>
 	                
 	            <div class="navbar-root-collapse collapse">
 	                <ul class="nav navbar-nav">
-					@foreach(var note in @Model.Notes[Model.conv])
+					@foreach(var note in @Model.Notes)
 					{
-                        <li><a onclick="updateRoot('@(note)');" data-toggle="collapse" data-target=".navbar-root-collapse">@note</a></li>
+                        <li><a onclick="updateRoot('@(note)', '@(note.ToString(Model.conv))');" data-toggle="collapse" data-target=".navbar-root-collapse">@(note.ToString(Model.conv))</a></li>
 					}
 	                </ul>
 	            </div>
@@ -73,7 +74,7 @@
                     
                 <div class="navbar-type-collapse collapse">
                     <ul class="nav navbar-nav">
-                    @foreach(var type in @Model.ChordTypeList)
+                    @foreach(var type in Model.ShowBasicChordTypes ? Model.BasicChordTypeList : Model.ChordTypeList)
                     {
                         <li><a onclick="updateChordType('@type.Key', '@type.Value');" data-toggle="collapse" data-target=".navbar-type-collapse">@(type.Key)</a></li>
                     }
@@ -81,47 +82,27 @@
                 </div>
             </div>
         </nav>
-        <nav class="navbar navbar-inverse">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-conv-collapse">
-                        <span class="sr-only">Toggle naming convention</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <span class="navbar-brand" id="navbar-conv">@(Model.conv.ToDescription())</span>
-                </div>
-                    
-                <div class="navbar-conv-collapse collapse">
-                    <ul class="nav navbar-nav">
-                    @foreach(var conv in @Model.NamingConventions)
-                    {
-                        <li><a href="hybrid:ShowChord?conv=@conv">@(conv.ToDescription())</a></li>
-                    }
-                    </ul>
-                </div>
-            </div>
-        </nav>
-		<form action="hybrid:ShowChord">
-			<input type="hidden" name="root" id="root" value="@(Model.Root?.ToString(Model.conv) ?? Model.Notes[Model.conv][1])" />
+		<form action="hybrid:ShowChordResults">
+			<input type="hidden" name="root" id="root" value="@(Model.Root?.ToString(Model.conv) ?? Model.Notes[1].ToString())" />
             <input type="hidden" name="type" id="type" value="@(Model.ChordType.ToDescription() ?? string.Empty)" />
 			<input type="hidden" name="conv" id="conv" value="@Model.conv" />
-			<div style="margin-bottom: 20px">
+			<div class="row" style="margin-bottom: 20px">
 				<span class="col-xs-9 col-sm-9 col-md-9 col-lg-9">Allow partial chords</span>
-	            <input type="checkbox" name="partial" value="true" data-toggle="toggle" data-on="Yes" data-off="No" checked="checked" />
+				<span class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+	                <input type="checkbox" name="partial" value="true" data-toggle="toggle" data-on="Yes" data-off="No" checked="checked" />
+				</span>
             </div>
-			<div style="margin-bottom: 20px">
-				<span class="col-xs-9 col-sm-9 col-md-9 col-lg-9">Allow special chords</span>
-	            <input type="checkbox" name="special" value="true" data-toggle="toggle" data-on="Yes" data-off="No" />
-            </div>
-			<button type="button" class="btn btn-default btn-lg" style="width:100%" onclick="$('form').submit();">Find</button>
+			<div class="row">
+				<span class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			        <button type="button" class="btn btn-default btn-lg" style="width:100%" onclick="$('form').submit();">Find</button>
+				</span>
+			</div>
 		</form>
 		<div class="error"></div>
 		<div id="findresult"></div>
 		<script type="text/javascript">
-			function updateRoot(value) {
-				$('#navbar-root').html(value);
+			function updateRoot(value, description) {
+				$('#navbar-root').html(description);
 				$('#root').val(value);
 			}
             function updateChordType(text, value) {

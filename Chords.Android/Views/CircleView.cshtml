@@ -1,6 +1,7 @@
 ﻿﻿@inherits PortableRazor.ViewBase
 @using PortableRazor.Web.Mvc
 @using Chords.Core.Extensions
+@using Chords.Core.Models
 @model Chords.Android.Models.CircleModel
 <!DOCTYPE html>
 <html>
@@ -24,10 +25,11 @@
                 
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="hybrid:ShowChord?conv=@Model.conv">Show chord chart</a></li>
-                    <li><a href="hybrid:FindChord?conv=@Model.conv">Find chord name</a></li>
-					<li><a href="hybrid:Circle?conv=@Model.conv&index=Model.index">Circle of fifths</a></li>
-					<li><a href="hybrid:FavoriteChords?conv=@Model.conv">Favourite chords</a></li>
+                    <li><a href="hybrid:ShowChord">Show chord chart</a></li>
+                    <li><a href="hybrid:FindChord">Find chord name</a></li>
+                    <li><a href="hybrid:FavoriteChords">Favourite chords</a></li>
+                    <li><a href="hybrid:Circle&index=@Model.index">Circle of fifths</a></li>
+                    <li><a href="hybrid:Settings">Settings</a></li>
                 </ul>
             </div>
         </div>
@@ -66,31 +68,34 @@
 				@for(var i = 1; i <= 12; i++)
 				{
 					var idx = (i + 5) % 12;
-					var id = Model.MajorCircle[Model.conv][idx];
+					var id = Model.MajorCircle[NamingConvention.English][idx];
+					var text = Model.MajorCircle[Model.conv][idx];
 					var color = i == 1 || i == 2  || i == 12 ? "#4d89d5" : "black";
 					var textColor = i == 1 ? "orange" : "white";
 					
-                    @(new HtmlString($"\t\t\t\t<path id=\"arc-maj-{i}\" fill=\"none\" stroke=\"{color}\" onclick=\"location.href='hybrid:PlayChord?conv={Model.conv}&id={id}';\" />\n"))
-                    @(new HtmlString($"\t\t\t\t<text id=\"text-maj-{i}\" text-anchor=\"middle\" stroke=\"none\" fill=\"{textColor}\" font-size=\"24\" onclick=\"location.href='hybrid:PlayChord?conv={Model.conv}&id={id}';\">{id}</text>\n"))
+                    @(new HtmlString($"\t\t\t\t<path id=\"arc-maj-{i}\" fill=\"none\" stroke=\"{color}\" onclick=\"location.href='hybrid:PlayChord?id={id}';\" />\n"))
+                    @(new HtmlString($"\t\t\t\t<text id=\"text-maj-{i}\" text-anchor=\"middle\" stroke=\"none\" fill=\"{textColor}\" font-size=\"24\" onclick=\"location.href='hybrid:PlayChord?id={id}';\">{text}</text>\n"))
 				}
                 @for(var i = 1; i <= 12; i++)
                 {
                     var idx = (i + 5) % 12;
-					var id = Model.MinorCircle[Model.conv][idx];
+					var id = Model.MinorCircle[NamingConvention.English][idx];
+                    var text = Model.MinorCircle[Model.conv][idx];
                     var color = i == 1 || i == 2 || i == 12 ? "#4d89d5" : "black";
 					var textColor = i == 1 ? "orange" : "white";
 
-					@(new HtmlString($"\t\t\t\t<path id=\"arc-min-{i}\" fill=\"none\" stroke=\"{color}\" onclick=\"location.href='hybrid:PlayChord?conv={Model.conv}&id={id}';\" />\n"))
-                    @(new HtmlString($"\t\t\t\t<text id=\"text-min-{i}\" text-anchor=\"middle\" stroke=\"none\" fill=\"{textColor}\" font-size=\"16\" onclick=\"location.href='hybrid:PlayChord?conv={Model.conv}&id={id}';\">{id}</text>\n"))
+					@(new HtmlString($"\t\t\t\t<path id=\"arc-min-{i}\" fill=\"none\" stroke=\"{color}\" onclick=\"location.href='hybrid:PlayChord?id={id}';\" />\n"))
+                    @(new HtmlString($"\t\t\t\t<text id=\"text-min-{i}\" text-anchor=\"middle\" stroke=\"none\" fill=\"{textColor}\" font-size=\"16\" onclick=\"location.href='hybrid:PlayChord?&id={id}';\">{text}</text>\n"))
                 }
                 @for(var i = 1; i <= 12; i++)
                 {
                     var idx = (i + 5) % 12;
-					var id = Model.DiminishedCircle[Model.conv][idx];
+					var id = Model.DiminishedCircle[NamingConvention.English][idx];
+                    var text = Model.DiminishedCircle[Model.conv][idx];
                     var color = i == 1 ? "#4d89d5" : "black";
                     
-                    @(new HtmlString($"\t\t\t\t<path id=\"arc-dim-{i}\" fill=\"none\" stroke=\"{color}\" onclick=\"location.href='hybrid:PlayChord?conv={Model.conv}&id={id}';\" />\n"))
-                    @(new HtmlString($"\t\t\t\t<text id=\"text-dim-{i}\" text-anchor=\"middle\" stroke=\"none\" fill=\"white\" font-size=\"14\" onclick=\"location.href='hybrid:PlayChord?conv={Model.conv}&id={id}';\">{id}</text>\n"))
+                    @(new HtmlString($"\t\t\t\t<path id=\"arc-dim-{i}\" fill=\"none\" stroke=\"{color}\" onclick=\"location.href='hybrid:PlayChord?id={id}';\" />\n"))
+                    @(new HtmlString($"\t\t\t\t<text id=\"text-dim-{i}\" text-anchor=\"middle\" stroke=\"none\" fill=\"white\" font-size=\"14\" onclick=\"location.href='hybrid:PlayChord?conv={Model.conv}&id={id}';\">{text}</text>\n"))
                 }
                 @for(var i = 1; i <= 12; i++)
                 {

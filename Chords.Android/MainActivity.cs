@@ -1,4 +1,4 @@
-﻿﻿﻿using System;
+﻿﻿﻿﻿﻿using System;
 using Android.App;
 using Android.Content;
 using Android.Media;
@@ -40,9 +40,9 @@ namespace Chords.Android
         {
             base.OnCreate(savedInstanceState);
 
-            Favorites.Init();
-            // Set our view from the "main" layout resource
-            SetContentView(Resource.Layout.Main);
+			Favorites.Init();
+			// Set our view from the "main" layout resource
+			SetContentView(Resource.Layout.Main);
 
 			_webView = FindViewById<WebView>(Resource.Id.webView);
             _webView.Settings.JavaScriptEnabled = true;
@@ -62,23 +62,6 @@ namespace Chords.Android
                 _soundIds[3] = _soundPool.Load(Application, Resource.Raw.G3, 1);
                 _soundIds[4] = _soundPool.Load(Application, Resource.Raw.B2, 1);
                 _soundIds[5] = _soundPool.Load(Application, Resource.Raw.E1, 1);
-                //Task.Run(() =>
-                //{
-				//	//var chords = new []{ "G7", "D7", "E7b9", "D7", "G#7", "G7" };
-				//	//var lengths = new[] { 500, 300, 100, 200, 800, 400 };
-				//	var chords = new []{ "A#7", "A7" };
-				//	var lengths = new[] { 500, 400 };
-				//	var parameters = new NameValueCollection();
-
-				//	for (var i = 0; i < chords.Length; i++)
-                //    {
-                //        Thread.Sleep(lengths[i]);
-                //        parameters.Clear();
-                //        parameters.Add("id", chords[i]);
-                //        parameters.Add("volume", "0.2");
-                //        viewClient.PlayChord(_webView, parameters);
-                //    }
-                //});
             }
             if (_bundle == null)
             {
@@ -114,7 +97,14 @@ namespace Chords.Android
 
         private class HybridWebViewClient : WebViewClient
         {
-			public override void OnReceivedError(WebView view, IWebResourceRequest request, WebResourceError error)
+			private Note _currentRoot;
+			private ChordType _currentChordType;
+            private bool _allowPartial;
+            private SettingsModel _currentSettings = SettingsModel.Load();
+            private Note[] _allRoots;
+            private string[] _allChordTypes;
+
+            public override void OnReceivedError(WebView view, IWebResourceRequest request, WebResourceError error)
             {
 				//Hack to handle $.ajax('hybrid:xxx'); calls that are failing with ERR_UNKNOWN_URL_SCHEME
                 //Alternatively we could also override ShouldInterceptRequest()
@@ -152,6 +142,10 @@ namespace Chords.Android
                 {
                     ShowChord(webView, parameters);
                 }
+				else if (method == "ShowChordResults")
+				{
+                    ShowChordResults(webView, parameters);
+				}
 				else if (method == "ShowChordLayouts")
 				{
 					ShowChordLayouts(webView, parameters);
@@ -180,91 +174,126 @@ namespace Chords.Android
                 {
                     FavoriteChords(webView, parameters);
                 }
-                else
+				else if (method == "Settings")
+				{
+					Settings(webView, parameters);
+				}
+				else
                 {
                     return false;
                 }
 				return true;
             }
 
-            private Note _currentRoot;
-            private ChordType _currentChordType;
-
-			public void ShowChord(WebView webView, NameValueCollection parameters)
+            public void ShowChord(WebView webView, NameValueCollection parameters)
             {
-				string page;
-				var showChordParams = new ChordParams(parameters);
+                string page;
                 var model = new ShowChordModel
                 {
                     Root = _currentRoot,
-                    ChordType = _currentChordType, 
-                    conv = showChordParams.NamingConvention
+                    ChordType = _currentChordType,
+                    conv = _currentSettings.conv,
+                    ShowBasicChordTypes = _currentSettings.ShowBasicChordTypes
                 };
-                var resultModel = new ShowChordResultModel
-                {
-                    Parameters = parameters
-                };
+                model.Populate(parameters);
 
-                if (!string.IsNullOrEmpty(showChordParams.Root))
-                {
-					var id = $"{showChordParams.Root}{showChordParams.ChordType}";
-					Chord chord;
+				_allRoots = null;
+				_allChordTypes = null;
 
-					if (!Chord.TryParse(id, showChordParams.NamingConvention, out chord))
+				var template = new ShowChordView { Model = model };
+
+                page = template.GenerateString();
+                // Load the rendered HTML into the view with a base URL 
+                // that points to the root of the bundled Assets folder
+                webView.LoadDataWithBaseURL("file:///android_asset/?page=ShowChord", page, "text/html", "UTF-8", null);
+            }
+
+			public void ShowChordResults(WebView webView, NameValueCollection parameters)
+            {
+				string page;
+				var model = new ShowChordModel
+				{
+					Root = _currentRoot,
+					ChordType = _currentChordType,
+					conv = _currentSettings.conv,
+					ShowBasicChordTypes = _currentSettings.ShowBasicChordTypes
+				};
+				model.Populate(parameters);
+
+				Chord chord;
+				var id = string.Format("{0}{1}", model.Root, model.ChordType.ToDescription());
+				var resultModel = new ShowChordResultModel
+				{
+					conv = _currentSettings.conv,
+                    AllowPartial = _allowPartial,
+					AllRoots = _allRoots,
+					AllChordTypes = _allChordTypes
+				};
+
+				if (!string.IsNullOrEmpty(id))
+				{
+					resultModel.Populate(parameters);
+
+					if (!Chord.TryParse(id, NamingConvention.English, out chord))
 					{
-                        resultModel.Error = $"{id} is not a valid chord in {showChordParams.NamingConvention} naming convention";
+						resultModel.Error = $"{id} is not a valid chord in {_currentSettings.conv} naming convention";
 					}
-                    else
-                    {
-                        _currentRoot = chord.Root;
-                        _currentChordType = chord.ChordType;
-						resultModel.ChordDecorator = new ChordDecorator(chord, showChordParams.NamingConvention);
-                        resultModel.Parameters = parameters;
+					else
+					{
+						_currentRoot = chord.Root;
+						_currentChordType = chord.ChordType;
+                        _allowPartial = resultModel.AllowPartial;
+						resultModel.Root = _currentRoot;
+						resultModel.ChordType = _currentChordType.ToDescription();
+						resultModel.ChordDecorator = new ChordDecorator(chord, _currentSettings.conv);
 					}
 					var template = new ShowChordResultView { Model = resultModel };
-					
-                    page = template.GenerateString();
+
+					page = template.GenerateString();
 				}
                 else
                 {
-					var template = new ShowChordView { Model = model };					
+					var template = new ShowChordView { Model = model };
 
-                    page = template.GenerateString();
+					page = template.GenerateString();
 				}
-				// Load the rendered HTML into the view with a base URL 
-				// that points to the root of the bundled Assets folder
-				webView.LoadDataWithBaseURL("file:///android_asset/?page=1", page, "text/html", "UTF-8", null);
-			}
+
+				webView.LoadDataWithBaseURL("file:///android_asset/?page=ShowChordResults", page, "text/html", "UTF-8", null);
+            }
 
 			public void ShowChordLayouts(WebView webView, NameValueCollection parameters)
             {
-				var showChordParams = new ChordParams(parameters);
-				var model = new ShowChordLayoutsModel
+                var model = new ShowChordLayoutsModel
 				{
-					Parameters = parameters
+                    Root = _currentRoot,
+                    ChordType = _currentChordType.ToDescription(),
+                    conv = _currentSettings.conv,
+                    AllowPartial = _allowPartial,
+                    AllowSpecial = _currentSettings.AllowSpecial,
+					AllRoots = _allRoots,
+					AllChordTypes = _allChordTypes
 				};
+                model.Populate(parameters);
 
-				var id = $"{showChordParams.Root}{showChordParams.ChordType}";
+				var id = string.Format("{0}{1}", model.Root, model.ChordType);
 				Chord chord;
 
-				if (!Chord.TryParse(id, showChordParams.NamingConvention, out chord))
+                if (!Chord.TryParse(id, NamingConvention.English, out chord))
 				{
 					model.Error = $"{id} is not a valid chord";
 				}
 				else
 				{
-					model.ChordDecorator = new ChordDecorator(chord, showChordParams.NamingConvention);
+					model.ChordDecorator = new ChordDecorator(chord, _currentSettings.conv);
                     model.Layouts = model.ChordDecorator
-                                         .GenerateLayouts(showChordParams.Special, showChordParams.Partial)
+                        .GenerateLayouts(_currentSettings.AllowBarre, model.AllowSpecial, model.AllowPartial, _currentSettings.maxFret)
                         .OrderBy(i => i.Favorite ? 0 : 1)
                         .ToArray();
                 }
 				var template = new ShowChordLayoutsView { Model = model };
                 var page = template.GenerateString();
 
-                // Load the rendered HTML into the view with a base URL 
-				// that points to the root of the bundled Assets folder
-				webView.LoadDataWithBaseURL("file:///android_asset/", page, "text/html", "UTF-8", null);
+				webView.LoadDataWithBaseURL("file:///android_asset/?page=ShowChordLayouts", page, "text/html", "UTF-8", null);
             }
 
 			public void FindChord(WebView webView, NameValueCollection parameters)
@@ -276,7 +305,7 @@ namespace Chords.Android
                     var chordParams = new ChordParams(parameters);
                     var model = new FindChordModel
                     {
-                        conv = chordParams.NamingConvention, 
+                        conv = _currentSettings.conv, 
                         Strict = chordParams.Strict
                     };
                     var template = new FindChordView() { Model = model };
@@ -288,38 +317,38 @@ namespace Chords.Android
                     Note note;
 					var chordParams = new ChordParams(parameters);
 					var tokens = parameters["note"].Split(',');
-                    var notes = tokens.Select(i => Note.TryParse(i, chordParams.NamingConvention, out note) ? note : null)
+                    var notes = tokens.Select(i => Note.TryParse(i, _currentSettings.conv, out note) ? note : null)
                                       .Where(i => i != null)
                                       .ToArray();
-
-                    if (!notes.Any())
-                    {
-						notes = tokens.Select(i => Note.TryParse(i, chordParams.OldNamingConvention, out note) ? note : null)
-									  .Where(i => i != null)
-									  .ToArray();
-					}
                     var chords = Chord.Find(notes, chordParams.Strict);
 
+                    _allowPartial = true;
                     if (chords.Length > 0)
                     {
                         var chord = chords.First();
 
-                        parameters.Add("root", chord.Root.ToString(chordParams.NamingConvention));
-						parameters.Add("type", chord.ChordType.ToDescription());
+                        _currentRoot = chord.Root;
+                        _currentChordType = chord.ChordType;
                         if (chords.Length > 1)
                         {
-                            parameters.Add("roots", string.Join(",", chords.Select(i => i.Root.ToString(chordParams.NamingConvention))));
-                            parameters.Add("types", string.Join(",", chords.Select(i => i.ChordType.ToDescription())));
+                            _allRoots = chords.Select(i => i.Root).ToArray();
+                            _allChordTypes = chords.Select(i => i.ChordType.ToDescription()).ToArray();
                         }
+                        else
+                        {
+                            _allRoots = null;
+                            _allChordTypes = null;
+                        }
+
 						parameters.Add("partial", "true");
-						ShowChord(webView, parameters);
+						ShowChordResults(webView, parameters);
                         return;
                     }
 					var model = new FindChordModel
                     {
-                        conv = chordParams.NamingConvention, 
+                        conv = _currentSettings.conv, 
                         Strict = chordParams.Strict,
-                        SelectedNotes = notes.Select(i => i.ToString(chordParams.NamingConvention))
+                        SelectedNotes = notes.Select(i => i.ToString(_currentSettings.conv))
                                              .ToArray(),
                         Error = "No chord found"
                     };
@@ -328,9 +357,7 @@ namespace Chords.Android
 					page = template.GenerateString();
 				}
 
-				// Load the rendered HTML into the view with a base URL 
-				// that points to the root of the bundled Assets folder
-				webView.LoadDataWithBaseURL("file:///android_asset/", page, "text/html", "UTF-8", null);
+				webView.LoadDataWithBaseURL("file:///android_asset/?page=FindChord", page, "text/html", "UTF-8", null);
 			}
 
             public void PlayChord(WebView webView, NameValueCollection parameters)
@@ -347,7 +374,7 @@ namespace Chords.Android
                 {
                     Chord chord;
 
-                    if (!Chord.TryParse(id, chordParams.NamingConvention, out chord))
+                    if (!Chord.TryParse(id, NamingConvention.English, out chord))
                     {
                         return;
                     }
@@ -402,12 +429,14 @@ namespace Chords.Android
 
             public void CircleOfFifths(WebView webView, NameValueCollection parameters)
             {
-                var model = new CircleModel(parameters);
+                var model = new CircleModel(parameters)
+                {
+                    conv = _currentSettings.conv
+                };
 				var template = new CircleView() { Model = model };
 				var page = template.GenerateString();
-				// Load the rendered HTML into the view with a base URL 
-				// that points to the root of the bundled Assets folder
-				webView.LoadDataWithBaseURL("file:///android_asset/", page, "text/html", "UTF-8", null);
+
+                webView.LoadDataWithBaseURL("file:///android_asset/?page=CircleOfFifths", page, "text/html", "UTF-8", null);
 			}
 
             public void AddToFavorites(WebView webView, NameValueCollection parameters)
@@ -418,7 +447,7 @@ namespace Chords.Android
                 var id = $"{chordParams.Root}{chordParams.ChordType}";
                 Chord chord;
 
-                if (!Chord.TryParse(id, chordParams.NamingConvention, out chord))
+                if (!Chord.TryParse(id, _currentSettings.conv, out chord))
                 {
                     return;
                 }
@@ -449,7 +478,7 @@ namespace Chords.Android
 				var id = $"{chordParams.Root}{chordParams.ChordType}";
 				Chord chord;
 
-				if (!Chord.TryParse(id, chordParams.NamingConvention, out chord))
+                if (!Chord.TryParse(id, _currentSettings.conv, out chord))
 				{
 					return;
 				}
@@ -474,7 +503,10 @@ namespace Chords.Android
 
             public void FavoriteChords(WebView webView, NameValueCollection parameters)
             {
-                var model = new FavoriteChordsModel(parameters);
+                var model = new FavoriteChordsModel
+                {
+                    conv = _currentSettings.conv
+                };
 
                 model.Chords = Favorites.Chords
                                         .Select(kvp => new KeyValuePair<ChordDecorator, GuitarChordLayoutDecorator[]>(
@@ -487,10 +519,19 @@ namespace Chords.Android
 				var template = new FavoriteChordsView() { Model = model };
 				var page = template.GenerateString();
 
-				// Load the rendered HTML into the view with a base URL 
-				// that points to the root of the bundled Assets folder
-				webView.LoadDataWithBaseURL("file:///android_asset/", page, "text/html", "UTF-8", null);
+				webView.LoadDataWithBaseURL("file:///android_asset/?page=FavoriteChords", page, "text/html", "UTF-8", null);
             }
+
+            public void Settings(WebView webView, NameValueCollection parameters)
+			{
+                _currentSettings.Populate(parameters);
+                _currentSettings.Save();
+
+                var template = new SettingsView() { Model = _currentSettings };
+				var page = template.GenerateString();
+
+				webView.LoadDataWithBaseURL("file:///android_asset/?page=Settings", page, "text/html", "UTF-8", null);
+			}
 		}
     }
 }

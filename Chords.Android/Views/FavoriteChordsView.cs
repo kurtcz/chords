@@ -64,7 +64,7 @@ WriteLiteral(" href=\"bootstrap.min.css\"");
 
 WriteLiteral(" />\n</head>\n<body>\n    <nav");
 
-WriteLiteral(" class=\"navbar navbar-inverse navbar-fixed-top\"");
+WriteLiteral(" class=\"navbar navbar-inverse\"");
 
 WriteLiteral(">\n        <div");
 
@@ -114,54 +114,26 @@ WriteLiteral(" class=\"nav navbar-nav\"");
 
 WriteLiteral(">\n                    <li><a");
 
-WriteAttribute ("href", " href=\"", "\""
-, Tuple.Create<string,object,bool> ("", "hybrid:ShowChord?conv=", true)
+WriteLiteral(" href=\"hybrid:ShowChord\"");
 
-#line 28 "FavoriteChordsView.cshtml"
-                , Tuple.Create<string,object,bool> ("", Model.conv
-
-#line default
-#line hidden
-, false)
-);
 WriteLiteral(">Show chord chart</a></li>\n                    <li><a");
 
-WriteAttribute ("href", " href=\"", "\""
-, Tuple.Create<string,object,bool> ("", "hybrid:FindChord?conv=", true)
+WriteLiteral(" href=\"hybrid:FindChord\"");
 
-#line 29 "FavoriteChordsView.cshtml"
-                , Tuple.Create<string,object,bool> ("", Model.conv
-
-#line default
-#line hidden
-, false)
-);
 WriteLiteral(">Find chord name</a></li>\n                    <li><a");
 
-WriteAttribute ("href", " href=\"", "\""
-, Tuple.Create<string,object,bool> ("", "hybrid:Circle?conv=", true)
+WriteLiteral(" href=\"hybrid:FavoriteChords\"");
 
-#line 30 "FavoriteChordsView.cshtml"
-             , Tuple.Create<string,object,bool> ("", Model.conv
+WriteLiteral(">Favourite chords</a></li>\n                    <li><a");
 
-#line default
-#line hidden
-, false)
-);
+WriteLiteral(" href=\"hybrid:Circle\"");
+
 WriteLiteral(">Circle of fifths</a></li>\n                    <li><a");
 
-WriteAttribute ("href", " href=\"", "\""
-, Tuple.Create<string,object,bool> ("", "hybrid:FavoriteChords?conv=", true)
+WriteLiteral(" href=\"hybrid:Settings\"");
 
-#line 31 "FavoriteChordsView.cshtml"
-                     , Tuple.Create<string,object,bool> ("", Model.conv
-
-#line default
-#line hidden
-, false)
-);
-WriteLiteral(">Favourite chords</a></li>\n                </ul>\n            </div>\n        </div" +
-">\n    </nav>\n    <script");
+WriteLiteral(">Settings</a></li>\n                </ul>\n            </div>\n        </div>\n    </" +
+"nav>\n    <script");
 
 WriteLiteral(" src=\"jquery.min.js\"");
 
@@ -186,13 +158,13 @@ WriteLiteral(" class=\"animate-bottom\"");
 WriteLiteral(">\n");
 
 
-#line 43 "FavoriteChordsView.cshtml"
+#line 44 "FavoriteChordsView.cshtml"
 		
 
 #line default
 #line hidden
 
-#line 43 "FavoriteChordsView.cshtml"
+#line 44 "FavoriteChordsView.cshtml"
          if (Model.Chords.Any())
 		{
 	        foreach(var kvp in Model.Chords)
@@ -208,7 +180,7 @@ WriteLiteral(" class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12\"");
 WriteLiteral(">\n\t                <h2>");
 
 
-#line 48 "FavoriteChordsView.cshtml"
+#line 49 "FavoriteChordsView.cshtml"
                    Write(kvp.Key.Symbols[0]);
 
 
@@ -217,13 +189,13 @@ WriteLiteral(">\n\t                <h2>");
 WriteLiteral("</h2>\n\n");
 
 
-#line 50 "FavoriteChordsView.cshtml"
+#line 51 "FavoriteChordsView.cshtml"
 	                
 
 #line default
 #line hidden
 
-#line 50 "FavoriteChordsView.cshtml"
+#line 51 "FavoriteChordsView.cshtml"
                      foreach(var layout in kvp.Value)
 	                {
 	                    var positions = string.Join(",", layout.IntPositions.Select(i => i.ToString()).ToArray());
@@ -239,7 +211,7 @@ WriteLiteral(" class=\"col-xs-6 col-sm-4 col-md-3 col-lg-2 chord-layout\"");
 WriteLiteral(" data-root=\"");
 
 
-#line 54 "FavoriteChordsView.cshtml"
+#line 55 "FavoriteChordsView.cshtml"
                                                                                              Write(kvp.Key.Root.ToString(Model.conv));
 
 
@@ -250,7 +222,7 @@ WriteLiteral("\"");
 WriteLiteral(" data-chordtype=\"");
 
 
-#line 54 "FavoriteChordsView.cshtml"
+#line 55 "FavoriteChordsView.cshtml"
                                                                                                                                                    Write(kvp.Key.ChordType.ToDescription());
 
 
@@ -261,7 +233,7 @@ WriteLiteral("\"");
 WriteLiteral(" data-favorite=\"");
 
 
-#line 54 "FavoriteChordsView.cshtml"
+#line 55 "FavoriteChordsView.cshtml"
                                                                                                                                                                                                         Write(layout.Favorite);
 
 
@@ -272,7 +244,7 @@ WriteLiteral("\"");
 WriteLiteral(" data-positions=\"");
 
 
-#line 54 "FavoriteChordsView.cshtml"
+#line 55 "FavoriteChordsView.cshtml"
                                                                                                                                                                                                                                            Write(positions);
 
 
@@ -283,7 +255,7 @@ WriteLiteral("\"");
 WriteAttribute ("onclick", " onclick=\"", "\""
 , Tuple.Create<string,object,bool> ("", "playChord(\'", true)
 
-#line 54 "FavoriteChordsView.cshtml"
+#line 55 "FavoriteChordsView.cshtml"
                                                                                                                                                                                                                                          , Tuple.Create<string,object,bool> ("", positions
 
 #line default
@@ -296,7 +268,7 @@ WriteLiteral(">\n");
 WriteLiteral("\t                        ");
 
 
-#line 55 "FavoriteChordsView.cshtml"
+#line 56 "FavoriteChordsView.cshtml"
                         Write(layout.Schema);
 
 
@@ -305,7 +277,7 @@ WriteLiteral("\t                        ");
 WriteLiteral("\n\t                    </div>\n");
 
 
-#line 57 "FavoriteChordsView.cshtml"
+#line 58 "FavoriteChordsView.cshtml"
 	                }
 
 
@@ -320,7 +292,7 @@ WriteLiteral(" class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12\"");
 WriteLiteral(">\n\t\t\t\t    <hr />\n\t\t\t\t</div>\n");
 
 
-#line 62 "FavoriteChordsView.cshtml"
+#line 63 "FavoriteChordsView.cshtml"
 	        }
 		}
 		else
@@ -339,7 +311,7 @@ WriteLiteral(">\n\t\t\t\tYou have no favourite chord layouts. <br />\n\t\t\t\tTa
 " to add it to favourites.  \n\t\t\t</div>\n");
 
 
-#line 70 "FavoriteChordsView.cshtml"
+#line 71 "FavoriteChordsView.cshtml"
 		}
 
 
@@ -383,7 +355,7 @@ WriteLiteral(@">
                             conv: '");
 
 
-#line 103 "FavoriteChordsView.cshtml"
+#line 104 "FavoriteChordsView.cshtml"
                               Write(Model.conv);
 
 

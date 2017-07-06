@@ -1,4 +1,4 @@
-﻿﻿@inherits PortableRazor.ViewBase
+﻿﻿﻿@inherits PortableRazor.ViewBase
 @using System.Text.RegularExpressions
 @using PortableRazor.Web.Mvc
 @using Chords.Core.Extensions
@@ -14,7 +14,7 @@
 	<link rel="stylesheet" href="bootstrap-toggle.min.css" />
 </head>
 <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
+    <nav class="navbar navbar-inverse">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -28,10 +28,11 @@
                 
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="hybrid:ShowChord?conv=@Model.conv">Show chord chart</a></li>
-                    <li><a href="hybrid:FindChord?conv=@Model.conv">Find chord name</a></li>
-					<li><a href="hybrid:Circle?conv=@Model.conv">Circle of fifths</a></li>
-					<li><a href="hybrid:FavoriteChords?conv=@Model.conv">Favourite chords</a></li>
+                    <li><a href="hybrid:ShowChord">Show chord chart</a></li>
+                    <li><a href="hybrid:FindChord">Find chord name</a></li>
+                    <li><a href="hybrid:FavoriteChords">Favourite chords</a></li>
+                    <li><a href="hybrid:Circle">Circle of fifths</a></li>
+                    <li><a href="hybrid:Settings">Settings</a></li>
                 </ul>
             </div>
         </div>
@@ -45,35 +46,6 @@
         <nav class="navbar navbar-inverse">
             <div class="container">
                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-conv-collapse">
-                        <span class="sr-only">Toggle naming convention</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <span class="navbar-brand" id="navbar-conv">@(Model.conv.ToDescription())</span>
-                </div>
-                    
-                <div class="navbar-conv-collapse collapse">
-                    <ul class="nav navbar-nav">
-                    @foreach(var conv in @Model.NamingConventions)
-                    {
-						if (Model.Strict)
-						{
-	                        <li><a href="hybrid:FindChord?conv=@conv&strict=true&oldconv=@Model.conv&note=@notes">@(conv.ToDescription())</a></li>
-    					}
-						else
-						{
-                            <li><a href="hybrid:FindChord?conv=@conv&strict=false&oldconv=@Model.conv&note=@notes">@(conv.ToDescription())</a></li>
-						}
-                    }
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        <nav class="navbar navbar-inverse">
-            <div class="container">
-                <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-strict-collapse">
                         <span class="sr-only">Toggle mode</span>
                         <span class="icon-bar"></span>
@@ -82,18 +54,18 @@
                     </button>
 					@if (Model.Strict)
 					{
-                        <span class="navbar-brand" id="navbar-strict">Strict mode (@Model.Notes[Model.conv][1]<sub>#</sub> ≠ @Model.Notes[Model.conv][4]<sub>b</sub>)</span>
+                        <span class="navbar-brand" id="navbar-strict">Strict mode (@Model.Notes[1].ToString(Model.conv)<sub>#</sub> ≠ @Model.Notes[4].ToString(Model.conv)<sub>b</sub>)</span>
 					}
 					else
 					{
-                        <span class="navbar-brand" id="navbar-strict">Loose mode (@Model.Notes[Model.conv][1]<sub>#</sub> = @Model.Notes[Model.conv][4]<sub>b</sub>)</span>
+                        <span class="navbar-brand" id="navbar-strict">Loose mode (@Model.Notes[1].ToString(Model.conv)<sub>#</sub> = @Model.Notes[4].ToString(Model.conv)<sub>b</sub>)</span>
 					}
                 </div>
                     
                 <div class="navbar-strict-collapse collapse">
                     <ul class="nav navbar-nav">
-						<li><a href="hybrid:FindChord?conv=@Model.conv&strict=true&oldconv=@Model.conv&note=@notes">Strict (@Model.Notes[Model.conv][1]<sub>#</sub> ≠ @Model.Notes[Model.conv][4]<sub>b</sub>)</a></li>
-                        <li><a href="hybrid:FindChord?conv=@Model.conv&strict=false&oldconv=@Model.conv&note=@notes">Loose (@Model.Notes[Model.conv][1]<sub>#</sub> = @Model.Notes[Model.conv][4]<sub>b</sub>)</a></li>
+						<li><a href="hybrid:FindChord?conv=@Model.conv&strict=true&note=@notes">Strict (@Model.Notes[1].ToString(Model.conv)<sub>#</sub> ≠ @Model.Notes[4].ToString(Model.conv)<sub>b</sub>)</a></li>
+                        <li><a href="hybrid:FindChord?conv=@Model.conv&strict=false&note=@notes">Loose (@Model.Notes[1].ToString(Model.conv)<sub>#</sub> = @Model.Notes[4].ToString(Model.conv)<sub>b</sub>)</a></li>
                     </ul>
                 </div>
             </div>
@@ -129,10 +101,7 @@
 			</div>
 		</form>
 		<div class="error">@Model.Error</div>
-        <script type="text/javascript">				
-            function updateNamingConvention(value) {
-                location = 'hybrid:FindChord?conv=' + value;
-            }
+        <script type="text/javascript">
 			$(document).ready(function(){
 				$("input,button").show();
 			});
