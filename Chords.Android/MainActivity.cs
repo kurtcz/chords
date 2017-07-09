@@ -286,7 +286,7 @@ namespace Chords.Android
 				{
 					model.ChordDecorator = new ChordDecorator(chord, _currentSettings.conv);
                     model.Layouts = model.ChordDecorator
-                        .GenerateLayouts(_currentSettings.AllowBarre, model.AllowSpecial, model.AllowPartial, _currentSettings.maxFret)
+                        .GenerateLayouts(_currentSettings.AllowBarre, _currentSettings.AllowSpecial, model.AllowPartial, _currentSettings.maxFret)
                         .OrderBy(i => i.Favorite ? 0 : 1)
                         .ToArray();
                 }

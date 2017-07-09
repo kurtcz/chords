@@ -446,7 +446,7 @@ WriteAttribute ("value", " value=\"", "\""
 );
 WriteLiteral(" />\n\t\t\t<div");
 
-WriteLiteral(" class=\"row\"");
+WriteLiteral(" class=\"row vertical-align\"");
 
 WriteLiteral(" style=\"margin-bottom: 20px\"");
 
@@ -456,7 +456,7 @@ WriteLiteral(" class=\"col-xs-9 col-sm-9 col-md-9 col-lg-9\"");
 
 WriteLiteral(">Allow partial chords</span>\n\t\t\t\t<span");
 
-WriteLiteral(" class=\"col-xs-3 col-sm-3 col-md-3 col-lg-3\"");
+WriteLiteral(" class=\"col-xs-3 col-sm-3 col-md-3 col-lg-3 justify-right\"");
 
 WriteLiteral(">\n\t                <input");
 

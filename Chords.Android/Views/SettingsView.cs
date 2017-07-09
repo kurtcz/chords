@@ -339,7 +339,7 @@ WriteLiteral(" href=\"hybrid:Settings?basictypes=false\"");
 WriteLiteral(">All chords</a></li>\n                    </ul>\n                </div>\n           " +
 " </div>\n        </nav>\n\t\t<div");
 
-WriteLiteral(" class=\"row\"");
+WriteLiteral(" class=\"row vertical-align\"");
 
 WriteLiteral(">\n            <div");
 
@@ -347,19 +347,19 @@ WriteLiteral(" class=\"col-xs-9 col-sm-9 col-md-9 col-lg-9\"");
 
 WriteLiteral(">Highest fret:</div>\n            <div");
 
-WriteLiteral(" class=\"col-xs-3 col-sm-3 col-md-3 col-lg-3\"");
+WriteLiteral(" class=\"col-xs-3 col-sm-3 col-md-3 col-lg-3 justify-right\"");
 
 WriteLiteral(">\n                <div");
 
 WriteLiteral(" id=\"maxfret-badge\"");
 
-WriteLiteral(" class=\"badge badge-inverse pull-right\"");
+WriteLiteral(" class=\"badge badge-inverse\"");
 
 WriteLiteral(">");
 
 
 #line 88 "SettingsView.cshtml"
-                                                                          Write(Model.maxFret);
+                                                               Write(Model.maxFret);
 
 
 #line default
@@ -395,7 +395,7 @@ WriteLiteral(" step=\"1\"");
 
 WriteLiteral(" />\n\t\t\t</div>\n        </div>\n        <div");
 
-WriteLiteral(" class=\"row\"");
+WriteLiteral(" class=\"row vertical-align\"");
 
 WriteLiteral(" style=\"margin-bottom: 20px;\"");
 
@@ -405,7 +405,7 @@ WriteLiteral(" class=\"col-xs-9 col-sm-9 col-md-9 col-lg-9\"");
 
 WriteLiteral(">Allow barre chords</span>\n\t\t\t<span");
 
-WriteLiteral(" class=\"col-xs-3 col-sm-3 col-md-3 col-lg-3\"");
+WriteLiteral(" class=\"col-xs-3 col-sm-3 col-md-3 col-lg-3 justify-right\"");
 
 WriteLiteral(">\n");
 
@@ -483,7 +483,7 @@ WriteLiteral(" />\n");
 #line hidden
 WriteLiteral("\t\t\t</span>\n        </div>\n        <div");
 
-WriteLiteral(" class=\"row\"");
+WriteLiteral(" class=\"row vertical-align\"");
 
 WriteLiteral(" style=\"margin-bottom: 20px;\"");
 
@@ -493,7 +493,7 @@ WriteLiteral(" class=\"col-xs-9 col-sm-9 col-md-9 col-lg-9\"");
 
 WriteLiteral(">Allow chords with muted high strings</span>\n            <span");
 
-WriteLiteral(" class=\"col-xs-3 col-sm-3 col-md-3 col-lg-3\"");
+WriteLiteral(" class=\"col-xs-3 col-sm-3 col-md-3 col-lg-3 justify-right\"");
 
 WriteLiteral(">\n");
 

@@ -270,7 +270,8 @@ namespace Chords.Core.Models
 			if ((GuitarChordType == GuitarChordType.SixString ||
 				 GuitarChordType == GuitarChordType.FiveString ||
                  GuitarChordType == GuitarChordType.FourString ||
-                 GuitarChordType == GuitarChordType.Special) &&
+                 GuitarChordType == GuitarChordType.Special
+                ) &&
                 emptyPositions.Any())
             {
                 //exception for special type chords held in a barre way
