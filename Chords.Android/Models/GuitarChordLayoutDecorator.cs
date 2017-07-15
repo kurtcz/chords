@@ -79,17 +79,19 @@ namespace Chords.Android.Models
 					"M", "25", "180",
 					"h", "100"
 				});
-                sb.AppendLine("\t<svg width=\"160\" height=\"200\" style=\"display:block;\">");
-                //fretboard
+				sb.AppendLine("\t<svg viewBox=\"0 0 155 190\" width=\"155\" style=\"display:block; margin-bottom:10px;\">");
+				//sb.AppendLine("\t<svg width=\"160\" height=\"200\" style=\"display:block;\">");
+                //star
                 sb.AppendFormat("\t\t<path class=\"star\" fill=\"#F8D64E\" d=\"{0}\" />\n", star);
-                sb.AppendFormat("\t\t<path d=\"{0}\" fill=\"none\" stroke=\"{1}\" stroke-width=\"1\" />\n", frets, Complete ? "black" : "grey");
+				//fretboard
+				sb.AppendFormat("\t\t<path d=\"{0}\" fill=\"none\" stroke=\"{1}\" stroke-width=\"1\" />\n", frets, Complete ? "black" : "grey");
                 if (RenderingFret == 0)
                 {
                     sb.AppendFormat("\t\t<path d=\"{0}\" fill=\"{1}\" stroke=\"{1}\" stroke-width=\"2\" />\n", fret0, Complete ? "black" : "grey");
                 }
-                var notes = ToString().Split(' ');
+				//note names
+				var notes = ToString().Split(' ');
 
-                //note names
                 for (var s = 0; s < 6; s++)
                 {
                     if (notes[s] == "X")
@@ -99,30 +101,18 @@ namespace Chords.Android.Models
                     sb.AppendFormat("\t\t<text x=\"{0}\", y=\"{1}\" font-size=\"12\" fill=\"{2}\" stroke=\"{2}\" stroke-width=\"1\" text-anchor=\"middle\">{3}</text>\n", 
                                     25 + s * 20, 10, Complete ? "black" : "grey", notes[s]);
                 }
-                //notes
-                if (_layout.GuitarChordType == Core.Models.GuitarChordType.FiveStringBarre ||
+				//barre
+				if (_layout.GuitarChordType == Core.Models.GuitarChordType.FiveStringBarre ||
                     _layout.GuitarChordType == Core.Models.GuitarChordType.SixStringBarre)
                 {
-					var loBarreString = 6;
-					var hiBarreString = -1;
-					
-                    for (var s = 0; s < 6; s++)
-                    {
-                        if (IntPositions[s] == Fret)
-                        {
-                            if (s < loBarreString)
-                            {
-                                loBarreString = s;
-                            }
-                            if (s > hiBarreString)
-                            {
-                                hiBarreString = s;
-                            }
-                        }
-                    }
-                    //barre
+                    var loBarreString = _layout.GuitarChordType == Core.Models.GuitarChordType.SixStringBarre ? 0 : 1;
+					var hiBarreString = 5;
+
                     sb.AppendFormat("\t\t<line x1=\"{0}\" y1=\"{1}\" x2=\"{2}\" y2=\"{3}\" stroke=\"blue\" stroke-width=\"5\" />\n",
-                                    25 + loBarreString * 20, (Fret - RenderingFret) * 40, 20 + hiBarreString * 20, (Fret - RenderingFret) * 40);
+                                    25 + loBarreString * 20, (IntPositions[loBarreString] - RenderingFret) * 40, 
+                                    25 + hiBarreString * 20, (IntPositions[loBarreString] - RenderingFret) * 40);
+                    sb.AppendFormat("\t\t<circle cx=\"{0}\" cy=\"{1}\" r=\"2\" fill=\"blue\" stroke=\"blue\" stroke-width=\"1\" />\n",
+                                    25 + hiBarreString * 20, (IntPositions[loBarreString] - RenderingFret) * 40);
                 }
 				for (var s = 0; s < 6; s++)
 				{
@@ -130,21 +120,21 @@ namespace Chords.Android.Models
 					if (IntPositions[s] == GuitarChordLayout.X)
                     {
                         sb.AppendFormat("\t\t<line x1=\"{0}\" y1=\"{1}\" x2=\"{2}\" y2=\"{3}\" stroke=\"red\" stroke-width=\"4\" />\n",
-                                        25 + s * 20 - 5, 20 - 5,
-                                        25 + s * 20 + 5, 20 + 5);
+                                        25 + s * 20 - 6, 20 - 6,
+                                        25 + s * 20 + 6, 20 + 6);
 						sb.AppendFormat("\t\t<line x1=\"{0}\" y1=\"{1}\" x2=\"{2}\" y2=\"{3}\" stroke=\"red\" stroke-width=\"4\" />\n",
-										25 + s * 20 - 5, 20 + 5,
-										25 + s * 20 + 5, 20 - 5);
+										25 + s * 20 - 6, 20 + 6,
+										25 + s * 20 + 6, 20 - 6);
 					}
                     //empty string
                     else if (IntPositions[s] == 0)
                     {
-						sb.AppendFormat("\t\t<circle cx=\"{0}\" cy=\"{1}\" r=\"5\" fill=\"white\" stroke=\"blue\" stoke-width=\"2\" />\n", 25 + s * 20, 20);
+						sb.AppendFormat("\t\t<circle cx=\"{0}\" cy=\"{1}\" r=\"6\" fill=\"white\" stroke=\"blue\" stroke-width=\"1\" />\n", 25 + s * 20, 20);
 					}
                     //pressed string
                     else
 					{
-                        sb.AppendFormat("\t\t<circle cx=\"{0}\" cy=\"{1}\" r=\"5\" fill=\"blue\" stroke=\"blue\" stoke-width=\"2\" />\n", 25 + s * 20, (IntPositions[s] - RenderingFret) * 40);
+                        sb.AppendFormat("\t\t<circle cx=\"{0}\" cy=\"{1}\" r=\"6\" fill=\"blue\" stroke=\"blue\" stroke-width=\"1\" />\n", 25 + s * 20, (IntPositions[s] - RenderingFret) * 40);
 					}
 				}
                 //fret numbers

@@ -6,20 +6,20 @@ using Newtonsoft.Json;
 
 namespace Chords.Core.Models
 {
-	public class Chord
-	{
-		public Note Root { get; private set; }
-		public ChordType ChordType { get; private set; }
+    public class Chord
+    {
+        public Note Root { get; private set; }
+        public ChordType ChordType { get; private set; }
         [JsonIgnore]
         public Interval[] Intervals { get; private set; }
         [JsonIgnore]
-		public Note[] Notes { get; private set; }
+        public Note[] Notes { get; private set; }
         [JsonIgnore]
         public Note[] NormalizedNotes { get; private set; }
         [JsonIgnore]
         public Note[] NonMandatoryNotes { get; private set; }
 
-		private Chord()
+        private Chord()
         {
         }
 
@@ -28,31 +28,38 @@ namespace Chords.Core.Models
         {
             Root = root;
             ChordType = chordType;
-			Intervals = ChordType.ToIntervals();
-			Notes = Intervals.Select(i => Root.NoteAtInterval(i))
-							 .ToArray();
+            Intervals = ChordType.ToIntervals();
+            Notes = Intervals.Select(i => Root.NoteAtInterval(i))
+                             .ToArray();
             NormalizedNotes = Notes.Select(i => Note.Normalize(i))
                                    .ToArray();
-			NonMandatoryNotes = ChordType.ToNonMandatoryIntervals()
-										 .Select(i => Root.NoteAtInterval(i))
-										 .ToArray();
-		}
+            NonMandatoryNotes = ChordType.ToNonMandatoryIntervals()
+                                         .Select(i => Root.NoteAtInterval(i))
+                                         .ToArray();
+        }
 
-		public static Chord[] Find(Note[] notes, bool strict)
-		{
+        public static Chord[] Find(Note[] notes, bool strict)
+        {
             var results = new List<Chord>();
 
-            foreach(var note in notes)
+            foreach (var note in notes)
             {
-                foreach(var chordType in Enum.GetValues(typeof(ChordType)).Cast<ChordType>())
+                foreach (var chordType in Enum.GetValues(typeof(ChordType)).Cast<ChordType>())
                 {
-                    var chord = new Chord(note, chordType);
-
-                    if (chord.Notes.Length == notes.Length &&
-                        chord.Notes.All(i => notes.Any(j => i == j ||
-                                                            (!strict && Note.Normalize(i) == Note.Normalize(j)))))
+                    try
                     {
-                        results.Add(chord);
+                        var chord = new Chord(note, chordType);
+
+                        if (chord.Notes.Length == notes.Length &&
+                            chord.Notes.All(i => notes.Any(j => i == j ||
+                                                                (!strict && Note.Normalize(i) == Note.Normalize(j)))))
+                        {
+                            results.Add(chord);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        System.Diagnostics.Debug.WriteLine($"Cannot create chord {note} {chordType}");
                     }
                 }
             }

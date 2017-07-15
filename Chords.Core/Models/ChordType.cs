@@ -21,6 +21,8 @@ namespace Chords.Core.Models
         MinorSeventh,
         [Descriptor("mmaj7")]
         MinorMajorSeventh,
+		[Descriptor("dim7", "°7")]
+		DiminishedSeventh,
 		[Descriptor("aug7", "+7")]
 		AugmentedSeventh,
 		[Descriptor("aug7b9", "+7b9")]
@@ -41,8 +43,6 @@ namespace Chords.Core.Models
 		DominantSeventhSharp11,
 		[Descriptor("7sus4")]
         SeventhSus4,
-        [Descriptor("dim7", "°7")]
-        DiminishedSeventh,
         [Descriptor("sus2")]
 		Sus2,
         [Descriptor("sus4")]

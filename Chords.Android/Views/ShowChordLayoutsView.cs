@@ -506,13 +506,13 @@ WriteLiteral(" results\n");
 #line hidden
 WriteLiteral("\t                    <div");
 
-WriteLiteral(" class=\"col-xs-6 col-sm-4 col-md-3 col-lg-2 chord-layout\"");
+WriteLiteral(" class=\"chord-layout\"");
 
 WriteLiteral(" data-favorite=\"");
 
 
 #line 95 "ShowChordLayoutsView.cshtml"
-                                                                                                 Write(layout.Favorite);
+                                                             Write(layout.Favorite);
 
 
 #line default
@@ -523,7 +523,7 @@ WriteLiteral(" data-positions=\"");
 
 
 #line 95 "ShowChordLayoutsView.cshtml"
-                                                                                                                                    Write(positions);
+                                                                                                Write(positions);
 
 
 #line default
@@ -534,7 +534,7 @@ WriteAttribute ("onclick", " onclick=\"", "\""
 , Tuple.Create<string,object,bool> ("", "playChord(\'", true)
 
 #line 95 "ShowChordLayoutsView.cshtml"
-                                                                                                                                  , Tuple.Create<string,object,bool> ("", positions
+                                                                                              , Tuple.Create<string,object,bool> ("", positions
 
 #line default
 #line hidden

@@ -89,7 +89,7 @@ namespace Chords.Controllers
                         return null;
                     }
                     var chordDecorator = new ChordDecorator(chord, parameters.conv);
-                    var layouts = chordDecorator.GenerateLayouts(parameters.special, parameters.@partial, 10);
+                    var layouts = chordDecorator.GenerateLayouts(true, parameters.special, parameters.@partial, 10);
 
                     return layouts;
 				}

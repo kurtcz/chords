@@ -39,9 +39,9 @@ namespace Chords.ViewModels
             _namingConvention = namingConvention;
 		}
 
-        public GuitarChordLayoutDecorator[] GenerateLayouts(bool allowSpecial, bool allowPartial, int maxFret)
+        public GuitarChordLayoutDecorator[] GenerateLayouts(bool allowBarre, bool allowSpecial, bool allowPartial, int maxFret)
         {
-			return GuitarChordLayout.Generate(_chord, allowSpecial, allowPartial, maxFret)
+			return GuitarChordLayout.Generate(_chord, allowBarre, allowSpecial, allowPartial, maxFret)
 									.OrderBy(i => i.GuitarChordType)
 									.Select(i => new GuitarChordLayoutDecorator(i, _namingConvention))
 									.OrderBy(i => i.RenderingFret)
