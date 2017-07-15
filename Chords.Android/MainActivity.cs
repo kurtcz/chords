@@ -138,6 +138,7 @@ namespace Chords.Android
                 var method = resources[0];
                 var parameters = resources.Length > 1 ? System.Web.HttpUtility.ParseQueryString(resources[1]) : new NameValueCollection();
 
+				webView.ScrollbarFadingEnabled = true;  //default value unless changed
 				if (method == "ShowChord")
                 {
                     ShowChord(webView, parameters);
@@ -293,6 +294,7 @@ namespace Chords.Android
 				var template = new ShowChordLayoutsView { Model = model };
                 var page = template.GenerateString();
 
+                //webView.ScrollbarFadingEnabled = false;
 				webView.LoadDataWithBaseURL("file:///android_asset/?page=ShowChordLayouts", page, "text/html", "UTF-8", null);
             }
 
