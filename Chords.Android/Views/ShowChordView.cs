@@ -38,7 +38,7 @@ public Chords.Android.Models.ShowChordModel Model { get; set; }
 
 public override void Execute()
 {
-WriteLiteral("﻿");
+WriteLiteral("﻿﻿");
 
 WriteLiteral("<!DOCTYPE html>\n<html>\n<head>\n    <link");
 
@@ -193,7 +193,7 @@ WriteLiteral(">");
 
 
 #line 50 "ShowChordView.cshtml"
-                                                            Write(Model.Root?.ToString(Model.conv) ?? Model.Notes[1].ToString(Model.conv));
+                                                            Write(Model.Root?.ToString(Model.conv) ?? Model.Notes[0].ToString(Model.conv));
 
 
 #line default
@@ -404,7 +404,7 @@ WriteLiteral(" id=\"root\"");
 WriteAttribute ("value", " value=\"", "\""
 
 #line 86 "ShowChordView.cshtml"
-                        , Tuple.Create<string,object,bool> ("", Model.Root?.ToString(Model.conv) ?? Model.Notes[1].ToString()
+                        , Tuple.Create<string,object,bool> ("", Model.Root?.ToString(Model.conv) ?? Model.Notes[0].ToString()
 
 #line default
 #line hidden

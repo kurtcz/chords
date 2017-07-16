@@ -1,4 +1,4 @@
-﻿﻿@inherits PortableRazor.ViewBase
+﻿﻿﻿@inherits PortableRazor.ViewBase
 @using Chords.Core.Extensions
 @model Chords.Android.Models.ShowChordModel
 <!DOCTYPE html>
@@ -47,7 +47,7 @@
 	                    <span class="icon-bar"></span>
 	                    <span class="icon-bar"></span>
 	                </button>
-	                <span class="navbar-brand" id="navbar-root">@(Model.Root?.ToString(Model.conv) ?? Model.Notes[1].ToString(Model.conv))</span>
+	                <span class="navbar-brand" id="navbar-root">@(Model.Root?.ToString(Model.conv) ?? Model.Notes[0].ToString(Model.conv))</span>
 	            </div>
 	                
 	            <div class="navbar-root-collapse collapse">
@@ -83,7 +83,7 @@
             </div>
         </nav>
 		<form action="hybrid:ShowChordResults">
-			<input type="hidden" name="root" id="root" value="@(Model.Root?.ToString(Model.conv) ?? Model.Notes[1].ToString())" />
+			<input type="hidden" name="root" id="root" value="@(Model.Root?.ToString(Model.conv) ?? Model.Notes[0].ToString())" />
             <input type="hidden" name="type" id="type" value="@(Model.ChordType.ToDescription() ?? string.Empty)" />
 			<input type="hidden" name="conv" id="conv" value="@Model.conv" />
 			<div class="row vertical-align" style="margin-bottom: 20px">

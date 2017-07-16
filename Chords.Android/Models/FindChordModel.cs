@@ -14,7 +14,6 @@ namespace Chords.Android.Models
         public string[] SelectedNotes { get; set; }
         public readonly Note[] Notes =
         {
-            new Note(Tone.C, Accidental.Flat),
             new Note(Tone.C),
             new Note(Tone.C, Accidental.Sharp),
             new Note(Tone.D, Accidental.Flat),
@@ -30,6 +29,7 @@ namespace Chords.Android.Models
             new Note(Tone.A, Accidental.Flat),
             new Note(Tone.A),
             new Note(Tone.A, Accidental.Sharp),
+            new Note(Tone.B, Accidental.Flat),
             new Note(Tone.B)
         };
         public readonly Dictionary<NamingConvention, HtmlString[]> AllNotes =
