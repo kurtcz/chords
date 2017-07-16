@@ -206,13 +206,13 @@ WriteLiteral("</h2>\n\n");
 #line hidden
 WriteLiteral("\t                    <div");
 
-WriteLiteral(" class=\"col-xs-6 col-sm-4 col-md-3 col-lg-2 chord-layout\"");
+WriteLiteral(" class=\"chord-layout\"");
 
 WriteLiteral(" data-root=\"");
 
 
 #line 55 "FavoriteChordsView.cshtml"
-                                                                                             Write(kvp.Key.Root.ToString(Model.conv));
+                                                         Write(kvp.Key.Root.ToString(Model.conv));
 
 
 #line default
@@ -223,7 +223,7 @@ WriteLiteral(" data-chordtype=\"");
 
 
 #line 55 "FavoriteChordsView.cshtml"
-                                                                                                                                                   Write(kvp.Key.ChordType.ToDescription());
+                                                                                                               Write(kvp.Key.ChordType.ToDescription());
 
 
 #line default
@@ -234,7 +234,7 @@ WriteLiteral(" data-favorite=\"");
 
 
 #line 55 "FavoriteChordsView.cshtml"
-                                                                                                                                                                                                        Write(layout.Favorite);
+                                                                                                                                                                    Write(layout.Favorite);
 
 
 #line default
@@ -245,7 +245,7 @@ WriteLiteral(" data-positions=\"");
 
 
 #line 55 "FavoriteChordsView.cshtml"
-                                                                                                                                                                                                                                           Write(positions);
+                                                                                                                                                                                                       Write(positions);
 
 
 #line default
@@ -256,7 +256,7 @@ WriteAttribute ("onclick", " onclick=\"", "\""
 , Tuple.Create<string,object,bool> ("", "playChord(\'", true)
 
 #line 55 "FavoriteChordsView.cshtml"
-                                                                                                                                                                                                                                         , Tuple.Create<string,object,bool> ("", positions
+                                                                                                                                                                                                     , Tuple.Create<string,object,bool> ("", positions
 
 #line default
 #line hidden

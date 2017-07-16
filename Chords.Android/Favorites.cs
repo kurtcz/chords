@@ -4,6 +4,7 @@ using System.IO;
 using Newtonsoft.Json;
 using Chords.Core.Models;
 using System.Linq;
+using Chords.Android.Models;
 
 namespace Chords.Android
 {
@@ -22,6 +23,28 @@ namespace Chords.Android
                 {
                     Chords = JsonConvert.DeserializeObject<IEnumerable<KeyValuePair<Chord, HashSet<GuitarChordLayout>>>>(File.ReadAllText(FilePath))
                                         .ToDictionary(kv => kv.Key, kv => kv.Value);
+                    foreach(var chordLayouts in Chords.Values)
+                    {
+                        foreach(var layout in chordLayouts)
+                        {
+                            var decorator = new GuitarChordLayoutDecorator(layout, NamingConvention.English);
+
+                            //this should throw if the generated schema is dodgy, causing the whole
+                            try
+                            {
+                                var dummy = decorator.Schema?.ToString();
+
+                                if (string.IsNullOrEmpty(dummy))
+                                {
+                                    throw new Exception();
+                                }
+                            }
+                            catch(Exception ex)
+                            {
+                                chordLayouts.Remove(layout);
+                            }
+                        }
+                    }
                 }
 			}
 			catch (Exception e)

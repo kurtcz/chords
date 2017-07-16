@@ -45,6 +45,14 @@ namespace Chords.Core.Models
             Positions = positions;
 
 			Notes = GetUsedNotes();
+            foreach(var chordType in Enum.GetValues(typeof(GuitarChordType)).Cast<GuitarChordType>())
+            {
+                GuitarChordType = chordType;
+                if (IsValid(true))
+                {
+                    break;
+                }
+            }
 			Complete = Notes.Distinct().Count() == Chord.Notes.Count();
 			Fret = Positions.Any(i => i > 0)
 					? Positions.Where(i => i > 0).Min()

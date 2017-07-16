@@ -52,7 +52,7 @@
 	                {
 	                    var positions = string.Join(",", layout.IntPositions.Select(i => i.ToString()).ToArray());
 
-	                    <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 chord-layout" data-root="@(kvp.Key.Root.ToString(Model.conv))" data-chordtype="@(kvp.Key.ChordType.ToDescription())" data-favorite="@(layout.Favorite)" data-positions="@positions" onclick="playChord('@positions');">
+	                    <div class="chord-layout" data-root="@(kvp.Key.Root.ToString(Model.conv))" data-chordtype="@(kvp.Key.ChordType.ToDescription())" data-favorite="@(layout.Favorite)" data-positions="@positions" onclick="playChord('@positions');">
 	                        @(layout.Schema)
 	                    </div>
 	                }
