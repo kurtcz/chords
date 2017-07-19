@@ -60,7 +60,7 @@ WriteLiteral(" href=\"bootstrap-toggle.min.css\"");
 
 WriteLiteral(" />\t\t\n</head>\n<body>\n    <nav");
 
-WriteLiteral(" class=\"navbar navbar-inverse\"");
+WriteLiteral(" class=\"navbar navbar-inverse navbar-fixed-top\"");
 
 WriteLiteral(">\n        <div");
 
@@ -152,6 +152,8 @@ WriteLiteral(" class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 main-content\"");
 WriteLiteral(">\n\n        <!-- Main content start -->\n        <nav");
 
 WriteLiteral(" class=\"navbar navbar-inverse\"");
+
+WriteLiteral(" style=\"margin-top:20px;\"");
 
 WriteLiteral(">\n            <div");
 

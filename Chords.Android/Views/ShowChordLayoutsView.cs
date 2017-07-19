@@ -69,7 +69,7 @@ WriteLiteral(" href=\"bootstrap.min.css\"");
 
 WriteLiteral(" />\n</head>\n<body>\n    <nav");
 
-WriteLiteral(" class=\"navbar navbar-inverse\"");
+WriteLiteral(" class=\"navbar navbar-inverse navbar-fixed-top\"");
 
 WriteLiteral(">\n        <div");
 
@@ -153,6 +153,8 @@ WriteLiteral(" src=\"bootstrap.min.js\"");
 WriteLiteral("></script>\n    <div");
 
 WriteLiteral(" class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 main-content\"");
+
+WriteLiteral(" style=\"display:none;\"");
 
 WriteLiteral(">\n\n        <!-- Main content start -->\n");
 
@@ -584,6 +586,7 @@ WriteLiteral(@">
 					}
 					$(function(){
 					    $('.ui-loader').hide();
+					    $('.main-content').show();
 					    $.event.special.tap.tapholdThreshold = 300;
 					    $.event.special.tap.emitTapOnTaphold = false;
 					    $('.chord-layout').bind('taphold', function(){
@@ -597,7 +600,7 @@ WriteLiteral(@">
 					                root: '");
 
 
-#line 127 "ShowChordLayoutsView.cshtml"
+#line 128 "ShowChordLayoutsView.cshtml"
                                       Write(Model.ChordDecorator.Root);
 
 
@@ -606,7 +609,7 @@ WriteLiteral(@">
 WriteLiteral("\',\n\t\t\t\t\t                type: \'");
 
 
-#line 128 "ShowChordLayoutsView.cshtml"
+#line 129 "ShowChordLayoutsView.cshtml"
                                       Write(Model.ChordDecorator.ChordType.ToDescription());
 
 
@@ -615,17 +618,17 @@ WriteLiteral("\',\n\t\t\t\t\t                type: \'");
 WriteLiteral("\',\n\t\t\t\t\t                conv: \'");
 
 
-#line 129 "ShowChordLayoutsView.cshtml"
+#line 130 "ShowChordLayoutsView.cshtml"
                                       Write(Model.conv);
 
 
 #line default
 #line hidden
 WriteLiteral("\',\n\t\t\t\t\t                positions: positions\n\t                            }\n\t    " +
-"                    });\n\t\t\t\t\t    });\n\t\t\t\t\t});\n            </script>\n");
+"                    });\n\t\t\t\t\t    });\n\t\t\t\t\t});\t\t\t\t\t\n            </script>\n");
 
 
-#line 136 "ShowChordLayoutsView.cshtml"
+#line 137 "ShowChordLayoutsView.cshtml"
 	        }
 
 
@@ -634,7 +637,7 @@ WriteLiteral("\',\n\t\t\t\t\t                positions: positions\n\t           
 WriteLiteral("\t\t\t</div>\n");
 
 
-#line 138 "ShowChordLayoutsView.cshtml"
+#line 139 "ShowChordLayoutsView.cshtml"
 		}
 
 

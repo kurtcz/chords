@@ -63,7 +63,7 @@ WriteLiteral(" href=\"bootstrap.min.css\"");
 
 WriteLiteral(" />\n</head>\n<body>\n    <nav");
 
-WriteLiteral(" class=\"navbar navbar-inverse\"");
+WriteLiteral(" class=\"navbar navbar-inverse navbar-fixed-top\"");
 
 WriteLiteral(">\n        <div");
 
@@ -143,6 +143,8 @@ WriteLiteral(" src=\"bootstrap.min.js\"");
 WriteLiteral("></script>\n    <div");
 
 WriteLiteral(" class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 main-content\"");
+
+WriteLiteral(" style=\"display:none;\"");
 
 WriteLiteral(">\n\n\t\t<!-- Main content start -->\n");
 
@@ -462,12 +464,17 @@ WriteLiteral(" id=\"loader\"");
 
 WriteLiteral("></div>\n");
 
-WriteLiteral("\t\t\t<script>\n\t\t\t\t$(document).ready(function (){\n\t                $.ajax({\n\t       " +
-"             url: \'hybrid:ShowChordLayouts\',\n\t                    type: \'get\',\n\t" +
-"                    data: {\n\t                        root: \'");
+WriteLiteral(@"			<script>
+				$(document).ready(function (){
+				    $('.main-content').show();
+	                $.ajax({
+	                    url: 'hybrid:ShowChordLayouts',
+	                    type: 'get',
+	                    data: {
+	                        root: '");
 
 
-#line 92 "ShowChordResultView.cshtml"
+#line 93 "ShowChordResultView.cshtml"
                               Write(Model.Root);
 
 
@@ -476,7 +483,7 @@ WriteLiteral("\t\t\t<script>\n\t\t\t\t$(document).ready(function (){\n\t        
 WriteLiteral("\',\n\t                        type: \'");
 
 
-#line 93 "ShowChordResultView.cshtml"
+#line 94 "ShowChordResultView.cshtml"
                               Write(Model.ChordType);
 
 
@@ -485,7 +492,7 @@ WriteLiteral("\',\n\t                        type: \'");
 WriteLiteral("\',\n                            roots: \'");
 
 
-#line 94 "ShowChordResultView.cshtml"
+#line 95 "ShowChordResultView.cshtml"
                                Write(allRoots);
 
 
@@ -494,7 +501,7 @@ WriteLiteral("\',\n                            roots: \'");
 WriteLiteral("\',\n                            types: \'");
 
 
-#line 95 "ShowChordResultView.cshtml"
+#line 96 "ShowChordResultView.cshtml"
                                Write(allChordTypes);
 
 
@@ -503,7 +510,7 @@ WriteLiteral("\',\n                            types: \'");
 WriteLiteral("\',\n\t                        partial: \'");
 
 
-#line 96 "ShowChordResultView.cshtml"
+#line 97 "ShowChordResultView.cshtml"
                                  Write(Model.AllowPartial);
 
 
@@ -512,7 +519,7 @@ WriteLiteral("\',\n\t                        partial: \'");
 WriteLiteral("\',\n\t                        special: \'");
 
 
-#line 97 "ShowChordResultView.cshtml"
+#line 98 "ShowChordResultView.cshtml"
                                  Write(Model.AllowSpecial);
 
 
@@ -521,7 +528,7 @@ WriteLiteral("\',\n\t                        special: \'");
 WriteLiteral("\',\n\t                        conv: \'");
 
 
-#line 98 "ShowChordResultView.cshtml"
+#line 99 "ShowChordResultView.cshtml"
                               Write(Model.conv);
 
 
@@ -530,7 +537,7 @@ WriteLiteral("\',\n\t                        conv: \'");
 WriteLiteral("\'\n\t                    }\n\t\t\t\t\t});\n\t\t\t\t});\n\t\t\t</script>\n");
 
 
-#line 103 "ShowChordResultView.cshtml"
+#line 104 "ShowChordResultView.cshtml"
 		}
 
 

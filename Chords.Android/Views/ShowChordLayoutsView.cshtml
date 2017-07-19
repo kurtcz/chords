@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="bootstrap.min.css" />
 </head>
 <body>
-    <nav class="navbar navbar-inverse">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -41,7 +41,7 @@
     <script src="jquery.min.js"></script>
 	<script src="jquery.mobile-1.4.5.min.js"></script>
     <script src="bootstrap.min.js"></script>
-    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 main-content">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 main-content" style="display:none;">
 
         <!-- Main content start -->
         @if (Model.AllRoots!= null && Model.AllRoots.Length > 1)
@@ -114,6 +114,7 @@
 					}
 					$(function(){
 					    $('.ui-loader').hide();
+					    $('.main-content').show();
 					    $.event.special.tap.tapholdThreshold = 300;
 					    $.event.special.tap.emitTapOnTaphold = false;
 					    $('.chord-layout').bind('taphold', function(){
@@ -131,7 +132,7 @@
 	                            }
 	                        });
 					    });
-					});
+					});					
             </script>
 	        }
 			</div>

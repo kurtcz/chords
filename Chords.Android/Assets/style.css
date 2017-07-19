@@ -8,6 +8,7 @@
 }
 
 .main-content {
+    margin-top: 30px;
     padding-bottom: 30px;
 }
 
@@ -268,4 +269,10 @@ footer {
     width: 100%;
     height: 30px;
     background-color: white;
+}
+
+.navbar-fixed-top {
+    position: fixed;
+    top: 0;
+    width: 100%;
 }

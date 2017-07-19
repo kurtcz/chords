@@ -38,7 +38,7 @@ public Chords.Android.Models.ShowChordModel Model { get; set; }
 
 public override void Execute()
 {
-WriteLiteral("﻿");
+WriteLiteral("﻿﻿");
 
 WriteLiteral("<!DOCTYPE html>\n<html>\n<head>\n    <link");
 
@@ -60,7 +60,7 @@ WriteLiteral(" href=\"bootstrap-toggle.min.css\"");
 
 WriteLiteral(" />\n</head>\n<body>\n    <nav");
 
-WriteLiteral(" class=\"navbar navbar-inverse\"");
+WriteLiteral(" class=\"navbar navbar-inverse navbar-fixed-top\"");
 
 WriteLiteral(">\n        <div");
 
@@ -148,6 +148,8 @@ WriteLiteral(" class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 main-content\"");
 WriteLiteral(">\n\n\t\t<!-- Main content start -->\n\t    <nav");
 
 WriteLiteral(" class=\"navbar navbar-inverse\"");
+
+WriteLiteral(" style=\"margin-top:40px;\"");
 
 WriteLiteral(">\n\t        <div");
 
