@@ -1,4 +1,4 @@
-﻿﻿﻿@inherits PortableRazor.ViewBase
+﻿﻿@inherits PortableRazor.ViewBase
 @using System.Text.RegularExpressions
 @using PortableRazor.Web.Mvc
 @using Chords.Core.Extensions
@@ -64,8 +64,8 @@
                     
                 <div class="navbar-strict-collapse collapse">
                     <ul class="nav navbar-nav">
-						<li><a href="hybrid:FindChord?conv=@Model.conv&strict=true&note=@notes">Strict (@Model.Notes[1].ToString(Model.conv)<sub>#</sub> ≠ @Model.Notes[4].ToString(Model.conv)<sub>b</sub>)</a></li>
-                        <li><a href="hybrid:FindChord?conv=@Model.conv&strict=false&note=@notes">Loose (@Model.Notes[1].ToString(Model.conv)<sub>#</sub> = @Model.Notes[4].ToString(Model.conv)<sub>b</sub>)</a></li>
+						<li><a href="hybrid:FindChord?conv=@Model.conv&strict=true&note=@notes">Strict mode (@Model.Notes[1].ToString(Model.conv)<sub>#</sub> ≠ @Model.Notes[4].ToString(Model.conv)<sub>b</sub>)</a></li>
+                        <li><a href="hybrid:FindChord?conv=@Model.conv&strict=false&note=@notes">Loose mode (@Model.Notes[1].ToString(Model.conv)<sub>#</sub> = @Model.Notes[4].ToString(Model.conv)<sub>b</sub>)</a></li>
                     </ul>
                 </div>
             </div>

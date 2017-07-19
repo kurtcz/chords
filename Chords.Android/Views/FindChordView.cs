@@ -50,7 +50,7 @@ public Chords.Android.Models.FindChordModel Model { get; set; }
 
 public override void Execute()
 {
-WriteLiteral("﻿﻿");
+WriteLiteral("﻿");
 
 
 #line 6 "FindChordView.cshtml"
@@ -315,11 +315,11 @@ WriteAttribute ("href", " href=\"", "\""
 #line hidden
 , false)
 );
-WriteLiteral(">Strict (");
+WriteLiteral(">Strict mode (");
 
 
 #line 67 "FindChordView.cshtml"
-                                                                                                   Write(Model.Notes[1].ToString(Model.conv));
+                                                                                                        Write(Model.Notes[1].ToString(Model.conv));
 
 
 #line default
@@ -328,7 +328,7 @@ WriteLiteral("<sub>#</sub> ≠ ");
 
 
 #line 67 "FindChordView.cshtml"
-                                                                                                                                                      Write(Model.Notes[4].ToString(Model.conv));
+                                                                                                                                                           Write(Model.Notes[4].ToString(Model.conv));
 
 
 #line default
@@ -353,11 +353,11 @@ WriteAttribute ("href", " href=\"", "\""
 #line hidden
 , false)
 );
-WriteLiteral(">Loose (");
+WriteLiteral(">Loose mode (");
 
 
 #line 68 "FindChordView.cshtml"
-                                                                                                   Write(Model.Notes[1].ToString(Model.conv));
+                                                                                                        Write(Model.Notes[1].ToString(Model.conv));
 
 
 #line default
@@ -366,7 +366,7 @@ WriteLiteral("<sub>#</sub> = ");
 
 
 #line 68 "FindChordView.cshtml"
-                                                                                                                                                      Write(Model.Notes[4].ToString(Model.conv));
+                                                                                                                                                           Write(Model.Notes[4].ToString(Model.conv));
 
 
 #line default

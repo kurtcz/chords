@@ -38,7 +38,7 @@ public Chords.Android.Models.ShowChordModel Model { get; set; }
 
 public override void Execute()
 {
-WriteLiteral("﻿﻿");
+WriteLiteral("﻿");
 
 WriteLiteral("<!DOCTYPE html>\n<html>\n<head>\n    <link");
 
