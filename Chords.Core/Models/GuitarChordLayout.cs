@@ -1,4 +1,4 @@
-﻿﻿#if DEBUG
+﻿﻿﻿#if DEBUG
 //﻿#define TESTING
 #endif
 using System;
@@ -39,18 +39,24 @@ namespace Chords.Core.Models
         [JsonIgnore]
         public bool Complete { get; private set; }
 
-        public GuitarChordLayout(Chord chord, int[] positions)
+        public GuitarChordLayout(Chord chord, int[] positions, GuitarChordType? guitarChordType = null)
         {
             Chord = chord;
             Positions = positions;
-
 			Notes = GetUsedNotes();
-            foreach(var chordType in Enum.GetValues(typeof(GuitarChordType)).Cast<GuitarChordType>())
+            if (guitarChordType.HasValue)
             {
-                GuitarChordType = chordType;
-                if (IsValid(true))
+                GuitarChordType = guitarChordType.Value;
+            }
+            else
+            {
+                foreach (var chordType in Enum.GetValues(typeof(GuitarChordType)).Cast<GuitarChordType>())
                 {
-                    break;
+                    GuitarChordType = chordType;
+                    if (IsValid(true))
+                    {
+                        break;
+                    }
                 }
             }
 			Complete = Notes.Distinct().Count() == Chord.Notes.Count();
@@ -109,10 +115,7 @@ namespace Chords.Core.Models
             {
                 foreach (var guitarChordType in guitarChordTypes)
                 {
-                    var result = new GuitarChordLayout(chord, layout)
-                    {
-                        GuitarChordType = guitarChordType
-                    };
+                    var result = new GuitarChordLayout(chord, layout, guitarChordType);
                     var b = result.IsValid(allowPartial) &&
                             result.Fret <= maxFret;
                     if (b)
