@@ -67,7 +67,11 @@ WriteLiteral(" rel=\"stylesheet\"");
 
 WriteLiteral(" href=\"bootstrap.min.css\"");
 
-WriteLiteral(" />\n</head>\n<body>\n    <nav");
+WriteLiteral(" />\n</head>\n<body");
+
+WriteLiteral(" class=\"top-50\"");
+
+WriteLiteral(">\n    <nav");
 
 WriteLiteral(" class=\"navbar navbar-inverse navbar-fixed-top\"");
 
@@ -492,12 +496,45 @@ WriteLiteral(" results\n");
 
 
 #line 91 "ShowChordLayoutsView.cshtml"
-	                
+					
 
 #line default
 #line hidden
 
 #line 91 "ShowChordLayoutsView.cshtml"
+                     if (Model.ShowTips)
+					{
+
+
+#line default
+#line hidden
+WriteLiteral("\t\t\t\t        <div");
+
+WriteLiteral(" class=\"alert alert-info\"");
+
+WriteLiteral(">\n\t\t\t\t            <button");
+
+WriteLiteral(" type=\"button\"");
+
+WriteLiteral(" class=\"close\"");
+
+WriteLiteral(" data-dismiss=\"alert\"");
+
+WriteLiteral(">&times;</button>\n\t\t\t\t            <strong>Tip:</strong> Tap a diagram to listen t" +
+"o audio playback.<br />\n\t\t\t\t\t\t    Tap and hold to add a diagram to favorites.\n\t\t" +
+"\t\t        </div>\n");
+
+
+#line 98 "ShowChordLayoutsView.cshtml"
+					}
+
+
+#line default
+#line hidden
+WriteLiteral("\t                ");
+
+
+#line 99 "ShowChordLayoutsView.cshtml"
                      foreach(var layout in Model.Layouts)
 	                {
 					    var positions = string.Join(",", layout.IntPositions.Select(i => i.ToString()).ToArray());
@@ -513,7 +550,7 @@ WriteLiteral(" class=\"chord-layout\"");
 WriteLiteral(" data-favorite=\"");
 
 
-#line 95 "ShowChordLayoutsView.cshtml"
+#line 103 "ShowChordLayoutsView.cshtml"
                                                              Write(layout.Favorite);
 
 
@@ -524,7 +561,7 @@ WriteLiteral("\"");
 WriteLiteral(" data-positions=\"");
 
 
-#line 95 "ShowChordLayoutsView.cshtml"
+#line 103 "ShowChordLayoutsView.cshtml"
                                                                                                 Write(positions);
 
 
@@ -535,7 +572,7 @@ WriteLiteral("\"");
 WriteAttribute ("onclick", " onclick=\"", "\""
 , Tuple.Create<string,object,bool> ("", "playChord(\'", true)
 
-#line 95 "ShowChordLayoutsView.cshtml"
+#line 103 "ShowChordLayoutsView.cshtml"
                                                                                               , Tuple.Create<string,object,bool> ("", positions
 
 #line default
@@ -548,7 +585,7 @@ WriteLiteral(">\n");
 WriteLiteral("\t                        ");
 
 
-#line 96 "ShowChordLayoutsView.cshtml"
+#line 104 "ShowChordLayoutsView.cshtml"
                         Write(layout.Schema);
 
 
@@ -557,7 +594,7 @@ WriteLiteral("\t                        ");
 WriteLiteral("\n\t                    </div>\n");
 
 
-#line 98 "ShowChordLayoutsView.cshtml"
+#line 106 "ShowChordLayoutsView.cshtml"
 	                }
 
 
@@ -600,7 +637,7 @@ WriteLiteral(@">
 					                root: '");
 
 
-#line 128 "ShowChordLayoutsView.cshtml"
+#line 136 "ShowChordLayoutsView.cshtml"
                                       Write(Model.ChordDecorator.Root);
 
 
@@ -609,7 +646,7 @@ WriteLiteral(@">
 WriteLiteral("\',\n\t\t\t\t\t                type: \'");
 
 
-#line 129 "ShowChordLayoutsView.cshtml"
+#line 137 "ShowChordLayoutsView.cshtml"
                                       Write(Model.ChordDecorator.ChordType.ToDescription());
 
 
@@ -618,7 +655,7 @@ WriteLiteral("\',\n\t\t\t\t\t                type: \'");
 WriteLiteral("\',\n\t\t\t\t\t                conv: \'");
 
 
-#line 130 "ShowChordLayoutsView.cshtml"
+#line 138 "ShowChordLayoutsView.cshtml"
                                       Write(Model.conv);
 
 
@@ -628,7 +665,7 @@ WriteLiteral("\',\n\t\t\t\t\t                positions: positions\n\t           
 "                    });\n\t\t\t\t\t    });\n\t\t\t\t\t});\t\t\t\t\t\n            </script>\n");
 
 
-#line 137 "ShowChordLayoutsView.cshtml"
+#line 145 "ShowChordLayoutsView.cshtml"
 	        }
 
 
@@ -637,7 +674,7 @@ WriteLiteral("\',\n\t\t\t\t\t                positions: positions\n\t           
 WriteLiteral("\t\t\t</div>\n");
 
 
-#line 139 "ShowChordLayoutsView.cshtml"
+#line 147 "ShowChordLayoutsView.cshtml"
 		}
 
 

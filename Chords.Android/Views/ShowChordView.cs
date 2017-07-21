@@ -149,8 +149,6 @@ WriteLiteral(">\n\n\t\t<!-- Main content start -->\n\t    <nav");
 
 WriteLiteral(" class=\"navbar navbar-inverse\"");
 
-WriteLiteral(" style=\"margin-top:40px;\"");
-
 WriteLiteral(">\n\t        <div");
 
 WriteLiteral(" class=\"container\"");

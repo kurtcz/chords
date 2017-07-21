@@ -19,7 +19,7 @@ using System.Collections.Generic;
 
 namespace Chords.Android
 {
-    [Activity(Label = "Chords", MainLauncher = true, Icon = "@mipmap/icon")]
+    [Activity(Label = "Guitar Chords", MainLauncher = true, Icon = "@mipmap/icon")]
     public class MainActivity : Activity
     {
         private static Bundle _bundle;
@@ -272,7 +272,8 @@ namespace Chords.Android
                     AllowPartial = _allowPartial,
                     AllowSpecial = _currentSettings.AllowSpecial,
 					AllRoots = _allRoots,
-					AllChordTypes = _allChordTypes
+					AllChordTypes = _allChordTypes,
+                    ShowTips = _currentSettings.ShowTips,
 				};
                 model.Populate(parameters);
 
@@ -529,6 +530,10 @@ namespace Chords.Android
                 _currentSettings.Populate(parameters);
                 _currentSettings.Save();
 
+                if (!string.IsNullOrEmpty(parameters["silent"]))
+                {
+                    return;
+                }
                 var template = new SettingsView() { Model = _currentSettings };
 				var page = template.GenerateString();
 

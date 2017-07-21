@@ -62,7 +62,11 @@ WriteLiteral(" rel=\"stylesheet\"");
 
 WriteLiteral(" href=\"bootstrap.min.css\"");
 
-WriteLiteral(" />\n</head>\n<body>\n    <nav");
+WriteLiteral(" />\n</head>\n<body");
+
+WriteLiteral(" class=\"top-50\"");
+
+WriteLiteral(">\n    <nav");
 
 WriteLiteral(" class=\"navbar navbar-inverse navbar-fixed-top\"");
 
@@ -373,7 +377,7 @@ WriteLiteral(@"',
     </div>
     <hr />
     <footer>
-        <p>&copy; 2017 - Tomáš Němec</p>
+        <p>&copy; 2017 - TomÃ¡Å¡ NÄmec</p>
     </footer>
 </body>
 </html>

@@ -39,7 +39,7 @@
     </nav>
     <script src="jquery.min.js"></script>
     <script src="bootstrap.min.js"></script>
-    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 main-content" style="display:none;">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 main-content">
 
 		<!-- Main content start -->
 		@if (Model.AllRoots!= null && Model.AllRoots.Length > 1)
@@ -85,7 +85,6 @@
 			<div id="loader"></div>
 			<script>
 				$(document).ready(function (){
-				    $('.main-content').show();
 	                $.ajax({
 	                    url: 'hybrid:ShowChordLayouts',
 	                    type: 'get',

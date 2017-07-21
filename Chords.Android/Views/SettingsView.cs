@@ -153,8 +153,6 @@ WriteLiteral(">\n\n        <!-- Main content start -->\n        <nav");
 
 WriteLiteral(" class=\"navbar navbar-inverse\"");
 
-WriteLiteral(" style=\"margin-top:20px;\"");
-
 WriteLiteral(">\n            <div");
 
 WriteLiteral(" class=\"container\"");
@@ -573,12 +571,100 @@ WriteLiteral(" />\n");
 #line hidden
 WriteLiteral("\t\t\t</span>\n        </div>\n        <div");
 
+WriteLiteral(" class=\"row vertical-align\"");
+
+WriteLiteral(" style=\"margin-bottom: 20px;\"");
+
+WriteLiteral(">\n            <span");
+
+WriteLiteral(" class=\"col-xs-9 col-sm-9 col-md-9 col-lg-9\"");
+
+WriteLiteral(">Show tips</span>\n            <span");
+
+WriteLiteral(" class=\"col-xs-3 col-sm-3 col-md-3 col-lg-3 justify-right\"");
+
+WriteLiteral(">\n");
+
+
+#line 125 "SettingsView.cshtml"
+            
+
+#line default
+#line hidden
+
+#line 125 "SettingsView.cshtml"
+             if (Model.ShowTips)
+            {
+
+
+#line default
+#line hidden
+WriteLiteral("                <input");
+
+WriteLiteral(" type=\"checkbox\"");
+
+WriteLiteral(" id=\"tips\"");
+
+WriteLiteral(" name=\"tips\"");
+
+WriteLiteral(" value=\"true\"");
+
+WriteLiteral(" data-toggle=\"toggle\"");
+
+WriteLiteral(" data-on=\"Yes\"");
+
+WriteLiteral(" data-off=\"No\"");
+
+WriteLiteral(" checked=\"checked\"");
+
+WriteLiteral(" style=\"display: none;\"");
+
+WriteLiteral(" />\n");
+
+
+#line 128 "SettingsView.cshtml"
+            }
+            else
+            {
+
+
+#line default
+#line hidden
+WriteLiteral("                <input");
+
+WriteLiteral(" type=\"checkbox\"");
+
+WriteLiteral(" id=\"tips\"");
+
+WriteLiteral(" name=\"tips\"");
+
+WriteLiteral(" value=\"true\"");
+
+WriteLiteral(" data-toggle=\"toggle\"");
+
+WriteLiteral(" data-on=\"Yes\"");
+
+WriteLiteral(" data-off=\"No\"");
+
+WriteLiteral(" style=\"display: none;\"");
+
+WriteLiteral(" />\n");
+
+
+#line 132 "SettingsView.cshtml"
+            }
+
+
+#line default
+#line hidden
+WriteLiteral("            </span>\n        </div>\n        <div");
+
 WriteLiteral(" class=\"error\"");
 
 WriteLiteral(">");
 
 
-#line 122 "SettingsView.cshtml"
+#line 135 "SettingsView.cshtml"
                       Write(Model.Error);
 
 
@@ -607,6 +693,10 @@ WriteLiteral(@">
                 $('#special').on('change', function(){
                     var val = $(this).prop('checked');
                     location.href = 'hybrid:Settings?special=' + val;
+                });
+                $('#tips').on('change', function(){
+                    var val = $(this).prop('checked');
+                    location.href = 'hybrid:Settings?tips=' + val;
                 });
 			});
 		</script>

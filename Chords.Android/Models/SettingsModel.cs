@@ -15,6 +15,7 @@ namespace Chords.Android.Models
         public bool ShowBasicChordTypes { get; set; } = true;
         public bool AllowBarre { get; set; } = true;
         public bool AllowSpecial { get; set; } = false;
+        public bool ShowTips { get; set; } = true;
         public string Error { get; set; }
 
 		public readonly NamingConvention[] NamingConventions = Enum.GetValues(typeof(NamingConvention))
@@ -58,6 +59,10 @@ namespace Chords.Android.Models
 			if (bool.TryParse(parameters["barre"], out special))
 			{
 				this.AllowBarre = special;
+			}
+			if (bool.TryParse(parameters["tips"], out special))
+			{
+                this.ShowTips = special;
 			}
 		}
 

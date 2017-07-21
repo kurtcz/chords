@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="bootstrap.min.css" />
 </head>
-<body>
+<body class="top-50">
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -88,6 +88,14 @@
 	            <h4>Chord diagrams:</h4>
 	            <p>
 	                @Model.Layouts.Length results
+					@if (Model.ShowTips)
+					{
+				        <div class="alert alert-info">
+				            <button type="button" class="close" data-dismiss="alert">&times;</button>
+				            <strong>Tip:</strong> Tap a diagram to listen to audio playback.<br />
+						    Tap and hold to add a diagram to favorites.
+				        </div>
+					}
 	                @foreach(var layout in Model.Layouts)
 	                {
 					    var positions = string.Join(",", layout.IntPositions.Select(i => i.ToString()).ToArray());

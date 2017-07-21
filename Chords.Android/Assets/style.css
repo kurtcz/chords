@@ -1,15 +1,21 @@
 ﻿body {
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none;
+    padding-top: 70px;
+}
+
+body.top-50 {
+    padding-top: 50px;
 }
 
 .main-content {
-    margin-top: 30px;
     padding-bottom: 30px;
+    /*border: 1px solid red;*/
+}
+
+.main-content [class^="col-"],
+.main-content [class*="col-"] {
+    margin-top: 0;
+    padding-top: 0;
 }
 
 nav {
