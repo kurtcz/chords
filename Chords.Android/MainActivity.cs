@@ -24,6 +24,7 @@ namespace Chords.Android
     {
         private static Bundle _bundle;
         private WebView _webView;
+        private HybridWebViewClient _viewClient;
 		private static SoundPool _soundPool;
         private static int[] _soundIds;
         private static int[] _nextStringPosition =
@@ -48,8 +49,8 @@ namespace Chords.Android
             _webView.Settings.JavaScriptEnabled = true;
 
             // Use subclassed WebViewClient to intercept hybrid native calls
-            var viewClient = new HybridWebViewClient();
-            _webView.SetWebViewClient(viewClient);
+            _viewClient = new HybridWebViewClient();
+            _webView.SetWebViewClient(_viewClient);
             _webView.LongClick += (object sender, View.LongClickEventArgs e) => { e.Handled = true; };
 
             if (_soundPool == null)
@@ -65,7 +66,7 @@ namespace Chords.Android
             }
             if (_bundle == null)
             {
-                viewClient.ShowChord(_webView, new NameValueCollection());
+                _viewClient.ShowChord(_webView, new NameValueCollection());
             }
             else
             {
@@ -83,13 +84,21 @@ namespace Chords.Android
 
         public override bool OnKeyDown(Keycode keyCode, KeyEvent e)
         {
-            if (e.Action == KeyEventActions.Down &&
-                keyCode == Keycode.Back &&
-                _webView.CanGoBack())
+            if (e.Action == KeyEventActions.Down)
             {
-                _webView.GoBack();
+                if (keyCode == Keycode.Menu)
+                {
+                    _viewClient.Settings(_webView, new NameValueCollection());
 
-                return true;
+                    return true;
+                }
+                else if (keyCode == Keycode.Back &&
+                    _webView.CanGoBack())
+                {
+                    _webView.GoBack();
+
+                    return true;
+                }
             }
 
             return base.OnKeyDown(keyCode, e);

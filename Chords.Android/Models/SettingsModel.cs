@@ -38,7 +38,6 @@ namespace Chords.Android.Models
             int maxFret;
             bool basicChordTypes;
             bool special;
-            bool barre;
 
             if(Enum.TryParse(parameters["conv"], out conv))
             {

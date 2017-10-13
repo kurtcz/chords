@@ -39,7 +39,7 @@ namespace Chords.Android
                                     throw new Exception();
                                 }
                             }
-                            catch(Exception ex)
+                            catch
                             {
                                 chordLayouts.Remove(layout);
                             }

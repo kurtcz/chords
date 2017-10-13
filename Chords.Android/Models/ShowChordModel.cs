@@ -43,7 +43,6 @@ namespace Chords.Android.Models
         public void Populate(NameValueCollection parameters)
         {
             Note root = null;
-            ChordType chordType = 0;
 
             if(Note.TryParse(parameters["root"], NamingConvention.English, out root))
             {
