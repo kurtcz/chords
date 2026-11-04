@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="500" viewBox="0 0 1024 500">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="45%" r="70%">
+      <stop offset="0" stop-color="#0B4A92"/>
+      <stop offset="1" stop-color="#001B3D"/>
+    </radialGradient>
+  </defs>
+  <rect width="1024" height="500" fill="url(#bg)"/>
+  <path d="M44.931,1.134c-15.861,0-54.806,5.91-25.929,56.296c12.353,21.55,21.042,31.437,26.01,31.437c4.969,0,13.659-9.887,26.012-31.437C99.901,7.043,60.792,1.134,44.931,1.134z" fill="#0365C0" transform="translate(251 -8) scale(5.8)"/>
+  <path d="M59.65,49.304c0,3.564-4.095,4.844-6.729,4.844c-3.713,0-6.726-2.167-6.726-4.844c0-2.673,3.013-4.84,6.726-4.84c1.607,0,3.083,0.406,4.241,1.08c0,0,0-9.399,0-15.722L39.36,31.718v19.75c0,3.561-4.095,4.84-6.729,4.84c-3.714,0-6.726-2.167-6.726-4.84c0-2.678,3.011-4.844,6.726-4.844c1.607,0,3.082,0.405,4.241,1.082c0,0,0-20.322,0-21.22c0-0.898,0.759-1.094,1.24-1.145c0.485-0.053,20.292-2.163,20.292-2.163c0.93-0.061,1.247,0.36,1.247,1.454V49.304z" fill="#FFFFFF" transform="translate(251 -8) scale(5.8)"/>
+  <text x="512" y="402" text-anchor="middle" fill="#FFFFFF" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-weight="700" font-size="92">Chord Expert</text>
+  <text x="512" y="472" text-anchor="middle" fill="#FFFFFF" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="36">Play any chord on guitar, ukulele, banjo and more!</text>
+</svg>
