@@ -118,6 +118,11 @@ namespace Chords.App.Models
                 sb.Append(Line(P(A(loBarreString), f), end, "blue", 5));
                 sb.Append($"\t\t<circle cx=\"{end.X}\" cy=\"{end.Y}\" r=\"2\" fill=\"blue\" stroke=\"blue\" stroke-width=\"1\" />\n");
             }
+            else if (BarreStrings() is (int first, int last))
+            {
+                var f = (IntPositions[first] - RenderingFret) * 40;
+                sb.Append(Line(P(A(first), f), P(A(last), f), "blue", 5));
+            }
             for (var s = 0; s < strings; s++)
             {
                 //muted string
@@ -147,6 +152,29 @@ namespace Chords.App.Models
             sb.AppendLine("\t</svg>");
 
             return new MarkupString(sb.ToString());
+        }
+
+        /// <summary>
+        /// Barre of instruments other than the guitar (whose chord types say it): the index finger across
+        /// at least three strings at the lowest pressed fret, with no open or muted string under it.
+        /// </summary>
+        private (int First, int Last)? BarreStrings()
+        {
+            if (_layout.Instrument == Instrument.Guitar || !IntPositions.Any(i => i > 0))
+            {
+                return null;
+            }
+            var fret = IntPositions.Where(i => i > 0).Min();
+            var first = Array.IndexOf(IntPositions, fret);
+            var last = Array.LastIndexOf(IntPositions, fret);
+
+            if (IntPositions.Count(i => i == fret) < 3 ||
+                IntPositions.Skip(first).Take(last - first + 1).Any(i => i < fret))
+            {
+                return null;
+            }
+
+            return (first, last);
         }
 
 		public override string ToString()

@@ -112,7 +112,7 @@ namespace Chords.Core.Models
                 }
             }
 
-            var layouts = GetPositionsForStrings(positionsPerString, stringNotes, instrument == Instrument.Guitar, 0).ToArray();
+            var layouts = GetPositionsForStrings(positionsPerString, stringNotes, info, 0).ToArray();
 #if TESTING
             var k = 0;
             layouts = layouts.Skip(k).ToArray();
@@ -150,9 +150,10 @@ namespace Chords.Core.Models
             return results.Distinct();
         }
 
-        private static IEnumerable<int[]> GetPositionsForStrings(HashSet<int>[] positionsPerString, Note[][] stringNotes, bool guitar, int s)
+        private static IEnumerable<int[]> GetPositionsForStrings(HashSet<int>[] positionsPerString, Note[][] stringNotes, InstrumentInfo info, int s)
         {
             var count = positionsPerString.Length;
+            var guitar = info == InstrumentInfo.Guitar;
 
             if (s == count - 1)
             {
@@ -167,7 +168,7 @@ namespace Chords.Core.Models
             }
             foreach (var pos in positionsPerString[s])
             {
-                var positions0 = GetPositionsForStrings(positionsPerString, stringNotes, guitar, s + 1);
+                var positions0 = GetPositionsForStrings(positionsPerString, stringNotes, info, s + 1);
 
                 foreach (var pos0 in positions0)
                 {
@@ -176,9 +177,11 @@ namespace Chords.Core.Models
                     pos0.CopyTo(positions, 0);
                     positions[s] = pos;
                     //TODO: implement 1st 3 checks from IsValid() here
-                    //(guitars may only mute strings at the bass side or a single string in the middle)
+                    //(guitars may only mute strings at the bass side or a single string in the middle);
+                    //a short drone string may double its neighbour
                     if ((pos == X && (!guitar || s == 0 || positions[s + 1] != X)) ||
-                        (pos != X && (positions[s + 1] == X || stringNotes[s+1][positions[s + 1]] != stringNotes[s][positions[s]])))
+                        (pos != X && (positions[s + 1] == X || info.IsShortString(s) || info.IsShortString(s + 1) ||
+                                      stringNotes[s+1][positions[s + 1]] != stringNotes[s][positions[s]])))
                     {
                         yield return positions;
                     }
@@ -227,10 +230,18 @@ namespace Chords.Core.Models
             {
                 return false;
             }
-            //do not allow same notes to follow each other immediately
-            if (Notes.Where((note, idx) => idx < Notes.Length - 1 && note.Tone == Notes[idx + 1].Tone).Any())
+            //do not allow same notes on neighbouring strings, except next to a short drone string (banjo's 5th),
+            //which rings along in most banjo chords
+            var info = InstrumentInfo;
+            var stringNotes = StringNotes(Instrument);
+            for (var s = 0; s < Positions.Length - 1; s++)
             {
-                return false;
+                if (Positions[s] != X && Positions[s + 1] != X &&
+                    !info.IsShortString(s) && !info.IsShortString(s + 1) &&
+                    stringNotes[s][Positions[s]] == stringNotes[s + 1][Positions[s + 1]])
+                {
+                    return false;
+                }
             }
             //distance between positions should not exceed 4 frets
             var usedPositions = Positions.Where(i => i > 0).ToArray();
