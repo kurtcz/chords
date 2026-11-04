@@ -1,0 +1,96 @@
+@page "/find"
+@using System.Text.RegularExpressions
+@inject AppState State
+@inject NavigationManager Nav
+
+<TopNav Title="Find chord name" />
+
+<DropdownBar>
+    <Brand>@ModeText(State.StrictFind)</Brand>
+    <ChildContent>
+        <li><a @onclick="() => State.StrictFind = true">@ModeText(true)</a></li>
+        <li><a @onclick="() => State.StrictFind = false">@ModeText(false)</a></li>
+    </ChildContent>
+</DropdownBar>
+<div class="text-center" style="margin-top:20px;">
+    @foreach (var row in notes.Chunk(5))
+    {
+        <div style="padding-bottom:5px;">
+            @foreach (var (html, value) in row)
+            {
+                <Toggle Value="State.FindNotes.Contains(value)" ValueChanged="on => SetNote(value, on)" Width="100px"
+                        On="@(b => b.AddMarkupContent(0, html.Value))" Off="@(b => b.AddMarkupContent(0, html.Value))" />
+                <span> </span>
+            }
+        </div>
+    }
+</div>
+<div style="margin-top:20px;">
+    <button type="button" class="btn btn-default btn-lg" style="width:100%;" @onclick="Find">Find</button>
+</div>
+<div class="error">@error</div>
+
+@code {
+    private readonly FindChordModel model = new();
+    private NamingConvention conv;
+    private (MarkupString Html, string Value)[] notes;
+    private string error;
+
+    protected override void OnInitialized()
+    {
+        conv = State.Settings.conv;
+        notes = model.AllNotes[conv]
+            .Select(html => (html, Regex.Replace(html.Value, "<.*?>", string.Empty)))
+            .ToArray();
+        if (State.FindNotesConvention != conv)
+        {
+            State.FindNotes.Clear();
+            State.FindNotesConvention = conv;
+        }
+    }
+
+    private RenderFragment ModeText(bool strict) =>@<text>@(strict ? "Strict" : "Loose") mode (@model.Notes[0].ToString(conv)<sub>#</sub> @(strict ? "≠" : "=") @model.Notes[3].ToString(conv)<sub>b</sub>)</text>;
+
+    private void SetNote(string value, bool on)
+    {
+        error = null;
+        if (on)
+        {
+            State.FindNotes.Add(value);
+        }
+        else
+        {
+            State.FindNotes.Remove(value);
+        }
+    }
+
+    private void Find()
+    {
+        error = null;
+        var selected = State.FindNotes
+            .Select(i => Note.TryParse(i, conv, out var note) ? note : null)
+            .Where(i => i != null)
+            .ToArray();
+
+        if (selected.Length == 0)
+        {
+            return;
+        }
+        var chords = Chord.Find(selected, State.StrictFind);
+
+        if (chords.Length == 0)
+        {
+            error = "No chord found";
+            return;
+        }
+        var chord = chords[0];
+        string roots = null, types = null;
+
+        if (chords.Length > 1)
+        {
+            roots = string.Join(",", chords.Select(i => i.Root.ToString()));
+            types = string.Join(",", chords.Select(i => i.ChordType.ToDescription()));
+        }
+        Nav.NavigateTo(ChordPage.Url(chord.Root, chord.ChordType.ToDescription(), true, roots, types));
+    }
+}

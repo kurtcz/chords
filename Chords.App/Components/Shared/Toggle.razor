@@ -1,0 +1,24 @@
+@* Same markup as the bootstrap-toggle jQuery plugin the old app used, driven by Blazor. *@
+<div class="toggle btn @(Value ? "btn-primary" : "btn-default off")" style="width: @Width; height: @Height;"
+     @onclick="ToggleValue">
+    <div class="toggle-group">
+        <label class="btn btn-primary toggle-on">@(On ?? (RenderFragment)(b => b.AddContent(0, "Yes")))</label>
+        <label class="btn btn-default active toggle-off">@(Off ?? (RenderFragment)(b => b.AddContent(0, "No")))</label>
+        <span class="toggle-handle btn btn-default"></span>
+    </div>
+</div>
+
+@code {
+    [Parameter] public bool Value { get; set; }
+    [Parameter] public EventCallback<bool> ValueChanged { get; set; }
+    [Parameter] public RenderFragment On { get; set; }
+    [Parameter] public RenderFragment Off { get; set; }
+    [Parameter] public string Width { get; set; } = "62px";
+    [Parameter] public string Height { get; set; } = "34px";
+
+    private async Task ToggleValue()
+    {
+        Value = !Value;
+        await ValueChanged.InvokeAsync(Value);
+    }
+}

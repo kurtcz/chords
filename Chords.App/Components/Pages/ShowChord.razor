@@ -1,0 +1,54 @@
+@page "/"
+@inject AppState State
+@inject NavigationManager Nav
+
+<TopNav Title="Show chord chart" />
+
+<DropdownBar>
+    <Brand>@root.ToString(conv)</Brand>
+    <ChildContent>
+        @foreach (var note in model.Notes)
+        {
+            <li><a @onclick="() => root = note">@note.ToString(conv)</a></li>
+        }
+    </ChildContent>
+</DropdownBar>
+<DropdownBar>
+    <Brand>@typeText</Brand>
+    <ChildContent>
+        @foreach (var type in State.Settings.ShowBasicChordTypes ? model.BasicChordTypeList : model.ChordTypeList)
+        {
+            <li><a @onclick="() => { typeText = type.Key; typeValue = type.Value; }">@type.Key</a></li>
+        }
+    </ChildContent>
+</DropdownBar>
+<div class="row vertical-align" style="margin-bottom: 20px">
+    <span class="col-xs-9 col-sm-9 col-md-9 col-lg-9">Allow partial chords</span>
+    <span class="col-xs-3 col-sm-3 col-md-3 col-lg-3 justify-right">
+        <Toggle @bind-Value="partial" />
+    </span>
+</div>
+<div class="row">
+    <span class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <button type="button" class="btn btn-default btn-lg" style="width:100%" @onclick="Find">Find</button>
+    </span>
+</div>
+
+@code {
+    private readonly ShowChordModel model = new();
+    private NamingConvention conv;
+    private Note root;
+    private string typeText;
+    private string typeValue;
+    private bool partial = true;
+
+    protected override void OnInitialized()
+    {
+        conv = State.Settings.conv;
+        root = State.CurrentRoot ?? model.Notes[0];
+        typeText = State.CurrentChordType.ToDescription() ?? "Major";
+        typeValue = State.CurrentChordType.ToDescription() ?? string.Empty;
+    }
+
+    private void Find() => Nav.NavigateTo(ChordPage.Url(root, typeValue, partial));
+}

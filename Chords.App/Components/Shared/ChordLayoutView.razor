@@ -1,0 +1,66 @@
+@implements IDisposable
+@inject ChordPlayer Player
+
+@* Tap plays the chord, tap and hold toggles it as a favourite. *@
+<div class="chord-layout @(favorite ? "favorite" : null)"
+     @onpointerdown="PointerDown" @onpointerup="CancelHold" @onpointercancel="CancelHold" @onpointerleave="CancelHold"
+     @onclick="Click" @oncontextmenu:preventDefault="true">
+    @Layout.Schema
+</div>
+
+@code {
+    private const int HoldMilliseconds = 400;
+
+    [Parameter, EditorRequired] public GuitarChordLayoutDecorator Layout { get; set; }
+    [Parameter, EditorRequired] public Chord Chord { get; set; }
+
+    private bool favorite;
+    private bool held;
+    private CancellationTokenSource holdCts;
+
+    protected override void OnParametersSet() => favorite = Layout.Favorite;
+
+    private async Task PointerDown()
+    {
+        CancelHold();
+        held = false;
+        var cts = holdCts = new CancellationTokenSource();
+
+        try
+        {
+            await Task.Delay(HoldMilliseconds, cts.Token);
+        }
+        catch (TaskCanceledException)
+        {
+            return;
+        }
+        held = true;
+        favorite = Favorites.Toggle(Chord, Layout.Layout);
+        try
+        {
+            HapticFeedback.Default.Perform(HapticFeedbackType.LongPress);
+        }
+        catch
+        {
+            // Haptics are optional.
+        }
+    }
+
+    private void CancelHold()
+    {
+        holdCts?.Cancel();
+        holdCts = null;
+    }
+
+    private void Click()
+    {
+        if (held)
+        {
+            held = false;
+            return;
+        }
+        Player.PlayLayout(Layout.IntPositions);
+    }
+
+    public void Dispose() => CancelHold();
+}

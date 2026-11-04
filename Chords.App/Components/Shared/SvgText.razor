@@ -1,0 +1,10 @@
+@* SVG <text> element; Razor treats <text> inside code blocks as its own tag, so it lives here. *@
+<text text-anchor="middle" stroke="none" fill="@Fill" font-size="@FontSize" transform="@Transform" @onclick="OnClick">@ChildContent</text>
+
+@code {
+    [Parameter] public string Fill { get; set; }
+    [Parameter] public int FontSize { get; set; }
+    [Parameter] public string Transform { get; set; }
+    [Parameter] public EventCallback OnClick { get; set; }
+    [Parameter] public RenderFragment ChildContent { get; set; }
+}

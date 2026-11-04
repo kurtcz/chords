@@ -1,0 +1,49 @@
+@page "/favorites"
+@inject AppState State
+
+<TopNav Title="Favourite chords" />
+
+<div id="layouts" class="animate-bottom">
+    @if (chords.Length > 0)
+    {
+        @foreach (var (chord, decorator, layouts) in chords)
+        {
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <h2>@decorator.Symbols[0]</h2>
+                @foreach (var layout in layouts)
+                {
+                    <ChordLayoutView @key="layout" Layout="layout" Chord="chord" />
+                }
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <hr />
+            </div>
+        }
+    }
+    else
+    {
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="text-align: center;">
+            You have no favourite chord layouts.<br />
+            Tap and hold a chord layout to add it to favourites.
+        </div>
+    }
+</div>
+
+@code {
+    private (Chord Chord, ChordDecorator Decorator, GuitarChordLayoutDecorator[] Layouts)[] chords = [];
+
+    protected override void OnInitialized()
+    {
+        var conv = State.Settings.conv;
+
+        // Snapshot: un-favouriting a layout here only clears its star until the page is reopened.
+        chords = Favorites.Chords
+            .Where(kv => kv.Value.Count > 0)
+            .Select(kv => (kv.Key, new ChordDecorator(kv.Key, conv),
+                           kv.Value.Select(i => new GuitarChordLayoutDecorator(i, conv)).ToArray()))
+            .OrderBy(i => i.Key.Root.Tone)
+            .ThenBy(i => i.Key.Root.Accidental)
+            .ThenBy(i => i.Key.ChordType)
+            .ToArray();
+    }
+}

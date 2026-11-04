@@ -1,0 +1,34 @@
+@* Fixed main navigation bar with the page title and the app menu. *@
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" @onclick="() => open = !open">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <span class="navbar-brand">@Title</span>
+        </div>
+        <div class="navbar-collapse collapse @(open ? "in" : null)">
+            <ul class="nav navbar-nav" @onclick="() => open = false">
+                <li><a href="">Show chord chart</a></li>
+                <li><a href="find">Find chord name</a></li>
+                <li><a href="favorites">Favourite chords</a></li>
+                <li><a href="circle">Circle of fifths</a></li>
+                <li><a href="settings">Settings</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+@if (open)
+{
+    @* Tapping anywhere outside the menu closes it. *@
+    <div class="menu-backdrop" @onclick="() => open = false"></div>
+}
+
+@code {
+    [Parameter] public string Title { get; set; }
+
+    private bool open;
+}

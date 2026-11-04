@@ -1,0 +1,70 @@
+@page "/settings"
+@inject AppState State
+
+<TopNav Title="Settings" />
+
+<DropdownBar>
+    <Brand>@settings.conv.ToDescription()</Brand>
+    <ChildContent>
+        @foreach (var conv in settings.NamingConventions)
+        {
+            <li><a @onclick="() => Update(() => settings.conv = conv)">@conv.ToDescription() <sub>(@string.Join("-", settings.Notes.Select(i => i.ToString(conv))))</sub></a></li>
+        }
+    </ChildContent>
+</DropdownBar>
+<DropdownBar>
+    <Brand>@(settings.ShowBasicChordTypes ? "Basic chords" : "All chords")</Brand>
+    <ChildContent>
+        <li><a @onclick="() => Update(() => settings.ShowBasicChordTypes = true)">Basic chords</a></li>
+        <li><a @onclick="() => Update(() => settings.ShowBasicChordTypes = false)">All chords</a></li>
+    </ChildContent>
+</DropdownBar>
+<div class="row vertical-align">
+    <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">Highest fret:</div>
+    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 justify-right">
+        <div class="badge badge-inverse">@maxFret</div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <input type="range" min="1" max="15" step="1" value="@maxFret"
+               @oninput="e => maxFret = int.Parse((string)e.Value!)"
+               @onchange="e => Update(() => settings.maxFret = int.Parse((string)e.Value!))" />
+    </div>
+</div>
+<div class="row vertical-align" style="margin-bottom: 20px;">
+    <span class="col-xs-9 col-sm-9 col-md-9 col-lg-9">Allow barre chords</span>
+    <span class="col-xs-3 col-sm-3 col-md-3 col-lg-3 justify-right">
+        <Toggle Value="settings.AllowBarre" ValueChanged="v => Update(() => settings.AllowBarre = v)" />
+    </span>
+</div>
+<div class="row vertical-align" style="margin-bottom: 20px;">
+    <span class="col-xs-9 col-sm-9 col-md-9 col-lg-9">Allow chords with muted high strings</span>
+    <span class="col-xs-3 col-sm-3 col-md-3 col-lg-3 justify-right">
+        <Toggle Value="settings.AllowSpecial" ValueChanged="v => Update(() => settings.AllowSpecial = v)" />
+    </span>
+</div>
+<div class="row vertical-align" style="margin-bottom: 20px;">
+    <span class="col-xs-9 col-sm-9 col-md-9 col-lg-9">Show tips</span>
+    <span class="col-xs-3 col-sm-3 col-md-3 col-lg-3 justify-right">
+        <Toggle Value="settings.ShowTips" ValueChanged="v => Update(() => settings.ShowTips = v)" />
+    </span>
+</div>
+
+@code {
+    private SettingsModel settings;
+    private int maxFret;
+
+    protected override void OnInitialized()
+    {
+        settings = State.Settings;
+        maxFret = settings.maxFret;
+    }
+
+    private void Update(Action change)
+    {
+        change();
+        maxFret = settings.maxFret;
+        settings.Save();
+    }
+}

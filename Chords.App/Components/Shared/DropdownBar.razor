@@ -1,0 +1,26 @@
+@* An inline navbar that expands into a list of choices (used as a dropdown). *@
+<nav class="navbar navbar-inverse">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" @onclick="() => open = !open">
+                <span class="sr-only">Toggle</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <span class="navbar-brand" @onclick="() => open = !open">@Brand</span>
+        </div>
+        <div class="navbar-collapse collapse @(open ? "in" : null)">
+            <ul class="nav navbar-nav" @onclick="() => open = false">
+                @ChildContent
+            </ul>
+        </div>
+    </div>
+</nav>
+
+@code {
+    [Parameter] public RenderFragment Brand { get; set; }
+    [Parameter] public RenderFragment ChildContent { get; set; }
+
+    private bool open;
+}

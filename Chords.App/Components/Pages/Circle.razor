@@ -1,0 +1,88 @@
+@page "/circle"
+@using System.Globalization
+@inject AppState State
+@inject ChordPlayer Player
+
+<TopNav Title="Circle of fifths" />
+
+<div style="text-align: center;">
+    <svg class="circle-svg" width="320" height="320">
+        @foreach (var ring in Rings())
+        {
+            @for (var i = 1; i <= 12; i++)
+            {
+                var idx = (i + 5) % 12;
+                var id = ring.Circle[NamingConvention.English][idx];
+                var text = ring.Circle[conv][idx];
+                var color = ring.Highlighted(i) ? "#4d89d5" : "black";
+                var textColor = i == 1 && ring.OrangeKey ? "orange" : "white";
+                var mid = (i - 1) * 30.0;
+                var pos = PolarToCartesian(ring.TextRadius, mid);
+
+                <path d="@DescribeArc(ring.Radius, (i - 1.5) * 30, (i - 0.5) * 30)" fill="none" stroke="@color" stroke-width="30"
+                      @onclick="() => Player.PlayChord(id)" />
+                <SvgText Fill="@textColor" FontSize="ring.FontSize" Transform="@($"translate({F(pos.X)}, {F(pos.Y)}) rotate({F(mid)})")"
+                         OnClick="() => Player.PlayChord(id)">@text</SvgText>
+            }
+        }
+        @for (var i = 1; i <= 12; i++)
+        {
+            var end = PolarToCartesian(160, (i - 0.5) * 30);
+            <line x1="@C" y1="@C" x2="@F(end.X)" y2="@F(end.Y)" stroke="white" fill="white" stroke-width="3" />
+        }
+        <text x="160" y="170" fill="#4d89d5" stroke="none" font-size="32" text-anchor="middle">@model.Signature</text>
+        @if (model.index > 6)
+        {
+            <path fill="#4d89d5" stroke="none" d="M 0 300 l 40 -20 v 40 Z" @onclick="() => SetIndex(model.index - 1)" />
+        }
+        @if (model.index < 20)
+        {
+            <path fill="#4d89d5" stroke="none" d="M 320 300 l -40 20 v -40 Z" @onclick="() => SetIndex(model.index + 1)" />
+        }
+    </svg>
+</div>
+
+@code {
+    private const double C = 160;
+    private NamingConvention conv;
+    private CircleModel model;
+
+    private record Ring(Dictionary<NamingConvention, string[]> Circle, int Radius, int TextRadius, int FontSize, bool OrangeKey, Func<int, bool> Highlighted);
+
+    protected override void OnInitialized()
+    {
+        conv = State.Settings.conv;
+        SetIndex(State.CircleIndex);
+    }
+
+    private void SetIndex(int index)
+    {
+        model = new CircleModel(index);
+        State.CircleIndex = model.index;
+    }
+
+    private IEnumerable<Ring> Rings()
+    {
+        yield return new Ring(model.MajorCircle, 135, 125, 24, true, i => i is 1 or 2 or 12);
+        yield return new Ring(model.MinorCircle, 100, 95, 16, true, i => i is 1 or 2 or 12);
+        yield return new Ring(model.DiminishedCircle, 65, 60, 14, false, i => i == 1);
+    }
+
+    private static string F(double value) => value.ToString("0.###", CultureInfo.InvariantCulture);
+
+    private static (double X, double Y) PolarToCartesian(double radius, double angleInDegrees)
+    {
+        var angle = (angleInDegrees - 90) * Math.PI / 180.0;
+
+        return (C + radius * Math.Cos(angle), C + radius * Math.Sin(angle));
+    }
+
+    private static string DescribeArc(double radius, double startAngle, double endAngle)
+    {
+        var start = PolarToCartesian(radius, endAngle);
+        var end = PolarToCartesian(radius, startAngle);
+        var largeArc = endAngle - startAngle <= 180 ? "0" : "1";
+
+        return $"M {F(start.X)} {F(start.Y)} A {F(radius)} {F(radius)} 0 {largeArc} 0 {F(end.X)} {F(end.Y)}";
+    }
+}

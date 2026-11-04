@@ -1,0 +1,135 @@
+@page "/chord"
+@inject AppState State
+
+<TopNav Title="Show chord chart" />
+
+@if (allRoots.Length > 1)
+{
+    <h4 class="other-chords">
+        Chords found:
+        @for (var i = 0; i < allRoots.Length && i < allTypes.Length; i++)
+        {
+            var other = allRoots[i];
+            var otherType = allTypes[i];
+            @if (Note.TryParse(other, NamingConvention.English, out var otherRoot))
+            {
+                <a href="@Url(otherRoot, otherType, Partial, Roots, Types)">@otherRoot.ToString(conv)@otherType</a>
+                @(" ")
+            }
+        }
+    </h4>
+}
+@if (decorator != null)
+{
+    <h2>@decorator.Symbols[0]</h2>
+
+    @if (decorator.Symbols.Length > 1)
+    {
+        <h4>Other symbols:</h4>
+        @foreach (var otherSymbol in decorator.Symbols.Skip(1))
+        {
+            <span>@otherSymbol </span>
+        }
+    }
+    <h4>Chord intervals:</h4>
+    <p>
+        @foreach (var interval in decorator.Intervals)
+        {
+            <span>@interval </span>
+        }
+    </p>
+    <h4>Chord notes:</h4>
+    <p>
+        @foreach (var note in decorator.Notes)
+        {
+            <span>@note </span>
+        }
+    </p>
+}
+<div class="error">@error</div>
+@if (decorator != null && layouts == null)
+{
+    <div id="loader"></div>
+}
+@if (layouts != null)
+{
+    <div id="layouts" class="animate-bottom">
+        <h4>Chord diagrams:</h4>
+        <p>@layouts.Length results</p>
+        @if (State.Settings.ShowTips && !tipClosed)
+        {
+            <div class="alert alert-info">
+                <button type="button" class="close" @onclick="() => tipClosed = true">&times;</button>
+                <strong>Tip:</strong> Tap a diagram to listen to audio playback.<br />
+                Tap and hold to add a diagram to favorites.
+            </div>
+        }
+        @foreach (var layout in layouts)
+        {
+            <ChordLayoutView @key="layout" Layout="layout" Chord="chord" />
+        }
+    </div>
+}
+
+@code {
+    [SupplyParameterFromQuery(Name = "root")] public string Root { get; set; }
+    [SupplyParameterFromQuery(Name = "type")] public string Type { get; set; }
+    [SupplyParameterFromQuery(Name = "partial")] public bool Partial { get; set; }
+    [SupplyParameterFromQuery(Name = "roots")] public string Roots { get; set; }
+    [SupplyParameterFromQuery(Name = "types")] public string Types { get; set; }
+
+    private NamingConvention conv;
+    private Chord chord;
+    private ChordDecorator decorator;
+    private GuitarChordLayoutDecorator[] layouts;
+    private string error;
+    private bool tipClosed;
+    private string[] allRoots = [];
+    private string[] allTypes = [];
+
+    /// <summary>Chord roots and types are passed in English naming convention.</summary>
+    public static string Url(Note root, string type, bool partial, string roots = null, string types = null)
+    {
+        var url = $"chord?root={Uri.EscapeDataString(root.ToString())}&type={Uri.EscapeDataString(type ?? string.Empty)}&partial={partial}";
+
+        if (!string.IsNullOrEmpty(roots))
+        {
+            url += $"&roots={Uri.EscapeDataString(roots)}&types={Uri.EscapeDataString(types ?? string.Empty)}";
+        }
+
+        return url;
+    }
+
+    protected override async Task OnParametersSetAsync()
+    {
+        var settings = State.Settings;
+        var id = $"{Root}{Type}";
+
+        conv = settings.conv;
+        allRoots = Roots?.Split(',') ?? [];
+        allTypes = Types?.Split(',') ?? [];
+        decorator = null;
+        layouts = null;
+        error = null;
+
+        if (!Chord.TryParse(id, NamingConvention.English, out chord))
+        {
+            error = $"{id} is not a valid chord";
+            return;
+        }
+        State.CurrentRoot = chord.Root;
+        State.CurrentChordType = chord.ChordType;
+        decorator = new ChordDecorator(chord, conv);
+
+        var current = decorator;
+        var result = await Task.Run(() => current
+            .GenerateLayouts(settings.AllowBarre, settings.AllowSpecial, Partial, settings.maxFret)
+            .OrderBy(i => i.Favorite ? 0 : 1)
+            .ToArray());
+
+        if (current == decorator)
+        {
+            layouts = result;
+        }
+    }
+}
