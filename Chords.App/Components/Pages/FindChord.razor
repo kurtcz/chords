@@ -12,15 +12,14 @@
         <li><a @onclick="() => State.StrictFind = false">@ModeText(false)</a></li>
     </ChildContent>
 </DropdownBar>
-<div class="text-center" style="margin-top:20px;">
+<div class="note-grid">
     @foreach (var row in notes.Chunk(5))
     {
-        <div style="padding-bottom:5px;">
+        <div class="note-row">
             @foreach (var (html, value) in row)
             {
-                <Toggle Value="State.FindNotes.Contains(value)" ValueChanged="on => SetNote(value, on)" Width="100px"
+                <Toggle Value="State.FindNotes.Contains(value)" ValueChanged="on => SetNote(value, on)" Width="auto"
                         On="@(b => b.AddMarkupContent(0, html.Value))" Off="@(b => b.AddMarkupContent(0, html.Value))" />
-                <span> </span>
             }
         </div>
     }

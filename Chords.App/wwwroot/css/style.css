@@ -321,6 +321,34 @@ footer {
     cursor: pointer;
 }
 
+/* Find chord: all five spellings of a tone (bb, b, natural, #, x) share one row. */
+.note-grid {
+    margin: 20px auto 0;
+    max-width: 540px;
+}
+
+.note-row {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 5px;
+}
+
+.note-row .toggle {
+    flex: 1 1 0;
+    min-width: 0;
+}
+
+.note-row .toggle label.btn {
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+/* The handle's width comes from its padding, keep it clearly visible. */
+.note-row .toggle .toggle-handle {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
 .circle-svg text,
 .circle-svg path {
     cursor: pointer;
