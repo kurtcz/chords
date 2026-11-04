@@ -1,7 +1,7 @@
 @page "/favorites"
 @inject AppState State
 
-<TopNav Title="Favourite chords" />
+<TopNav Title="@L["Nav_Favorites"]" />
 
 <div id="layouts" class="animate-bottom">
     @if (chords.Length > 0)
@@ -23,8 +23,8 @@
     else
     {
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="text-align: center;">
-            You have no favourite chord layouts.<br />
-            Tap and hold a chord layout to add it to favourites.
+            @L["Favorites_Empty"]<br />
+            @L["Favorites_Hint"]
         </div>
     }
 </div>

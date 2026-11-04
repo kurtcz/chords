@@ -1,26 +1,37 @@
 @page "/settings"
 @inject AppState State
 
-<TopNav Title="Settings" />
+<TopNav Title="@L["Nav_Settings"]" />
 
 <DropdownBar>
-    <Brand>@settings.conv.ToDescription()</Brand>
+    <Brand>@LanguageName(settings.Language)</Brand>
+    <ChildContent>
+        <li><a @onclick="() => SetLanguage(null)">@LanguageName(null)</a></li>
+        @foreach (var (code, name) in Localizer.Languages)
+        {
+            <li><a @onclick="() => SetLanguage(code)">@name</a></li>
+        }
+    </ChildContent>
+</DropdownBar>
+
+<DropdownBar>
+    <Brand>@L[$"Notation_{settings.conv}"]</Brand>
     <ChildContent>
         @foreach (var conv in settings.NamingConventions)
         {
-            <li><a @onclick="() => Update(() => settings.conv = conv)">@conv.ToDescription() <sub>(@string.Join("-", settings.Notes.Select(i => i.ToString(conv))))</sub></a></li>
+            <li><a @onclick="() => Update(() => settings.conv = conv)">@L[$"Notation_{conv}"] <sub>(@string.Join("-", settings.Notes.Select(i => i.ToString(conv))))</sub></a></li>
         }
     </ChildContent>
 </DropdownBar>
 <DropdownBar>
-    <Brand>@(settings.ShowBasicChordTypes ? "Basic chords" : "All chords")</Brand>
+    <Brand>@L[settings.ShowBasicChordTypes ? "Settings_BasicChords" : "Settings_AllChords"]</Brand>
     <ChildContent>
-        <li><a @onclick="() => Update(() => settings.ShowBasicChordTypes = true)">Basic chords</a></li>
-        <li><a @onclick="() => Update(() => settings.ShowBasicChordTypes = false)">All chords</a></li>
+        <li><a @onclick="() => Update(() => settings.ShowBasicChordTypes = true)">@L["Settings_BasicChords"]</a></li>
+        <li><a @onclick="() => Update(() => settings.ShowBasicChordTypes = false)">@L["Settings_AllChords"]</a></li>
     </ChildContent>
 </DropdownBar>
 <div class="row vertical-align">
-    <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">Highest fret:</div>
+    <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">@L["Settings_MaxFret"]</div>
     <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 justify-right">
         <div class="badge badge-inverse">@maxFret</div>
     </div>
@@ -33,19 +44,19 @@
     </div>
 </div>
 <div class="row vertical-align" style="margin-bottom: 20px;">
-    <span class="col-xs-9 col-sm-9 col-md-9 col-lg-9">Allow barre chords</span>
+    <span class="col-xs-9 col-sm-9 col-md-9 col-lg-9">@L["Settings_AllowBarre"]</span>
     <span class="col-xs-3 col-sm-3 col-md-3 col-lg-3 justify-right">
         <Toggle Value="settings.AllowBarre" ValueChanged="v => Update(() => settings.AllowBarre = v)" />
     </span>
 </div>
 <div class="row vertical-align" style="margin-bottom: 20px;">
-    <span class="col-xs-9 col-sm-9 col-md-9 col-lg-9">Allow chords with muted high strings</span>
+    <span class="col-xs-9 col-sm-9 col-md-9 col-lg-9">@L["Settings_AllowSpecial"]</span>
     <span class="col-xs-3 col-sm-3 col-md-3 col-lg-3 justify-right">
         <Toggle Value="settings.AllowSpecial" ValueChanged="v => Update(() => settings.AllowSpecial = v)" />
     </span>
 </div>
 <div class="row vertical-align" style="margin-bottom: 20px;">
-    <span class="col-xs-9 col-sm-9 col-md-9 col-lg-9">Show tips</span>
+    <span class="col-xs-9 col-sm-9 col-md-9 col-lg-9">@L["Settings_ShowTips"]</span>
     <span class="col-xs-3 col-sm-3 col-md-3 col-lg-3 justify-right">
         <Toggle Value="settings.ShowTips" ValueChanged="v => Update(() => settings.ShowTips = v)" />
     </span>
@@ -60,6 +71,22 @@
         settings = State.Settings;
         maxFret = settings.maxFret;
     }
+
+    /// <summary>Name of a language in that language; null is the device language.</summary>
+    private string LanguageName(string code)
+    {
+        if (string.IsNullOrEmpty(code))
+        {
+            return L["Settings_SystemLanguage", Localizer.SystemLanguageName];
+        }
+        return Localizer.Languages.FirstOrDefault(i => i.Code == code).Name ?? code;
+    }
+
+    private void SetLanguage(string code) => Update(() =>
+    {
+        settings.Language = code;
+        L.SetLanguage(code);
+    });
 
     private void Update(Action change)
     {

@@ -1,8 +1,26 @@
 @inherits LayoutComponentBase
+@implements IDisposable
+@* Creating AppState applies the language from settings before any page renders. *@
+@inject AppState State
 
-<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 main-content">
+@* Keyed by language: switching the language rebuilds the page so every component shows the new texts. *@
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 main-content" @key="language">
     @Body
 </div>
 <footer>
     <p>&copy; 2017 - Tomáš Němec</p>
 </footer>
+
+@code {
+    private string language = System.Globalization.CultureInfo.CurrentUICulture.Name;
+
+    protected override void OnInitialized() => L.LanguageChanged += OnLanguageChanged;
+
+    private void OnLanguageChanged()
+    {
+        language = System.Globalization.CultureInfo.CurrentUICulture.Name;
+        InvokeAsync(StateHasChanged);
+    }
+
+    public void Dispose() => L.LanguageChanged -= OnLanguageChanged;
+}

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="Nav_ShowChord" xml:space="preserve"><value>Zobraziť akord</value></data>
+  <data name="Nav_FindChord" xml:space="preserve"><value>Nájsť názov akordu</value></data>
+  <data name="Nav_Favorites" xml:space="preserve"><value>Obľúbené akordy</value></data>
+  <data name="Nav_Circle" xml:space="preserve"><value>Kvintový kruh</value></data>
+  <data name="Nav_Settings" xml:space="preserve"><value>Nastavenia</value></data>
+  <data name="Nav_Toggle" xml:space="preserve"><value>Zobraziť menu</value></data>
+  <data name="Yes" xml:space="preserve"><value>Áno</value></data>
+  <data name="No" xml:space="preserve"><value>Nie</value></data>
+  <data name="Find" xml:space="preserve"><value>Hľadať</value></data>
+  <data name="ChordType_Major" xml:space="preserve"><value>Dur</value></data>
+  <data name="ShowChord_Partial" xml:space="preserve"><value>Povoliť neúplné akordy</value></data>
+  <data name="Chord_Found" xml:space="preserve"><value>Nájdené akordy:</value></data>
+  <data name="Chord_OtherSymbols" xml:space="preserve"><value>Ďalšie značky:</value></data>
+  <data name="Chord_Intervals" xml:space="preserve"><value>Intervaly akordu:</value></data>
+  <data name="Chord_Notes" xml:space="preserve"><value>Tóny akordu:</value></data>
+  <data name="Chord_Diagrams" xml:space="preserve"><value>Hmaty akordu:</value></data>
+  <data name="Chord_Results_One" xml:space="preserve"><value>{0} výsledok</value></data>
+  <data name="Chord_Results_Few" xml:space="preserve"><value>{0} výsledky</value></data>
+  <data name="Chord_Results_Many" xml:space="preserve"><value>{0} výsledkov</value></data>
+  <data name="Chord_Invalid" xml:space="preserve"><value>{0} nie je platný akord</value></data>
+  <data name="Tip" xml:space="preserve"><value>Tip:</value></data>
+  <data name="Tip_Play" xml:space="preserve"><value>Ťuknutím na hmat si ho prehráte.</value></data>
+  <data name="Tip_Favorite" xml:space="preserve"><value>Podržaním prsta pridáte hmat medzi obľúbené.</value></data>
+  <data name="Favorites_Empty" xml:space="preserve"><value>Zatiaľ nemáte žiadne obľúbené hmaty.</value></data>
+  <data name="Favorites_Hint" xml:space="preserve"><value>Hmat pridáte medzi obľúbené podržaním prsta.</value></data>
+  <data name="Find_Strict" xml:space="preserve"><value>Presný režim</value></data>
+  <data name="Find_Loose" xml:space="preserve"><value>Voľný režim</value></data>
+  <data name="Find_NoChord" xml:space="preserve"><value>Nenašiel sa žiadny akord</value></data>
+  <data name="Settings_SystemLanguage" xml:space="preserve"><value>Jazyk systému ({0})</value></data>
+  <data name="Notation_English" xml:space="preserve"><value>Anglické názvoslovie</value></data>
+  <data name="Notation_German" xml:space="preserve"><value>Nemecké názvoslovie</value></data>
+  <data name="Notation_Latin" xml:space="preserve"><value>Latinské názvoslovie</value></data>
+  <data name="Settings_BasicChords" xml:space="preserve"><value>Základné akordy</value></data>
+  <data name="Settings_AllChords" xml:space="preserve"><value>Všetky akordy</value></data>
+  <data name="Settings_MaxFret" xml:space="preserve"><value>Najvyšší pražec:</value></data>
+  <data name="Settings_AllowBarre" xml:space="preserve"><value>Povoliť barré akordy</value></data>
+  <data name="Settings_AllowSpecial" xml:space="preserve"><value>Povoliť akordy s tlmenými vysokými strunami</value></data>
+  <data name="Settings_ShowTips" xml:space="preserve"><value>Zobrazovať tipy</value></data>
+</root>

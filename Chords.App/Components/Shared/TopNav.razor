@@ -3,7 +3,7 @@
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" @onclick="() => open = !open">
-                <span class="sr-only">Toggle navigation</span>
+                <span class="sr-only">@L["Nav_Toggle"]</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -12,11 +12,11 @@
         </div>
         <div class="navbar-collapse collapse @(open ? "in" : null)">
             <ul class="nav navbar-nav" @onclick="() => open = false">
-                <li><a href="">Show chord chart</a></li>
-                <li><a href="find">Find chord name</a></li>
-                <li><a href="favorites">Favourite chords</a></li>
-                <li><a href="circle">Circle of fifths</a></li>
-                <li><a href="settings">Settings</a></li>
+                <li><a href="">@L["Nav_ShowChord"]</a></li>
+                <li><a href="find">@L["Nav_FindChord"]</a></li>
+                <li><a href="favorites">@L["Nav_Favorites"]</a></li>
+                <li><a href="circle">@L["Nav_Circle"]</a></li>
+                <li><a href="settings">@L["Nav_Settings"]</a></li>
             </ul>
         </div>
     </div>

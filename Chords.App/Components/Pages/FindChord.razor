@@ -3,7 +3,7 @@
 @inject AppState State
 @inject NavigationManager Nav
 
-<TopNav Title="Find chord name" />
+<TopNav Title="@L["Nav_FindChord"]" />
 
 <DropdownBar>
     <Brand>@ModeText(State.StrictFind)</Brand>
@@ -26,7 +26,7 @@
     }
 </div>
 <div style="margin-top:20px;">
-    <button type="button" class="btn btn-default btn-lg" style="width:100%;" @onclick="Find">Find</button>
+    <button type="button" class="btn btn-default btn-lg" style="width:100%;" @onclick="Find">@L["Find"]</button>
 </div>
 <div class="error">@error</div>
 
@@ -49,7 +49,7 @@
         }
     }
 
-    private RenderFragment ModeText(bool strict) =>@<text>@(strict ? "Strict" : "Loose") mode (@model.Notes[0].ToString(conv)<sub>#</sub> @(strict ? "≠" : "=") @model.Notes[3].ToString(conv)<sub>b</sub>)</text>;
+    private RenderFragment ModeText(bool strict) =>@<text>@L[strict ? "Find_Strict" : "Find_Loose"] (@model.Notes[0].ToString(conv)<sub>#</sub> @(strict ? "≠" : "=") @model.Notes[3].ToString(conv)<sub>b</sub>)</text>;
 
     private void SetNote(string value, bool on)
     {
@@ -80,7 +80,7 @@
 
         if (chords.Length == 0)
         {
-            error = "No chord found";
+            error = L["Find_NoChord"];
             return;
         }
         var chord = chords[0];

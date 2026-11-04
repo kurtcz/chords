@@ -15,6 +15,8 @@ namespace Chords.App.Models
         public bool AllowBarre { get; set; } = true;
         public bool AllowSpecial { get; set; } = false;
         public bool ShowTips { get; set; } = true;
+        /// <summary>UI language ("en", "cs", "sk"); null follows the device language.</summary>
+        public string Language { get; set; }
         public string Error { get; set; }
 
 		public readonly NamingConvention[] NamingConventions = Enum.GetValues(typeof(NamingConvention))

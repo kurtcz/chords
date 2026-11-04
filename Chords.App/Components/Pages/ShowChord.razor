@@ -2,7 +2,7 @@
 @inject AppState State
 @inject NavigationManager Nav
 
-<TopNav Title="Show chord chart" />
+<TopNav Title="@L["Nav_ShowChord"]" />
 
 <DropdownBar>
     <Brand>@root.ToString(conv)</Brand>
@@ -14,23 +14,23 @@
     </ChildContent>
 </DropdownBar>
 <DropdownBar>
-    <Brand>@typeText</Brand>
+    <Brand>@TypeName(typeValue)</Brand>
     <ChildContent>
         @foreach (var type in State.Settings.ShowBasicChordTypes ? model.BasicChordTypeList : model.ChordTypeList)
         {
-            <li><a @onclick="() => { typeText = type.Key; typeValue = type.Value; }">@type.Key</a></li>
+            <li><a @onclick="() => typeValue = type.Value">@TypeName(type.Value)</a></li>
         }
     </ChildContent>
 </DropdownBar>
 <div class="row vertical-align" style="margin-bottom: 20px">
-    <span class="col-xs-9 col-sm-9 col-md-9 col-lg-9">Allow partial chords</span>
+    <span class="col-xs-9 col-sm-9 col-md-9 col-lg-9">@L["ShowChord_Partial"]</span>
     <span class="col-xs-3 col-sm-3 col-md-3 col-lg-3 justify-right">
         <Toggle @bind-Value="partial" />
     </span>
 </div>
 <div class="row">
     <span class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-        <button type="button" class="btn btn-default btn-lg" style="width:100%" @onclick="Find">Find</button>
+        <button type="button" class="btn btn-default btn-lg" style="width:100%" @onclick="Find">@L["Find"]</button>
     </span>
 </div>
 
@@ -38,7 +38,6 @@
     private readonly ShowChordModel model = new();
     private NamingConvention conv;
     private Note root;
-    private string typeText;
     private string typeValue;
     private bool partial = true;
 
@@ -46,9 +45,11 @@
     {
         conv = State.Settings.conv;
         root = State.CurrentRoot ?? model.Notes[0];
-        typeText = State.CurrentChordType.ToDescription() ?? "Major";
         typeValue = State.CurrentChordType.ToDescription() ?? string.Empty;
     }
+
+    /// <summary>Major chords have an empty type symbol, so they are shown by name.</summary>
+    private string TypeName(string value) => string.IsNullOrEmpty(value) ? L["ChordType_Major"] : value;
 
     private void Find() => Nav.NavigateTo(ChordPage.Url(root, typeValue, partial));
 }

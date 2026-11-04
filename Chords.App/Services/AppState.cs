@@ -1,3 +1,4 @@
+using Chords.App.Localization;
 using Chords.App.Models;
 using Chords.Core.Models;
 
@@ -7,6 +8,11 @@ namespace Chords.App.Services;
 public class AppState
 {
     public SettingsModel Settings { get; } = SettingsModel.Load();
+
+    public AppState(Localizer localizer)
+    {
+        localizer.SetLanguage(Settings.Language);
+    }
 
     /// <summary>Chord last shown on the chord page; preselected when returning to "Show chord chart".</summary>
     public Note CurrentRoot { get; set; }

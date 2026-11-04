@@ -2,8 +2,8 @@
 <div class="toggle btn @(Value ? "btn-primary" : "btn-default off")" style="width: @Width; height: @Height;"
      @onclick="ToggleValue">
     <div class="toggle-group">
-        <label class="btn btn-primary toggle-on">@(On ?? (RenderFragment)(b => b.AddContent(0, "Yes")))</label>
-        <label class="btn btn-default active toggle-off">@(Off ?? (RenderFragment)(b => b.AddContent(0, "No")))</label>
+        <label class="btn btn-primary toggle-on">@(On ?? (RenderFragment)(b => b.AddContent(0, L["Yes"])))</label>
+        <label class="btn btn-default active toggle-off">@(Off ?? (RenderFragment)(b => b.AddContent(0, L["No"])))</label>
         <span class="toggle-handle btn btn-default"></span>
     </div>
 </div>

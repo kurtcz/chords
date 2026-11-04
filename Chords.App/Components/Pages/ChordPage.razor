@@ -1,12 +1,12 @@
 @page "/chord"
 @inject AppState State
 
-<TopNav Title="Show chord chart" />
+<TopNav Title="@L["Nav_ShowChord"]" />
 
 @if (allRoots.Length > 1)
 {
     <h4 class="other-chords">
-        Chords found:
+        @L["Chord_Found"]
         @for (var i = 0; i < allRoots.Length && i < allTypes.Length; i++)
         {
             var other = allRoots[i];
@@ -25,20 +25,20 @@
 
     @if (decorator.Symbols.Length > 1)
     {
-        <h4>Other symbols:</h4>
+        <h4>@L["Chord_OtherSymbols"]</h4>
         @foreach (var otherSymbol in decorator.Symbols.Skip(1))
         {
             <span>@otherSymbol </span>
         }
     }
-    <h4>Chord intervals:</h4>
+    <h4>@L["Chord_Intervals"]</h4>
     <p>
         @foreach (var interval in decorator.Intervals)
         {
             <span>@interval </span>
         }
     </p>
-    <h4>Chord notes:</h4>
+    <h4>@L["Chord_Notes"]</h4>
     <p>
         @foreach (var note in decorator.Notes)
         {
@@ -54,14 +54,14 @@
 @if (layouts != null)
 {
     <div id="layouts" class="animate-bottom">
-        <h4>Chord diagrams:</h4>
-        <p>@layouts.Length results</p>
+        <h4>@L["Chord_Diagrams"]</h4>
+        <p>@L.Plural("Chord_Results", layouts.Length)</p>
         @if (State.Settings.ShowTips && !tipClosed)
         {
             <div class="alert alert-info">
                 <button type="button" class="close" @onclick="() => tipClosed = true">&times;</button>
-                <strong>Tip:</strong> Tap a diagram to listen to audio playback.<br />
-                Tap and hold to add a diagram to favorites.
+                <strong>@L["Tip"]</strong> @L["Tip_Play"]<br />
+                @L["Tip_Favorite"]
             </div>
         }
         @foreach (var layout in layouts)
@@ -114,7 +114,7 @@
 
         if (!Chord.TryParse(id, NamingConvention.English, out chord))
         {
-            error = $"{id} is not a valid chord";
+            error = L["Chord_Invalid", id];
             return;
         }
         State.CurrentRoot = chord.Root;
