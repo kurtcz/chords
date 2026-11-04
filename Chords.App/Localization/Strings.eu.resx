@@ -56,4 +56,31 @@
   <data name="Shape_TooFew" xml:space="preserve"><value>Jo gutxienez bi nota desberdin</value></data>
   <data name="Shape_Play" xml:space="preserve"><value>Erreproduzitu</value></data>
   <data name="Shape_Clear" xml:space="preserve"><value>Garbitu</value></data>
+  <data name="Nav_Key" xml:space="preserve"><value>Tonalitate bateko akordeak</value></data>
+  <data name="Nav_Progressions" xml:space="preserve"><value>Akorde-progresioak</value></data>
+  <data name="Scale_Major" xml:space="preserve"><value>Maiorra</value></data>
+  <data name="Scale_Minor" xml:space="preserve"><value>Minor naturala</value></data>
+  <data name="Scale_HarmonicMinor" xml:space="preserve"><value>Minor harmonikoa</value></data>
+  <data name="Scale_MelodicMinor" xml:space="preserve"><value>Minor melodikoa</value></data>
+  <data name="Scale_Dorian" xml:space="preserve"><value>Doriarra</value></data>
+  <data name="Scale_Phrygian" xml:space="preserve"><value>Frigiarra</value></data>
+  <data name="Scale_Lydian" xml:space="preserve"><value>Lidiarra</value></data>
+  <data name="Scale_Mixolydian" xml:space="preserve"><value>Mixolidiarra</value></data>
+  <data name="Key_TabChords" xml:space="preserve"><value>Tonalitatearen akordeak</value></data>
+  <data name="Key_TabDetect" xml:space="preserve"><value>Tonalitatea aurkitu</value></data>
+  <data name="Key_ScaleNotes" xml:space="preserve"><value>Eskalaren notak:</value></data>
+  <data name="Key_Sevenths" xml:space="preserve"><value>Zazpigarren akordeak</value></data>
+  <data name="Key_Add" xml:space="preserve"><value>Gehitu akordea</value></data>
+  <data name="Key_DetectHint" xml:space="preserve"><value>Gehitu abesti baten akordeak eta aplikazioak bat datozen tonalitateak aurkituko ditu. Sakatu tonalitate bat bere akordeak ikusteko.</value></data>
+  <data name="Key_NoChords" xml:space="preserve"><value>Gehitu abesti baten akordeak</value></data>
+  <data name="Key_NoKey" xml:space="preserve"><value>Ez dago bat datorren tonalitaterik</value></data>
+  <data name="Key_Progressions" xml:space="preserve"><value>Tonalitate honetako progresioak</value></data>
+  <data name="Style_Pop" xml:space="preserve"><value>Pop</value></data>
+  <data name="Style_Rock" xml:space="preserve"><value>Rock</value></data>
+  <data name="Style_Jazz" xml:space="preserve"><value>Jazz</value></data>
+  <data name="Style_Blues" xml:space="preserve"><value>Blues</value></data>
+  <data name="Style_Classical" xml:space="preserve"><value>Klasikoa</value></data>
+  <data name="Style_Flamenco" xml:space="preserve"><value>Flamenkoa</value></data>
+  <data name="Prog_Generate" xml:space="preserve"><value>Sortu progresio bat</value></data>
+  <data name="Prog_Hint" xml:space="preserve"><value>Sakatu progresio bat bere diagramak ikusteko; ‹ › hatz-jarrera aldatzen du. ▶ jotzen du, sakatu berriro gelditzeko.</value></data>
 </root>

@@ -1,0 +1,174 @@
+@page "/key"
+@inject AppState State
+@inject ChordPlayer Player
+@inject NavigationManager Nav
+
+<TopNav Title="@L["Nav_Key"]" />
+
+<ul class="nav nav-tabs key-tabs">
+    <li class="@(detect ? null : "active")"><a @onclick="() => detect = false">@L["Key_TabChords"]</a></li>
+    <li class="@(detect ? "active" : null)"><a @onclick="() => detect = true">@L["Key_TabDetect"]</a></li>
+</ul>
+
+@if (!detect)
+{
+    <KeySelector Changed="StateHasChanged" />
+    <p class="key-scale">
+        <strong>@L["Key_ScaleNotes"]</strong>
+        @foreach (var note in Current.Scale.Notes)
+        {
+            <span>@note.ToString(conv) </span>
+        }
+    </p>
+    <div class="row vertical-align" style="margin-bottom: 15px">
+        <span class="col-xs-9">@L["Key_Sevenths"]</span>
+        <span class="col-xs-3 justify-right"><Toggle @bind-Value="State.KeySevenths" /></span>
+    </div>
+    <table class="table key-chords">
+        <tbody>
+            @foreach (var degree in Current.DiatonicChords(State.KeySevenths))
+            {
+                var chord = degree.Chord;
+                <tr>
+                    <td class="numeral">@degree.Numeral</td>
+                    <td><a href="@ChordUrl(chord)">@Symbol(chord)</a></td>
+                    <td class="text-right">
+                        <button type="button" class="btn btn-default btn-sm" @onclick="() => Player.PlayChord(chord)">▶</button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <button type="button" class="btn btn-default btn-lg btn-block" @onclick='() => Nav.NavigateTo("progressions")'>@L["Key_Progressions"]</button>
+}
+else
+{
+    @if (State.Settings.ShowTips && !tipClosed)
+    {
+        <div class="alert alert-info">
+            <button type="button" class="close" @onclick="() => tipClosed = true">&times;</button>
+            @L["Key_DetectHint"]
+        </div>
+    }
+    <DropdownBar>
+        <Brand>@addRoot.ToString(conv)</Brand>
+        <ChildContent>
+            @foreach (var note in Tonics)
+            {
+                <li><a @onclick="() => addRoot = note">@note.ToString(conv)</a></li>
+            }
+        </ChildContent>
+    </DropdownBar>
+    <DropdownBar>
+        <Brand>@TypeName(addType)</Brand>
+        <ChildContent>
+            @foreach (var type in DetectTypes)
+            {
+                <li><a @onclick="() => addType = type">@TypeName(type)</a></li>
+            }
+        </ChildContent>
+    </DropdownBar>
+    <button type="button" class="btn btn-default btn-lg btn-block" @onclick="Add">@L["Key_Add"]</button>
+
+    <div class="key-entered">
+        @for (var i = 0; i < State.KeyDetectChords.Count; i++)
+        {
+            var index = i;
+            <span class="label label-primary key-chip" @onclick="() => Remove(index)">@Symbol(State.KeyDetectChords[i]) &times;</span>
+        }
+        @if (State.KeyDetectChords.Count > 0)
+        {
+            <button type="button" class="btn btn-link" @onclick="Clear">@L["Shape_Clear"]</button>
+        }
+    </div>
+
+    @if (State.KeyDetectChords.Count == 0)
+    {
+        <h4 class="text-muted">@L["Key_NoChords"]</h4>
+    }
+    else if (matches.Length == 0)
+    {
+        <h4 class="text-muted">@L["Key_NoKey"]</h4>
+    }
+    else
+    {
+        <div class="list-group">
+            @foreach (var match in matches)
+            {
+                <a class="list-group-item" @onclick="() => Show(match.Key)">
+                    <span class="badge">@match.Fitting/@match.Total</span>
+                    <h4 class="list-group-item-heading">@KeyName(match.Key)</h4>
+                    <p class="list-group-item-text">@string.Join("  ", match.Numerals.Select(i => i ?? "–"))</p>
+                </a>
+            }
+        </div>
+    }
+}
+
+@code {
+    private const int MaxMatches = 6;
+    private static readonly Note[] Tonics = new FindChordModel().Notes;
+    private static readonly ChordType[] DetectTypes =
+    [
+        ChordType.Major, ChordType.Minor, ChordType.DominantSeventh, ChordType.MajorSeventh, ChordType.MinorSeventh,
+        ChordType.Diminished, ChordType.MinorSeventhFlat5, ChordType.DiminishedSeventh, ChordType.Augmented,
+        ChordType.Sus2, ChordType.Sus4, ChordType.Sixth, ChordType.MinorSixth, ChordType.Add9, ChordType.Ninth, ChordType.Fifth
+    ];
+
+    private NamingConvention conv;
+    private bool detect;
+    private bool tipClosed;
+    private Note addRoot = new(Tone.C);
+    private ChordType addType = ChordType.Major;
+    private KeyMatch[] matches = [];
+
+    private Key Current => new(State.KeyTonic, State.KeyScale);
+
+    protected override void OnInitialized()
+    {
+        conv = State.Settings.conv;
+        detect = State.KeyDetectChords.Count > 0;
+        Detect();
+    }
+
+    private string Symbol(Chord chord) => new ChordDecorator(chord, conv).Symbols[0];
+
+    private string KeyName(Key key) => $"{key.Tonic.ToString(conv)} {L[$"Scale_{key.ScaleType}"]}";
+
+    private string TypeName(ChordType type) => type == ChordType.Major ? L["ChordType_Major"] : type.ToDescription();
+
+    private static string ChordUrl(Chord chord) => ChordPage.Url(chord.Root, chord.ChordType.ToDescription(), true);
+
+    private void Add()
+    {
+        State.KeyDetectChords.Add(new Chord(addRoot, addType));
+        Detect();
+    }
+
+    private void Remove(int index)
+    {
+        State.KeyDetectChords.RemoveAt(index);
+        Detect();
+    }
+
+    private void Clear()
+    {
+        State.KeyDetectChords.Clear();
+        Detect();
+    }
+
+    /// <summary>The best keys; ones with more than one chord outside them less are left out.</summary>
+    private void Detect()
+    {
+        var found = KeyMatch.Find(State.KeyDetectChords);
+
+        matches = found.Where(i => i.Fitting >= found[0].Fitting - 1).Take(MaxMatches).ToArray();
+    }
+
+    private void Show(Key key)
+    {
+        State.KeyTonic = key.Tonic;
+        State.KeyScale = key.ScaleType;
+        detect = false;
+    }
+}

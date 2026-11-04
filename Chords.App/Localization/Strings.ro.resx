@@ -57,4 +57,31 @@
   <data name="Shape_TooFew" xml:space="preserve"><value>Cântă cel puțin două note diferite</value></data>
   <data name="Shape_Play" xml:space="preserve"><value>Redă</value></data>
   <data name="Shape_Clear" xml:space="preserve"><value>Șterge</value></data>
+  <data name="Nav_Key" xml:space="preserve"><value>Acordurile unei tonalități</value></data>
+  <data name="Nav_Progressions" xml:space="preserve"><value>Progresii de acorduri</value></data>
+  <data name="Scale_Major" xml:space="preserve"><value>Major</value></data>
+  <data name="Scale_Minor" xml:space="preserve"><value>Minor natural</value></data>
+  <data name="Scale_HarmonicMinor" xml:space="preserve"><value>Minor armonic</value></data>
+  <data name="Scale_MelodicMinor" xml:space="preserve"><value>Minor melodic</value></data>
+  <data name="Scale_Dorian" xml:space="preserve"><value>Doric</value></data>
+  <data name="Scale_Phrygian" xml:space="preserve"><value>Frigic</value></data>
+  <data name="Scale_Lydian" xml:space="preserve"><value>Lidic</value></data>
+  <data name="Scale_Mixolydian" xml:space="preserve"><value>Mixolidic</value></data>
+  <data name="Key_TabChords" xml:space="preserve"><value>Acordurile tonalității</value></data>
+  <data name="Key_TabDetect" xml:space="preserve"><value>Găsește tonalitatea</value></data>
+  <data name="Key_ScaleNotes" xml:space="preserve"><value>Notele gamei:</value></data>
+  <data name="Key_Sevenths" xml:space="preserve"><value>Acorduri de septimă</value></data>
+  <data name="Key_Add" xml:space="preserve"><value>Adaugă acord</value></data>
+  <data name="Key_DetectHint" xml:space="preserve"><value>Adaugă acordurile unui cântec și aplicația găsește tonalitățile în care se încadrează. Atinge o tonalitate pentru a-i vedea acordurile.</value></data>
+  <data name="Key_NoChords" xml:space="preserve"><value>Adaugă acordurile unui cântec</value></data>
+  <data name="Key_NoKey" xml:space="preserve"><value>Nicio tonalitate potrivită</value></data>
+  <data name="Key_Progressions" xml:space="preserve"><value>Progresii în această tonalitate</value></data>
+  <data name="Style_Pop" xml:space="preserve"><value>Pop</value></data>
+  <data name="Style_Rock" xml:space="preserve"><value>Rock</value></data>
+  <data name="Style_Jazz" xml:space="preserve"><value>Jazz</value></data>
+  <data name="Style_Blues" xml:space="preserve"><value>Blues</value></data>
+  <data name="Style_Classical" xml:space="preserve"><value>Clasic</value></data>
+  <data name="Style_Flamenco" xml:space="preserve"><value>Flamenco</value></data>
+  <data name="Prog_Generate" xml:space="preserve"><value>Generează o progresie</value></data>
+  <data name="Prog_Hint" xml:space="preserve"><value>Atinge o progresie pentru a-i vedea diagramele; ‹ › schimbă digitația. ▶ o redă, atinge din nou pentru oprire.</value></data>
 </root>

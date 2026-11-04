@@ -1,0 +1,200 @@
+@page "/progressions"
+@inject AppState State
+@inject ChordPlayer Player
+
+<TopNav Title="@L["Nav_Progressions"]" />
+
+<KeySelector Changed="KeyChanged" />
+<div class="row vertical-align" style="margin-bottom: 15px">
+    <span class="col-xs-9">@L["Key_Sevenths"]</span>
+    <span class="col-xs-3 justify-right"><Toggle Value="State.KeySevenths" ValueChanged="SeventhsChanged" /></span>
+</div>
+<button type="button" class="btn btn-primary btn-lg btn-block" @onclick="Generate">🎲 @L["Prog_Generate"]</button>
+
+@if (State.Settings.ShowTips && !tipClosed)
+{
+    <div class="alert alert-info progression-tip">
+        <button type="button" class="close" @onclick="() => tipClosed = true">&times;</button>
+        @L["Prog_Hint"]
+    </div>
+}
+
+<div class="list-group progression-list">
+    @foreach (var item in items)
+    {
+        var current = item;
+        <div class="list-group-item @(selected == current ? "active-progression" : null)">
+            <div class="progression-head" @onclick="() => Select(current)">
+                <span class="label label-default">@current.Label</span>
+                <span class="progression-numerals">@string.Join(" – ", current.Chords.Select(i => i.Numeral))</span>
+                <button type="button" class="btn btn-default btn-sm pull-right" @onclick="() => Play(current)" @onclick:stopPropagation="true">▶</button>
+            </div>
+            <div class="progression-symbols" @onclick="() => Select(current)">
+                @string.Join("  ", current.Chords.Select(i => Symbol(i.Chord)))
+            </div>
+            @if (selected == current)
+            {
+                @if (current.Layouts == null)
+                {
+                    <div class="progression-loading text-muted">…</div>
+                }
+                else
+                {
+                    <div class="progression-diagrams">
+                        @for (var i = 0; i < current.Chords.Length; i++)
+                        {
+                            var index = i;
+                            var chord = current.Chords[i].Chord;
+                            var layouts = current.Layouts[i];
+                            <div class="progression-chord">
+                                <a href="@ChordPage.Url(chord.Root, chord.ChordType.ToDescription(), true)">@Symbol(chord)</a>
+                                @if (layouts.Length == 0)
+                                {
+                                    <div class="text-muted">–</div>
+                                }
+                                else
+                                {
+                                    <ChordLayoutView Layout="layouts[current.Chosen[index]]" Chord="chord" />
+                                    @if (layouts.Length > 1)
+                                    {
+                                        <div class="progression-pick">
+                                            <button type="button" class="btn btn-default btn-xs" @onclick="() => Pick(current, index, -1)">‹</button>
+                                            <span>@(current.Chosen[index] + 1)/@layouts.Length</span>
+                                            <button type="button" class="btn btn-default btn-xs" @onclick="() => Pick(current, index, 1)">›</button>
+                                        </div>
+                                    }
+                                }
+                            </div>
+                        }
+                    </div>
+                }
+            }
+        </div>
+    }
+</div>
+
+@code {
+    private const int GeneratedLength = 4;
+
+    /// <summary>A progression in the chosen key with the fingerings found for its chords.</summary>
+    private class Item
+    {
+        public string Label { get; init; }
+        public DegreeChord[] Chords { get; init; }
+        /// <summary>Fingerings of each chord, found when the progression is first opened or played.</summary>
+        public GuitarChordLayoutDecorator[][] Layouts { get; set; }
+        /// <summary>Index of the fingering chosen for each chord.</summary>
+        public int[] Chosen { get; set; }
+    }
+
+    private static readonly Random Random = new();
+    private NamingConvention conv;
+    private List<Item> items = [];
+    private Item generated;
+    private Item selected;
+    private bool tipClosed;
+
+    private Key Current => new(State.KeyTonic, State.KeyScale);
+
+    protected override void OnInitialized()
+    {
+        conv = State.Settings.conv;
+        Build();
+    }
+
+    private void KeyChanged()
+    {
+        generated = null;
+        Build();
+    }
+
+    private void SeventhsChanged(bool value)
+    {
+        State.KeySevenths = value;
+        generated = null;
+        Build();
+    }
+
+    /// <summary>Common progressions written for the kind of key chosen (major or minor tonic chord).</summary>
+    private void Build()
+    {
+        var key = Current;
+
+        selected = null;
+        items = Progression.Common
+            .Where(i => i.ForMajor == key.IsMajor)
+            .Select(i => new Item { Label = L[$"Style_{i.Style}"], Chords = i.In(key, State.KeySevenths) })
+            .ToList();
+        if (generated != null)
+        {
+            items.Insert(0, generated);
+        }
+    }
+
+    private async Task Generate()
+    {
+        generated = new Item
+        {
+            Label = "🎲",
+            Chords = Progression.Generate(Current, GeneratedLength, State.KeySevenths, Random)
+        };
+        Build();
+        await Select(generated);
+    }
+
+    private string Symbol(Chord chord) => new ChordDecorator(chord, conv).Symbols[0];
+
+    private async Task Select(Item item)
+    {
+        selected = selected == item ? null : item;
+        if (selected != null)
+        {
+            await EnsureLayouts(item);
+        }
+    }
+
+    /// <summary>Finds the fingerings of the progression's chords; the easiest (or favourite) is chosen first.</summary>
+    private async Task EnsureLayouts(Item item)
+    {
+        if (item.Layouts != null)
+        {
+            return;
+        }
+        var s = State.Settings;
+        var layouts = await Task.Run(() =>
+        {
+            // A chord repeated in the progression (as in a blues) is fingered only once.
+            var found = item.Chords
+                .Select(i => i.Chord)
+                .Distinct()
+                .ToDictionary(c => c, c => new ChordDecorator(c, conv)
+                    .GenerateLayouts(s.Instrument, s.AllowBarre, s.AllowSpecial, true, s.maxFret, s.EasyOnly)
+                    .OrderBy(l => l.Favorite ? 0 : 1)
+                    .ToArray());
+
+            return item.Chords.Select(i => found[i.Chord]).ToArray();
+        });
+
+        item.Chosen = new int[layouts.Length];
+        item.Layouts = layouts;
+    }
+
+    private void Pick(Item item, int index, int step)
+    {
+        var count = item.Layouts[index].Length;
+
+        item.Chosen[index] = (item.Chosen[index] + step + count) % count;
+    }
+
+    private async Task Play(Item item)
+    {
+        await EnsureLayouts(item);
+
+        var positions = item.Layouts
+            .Select((layouts, i) => layouts.Length == 0 ? null : layouts[item.Chosen[i]].IntPositions)
+            .Where(i => i != null)
+            .ToArray();
+
+        Player.PlaySequence(InstrumentInfo.Get(State.Settings.Instrument), positions);
+    }
+}

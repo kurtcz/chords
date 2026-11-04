@@ -11,8 +11,8 @@
 - **Custom ladění** – Drop D, DADGAD, Half-step down (Eb), Open G/D a vlastní ladění; generátor hmatů i přehrávání zvuku podle zvoleného ladění.
 - **Přepínač nástrojů** – ✅ kytara, ukulele, mandolína, baskytara, pětistrunné banjo v Open G (krátká 5. struna od 5. pražce, barré i u ostatních nástrojů; oblíbené zvlášť pro každý nástroj). Zbývá: tenorové banjo, vlastní nahrávky zvuku pro jednotlivé nástroje. Housle záměrně ne – nemají pražce.
 - **Hledání akordu podle hmatu** – ✅ uživatel naklikne prsty na hmatníku zvoleného nástroje a aplikace určí název akordu (včetně obratů jako C/E a neúplných akordů).
-- **Hledač akordů do tóniny (Key & Scale Finder)** – pro zvolenou tóninu/stupnici zobrazí diatonické akordy (I–vii°), případně naopak určí tóninu z několika zadaných akordů.
-- **Generátor akordových progresí (Smart Progression Generator)** – typické progrese (I–V–vi–IV, ii–V–I, 12taktové blues, …) v libovolné tónině, s přehráním a výběrem hmatů.
+- **Hledač akordů do tóniny (Key & Scale Finder)** – ✅ pro zvolenou tóninu a stupnici (dur, mollové, církevní módy) zobrazí diatonické akordy I–vii° nebo septakordy s přehráním; naopak z několika zadaných akordů určí nejpravděpodobnější tóniny (v mollu i s harmonickými akordy, upřednostní začátek/konec na tónice). Zbývá: zobrazení stupnice na hmatníku.
+- **Generátor akordových progresí (Smart Progression Generator)** – ✅ typické progrese podle stylu (pop, rock, jazz, blues, klasika, flamenco) v libovolné tónině, volitelně se septakordy, náhodné generování podle funkční harmonie, přehrání celé progrese a výběr hmatu ke každému akordu. Zbývá: voice leading, tempo/metronom, ukládání vlastních progresí.
 
 ## Další nápady
 

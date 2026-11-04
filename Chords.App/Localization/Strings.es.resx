@@ -56,4 +56,31 @@
   <data name="Shape_TooFew" xml:space="preserve"><value>Toca al menos dos notas distintas</value></data>
   <data name="Shape_Play" xml:space="preserve"><value>Reproducir</value></data>
   <data name="Shape_Clear" xml:space="preserve"><value>Borrar</value></data>
+  <data name="Nav_Key" xml:space="preserve"><value>Acordes de una tonalidad</value></data>
+  <data name="Nav_Progressions" xml:space="preserve"><value>Progresiones de acordes</value></data>
+  <data name="Scale_Major" xml:space="preserve"><value>Mayor</value></data>
+  <data name="Scale_Minor" xml:space="preserve"><value>Menor natural</value></data>
+  <data name="Scale_HarmonicMinor" xml:space="preserve"><value>Menor armónica</value></data>
+  <data name="Scale_MelodicMinor" xml:space="preserve"><value>Menor melódica</value></data>
+  <data name="Scale_Dorian" xml:space="preserve"><value>Dórica</value></data>
+  <data name="Scale_Phrygian" xml:space="preserve"><value>Frigia</value></data>
+  <data name="Scale_Lydian" xml:space="preserve"><value>Lidia</value></data>
+  <data name="Scale_Mixolydian" xml:space="preserve"><value>Mixolidia</value></data>
+  <data name="Key_TabChords" xml:space="preserve"><value>Acordes de la tonalidad</value></data>
+  <data name="Key_TabDetect" xml:space="preserve"><value>Buscar la tonalidad</value></data>
+  <data name="Key_ScaleNotes" xml:space="preserve"><value>Notas de la escala:</value></data>
+  <data name="Key_Sevenths" xml:space="preserve"><value>Acordes de séptima</value></data>
+  <data name="Key_Add" xml:space="preserve"><value>Añadir acorde</value></data>
+  <data name="Key_DetectHint" xml:space="preserve"><value>Añade los acordes de una canción y la aplicación encontrará las tonalidades a las que pertenecen. Toca una tonalidad para ver sus acordes.</value></data>
+  <data name="Key_NoChords" xml:space="preserve"><value>Añade los acordes de una canción</value></data>
+  <data name="Key_NoKey" xml:space="preserve"><value>Ninguna tonalidad coincide</value></data>
+  <data name="Key_Progressions" xml:space="preserve"><value>Progresiones en esta tonalidad</value></data>
+  <data name="Style_Pop" xml:space="preserve"><value>Pop</value></data>
+  <data name="Style_Rock" xml:space="preserve"><value>Rock</value></data>
+  <data name="Style_Jazz" xml:space="preserve"><value>Jazz</value></data>
+  <data name="Style_Blues" xml:space="preserve"><value>Blues</value></data>
+  <data name="Style_Classical" xml:space="preserve"><value>Clásica</value></data>
+  <data name="Style_Flamenco" xml:space="preserve"><value>Flamenco</value></data>
+  <data name="Prog_Generate" xml:space="preserve"><value>Generar una progresión</value></data>
+  <data name="Prog_Hint" xml:space="preserve"><value>Toca una progresión para ver sus diagramas; ‹ › cambia la digitación. ▶ la reproduce, toca de nuevo para detenerla.</value></data>
 </root>

@@ -56,4 +56,31 @@
   <data name="Shape_TooFew" xml:space="preserve"><value>कम से कम दो अलग स्वर बजाएँ</value></data>
   <data name="Shape_Play" xml:space="preserve"><value>बजाएँ</value></data>
   <data name="Shape_Clear" xml:space="preserve"><value>साफ़ करें</value></data>
+  <data name="Nav_Key" xml:space="preserve"><value>स्केल के कॉर्ड</value></data>
+  <data name="Nav_Progressions" xml:space="preserve"><value>कॉर्ड प्रोग्रेशन</value></data>
+  <data name="Scale_Major" xml:space="preserve"><value>मेजर</value></data>
+  <data name="Scale_Minor" xml:space="preserve"><value>नेचुरल माइनर</value></data>
+  <data name="Scale_HarmonicMinor" xml:space="preserve"><value>हार्मोनिक माइनर</value></data>
+  <data name="Scale_MelodicMinor" xml:space="preserve"><value>मेलोडिक माइनर</value></data>
+  <data name="Scale_Dorian" xml:space="preserve"><value>डोरियन</value></data>
+  <data name="Scale_Phrygian" xml:space="preserve"><value>फ्रिजियन</value></data>
+  <data name="Scale_Lydian" xml:space="preserve"><value>लिडियन</value></data>
+  <data name="Scale_Mixolydian" xml:space="preserve"><value>मिक्सोलिडियन</value></data>
+  <data name="Key_TabChords" xml:space="preserve"><value>स्केल के कॉर्ड</value></data>
+  <data name="Key_TabDetect" xml:space="preserve"><value>स्केल खोजें</value></data>
+  <data name="Key_ScaleNotes" xml:space="preserve"><value>स्केल के स्वर:</value></data>
+  <data name="Key_Sevenths" xml:space="preserve"><value>सेवंथ कॉर्ड</value></data>
+  <data name="Key_Add" xml:space="preserve"><value>कॉर्ड जोड़ें</value></data>
+  <data name="Key_DetectHint" xml:space="preserve"><value>किसी गाने के कॉर्ड जोड़ें और ऐप उन स्केल को खोज लेगा जिनमें वे फिट होते हैं। किसी स्केल के कॉर्ड देखने के लिए उस पर टैप करें।</value></data>
+  <data name="Key_NoChords" xml:space="preserve"><value>किसी गाने के कॉर्ड जोड़ें</value></data>
+  <data name="Key_NoKey" xml:space="preserve"><value>कोई मेल खाता स्केल नहीं</value></data>
+  <data name="Key_Progressions" xml:space="preserve"><value>इस स्केल में प्रोग्रेशन</value></data>
+  <data name="Style_Pop" xml:space="preserve"><value>पॉप</value></data>
+  <data name="Style_Rock" xml:space="preserve"><value>रॉक</value></data>
+  <data name="Style_Jazz" xml:space="preserve"><value>जैज़</value></data>
+  <data name="Style_Blues" xml:space="preserve"><value>ब्लूज़</value></data>
+  <data name="Style_Classical" xml:space="preserve"><value>क्लासिकल</value></data>
+  <data name="Style_Flamenco" xml:space="preserve"><value>फ़्लामेंको</value></data>
+  <data name="Prog_Generate" xml:space="preserve"><value>प्रोग्रेशन बनाएँ</value></data>
+  <data name="Prog_Hint" xml:space="preserve"><value>डायग्राम देखने के लिए किसी प्रोग्रेशन पर टैप करें; ‹ › फ़िंगरिंग बदलता है। ▶ उसे बजाता है, रोकने के लिए फिर टैप करें।</value></data>
 </root>

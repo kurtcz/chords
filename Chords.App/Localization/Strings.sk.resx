@@ -57,4 +57,31 @@
   <data name="Shape_TooFew" xml:space="preserve"><value>Zahrajte aspoň dva rôzne tóny</value></data>
   <data name="Shape_Play" xml:space="preserve"><value>Prehrať</value></data>
   <data name="Shape_Clear" xml:space="preserve"><value>Vymazať</value></data>
+  <data name="Nav_Key" xml:space="preserve"><value>Akordy v tónine</value></data>
+  <data name="Nav_Progressions" xml:space="preserve"><value>Akordové progresie</value></data>
+  <data name="Scale_Major" xml:space="preserve"><value>Durová</value></data>
+  <data name="Scale_Minor" xml:space="preserve"><value>Prirodzená molová</value></data>
+  <data name="Scale_HarmonicMinor" xml:space="preserve"><value>Harmonická molová</value></data>
+  <data name="Scale_MelodicMinor" xml:space="preserve"><value>Melodická molová</value></data>
+  <data name="Scale_Dorian" xml:space="preserve"><value>Dórska</value></data>
+  <data name="Scale_Phrygian" xml:space="preserve"><value>Frygická</value></data>
+  <data name="Scale_Lydian" xml:space="preserve"><value>Lýdická</value></data>
+  <data name="Scale_Mixolydian" xml:space="preserve"><value>Mixolýdická</value></data>
+  <data name="Key_TabChords" xml:space="preserve"><value>Akordy tóniny</value></data>
+  <data name="Key_TabDetect" xml:space="preserve"><value>Nájsť tóninu</value></data>
+  <data name="Key_ScaleNotes" xml:space="preserve"><value>Tóny stupnice:</value></data>
+  <data name="Key_Sevenths" xml:space="preserve"><value>Septakordy</value></data>
+  <data name="Key_Add" xml:space="preserve"><value>Pridať akord</value></data>
+  <data name="Key_DetectHint" xml:space="preserve"><value>Pridajte akordy piesne a aplikácia nájde tóniny, do ktorých patria. Ťuknutím na tóninu zobrazíte jej akordy.</value></data>
+  <data name="Key_NoChords" xml:space="preserve"><value>Pridajte akordy piesne</value></data>
+  <data name="Key_NoKey" xml:space="preserve"><value>Žiadna vhodná tónina</value></data>
+  <data name="Key_Progressions" xml:space="preserve"><value>Progresie v tejto tónine</value></data>
+  <data name="Style_Pop" xml:space="preserve"><value>Pop</value></data>
+  <data name="Style_Rock" xml:space="preserve"><value>Rock</value></data>
+  <data name="Style_Jazz" xml:space="preserve"><value>Jazz</value></data>
+  <data name="Style_Blues" xml:space="preserve"><value>Blues</value></data>
+  <data name="Style_Classical" xml:space="preserve"><value>Klasika</value></data>
+  <data name="Style_Flamenco" xml:space="preserve"><value>Flamenco</value></data>
+  <data name="Prog_Generate" xml:space="preserve"><value>Vygenerovať progresiu</value></data>
+  <data name="Prog_Hint" xml:space="preserve"><value>Ťuknutím na progresiu zobrazíte diagramy; ‹ › mení hmat. ▶ ju prehrá, ďalším ťuknutím zastavíte.</value></data>
 </root>

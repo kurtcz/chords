@@ -56,4 +56,31 @@
   <data name="Shape_TooFew" xml:space="preserve"><value>Spiele mindestens zwei verschiedene Töne</value></data>
   <data name="Shape_Play" xml:space="preserve"><value>Abspielen</value></data>
   <data name="Shape_Clear" xml:space="preserve"><value>Löschen</value></data>
+  <data name="Nav_Key" xml:space="preserve"><value>Akkorde einer Tonart</value></data>
+  <data name="Nav_Progressions" xml:space="preserve"><value>Akkordfolgen</value></data>
+  <data name="Scale_Major" xml:space="preserve"><value>Dur</value></data>
+  <data name="Scale_Minor" xml:space="preserve"><value>Natürliches Moll</value></data>
+  <data name="Scale_HarmonicMinor" xml:space="preserve"><value>Harmonisches Moll</value></data>
+  <data name="Scale_MelodicMinor" xml:space="preserve"><value>Melodisches Moll</value></data>
+  <data name="Scale_Dorian" xml:space="preserve"><value>Dorisch</value></data>
+  <data name="Scale_Phrygian" xml:space="preserve"><value>Phrygisch</value></data>
+  <data name="Scale_Lydian" xml:space="preserve"><value>Lydisch</value></data>
+  <data name="Scale_Mixolydian" xml:space="preserve"><value>Mixolydisch</value></data>
+  <data name="Key_TabChords" xml:space="preserve"><value>Akkorde der Tonart</value></data>
+  <data name="Key_TabDetect" xml:space="preserve"><value>Tonart finden</value></data>
+  <data name="Key_ScaleNotes" xml:space="preserve"><value>Töne der Tonleiter:</value></data>
+  <data name="Key_Sevenths" xml:space="preserve"><value>Septakkorde</value></data>
+  <data name="Key_Add" xml:space="preserve"><value>Akkord hinzufügen</value></data>
+  <data name="Key_DetectHint" xml:space="preserve"><value>Füge die Akkorde eines Songs hinzu und die App findet die passenden Tonarten. Tippe auf eine Tonart, um ihre Akkorde zu sehen.</value></data>
+  <data name="Key_NoChords" xml:space="preserve"><value>Füge die Akkorde eines Songs hinzu</value></data>
+  <data name="Key_NoKey" xml:space="preserve"><value>Keine passende Tonart</value></data>
+  <data name="Key_Progressions" xml:space="preserve"><value>Akkordfolgen in dieser Tonart</value></data>
+  <data name="Style_Pop" xml:space="preserve"><value>Pop</value></data>
+  <data name="Style_Rock" xml:space="preserve"><value>Rock</value></data>
+  <data name="Style_Jazz" xml:space="preserve"><value>Jazz</value></data>
+  <data name="Style_Blues" xml:space="preserve"><value>Blues</value></data>
+  <data name="Style_Classical" xml:space="preserve"><value>Klassik</value></data>
+  <data name="Style_Flamenco" xml:space="preserve"><value>Flamenco</value></data>
+  <data name="Prog_Generate" xml:space="preserve"><value>Akkordfolge erzeugen</value></data>
+  <data name="Prog_Hint" xml:space="preserve"><value>Tippe auf eine Akkordfolge, um ihre Diagramme zu sehen; ‹ › wechselt den Griff. ▶ spielt sie ab, erneut tippen stoppt.</value></data>
 </root>

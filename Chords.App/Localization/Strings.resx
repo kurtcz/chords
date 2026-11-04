@@ -57,4 +57,31 @@
   <data name="Shape_TooFew" xml:space="preserve"><value>Play at least two different notes</value></data>
   <data name="Shape_Play" xml:space="preserve"><value>Play</value></data>
   <data name="Shape_Clear" xml:space="preserve"><value>Clear</value></data>
+  <data name="Nav_Key" xml:space="preserve"><value>Chords in a key</value></data>
+  <data name="Nav_Progressions" xml:space="preserve"><value>Chord progressions</value></data>
+  <data name="Scale_Major" xml:space="preserve"><value>Major</value></data>
+  <data name="Scale_Minor" xml:space="preserve"><value>Natural minor</value></data>
+  <data name="Scale_HarmonicMinor" xml:space="preserve"><value>Harmonic minor</value></data>
+  <data name="Scale_MelodicMinor" xml:space="preserve"><value>Melodic minor</value></data>
+  <data name="Scale_Dorian" xml:space="preserve"><value>Dorian</value></data>
+  <data name="Scale_Phrygian" xml:space="preserve"><value>Phrygian</value></data>
+  <data name="Scale_Lydian" xml:space="preserve"><value>Lydian</value></data>
+  <data name="Scale_Mixolydian" xml:space="preserve"><value>Mixolydian</value></data>
+  <data name="Key_TabChords" xml:space="preserve"><value>Chords of a key</value></data>
+  <data name="Key_TabDetect" xml:space="preserve"><value>Find the key</value></data>
+  <data name="Key_ScaleNotes" xml:space="preserve"><value>Scale notes:</value></data>
+  <data name="Key_Sevenths" xml:space="preserve"><value>Seventh chords</value></data>
+  <data name="Key_Add" xml:space="preserve"><value>Add chord</value></data>
+  <data name="Key_DetectHint" xml:space="preserve"><value>Add the chords of a song and the app finds the keys they fit. Tap a key to see its chords.</value></data>
+  <data name="Key_NoChords" xml:space="preserve"><value>Add the chords of a song</value></data>
+  <data name="Key_NoKey" xml:space="preserve"><value>No matching key</value></data>
+  <data name="Key_Progressions" xml:space="preserve"><value>Progressions in this key</value></data>
+  <data name="Style_Pop" xml:space="preserve"><value>Pop</value></data>
+  <data name="Style_Rock" xml:space="preserve"><value>Rock</value></data>
+  <data name="Style_Jazz" xml:space="preserve"><value>Jazz</value></data>
+  <data name="Style_Blues" xml:space="preserve"><value>Blues</value></data>
+  <data name="Style_Classical" xml:space="preserve"><value>Classical</value></data>
+  <data name="Style_Flamenco" xml:space="preserve"><value>Flamenco</value></data>
+  <data name="Prog_Generate" xml:space="preserve"><value>Generate a progression</value></data>
+  <data name="Prog_Hint" xml:space="preserve"><value>Tap a progression to see its diagrams; ‹ › changes the fingering. ▶ plays it, tap again to stop.</value></data>
 </root>

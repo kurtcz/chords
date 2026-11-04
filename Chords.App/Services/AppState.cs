@@ -36,4 +36,13 @@ public class AppState
     /// <summary>Fret held on each string on the "Find chord by shape" page (0 = open, -1 = muted).</summary>
     public int[] ShapeFrets { get; set; }
     public Instrument ShapeInstrument { get; set; }
+
+    /// <summary>Key chosen on the "Chords in a key" and "Chord progressions" pages.</summary>
+    public Note KeyTonic { get; set; } = new(Tone.C);
+    public ScaleType KeyScale { get; set; } = ScaleType.Major;
+    /// <summary>Seventh chords instead of triads in a key and its progressions.</summary>
+    public bool KeySevenths { get; set; }
+
+    /// <summary>Chords entered to find the key of a song.</summary>
+    public List<Chord> KeyDetectChords { get; } = [];
 }

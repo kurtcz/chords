@@ -55,4 +55,31 @@
   <data name="Shape_TooFew" xml:space="preserve"><value>異なる音を2つ以上鳴らしてください</value></data>
   <data name="Shape_Play" xml:space="preserve"><value>再生</value></data>
   <data name="Shape_Clear" xml:space="preserve"><value>クリア</value></data>
+  <data name="Nav_Key" xml:space="preserve"><value>キーのコード</value></data>
+  <data name="Nav_Progressions" xml:space="preserve"><value>コード進行</value></data>
+  <data name="Scale_Major" xml:space="preserve"><value>メジャー</value></data>
+  <data name="Scale_Minor" xml:space="preserve"><value>ナチュラルマイナー</value></data>
+  <data name="Scale_HarmonicMinor" xml:space="preserve"><value>ハーモニックマイナー</value></data>
+  <data name="Scale_MelodicMinor" xml:space="preserve"><value>メロディックマイナー</value></data>
+  <data name="Scale_Dorian" xml:space="preserve"><value>ドリアン</value></data>
+  <data name="Scale_Phrygian" xml:space="preserve"><value>フリジアン</value></data>
+  <data name="Scale_Lydian" xml:space="preserve"><value>リディアン</value></data>
+  <data name="Scale_Mixolydian" xml:space="preserve"><value>ミクソリディアン</value></data>
+  <data name="Key_TabChords" xml:space="preserve"><value>キーのコード</value></data>
+  <data name="Key_TabDetect" xml:space="preserve"><value>キーを探す</value></data>
+  <data name="Key_ScaleNotes" xml:space="preserve"><value>スケールの音:</value></data>
+  <data name="Key_Sevenths" xml:space="preserve"><value>セブンスコード</value></data>
+  <data name="Key_Add" xml:space="preserve"><value>コードを追加</value></data>
+  <data name="Key_DetectHint" xml:space="preserve"><value>曲のコードを追加すると、合うキーをアプリが見つけます。キーをタップするとそのコードが表示されます。</value></data>
+  <data name="Key_NoChords" xml:space="preserve"><value>曲のコードを追加してください</value></data>
+  <data name="Key_NoKey" xml:space="preserve"><value>一致するキーがありません</value></data>
+  <data name="Key_Progressions" xml:space="preserve"><value>このキーのコード進行</value></data>
+  <data name="Style_Pop" xml:space="preserve"><value>ポップ</value></data>
+  <data name="Style_Rock" xml:space="preserve"><value>ロック</value></data>
+  <data name="Style_Jazz" xml:space="preserve"><value>ジャズ</value></data>
+  <data name="Style_Blues" xml:space="preserve"><value>ブルース</value></data>
+  <data name="Style_Classical" xml:space="preserve"><value>クラシック</value></data>
+  <data name="Style_Flamenco" xml:space="preserve"><value>フラメンコ</value></data>
+  <data name="Prog_Generate" xml:space="preserve"><value>コード進行を生成</value></data>
+  <data name="Prog_Hint" xml:space="preserve"><value>コード進行をタップするとダイアグラムが表示されます。‹ › で押さえ方を切り替えます。▶ で再生、もう一度タップで停止します。</value></data>
 </root>

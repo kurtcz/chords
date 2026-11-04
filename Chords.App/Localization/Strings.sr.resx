@@ -57,4 +57,31 @@
   <data name="Shape_TooFew" xml:space="preserve"><value>Одсвирајте бар два различита тона</value></data>
   <data name="Shape_Play" xml:space="preserve"><value>Пусти</value></data>
   <data name="Shape_Clear" xml:space="preserve"><value>Обриши</value></data>
+  <data name="Nav_Key" xml:space="preserve"><value>Акорди у тоналитету</value></data>
+  <data name="Nav_Progressions" xml:space="preserve"><value>Прогресије акорда</value></data>
+  <data name="Scale_Major" xml:space="preserve"><value>Дурска</value></data>
+  <data name="Scale_Minor" xml:space="preserve"><value>Природна молска</value></data>
+  <data name="Scale_HarmonicMinor" xml:space="preserve"><value>Хармонска молска</value></data>
+  <data name="Scale_MelodicMinor" xml:space="preserve"><value>Мелодијска молска</value></data>
+  <data name="Scale_Dorian" xml:space="preserve"><value>Дорска</value></data>
+  <data name="Scale_Phrygian" xml:space="preserve"><value>Фригијска</value></data>
+  <data name="Scale_Lydian" xml:space="preserve"><value>Лидијска</value></data>
+  <data name="Scale_Mixolydian" xml:space="preserve"><value>Миксолидијска</value></data>
+  <data name="Key_TabChords" xml:space="preserve"><value>Акорди тоналитета</value></data>
+  <data name="Key_TabDetect" xml:space="preserve"><value>Пронађи тоналитет</value></data>
+  <data name="Key_ScaleNotes" xml:space="preserve"><value>Тонови лествице:</value></data>
+  <data name="Key_Sevenths" xml:space="preserve"><value>Септакорди</value></data>
+  <data name="Key_Add" xml:space="preserve"><value>Додај акорд</value></data>
+  <data name="Key_DetectHint" xml:space="preserve"><value>Додајте акорде песме и апликација ће пронаћи тоналитете којима припадају. Додирните тоналитет да видите његове акорде.</value></data>
+  <data name="Key_NoChords" xml:space="preserve"><value>Додајте акорде песме</value></data>
+  <data name="Key_NoKey" xml:space="preserve"><value>Нема одговарајућег тоналитета</value></data>
+  <data name="Key_Progressions" xml:space="preserve"><value>Прогресије у овом тоналитету</value></data>
+  <data name="Style_Pop" xml:space="preserve"><value>Поп</value></data>
+  <data name="Style_Rock" xml:space="preserve"><value>Рок</value></data>
+  <data name="Style_Jazz" xml:space="preserve"><value>Џез</value></data>
+  <data name="Style_Blues" xml:space="preserve"><value>Блуз</value></data>
+  <data name="Style_Classical" xml:space="preserve"><value>Класика</value></data>
+  <data name="Style_Flamenco" xml:space="preserve"><value>Фламенко</value></data>
+  <data name="Prog_Generate" xml:space="preserve"><value>Генериши прогресију</value></data>
+  <data name="Prog_Hint" xml:space="preserve"><value>Додирните прогресију да видите дијаграме; ‹ › мења хват. ▶ је репродукује, поновни додир зауставља.</value></data>
 </root>

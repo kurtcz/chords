@@ -55,4 +55,31 @@
   <data name="Shape_TooFew" xml:space="preserve"><value>请至少弹奏两个不同的音</value></data>
   <data name="Shape_Play" xml:space="preserve"><value>播放</value></data>
   <data name="Shape_Clear" xml:space="preserve"><value>清除</value></data>
+  <data name="Nav_Key" xml:space="preserve"><value>调内和弦</value></data>
+  <data name="Nav_Progressions" xml:space="preserve"><value>和弦进行</value></data>
+  <data name="Scale_Major" xml:space="preserve"><value>大调</value></data>
+  <data name="Scale_Minor" xml:space="preserve"><value>自然小调</value></data>
+  <data name="Scale_HarmonicMinor" xml:space="preserve"><value>和声小调</value></data>
+  <data name="Scale_MelodicMinor" xml:space="preserve"><value>旋律小调</value></data>
+  <data name="Scale_Dorian" xml:space="preserve"><value>多利亚</value></data>
+  <data name="Scale_Phrygian" xml:space="preserve"><value>弗里几亚</value></data>
+  <data name="Scale_Lydian" xml:space="preserve"><value>利底亚</value></data>
+  <data name="Scale_Mixolydian" xml:space="preserve"><value>混合利底亚</value></data>
+  <data name="Key_TabChords" xml:space="preserve"><value>调内和弦</value></data>
+  <data name="Key_TabDetect" xml:space="preserve"><value>查找调性</value></data>
+  <data name="Key_ScaleNotes" xml:space="preserve"><value>音阶音符：</value></data>
+  <data name="Key_Sevenths" xml:space="preserve"><value>七和弦</value></data>
+  <data name="Key_Add" xml:space="preserve"><value>添加和弦</value></data>
+  <data name="Key_DetectHint" xml:space="preserve"><value>添加一首歌的和弦，应用会找出与之匹配的调。点按某个调查看其和弦。</value></data>
+  <data name="Key_NoChords" xml:space="preserve"><value>请添加一首歌的和弦</value></data>
+  <data name="Key_NoKey" xml:space="preserve"><value>没有匹配的调</value></data>
+  <data name="Key_Progressions" xml:space="preserve"><value>此调中的和弦进行</value></data>
+  <data name="Style_Pop" xml:space="preserve"><value>流行</value></data>
+  <data name="Style_Rock" xml:space="preserve"><value>摇滚</value></data>
+  <data name="Style_Jazz" xml:space="preserve"><value>爵士</value></data>
+  <data name="Style_Blues" xml:space="preserve"><value>布鲁斯</value></data>
+  <data name="Style_Classical" xml:space="preserve"><value>古典</value></data>
+  <data name="Style_Flamenco" xml:space="preserve"><value>弗拉门戈</value></data>
+  <data name="Prog_Generate" xml:space="preserve"><value>生成和弦进行</value></data>
+  <data name="Prog_Hint" xml:space="preserve"><value>点按和弦进行查看指法图；‹ › 切换指法。▶ 播放，再次点按停止。</value></data>
 </root>

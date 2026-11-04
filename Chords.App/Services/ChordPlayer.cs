@@ -36,6 +36,51 @@ public class ChordPlayer(ISoundBank soundBank)
         }
     });
 
+    /// <summary>Pause between chords of a progression (ms).</summary>
+    private const int ChordDelay = 1100;
+
+    /// <summary>Set to stop a progression after the chord being played.</summary>
+    private volatile bool _stop;
+
+    /// <summary>
+    /// Strums the chord diagrams of a progression one after another (each once).
+    /// Called while a progression is playing, it stops it instead.
+    /// </summary>
+    public void PlaySequence(InstrumentInfo instrument, IReadOnlyList<int[]> layouts, float volume = 1f)
+    {
+        if (Volatile.Read(ref _playing) != 0)
+        {
+            _stop = true;
+            return;
+        }
+        _stop = false;
+        PlayExclusive(async () =>
+        {
+            foreach (var positions in layouts)
+            {
+                if (_stop)
+                {
+                    break;
+                }
+                var strings = 0;
+
+                for (var i = 0; i < positions.Length; i++)
+                {
+                    if (positions[i] < 0)
+                    {
+                        continue;
+                    }
+                    var (sample, rate) = SampleFor(instrument.Pitches[i], instrument.Semitones(i, positions[i]));
+
+                    soundBank.PlayString(sample, rate, volume);
+                    strings++;
+                    await Task.Delay(FastStrumDelay);
+                }
+                await Task.Delay(Math.Max(0, ChordDelay - strings * FastStrumDelay));
+            }
+        });
+    }
+
     /// <summary>Runs a playback unless another one is still in progress.</summary>
     private void PlayExclusive(Func<Task> play)
     {
@@ -79,12 +124,17 @@ public class ChordPlayer(ISoundBank soundBank)
     }
 
     /// <summary>Plays the notes of a chord (English name, e.g. "F#m") as a quick arpeggio on the A string.</summary>
-    public void PlayChord(string id, float volume = 1f) => PlayExclusive(async () =>
+    public void PlayChord(string id, float volume = 1f)
     {
-        if (!Chord.TryParse(id, NamingConvention.English, out var chord))
+        if (Chord.TryParse(id, NamingConvention.English, out var chord))
         {
-            return;
+            PlayChord(chord, volume);
         }
+    }
+
+    /// <summary>Plays the notes of a chord as a quick arpeggio on the A string.</summary>
+    public void PlayChord(Chord chord, float volume = 1f) => PlayExclusive(async () =>
+    {
         var c = new Note(Tone.C);
         var minDistance = 3 + c.ChromaticDistance(chord.Notes[0]);
 

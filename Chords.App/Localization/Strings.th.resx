@@ -55,4 +55,31 @@
   <data name="Shape_TooFew" xml:space="preserve"><value>เล่นโน้ตที่ต่างกันอย่างน้อยสองตัว</value></data>
   <data name="Shape_Play" xml:space="preserve"><value>เล่น</value></data>
   <data name="Shape_Clear" xml:space="preserve"><value>ล้าง</value></data>
+  <data name="Nav_Key" xml:space="preserve"><value>คอร์ดในคีย์</value></data>
+  <data name="Nav_Progressions" xml:space="preserve"><value>ทางเดินคอร์ด</value></data>
+  <data name="Scale_Major" xml:space="preserve"><value>เมเจอร์</value></data>
+  <data name="Scale_Minor" xml:space="preserve"><value>ไมเนอร์ธรรมชาติ</value></data>
+  <data name="Scale_HarmonicMinor" xml:space="preserve"><value>ฮาร์มอนิกไมเนอร์</value></data>
+  <data name="Scale_MelodicMinor" xml:space="preserve"><value>เมโลดิกไมเนอร์</value></data>
+  <data name="Scale_Dorian" xml:space="preserve"><value>โดเรียน</value></data>
+  <data name="Scale_Phrygian" xml:space="preserve"><value>ฟรีเจียน</value></data>
+  <data name="Scale_Lydian" xml:space="preserve"><value>ลิเดียน</value></data>
+  <data name="Scale_Mixolydian" xml:space="preserve"><value>มิกโซลิเดียน</value></data>
+  <data name="Key_TabChords" xml:space="preserve"><value>คอร์ดของคีย์</value></data>
+  <data name="Key_TabDetect" xml:space="preserve"><value>ค้นหาคีย์</value></data>
+  <data name="Key_ScaleNotes" xml:space="preserve"><value>โน้ตในสเกล:</value></data>
+  <data name="Key_Sevenths" xml:space="preserve"><value>คอร์ดเซเวนท์</value></data>
+  <data name="Key_Add" xml:space="preserve"><value>เพิ่มคอร์ด</value></data>
+  <data name="Key_DetectHint" xml:space="preserve"><value>เพิ่มคอร์ดของเพลง แล้วแอปจะค้นหาคีย์ที่เข้ากัน แตะคีย์เพื่อดูคอร์ดของคีย์นั้น</value></data>
+  <data name="Key_NoChords" xml:space="preserve"><value>เพิ่มคอร์ดของเพลง</value></data>
+  <data name="Key_NoKey" xml:space="preserve"><value>ไม่มีคีย์ที่ตรงกัน</value></data>
+  <data name="Key_Progressions" xml:space="preserve"><value>ทางเดินคอร์ดในคีย์นี้</value></data>
+  <data name="Style_Pop" xml:space="preserve"><value>ป๊อป</value></data>
+  <data name="Style_Rock" xml:space="preserve"><value>ร็อก</value></data>
+  <data name="Style_Jazz" xml:space="preserve"><value>แจ๊ส</value></data>
+  <data name="Style_Blues" xml:space="preserve"><value>บลูส์</value></data>
+  <data name="Style_Classical" xml:space="preserve"><value>คลาสสิก</value></data>
+  <data name="Style_Flamenco" xml:space="preserve"><value>ฟลาเมงโก</value></data>
+  <data name="Prog_Generate" xml:space="preserve"><value>สร้างทางเดินคอร์ด</value></data>
+  <data name="Prog_Hint" xml:space="preserve"><value>แตะทางเดินคอร์ดเพื่อดูไดอะแกรม ‹ › เปลี่ยนท่าจับ ▶ เล่น แตะอีกครั้งเพื่อหยุด</value></data>
 </root>

@@ -56,4 +56,31 @@
   <data name="Shape_TooFew" xml:space="preserve"><value>Spill mindestens zwee verschidden Téin</value></data>
   <data name="Shape_Play" xml:space="preserve"><value>Ofspillen</value></data>
   <data name="Shape_Clear" xml:space="preserve"><value>Läschen</value></data>
+  <data name="Nav_Key" xml:space="preserve"><value>Akkorde vun enger Tonart</value></data>
+  <data name="Nav_Progressions" xml:space="preserve"><value>Akkordfolgen</value></data>
+  <data name="Scale_Major" xml:space="preserve"><value>Dur</value></data>
+  <data name="Scale_Minor" xml:space="preserve"><value>Natierlecht Moll</value></data>
+  <data name="Scale_HarmonicMinor" xml:space="preserve"><value>Harmonescht Moll</value></data>
+  <data name="Scale_MelodicMinor" xml:space="preserve"><value>Melodescht Moll</value></data>
+  <data name="Scale_Dorian" xml:space="preserve"><value>Doresch</value></data>
+  <data name="Scale_Phrygian" xml:space="preserve"><value>Phrygesch</value></data>
+  <data name="Scale_Lydian" xml:space="preserve"><value>Lydesch</value></data>
+  <data name="Scale_Mixolydian" xml:space="preserve"><value>Mixolydesch</value></data>
+  <data name="Key_TabChords" xml:space="preserve"><value>Akkorde vun der Tonart</value></data>
+  <data name="Key_TabDetect" xml:space="preserve"><value>Tonart fannen</value></data>
+  <data name="Key_ScaleNotes" xml:space="preserve"><value>Téin vun der Tonleeder:</value></data>
+  <data name="Key_Sevenths" xml:space="preserve"><value>Septakkorden</value></data>
+  <data name="Key_Add" xml:space="preserve"><value>Akkord derbäisetzen</value></data>
+  <data name="Key_DetectHint" xml:space="preserve"><value>Setz d'Akkorde vun engem Lidd derbäi an d'App fënnt déi passend Tonarten. Tipp op eng Tonart fir hir Akkorden ze gesinn.</value></data>
+  <data name="Key_NoChords" xml:space="preserve"><value>Setz d'Akkorde vun engem Lidd derbäi</value></data>
+  <data name="Key_NoKey" xml:space="preserve"><value>Keng passend Tonart</value></data>
+  <data name="Key_Progressions" xml:space="preserve"><value>Akkordfolgen an dëser Tonart</value></data>
+  <data name="Style_Pop" xml:space="preserve"><value>Pop</value></data>
+  <data name="Style_Rock" xml:space="preserve"><value>Rock</value></data>
+  <data name="Style_Jazz" xml:space="preserve"><value>Jazz</value></data>
+  <data name="Style_Blues" xml:space="preserve"><value>Blues</value></data>
+  <data name="Style_Classical" xml:space="preserve"><value>Klassik</value></data>
+  <data name="Style_Flamenco" xml:space="preserve"><value>Flamenco</value></data>
+  <data name="Prog_Generate" xml:space="preserve"><value>Akkordfolg generéieren</value></data>
+  <data name="Prog_Hint" xml:space="preserve"><value>Tipp op eng Akkordfolg fir hir Diagrammer ze gesinn; ‹ › wiesselt de Grëff. ▶ spillt se of, nach eng Kéier tippen stoppt.</value></data>
 </root>

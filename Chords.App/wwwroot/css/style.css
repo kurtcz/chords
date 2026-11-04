@@ -497,3 +497,90 @@ footer {
 [dir=rtl] [class*="col-xs-"] {
     float: right;
 }
+
+/* Chords in a key */
+.key-tabs {
+    margin-bottom: 15px;
+}
+
+.key-tabs a {
+    cursor: pointer;
+}
+
+.key-scale {
+    margin: 10px 0;
+}
+
+.key-chords td {
+    vertical-align: middle !important;
+    font-size: 1.2em;
+}
+
+.key-chords .numeral {
+    width: 25%;
+    font-family: Georgia, "Times New Roman", serif;
+    color: #555;
+}
+
+.key-entered {
+    margin: 15px 0;
+}
+
+.key-chip {
+    display: inline-block;
+    font-size: 1em;
+    margin: 0 6px 6px 0;
+    padding: 6px 10px;
+    cursor: pointer;
+}
+
+/* Chord progressions */
+.progression-tip,
+.progression-list {
+    margin-top: 15px;
+}
+
+.progression-head,
+.progression-symbols {
+    cursor: pointer;
+}
+
+.progression-numerals {
+    margin-left: 8px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.1em;
+}
+
+.progression-symbols {
+    margin-top: 6px;
+    font-size: 1.2em;
+    font-weight: bold;
+    white-space: pre-wrap;
+}
+
+.list-group-item.active-progression {
+    border-color: #4d89d5;
+}
+
+.progression-diagrams {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.progression-chord {
+    width: 25%;
+    min-width: 110px;
+    text-align: center;
+}
+
+.progression-chord .chord-layout,
+.progression-chord .chord-layout.horizontal {
+    float: none;
+    width: 100%;
+    padding: 5px;
+}
+
+.progression-pick span {
+    margin: 0 6px;
+}

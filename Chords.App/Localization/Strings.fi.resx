@@ -56,4 +56,31 @@
   <data name="Shape_TooFew" xml:space="preserve"><value>Soita vähintään kaksi eri säveltä</value></data>
   <data name="Shape_Play" xml:space="preserve"><value>Soita</value></data>
   <data name="Shape_Clear" xml:space="preserve"><value>Tyhjennä</value></data>
+  <data name="Nav_Key" xml:space="preserve"><value>Sävellajin soinnut</value></data>
+  <data name="Nav_Progressions" xml:space="preserve"><value>Sointukulut</value></data>
+  <data name="Scale_Major" xml:space="preserve"><value>Duuri</value></data>
+  <data name="Scale_Minor" xml:space="preserve"><value>Luonnollinen molli</value></data>
+  <data name="Scale_HarmonicMinor" xml:space="preserve"><value>Harmoninen molli</value></data>
+  <data name="Scale_MelodicMinor" xml:space="preserve"><value>Melodinen molli</value></data>
+  <data name="Scale_Dorian" xml:space="preserve"><value>Doorinen</value></data>
+  <data name="Scale_Phrygian" xml:space="preserve"><value>Fryyginen</value></data>
+  <data name="Scale_Lydian" xml:space="preserve"><value>Lyydinen</value></data>
+  <data name="Scale_Mixolydian" xml:space="preserve"><value>Miksolyydinen</value></data>
+  <data name="Key_TabChords" xml:space="preserve"><value>Sävellajin soinnut</value></data>
+  <data name="Key_TabDetect" xml:space="preserve"><value>Etsi sävellaji</value></data>
+  <data name="Key_ScaleNotes" xml:space="preserve"><value>Asteikon sävelet:</value></data>
+  <data name="Key_Sevenths" xml:space="preserve"><value>Septimisoinnut</value></data>
+  <data name="Key_Add" xml:space="preserve"><value>Lisää sointu</value></data>
+  <data name="Key_DetectHint" xml:space="preserve"><value>Lisää kappaleen soinnut, niin sovellus löytää sävellajit, joihin ne sopivat. Napauta sävellajia nähdäksesi sen soinnut.</value></data>
+  <data name="Key_NoChords" xml:space="preserve"><value>Lisää kappaleen soinnut</value></data>
+  <data name="Key_NoKey" xml:space="preserve"><value>Ei sopivaa sävellajia</value></data>
+  <data name="Key_Progressions" xml:space="preserve"><value>Sointukulut tässä sävellajissa</value></data>
+  <data name="Style_Pop" xml:space="preserve"><value>Pop</value></data>
+  <data name="Style_Rock" xml:space="preserve"><value>Rock</value></data>
+  <data name="Style_Jazz" xml:space="preserve"><value>Jazz</value></data>
+  <data name="Style_Blues" xml:space="preserve"><value>Blues</value></data>
+  <data name="Style_Classical" xml:space="preserve"><value>Klassinen</value></data>
+  <data name="Style_Flamenco" xml:space="preserve"><value>Flamenco</value></data>
+  <data name="Prog_Generate" xml:space="preserve"><value>Luo sointukulku</value></data>
+  <data name="Prog_Hint" xml:space="preserve"><value>Napauta sointukulkua nähdäksesi otteet; ‹ › vaihtaa otetta. ▶ soittaa sen, napauta uudelleen pysäyttääksesi.</value></data>
 </root>

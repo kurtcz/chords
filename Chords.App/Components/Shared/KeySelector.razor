@@ -1,0 +1,34 @@
+@* Tonic and scale of the key shared by the key and progression pages. *@
+@inject AppState State
+
+<DropdownBar>
+    <Brand>@State.KeyTonic.ToString(State.Settings.conv)</Brand>
+    <ChildContent>
+        @foreach (var note in Tonics)
+        {
+            <li><a @onclick="() => Set(note, State.KeyScale)">@note.ToString(State.Settings.conv)</a></li>
+        }
+    </ChildContent>
+</DropdownBar>
+<DropdownBar>
+    <Brand>@L[$"Scale_{State.KeyScale}"]</Brand>
+    <ChildContent>
+        @foreach (var scale in Key.ScaleTypes)
+        {
+            <li><a @onclick="() => Set(State.KeyTonic, scale)">@L[$"Scale_{scale}"]</a></li>
+        }
+    </ChildContent>
+</DropdownBar>
+
+@code {
+    private static readonly Note[] Tonics = new FindChordModel().Notes;
+
+    [Parameter] public EventCallback Changed { get; set; }
+
+    private async Task Set(Note tonic, ScaleType scale)
+    {
+        State.KeyTonic = tonic;
+        State.KeyScale = scale;
+        await Changed.InvokeAsync();
+    }
+}

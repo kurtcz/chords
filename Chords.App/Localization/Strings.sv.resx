@@ -56,4 +56,31 @@
   <data name="Shape_TooFew" xml:space="preserve"><value>Spela minst två olika toner</value></data>
   <data name="Shape_Play" xml:space="preserve"><value>Spela</value></data>
   <data name="Shape_Clear" xml:space="preserve"><value>Rensa</value></data>
+  <data name="Nav_Key" xml:space="preserve"><value>Ackord i en tonart</value></data>
+  <data name="Nav_Progressions" xml:space="preserve"><value>Ackordföljder</value></data>
+  <data name="Scale_Major" xml:space="preserve"><value>Dur</value></data>
+  <data name="Scale_Minor" xml:space="preserve"><value>Naturlig moll</value></data>
+  <data name="Scale_HarmonicMinor" xml:space="preserve"><value>Harmonisk moll</value></data>
+  <data name="Scale_MelodicMinor" xml:space="preserve"><value>Melodisk moll</value></data>
+  <data name="Scale_Dorian" xml:space="preserve"><value>Dorisk</value></data>
+  <data name="Scale_Phrygian" xml:space="preserve"><value>Frygisk</value></data>
+  <data name="Scale_Lydian" xml:space="preserve"><value>Lydisk</value></data>
+  <data name="Scale_Mixolydian" xml:space="preserve"><value>Mixolydisk</value></data>
+  <data name="Key_TabChords" xml:space="preserve"><value>Tonartens ackord</value></data>
+  <data name="Key_TabDetect" xml:space="preserve"><value>Hitta tonarten</value></data>
+  <data name="Key_ScaleNotes" xml:space="preserve"><value>Skalans toner:</value></data>
+  <data name="Key_Sevenths" xml:space="preserve"><value>Septimackord</value></data>
+  <data name="Key_Add" xml:space="preserve"><value>Lägg till ackord</value></data>
+  <data name="Key_DetectHint" xml:space="preserve"><value>Lägg till ackorden i en låt så hittar appen tonarterna de passar i. Tryck på en tonart för att se dess ackord.</value></data>
+  <data name="Key_NoChords" xml:space="preserve"><value>Lägg till ackorden i en låt</value></data>
+  <data name="Key_NoKey" xml:space="preserve"><value>Ingen tonart passar</value></data>
+  <data name="Key_Progressions" xml:space="preserve"><value>Ackordföljder i den här tonarten</value></data>
+  <data name="Style_Pop" xml:space="preserve"><value>Pop</value></data>
+  <data name="Style_Rock" xml:space="preserve"><value>Rock</value></data>
+  <data name="Style_Jazz" xml:space="preserve"><value>Jazz</value></data>
+  <data name="Style_Blues" xml:space="preserve"><value>Blues</value></data>
+  <data name="Style_Classical" xml:space="preserve"><value>Klassiskt</value></data>
+  <data name="Style_Flamenco" xml:space="preserve"><value>Flamenco</value></data>
+  <data name="Prog_Generate" xml:space="preserve"><value>Skapa en ackordföljd</value></data>
+  <data name="Prog_Hint" xml:space="preserve"><value>Tryck på en ackordföljd för att se diagrammen; ‹ › byter grepp. ▶ spelar upp den, tryck igen för att stoppa.</value></data>
 </root>

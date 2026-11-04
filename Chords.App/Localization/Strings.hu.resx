@@ -56,4 +56,31 @@
   <data name="Shape_TooFew" xml:space="preserve"><value>Játssz legalább két különböző hangot</value></data>
   <data name="Shape_Play" xml:space="preserve"><value>Lejátszás</value></data>
   <data name="Shape_Clear" xml:space="preserve"><value>Törlés</value></data>
+  <data name="Nav_Key" xml:space="preserve"><value>Egy hangnem akkordjai</value></data>
+  <data name="Nav_Progressions" xml:space="preserve"><value>Akkordmenetek</value></data>
+  <data name="Scale_Major" xml:space="preserve"><value>Dúr</value></data>
+  <data name="Scale_Minor" xml:space="preserve"><value>Természetes moll</value></data>
+  <data name="Scale_HarmonicMinor" xml:space="preserve"><value>Összhangzatos moll</value></data>
+  <data name="Scale_MelodicMinor" xml:space="preserve"><value>Dallamos moll</value></data>
+  <data name="Scale_Dorian" xml:space="preserve"><value>Dór</value></data>
+  <data name="Scale_Phrygian" xml:space="preserve"><value>Fríg</value></data>
+  <data name="Scale_Lydian" xml:space="preserve"><value>Líd</value></data>
+  <data name="Scale_Mixolydian" xml:space="preserve"><value>Mixolíd</value></data>
+  <data name="Key_TabChords" xml:space="preserve"><value>A hangnem akkordjai</value></data>
+  <data name="Key_TabDetect" xml:space="preserve"><value>Hangnem keresése</value></data>
+  <data name="Key_ScaleNotes" xml:space="preserve"><value>A skála hangjai:</value></data>
+  <data name="Key_Sevenths" xml:space="preserve"><value>Szeptimakkordok</value></data>
+  <data name="Key_Add" xml:space="preserve"><value>Akkord hozzáadása</value></data>
+  <data name="Key_DetectHint" xml:space="preserve"><value>Add meg egy dal akkordjait, és az alkalmazás megtalálja a hozzájuk illő hangnemeket. Koppints egy hangnemre az akkordjaiért.</value></data>
+  <data name="Key_NoChords" xml:space="preserve"><value>Add meg egy dal akkordjait</value></data>
+  <data name="Key_NoKey" xml:space="preserve"><value>Nincs illő hangnem</value></data>
+  <data name="Key_Progressions" xml:space="preserve"><value>Akkordmenetek ebben a hangnemben</value></data>
+  <data name="Style_Pop" xml:space="preserve"><value>Pop</value></data>
+  <data name="Style_Rock" xml:space="preserve"><value>Rock</value></data>
+  <data name="Style_Jazz" xml:space="preserve"><value>Dzsessz</value></data>
+  <data name="Style_Blues" xml:space="preserve"><value>Blues</value></data>
+  <data name="Style_Classical" xml:space="preserve"><value>Klasszikus</value></data>
+  <data name="Style_Flamenco" xml:space="preserve"><value>Flamenco</value></data>
+  <data name="Prog_Generate" xml:space="preserve"><value>Akkordmenet generálása</value></data>
+  <data name="Prog_Hint" xml:space="preserve"><value>Koppints egy akkordmenetre a diagramokért; ‹ › fogást vált. ▶ lejátssza, újabb koppintás leállítja.</value></data>
 </root>

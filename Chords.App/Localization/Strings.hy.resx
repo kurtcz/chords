@@ -56,4 +56,31 @@
   <data name="Shape_TooFew" xml:space="preserve"><value>Նվագեք առնվազն երկու տարբեր հնչյուն</value></data>
   <data name="Shape_Play" xml:space="preserve"><value>Նվագել</value></data>
   <data name="Shape_Clear" xml:space="preserve"><value>Մաքրել</value></data>
+  <data name="Nav_Key" xml:space="preserve"><value>Տոնայնության ակորդներ</value></data>
+  <data name="Nav_Progressions" xml:space="preserve"><value>Ակորդային հաջորդականություններ</value></data>
+  <data name="Scale_Major" xml:space="preserve"><value>Մաժոր</value></data>
+  <data name="Scale_Minor" xml:space="preserve"><value>Բնական մինոր</value></data>
+  <data name="Scale_HarmonicMinor" xml:space="preserve"><value>Հարմոնիկ մինոր</value></data>
+  <data name="Scale_MelodicMinor" xml:space="preserve"><value>Մեղեդիական մինոր</value></data>
+  <data name="Scale_Dorian" xml:space="preserve"><value>Դորիական</value></data>
+  <data name="Scale_Phrygian" xml:space="preserve"><value>Ֆրիգիական</value></data>
+  <data name="Scale_Lydian" xml:space="preserve"><value>Լիդիական</value></data>
+  <data name="Scale_Mixolydian" xml:space="preserve"><value>Միքսոլիդիական</value></data>
+  <data name="Key_TabChords" xml:space="preserve"><value>Տոնայնության ակորդներ</value></data>
+  <data name="Key_TabDetect" xml:space="preserve"><value>Գտնել տոնայնությունը</value></data>
+  <data name="Key_ScaleNotes" xml:space="preserve"><value>Գամմայի նոտաներ՝</value></data>
+  <data name="Key_Sevenths" xml:space="preserve"><value>Սեպտակորդներ</value></data>
+  <data name="Key_Add" xml:space="preserve"><value>Ավելացնել ակորդ</value></data>
+  <data name="Key_DetectHint" xml:space="preserve"><value>Ավելացրեք երգի ակորդները, և հավելվածը կգտնի համապատասխան տոնայնությունները։ Հպեք տոնայնությանը՝ նրա ակորդները տեսնելու համար։</value></data>
+  <data name="Key_NoChords" xml:space="preserve"><value>Ավելացրեք երգի ակորդները</value></data>
+  <data name="Key_NoKey" xml:space="preserve"><value>Համապատասխան տոնայնություն չկա</value></data>
+  <data name="Key_Progressions" xml:space="preserve"><value>Հաջորդականություններ այս տոնայնությամբ</value></data>
+  <data name="Style_Pop" xml:space="preserve"><value>Փոփ</value></data>
+  <data name="Style_Rock" xml:space="preserve"><value>Ռոք</value></data>
+  <data name="Style_Jazz" xml:space="preserve"><value>Ջազ</value></data>
+  <data name="Style_Blues" xml:space="preserve"><value>Բլյուզ</value></data>
+  <data name="Style_Classical" xml:space="preserve"><value>Դասական</value></data>
+  <data name="Style_Flamenco" xml:space="preserve"><value>Ֆլամենկո</value></data>
+  <data name="Prog_Generate" xml:space="preserve"><value>Ստեղծել հաջորդականություն</value></data>
+  <data name="Prog_Hint" xml:space="preserve"><value>Հպեք հաջորդականությանը՝ դիագրամները տեսնելու համար; ‹ › փոխում է մատնադրությունը։ ▶ նվագում է, կրկին հպեք՝ դադարեցնելու համար։</value></data>
 </root>

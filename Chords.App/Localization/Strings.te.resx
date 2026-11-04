@@ -56,4 +56,31 @@
   <data name="Shape_TooFew" xml:space="preserve"><value>కనీసం రెండు వేర్వేరు స్వరాలు వాయించండి</value></data>
   <data name="Shape_Play" xml:space="preserve"><value>ప్లే చేయి</value></data>
   <data name="Shape_Clear" xml:space="preserve"><value>క్లియర్ చేయి</value></data>
+  <data name="Nav_Key" xml:space="preserve"><value>స్కేల్‌లోని కార్డ్‌లు</value></data>
+  <data name="Nav_Progressions" xml:space="preserve"><value>కార్డ్ ప్రోగ్రెషన్‌లు</value></data>
+  <data name="Scale_Major" xml:space="preserve"><value>మేజర్</value></data>
+  <data name="Scale_Minor" xml:space="preserve"><value>సహజ మైనర్</value></data>
+  <data name="Scale_HarmonicMinor" xml:space="preserve"><value>హార్మోనిక్ మైనర్</value></data>
+  <data name="Scale_MelodicMinor" xml:space="preserve"><value>మెలోడిక్ మైనర్</value></data>
+  <data name="Scale_Dorian" xml:space="preserve"><value>డోరియన్</value></data>
+  <data name="Scale_Phrygian" xml:space="preserve"><value>ఫ్రిజియన్</value></data>
+  <data name="Scale_Lydian" xml:space="preserve"><value>లిడియన్</value></data>
+  <data name="Scale_Mixolydian" xml:space="preserve"><value>మిక్సోలిడియన్</value></data>
+  <data name="Key_TabChords" xml:space="preserve"><value>స్కేల్ కార్డ్‌లు</value></data>
+  <data name="Key_TabDetect" xml:space="preserve"><value>స్కేల్‌ను కనుగొనండి</value></data>
+  <data name="Key_ScaleNotes" xml:space="preserve"><value>స్కేల్ స్వరాలు:</value></data>
+  <data name="Key_Sevenths" xml:space="preserve"><value>సెవెంత్ కార్డ్‌లు</value></data>
+  <data name="Key_Add" xml:space="preserve"><value>కార్డ్ జోడించండి</value></data>
+  <data name="Key_DetectHint" xml:space="preserve"><value>పాట కార్డ్‌లను జోడించండి, అవి సరిపోయే స్కేల్‌లను యాప్ కనుగొంటుంది. స్కేల్ కార్డ్‌లను చూడటానికి దానిపై నొక్కండి.</value></data>
+  <data name="Key_NoChords" xml:space="preserve"><value>పాట కార్డ్‌లను జోడించండి</value></data>
+  <data name="Key_NoKey" xml:space="preserve"><value>సరిపోయే స్కేల్ లేదు</value></data>
+  <data name="Key_Progressions" xml:space="preserve"><value>ఈ స్కేల్‌లో ప్రోగ్రెషన్‌లు</value></data>
+  <data name="Style_Pop" xml:space="preserve"><value>పాప్</value></data>
+  <data name="Style_Rock" xml:space="preserve"><value>రాక్</value></data>
+  <data name="Style_Jazz" xml:space="preserve"><value>జాజ్</value></data>
+  <data name="Style_Blues" xml:space="preserve"><value>బ్లూస్</value></data>
+  <data name="Style_Classical" xml:space="preserve"><value>క్లాసికల్</value></data>
+  <data name="Style_Flamenco" xml:space="preserve"><value>ఫ్లమెంకో</value></data>
+  <data name="Prog_Generate" xml:space="preserve"><value>ప్రోగ్రెషన్‌ను రూపొందించండి</value></data>
+  <data name="Prog_Hint" xml:space="preserve"><value>డయాగ్రామ్‌లను చూడటానికి ప్రోగ్రెషన్‌పై నొక్కండి; ‹ › ఫింగరింగ్‌ను మారుస్తుంది. ▶ దాన్ని ప్లే చేస్తుంది, ఆపడానికి మళ్లీ నొక్కండి.</value></data>
 </root>

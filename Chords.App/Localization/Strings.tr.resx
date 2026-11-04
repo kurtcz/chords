@@ -56,4 +56,31 @@
   <data name="Shape_TooFew" xml:space="preserve"><value>En az iki farklı nota çalın</value></data>
   <data name="Shape_Play" xml:space="preserve"><value>Çal</value></data>
   <data name="Shape_Clear" xml:space="preserve"><value>Temizle</value></data>
+  <data name="Nav_Key" xml:space="preserve"><value>Bir tondaki akorlar</value></data>
+  <data name="Nav_Progressions" xml:space="preserve"><value>Akor dizileri</value></data>
+  <data name="Scale_Major" xml:space="preserve"><value>Majör</value></data>
+  <data name="Scale_Minor" xml:space="preserve"><value>Doğal minör</value></data>
+  <data name="Scale_HarmonicMinor" xml:space="preserve"><value>Armonik minör</value></data>
+  <data name="Scale_MelodicMinor" xml:space="preserve"><value>Melodik minör</value></data>
+  <data name="Scale_Dorian" xml:space="preserve"><value>Dor</value></data>
+  <data name="Scale_Phrygian" xml:space="preserve"><value>Frig</value></data>
+  <data name="Scale_Lydian" xml:space="preserve"><value>Lidya</value></data>
+  <data name="Scale_Mixolydian" xml:space="preserve"><value>Miksolidya</value></data>
+  <data name="Key_TabChords" xml:space="preserve"><value>Tonun akorları</value></data>
+  <data name="Key_TabDetect" xml:space="preserve"><value>Tonu bul</value></data>
+  <data name="Key_ScaleNotes" xml:space="preserve"><value>Gamın notaları:</value></data>
+  <data name="Key_Sevenths" xml:space="preserve"><value>Yedili akorlar</value></data>
+  <data name="Key_Add" xml:space="preserve"><value>Akor ekle</value></data>
+  <data name="Key_DetectHint" xml:space="preserve"><value>Bir şarkının akorlarını ekleyin, uygulama uydukları tonları bulsun. Akorlarını görmek için bir tona dokunun.</value></data>
+  <data name="Key_NoChords" xml:space="preserve"><value>Bir şarkının akorlarını ekleyin</value></data>
+  <data name="Key_NoKey" xml:space="preserve"><value>Uygun ton yok</value></data>
+  <data name="Key_Progressions" xml:space="preserve"><value>Bu tondaki diziler</value></data>
+  <data name="Style_Pop" xml:space="preserve"><value>Pop</value></data>
+  <data name="Style_Rock" xml:space="preserve"><value>Rock</value></data>
+  <data name="Style_Jazz" xml:space="preserve"><value>Caz</value></data>
+  <data name="Style_Blues" xml:space="preserve"><value>Blues</value></data>
+  <data name="Style_Classical" xml:space="preserve"><value>Klasik</value></data>
+  <data name="Style_Flamenco" xml:space="preserve"><value>Flamenko</value></data>
+  <data name="Prog_Generate" xml:space="preserve"><value>Akor dizisi oluştur</value></data>
+  <data name="Prog_Hint" xml:space="preserve"><value>Diyagramları görmek için bir diziye dokunun; ‹ › parmak pozisyonunu değiştirir. ▶ çalar, durdurmak için tekrar dokunun.</value></data>
 </root>

@@ -57,4 +57,31 @@
   <data name="Shape_TooFew" xml:space="preserve"><value>Сыграйте хотя бы две разные ноты</value></data>
   <data name="Shape_Play" xml:space="preserve"><value>Играть</value></data>
   <data name="Shape_Clear" xml:space="preserve"><value>Очистить</value></data>
+  <data name="Nav_Key" xml:space="preserve"><value>Аккорды тональности</value></data>
+  <data name="Nav_Progressions" xml:space="preserve"><value>Аккордовые последовательности</value></data>
+  <data name="Scale_Major" xml:space="preserve"><value>Мажор</value></data>
+  <data name="Scale_Minor" xml:space="preserve"><value>Натуральный минор</value></data>
+  <data name="Scale_HarmonicMinor" xml:space="preserve"><value>Гармонический минор</value></data>
+  <data name="Scale_MelodicMinor" xml:space="preserve"><value>Мелодический минор</value></data>
+  <data name="Scale_Dorian" xml:space="preserve"><value>Дорийский</value></data>
+  <data name="Scale_Phrygian" xml:space="preserve"><value>Фригийский</value></data>
+  <data name="Scale_Lydian" xml:space="preserve"><value>Лидийский</value></data>
+  <data name="Scale_Mixolydian" xml:space="preserve"><value>Миксолидийский</value></data>
+  <data name="Key_TabChords" xml:space="preserve"><value>Аккорды тональности</value></data>
+  <data name="Key_TabDetect" xml:space="preserve"><value>Найти тональность</value></data>
+  <data name="Key_ScaleNotes" xml:space="preserve"><value>Ноты гаммы:</value></data>
+  <data name="Key_Sevenths" xml:space="preserve"><value>Септаккорды</value></data>
+  <data name="Key_Add" xml:space="preserve"><value>Добавить аккорд</value></data>
+  <data name="Key_DetectHint" xml:space="preserve"><value>Добавьте аккорды песни, и приложение найдёт подходящие тональности. Нажмите на тональность, чтобы увидеть её аккорды.</value></data>
+  <data name="Key_NoChords" xml:space="preserve"><value>Добавьте аккорды песни</value></data>
+  <data name="Key_NoKey" xml:space="preserve"><value>Нет подходящей тональности</value></data>
+  <data name="Key_Progressions" xml:space="preserve"><value>Последовательности в этой тональности</value></data>
+  <data name="Style_Pop" xml:space="preserve"><value>Поп</value></data>
+  <data name="Style_Rock" xml:space="preserve"><value>Рок</value></data>
+  <data name="Style_Jazz" xml:space="preserve"><value>Джаз</value></data>
+  <data name="Style_Blues" xml:space="preserve"><value>Блюз</value></data>
+  <data name="Style_Classical" xml:space="preserve"><value>Классика</value></data>
+  <data name="Style_Flamenco" xml:space="preserve"><value>Фламенко</value></data>
+  <data name="Prog_Generate" xml:space="preserve"><value>Создать последовательность</value></data>
+  <data name="Prog_Hint" xml:space="preserve"><value>Нажмите на последовательность, чтобы увидеть диаграммы; ‹ › меняет аппликатуру. ▶ проигрывает её, повторное нажатие останавливает.</value></data>
 </root>

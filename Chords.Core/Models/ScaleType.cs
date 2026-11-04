@@ -5,6 +5,12 @@ namespace Chords.Core.Models
     {
         Chromatic,
         Major,
-        Minor
+        Minor,
+        HarmonicMinor,
+        MelodicMinor,
+        Dorian,
+        Phrygian,
+        Lydian,
+        Mixolydian
     }
 }

@@ -56,4 +56,31 @@
   <data name="Shape_TooFew" xml:space="preserve"><value>অন্তত দুটি আলাদা স্বর বাজান</value></data>
   <data name="Shape_Play" xml:space="preserve"><value>বাজান</value></data>
   <data name="Shape_Clear" xml:space="preserve"><value>মুছুন</value></data>
+  <data name="Nav_Key" xml:space="preserve"><value>স্কেলের কর্ড</value></data>
+  <data name="Nav_Progressions" xml:space="preserve"><value>কর্ড প্রগ্রেশন</value></data>
+  <data name="Scale_Major" xml:space="preserve"><value>মেজর</value></data>
+  <data name="Scale_Minor" xml:space="preserve"><value>ন্যাচারাল মাইনর</value></data>
+  <data name="Scale_HarmonicMinor" xml:space="preserve"><value>হারমোনিক মাইনর</value></data>
+  <data name="Scale_MelodicMinor" xml:space="preserve"><value>মেলোডিক মাইনর</value></data>
+  <data name="Scale_Dorian" xml:space="preserve"><value>ডোরিয়ান</value></data>
+  <data name="Scale_Phrygian" xml:space="preserve"><value>ফ্রিজিয়ান</value></data>
+  <data name="Scale_Lydian" xml:space="preserve"><value>লিডিয়ান</value></data>
+  <data name="Scale_Mixolydian" xml:space="preserve"><value>মিক্সোলিডিয়ান</value></data>
+  <data name="Key_TabChords" xml:space="preserve"><value>স্কেলের কর্ড</value></data>
+  <data name="Key_TabDetect" xml:space="preserve"><value>স্কেল খুঁজুন</value></data>
+  <data name="Key_ScaleNotes" xml:space="preserve"><value>স্কেলের স্বর:</value></data>
+  <data name="Key_Sevenths" xml:space="preserve"><value>সেভেন্থ কর্ড</value></data>
+  <data name="Key_Add" xml:space="preserve"><value>কর্ড যোগ করুন</value></data>
+  <data name="Key_DetectHint" xml:space="preserve"><value>একটি গানের কর্ড যোগ করুন, অ্যাপ সেগুলোর সাথে মেলে এমন স্কেল খুঁজে দেবে। কোনো স্কেলের কর্ড দেখতে সেটিতে ট্যাপ করুন।</value></data>
+  <data name="Key_NoChords" xml:space="preserve"><value>একটি গানের কর্ড যোগ করুন</value></data>
+  <data name="Key_NoKey" xml:space="preserve"><value>কোনো মানানসই স্কেল নেই</value></data>
+  <data name="Key_Progressions" xml:space="preserve"><value>এই স্কেলে প্রগ্রেশন</value></data>
+  <data name="Style_Pop" xml:space="preserve"><value>পপ</value></data>
+  <data name="Style_Rock" xml:space="preserve"><value>রক</value></data>
+  <data name="Style_Jazz" xml:space="preserve"><value>জ্যাজ</value></data>
+  <data name="Style_Blues" xml:space="preserve"><value>ব্লুজ</value></data>
+  <data name="Style_Classical" xml:space="preserve"><value>ক্লাসিক্যাল</value></data>
+  <data name="Style_Flamenco" xml:space="preserve"><value>ফ্লামেঙ্কো</value></data>
+  <data name="Prog_Generate" xml:space="preserve"><value>প্রগ্রেশন তৈরি করুন</value></data>
+  <data name="Prog_Hint" xml:space="preserve"><value>ডায়াগ্রাম দেখতে একটি প্রগ্রেশনে ট্যাপ করুন; ‹ › ফিঙ্গারিং বদলায়। ▶ সেটি বাজায়, থামাতে আবার ট্যাপ করুন।</value></data>
 </root>

@@ -56,4 +56,31 @@
   <data name="Shape_TooFew" xml:space="preserve"><value>Speel minstens twee verschillende tonen</value></data>
   <data name="Shape_Play" xml:space="preserve"><value>Afspelen</value></data>
   <data name="Shape_Clear" xml:space="preserve"><value>Wissen</value></data>
+  <data name="Nav_Key" xml:space="preserve"><value>Akkoorden van een toonsoort</value></data>
+  <data name="Nav_Progressions" xml:space="preserve"><value>Akkoordenschema's</value></data>
+  <data name="Scale_Major" xml:space="preserve"><value>Majeur</value></data>
+  <data name="Scale_Minor" xml:space="preserve"><value>Natuurlijk mineur</value></data>
+  <data name="Scale_HarmonicMinor" xml:space="preserve"><value>Harmonisch mineur</value></data>
+  <data name="Scale_MelodicMinor" xml:space="preserve"><value>Melodisch mineur</value></data>
+  <data name="Scale_Dorian" xml:space="preserve"><value>Dorisch</value></data>
+  <data name="Scale_Phrygian" xml:space="preserve"><value>Frygisch</value></data>
+  <data name="Scale_Lydian" xml:space="preserve"><value>Lydisch</value></data>
+  <data name="Scale_Mixolydian" xml:space="preserve"><value>Mixolydisch</value></data>
+  <data name="Key_TabChords" xml:space="preserve"><value>Akkoorden van de toonsoort</value></data>
+  <data name="Key_TabDetect" xml:space="preserve"><value>Toonsoort vinden</value></data>
+  <data name="Key_ScaleNotes" xml:space="preserve"><value>Tonen van de toonladder:</value></data>
+  <data name="Key_Sevenths" xml:space="preserve"><value>Septiemakkoorden</value></data>
+  <data name="Key_Add" xml:space="preserve"><value>Akkoord toevoegen</value></data>
+  <data name="Key_DetectHint" xml:space="preserve"><value>Voeg de akkoorden van een nummer toe en de app vindt de toonsoorten waarin ze passen. Tik op een toonsoort om de akkoorden te zien.</value></data>
+  <data name="Key_NoChords" xml:space="preserve"><value>Voeg de akkoorden van een nummer toe</value></data>
+  <data name="Key_NoKey" xml:space="preserve"><value>Geen passende toonsoort</value></data>
+  <data name="Key_Progressions" xml:space="preserve"><value>Akkoordenschema's in deze toonsoort</value></data>
+  <data name="Style_Pop" xml:space="preserve"><value>Pop</value></data>
+  <data name="Style_Rock" xml:space="preserve"><value>Rock</value></data>
+  <data name="Style_Jazz" xml:space="preserve"><value>Jazz</value></data>
+  <data name="Style_Blues" xml:space="preserve"><value>Blues</value></data>
+  <data name="Style_Classical" xml:space="preserve"><value>Klassiek</value></data>
+  <data name="Style_Flamenco" xml:space="preserve"><value>Flamenco</value></data>
+  <data name="Prog_Generate" xml:space="preserve"><value>Akkoordenschema genereren</value></data>
+  <data name="Prog_Hint" xml:space="preserve"><value>Tik op een schema om de diagrammen te zien; ‹ › wisselt de greep. ▶ speelt het af, tik nogmaals om te stoppen.</value></data>
 </root>
