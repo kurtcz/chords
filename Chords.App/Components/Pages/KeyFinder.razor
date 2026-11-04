@@ -40,6 +40,7 @@
         </tbody>
     </table>
     <button type="button" class="btn btn-default btn-lg btn-block" @onclick='() => Nav.NavigateTo("progressions")'>@L["Key_Progressions"]</button>
+    <button type="button" class="btn btn-default btn-lg btn-block" @onclick='() => Nav.NavigateTo("circle")'>@L["Nav_Circle"]</button>
 }
 else
 {
@@ -122,12 +123,15 @@ else
     private ChordType addType = ChordType.Major;
     private KeyMatch[] matches = [];
 
+    /// <summary>"chords" opens the chords of the key even when chords to detect a key from were entered.</summary>
+    [SupplyParameterFromQuery] public string Tab { get; set; }
+
     private Key Current => new(State.KeyTonic, State.KeyScale);
 
     protected override void OnInitialized()
     {
         conv = State.Settings.conv;
-        detect = State.KeyDetectChords.Count > 0;
+        detect = Tab != "chords" && State.KeyDetectChords.Count > 0;
         Detect();
     }
 

@@ -75,6 +75,32 @@ namespace Chords.Core.Models
             return new Key(major ? MajorTonics[index] : MinorTonics[index], major ? ScaleType.Major : ScaleType.Minor);
         }
 
+        /// <summary>
+        /// Degree (0-based) of the parent major scale the tonic lies on: D Dorian is the second degree of C major.
+        /// Harmonic and melodic minor are counted as their natural minor.
+        /// </summary>
+        private static int ModeOffset(ScaleType scaleType)
+        {
+            switch (scaleType)
+            {
+                case ScaleType.Dorian: return 1;
+                case ScaleType.Phrygian: return 2;
+                case ScaleType.Lydian: return 3;
+                case ScaleType.Mixolydian: return 4;
+                case ScaleType.Minor:
+                case ScaleType.HarmonicMinor:
+                case ScaleType.MelodicMinor: return 5;
+                default: return 0;
+            }
+        }
+
+        /// <summary>Tonic of the major key with the same key signature (C for A minor or D Dorian).</summary>
+        public Note ParentMajor => Scale.Notes[(7 - ModeOffset(ScaleType)) % 7];
+
+        /// <summary>The key of the same scale type whose parent major is <paramref name="majorTonic"/>.</summary>
+        public Key WithParentMajor(Note majorTonic) =>
+            new Key(new Scale(majorTonic, ScaleType.Major).Notes[ModeOffset(ScaleType)], ScaleType);
+
         /// <summary>Number of sharps or flats in the scale.</summary>
         public int Accidentals => Scale.Notes.Sum(i => Math.Abs((int)i.Accidental));
 

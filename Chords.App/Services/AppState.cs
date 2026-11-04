@@ -26,9 +26,6 @@ public class AppState
     /// <summary>Strict mode on the "Find chord name" page.</summary>
     public bool StrictFind { get; set; }
 
-    /// <summary>Key shown on the circle of fifths (13 = C major).</summary>
-    public int CircleIndex { get; set; } = 13;
-
     /// <summary>Notes selected on the "Find chord name" page, kept while navigating.</summary>
     public HashSet<string> FindNotes { get; } = [];
     public NamingConvention FindNotesConvention { get; set; }
@@ -37,7 +34,10 @@ public class AppState
     public int[] ShapeFrets { get; set; }
     public Instrument ShapeInstrument { get; set; }
 
-    /// <summary>Key chosen on the "Chords in a key" and "Chord progressions" pages.</summary>
+    /// <summary>
+    /// Key chosen on the "Chords in a key" and "Chord progressions" pages; the circle of fifths shows its
+    /// parent major key.
+    /// </summary>
     public Note KeyTonic { get; set; } = new(Tone.C);
     public ScaleType KeyScale { get; set; } = ScaleType.Major;
     /// <summary>Seventh chords instead of triads in a key and its progressions.</summary>

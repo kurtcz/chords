@@ -43,6 +43,42 @@ namespace Chords.App.Models
         public string Signature { get; set; }
         public string Error { get; set; }
 
+        /// <summary>Lowest and highest index the circle can show (Cb major … C# major); 13 is C major.</summary>
+        public const int MinIndex = 6, MaxIndex = 20, CIndex = 13;
+
+        /// <summary>Tonic of the major key at <paramref name="index"/> fifths above Gbb.</summary>
+        public static Note MajorTonic(int index)
+        {
+            var note = new Note(Tone.G, Accidental.DoubleFlat);
+
+            for (var k = 0; k < index; k++)
+            {
+                note = note.NoteAtInterval(Interval.P5);
+            }
+
+            return note;
+        }
+
+        /// <summary>
+        /// Index of a major key; an enharmonic spelling the circle doesn't show (D# major) is matched
+        /// to the one with fewer accidentals (Eb major).
+        /// </summary>
+        public static int IndexOf(Note majorTonic)
+        {
+            var indexes = Enumerable.Range(MinIndex, MaxIndex - MinIndex + 1).ToArray();
+            var exact = indexes.Where(i => MajorTonic(i).Equals(majorTonic)).ToArray();
+
+            if (exact.Length > 0)
+            {
+                return exact[0];
+            }
+
+            return indexes.Where(i => MajorTonic(i).ChromaticDistance(majorTonic) == 0)
+                          .OrderBy(i => Math.Abs(i - CIndex))
+                          .DefaultIfEmpty(CIndex)
+                          .First();
+        }
+
         public CircleModel(int index)
         {
             if (index < 6)

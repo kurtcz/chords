@@ -361,6 +361,24 @@ footer {
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
+
+/* Link to the chords of the shown key, above the footer and clear of the centred circle. */
+.circle-key {
+    position: fixed;
+    bottom: calc(45px + env(safe-area-inset-bottom));
+    left: calc(15px + env(safe-area-inset-left));
+    right: calc(15px + env(safe-area-inset-right));
+    width: auto;
+}
+
+/* Phone in landscape: no room below the circle, so the link goes beside it. */
+@media (orientation: landscape) and (max-height: 500px) {
+    .circle-key {
+        left: auto;
+        width: calc(50% - 185px);
+        white-space: normal;
+    }
+}
 /* Always use Bootstrap's collapsed (phone) navbar, also on tablets and in landscape.
    Title and hamburger share one line: a title too long for it ends with an ellipsis. */
 .navbar-header {

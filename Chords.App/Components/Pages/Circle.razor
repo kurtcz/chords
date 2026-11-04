@@ -2,6 +2,7 @@
 @using System.Globalization
 @inject AppState State
 @inject ChordPlayer Player
+@inject NavigationManager Nav
 
 <TopNav Title="@L["Nav_Circle"]" />
 
@@ -41,6 +42,9 @@
         }
     </svg>
 </div>
+<button type="button" class="btn btn-default btn-lg btn-block circle-key" @onclick='() => Nav.NavigateTo("key?tab=chords")'>
+    @L["Nav_Key"]: @KeyName →
+</button>
 
 @code {
     private const double C = 160;
@@ -49,16 +53,24 @@
 
     private record Ring(Dictionary<NamingConvention, string[]> Circle, int Radius, int TextRadius, int FontSize, bool OrangeKey, Func<int, bool> Highlighted);
 
+    private Key Current => new(State.KeyTonic, State.KeyScale);
+
+    /// <summary>The shared key; shown in its own scale, which has the same chords as the major key of the circle.</summary>
+    private string KeyName => $"{State.KeyTonic.ToString(conv)} {L[$"Scale_{State.KeyScale}"]}";
+
     protected override void OnInitialized()
     {
         conv = State.Settings.conv;
-        SetIndex(State.CircleIndex);
+        model = new CircleModel(CircleModel.IndexOf(Current.ParentMajor));
     }
 
+    /// <summary>Moves the shared key around the circle, keeping its scale (A minor → E minor).</summary>
     private void SetIndex(int index)
     {
         model = new CircleModel(index);
-        State.CircleIndex = model.index;
+        var key = Current.WithParentMajor(CircleModel.MajorTonic(model.index));
+        State.KeyTonic = key.Tonic;
+        State.KeyScale = key.ScaleType;
     }
 
     private IEnumerable<Ring> Rings()
