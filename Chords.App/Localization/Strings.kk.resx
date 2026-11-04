@@ -64,6 +64,20 @@
   <data name="Scale_MelodicMinor" xml:space="preserve"><value>Мелодиялық минор</value></data>
   <data name="Scale_Dorian" xml:space="preserve"><value>Дориялық</value></data>
   <data name="Scale_Phrygian" xml:space="preserve"><value>Фригиялық</value></data>
+  <data name="Scale_PhrygianDominant" xml:space="preserve"><value>Фригиялық доминант</value></data>
+  <data name="Scale_HungarianMinor" xml:space="preserve"><value>Венгр миноры</value></data>
+  <data name="Scale_DoubleHarmonicMajor" xml:space="preserve"><value>Қос гармониялық (сыған мажоры)</value></data>
+  <data name="Scale_LydianDominant" xml:space="preserve"><value>Лидиялық доминанта</value></data>
+  <data name="Scale_UkrainianDorian" xml:space="preserve"><value>Украин дориялық</value></data>
+  <data name="Scale_Altered" xml:space="preserve"><value>Альтерацияланған</value></data>
+  <data name="Scale_MajorPentatonic" xml:space="preserve"><value>Мажор пентатоникасы</value></data>
+  <data name="Scale_MinorPentatonic" xml:space="preserve"><value>Минор пентатоникасы</value></data>
+  <data name="Scale_Blues" xml:space="preserve"><value>Блюз</value></data>
+  <data name="Scale_Hirajoshi" xml:space="preserve"><value>Хирадзёси</value></data>
+  <data name="Scale_In" xml:space="preserve"><value>Ин</value></data>
+  <data name="Scale_Yo" xml:space="preserve"><value>Ё</value></data>
+  <data name="Scale_Kumoi" xml:space="preserve"><value>Кумои</value></data>
+  <data name="Scale_Egyptian" xml:space="preserve"><value>Мысыр</value></data>
   <data name="Scale_Lydian" xml:space="preserve"><value>Лидиялық</value></data>
   <data name="Scale_Mixolydian" xml:space="preserve"><value>Миксолидиялық</value></data>
   <data name="Key_TabChords" xml:space="preserve"><value>Тональдық аккордтары</value></data>
@@ -81,6 +95,7 @@
   <data name="Style_Blues" xml:space="preserve"><value>Блюз</value></data>
   <data name="Style_Classical" xml:space="preserve"><value>Классика</value></data>
   <data name="Style_Flamenco" xml:space="preserve"><value>Фламенко</value></data>
+  <data name="Style_Klezmer" xml:space="preserve"><value>Клезмер</value></data>
   <data name="Prog_Generate" xml:space="preserve"><value>Тізбек жасау</value></data>
   <data name="Prog_Hint" xml:space="preserve"><value>Диаграммаларды көру үшін тізбекті түртіңіз; ‹ › аппликатураны ауыстырады. ▶ ойнатады, тоқтату үшін қайта түртіңіз.</value></data>
 </root>

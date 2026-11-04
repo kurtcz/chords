@@ -64,6 +64,20 @@
   <data name="Scale_MelodicMinor" xml:space="preserve"><value>Meloodiline minoor</value></data>
   <data name="Scale_Dorian" xml:space="preserve"><value>Doori</value></data>
   <data name="Scale_Phrygian" xml:space="preserve"><value>Früügia</value></data>
+  <data name="Scale_PhrygianDominant" xml:space="preserve"><value>Früügia dominant</value></data>
+  <data name="Scale_HungarianMinor" xml:space="preserve"><value>Ungari moll</value></data>
+  <data name="Scale_DoubleHarmonicMajor" xml:space="preserve"><value>Topeltharmooniline (mustlasmažoor)</value></data>
+  <data name="Scale_LydianDominant" xml:space="preserve"><value>Lüüdia dominant</value></data>
+  <data name="Scale_UkrainianDorian" xml:space="preserve"><value>Ukraina dooria</value></data>
+  <data name="Scale_Altered" xml:space="preserve"><value>Altereeritud</value></data>
+  <data name="Scale_MajorPentatonic" xml:space="preserve"><value>Mažoorne pentatoonika</value></data>
+  <data name="Scale_MinorPentatonic" xml:space="preserve"><value>Minoorne pentatoonika</value></data>
+  <data name="Scale_Blues" xml:space="preserve"><value>Bluus</value></data>
+  <data name="Scale_Hirajoshi" xml:space="preserve"><value>Hirajoshi</value></data>
+  <data name="Scale_In" xml:space="preserve"><value>In</value></data>
+  <data name="Scale_Yo" xml:space="preserve"><value>Yo</value></data>
+  <data name="Scale_Kumoi" xml:space="preserve"><value>Kumoi</value></data>
+  <data name="Scale_Egyptian" xml:space="preserve"><value>Egiptuse</value></data>
   <data name="Scale_Lydian" xml:space="preserve"><value>Lüüdia</value></data>
   <data name="Scale_Mixolydian" xml:space="preserve"><value>Miksolüüdia</value></data>
   <data name="Key_TabChords" xml:space="preserve"><value>Helistiku akordid</value></data>
@@ -81,6 +95,7 @@
   <data name="Style_Blues" xml:space="preserve"><value>Bluus</value></data>
   <data name="Style_Classical" xml:space="preserve"><value>Klassika</value></data>
   <data name="Style_Flamenco" xml:space="preserve"><value>Flamenko</value></data>
+  <data name="Style_Klezmer" xml:space="preserve"><value>Klezmer</value></data>
   <data name="Prog_Generate" xml:space="preserve"><value>Loo akordijärgnevus</value></data>
   <data name="Prog_Hint" xml:space="preserve"><value>Puuduta järgnevust, et näha diagramme; ‹ › vahetab sõrmestust. ▶ mängib selle, puuduta uuesti peatamiseks.</value></data>
 </root>

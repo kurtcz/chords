@@ -64,6 +64,20 @@
   <data name="Scale_MelodicMinor" xml:space="preserve"><value>مینور ملودیک</value></data>
   <data name="Scale_Dorian" xml:space="preserve"><value>دورین</value></data>
   <data name="Scale_Phrygian" xml:space="preserve"><value>فریژین</value></data>
+  <data name="Scale_PhrygianDominant" xml:space="preserve"><value>فریژین دومینانت</value></data>
+  <data name="Scale_HungarianMinor" xml:space="preserve"><value>مینور مجاری</value></data>
+  <data name="Scale_DoubleHarmonicMajor" xml:space="preserve"><value>هارمونیک دوگانه (ماژور کولی)</value></data>
+  <data name="Scale_LydianDominant" xml:space="preserve"><value>لیدین دومینانت</value></data>
+  <data name="Scale_UkrainianDorian" xml:space="preserve"><value>دورین اوکراینی</value></data>
+  <data name="Scale_Altered" xml:space="preserve"><value>آلترد</value></data>
+  <data name="Scale_MajorPentatonic" xml:space="preserve"><value>پنتاتونیک ماژور</value></data>
+  <data name="Scale_MinorPentatonic" xml:space="preserve"><value>پنتاتونیک مینور</value></data>
+  <data name="Scale_Blues" xml:space="preserve"><value>بلوز</value></data>
+  <data name="Scale_Hirajoshi" xml:space="preserve"><value>Hirajoshi</value></data>
+  <data name="Scale_In" xml:space="preserve"><value>In</value></data>
+  <data name="Scale_Yo" xml:space="preserve"><value>Yo</value></data>
+  <data name="Scale_Kumoi" xml:space="preserve"><value>Kumoi</value></data>
+  <data name="Scale_Egyptian" xml:space="preserve"><value>مصری</value></data>
   <data name="Scale_Lydian" xml:space="preserve"><value>لیدین</value></data>
   <data name="Scale_Mixolydian" xml:space="preserve"><value>میکسولیدین</value></data>
   <data name="Key_TabChords" xml:space="preserve"><value>آکوردهای گام</value></data>
@@ -81,6 +95,7 @@
   <data name="Style_Blues" xml:space="preserve"><value>بلوز</value></data>
   <data name="Style_Classical" xml:space="preserve"><value>کلاسیک</value></data>
   <data name="Style_Flamenco" xml:space="preserve"><value>فلامنکو</value></data>
+  <data name="Style_Klezmer" xml:space="preserve"><value>کلزمر</value></data>
   <data name="Prog_Generate" xml:space="preserve"><value>ساخت توالی</value></data>
   <data name="Prog_Hint" xml:space="preserve"><value>برای دیدن نمودارها روی یک توالی بزنید؛ ‹ › انگشت‌گذاری را تغییر می‌دهد. ▶ آن را پخش می‌کند، برای توقف دوباره بزنید.</value></data>
 </root>

@@ -65,6 +65,20 @@
   <data name="Scale_MelodicMinor" xml:space="preserve"><value>Мелодијска молска</value></data>
   <data name="Scale_Dorian" xml:space="preserve"><value>Дорска</value></data>
   <data name="Scale_Phrygian" xml:space="preserve"><value>Фригијска</value></data>
+  <data name="Scale_PhrygianDominant" xml:space="preserve"><value>Фригијска доминантна</value></data>
+  <data name="Scale_HungarianMinor" xml:space="preserve"><value>Мађарски мол</value></data>
+  <data name="Scale_DoubleHarmonicMajor" xml:space="preserve"><value>Двоструко хармонска (цигански дур)</value></data>
+  <data name="Scale_LydianDominant" xml:space="preserve"><value>Лидијска доминантна</value></data>
+  <data name="Scale_UkrainianDorian" xml:space="preserve"><value>Украјинска дорска</value></data>
+  <data name="Scale_Altered" xml:space="preserve"><value>Алтерована</value></data>
+  <data name="Scale_MajorPentatonic" xml:space="preserve"><value>Дурска пентатоника</value></data>
+  <data name="Scale_MinorPentatonic" xml:space="preserve"><value>Молска пентатоника</value></data>
+  <data name="Scale_Blues" xml:space="preserve"><value>Блуз</value></data>
+  <data name="Scale_Hirajoshi" xml:space="preserve"><value>Хирадзёси</value></data>
+  <data name="Scale_In" xml:space="preserve"><value>Ин</value></data>
+  <data name="Scale_Yo" xml:space="preserve"><value>Ё</value></data>
+  <data name="Scale_Kumoi" xml:space="preserve"><value>Кумои</value></data>
+  <data name="Scale_Egyptian" xml:space="preserve"><value>Египатска</value></data>
   <data name="Scale_Lydian" xml:space="preserve"><value>Лидијска</value></data>
   <data name="Scale_Mixolydian" xml:space="preserve"><value>Миксолидијска</value></data>
   <data name="Key_TabChords" xml:space="preserve"><value>Акорди тоналитета</value></data>
@@ -82,6 +96,7 @@
   <data name="Style_Blues" xml:space="preserve"><value>Блуз</value></data>
   <data name="Style_Classical" xml:space="preserve"><value>Класика</value></data>
   <data name="Style_Flamenco" xml:space="preserve"><value>Фламенко</value></data>
+  <data name="Style_Klezmer" xml:space="preserve"><value>Клезмер</value></data>
   <data name="Prog_Generate" xml:space="preserve"><value>Генериши прогресију</value></data>
   <data name="Prog_Hint" xml:space="preserve"><value>Додирните прогресију да видите дијаграме; ‹ › мења хват. ▶ је репродукује, поновни додир зауставља.</value></data>
 </root>

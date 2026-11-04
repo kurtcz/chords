@@ -64,6 +64,20 @@
   <data name="Scale_MelodicMinor" xml:space="preserve"><value>मेलोडिक मायनर</value></data>
   <data name="Scale_Dorian" xml:space="preserve"><value>डोरियन</value></data>
   <data name="Scale_Phrygian" xml:space="preserve"><value>फ्रिजियन</value></data>
+  <data name="Scale_PhrygianDominant" xml:space="preserve"><value>फ्रिजियन डॉमिनंट</value></data>
+  <data name="Scale_HungarianMinor" xml:space="preserve"><value>हंगेरियन मायनर</value></data>
+  <data name="Scale_DoubleHarmonicMajor" xml:space="preserve"><value>डबल हार्मोनिक (जिप्सी मेजर)</value></data>
+  <data name="Scale_LydianDominant" xml:space="preserve"><value>लिडियन डॉमिनंट</value></data>
+  <data name="Scale_UkrainianDorian" xml:space="preserve"><value>युक्रेनियन डोरियन</value></data>
+  <data name="Scale_Altered" xml:space="preserve"><value>ऑल्टर्ड</value></data>
+  <data name="Scale_MajorPentatonic" xml:space="preserve"><value>मेजर पेंटाटोनिक</value></data>
+  <data name="Scale_MinorPentatonic" xml:space="preserve"><value>मायनर पेंटाटोनिक</value></data>
+  <data name="Scale_Blues" xml:space="preserve"><value>ब्लूज</value></data>
+  <data name="Scale_Hirajoshi" xml:space="preserve"><value>Hirajoshi</value></data>
+  <data name="Scale_In" xml:space="preserve"><value>In</value></data>
+  <data name="Scale_Yo" xml:space="preserve"><value>Yo</value></data>
+  <data name="Scale_Kumoi" xml:space="preserve"><value>Kumoi</value></data>
+  <data name="Scale_Egyptian" xml:space="preserve"><value>इजिप्शियन</value></data>
   <data name="Scale_Lydian" xml:space="preserve"><value>लिडियन</value></data>
   <data name="Scale_Mixolydian" xml:space="preserve"><value>मिक्सोलिडियन</value></data>
   <data name="Key_TabChords" xml:space="preserve"><value>स्केलचे कॉर्ड्स</value></data>
@@ -81,6 +95,7 @@
   <data name="Style_Blues" xml:space="preserve"><value>ब्लूज</value></data>
   <data name="Style_Classical" xml:space="preserve"><value>शास्त्रीय</value></data>
   <data name="Style_Flamenco" xml:space="preserve"><value>फ्लामेंको</value></data>
+  <data name="Style_Klezmer" xml:space="preserve"><value>क्लेझमर</value></data>
   <data name="Prog_Generate" xml:space="preserve"><value>प्रोग्रेशन तयार करा</value></data>
   <data name="Prog_Hint" xml:space="preserve"><value>डायग्राम पाहण्यासाठी प्रोग्रेशनवर टॅप करा; ‹ › फिंगरिंग बदलते. ▶ ते वाजवते, थांबवण्यासाठी पुन्हा टॅप करा.</value></data>
 </root>

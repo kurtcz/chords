@@ -63,6 +63,20 @@
   <data name="Scale_MelodicMinor" xml:space="preserve"><value>เมโลดิกไมเนอร์</value></data>
   <data name="Scale_Dorian" xml:space="preserve"><value>โดเรียน</value></data>
   <data name="Scale_Phrygian" xml:space="preserve"><value>ฟรีเจียน</value></data>
+  <data name="Scale_PhrygianDominant" xml:space="preserve"><value>ฟรีเจียนโดมิแนนต์</value></data>
+  <data name="Scale_HungarianMinor" xml:space="preserve"><value>ฮังกาเรียนไมเนอร์</value></data>
+  <data name="Scale_DoubleHarmonicMajor" xml:space="preserve"><value>ดับเบิลฮาร์มอนิก (ยิปซีเมเจอร์)</value></data>
+  <data name="Scale_LydianDominant" xml:space="preserve"><value>ลิเดียนโดมิแนนต์</value></data>
+  <data name="Scale_UkrainianDorian" xml:space="preserve"><value>ยูเครเนียนโดเรียน</value></data>
+  <data name="Scale_Altered" xml:space="preserve"><value>อัลเทอร์ด</value></data>
+  <data name="Scale_MajorPentatonic" xml:space="preserve"><value>เมเจอร์เพนทาโทนิก</value></data>
+  <data name="Scale_MinorPentatonic" xml:space="preserve"><value>ไมเนอร์เพนทาโทนิก</value></data>
+  <data name="Scale_Blues" xml:space="preserve"><value>บลูส์</value></data>
+  <data name="Scale_Hirajoshi" xml:space="preserve"><value>Hirajoshi</value></data>
+  <data name="Scale_In" xml:space="preserve"><value>In</value></data>
+  <data name="Scale_Yo" xml:space="preserve"><value>Yo</value></data>
+  <data name="Scale_Kumoi" xml:space="preserve"><value>Kumoi</value></data>
+  <data name="Scale_Egyptian" xml:space="preserve"><value>อียิปต์</value></data>
   <data name="Scale_Lydian" xml:space="preserve"><value>ลิเดียน</value></data>
   <data name="Scale_Mixolydian" xml:space="preserve"><value>มิกโซลิเดียน</value></data>
   <data name="Key_TabChords" xml:space="preserve"><value>คอร์ดของคีย์</value></data>
@@ -80,6 +94,7 @@
   <data name="Style_Blues" xml:space="preserve"><value>บลูส์</value></data>
   <data name="Style_Classical" xml:space="preserve"><value>คลาสสิก</value></data>
   <data name="Style_Flamenco" xml:space="preserve"><value>ฟลาเมงโก</value></data>
+  <data name="Style_Klezmer" xml:space="preserve"><value>เคลซเมอร์</value></data>
   <data name="Prog_Generate" xml:space="preserve"><value>สร้างทางเดินคอร์ด</value></data>
   <data name="Prog_Hint" xml:space="preserve"><value>แตะทางเดินคอร์ดเพื่อดูไดอะแกรม ‹ › เปลี่ยนท่าจับ ▶ เล่น แตะอีกครั้งเพื่อหยุด</value></data>
 </root>

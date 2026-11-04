@@ -63,6 +63,20 @@
   <data name="Scale_MelodicMinor" xml:space="preserve"><value>멜로딕 마이너</value></data>
   <data name="Scale_Dorian" xml:space="preserve"><value>도리안</value></data>
   <data name="Scale_Phrygian" xml:space="preserve"><value>프리지안</value></data>
+  <data name="Scale_PhrygianDominant" xml:space="preserve"><value>프리지안 도미넌트</value></data>
+  <data name="Scale_HungarianMinor" xml:space="preserve"><value>헝가리안 마이너</value></data>
+  <data name="Scale_DoubleHarmonicMajor" xml:space="preserve"><value>더블 하모닉 (집시 메이저)</value></data>
+  <data name="Scale_LydianDominant" xml:space="preserve"><value>리디안 도미넌트</value></data>
+  <data name="Scale_UkrainianDorian" xml:space="preserve"><value>우크라이니안 도리안</value></data>
+  <data name="Scale_Altered" xml:space="preserve"><value>얼터드</value></data>
+  <data name="Scale_MajorPentatonic" xml:space="preserve"><value>메이저 펜타토닉</value></data>
+  <data name="Scale_MinorPentatonic" xml:space="preserve"><value>마이너 펜타토닉</value></data>
+  <data name="Scale_Blues" xml:space="preserve"><value>블루스</value></data>
+  <data name="Scale_Hirajoshi" xml:space="preserve"><value>히라조시</value></data>
+  <data name="Scale_In" xml:space="preserve"><value>인 음계</value></data>
+  <data name="Scale_Yo" xml:space="preserve"><value>요 음계</value></data>
+  <data name="Scale_Kumoi" xml:space="preserve"><value>쿠모이</value></data>
+  <data name="Scale_Egyptian" xml:space="preserve"><value>이집션</value></data>
   <data name="Scale_Lydian" xml:space="preserve"><value>리디안</value></data>
   <data name="Scale_Mixolydian" xml:space="preserve"><value>믹솔리디안</value></data>
   <data name="Key_TabChords" xml:space="preserve"><value>키의 코드</value></data>
@@ -80,6 +94,7 @@
   <data name="Style_Blues" xml:space="preserve"><value>블루스</value></data>
   <data name="Style_Classical" xml:space="preserve"><value>클래식</value></data>
   <data name="Style_Flamenco" xml:space="preserve"><value>플라멩코</value></data>
+  <data name="Style_Klezmer" xml:space="preserve"><value>클레즈머</value></data>
   <data name="Prog_Generate" xml:space="preserve"><value>코드 진행 생성</value></data>
   <data name="Prog_Hint" xml:space="preserve"><value>코드 진행을 탭하면 다이어그램이 표시됩니다. ‹ ›로 운지를 바꿉니다. ▶로 재생하고 다시 탭하면 멈춥니다.</value></data>
 </root>

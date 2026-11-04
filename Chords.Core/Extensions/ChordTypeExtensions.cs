@@ -31,7 +31,7 @@ namespace Chords.Core.Extensions
 			{ ChordType.AugmentedSeventh,       new[] {Interval.P1, Interval.M3, Interval.A5, Interval.m7} },
 			{ ChordType.AugmentedSeventhFlat9,  new[] {Interval.P1, Interval.M3, Interval.A5, Interval.m7, Interval.m9} },
             { ChordType.AugmentedSeventhSharp9, new[] {Interval.P1, Interval.M3, Interval.A5, Interval.m7, Interval.A9} },
-            { ChordType.DominantSeventhFlat5,   new[] {Interval.P1, Interval.M3, Interval.d5, Interval.M7} },
+            { ChordType.DominantSeventhFlat5,   new[] {Interval.P1, Interval.M3, Interval.d5, Interval.m7} },
             { ChordType.DominantSeventhFlat9,   new[] {Interval.P1, Interval.M3, Interval.P5, Interval.m7, Interval.m9} },
             { ChordType.DominantSeventhSharp9,  new[] {Interval.P1, Interval.M3, Interval.P5, Interval.m7, Interval.A9} },
             { ChordType.DominantSeventhSharp11, new[] {Interval.P1, Interval.M3, Interval.P5, Interval.m7, Interval.M9, Interval.A11} },

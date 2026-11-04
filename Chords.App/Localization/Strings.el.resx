@@ -64,6 +64,20 @@
   <data name="Scale_MelodicMinor" xml:space="preserve"><value>Μελωδική μινόρε</value></data>
   <data name="Scale_Dorian" xml:space="preserve"><value>Δώρια</value></data>
   <data name="Scale_Phrygian" xml:space="preserve"><value>Φρύγια</value></data>
+  <data name="Scale_PhrygianDominant" xml:space="preserve"><value>Φρύγια δεσπόζουσα</value></data>
+  <data name="Scale_HungarianMinor" xml:space="preserve"><value>Ουγγρική ελάσσονα</value></data>
+  <data name="Scale_DoubleHarmonicMajor" xml:space="preserve"><value>Διπλή αρμονική (τσιγγάνικη μείζονα)</value></data>
+  <data name="Scale_LydianDominant" xml:space="preserve"><value>Λύδια δεσπόζουσα</value></data>
+  <data name="Scale_UkrainianDorian" xml:space="preserve"><value>Ουκρανική δώρια</value></data>
+  <data name="Scale_Altered" xml:space="preserve"><value>Αλλοιωμένη</value></data>
+  <data name="Scale_MajorPentatonic" xml:space="preserve"><value>Μείζονα πεντατονική</value></data>
+  <data name="Scale_MinorPentatonic" xml:space="preserve"><value>Ελάσσονα πεντατονική</value></data>
+  <data name="Scale_Blues" xml:space="preserve"><value>Μπλουζ</value></data>
+  <data name="Scale_Hirajoshi" xml:space="preserve"><value>Hirajoshi</value></data>
+  <data name="Scale_In" xml:space="preserve"><value>In</value></data>
+  <data name="Scale_Yo" xml:space="preserve"><value>Yo</value></data>
+  <data name="Scale_Kumoi" xml:space="preserve"><value>Kumoi</value></data>
+  <data name="Scale_Egyptian" xml:space="preserve"><value>Αιγυπτιακή</value></data>
   <data name="Scale_Lydian" xml:space="preserve"><value>Λύδια</value></data>
   <data name="Scale_Mixolydian" xml:space="preserve"><value>Μιξολύδια</value></data>
   <data name="Key_TabChords" xml:space="preserve"><value>Συγχορδίες της τονικότητας</value></data>
@@ -81,6 +95,7 @@
   <data name="Style_Blues" xml:space="preserve"><value>Μπλουζ</value></data>
   <data name="Style_Classical" xml:space="preserve"><value>Κλασική</value></data>
   <data name="Style_Flamenco" xml:space="preserve"><value>Φλαμένκο</value></data>
+  <data name="Style_Klezmer" xml:space="preserve"><value>Κλέζμερ</value></data>
   <data name="Prog_Generate" xml:space="preserve"><value>Δημιουργία αλληλουχίας</value></data>
   <data name="Prog_Hint" xml:space="preserve"><value>Πατήστε μια αλληλουχία για να δείτε τα διαγράμματα· τα ‹ › αλλάζουν το δάχτυλο. Το ▶ την παίζει, πατήστε ξανά για διακοπή.</value></data>
 </root>

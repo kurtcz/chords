@@ -26,7 +26,8 @@
     </div>
     <table class="table key-chords">
         <tbody>
-            @foreach (var degree in Current.DiatonicChords(State.KeySevenths))
+            @* Stacking thirds in the non-diatonic scales can give a chord with no symbol (B D♭ F in C double harmonic); it is left out. *@
+            @foreach (var degree in Current.DiatonicChords(State.KeySevenths).Where(i => Current.Contains(i.Chord)))
             {
                 var chord = degree.Chord;
                 <tr>

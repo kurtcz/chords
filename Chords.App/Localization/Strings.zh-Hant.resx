@@ -63,6 +63,20 @@
   <data name="Scale_MelodicMinor" xml:space="preserve"><value>旋律小調</value></data>
   <data name="Scale_Dorian" xml:space="preserve"><value>多利安</value></data>
   <data name="Scale_Phrygian" xml:space="preserve"><value>弗里吉亞</value></data>
+  <data name="Scale_PhrygianDominant" xml:space="preserve"><value>弗里吉亞屬音</value></data>
+  <data name="Scale_HungarianMinor" xml:space="preserve"><value>匈牙利小調</value></data>
+  <data name="Scale_DoubleHarmonicMajor" xml:space="preserve"><value>雙和聲（吉普賽大調）</value></data>
+  <data name="Scale_LydianDominant" xml:space="preserve"><value>利底亞屬調</value></data>
+  <data name="Scale_UkrainianDorian" xml:space="preserve"><value>烏克蘭多利亞</value></data>
+  <data name="Scale_Altered" xml:space="preserve"><value>變化音階</value></data>
+  <data name="Scale_MajorPentatonic" xml:space="preserve"><value>大調五聲音階</value></data>
+  <data name="Scale_MinorPentatonic" xml:space="preserve"><value>小調五聲音階</value></data>
+  <data name="Scale_Blues" xml:space="preserve"><value>藍調</value></data>
+  <data name="Scale_Hirajoshi" xml:space="preserve"><value>平調子</value></data>
+  <data name="Scale_In" xml:space="preserve"><value>陰音階</value></data>
+  <data name="Scale_Yo" xml:space="preserve"><value>陽音階</value></data>
+  <data name="Scale_Kumoi" xml:space="preserve"><value>雲井調子</value></data>
+  <data name="Scale_Egyptian" xml:space="preserve"><value>埃及音階</value></data>
   <data name="Scale_Lydian" xml:space="preserve"><value>利底亞</value></data>
   <data name="Scale_Mixolydian" xml:space="preserve"><value>混合利底亞</value></data>
   <data name="Key_TabChords" xml:space="preserve"><value>調內和弦</value></data>
@@ -80,6 +94,7 @@
   <data name="Style_Blues" xml:space="preserve"><value>藍調</value></data>
   <data name="Style_Classical" xml:space="preserve"><value>古典</value></data>
   <data name="Style_Flamenco" xml:space="preserve"><value>佛朗明哥</value></data>
+  <data name="Style_Klezmer" xml:space="preserve"><value>克萊茲默</value></data>
   <data name="Prog_Generate" xml:space="preserve"><value>產生和弦進行</value></data>
   <data name="Prog_Hint" xml:space="preserve"><value>點一下和弦進行查看指法圖；‹ › 切換指法。▶ 播放，再點一下停止。</value></data>
 </root>

@@ -11,7 +11,8 @@ namespace Chords.Core.Models
         Jazz,
         Blues,
         Classical,
-        Flamenco
+        Flamenco,
+        Klezmer
     }
 
     /// <summary>
@@ -28,12 +29,35 @@ namespace Chords.Core.Models
         public ProgressionStyle Style { get; }
         /// <summary>Written for a major key; otherwise for a minor one.</summary>
         public bool ForMajor { get; }
+        /// <summary>The only scale the progression is written for, or null for any major or minor key.</summary>
+        public ScaleType? ForScale { get; }
 
         public Progression(ProgressionStyle style, bool forMajor, string numerals)
         {
             Style = style;
             ForMajor = forMajor;
             Numerals = numerals.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+        }
+
+        public Progression(ProgressionStyle style, ScaleType forScale, string numerals)
+            : this(style, new Key(new Note(Tone.C), forScale).IsMajor, numerals)
+        {
+            ForScale = forScale;
+        }
+
+        /// <summary>
+        /// Whether the progression suits a key: one written for a scale only that scale, the others any key
+        /// with the same kind of tonic chord. The non-diatonic scales (Phrygian dominant, Hungarian minor…)
+        /// get only their own progressions, as their diminished and augmented chords make
+        /// ordinary major- and minor-key progressions sound wrong.
+        /// </summary>
+        public bool Fits(Key key)
+        {
+            if (ForScale != null)
+            {
+                return key.ScaleType == ForScale;
+            }
+            return !ScaleMoves.ContainsKey(key.ScaleType) && ForMajor == key.IsMajor;
         }
 
         /// <summary>Well-known progressions.</summary>
@@ -55,19 +79,40 @@ namespace Chords.Core.Models
             new Progression(ProgressionStyle.Classical, false, "i iv V i"),
             new Progression(ProgressionStyle.Flamenco, false, "i VII VI V"),
             new Progression(ProgressionStyle.Jazz, false, "iiø7 V7 i7"),
-            new Progression(ProgressionStyle.Blues, false, "i7 i7 i7 i7 iv7 iv7 i7 i7 VI7 V7 i7 V7")
+            new Progression(ProgressionStyle.Blues, false, "i7 i7 i7 i7 iv7 iv7 i7 i7 VI7 V7 i7 V7"),
+            new Progression(ProgressionStyle.Klezmer, ScaleType.PhrygianDominant, "I I iv I"),
+            new Progression(ProgressionStyle.Klezmer, ScaleType.PhrygianDominant, "I iv vii I"),
+            new Progression(ProgressionStyle.Klezmer, ScaleType.PhrygianDominant, "I II I iv"),
+            new Progression(ProgressionStyle.Flamenco, ScaleType.PhrygianDominant, "iv bIII II I"),
+            new Progression(ProgressionStyle.Classical, ScaleType.HungarianMinor, "i V VI V"),
+            new Progression(ProgressionStyle.Classical, ScaleType.HungarianMinor, "i VI V i"),
+            new Progression(ProgressionStyle.Classical, ScaleType.HungarianMinor, "i II V i"),
+            new Progression(ProgressionStyle.Rock, ScaleType.DoubleHarmonicMajor, "I II I II"),
+            new Progression(ProgressionStyle.Flamenco, ScaleType.DoubleHarmonicMajor, "iv iii II I"),
+            new Progression(ProgressionStyle.Klezmer, ScaleType.DoubleHarmonicMajor, "I iv II I"),
+            new Progression(ProgressionStyle.Jazz, ScaleType.LydianDominant, "I7 II7 v7 I7"),
+            new Progression(ProgressionStyle.Pop, ScaleType.LydianDominant, "I II vi II"),
+            new Progression(ProgressionStyle.Klezmer, ScaleType.UkrainianDorian, "i II i II"),
+            new Progression(ProgressionStyle.Klezmer, ScaleType.UkrainianDorian, "i II III II"),
+            new Progression(ProgressionStyle.Klezmer, ScaleType.UkrainianDorian, "i v II i"),
+            new Progression(ProgressionStyle.Jazz, ScaleType.Altered, "ii V VI i"),
+            new Progression(ProgressionStyle.Jazz, ScaleType.Altered, "i ii iii ii")
         };
 
         /// <summary>The progression's chords in a key.</summary>
         public DegreeChord[] In(Key key, bool sevenths)
         {
-            return Numerals.Select(i => Resolve(key, i, sevenths)).ToArray();
+            // The common progressions are written in major or natural minor; a chord that is not the mode's own
+            // (IV in Lydian, VI7 of a minor blues in Dorian) keeps the root it has there.
+            ScaleType? reference = ForScale != null ? (ScaleType?)null : ForMajor ? ScaleType.Major : ScaleType.Minor;
+
+            return Numerals.Select(i => Resolve(key, i, sevenths, reference)).ToArray();
         }
 
         private static readonly string[] Romans = { "VII", "III", "VI", "IV", "II", "V", "I" };
 
         /// <summary>The chord a numeral stands for in a key.</summary>
-        public static DegreeChord Resolve(Key key, string numeral, bool sevenths)
+        public static DegreeChord Resolve(Key key, string numeral, bool sevenths, ScaleType? reference = null)
         {
             var rest = numeral;
             var alteration = 0;
@@ -104,7 +149,7 @@ namespace Chords.Core.Models
                     break;
             }
 
-            return key.ChordOn(degree, alteration, type, sevenths);
+            return key.ChordOn(degree, alteration, type, sevenths, reference);
         }
 
         /// <summary>Where each degree of a major key usually moves (functional harmony), with weights.</summary>
@@ -132,12 +177,91 @@ namespace Chords.Core.Models
         };
 
         /// <summary>
+        /// The same for Phrygian dominant (Freygish), whose harmony circles the major tonic: I–iv, I–II and vii–I.
+        /// Its diminished iii° and v° and augmented VI+ are left out.
+        /// </summary>
+        private static readonly Dictionary<int, (int Degree, int Weight)[]> PhrygianDominantMoves = new Dictionary<int, (int, int)[]>
+        {
+            { 1, new[] { (4, 5), (2, 4), (7, 3) } },
+            { 2, new[] { (1, 5), (4, 1), (7, 1) } },
+            { 4, new[] { (1, 5), (7, 3), (2, 2) } },
+            { 7, new[] { (1, 5), (4, 1), (2, 1) } }
+        };
+
+        /// <summary>
+        /// Hungarian minor: i, V and VI, with II7♭5 (D F♯ A♭ in C) leading to the dominant;
+        /// III+ and the chord on the raised fourth (F♯ A♭ C) are left out.
+        /// </summary>
+        private static readonly Dictionary<int, (int Degree, int Weight)[]> HungarianMinorMoves = new Dictionary<int, (int, int)[]>
+        {
+            { 1, new[] { (5, 4), (6, 3), (2, 3), (7, 1) } },
+            { 2, new[] { (5, 5), (1, 1) } },
+            { 5, new[] { (1, 5), (6, 2) } },
+            { 6, new[] { (5, 4), (2, 2) } },
+            { 7, new[] { (1, 3), (6, 1) } }
+        };
+
+        /// <summary>Double harmonic major circles the tonic with ♭II, iii and iv; its ♭5 dominant, VI+ and vii are left out.</summary>
+        private static readonly Dictionary<int, (int Degree, int Weight)[]> DoubleHarmonicMajorMoves = new Dictionary<int, (int, int)[]>
+        {
+            { 1, new[] { (2, 5), (4, 3), (3, 1) } },
+            { 2, new[] { (1, 5), (3, 2), (4, 1) } },
+            { 3, new[] { (4, 3), (2, 3) } },
+            { 4, new[] { (1, 4), (2, 3), (3, 1) } }
+        };
+
+        /// <summary>Lydian dominant swings between I and II (the raised fourth); its diminished chords and VII+ are left out.</summary>
+        private static readonly Dictionary<int, (int Degree, int Weight)[]> LydianDominantMoves = new Dictionary<int, (int, int)[]>
+        {
+            { 1, new[] { (2, 5), (5, 2), (6, 2) } },
+            { 2, new[] { (1, 5), (5, 2), (6, 1) } },
+            { 5, new[] { (1, 3), (2, 2), (6, 1) } },
+            { 6, new[] { (2, 4), (5, 2), (1, 1) } }
+        };
+
+        /// <summary>Ukrainian Dorian (Misheberakh): i–II above all, with III and v; vi° and VII+ are left out.</summary>
+        private static readonly Dictionary<int, (int Degree, int Weight)[]> UkrainianDorianMoves = new Dictionary<int, (int, int)[]>
+        {
+            { 1, new[] { (2, 5), (5, 2), (3, 2) } },
+            { 2, new[] { (1, 5), (3, 2), (5, 1) } },
+            { 3, new[] { (2, 4), (1, 2) } },
+            { 5, new[] { (1, 4), (2, 2) } }
+        };
+
+        /// <summary>
+        /// Altered: the chords of the melodic minor a semitone up (ii, iii, V, VI) around the diminished tonic;
+        /// IV+ and the other diminished chords are left out.
+        /// </summary>
+        private static readonly Dictionary<int, (int Degree, int Weight)[]> AlteredMoves = new Dictionary<int, (int, int)[]>
+        {
+            { 1, new[] { (2, 4), (5, 3), (6, 2) } },
+            { 2, new[] { (1, 3), (3, 3), (5, 3) } },
+            { 3, new[] { (2, 3), (5, 3) } },
+            { 5, new[] { (6, 4), (2, 2), (1, 2) } },
+            { 6, new[] { (1, 5), (2, 2) } }
+        };
+
+        /// <summary>Scales with harmony of their own; the others use the major or minor moves.</summary>
+        private static readonly Dictionary<ScaleType, Dictionary<int, (int Degree, int Weight)[]>> ScaleMoves =
+            new Dictionary<ScaleType, Dictionary<int, (int Degree, int Weight)[]>>
+            {
+                { ScaleType.PhrygianDominant, PhrygianDominantMoves },
+                { ScaleType.HungarianMinor, HungarianMinorMoves },
+                { ScaleType.DoubleHarmonicMajor, DoubleHarmonicMajorMoves },
+                { ScaleType.LydianDominant, LydianDominantMoves },
+                { ScaleType.UkrainianDorian, UkrainianDorianMoves },
+                { ScaleType.Altered, AlteredMoves }
+            };
+
+        /// <summary>
         /// A new progression in a key: starts on the tonic, moves the way harmony usually does
         /// and ends on a chord that leads back to the tonic, so it can be looped.
         /// </summary>
         public static DegreeChord[] Generate(Key key, int length, bool sevenths, Random random)
         {
-            var moves = key.IsMajor ? MajorMoves : MinorMoves;
+            var moves = ScaleMoves.TryGetValue(key.ScaleType, out var own) ? own
+                      : key.IsMajor ? MajorMoves
+                      : MinorMoves;
 
             for (var attempt = 0; ; attempt++)
             {
@@ -162,7 +286,8 @@ namespace Chords.Core.Models
 
                 return degrees.Select(degree =>
                 {
-                    if (!key.IsMajor && degree == 5)
+                    // Natural minor borrows the major dominant of harmonic minor; the modes keep their own fifth chord.
+                    if (key.ScaleType == ScaleType.Minor && degree == 5)
                     {
                         return Resolve(key, sevenths ? "V7" : "V", sevenths);
                     }

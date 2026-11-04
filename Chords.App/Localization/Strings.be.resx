@@ -65,6 +65,20 @@
   <data name="Scale_MelodicMinor" xml:space="preserve"><value>Меладычны мінор</value></data>
   <data name="Scale_Dorian" xml:space="preserve"><value>Дарыйскі</value></data>
   <data name="Scale_Phrygian" xml:space="preserve"><value>Фрыгійскі</value></data>
+  <data name="Scale_PhrygianDominant" xml:space="preserve"><value>Фрыгійскі дамінантавы</value></data>
+  <data name="Scale_HungarianMinor" xml:space="preserve"><value>Венгерскі мінор</value></data>
+  <data name="Scale_DoubleHarmonicMajor" xml:space="preserve"><value>Двайная гарманічная (цыганскі мажор)</value></data>
+  <data name="Scale_LydianDominant" xml:space="preserve"><value>Лідыйская дамінанта</value></data>
+  <data name="Scale_UkrainianDorian" xml:space="preserve"><value>Украінская дарыйская</value></data>
+  <data name="Scale_Altered" xml:space="preserve"><value>Альтэраваная</value></data>
+  <data name="Scale_MajorPentatonic" xml:space="preserve"><value>Мажорная пентатоніка</value></data>
+  <data name="Scale_MinorPentatonic" xml:space="preserve"><value>Мінорная пентатоніка</value></data>
+  <data name="Scale_Blues" xml:space="preserve"><value>Блюзавая</value></data>
+  <data name="Scale_Hirajoshi" xml:space="preserve"><value>Хирадзёси</value></data>
+  <data name="Scale_In" xml:space="preserve"><value>Ин</value></data>
+  <data name="Scale_Yo" xml:space="preserve"><value>Ё</value></data>
+  <data name="Scale_Kumoi" xml:space="preserve"><value>Кумои</value></data>
+  <data name="Scale_Egyptian" xml:space="preserve"><value>Егіпецкая</value></data>
   <data name="Scale_Lydian" xml:space="preserve"><value>Лідыйскі</value></data>
   <data name="Scale_Mixolydian" xml:space="preserve"><value>Міксалідыйскі</value></data>
   <data name="Key_TabChords" xml:space="preserve"><value>Акорды танальнасці</value></data>
@@ -82,6 +96,7 @@
   <data name="Style_Blues" xml:space="preserve"><value>Блюз</value></data>
   <data name="Style_Classical" xml:space="preserve"><value>Класіка</value></data>
   <data name="Style_Flamenco" xml:space="preserve"><value>Фламенка</value></data>
+  <data name="Style_Klezmer" xml:space="preserve"><value>Клезмер</value></data>
   <data name="Prog_Generate" xml:space="preserve"><value>Стварыць паслядоўнасць</value></data>
   <data name="Prog_Hint" xml:space="preserve"><value>Націсніце на паслядоўнасць, каб убачыць дыяграмы; ‹ › змяняе аплікатуру. ▶ прайграе яе, паўторнае націсканне спыняе.</value></data>
 </root>

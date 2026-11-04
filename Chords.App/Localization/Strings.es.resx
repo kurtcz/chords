@@ -64,6 +64,20 @@
   <data name="Scale_MelodicMinor" xml:space="preserve"><value>Menor melódica</value></data>
   <data name="Scale_Dorian" xml:space="preserve"><value>Dórica</value></data>
   <data name="Scale_Phrygian" xml:space="preserve"><value>Frigia</value></data>
+  <data name="Scale_PhrygianDominant" xml:space="preserve"><value>Frigia dominante</value></data>
+  <data name="Scale_HungarianMinor" xml:space="preserve"><value>Menor húngara</value></data>
+  <data name="Scale_DoubleHarmonicMajor" xml:space="preserve"><value>Doble armónica (mayor gitana)</value></data>
+  <data name="Scale_LydianDominant" xml:space="preserve"><value>Lidia dominante</value></data>
+  <data name="Scale_UkrainianDorian" xml:space="preserve"><value>Dórica ucraniana</value></data>
+  <data name="Scale_Altered" xml:space="preserve"><value>Alterada</value></data>
+  <data name="Scale_MajorPentatonic" xml:space="preserve"><value>Pentatónica mayor</value></data>
+  <data name="Scale_MinorPentatonic" xml:space="preserve"><value>Pentatónica menor</value></data>
+  <data name="Scale_Blues" xml:space="preserve"><value>Blues</value></data>
+  <data name="Scale_Hirajoshi" xml:space="preserve"><value>Hirajoshi</value></data>
+  <data name="Scale_In" xml:space="preserve"><value>In</value></data>
+  <data name="Scale_Yo" xml:space="preserve"><value>Yo</value></data>
+  <data name="Scale_Kumoi" xml:space="preserve"><value>Kumoi</value></data>
+  <data name="Scale_Egyptian" xml:space="preserve"><value>Egipcia</value></data>
   <data name="Scale_Lydian" xml:space="preserve"><value>Lidia</value></data>
   <data name="Scale_Mixolydian" xml:space="preserve"><value>Mixolidia</value></data>
   <data name="Key_TabChords" xml:space="preserve"><value>Acordes de la tonalidad</value></data>
@@ -81,6 +95,7 @@
   <data name="Style_Blues" xml:space="preserve"><value>Blues</value></data>
   <data name="Style_Classical" xml:space="preserve"><value>Clásica</value></data>
   <data name="Style_Flamenco" xml:space="preserve"><value>Flamenco</value></data>
+  <data name="Style_Klezmer" xml:space="preserve"><value>Klezmer</value></data>
   <data name="Prog_Generate" xml:space="preserve"><value>Generar una progresión</value></data>
   <data name="Prog_Hint" xml:space="preserve"><value>Toca una progresión para ver sus diagramas; ‹ › cambia la digitación. ▶ la reproduce, toca de nuevo para detenerla.</value></data>
 </root>

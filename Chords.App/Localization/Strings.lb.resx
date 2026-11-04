@@ -64,6 +64,20 @@
   <data name="Scale_MelodicMinor" xml:space="preserve"><value>Melodescht Moll</value></data>
   <data name="Scale_Dorian" xml:space="preserve"><value>Doresch</value></data>
   <data name="Scale_Phrygian" xml:space="preserve"><value>Phrygesch</value></data>
+  <data name="Scale_PhrygianDominant" xml:space="preserve"><value>Phrygesch dominant</value></data>
+  <data name="Scale_HungarianMinor" xml:space="preserve"><value>Ungaresch Moll</value></data>
+  <data name="Scale_DoubleHarmonicMajor" xml:space="preserve"><value>Duebel harmonesch</value></data>
+  <data name="Scale_LydianDominant" xml:space="preserve"><value>Lydesch dominant</value></data>
+  <data name="Scale_UkrainianDorian" xml:space="preserve"><value>Ukrainesch doresch</value></data>
+  <data name="Scale_Altered" xml:space="preserve"><value>Alteréiert</value></data>
+  <data name="Scale_MajorPentatonic" xml:space="preserve"><value>Dur-Pentatonik</value></data>
+  <data name="Scale_MinorPentatonic" xml:space="preserve"><value>Moll-Pentatonik</value></data>
+  <data name="Scale_Blues" xml:space="preserve"><value>Blues</value></data>
+  <data name="Scale_Hirajoshi" xml:space="preserve"><value>Hirajoshi</value></data>
+  <data name="Scale_In" xml:space="preserve"><value>In</value></data>
+  <data name="Scale_Yo" xml:space="preserve"><value>Yo</value></data>
+  <data name="Scale_Kumoi" xml:space="preserve"><value>Kumoi</value></data>
+  <data name="Scale_Egyptian" xml:space="preserve"><value>Egyptesch</value></data>
   <data name="Scale_Lydian" xml:space="preserve"><value>Lydesch</value></data>
   <data name="Scale_Mixolydian" xml:space="preserve"><value>Mixolydesch</value></data>
   <data name="Key_TabChords" xml:space="preserve"><value>Akkorde vun der Tonart</value></data>
@@ -81,6 +95,7 @@
   <data name="Style_Blues" xml:space="preserve"><value>Blues</value></data>
   <data name="Style_Classical" xml:space="preserve"><value>Klassik</value></data>
   <data name="Style_Flamenco" xml:space="preserve"><value>Flamenco</value></data>
+  <data name="Style_Klezmer" xml:space="preserve"><value>Klezmer</value></data>
   <data name="Prog_Generate" xml:space="preserve"><value>Akkordfolg generéieren</value></data>
   <data name="Prog_Hint" xml:space="preserve"><value>Tipp op eng Akkordfolg fir hir Diagrammer ze gesinn; ‹ › wiesselt de Grëff. ▶ spillt se of, nach eng Kéier tippen stoppt.</value></data>
 </root>

@@ -64,6 +64,20 @@
   <data name="Scale_MelodicMinor" xml:space="preserve"><value>მელოდიური მინორი</value></data>
   <data name="Scale_Dorian" xml:space="preserve"><value>დორიული</value></data>
   <data name="Scale_Phrygian" xml:space="preserve"><value>ფრიგიული</value></data>
+  <data name="Scale_PhrygianDominant" xml:space="preserve"><value>ფრიგიული დომინანტური</value></data>
+  <data name="Scale_HungarianMinor" xml:space="preserve"><value>უნგრული მინორი</value></data>
+  <data name="Scale_DoubleHarmonicMajor" xml:space="preserve"><value>ორმაგი ჰარმონიული (ბოშური მაჟორი)</value></data>
+  <data name="Scale_LydianDominant" xml:space="preserve"><value>ლიდიური დომინანტა</value></data>
+  <data name="Scale_UkrainianDorian" xml:space="preserve"><value>უკრაინული დორიული</value></data>
+  <data name="Scale_Altered" xml:space="preserve"><value>ალტერირებული</value></data>
+  <data name="Scale_MajorPentatonic" xml:space="preserve"><value>მაჟორული პენტატონიკა</value></data>
+  <data name="Scale_MinorPentatonic" xml:space="preserve"><value>მინორული პენტატონიკა</value></data>
+  <data name="Scale_Blues" xml:space="preserve"><value>ბლუზი</value></data>
+  <data name="Scale_Hirajoshi" xml:space="preserve"><value>Hirajoshi</value></data>
+  <data name="Scale_In" xml:space="preserve"><value>In</value></data>
+  <data name="Scale_Yo" xml:space="preserve"><value>Yo</value></data>
+  <data name="Scale_Kumoi" xml:space="preserve"><value>Kumoi</value></data>
+  <data name="Scale_Egyptian" xml:space="preserve"><value>ეგვიპტური</value></data>
   <data name="Scale_Lydian" xml:space="preserve"><value>ლიდიური</value></data>
   <data name="Scale_Mixolydian" xml:space="preserve"><value>მიქსოლიდიური</value></data>
   <data name="Key_TabChords" xml:space="preserve"><value>ტონალობის აკორდები</value></data>
@@ -81,6 +95,7 @@
   <data name="Style_Blues" xml:space="preserve"><value>ბლუზი</value></data>
   <data name="Style_Classical" xml:space="preserve"><value>კლასიკა</value></data>
   <data name="Style_Flamenco" xml:space="preserve"><value>ფლამენკო</value></data>
+  <data name="Style_Klezmer" xml:space="preserve"><value>კლეზმერი</value></data>
   <data name="Prog_Generate" xml:space="preserve"><value>მიმდევრობის შექმნა</value></data>
   <data name="Prog_Hint" xml:space="preserve"><value>შეეხეთ მიმდევრობას დიაგრამების სანახავად; ‹ › ცვლის აპლიკატურას. ▶ უკრავს მას, შესაჩერებლად კვლავ შეეხეთ.</value></data>
 </root>

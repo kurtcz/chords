@@ -26,11 +26,14 @@ namespace Chords.Core.Models
     {
         private static readonly string[] Numerals = { "I", "II", "III", "IV", "V", "VI", "VII" };
 
-        /// <summary>Scales a chord progression can be built on (heptatonic).</summary>
+        /// <summary>Scales a chord progression can be built on; the shorter ones are harmonized by their seven-note parent.</summary>
         public static readonly ScaleType[] ScaleTypes =
         {
             ScaleType.Major, ScaleType.Minor, ScaleType.HarmonicMinor, ScaleType.MelodicMinor,
-            ScaleType.Dorian, ScaleType.Phrygian, ScaleType.Lydian, ScaleType.Mixolydian
+            ScaleType.Dorian, ScaleType.Phrygian, ScaleType.Lydian, ScaleType.Mixolydian, ScaleType.PhrygianDominant, ScaleType.HungarianMinor,
+            ScaleType.DoubleHarmonicMajor, ScaleType.LydianDominant, ScaleType.UkrainianDorian, ScaleType.Altered,
+            ScaleType.MajorPentatonic, ScaleType.MinorPentatonic, ScaleType.Blues, ScaleType.Hirajoshi,
+            ScaleType.In, ScaleType.Yo, ScaleType.Kumoi, ScaleType.Egyptian
         };
 
         /// <summary>Usual spelling of the tonic of each major key (index = semitones above C).</summary>
@@ -51,10 +54,13 @@ namespace Chords.Core.Models
 
         public Note Tonic { get; }
         public ScaleType ScaleType { get; }
+        /// <summary>The notes of the key (five for a pentatonic one).</summary>
         public Scale Scale { get; }
+        /// <summary>The seven-note scale the chords are stacked from: <see cref="Scale"/> or, for a shorter scale, its parent.</summary>
+        public Scale Harmony { get; }
 
-        /// <summary>Major, Lydian and Mixolydian have a major tonic chord.</summary>
-        public bool IsMajor => Scale.Notes[0].ChromaticDistance(Scale.Notes[2]) == 4;
+        /// <summary>Whether the tonic chord is major (Major, Lydian, Mixolydian, Phrygian dominant…).</summary>
+        public bool IsMajor => Harmony.Notes[0].ChromaticDistance(Harmony.Notes[2]) == 4;
 
         public Key(Note tonic, ScaleType scaleType)
         {
@@ -65,6 +71,7 @@ namespace Chords.Core.Models
             Tonic = tonic;
             ScaleType = scaleType;
             Scale = new Scale(tonic, scaleType);
+            Harmony = scaleType.Harmony() == scaleType ? Scale : new Scale(tonic, scaleType.Harmony());
         }
 
         /// <summary>The key with the usual spelling of its tonic (Db major rather than C# major).</summary>
@@ -77,16 +84,26 @@ namespace Chords.Core.Models
 
         /// <summary>
         /// Degree (0-based) of the parent major scale the tonic lies on: D Dorian is the second degree of C major.
-        /// Harmonic and melodic minor are counted as their natural minor.
+        /// Harmonic and melodic minor are counted as their natural minor and Phrygian dominant
+        /// (the fifth mode of harmonic minor) as Phrygian: E Phrygian dominant is written with the signature of C major.
+        /// The other altered scales take the signature of the mode they differ least from: Hungarian minor of minor,
+        /// double harmonic major of Phrygian, Lydian dominant of Lydian, Ukrainian Dorian of Dorian
+        /// and Altered of Locrian.
         /// </summary>
         private static int ModeOffset(ScaleType scaleType)
         {
-            switch (scaleType)
+            switch (scaleType.Harmony())
             {
-                case ScaleType.Dorian: return 1;
-                case ScaleType.Phrygian: return 2;
-                case ScaleType.Lydian: return 3;
+                case ScaleType.Dorian:
+                case ScaleType.UkrainianDorian: return 1;
+                case ScaleType.Phrygian:
+                case ScaleType.PhrygianDominant:
+                case ScaleType.DoubleHarmonicMajor: return 2;
+                case ScaleType.Lydian:
+                case ScaleType.LydianDominant: return 3;
                 case ScaleType.Mixolydian: return 4;
+                case ScaleType.Altered: return 6;
+                case ScaleType.HungarianMinor:
                 case ScaleType.Minor:
                 case ScaleType.HarmonicMinor:
                 case ScaleType.MelodicMinor: return 5;
@@ -95,7 +112,7 @@ namespace Chords.Core.Models
         }
 
         /// <summary>Tonic of the major key with the same key signature (C for A minor or D Dorian).</summary>
-        public Note ParentMajor => Scale.Notes[(7 - ModeOffset(ScaleType)) % 7];
+        public Note ParentMajor => Harmony.Notes[(7 - ModeOffset(ScaleType)) % 7];
 
         /// <summary>The key of the same scale type whose parent major is <paramref name="majorTonic"/>.</summary>
         public Key WithParentMajor(Note majorTonic) =>
@@ -105,7 +122,7 @@ namespace Chords.Core.Models
         public int Accidentals => Scale.Notes.Sum(i => Math.Abs((int)i.Accidental));
 
         /// <summary>Note on a degree (1–7) of the scale.</summary>
-        public Note NoteOf(int degree) => Scale.Notes[(degree - 1 + 7 * 10) % 7];
+        public Note NoteOf(int degree) => Harmony.Notes[(degree - 1 + 7 * 10) % 7];
 
         /// <summary>Diatonic triads (or seventh chords) on degrees I–VII, stacked in thirds from the scale.</summary>
         public DegreeChord[] DiatonicChords(bool sevenths)
@@ -131,13 +148,21 @@ namespace Chords.Core.Models
         /// A chord on a degree, optionally chromatically altered (e.g. ♭VII in a major key)
         /// and of a given type (e.g. a dominant seventh on every degree of a blues).
         /// </summary>
-        public DegreeChord ChordOn(int degree, int alteration, ChordType? type, bool sevenths)
+        /// <param name="reference">
+        /// The scale the numeral was written in, when not this key's own: the root of an unaltered degree
+        /// is then taken from it, so the IV of a major-key progression is F in C Lydian, not F♯.
+        /// </param>
+        public DegreeChord ChordOn(int degree, int alteration, ChordType? type, bool sevenths, ScaleType? reference = null)
         {
             if (alteration == 0 && type == null)
             {
                 return DiatonicChord(degree, sevenths);
             }
-            var note = NoteOf(degree);
+            // An accidental is measured from the major scale on the tonic, as Roman numerals are usually read:
+            // ♭VII is B♭ in C major and in C Mixolydian alike (not B𝄫 a step below the modal seventh).
+            var note = alteration != 0 ? new Scale(Tonic, ScaleType.Major).Notes[(degree - 1) % 7]
+                     : reference != null ? new Scale(Tonic, reference.Value).Notes[(degree - 1) % 7]
+                     : NoteOf(degree);
             var root = new Note(note.Tone, (Accidental)Math.Max(-2, Math.Min(2, (int)note.Accidental + alteration)));
             var chordType = type ?? DiatonicChord(degree, sevenths).Chord.ChordType;
 
@@ -159,6 +184,8 @@ namespace Chords.Core.Models
                 case (3, 6, 10): return ChordType.MinorSeventhFlat5;
                 case (3, 6, 9): return ChordType.DiminishedSeventh;
                 case (4, 8, 10): return ChordType.AugmentedSeventh;
+                // The dominant of double harmonic major (G B D♭ in C): its seventh is in the scale too, so it is shown as 7♭5.
+                case (4, 6, _): return ChordType.DominantSeventhFlat5;
                 // An augmented major seventh chord has no symbol of its own; the triad is shown.
                 case (4, 8, _): return ChordType.Augmented;
                 default: return third == 3 ? ChordType.Minor : ChordType.Major;
@@ -208,10 +235,10 @@ namespace Chords.Core.Models
             return prefix + numeral + suffix;
         }
 
-        /// <summary>Whether every note of the chord belongs to the scale (enharmonics are equal).</summary>
+        /// <summary>Whether every note of the chord belongs to the (harmonizing) scale (enharmonics are equal).</summary>
         public bool Contains(Chord chord)
         {
-            var scale = Scale.Notes.Select(Note.Normalize).ToArray();
+            var scale = Harmony.Notes.Select(Note.Normalize).ToArray();
 
             return chord.NormalizedNotes.All(i => scale.Contains(i));
         }
@@ -294,7 +321,7 @@ namespace Chords.Core.Models
                 return null;
             }
             var root = Note.Normalize(chord.Root);
-            var degree = Array.FindIndex(key.Scale.Notes, i => Note.Normalize(i) == root) + 1;
+            var degree = Array.FindIndex(key.Harmony.Notes, i => Note.Normalize(i) == root) + 1;
 
             return Key.Numeral(degree, 0, chord.ChordType);
         }

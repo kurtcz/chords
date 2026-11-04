@@ -64,6 +64,20 @@
   <data name="Scale_MelodicMinor" xml:space="preserve"><value>Laglínumoll</value></data>
   <data name="Scale_Dorian" xml:space="preserve"><value>Dórískur</value></data>
   <data name="Scale_Phrygian" xml:space="preserve"><value>Frýgískur</value></data>
+  <data name="Scale_PhrygianDominant" xml:space="preserve"><value>Frýgískur ríkjandi</value></data>
+  <data name="Scale_HungarianMinor" xml:space="preserve"><value>Ungverskur moll</value></data>
+  <data name="Scale_DoubleHarmonicMajor" xml:space="preserve"><value>Tvöfaldur hljómrænn</value></data>
+  <data name="Scale_LydianDominant" xml:space="preserve"><value>Lýdískur forhljómur</value></data>
+  <data name="Scale_UkrainianDorian" xml:space="preserve"><value>Úkraínskur dórískur</value></data>
+  <data name="Scale_Altered" xml:space="preserve"><value>Breyttur</value></data>
+  <data name="Scale_MajorPentatonic" xml:space="preserve"><value>Dúr fimmtónn</value></data>
+  <data name="Scale_MinorPentatonic" xml:space="preserve"><value>Moll fimmtónn</value></data>
+  <data name="Scale_Blues" xml:space="preserve"><value>Blús</value></data>
+  <data name="Scale_Hirajoshi" xml:space="preserve"><value>Hirajoshi</value></data>
+  <data name="Scale_In" xml:space="preserve"><value>In</value></data>
+  <data name="Scale_Yo" xml:space="preserve"><value>Yo</value></data>
+  <data name="Scale_Kumoi" xml:space="preserve"><value>Kumoi</value></data>
+  <data name="Scale_Egyptian" xml:space="preserve"><value>Egypskur</value></data>
   <data name="Scale_Lydian" xml:space="preserve"><value>Lýdískur</value></data>
   <data name="Scale_Mixolydian" xml:space="preserve"><value>Mixólýdískur</value></data>
   <data name="Key_TabChords" xml:space="preserve"><value>Hljómar tóntegundar</value></data>
@@ -81,6 +95,7 @@
   <data name="Style_Blues" xml:space="preserve"><value>Blús</value></data>
   <data name="Style_Classical" xml:space="preserve"><value>Klassík</value></data>
   <data name="Style_Flamenco" xml:space="preserve"><value>Flamenco</value></data>
+  <data name="Style_Klezmer" xml:space="preserve"><value>Klezmer</value></data>
   <data name="Prog_Generate" xml:space="preserve"><value>Búa til hljómagöngu</value></data>
   <data name="Prog_Hint" xml:space="preserve"><value>Ýttu á hljómagöngu til að sjá gripin; ‹ › skiptir um grip. ▶ spilar hana, ýttu aftur til að stöðva.</value></data>
 </root>

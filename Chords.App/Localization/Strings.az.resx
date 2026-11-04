@@ -64,6 +64,20 @@
   <data name="Scale_MelodicMinor" xml:space="preserve"><value>Melodik minor</value></data>
   <data name="Scale_Dorian" xml:space="preserve"><value>Dor</value></data>
   <data name="Scale_Phrygian" xml:space="preserve"><value>Friq</value></data>
+  <data name="Scale_PhrygianDominant" xml:space="preserve"><value>Friq dominant</value></data>
+  <data name="Scale_HungarianMinor" xml:space="preserve"><value>Macar minoru</value></data>
+  <data name="Scale_DoubleHarmonicMajor" xml:space="preserve"><value>İkiqat harmonik (qaraçı majoru)</value></data>
+  <data name="Scale_LydianDominant" xml:space="preserve"><value>Lidiya dominantı</value></data>
+  <data name="Scale_UkrainianDorian" xml:space="preserve"><value>Ukrayna doriyası</value></data>
+  <data name="Scale_Altered" xml:space="preserve"><value>Alterasiyalı</value></data>
+  <data name="Scale_MajorPentatonic" xml:space="preserve"><value>Major pentatonika</value></data>
+  <data name="Scale_MinorPentatonic" xml:space="preserve"><value>Minor pentatonika</value></data>
+  <data name="Scale_Blues" xml:space="preserve"><value>Bluz</value></data>
+  <data name="Scale_Hirajoshi" xml:space="preserve"><value>Hirajoshi</value></data>
+  <data name="Scale_In" xml:space="preserve"><value>In</value></data>
+  <data name="Scale_Yo" xml:space="preserve"><value>Yo</value></data>
+  <data name="Scale_Kumoi" xml:space="preserve"><value>Kumoi</value></data>
+  <data name="Scale_Egyptian" xml:space="preserve"><value>Misir</value></data>
   <data name="Scale_Lydian" xml:space="preserve"><value>Lid</value></data>
   <data name="Scale_Mixolydian" xml:space="preserve"><value>Miksolid</value></data>
   <data name="Key_TabChords" xml:space="preserve"><value>Tonallığın akkordları</value></data>
@@ -81,6 +95,7 @@
   <data name="Style_Blues" xml:space="preserve"><value>Blüz</value></data>
   <data name="Style_Classical" xml:space="preserve"><value>Klassik</value></data>
   <data name="Style_Flamenco" xml:space="preserve"><value>Flamenko</value></data>
+  <data name="Style_Klezmer" xml:space="preserve"><value>Klezmer</value></data>
   <data name="Prog_Generate" xml:space="preserve"><value>Ardıcıllıq yarat</value></data>
   <data name="Prog_Hint" xml:space="preserve"><value>Diaqramları görmək üçün ardıcıllığa toxunun; ‹ › barmaq düzülüşünü dəyişir. ▶ onu çalır, dayandırmaq üçün yenidən toxunun.</value></data>
 </root>

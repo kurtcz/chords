@@ -115,14 +115,14 @@
         Build();
     }
 
-    /// <summary>Common progressions written for the kind of key chosen (major or minor tonic chord).</summary>
+    /// <summary>Common progressions written for the kind of key chosen (major or minor tonic chord, or its own scale).</summary>
     private void Build()
     {
         var key = Current;
 
         selected = null;
         items = Progression.Common
-            .Where(i => i.ForMajor == key.IsMajor)
+            .Where(i => i.Fits(key))
             .Select(i => new Item { Label = L[$"Style_{i.Style}"], Chords = i.In(key, State.KeySevenths) })
             .ToList();
         if (generated != null)
