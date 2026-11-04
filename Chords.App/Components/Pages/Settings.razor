@@ -15,6 +15,16 @@
 </DropdownBar>
 
 <DropdownBar>
+    <Brand>@L[$"Instrument_{settings.Instrument}"]</Brand>
+    <ChildContent>
+        @foreach (var instrument in Enum.GetValues<Instrument>())
+        {
+            <li><a @onclick="() => Update(() => settings.Instrument = instrument)">@L[$"Instrument_{instrument}"] <sub>(@Tuning(instrument))</sub></a></li>
+        }
+    </ChildContent>
+</DropdownBar>
+
+<DropdownBar>
     <Brand>@L[$"Notation_{settings.conv}"]</Brand>
     <ChildContent>
         @foreach (var conv in settings.NamingConventions)
@@ -43,6 +53,9 @@
                @onchange="e => Update(() => settings.maxFret = int.Parse((string)e.Value!))" />
     </div>
 </div>
+@* Barre and special shapes only exist in the guitar fingering rules. *@
+@if (settings.Instrument == Instrument.Guitar)
+{
 <div class="row vertical-align" style="margin-bottom: 20px;">
     <span class="col-xs-9 col-sm-9 col-md-9 col-lg-9">@L["Settings_AllowBarre"]</span>
     <span class="col-xs-3 col-sm-3 col-md-3 col-lg-3 justify-right">
@@ -55,6 +68,7 @@
         <Toggle Value="settings.AllowSpecial" ValueChanged="v => Update(() => settings.AllowSpecial = v)" />
     </span>
 </div>
+}
 <div class="row vertical-align" style="margin-bottom: 20px;">
     <span class="col-xs-9 col-sm-9 col-md-9 col-lg-9">@L["Settings_ShowTips"]</span>
     <span class="col-xs-3 col-sm-3 col-md-3 col-lg-3 justify-right">
@@ -81,6 +95,10 @@
         }
         return Localizer.Languages.FirstOrDefault(i => i.Code == code).Name ?? code;
     }
+
+    /// <summary>Open strings from the lowest, e.g. "E-A-D-G-B-E", in the chosen notation.</summary>
+    private string Tuning(Instrument instrument)
+        => string.Join("-", InstrumentInfo.Get(instrument).Strings.Select(i => i.ToString(settings.conv)));
 
     private void SetLanguage(string code) => Update(() =>
     {

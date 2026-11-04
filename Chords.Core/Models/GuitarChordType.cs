@@ -16,6 +16,9 @@ namespace Chords.Core.Models
         [Descriptor("Small barre chord")]
         FiveStringBarre,
         [Descriptor("Special chord")]
-        Special
+        Special,
+        /// <summary>Chord on an instrument other than the guitar (no guitar-specific shapes).</summary>
+        [Descriptor("Chord")]
+        Standard
     }
 }

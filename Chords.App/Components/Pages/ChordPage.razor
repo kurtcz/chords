@@ -55,7 +55,7 @@
 {
     <div id="layouts" class="animate-bottom">
         <h4>@L["Chord_Diagrams"]</h4>
-        <p>@L.Plural("Chord_Results", layouts.Length)</p>
+        <p>@L.Plural("Chord_Results", layouts.Length) &ndash; @L[$"Instrument_{State.Settings.Instrument}"]</p>
         @if (State.Settings.ShowTips && !tipClosed)
         {
             <div class="alert alert-info">
@@ -123,7 +123,7 @@
 
         var current = decorator;
         var result = await Task.Run(() => current
-            .GenerateLayouts(settings.AllowBarre, settings.AllowSpecial, Partial, settings.maxFret)
+            .GenerateLayouts(settings.Instrument, settings.AllowBarre, settings.AllowSpecial, Partial, settings.maxFret)
             .OrderBy(i => i.Favorite ? 0 : 1)
             .ToArray());
 

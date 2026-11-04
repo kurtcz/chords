@@ -13,25 +13,15 @@ namespace Chords.Core.Models
     public class GuitarChordLayout
     {
         public const int X = -1;       //this symbol denotes a silent string
-        private static readonly Note[] _strings =
-        {
-            new Note(Tone.E),
-            new Note(Tone.A),
-            new Note(Tone.D),
-            new Note(Tone.G),
-            new Note(Tone.B),
-            new Note(Tone.E)
-        };
-        private static readonly Note[][] _stringNotes =
-            Enumerable.Range(0, 6)
-                      .Select(s => Enumerable.Range(0, 15 + 4)
-                                             .Select(i => _strings[s].NoteAtChromaticDistance(i))
-                                             .ToArray())
-                      .ToArray();
+        private const int MaxPosition = 15 + 3;
+        private static readonly ConcurrentDictionary<Instrument, Note[][]> _stringNotesCache = new ConcurrentDictionary<Instrument, Note[][]>();
 
 		public Chord Chord { get; private set; }
 		public int[] Positions { get; private set; } = new int[6];
         public GuitarChordType GuitarChordType { get; private set; }
+        public Instrument Instrument { get; private set; }
+        [JsonIgnore]
+        public InstrumentInfo InstrumentInfo => InstrumentInfo.Get(Instrument);
         [JsonIgnore]
         public int Fret { get; private set; }
         [JsonIgnore]
@@ -39,18 +29,34 @@ namespace Chords.Core.Models
         [JsonIgnore]
         public bool Complete { get; private set; }
 
-        public GuitarChordLayout(Chord chord, int[] positions, GuitarChordType? guitarChordType = null)
+        /// <summary>Notes at positions 0..<see cref="MaxPosition"/> for each string of the instrument.</summary>
+        private static Note[][] StringNotes(Instrument instrument)
+        {
+            return _stringNotesCache.GetOrAdd(instrument, i =>
+                InstrumentInfo.Get(i).Strings
+                              .Select(s => Enumerable.Range(0, MaxPosition + 1)
+                                                     .Select(pos => s.NoteAtChromaticDistance(pos))
+                                                     .ToArray())
+                              .ToArray());
+        }
+
+        public GuitarChordLayout(Chord chord, int[] positions, GuitarChordType? guitarChordType = null, Instrument instrument = Instrument.Guitar)
         {
             Chord = chord;
             Positions = positions;
+            Instrument = instrument;
 			Notes = GetUsedNotes();
             if (guitarChordType.HasValue)
             {
                 GuitarChordType = guitarChordType.Value;
             }
+            else if (instrument != Instrument.Guitar)
+            {
+                GuitarChordType = GuitarChordType.Standard;
+            }
             else
             {
-                foreach (var chordType in Enum.GetValues(typeof(GuitarChordType)).Cast<GuitarChordType>())
+                foreach (var chordType in Enum.GetValues(typeof(GuitarChordType)).Cast<GuitarChordType>().Where(i => i != GuitarChordType.Standard))
                 {
                     GuitarChordType = chordType;
                     if (IsValid(true))
@@ -72,41 +78,47 @@ namespace Chords.Core.Models
 
         public static IEnumerable<GuitarChordLayout> Generate(Chord chord, bool allowBarre, bool allowSpecial, bool allowPartial, int maxFret)
         {
+            return Generate(chord, Instrument.Guitar, allowBarre, allowSpecial, allowPartial, maxFret);
+        }
+
+        public static IEnumerable<GuitarChordLayout> Generate(Chord chord, Instrument instrument, bool allowBarre, bool allowSpecial, bool allowPartial, int maxFret)
+        {
+            var info = InstrumentInfo.Get(instrument);
+            var stringNotes = StringNotes(instrument);
             var results = new ConcurrentBag<GuitarChordLayout>();
-            var positionsPerString = new HashSet<int>[6];
+            var positionsPerString = new HashSet<int>[info.StringCount];
 
             //for each string find all positions corresponding to notes from the given chord
-            for (var s = 0; s < 6; s++)
+            for (var s = 0; s < info.StringCount; s++)
             {
                 positionsPerString[s] = new HashSet<int>();
-                positionsPerString[s].Add(X);
-
-                if (chord.Notes.Any(i => i == _strings[s]))
+                if (info.AllowMutedStrings)
                 {
-                    positionsPerString[s].Add(0);
+                    positionsPerString[s].Add(X);
                 }
-                for (var pos = 1; pos <= maxFret + 3; pos++)
+                for (var pos = 0; pos <= maxFret + 3 && pos <= MaxPosition; pos++)
                 {
-                    var note = _strings[s].NoteAtChromaticDistance(pos);
-
-                    if (chord.Notes.Any(i => Note.Normalize(i) == note))
+                    if (chord.Notes.Any(i => Note.Normalize(i) == stringNotes[s][pos]))
                     {
                         positionsPerString[s].Add(pos);
                     }
                 }
             }
 
-            var layouts = GenerateLayouts(positionsPerString).ToArray();
+            var layouts = GetPositionsForStrings(positionsPerString, stringNotes, instrument == Instrument.Guitar, 0).ToArray();
 #if TESTING
             var k = 0;
             layouts = layouts.Skip(k).ToArray();
 #endif
-            var guitarChordTypes = Enum.GetValues(typeof(GuitarChordType))
-                                       .Cast<GuitarChordType>()
-                                       .Where(i => (allowSpecial || i != GuitarChordType.Special) &&
-                                                   (allowBarre || (i != GuitarChordType.SixStringBarre &&
-                                                                   i != GuitarChordType.FiveStringBarre)))
-                                       .ToList();
+            var guitarChordTypes = instrument != Instrument.Guitar
+                ? new List<GuitarChordType> { GuitarChordType.Standard }
+                : Enum.GetValues(typeof(GuitarChordType))
+                      .Cast<GuitarChordType>()
+                      .Where(i => i != GuitarChordType.Standard &&
+                                  (allowSpecial || i != GuitarChordType.Special) &&
+                                  (allowBarre || (i != GuitarChordType.SixStringBarre &&
+                                                  i != GuitarChordType.FiveStringBarre)))
+                      .ToList();
 #if !TESTING
             Parallel.ForEach(layouts, layout =>
 #else
@@ -115,7 +127,7 @@ namespace Chords.Core.Models
             {
                 foreach (var guitarChordType in guitarChordTypes)
                 {
-                    var result = new GuitarChordLayout(chord, layout, guitarChordType);
+                    var result = new GuitarChordLayout(chord, layout, guitarChordType, instrument);
                     var b = result.IsValid(allowPartial) &&
                             result.Fret <= maxFret;
                     if (b)
@@ -131,19 +143,15 @@ namespace Chords.Core.Models
             return results.Distinct();
         }
 
-        private static IEnumerable<int[]> GenerateLayouts(HashSet<int>[] positionsPerString)
+        private static IEnumerable<int[]> GetPositionsForStrings(HashSet<int>[] positionsPerString, Note[][] stringNotes, bool guitar, int s)
         {
-			return GetPositionsForStrings(positionsPerString, 0);
-        }
+            var count = positionsPerString.Length;
 
-        private static IEnumerable<int[]> GetPositionsForStrings(HashSet<int>[] positionsPerString, int s)
-        {
-            
-            if (s == positionsPerString.Length - 1)
+            if (s == count - 1)
             {
                 foreach (var pos in positionsPerString[s])
                 {
-					var positions = Enumerable.Repeat(X, 6).ToArray();
+					var positions = Enumerable.Repeat(X, count).ToArray();
 
                     positions[s] = pos;
                     yield return positions;
@@ -152,17 +160,18 @@ namespace Chords.Core.Models
             }
             foreach (var pos in positionsPerString[s])
             {
-                var positions0 = GetPositionsForStrings(positionsPerString, s + 1);
+                var positions0 = GetPositionsForStrings(positionsPerString, stringNotes, guitar, s + 1);
 
                 foreach (var pos0 in positions0)
                 {
-                    var positions = new int[6];
+                    var positions = new int[count];
 
                     pos0.CopyTo(positions, 0);
                     positions[s] = pos;
                     //TODO: implement 1st 3 checks from IsValid() here
-                    if ((pos == X && (s == 0 || positions[s + 1] != X)) ||
-                        (pos != X && (positions[s + 1] == X || _stringNotes[s+1][positions[s + 1]] != _stringNotes[s][positions[s]])))
+                    //(guitars may only mute strings at the bass side or a single string in the middle)
+                    if ((pos == X && (!guitar || s == 0 || positions[s + 1] != X)) ||
+                        (pos != X && (positions[s + 1] == X || stringNotes[s+1][positions[s + 1]] != stringNotes[s][positions[s]])))
                     {
                         yield return positions;
                     }
@@ -172,15 +181,16 @@ namespace Chords.Core.Models
 
         private Note[] GetUsedNotes()
         {
-            var notesUsed = new List<Note>(6);
+            var stringNotes = StringNotes(Instrument);
+            var notesUsed = new List<Note>(Positions.Length);
 
-			for (var s = 0; s < 6; s++)
+			for (var s = 0; s < Positions.Length; s++)
 			{
 				if (Positions[s] < 0)
 				{
 					continue;
 				}
-                var note = _stringNotes[s][Positions[s]];
+                var note = stringNotes[s][Positions[s]];
                 var noteIndex = Array.IndexOf(Chord.NormalizedNotes, note);
 
                 if (noteIndex >= 0)
@@ -192,8 +202,51 @@ namespace Chords.Core.Models
             return notesUsed.ToArray();
 		}
 
+        /// <summary>Have we managed to find all the notes from the given chord? If not we may leave out one non-mandatory note.</summary>
+        private bool HasChordNotes(bool allowPartial)
+        {
+            return !((!allowPartial &&
+                      Chord.Notes.Any(i => !Notes.Contains(i))) ||
+                     Chord.Notes.Any(i => !Notes.Contains(i) &&
+                                          !Chord.NonMandatoryNotes.Contains(i)) ||
+                     Chord.Notes.Count(i => !Notes.Contains(i) &&
+                                            Chord.NonMandatoryNotes.Contains(i)) > 1);
+        }
+
+        /// <summary>Rules for instruments other than the guitar (4 strings, so every string has its own finger).</summary>
+        private bool IsValidGeneric(bool allowPartial)
+        {
+            if (!HasChordNotes(allowPartial))
+            {
+                return false;
+            }
+            //do not allow same notes to follow each other immediately
+            if (Notes.Where((note, idx) => idx < Notes.Length - 1 && note.Tone == Notes[idx + 1].Tone).Any())
+            {
+                return false;
+            }
+            //distance between positions should not exceed 4 frets
+            var usedPositions = Positions.Where(i => i > 0).ToArray();
+            if (usedPositions.Length > 0 && usedPositions.Max() - usedPositions.Min() + 1 > 4)
+            {
+                return false;
+            }
+            //silent strings are allowed only at the edges
+            var played = Positions.Select((pos, idx) => new { pos, idx }).Where(i => i.pos != X).Select(i => i.idx).ToArray();
+            if (played.Length < 2 ||
+                played.Last() - played.First() + 1 != played.Length)
+            {
+                return false;
+            }
+            return true;
+        }
+
         private bool IsValid(bool allowPartial)
         {
+            if (Instrument != Instrument.Guitar)
+            {
+                return IsValidGeneric(allowPartial);
+            }
             //have we managed to find all the notes from the given chord?
             //if not we may leave out one note
             if ((!allowPartial && 
@@ -391,7 +444,7 @@ namespace Chords.Core.Models
                 return false;
             }
 
-            return Positions.SequenceEqual(other.Positions);
+            return Instrument == other.Instrument && Positions.SequenceEqual(other.Positions);
 		}
 
         public override int GetHashCode()

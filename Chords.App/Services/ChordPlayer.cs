@@ -4,8 +4,11 @@ namespace Chords.App.Services;
 
 public class ChordPlayer(ISoundBank soundBank)
 {
+    /// <summary>MIDI pitches of the recorded open guitar strings (sound bank indexes 0..5).</summary>
+    private static readonly int[] SamplePitches = InstrumentInfo.Guitar.Pitches;
+
     /// <summary>Strums a chord diagram twice (slow, then fast). -1 = muted string.</summary>
-    public void PlayLayout(int[] positions, float volume = 1f) => Task.Run(async () =>
+    public void PlayLayout(InstrumentInfo instrument, int[] positions, float volume = 1f) => Task.Run(async () =>
     {
         for (var pass = 0; pass < 2; pass++)
         {
@@ -15,12 +18,36 @@ public class ChordPlayer(ISoundBank soundBank)
                 {
                     continue;
                 }
-                soundBank.PlayString(i, Note.HalfStepsToPlayRate(positions[i]), volume);
+                var (sample, rate) = SampleFor(instrument.Pitches[i], positions[i]);
+
+                soundBank.PlayString(sample, rate, volume);
                 await Task.Delay(pass == 0 ? 200 : 50);
             }
             await Task.Delay(200);
         }
     });
+
+    /// <summary>
+    /// Picks the highest recorded string not above the open string (on the guitar its own recording)
+    /// and the rate that shifts it to the played note.
+    /// Android's SoundPool only plays at 0.5–2×, so notes beyond that sound an octave closer.
+    /// </summary>
+    private static (int Sample, float Rate) SampleFor(int openPitch, int fret)
+    {
+        var sample = Math.Max(0, Array.FindLastIndex(SamplePitches, p => p <= openPitch));
+        var rate = (float)Math.Pow(2, (openPitch + fret - SamplePitches[sample]) / 12.0);
+
+        while (rate > 2f)
+        {
+            rate /= 2;
+        }
+        while (rate < 0.5f)
+        {
+            rate *= 2;
+        }
+
+        return (sample, rate);
+    }
 
     /// <summary>Plays the notes of a chord (English name, e.g. "F#m") as a quick arpeggio on the A string.</summary>
     public void PlayChord(string id, float volume = 1f) => Task.Run(async () =>

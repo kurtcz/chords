@@ -40,9 +40,9 @@ namespace Chords.App.Models
 			_namingConvention = namingConvention;
 		}
 
-		public GuitarChordLayoutDecorator[] GenerateLayouts(bool allowBarre, bool allowSpecial, bool allowPartial, int maxFret)
+		public GuitarChordLayoutDecorator[] GenerateLayouts(Instrument instrument, bool allowBarre, bool allowSpecial, bool allowPartial, int maxFret)
 		{
-			return GuitarChordLayout.Generate(_chord, allowBarre, allowSpecial, allowPartial, maxFret)
+			return GuitarChordLayout.Generate(_chord, instrument, allowBarre, allowSpecial, allowPartial, maxFret)
 									.OrderBy(i => i.GuitarChordType)
 									.Select(i => new GuitarChordLayoutDecorator(i, _namingConvention))
 									.OrderBy(i => i.RenderingFret)

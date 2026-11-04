@@ -37,10 +37,14 @@
         var conv = State.Settings.conv;
 
         // Snapshot: un-favouriting a layout here only clears its star until the page is reopened.
+        var instrument = State.Settings.Instrument;
+
+        // Only favourites of the instrument chosen in settings.
         chords = Favorites.Chords
-            .Where(kv => kv.Value.Count > 0)
             .Select(kv => (kv.Key, new ChordDecorator(kv.Key, conv),
-                           kv.Value.Select(i => new GuitarChordLayoutDecorator(i, conv)).ToArray()))
+                           kv.Value.Where(i => i.Instrument == instrument)
+                                   .Select(i => new GuitarChordLayoutDecorator(i, conv)).ToArray()))
+            .Where(i => i.Item3.Length > 0)
             .OrderBy(i => i.Key.Root.Tone)
             .ThenBy(i => i.Key.Root.Accidental)
             .ThenBy(i => i.Key.ChordType)

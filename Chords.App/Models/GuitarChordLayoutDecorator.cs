@@ -40,46 +40,15 @@ namespace Chords.App.Models
             get
             {
 				var sb = new StringBuilder();
-				var star = string.Join(" ", new[]
-				{
-					"M", "135", "23",
-					"l", "7", "-23",
-                    "l", "7", "23",
-                    "l", "-19", "-14",
-                    "h", "24",
-                    "Z"
-				});
-                var fret0 = string.Join(" ", new[]
-                {
-                    "M", "25", "20",
-                    "h", "100"
-                });
-                var frets = string.Join(" ", new[]
-                {
-                    "M", "25", "20",
-                    "v", "160",
-                    "M", "45", "20",
-                    "v", "160",
-					"M", "65", "20",
-					"v", "160",
-					"M", "85", "20",
-					"v", "160",
-					"M", "105", "20",
-					"v", "160",
-					"M", "125", "20",
-					"v", "160",
-					"M", "25", "20",
-                    "h", "100",
-					"M", "25", "60",
-					"h", "100",
-					"M", "25", "100",
-					"h", "100",
-					"M", "25", "140",
-					"h", "100",
-					"M", "25", "180",
-					"h", "100"
-				});
-				sb.AppendLine("\t<svg viewBox=\"0 0 155 190\" width=\"155\" style=\"display:block; margin-bottom:10px;\">");
+				var strings = IntPositions.Length;
+				var width = (strings - 1) * 20;
+				//star right next to the last string
+				var star = $"M {25 + width + 10} 23 l 7 -23 l 7 23 l -19 -14 h 24 Z";
+				var svgWidth = 25 + width + 30;
+                var fret0 = $"M 25 20 h {width}";
+                var frets = string.Join(" ", Enumerable.Range(0, strings).Select(i => $"M {25 + i * 20} 20 v 160")
+                                                       .Concat(Enumerable.Range(0, 5).Select(i => $"M 25 {20 + i * 40} h {width}")));
+				sb.AppendLine($"\t<svg viewBox=\"0 0 {svgWidth} 190\" width=\"{svgWidth}\" style=\"display:block; margin-bottom:10px;\">");
 				//sb.AppendLine("\t<svg width=\"160\" height=\"200\" style=\"display:block;\">");
                 //star
                 sb.AppendFormat("\t\t<path class=\"star\" fill=\"#F8D64E\" d=\"{0}\" />\n", star);
@@ -92,7 +61,7 @@ namespace Chords.App.Models
 				//note names
 				var notes = ToString().Split(' ');
 
-                for (var s = 0; s < 6; s++)
+                for (var s = 0; s < strings; s++)
                 {
                     if (notes[s] == "X")
                     {
@@ -106,7 +75,7 @@ namespace Chords.App.Models
                     _layout.GuitarChordType == Core.Models.GuitarChordType.SixStringBarre)
                 {
                     var loBarreString = _layout.GuitarChordType == Core.Models.GuitarChordType.SixStringBarre ? 0 : 1;
-					var hiBarreString = 5;
+					var hiBarreString = strings - 1;
 
                     sb.AppendFormat("\t\t<line x1=\"{0}\" y1=\"{1}\" x2=\"{2}\" y2=\"{3}\" stroke=\"blue\" stroke-width=\"5\" />\n",
                                     25 + loBarreString * 20, (IntPositions[loBarreString] - RenderingFret) * 40, 
@@ -114,7 +83,7 @@ namespace Chords.App.Models
                     sb.AppendFormat("\t\t<circle cx=\"{0}\" cy=\"{1}\" r=\"2\" fill=\"blue\" stroke=\"blue\" stroke-width=\"1\" />\n",
                                     25 + hiBarreString * 20, (IntPositions[loBarreString] - RenderingFret) * 40);
                 }
-				for (var s = 0; s < 6; s++)
+				for (var s = 0; s < strings; s++)
 				{
                     //muted string
 					if (IntPositions[s] == GuitarChordLayout.X)
@@ -154,7 +123,7 @@ namespace Chords.App.Models
             var sb = new StringBuilder();
             var k = 0;
 
-            for (var s = 0; s < 6 && k < Notes.Length; s++)
+            for (var s = 0; s < IntPositions.Length && k < Notes.Length; s++)
             {
                 if (IntPositions[s] == -1)
                 {
@@ -164,7 +133,7 @@ namespace Chords.App.Models
                 {
                     sb.Append(Notes[k++].ToString(_namingConvention));
                 }
-                if (s < 5)
+                if (s < IntPositions.Length - 1)
                 {
                     sb.Append(" ");
                 }

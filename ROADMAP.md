@@ -3,14 +3,13 @@
 ## Doporučené pořadí
 
 1. **Custom ladění a kapodastr** – obojí mění hlavně generátor hmatů a přehrávání.
-2. **Přepínač nástrojů** – staví na stejném základu jako ladění (počet strun a jejich ladění), stačí ho zobecnit.
-3. Ostatní funkce podle zájmu uživatelů.
+2. Ostatní funkce podle zájmu uživatelů.
 
 ## Navržené
 
 - **Generátor pro leváky (Left-handed mode)** – zrcadlově převrácené diagramy akordů a hmatníku.
 - **Custom ladění** – Drop D, DADGAD, Half-step down (Eb), Open G/D a vlastní ladění; generátor hmatů i přehrávání zvuku podle zvoleného ladění.
-- **Přepínač nástrojů** – ukulele, mandolína, baskytara, housle, banjo, …; počet strun, ladění a rozsah pražců podle nástroje.
+- **Přepínač nástrojů** – ✅ kytara, ukulele, mandolína, baskytara (oblíbené zvlášť pro každý nástroj). Zbývá: banjo (krátká 5. struna), vlastní nahrávky zvuku pro jednotlivé nástroje. Housle záměrně ne – nemají pražce.
 - **Hledání akordu podle hmatu** – uživatel naklikne prsty na diagramu hmatníku a aplikace určí název akordu (dnes lze hledat jen podle tónů).
 - **Hledač akordů do tóniny (Key & Scale Finder)** – pro zvolenou tóninu/stupnici zobrazí diatonické akordy (I–vii°), případně naopak určí tóninu z několika zadaných akordů.
 - **Generátor akordových progresí (Smart Progression Generator)** – typické progrese (I–V–vi–IV, ii–V–I, 12taktové blues, …) v libovolné tónině, s přehráním a výběrem hmatů.

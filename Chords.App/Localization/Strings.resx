@@ -42,4 +42,8 @@
   <data name="Settings_AllowBarre" xml:space="preserve"><value>Allow barre chords</value></data>
   <data name="Settings_AllowSpecial" xml:space="preserve"><value>Allow chords with muted high strings</value></data>
   <data name="Settings_ShowTips" xml:space="preserve"><value>Show tips</value></data>
+  <data name="Instrument_Guitar" xml:space="preserve"><value>Guitar</value></data>
+  <data name="Instrument_Ukulele" xml:space="preserve"><value>Ukulele</value></data>
+  <data name="Instrument_Mandolin" xml:space="preserve"><value>Mandolin</value></data>
+  <data name="Instrument_BassGuitar" xml:space="preserve"><value>Bass guitar</value></data>
 </root>

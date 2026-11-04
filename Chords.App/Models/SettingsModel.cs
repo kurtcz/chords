@@ -15,6 +15,7 @@ namespace Chords.App.Models
         public bool AllowBarre { get; set; } = true;
         public bool AllowSpecial { get; set; } = false;
         public bool ShowTips { get; set; } = true;
+        public Instrument Instrument { get; set; } = Instrument.Guitar;
         /// <summary>UI language ("en", "cs", "sk"); null follows the device language.</summary>
         public string Language { get; set; }
         public string Error { get; set; }
