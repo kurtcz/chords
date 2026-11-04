@@ -99,4 +99,20 @@
   <data name="Style_Klezmer" xml:space="preserve"><value>Klezmeris</value></data>
   <data name="Prog_Generate" xml:space="preserve"><value>Sukurti progresiją</value></data>
   <data name="Prog_Hint" xml:space="preserve"><value>Bakstelėkite progresiją, kad pamatytumėte diagramas; ‹ › keičia pirštuotę. ▶ ją groja, bakstelėkite dar kartą, kad sustabdytumėte.</value></data>
+  <data name="Nav_Tuner" xml:space="preserve"><value>Derintuvas</value></data>
+  <data name="Tuner_Hint" xml:space="preserve"><value>Bakstelėkite stygą, kad ją išgirstumėte ir derintumėte tik ją; Auto parenka artimiausią stygą.</value></data>
+  <data name="Tuner_Listening" xml:space="preserve"><value>Paskambinkite stygą…</value></data>
+  <data name="Tuner_InTune" xml:space="preserve"><value>Suderinta</value></data>
+  <data name="Tuner_TuneUp" xml:space="preserve"><value>Įtempkite</value></data>
+  <data name="Tuner_TuneDown" xml:space="preserve"><value>Atleiskite</value></data>
+  <data name="Tuner_Auto" xml:space="preserve"><value>Auto</value></data>
+  <data name="Tuner_MicDenied" xml:space="preserve"><value>Derintuvui reikia prieigos prie mikrofono.</value></data>
+  <data name="Tuner_OpenSettings" xml:space="preserve"><value>Atidaryti nustatymus</value></data>
+  <data name="Tuner_MicError" xml:space="preserve"><value>Nepavyksta įjungti mikrofono.</value></data>
+  <data name="Tab_Chords" xml:space="preserve"><value>Akordai</value></data>
+  <data name="Tab_Favorites" xml:space="preserve"><value>Mėgstami</value></data>
+  <data name="Tab_Theory" xml:space="preserve"><value>Teorija</value></data>
+  <data name="Tab_More" xml:space="preserve"><value>Daugiau</value></data>
+  <data name="Group_Tools" xml:space="preserve"><value>Įrankiai</value></data>
+  <data name="Related_Title" xml:space="preserve"><value>Taip pat žiūrėkite</value></data>
 </root>

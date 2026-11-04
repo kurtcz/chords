@@ -1,1 +1,2 @@
 "CFBundleDisplayName" = "Guitar Chords";
+"NSMicrophoneUsageDescription" = "The tuner listens to your instrument to show whether it is in tune.";

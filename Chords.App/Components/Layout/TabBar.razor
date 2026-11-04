@@ -1,0 +1,80 @@
+@* Bottom tab bar with the main sections; "More" opens a grouped list of every page. *@
+@implements IDisposable
+@inject NavigationManager Nav
+
+@if (moreOpen)
+{
+    @* Tapping anywhere outside the sheet closes it. *@
+    <div class="more-backdrop" @onclick="() => moreOpen = false"></div>
+    <div class="more-sheet" role="dialog" aria-label="@L["Tab_More"]">
+        @foreach (var (headingKey, pages) in AppPages.Groups)
+        {
+            @if (headingKey == null)
+            {
+                <hr class="more-divider" />
+            }
+            else
+            {
+                <div class="more-heading">@L[headingKey]</div>
+            }
+            <ul class="more-list">
+                @foreach (var item in pages)
+                {
+                    <li>
+                        <a href="@item.Href" class="@(item == current || (item == AppPages.ShowChord && current == AppPages.ChordDetail) ? "active" : null)"
+                           @onclick="() => moreOpen = false">
+                            <Icon Name="@item.Icon" />
+                            <span>@L[item.TitleKey]</span>
+                        </a>
+                    </li>
+                }
+            </ul>
+        }
+        <p class="more-copyright">&copy; 2026 - Tomáš Němec</p>
+    </div>
+}
+
+<nav class="tab-bar">
+    @foreach (var (tabPage, labelKey, icon) in Tabs)
+    {
+        <a href="@tabPage.Href" class="tab @(!moreOpen && current?.Section == tabPage.Section ? "active" : null)"
+           @onclick="() => moreOpen = false">
+            <Icon Name="@icon" />
+            <span>@L[labelKey]</span>
+        </a>
+    }
+    <button type="button" class="tab @(moreOpen || current?.Section == AppSection.More ? "active" : null)"
+            aria-expanded="@(moreOpen ? "true" : "false")" @onclick="() => moreOpen = !moreOpen">
+        <Icon Name="more" />
+        <span>@L["Tab_More"]</span>
+    </button>
+</nav>
+
+@code {
+    /// <summary>Tabs before "More": the page a tab opens, the resource key of its label and its icon.</summary>
+    private static readonly (AppPage Page, string LabelKey, string Icon)[] Tabs =
+    [
+        (AppPages.ShowChord, "Tab_Chords", "chord"),
+        (AppPages.Favorites, "Tab_Favorites", "star"),
+        (AppPages.Key, "Tab_Theory", "theory"),
+        (AppPages.Tuner, "Nav_Tuner", "tuner"),
+    ];
+
+    private AppPage current;
+    private bool moreOpen;
+
+    protected override void OnInitialized()
+    {
+        current = AppPages.FromRelativeUri(Nav.ToBaseRelativePath(Nav.Uri));
+        Nav.LocationChanged += OnLocationChanged;
+    }
+
+    private void OnLocationChanged(object sender, Microsoft.AspNetCore.Components.Routing.LocationChangedEventArgs e)
+    {
+        current = AppPages.FromRelativeUri(Nav.ToBaseRelativePath(e.Location));
+        moreOpen = false;
+        InvokeAsync(StateHasChanged);
+    }
+
+    public void Dispose() => Nav.LocationChanged -= OnLocationChanged;
+}

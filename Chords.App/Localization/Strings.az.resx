@@ -98,4 +98,20 @@
   <data name="Style_Klezmer" xml:space="preserve"><value>Klezmer</value></data>
   <data name="Prog_Generate" xml:space="preserve"><value>Ardıcıllıq yarat</value></data>
   <data name="Prog_Hint" xml:space="preserve"><value>Diaqramları görmək üçün ardıcıllığa toxunun; ‹ › barmaq düzülüşünü dəyişir. ▶ onu çalır, dayandırmaq üçün yenidən toxunun.</value></data>
+  <data name="Nav_Tuner" xml:space="preserve"><value>Kökləyici</value></data>
+  <data name="Tuner_Hint" xml:space="preserve"><value>Simi eşitmək və yalnız onu kökləmək üçün ona toxunun; Avto ən yaxın simi seçir.</value></data>
+  <data name="Tuner_Listening" xml:space="preserve"><value>Bir sim çalın…</value></data>
+  <data name="Tuner_InTune" xml:space="preserve"><value>Köklənib</value></data>
+  <data name="Tuner_TuneUp" xml:space="preserve"><value>Dartın</value></data>
+  <data name="Tuner_TuneDown" xml:space="preserve"><value>Boşaldın</value></data>
+  <data name="Tuner_Auto" xml:space="preserve"><value>Avto</value></data>
+  <data name="Tuner_MicDenied" xml:space="preserve"><value>Kökləyiciyə mikrofona giriş lazımdır.</value></data>
+  <data name="Tuner_OpenSettings" xml:space="preserve"><value>Ayarları aç</value></data>
+  <data name="Tuner_MicError" xml:space="preserve"><value>Mikrofonu işə salmaq mümkün deyil.</value></data>
+  <data name="Tab_Chords" xml:space="preserve"><value>Akkordlar</value></data>
+  <data name="Tab_Favorites" xml:space="preserve"><value>Seçilmişlər</value></data>
+  <data name="Tab_Theory" xml:space="preserve"><value>Nəzəriyyə</value></data>
+  <data name="Tab_More" xml:space="preserve"><value>Daha çox</value></data>
+  <data name="Group_Tools" xml:space="preserve"><value>Alətlər</value></data>
+  <data name="Related_Title" xml:space="preserve"><value>Həmçinin bax</value></data>
 </root>

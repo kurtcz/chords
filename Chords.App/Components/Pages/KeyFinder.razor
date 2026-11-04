@@ -1,7 +1,6 @@
 @page "/key"
 @inject AppState State
 @inject ChordPlayer Player
-@inject NavigationManager Nav
 
 <TopNav Title="@L["Nav_Key"]" />
 
@@ -40,8 +39,8 @@
             }
         </tbody>
     </table>
-    <button type="button" class="btn btn-default btn-lg btn-block" @onclick='() => Nav.NavigateTo("progressions")'>@L["Key_Progressions"]</button>
-    <button type="button" class="btn btn-default btn-lg btn-block" @onclick='() => Nav.NavigateTo("circle")'>@L["Nav_Circle"]</button>
+    <RelatedLinks Pages="[AppPages.Progressions, AppPages.Circle]"
+                  Titles="@(new() { [AppPages.Progressions] = L["Key_Progressions"] })" />
 }
 else
 {

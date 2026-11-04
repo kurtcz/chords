@@ -97,4 +97,20 @@
   <data name="Style_Klezmer" xml:space="preserve"><value>เคลซเมอร์</value></data>
   <data name="Prog_Generate" xml:space="preserve"><value>สร้างทางเดินคอร์ด</value></data>
   <data name="Prog_Hint" xml:space="preserve"><value>แตะทางเดินคอร์ดเพื่อดูไดอะแกรม ‹ › เปลี่ยนท่าจับ ▶ เล่น แตะอีกครั้งเพื่อหยุด</value></data>
+  <data name="Nav_Tuner" xml:space="preserve"><value>จูนเนอร์</value></data>
+  <data name="Tuner_Hint" xml:space="preserve"><value>แตะสายเพื่อฟังเสียงและตั้งเฉพาะสายนั้น อัตโนมัติจะเลือกสายที่ใกล้ที่สุด</value></data>
+  <data name="Tuner_Listening" xml:space="preserve"><value>ดีดสาย…</value></data>
+  <data name="Tuner_InTune" xml:space="preserve"><value>ตรงเสียงแล้ว</value></data>
+  <data name="Tuner_TuneUp" xml:space="preserve"><value>ขันขึ้น</value></data>
+  <data name="Tuner_TuneDown" xml:space="preserve"><value>คลายลง</value></data>
+  <data name="Tuner_Auto" xml:space="preserve"><value>อัตโนมัติ</value></data>
+  <data name="Tuner_MicDenied" xml:space="preserve"><value>จูนเนอร์ต้องเข้าถึงไมโครโฟน</value></data>
+  <data name="Tuner_OpenSettings" xml:space="preserve"><value>เปิดการตั้งค่า</value></data>
+  <data name="Tuner_MicError" xml:space="preserve"><value>ไม่สามารถเปิดไมโครโฟนได้</value></data>
+  <data name="Tab_Chords" xml:space="preserve"><value>คอร์ด</value></data>
+  <data name="Tab_Favorites" xml:space="preserve"><value>รายการโปรด</value></data>
+  <data name="Tab_Theory" xml:space="preserve"><value>ทฤษฎี</value></data>
+  <data name="Tab_More" xml:space="preserve"><value>เพิ่มเติม</value></data>
+  <data name="Group_Tools" xml:space="preserve"><value>เครื่องมือ</value></data>
+  <data name="Related_Title" xml:space="preserve"><value>ดูเพิ่มเติม</value></data>
 </root>

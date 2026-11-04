@@ -98,4 +98,20 @@
   <data name="Style_Klezmer" xml:space="preserve"><value>Κλέζμερ</value></data>
   <data name="Prog_Generate" xml:space="preserve"><value>Δημιουργία αλληλουχίας</value></data>
   <data name="Prog_Hint" xml:space="preserve"><value>Πατήστε μια αλληλουχία για να δείτε τα διαγράμματα· τα ‹ › αλλάζουν το δάχτυλο. Το ▶ την παίζει, πατήστε ξανά για διακοπή.</value></data>
+  <data name="Nav_Tuner" xml:space="preserve"><value>Κουρδιστήρι</value></data>
+  <data name="Tuner_Hint" xml:space="preserve"><value>Πατήστε μια χορδή για να την ακούσετε και να κουρδίσετε μόνο αυτήν· το Αυτόματο επιλέγει την πλησιέστερη χορδή.</value></data>
+  <data name="Tuner_Listening" xml:space="preserve"><value>Παίξτε μια χορδή…</value></data>
+  <data name="Tuner_InTune" xml:space="preserve"><value>Κουρδισμένο</value></data>
+  <data name="Tuner_TuneUp" xml:space="preserve"><value>Τεντώστε</value></data>
+  <data name="Tuner_TuneDown" xml:space="preserve"><value>Χαλαρώστε</value></data>
+  <data name="Tuner_Auto" xml:space="preserve"><value>Αυτόματο</value></data>
+  <data name="Tuner_MicDenied" xml:space="preserve"><value>Το κουρδιστήρι χρειάζεται πρόσβαση στο μικρόφωνο.</value></data>
+  <data name="Tuner_OpenSettings" xml:space="preserve"><value>Άνοιγμα ρυθμίσεων</value></data>
+  <data name="Tuner_MicError" xml:space="preserve"><value>Δεν είναι δυνατή η εκκίνηση του μικροφώνου.</value></data>
+  <data name="Tab_Chords" xml:space="preserve"><value>Συγχορδίες</value></data>
+  <data name="Tab_Favorites" xml:space="preserve"><value>Αγαπημένα</value></data>
+  <data name="Tab_Theory" xml:space="preserve"><value>Θεωρία</value></data>
+  <data name="Tab_More" xml:space="preserve"><value>Περισσότερα</value></data>
+  <data name="Group_Tools" xml:space="preserve"><value>Εργαλεία</value></data>
+  <data name="Related_Title" xml:space="preserve"><value>Δείτε επίσης</value></data>
 </root>

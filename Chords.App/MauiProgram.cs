@@ -18,6 +18,8 @@ public static class MauiProgram
         builder.Services.AddSingleton<AppState>();
         builder.Services.AddSingleton<ISoundBank, PlatformSoundBank>();
         builder.Services.AddSingleton<ChordPlayer>();
+        builder.Services.AddSingleton<IAudioInput, PlatformAudioInput>();
+        builder.Services.AddSingleton<TunerListener>();
 
         return builder.Build();
     }

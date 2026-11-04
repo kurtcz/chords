@@ -99,4 +99,20 @@
   <data name="Style_Klezmer" xml:space="preserve"><value>Klezmer</value></data>
   <data name="Prog_Generate" xml:space="preserve"><value>Wygeneruj progresję</value></data>
   <data name="Prog_Hint" xml:space="preserve"><value>Stuknij progresję, aby zobaczyć diagramy; ‹ › zmienia chwyt. ▶ odtwarza ją, stuknij ponownie, aby zatrzymać.</value></data>
+  <data name="Nav_Tuner" xml:space="preserve"><value>Stroik</value></data>
+  <data name="Tuner_Hint" xml:space="preserve"><value>Dotknij struny, aby ją usłyszeć i stroić tylko ją; Auto wybiera najbliższą strunę.</value></data>
+  <data name="Tuner_Listening" xml:space="preserve"><value>Zagraj na strunie…</value></data>
+  <data name="Tuner_InTune" xml:space="preserve"><value>Nastrojone</value></data>
+  <data name="Tuner_TuneUp" xml:space="preserve"><value>Podciągnij</value></data>
+  <data name="Tuner_TuneDown" xml:space="preserve"><value>Popuść</value></data>
+  <data name="Tuner_Auto" xml:space="preserve"><value>Auto</value></data>
+  <data name="Tuner_MicDenied" xml:space="preserve"><value>Stroik potrzebuje dostępu do mikrofonu.</value></data>
+  <data name="Tuner_OpenSettings" xml:space="preserve"><value>Otwórz ustawienia</value></data>
+  <data name="Tuner_MicError" xml:space="preserve"><value>Nie można uruchomić mikrofonu.</value></data>
+  <data name="Tab_Chords" xml:space="preserve"><value>Akordy</value></data>
+  <data name="Tab_Favorites" xml:space="preserve"><value>Ulubione</value></data>
+  <data name="Tab_Theory" xml:space="preserve"><value>Teoria</value></data>
+  <data name="Tab_More" xml:space="preserve"><value>Więcej</value></data>
+  <data name="Group_Tools" xml:space="preserve"><value>Narzędzia</value></data>
+  <data name="Related_Title" xml:space="preserve"><value>Zobacz też</value></data>
 </root>

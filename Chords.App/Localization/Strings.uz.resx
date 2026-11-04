@@ -98,4 +98,20 @@
   <data name="Style_Klezmer" xml:space="preserve"><value>Klezmer</value></data>
   <data name="Prog_Generate" xml:space="preserve"><value>Ketma-ketlik yaratish</value></data>
   <data name="Prog_Hint" xml:space="preserve"><value>Diagrammalarni ko‘rish uchun ketma-ketlikka teging; ‹ › barmoq holatini almashtiradi. ▶ uni chaladi, to‘xtatish uchun yana teging.</value></data>
+  <data name="Nav_Tuner" xml:space="preserve"><value>Tyuner</value></data>
+  <data name="Tuner_Hint" xml:space="preserve"><value>Torni eshitish va faqat uni sozlash uchun unga teging; Avto eng yaqin torni tanlaydi.</value></data>
+  <data name="Tuner_Listening" xml:space="preserve"><value>Torni chaling…</value></data>
+  <data name="Tuner_InTune" xml:space="preserve"><value>Sozlangan</value></data>
+  <data name="Tuner_TuneUp" xml:space="preserve"><value>Torting</value></data>
+  <data name="Tuner_TuneDown" xml:space="preserve"><value>Bo‘shating</value></data>
+  <data name="Tuner_Auto" xml:space="preserve"><value>Avto</value></data>
+  <data name="Tuner_MicDenied" xml:space="preserve"><value>Tyunerga mikrofonga ruxsat kerak.</value></data>
+  <data name="Tuner_OpenSettings" xml:space="preserve"><value>Sozlamalarni ochish</value></data>
+  <data name="Tuner_MicError" xml:space="preserve"><value>Mikrofonni ishga tushirib bo‘lmaydi.</value></data>
+  <data name="Tab_Chords" xml:space="preserve"><value>Akkordlar</value></data>
+  <data name="Tab_Favorites" xml:space="preserve"><value>Sevimlilar</value></data>
+  <data name="Tab_Theory" xml:space="preserve"><value>Nazariya</value></data>
+  <data name="Tab_More" xml:space="preserve"><value>Yana</value></data>
+  <data name="Group_Tools" xml:space="preserve"><value>Vositalar</value></data>
+  <data name="Related_Title" xml:space="preserve"><value>Shuningdek qarang</value></data>
 </root>

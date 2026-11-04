@@ -98,4 +98,20 @@
   <data name="Style_Klezmer" xml:space="preserve"><value>Klezmer</value></data>
   <data name="Prog_Generate" xml:space="preserve"><value>Akkordfolge erzeugen</value></data>
   <data name="Prog_Hint" xml:space="preserve"><value>Tippe auf eine Akkordfolge, um ihre Diagramme zu sehen; ‹ › wechselt den Griff. ▶ spielt sie ab, erneut tippen stoppt.</value></data>
+  <data name="Nav_Tuner" xml:space="preserve"><value>Stimmgerät</value></data>
+  <data name="Tuner_Hint" xml:space="preserve"><value>Tippe auf eine Saite, um sie zu hören und nur sie zu stimmen; Auto wählt die nächste Saite.</value></data>
+  <data name="Tuner_Listening" xml:space="preserve"><value>Spiele eine Saite…</value></data>
+  <data name="Tuner_InTune" xml:space="preserve"><value>Gestimmt</value></data>
+  <data name="Tuner_TuneUp" xml:space="preserve"><value>Höher stimmen</value></data>
+  <data name="Tuner_TuneDown" xml:space="preserve"><value>Tiefer stimmen</value></data>
+  <data name="Tuner_Auto" xml:space="preserve"><value>Auto</value></data>
+  <data name="Tuner_MicDenied" xml:space="preserve"><value>Das Stimmgerät braucht Zugriff auf das Mikrofon.</value></data>
+  <data name="Tuner_OpenSettings" xml:space="preserve"><value>Einstellungen öffnen</value></data>
+  <data name="Tuner_MicError" xml:space="preserve"><value>Das Mikrofon kann nicht gestartet werden.</value></data>
+  <data name="Tab_Chords" xml:space="preserve"><value>Akkorde</value></data>
+  <data name="Tab_Favorites" xml:space="preserve"><value>Favoriten</value></data>
+  <data name="Tab_Theory" xml:space="preserve"><value>Theorie</value></data>
+  <data name="Tab_More" xml:space="preserve"><value>Mehr</value></data>
+  <data name="Group_Tools" xml:space="preserve"><value>Werkzeuge</value></data>
+  <data name="Related_Title" xml:space="preserve"><value>Siehe auch</value></data>
 </root>

@@ -98,4 +98,20 @@
   <data name="Style_Klezmer" xml:space="preserve"><value>Կլեզմեր</value></data>
   <data name="Prog_Generate" xml:space="preserve"><value>Ստեղծել հաջորդականություն</value></data>
   <data name="Prog_Hint" xml:space="preserve"><value>Հպեք հաջորդականությանը՝ դիագրամները տեսնելու համար; ‹ › փոխում է մատնադրությունը։ ▶ նվագում է, կրկին հպեք՝ դադարեցնելու համար։</value></data>
+  <data name="Nav_Tuner" xml:space="preserve"><value>Լարիչ</value></data>
+  <data name="Tuner_Hint" xml:space="preserve"><value>Հպեք լարին՝ այն լսելու և միայն այն լարելու համար. Ավտոն ընտրում է ամենամոտ լարը։</value></data>
+  <data name="Tuner_Listening" xml:space="preserve"><value>Նվագեք լարը…</value></data>
+  <data name="Tuner_InTune" xml:space="preserve"><value>Լարված է</value></data>
+  <data name="Tuner_TuneUp" xml:space="preserve"><value>Ձգեք</value></data>
+  <data name="Tuner_TuneDown" xml:space="preserve"><value>Թուլացրեք</value></data>
+  <data name="Tuner_Auto" xml:space="preserve"><value>Ավտո</value></data>
+  <data name="Tuner_MicDenied" xml:space="preserve"><value>Լարիչին անհրաժեշտ է խոսափողի հասանելիություն։</value></data>
+  <data name="Tuner_OpenSettings" xml:space="preserve"><value>Բացել կարգավորումները</value></data>
+  <data name="Tuner_MicError" xml:space="preserve"><value>Չհաջողվեց միացնել խոսափողը։</value></data>
+  <data name="Tab_Chords" xml:space="preserve"><value>Ակորդներ</value></data>
+  <data name="Tab_Favorites" xml:space="preserve"><value>Ընտրյալներ</value></data>
+  <data name="Tab_Theory" xml:space="preserve"><value>Տեսություն</value></data>
+  <data name="Tab_More" xml:space="preserve"><value>Ավելին</value></data>
+  <data name="Group_Tools" xml:space="preserve"><value>Գործիքներ</value></data>
+  <data name="Related_Title" xml:space="preserve"><value>Տես նաև</value></data>
 </root>

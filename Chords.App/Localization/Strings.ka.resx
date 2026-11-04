@@ -98,4 +98,20 @@
   <data name="Style_Klezmer" xml:space="preserve"><value>კლეზმერი</value></data>
   <data name="Prog_Generate" xml:space="preserve"><value>მიმდევრობის შექმნა</value></data>
   <data name="Prog_Hint" xml:space="preserve"><value>შეეხეთ მიმდევრობას დიაგრამების სანახავად; ‹ › ცვლის აპლიკატურას. ▶ უკრავს მას, შესაჩერებლად კვლავ შეეხეთ.</value></data>
+  <data name="Nav_Tuner" xml:space="preserve"><value>ტიუნერი</value></data>
+  <data name="Tuner_Hint" xml:space="preserve"><value>შეეხეთ სიმს, რომ მოისმინოთ და მხოლოდ ის ააწყოთ; ავტო ირჩევს უახლოეს სიმს.</value></data>
+  <data name="Tuner_Listening" xml:space="preserve"><value>დაუკარით სიმს…</value></data>
+  <data name="Tuner_InTune" xml:space="preserve"><value>აწყობილია</value></data>
+  <data name="Tuner_TuneUp" xml:space="preserve"><value>დაჭიმეთ</value></data>
+  <data name="Tuner_TuneDown" xml:space="preserve"><value>მოუშვით</value></data>
+  <data name="Tuner_Auto" xml:space="preserve"><value>ავტო</value></data>
+  <data name="Tuner_MicDenied" xml:space="preserve"><value>ტიუნერს მიკროფონზე წვდომა სჭირდება.</value></data>
+  <data name="Tuner_OpenSettings" xml:space="preserve"><value>პარამეტრების გახსნა</value></data>
+  <data name="Tuner_MicError" xml:space="preserve"><value>მიკროფონის ჩართვა ვერ ხერხდება.</value></data>
+  <data name="Tab_Chords" xml:space="preserve"><value>აკორდები</value></data>
+  <data name="Tab_Favorites" xml:space="preserve"><value>რჩეულები</value></data>
+  <data name="Tab_Theory" xml:space="preserve"><value>თეორია</value></data>
+  <data name="Tab_More" xml:space="preserve"><value>მეტი</value></data>
+  <data name="Group_Tools" xml:space="preserve"><value>ხელსაწყოები</value></data>
+  <data name="Related_Title" xml:space="preserve"><value>ასევე იხილეთ</value></data>
 </root>

@@ -102,4 +102,20 @@
   <data name="Style_Klezmer" xml:space="preserve"><value>كليزمر</value></data>
   <data name="Prog_Generate" xml:space="preserve"><value>إنشاء تتابع</value></data>
   <data name="Prog_Hint" xml:space="preserve"><value>انقر على تتابع لرؤية مخططاته؛ ‹ › يغيّر وضعية الأصابع. ▶ يشغّله، انقر مرة أخرى للإيقاف.</value></data>
+  <data name="Nav_Tuner" xml:space="preserve"><value>الموالف</value></data>
+  <data name="Tuner_Hint" xml:space="preserve"><value>اضغط على وتر لتسمعه وتضبط هذا الوتر فقط؛ يختار تلقائي أقرب وتر.</value></data>
+  <data name="Tuner_Listening" xml:space="preserve"><value>اعزف على وتر…</value></data>
+  <data name="Tuner_InTune" xml:space="preserve"><value>مضبوط</value></data>
+  <data name="Tuner_TuneUp" xml:space="preserve"><value>شُدّ</value></data>
+  <data name="Tuner_TuneDown" xml:space="preserve"><value>أرخِ</value></data>
+  <data name="Tuner_Auto" xml:space="preserve"><value>تلقائي</value></data>
+  <data name="Tuner_MicDenied" xml:space="preserve"><value>يحتاج الموالف إلى الوصول إلى الميكروفون.</value></data>
+  <data name="Tuner_OpenSettings" xml:space="preserve"><value>فتح الإعدادات</value></data>
+  <data name="Tuner_MicError" xml:space="preserve"><value>تعذّر تشغيل الميكروفون.</value></data>
+  <data name="Tab_Chords" xml:space="preserve"><value>الأكوردات</value></data>
+  <data name="Tab_Favorites" xml:space="preserve"><value>المفضلة</value></data>
+  <data name="Tab_Theory" xml:space="preserve"><value>النظرية</value></data>
+  <data name="Tab_More" xml:space="preserve"><value>المزيد</value></data>
+  <data name="Group_Tools" xml:space="preserve"><value>أدوات</value></data>
+  <data name="Related_Title" xml:space="preserve"><value>انظر أيضًا</value></data>
 </root>

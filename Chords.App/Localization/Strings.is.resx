@@ -98,4 +98,20 @@
   <data name="Style_Klezmer" xml:space="preserve"><value>Klezmer</value></data>
   <data name="Prog_Generate" xml:space="preserve"><value>Búa til hljómagöngu</value></data>
   <data name="Prog_Hint" xml:space="preserve"><value>Ýttu á hljómagöngu til að sjá gripin; ‹ › skiptir um grip. ▶ spilar hana, ýttu aftur til að stöðva.</value></data>
+  <data name="Nav_Tuner" xml:space="preserve"><value>Stillitæki</value></data>
+  <data name="Tuner_Hint" xml:space="preserve"><value>Ýttu á streng til að heyra hann og stilla aðeins hann; Auto velur næsta streng.</value></data>
+  <data name="Tuner_Listening" xml:space="preserve"><value>Spilaðu á streng…</value></data>
+  <data name="Tuner_InTune" xml:space="preserve"><value>Rétt stilltur</value></data>
+  <data name="Tuner_TuneUp" xml:space="preserve"><value>Herða</value></data>
+  <data name="Tuner_TuneDown" xml:space="preserve"><value>Slaka</value></data>
+  <data name="Tuner_Auto" xml:space="preserve"><value>Sjálfv.</value></data>
+  <data name="Tuner_MicDenied" xml:space="preserve"><value>Stillitækið þarf aðgang að hljóðnemanum.</value></data>
+  <data name="Tuner_OpenSettings" xml:space="preserve"><value>Opna stillingar</value></data>
+  <data name="Tuner_MicError" xml:space="preserve"><value>Ekki er hægt að ræsa hljóðnemann.</value></data>
+  <data name="Tab_Chords" xml:space="preserve"><value>Hljómar</value></data>
+  <data name="Tab_Favorites" xml:space="preserve"><value>Uppáhald</value></data>
+  <data name="Tab_Theory" xml:space="preserve"><value>Fræði</value></data>
+  <data name="Tab_More" xml:space="preserve"><value>Meira</value></data>
+  <data name="Group_Tools" xml:space="preserve"><value>Verkfæri</value></data>
+  <data name="Related_Title" xml:space="preserve"><value>Sjá einnig</value></data>
 </root>

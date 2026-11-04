@@ -15,8 +15,8 @@
     <ApplicationId>com.tnemec.chords.android</ApplicationId>
     <ApplicationId Condition="$(TargetFramework.Contains('-ios'))">com.tnemec.chords</ApplicationId>
     <!-- Android versionCode: must be higher than any version uploaded to Play before (last one was 10). -->
-    <ApplicationVersion>11</ApplicationVersion>
-    <ApplicationDisplayVersion>1.1</ApplicationDisplayVersion>
+    <ApplicationVersion>20</ApplicationVersion>
+    <ApplicationDisplayVersion>2.0</ApplicationDisplayVersion>
 
     <SupportedOSPlatformVersion Condition="$(TargetFramework.Contains('-android'))">24.0</SupportedOSPlatformVersion>
     <SupportedOSPlatformVersion Condition="$(TargetFramework.Contains('-ios'))">15.0</SupportedOSPlatformVersion>

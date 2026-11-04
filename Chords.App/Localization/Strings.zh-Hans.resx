@@ -97,4 +97,20 @@
   <data name="Style_Klezmer" xml:space="preserve"><value>克莱兹默</value></data>
   <data name="Prog_Generate" xml:space="preserve"><value>生成和弦进行</value></data>
   <data name="Prog_Hint" xml:space="preserve"><value>点按和弦进行查看指法图；‹ › 切换指法。▶ 播放，再次点按停止。</value></data>
+  <data name="Nav_Tuner" xml:space="preserve"><value>调音器</value></data>
+  <data name="Tuner_Hint" xml:space="preserve"><value>点按一根弦可听到它并只调这根弦；自动会选择最接近的弦。</value></data>
+  <data name="Tuner_Listening" xml:space="preserve"><value>请拨一根弦…</value></data>
+  <data name="Tuner_InTune" xml:space="preserve"><value>已调准</value></data>
+  <data name="Tuner_TuneUp" xml:space="preserve"><value>调高</value></data>
+  <data name="Tuner_TuneDown" xml:space="preserve"><value>调低</value></data>
+  <data name="Tuner_Auto" xml:space="preserve"><value>自动</value></data>
+  <data name="Tuner_MicDenied" xml:space="preserve"><value>调音器需要访问麦克风。</value></data>
+  <data name="Tuner_OpenSettings" xml:space="preserve"><value>打开设置</value></data>
+  <data name="Tuner_MicError" xml:space="preserve"><value>无法启动麦克风。</value></data>
+  <data name="Tab_Chords" xml:space="preserve"><value>和弦</value></data>
+  <data name="Tab_Favorites" xml:space="preserve"><value>收藏</value></data>
+  <data name="Tab_Theory" xml:space="preserve"><value>乐理</value></data>
+  <data name="Tab_More" xml:space="preserve"><value>更多</value></data>
+  <data name="Group_Tools" xml:space="preserve"><value>工具</value></data>
+  <data name="Related_Title" xml:space="preserve"><value>另请参阅</value></data>
 </root>

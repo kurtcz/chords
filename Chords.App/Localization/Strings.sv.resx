@@ -98,4 +98,20 @@
   <data name="Style_Klezmer" xml:space="preserve"><value>Klezmer</value></data>
   <data name="Prog_Generate" xml:space="preserve"><value>Skapa en ackordföljd</value></data>
   <data name="Prog_Hint" xml:space="preserve"><value>Tryck på en ackordföljd för att se diagrammen; ‹ › byter grepp. ▶ spelar upp den, tryck igen för att stoppa.</value></data>
+  <data name="Nav_Tuner" xml:space="preserve"><value>Stämapparat</value></data>
+  <data name="Tuner_Hint" xml:space="preserve"><value>Tryck på en sträng för att höra den och bara stämma den; Auto väljer närmaste sträng.</value></data>
+  <data name="Tuner_Listening" xml:space="preserve"><value>Spela en sträng…</value></data>
+  <data name="Tuner_InTune" xml:space="preserve"><value>Stämd</value></data>
+  <data name="Tuner_TuneUp" xml:space="preserve"><value>Stäm upp</value></data>
+  <data name="Tuner_TuneDown" xml:space="preserve"><value>Stäm ner</value></data>
+  <data name="Tuner_Auto" xml:space="preserve"><value>Auto</value></data>
+  <data name="Tuner_MicDenied" xml:space="preserve"><value>Stämapparaten behöver tillgång till mikrofonen.</value></data>
+  <data name="Tuner_OpenSettings" xml:space="preserve"><value>Öppna inställningar</value></data>
+  <data name="Tuner_MicError" xml:space="preserve"><value>Mikrofonen kan inte startas.</value></data>
+  <data name="Tab_Chords" xml:space="preserve"><value>Ackord</value></data>
+  <data name="Tab_Favorites" xml:space="preserve"><value>Favoriter</value></data>
+  <data name="Tab_Theory" xml:space="preserve"><value>Teori</value></data>
+  <data name="Tab_More" xml:space="preserve"><value>Mer</value></data>
+  <data name="Group_Tools" xml:space="preserve"><value>Verktyg</value></data>
+  <data name="Related_Title" xml:space="preserve"><value>Se även</value></data>
 </root>

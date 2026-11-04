@@ -98,4 +98,20 @@
   <data name="Style_Klezmer" xml:space="preserve"><value>کلزمر</value></data>
   <data name="Prog_Generate" xml:space="preserve"><value>ساخت توالی</value></data>
   <data name="Prog_Hint" xml:space="preserve"><value>برای دیدن نمودارها روی یک توالی بزنید؛ ‹ › انگشت‌گذاری را تغییر می‌دهد. ▶ آن را پخش می‌کند، برای توقف دوباره بزنید.</value></data>
+  <data name="Nav_Tuner" xml:space="preserve"><value>تیونر</value></data>
+  <data name="Tuner_Hint" xml:space="preserve"><value>روی یک سیم بزنید تا آن را بشنوید و فقط همان را کوک کنید؛ خودکار نزدیک‌ترین سیم را انتخاب می‌کند.</value></data>
+  <data name="Tuner_Listening" xml:space="preserve"><value>یک سیم را بنوازید…</value></data>
+  <data name="Tuner_InTune" xml:space="preserve"><value>کوک است</value></data>
+  <data name="Tuner_TuneUp" xml:space="preserve"><value>سفت کنید</value></data>
+  <data name="Tuner_TuneDown" xml:space="preserve"><value>شل کنید</value></data>
+  <data name="Tuner_Auto" xml:space="preserve"><value>خودکار</value></data>
+  <data name="Tuner_MicDenied" xml:space="preserve"><value>تیونر به میکروفون دسترسی نیاز دارد.</value></data>
+  <data name="Tuner_OpenSettings" xml:space="preserve"><value>باز کردن تنظیمات</value></data>
+  <data name="Tuner_MicError" xml:space="preserve"><value>میکروفون راه‌اندازی نمی‌شود.</value></data>
+  <data name="Tab_Chords" xml:space="preserve"><value>آکوردها</value></data>
+  <data name="Tab_Favorites" xml:space="preserve"><value>موردعلاقه‌ها</value></data>
+  <data name="Tab_Theory" xml:space="preserve"><value>تئوری</value></data>
+  <data name="Tab_More" xml:space="preserve"><value>بیشتر</value></data>
+  <data name="Group_Tools" xml:space="preserve"><value>ابزارها</value></data>
+  <data name="Related_Title" xml:space="preserve"><value>همچنین ببینید</value></data>
 </root>

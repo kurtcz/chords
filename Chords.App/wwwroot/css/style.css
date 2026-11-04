@@ -14,7 +14,8 @@ body {
 }
 
 .main-content {
-    padding-bottom: calc(40px + env(safe-area-inset-bottom));
+    /* Room for the tab bar (Layout/TabBar.razor) below the content. */
+    padding-bottom: calc(76px + env(safe-area-inset-bottom));
     /*border: 1px solid red;*/
 }
 
@@ -285,16 +286,6 @@ input[type=range]:focus::-webkit-slider-runnable-track {
     border-color: #080808 !important;
 }
 
-footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    height: calc(30px + env(safe-area-inset-bottom));
-    padding: 5px 15px env(safe-area-inset-bottom);
-    border-top: 1px solid #eee;
-    background-color: white;
-}
-
 .navbar-fixed-top {
     position: fixed;
     top: 0;
@@ -305,16 +296,6 @@ footer {
 .navbar a,
 .navbar-brand {
     cursor: pointer;
-}
-
-/* Transparent layer behind an open main menu; tapping it closes the menu. */
-.menu-backdrop {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 1029;
 }
 
 .toggle {
@@ -362,10 +343,10 @@ footer {
     transform: translate(-50%, -50%);
 }
 
-/* Link to the chords of the shown key, above the footer and clear of the centred circle. */
+/* Link to the chords of the shown key, above the tab bar and clear of the centred circle. */
 .circle-key {
     position: fixed;
-    bottom: calc(45px + env(safe-area-inset-bottom));
+    bottom: calc(71px + env(safe-area-inset-bottom));
     left: calc(15px + env(safe-area-inset-left));
     right: calc(15px + env(safe-area-inset-right));
     width: auto;
@@ -379,8 +360,8 @@ footer {
         white-space: normal;
     }
 }
-/* Always use Bootstrap's collapsed (phone) navbar, also on tablets and in landscape.
-   Title and hamburger share one line: a title too long for it ends with an ellipsis. */
+/* Always use Bootstrap's collapsed (phone) navbar, also on tablets and in landscape (the dropdown bars).
+   Title and toggle share one line: a title too long for it ends with an ellipsis. */
 .navbar-header {
     float: none;
     display: flex;
@@ -399,6 +380,13 @@ footer {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+}
+
+/* The page title is a heading for screen readers but looks like Bootstrap's brand text. */
+h1.navbar-brand {
+    margin: 0;
+    font-size: 18px;
+    font-weight: normal;
 }
 
 .navbar-toggle {
@@ -640,4 +628,306 @@ footer {
 
 .progression-pick span {
     margin: 0 6px;
+}
+
+/* Tuner */
+.tuner-tip {
+    margin-top: 15px;
+}
+
+.tuner-display {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.tuner-note {
+    font-size: 64px;
+    font-weight: bold;
+    line-height: 1.1;
+    color: #333;
+    transition: color 0.2s;
+}
+
+.tuner-display.close .tuner-note,
+.tuner-display.tuned .tuner-note {
+    color: #3c9a3c;
+}
+
+.tuner-gauge {
+    width: 100%;
+    max-width: 340px;
+}
+
+.tuner-needle {
+    /* Turns around the hub of the gauge; the short transition smooths the 15 redraws a second. */
+    transform-box: view-box;
+    transform-origin: 150px 150px;
+    transition: transform 0.12s linear;
+    stroke: #d9534f;
+}
+
+.tuner-display.close .tuner-needle,
+.tuner-display.tuned .tuner-needle {
+    stroke: #3c9a3c;
+}
+
+.tuner-cents {
+    min-height: 1.6em;
+    font-size: 1.3em;
+}
+
+.tuner-cents span + span {
+    margin-left: 12px;
+}
+
+.tuner-direction {
+    min-height: 1.6em;
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+.tuner-display.tuned .tuner-direction,
+.tuner-display.close .tuner-direction {
+    color: #3c9a3c;
+}
+
+.tuner-strings {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 15px;
+}
+
+.tuner-string {
+    min-width: 52px;
+    font-size: 1.2em;
+}
+
+.tuner-string.heard {
+    border-color: #4d89d5;
+    color: #4d89d5;
+}
+
+.tuner-string.locked,
+.tuner-auto.active {
+    background-color: #4d89d5;
+    border-color: #4d89d5;
+    color: white;
+}
+
+.tuner-a4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-top: 20px;
+    font-size: 1.1em;
+}
+
+/* Tab bar: the main sections at the bottom, within reach of the thumb. */
+.tab-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1033;
+    display: flex;
+    height: calc(56px + env(safe-area-inset-bottom));
+    padding: 0 env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+    border-top: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+.tab-bar .tab {
+    flex: 1 1 0;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    padding: 0 2px;
+    border: none;
+    background: none;
+    color: #777;
+    font-size: 11px;
+    line-height: 1.2;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.tab-bar .tab span {
+    max-width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.tab-bar .tab:hover,
+.tab-bar .tab:focus {
+    color: #555;
+    text-decoration: none;
+}
+
+.tab-bar .tab.active {
+    color: #4d89d5;
+}
+
+/* Phone in landscape: the height is scarce, put the label beside the icon. */
+@media (orientation: landscape) and (max-height: 500px) {
+    .tab-bar {
+        height: calc(44px + env(safe-area-inset-bottom));
+    }
+
+    .tab-bar .tab {
+        flex-direction: row;
+        gap: 6px;
+        font-size: 13px;
+    }
+
+    .main-content {
+        padding-bottom: calc(64px + env(safe-area-inset-bottom));
+    }
+
+    .circle-key {
+        bottom: calc(59px + env(safe-area-inset-bottom));
+    }
+
+    .more-sheet {
+        bottom: calc(44px + env(safe-area-inset-bottom));
+    }
+}
+
+/* "More": every page in groups, sliding up above the tab bar. */
+.more-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1031; /* above the fixed title bar (1030) */
+    background-color: rgba(0, 0, 0, 0.35);
+}
+
+.more-sheet {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: calc(56px + env(safe-area-inset-bottom));
+    z-index: 1032;
+    max-width: 600px;
+    max-height: calc(100vh - 56px - 30px - env(safe-area-inset-top) - env(safe-area-inset-bottom));
+    max-height: calc(100dvh - 56px - 30px - env(safe-area-inset-top) - env(safe-area-inset-bottom));
+    margin: 0 auto;
+    padding: 8px calc(8px + env(safe-area-inset-right)) 4px calc(8px + env(safe-area-inset-left));
+    overflow-y: auto;
+    border-radius: 14px 14px 0 0;
+    background-color: white;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15);
+    animation: sheet-up 0.18s ease-out;
+}
+
+@keyframes sheet-up {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: none;
+        opacity: 1;
+    }
+}
+
+.more-heading {
+    padding: 10px 12px 4px;
+    color: #888;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.more-divider {
+    margin: 8px 0;
+}
+
+.more-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.more-list a {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 10px 12px;
+    border-radius: 8px;
+    color: #333;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.more-list a .icon {
+    flex: none;
+    color: #4d89d5;
+}
+
+.more-list a:hover,
+.more-list a:focus {
+    background-color: #f2f2f2;
+    text-decoration: none;
+}
+
+.more-list a.active {
+    background-color: #eaf1fb;
+    color: #2e6bb8;
+    font-weight: bold;
+}
+
+.more-copyright {
+    margin: 10px 12px 6px;
+    color: #aaa;
+    font-size: 12px;
+}
+
+/* "See also" links at the end of a page. */
+.related {
+    clear: both;
+    padding-top: 25px;
+}
+
+.related-heading {
+    margin-bottom: 8px;
+    color: #888;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.related-link {
+    display: flex !important;
+    align-items: center;
+    gap: 12px;
+    font-size: 16px;
+}
+
+.related-link > .icon:first-child {
+    flex: none;
+    color: #4d89d5;
+}
+
+.related-link > span {
+    flex: 1 1 auto;
+}
+
+.related-chevron {
+    flex: none;
+    color: #bbb;
+}
+
+[dir=rtl] .related-chevron {
+    transform: scaleX(-1);
 }

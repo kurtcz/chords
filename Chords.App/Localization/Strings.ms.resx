@@ -97,4 +97,20 @@
   <data name="Style_Klezmer" xml:space="preserve"><value>Klezmer</value></data>
   <data name="Prog_Generate" xml:space="preserve"><value>Jana progresi</value></data>
   <data name="Prog_Hint" xml:space="preserve"><value>Ketik progresi untuk melihat rajahnya; ‹ › menukar kedudukan jari. ▶ memainkannya, ketik lagi untuk berhenti.</value></data>
+  <data name="Nav_Tuner" xml:space="preserve"><value>Penala</value></data>
+  <data name="Tuner_Hint" xml:space="preserve"><value>Ketik tali untuk mendengarnya dan menala tali itu sahaja; Auto memilih tali terdekat.</value></data>
+  <data name="Tuner_Listening" xml:space="preserve"><value>Petik satu tali…</value></data>
+  <data name="Tuner_InTune" xml:space="preserve"><value>Sudah ditala</value></data>
+  <data name="Tuner_TuneUp" xml:space="preserve"><value>Ketatkan</value></data>
+  <data name="Tuner_TuneDown" xml:space="preserve"><value>Longgarkan</value></data>
+  <data name="Tuner_Auto" xml:space="preserve"><value>Auto</value></data>
+  <data name="Tuner_MicDenied" xml:space="preserve"><value>Penala memerlukan akses kepada mikrofon.</value></data>
+  <data name="Tuner_OpenSettings" xml:space="preserve"><value>Buka tetapan</value></data>
+  <data name="Tuner_MicError" xml:space="preserve"><value>Mikrofon tidak dapat dimulakan.</value></data>
+  <data name="Tab_Chords" xml:space="preserve"><value>Kord</value></data>
+  <data name="Tab_Favorites" xml:space="preserve"><value>Kegemaran</value></data>
+  <data name="Tab_Theory" xml:space="preserve"><value>Teori</value></data>
+  <data name="Tab_More" xml:space="preserve"><value>Lagi</value></data>
+  <data name="Group_Tools" xml:space="preserve"><value>Alatan</value></data>
+  <data name="Related_Title" xml:space="preserve"><value>Lihat juga</value></data>
 </root>

@@ -98,4 +98,20 @@
   <data name="Style_Klezmer" xml:space="preserve"><value>Klezmer</value></data>
   <data name="Prog_Generate" xml:space="preserve"><value>Generér et akkordforløb</value></data>
   <data name="Prog_Hint" xml:space="preserve"><value>Tryk på et forløb for at se diagrammerne; ‹ › skifter greb. ▶ afspiller det, tryk igen for at stoppe.</value></data>
+  <data name="Nav_Tuner" xml:space="preserve"><value>Stemmeapparat</value></data>
+  <data name="Tuner_Hint" xml:space="preserve"><value>Tryk på en streng for at høre den og kun stemme den; Auto vælger den nærmeste streng.</value></data>
+  <data name="Tuner_Listening" xml:space="preserve"><value>Spil en streng…</value></data>
+  <data name="Tuner_InTune" xml:space="preserve"><value>Stemt</value></data>
+  <data name="Tuner_TuneUp" xml:space="preserve"><value>Stram</value></data>
+  <data name="Tuner_TuneDown" xml:space="preserve"><value>Løsn</value></data>
+  <data name="Tuner_Auto" xml:space="preserve"><value>Auto</value></data>
+  <data name="Tuner_MicDenied" xml:space="preserve"><value>Stemmeapparatet skal have adgang til mikrofonen.</value></data>
+  <data name="Tuner_OpenSettings" xml:space="preserve"><value>Åbn indstillinger</value></data>
+  <data name="Tuner_MicError" xml:space="preserve"><value>Mikrofonen kan ikke startes.</value></data>
+  <data name="Tab_Chords" xml:space="preserve"><value>Akkorder</value></data>
+  <data name="Tab_Favorites" xml:space="preserve"><value>Favoritter</value></data>
+  <data name="Tab_Theory" xml:space="preserve"><value>Teori</value></data>
+  <data name="Tab_More" xml:space="preserve"><value>Mere</value></data>
+  <data name="Group_Tools" xml:space="preserve"><value>Værktøjer</value></data>
+  <data name="Related_Title" xml:space="preserve"><value>Se også</value></data>
 </root>

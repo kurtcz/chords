@@ -98,4 +98,20 @@
   <data name="Style_Klezmer" xml:space="preserve"><value>Клезмер</value></data>
   <data name="Prog_Generate" xml:space="preserve"><value>Дараалал үүсгэх</value></data>
   <data name="Prog_Hint" xml:space="preserve"><value>Диаграммыг харахын тулд дараалал дээр дарна уу; ‹ › хуруу тавилтыг сольно. ▶ тоглуулна, зогсоохын тулд дахин дарна уу.</value></data>
+  <data name="Nav_Tuner" xml:space="preserve"><value>Тааруулагч</value></data>
+  <data name="Tuner_Hint" xml:space="preserve"><value>Утсыг сонсож, зөвхөн түүнийг тааруулахын тулд дарна уу; Авто хамгийн ойрын утсыг сонгоно.</value></data>
+  <data name="Tuner_Listening" xml:space="preserve"><value>Утас тоглоно уу…</value></data>
+  <data name="Tuner_InTune" xml:space="preserve"><value>Тааруулсан</value></data>
+  <data name="Tuner_TuneUp" xml:space="preserve"><value>Чангална уу</value></data>
+  <data name="Tuner_TuneDown" xml:space="preserve"><value>Сулруулна уу</value></data>
+  <data name="Tuner_Auto" xml:space="preserve"><value>Авто</value></data>
+  <data name="Tuner_MicDenied" xml:space="preserve"><value>Тааруулагчид микрофон ашиглах зөвшөөрөл хэрэгтэй.</value></data>
+  <data name="Tuner_OpenSettings" xml:space="preserve"><value>Тохиргоо нээх</value></data>
+  <data name="Tuner_MicError" xml:space="preserve"><value>Микрофоныг асааж чадсангүй.</value></data>
+  <data name="Tab_Chords" xml:space="preserve"><value>Аккорд</value></data>
+  <data name="Tab_Favorites" xml:space="preserve"><value>Дуртай</value></data>
+  <data name="Tab_Theory" xml:space="preserve"><value>Онол</value></data>
+  <data name="Tab_More" xml:space="preserve"><value>Бусад</value></data>
+  <data name="Group_Tools" xml:space="preserve"><value>Хэрэгсэл</value></data>
+  <data name="Related_Title" xml:space="preserve"><value>Мөн үзэх</value></data>
 </root>

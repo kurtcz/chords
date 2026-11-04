@@ -98,4 +98,20 @@
   <data name="Style_Klezmer" xml:space="preserve"><value>Клезмер</value></data>
   <data name="Prog_Generate" xml:space="preserve"><value>Тізбек жасау</value></data>
   <data name="Prog_Hint" xml:space="preserve"><value>Диаграммаларды көру үшін тізбекті түртіңіз; ‹ › аппликатураны ауыстырады. ▶ ойнатады, тоқтату үшін қайта түртіңіз.</value></data>
+  <data name="Nav_Tuner" xml:space="preserve"><value>Тюнер</value></data>
+  <data name="Tuner_Hint" xml:space="preserve"><value>Ішекті естіп, тек соны күйге келтіру үшін оны түртіңіз; Авто ең жақын ішекті таңдайды.</value></data>
+  <data name="Tuner_Listening" xml:space="preserve"><value>Ішекті шертіңіз…</value></data>
+  <data name="Tuner_InTune" xml:space="preserve"><value>Күйге келтірілді</value></data>
+  <data name="Tuner_TuneUp" xml:space="preserve"><value>Тартыңыз</value></data>
+  <data name="Tuner_TuneDown" xml:space="preserve"><value>Босатыңыз</value></data>
+  <data name="Tuner_Auto" xml:space="preserve"><value>Авто</value></data>
+  <data name="Tuner_MicDenied" xml:space="preserve"><value>Тюнерге микрофонға рұқсат қажет.</value></data>
+  <data name="Tuner_OpenSettings" xml:space="preserve"><value>Параметрлерді ашу</value></data>
+  <data name="Tuner_MicError" xml:space="preserve"><value>Микрофонды іске қосу мүмкін емес.</value></data>
+  <data name="Tab_Chords" xml:space="preserve"><value>Аккордтар</value></data>
+  <data name="Tab_Favorites" xml:space="preserve"><value>Таңдаулылар</value></data>
+  <data name="Tab_Theory" xml:space="preserve"><value>Теория</value></data>
+  <data name="Tab_More" xml:space="preserve"><value>Тағы</value></data>
+  <data name="Group_Tools" xml:space="preserve"><value>Құралдар</value></data>
+  <data name="Related_Title" xml:space="preserve"><value>Сондай-ақ қараңыз</value></data>
 </root>

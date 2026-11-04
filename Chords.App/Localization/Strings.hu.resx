@@ -98,4 +98,20 @@
   <data name="Style_Klezmer" xml:space="preserve"><value>Klezmer</value></data>
   <data name="Prog_Generate" xml:space="preserve"><value>Akkordmenet generálása</value></data>
   <data name="Prog_Hint" xml:space="preserve"><value>Koppints egy akkordmenetre a diagramokért; ‹ › fogást vált. ▶ lejátssza, újabb koppintás leállítja.</value></data>
+  <data name="Nav_Tuner" xml:space="preserve"><value>Hangoló</value></data>
+  <data name="Tuner_Hint" xml:space="preserve"><value>Koppints egy húrra, hogy meghalld és csak azt hangold; az Auto a legközelebbi húrt választja.</value></data>
+  <data name="Tuner_Listening" xml:space="preserve"><value>Pengess meg egy húrt…</value></data>
+  <data name="Tuner_InTune" xml:space="preserve"><value>Hangolva</value></data>
+  <data name="Tuner_TuneUp" xml:space="preserve"><value>Feljebb</value></data>
+  <data name="Tuner_TuneDown" xml:space="preserve"><value>Lejjebb</value></data>
+  <data name="Tuner_Auto" xml:space="preserve"><value>Auto</value></data>
+  <data name="Tuner_MicDenied" xml:space="preserve"><value>A hangolónak hozzá kell férnie a mikrofonhoz.</value></data>
+  <data name="Tuner_OpenSettings" xml:space="preserve"><value>Beállítások megnyitása</value></data>
+  <data name="Tuner_MicError" xml:space="preserve"><value>A mikrofon nem indítható el.</value></data>
+  <data name="Tab_Chords" xml:space="preserve"><value>Akkordok</value></data>
+  <data name="Tab_Favorites" xml:space="preserve"><value>Kedvencek</value></data>
+  <data name="Tab_Theory" xml:space="preserve"><value>Elmélet</value></data>
+  <data name="Tab_More" xml:space="preserve"><value>Továbbiak</value></data>
+  <data name="Group_Tools" xml:space="preserve"><value>Eszközök</value></data>
+  <data name="Related_Title" xml:space="preserve"><value>Lásd még</value></data>
 </root>

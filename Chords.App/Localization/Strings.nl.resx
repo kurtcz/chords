@@ -98,4 +98,20 @@
   <data name="Style_Klezmer" xml:space="preserve"><value>Klezmer</value></data>
   <data name="Prog_Generate" xml:space="preserve"><value>Akkoordenschema genereren</value></data>
   <data name="Prog_Hint" xml:space="preserve"><value>Tik op een schema om de diagrammen te zien; ‹ › wisselt de greep. ▶ speelt het af, tik nogmaals om te stoppen.</value></data>
+  <data name="Nav_Tuner" xml:space="preserve"><value>Stemapparaat</value></data>
+  <data name="Tuner_Hint" xml:space="preserve"><value>Tik op een snaar om hem te horen en alleen die te stemmen; Auto kiest de dichtstbijzijnde snaar.</value></data>
+  <data name="Tuner_Listening" xml:space="preserve"><value>Speel een snaar…</value></data>
+  <data name="Tuner_InTune" xml:space="preserve"><value>Gestemd</value></data>
+  <data name="Tuner_TuneUp" xml:space="preserve"><value>Hoger stemmen</value></data>
+  <data name="Tuner_TuneDown" xml:space="preserve"><value>Lager stemmen</value></data>
+  <data name="Tuner_Auto" xml:space="preserve"><value>Auto</value></data>
+  <data name="Tuner_MicDenied" xml:space="preserve"><value>Het stemapparaat heeft toegang tot de microfoon nodig.</value></data>
+  <data name="Tuner_OpenSettings" xml:space="preserve"><value>Instellingen openen</value></data>
+  <data name="Tuner_MicError" xml:space="preserve"><value>De microfoon kan niet worden gestart.</value></data>
+  <data name="Tab_Chords" xml:space="preserve"><value>Akkoorden</value></data>
+  <data name="Tab_Favorites" xml:space="preserve"><value>Favorieten</value></data>
+  <data name="Tab_Theory" xml:space="preserve"><value>Theorie</value></data>
+  <data name="Tab_More" xml:space="preserve"><value>Meer</value></data>
+  <data name="Group_Tools" xml:space="preserve"><value>Hulpmiddelen</value></data>
+  <data name="Related_Title" xml:space="preserve"><value>Zie ook</value></data>
 </root>

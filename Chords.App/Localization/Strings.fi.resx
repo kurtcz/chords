@@ -98,4 +98,20 @@
   <data name="Style_Klezmer" xml:space="preserve"><value>Klezmer</value></data>
   <data name="Prog_Generate" xml:space="preserve"><value>Luo sointukulku</value></data>
   <data name="Prog_Hint" xml:space="preserve"><value>Napauta sointukulkua nähdäksesi otteet; ‹ › vaihtaa otetta. ▶ soittaa sen, napauta uudelleen pysäyttääksesi.</value></data>
+  <data name="Nav_Tuner" xml:space="preserve"><value>Viritin</value></data>
+  <data name="Tuner_Hint" xml:space="preserve"><value>Napauta kieltä kuullaksesi sen ja virittääksesi vain sen; Auto valitsee lähimmän kielen.</value></data>
+  <data name="Tuner_Listening" xml:space="preserve"><value>Soita kieltä…</value></data>
+  <data name="Tuner_InTune" xml:space="preserve"><value>Vireessä</value></data>
+  <data name="Tuner_TuneUp" xml:space="preserve"><value>Kiristä</value></data>
+  <data name="Tuner_TuneDown" xml:space="preserve"><value>Löysää</value></data>
+  <data name="Tuner_Auto" xml:space="preserve"><value>Auto</value></data>
+  <data name="Tuner_MicDenied" xml:space="preserve"><value>Viritin tarvitsee mikrofonin käyttöoikeuden.</value></data>
+  <data name="Tuner_OpenSettings" xml:space="preserve"><value>Avaa asetukset</value></data>
+  <data name="Tuner_MicError" xml:space="preserve"><value>Mikrofonia ei voi käynnistää.</value></data>
+  <data name="Tab_Chords" xml:space="preserve"><value>Soinnut</value></data>
+  <data name="Tab_Favorites" xml:space="preserve"><value>Suosikit</value></data>
+  <data name="Tab_Theory" xml:space="preserve"><value>Teoria</value></data>
+  <data name="Tab_More" xml:space="preserve"><value>Lisää</value></data>
+  <data name="Group_Tools" xml:space="preserve"><value>Työkalut</value></data>
+  <data name="Related_Title" xml:space="preserve"><value>Katso myös</value></data>
 </root>

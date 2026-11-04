@@ -99,4 +99,20 @@
   <data name="Style_Klezmer" xml:space="preserve"><value>Klezmer</value></data>
   <data name="Prog_Generate" xml:space="preserve"><value>Vygenerovať progresiu</value></data>
   <data name="Prog_Hint" xml:space="preserve"><value>Ťuknutím na progresiu zobrazíte diagramy; ‹ › mení hmat. ▶ ju prehrá, ďalším ťuknutím zastavíte.</value></data>
+  <data name="Nav_Tuner" xml:space="preserve"><value>Ladička</value></data>
+  <data name="Tuner_Hint" xml:space="preserve"><value>Ťuknutím na strunu ju budete počuť a ladiť len ju; Auto vyberie najbližšiu strunu.</value></data>
+  <data name="Tuner_Listening" xml:space="preserve"><value>Zahrajte na strunu…</value></data>
+  <data name="Tuner_InTune" xml:space="preserve"><value>Naladené</value></data>
+  <data name="Tuner_TuneUp" xml:space="preserve"><value>Pritiahnite</value></data>
+  <data name="Tuner_TuneDown" xml:space="preserve"><value>Povoľte</value></data>
+  <data name="Tuner_Auto" xml:space="preserve"><value>Auto</value></data>
+  <data name="Tuner_MicDenied" xml:space="preserve"><value>Ladička potrebuje prístup k mikrofónu.</value></data>
+  <data name="Tuner_OpenSettings" xml:space="preserve"><value>Otvoriť nastavenia</value></data>
+  <data name="Tuner_MicError" xml:space="preserve"><value>Mikrofón nie je možné spustiť.</value></data>
+  <data name="Tab_Chords" xml:space="preserve"><value>Akordy</value></data>
+  <data name="Tab_Favorites" xml:space="preserve"><value>Obľúbené</value></data>
+  <data name="Tab_Theory" xml:space="preserve"><value>Teória</value></data>
+  <data name="Tab_More" xml:space="preserve"><value>Viac</value></data>
+  <data name="Group_Tools" xml:space="preserve"><value>Nástroje</value></data>
+  <data name="Related_Title" xml:space="preserve"><value>Pozri tiež</value></data>
 </root>

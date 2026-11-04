@@ -98,4 +98,20 @@
   <data name="Style_Klezmer" xml:space="preserve"><value>Klezmer</value></data>
   <data name="Prog_Generate" xml:space="preserve"><value>Generar una progresión</value></data>
   <data name="Prog_Hint" xml:space="preserve"><value>Toca una progresión para ver sus diagramas; ‹ › cambia la digitación. ▶ la reproduce, toca de nuevo para detenerla.</value></data>
+  <data name="Nav_Tuner" xml:space="preserve"><value>Afinador</value></data>
+  <data name="Tuner_Hint" xml:space="preserve"><value>Toca una cuerda para oírla y afinar solo esa; Auto elige la cuerda más cercana.</value></data>
+  <data name="Tuner_Listening" xml:space="preserve"><value>Toca una cuerda…</value></data>
+  <data name="Tuner_InTune" xml:space="preserve"><value>Afinado</value></data>
+  <data name="Tuner_TuneUp" xml:space="preserve"><value>Sube</value></data>
+  <data name="Tuner_TuneDown" xml:space="preserve"><value>Baja</value></data>
+  <data name="Tuner_Auto" xml:space="preserve"><value>Auto</value></data>
+  <data name="Tuner_MicDenied" xml:space="preserve"><value>El afinador necesita acceso al micrófono.</value></data>
+  <data name="Tuner_OpenSettings" xml:space="preserve"><value>Abrir ajustes</value></data>
+  <data name="Tuner_MicError" xml:space="preserve"><value>No se puede iniciar el micrófono.</value></data>
+  <data name="Tab_Chords" xml:space="preserve"><value>Acordes</value></data>
+  <data name="Tab_Favorites" xml:space="preserve"><value>Favoritos</value></data>
+  <data name="Tab_Theory" xml:space="preserve"><value>Teoría</value></data>
+  <data name="Tab_More" xml:space="preserve"><value>Más</value></data>
+  <data name="Group_Tools" xml:space="preserve"><value>Herramientas</value></data>
+  <data name="Related_Title" xml:space="preserve"><value>Ver también</value></data>
 </root>

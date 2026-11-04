@@ -98,4 +98,20 @@
   <data name="Style_Klezmer" xml:space="preserve"><value>کلیزمر</value></data>
   <data name="Prog_Generate" xml:space="preserve"><value>پروگریشن بنائیں</value></data>
   <data name="Prog_Hint" xml:space="preserve"><value>ڈایاگرام دیکھنے کے لیے کسی پروگریشن پر ٹیپ کریں؛ ‹ › انگلیوں کی پوزیشن بدلتا ہے۔ ▶ اسے بجاتا ہے، روکنے کے لیے دوبارہ ٹیپ کریں۔</value></data>
+  <data name="Nav_Tuner" xml:space="preserve"><value>ٹیونر</value></data>
+  <data name="Tuner_Hint" xml:space="preserve"><value>کسی تار کو سننے اور صرف اسی کو ٹیون کرنے کے لیے اس پر ٹیپ کریں؛ آٹو قریب ترین تار چنتا ہے۔</value></data>
+  <data name="Tuner_Listening" xml:space="preserve"><value>کوئی تار بجائیں…</value></data>
+  <data name="Tuner_InTune" xml:space="preserve"><value>ٹیون ہے</value></data>
+  <data name="Tuner_TuneUp" xml:space="preserve"><value>کسیں</value></data>
+  <data name="Tuner_TuneDown" xml:space="preserve"><value>ڈھیلا کریں</value></data>
+  <data name="Tuner_Auto" xml:space="preserve"><value>آٹو</value></data>
+  <data name="Tuner_MicDenied" xml:space="preserve"><value>ٹیونر کو مائیکروفون تک رسائی درکار ہے۔</value></data>
+  <data name="Tuner_OpenSettings" xml:space="preserve"><value>ترتیبات کھولیں</value></data>
+  <data name="Tuner_MicError" xml:space="preserve"><value>مائیکروفون شروع نہیں ہو سکا۔</value></data>
+  <data name="Tab_Chords" xml:space="preserve"><value>کارڈز</value></data>
+  <data name="Tab_Favorites" xml:space="preserve"><value>پسندیدہ</value></data>
+  <data name="Tab_Theory" xml:space="preserve"><value>نظریہ</value></data>
+  <data name="Tab_More" xml:space="preserve"><value>مزید</value></data>
+  <data name="Group_Tools" xml:space="preserve"><value>ٹولز</value></data>
+  <data name="Related_Title" xml:space="preserve"><value>یہ بھی دیکھیں</value></data>
 </root>

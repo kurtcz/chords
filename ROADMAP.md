@@ -18,7 +18,7 @@
 
 ### Hraní a cvičení
 - **Kapodastr** – zadání pozice kapodastru; zobrazení „tvaru“ akordu vs. znějícího akordu.
-- **Ladička** – chromatická ladička přes mikrofon (respektuje zvolené ladění a nástroj).
+- **Ladička** – ✅ chromatická ladička přes mikrofon (detekce YIN v Chords.Core, ověřená na nahraných strunách): ručička ±50 centů, cílová struna zvoleného nástroje i vlastního ladění, automatický výběr nebo zamčení struny s přehráním referenčního tónu, kalibrace A4 430–450 Hz. Zbývá: ověřit na zařízeních (Android bez zpracování zvuku, přepínání audio session na iOS), případně režim pro neobvyklé ladění bez strun.
 - **Metronom** – jednoduchý metronom, případně propojený s přehráváním progresí.
 - **Volba způsobu přehrání** – úder dolů/nahoru, arpeggio, tempo; kvalitnější vzorky zvuku.
 - **Trénink sluchu** – kvíz: poznej typ akordu (dur/moll/septakord…) nebo interval podle poslechu.

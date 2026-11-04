@@ -51,6 +51,8 @@
 	</dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>The tuner listens to your instrument to show whether it is in tune.</string>
 	<key>CFBundleLocalizations</key>
 	<array>
 		<string>en</string>

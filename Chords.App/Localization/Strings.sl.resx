@@ -100,4 +100,20 @@
   <data name="Style_Klezmer" xml:space="preserve"><value>Klezmer</value></data>
   <data name="Prog_Generate" xml:space="preserve"><value>Ustvari zaporedje</value></data>
   <data name="Prog_Hint" xml:space="preserve"><value>Tapnite zaporedje za prikaz diagramov; ‹ › zamenja prijem. ▶ ga predvaja, ponovni dotik ustavi.</value></data>
+  <data name="Nav_Tuner" xml:space="preserve"><value>Uglaševalnik</value></data>
+  <data name="Tuner_Hint" xml:space="preserve"><value>Tapnite struno, da jo slišite in uglašujete samo njo; Samodejno izbere najbližjo struno.</value></data>
+  <data name="Tuner_Listening" xml:space="preserve"><value>Zaigrajte struno…</value></data>
+  <data name="Tuner_InTune" xml:space="preserve"><value>Uglašeno</value></data>
+  <data name="Tuner_TuneUp" xml:space="preserve"><value>Napnite</value></data>
+  <data name="Tuner_TuneDown" xml:space="preserve"><value>Popustite</value></data>
+  <data name="Tuner_Auto" xml:space="preserve"><value>Samodejno</value></data>
+  <data name="Tuner_MicDenied" xml:space="preserve"><value>Uglaševalnik potrebuje dostop do mikrofona.</value></data>
+  <data name="Tuner_OpenSettings" xml:space="preserve"><value>Odpri nastavitve</value></data>
+  <data name="Tuner_MicError" xml:space="preserve"><value>Mikrofona ni mogoče zagnati.</value></data>
+  <data name="Tab_Chords" xml:space="preserve"><value>Akordi</value></data>
+  <data name="Tab_Favorites" xml:space="preserve"><value>Priljubljeni</value></data>
+  <data name="Tab_Theory" xml:space="preserve"><value>Teorija</value></data>
+  <data name="Tab_More" xml:space="preserve"><value>Več</value></data>
+  <data name="Group_Tools" xml:space="preserve"><value>Orodja</value></data>
+  <data name="Related_Title" xml:space="preserve"><value>Glej tudi</value></data>
 </root>

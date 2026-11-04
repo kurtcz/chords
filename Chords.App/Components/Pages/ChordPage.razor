@@ -71,6 +71,11 @@
     </div>
 }
 
+@if (layouts != null)
+{
+    <RelatedLinks Pages="[AppPages.Favorites, AppPages.FindChord, AppPages.FindShape]" />
+}
+
 @code {
     [SupplyParameterFromQuery(Name = "root")] public string Root { get; set; }
     [SupplyParameterFromQuery(Name = "type")] public string Type { get; set; }

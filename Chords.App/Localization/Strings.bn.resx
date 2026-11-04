@@ -98,4 +98,20 @@
   <data name="Style_Klezmer" xml:space="preserve"><value>ক্লেজমার</value></data>
   <data name="Prog_Generate" xml:space="preserve"><value>প্রগ্রেশন তৈরি করুন</value></data>
   <data name="Prog_Hint" xml:space="preserve"><value>ডায়াগ্রাম দেখতে একটি প্রগ্রেশনে ট্যাপ করুন; ‹ › ফিঙ্গারিং বদলায়। ▶ সেটি বাজায়, থামাতে আবার ট্যাপ করুন।</value></data>
+  <data name="Nav_Tuner" xml:space="preserve"><value>টিউনার</value></data>
+  <data name="Tuner_Hint" xml:space="preserve"><value>কোনো তার শুনতে এবং শুধু সেটিই টিউন করতে তাতে ট্যাপ করুন; অটো সবচেয়ে কাছের তারটি বেছে নেয়।</value></data>
+  <data name="Tuner_Listening" xml:space="preserve"><value>একটি তার বাজান…</value></data>
+  <data name="Tuner_InTune" xml:space="preserve"><value>টিউন হয়েছে</value></data>
+  <data name="Tuner_TuneUp" xml:space="preserve"><value>টাইট করুন</value></data>
+  <data name="Tuner_TuneDown" xml:space="preserve"><value>ঢিলা করুন</value></data>
+  <data name="Tuner_Auto" xml:space="preserve"><value>অটো</value></data>
+  <data name="Tuner_MicDenied" xml:space="preserve"><value>টিউনারের মাইক্রোফোন অ্যাক্সেস প্রয়োজন।</value></data>
+  <data name="Tuner_OpenSettings" xml:space="preserve"><value>সেটিংস খুলুন</value></data>
+  <data name="Tuner_MicError" xml:space="preserve"><value>মাইক্রোফোন চালু করা যাচ্ছে না।</value></data>
+  <data name="Tab_Chords" xml:space="preserve"><value>কর্ড</value></data>
+  <data name="Tab_Favorites" xml:space="preserve"><value>প্রিয়</value></data>
+  <data name="Tab_Theory" xml:space="preserve"><value>তত্ত্ব</value></data>
+  <data name="Tab_More" xml:space="preserve"><value>আরও</value></data>
+  <data name="Group_Tools" xml:space="preserve"><value>সরঞ্জাম</value></data>
+  <data name="Related_Title" xml:space="preserve"><value>আরও দেখুন</value></data>
 </root>

@@ -102,4 +102,20 @@
   <data name="Style_Klezmer" xml:space="preserve"><value>Klezmer</value></data>
   <data name="Prog_Generate" xml:space="preserve"><value>Creu dilyniant</value></data>
   <data name="Prog_Hint" xml:space="preserve"><value>Tapiwch ddilyniant i weld ei ddiagramau; mae ‹ › yn newid y bysedd. Mae ▶ yn ei chwarae, tapiwch eto i stopio.</value></data>
+  <data name="Nav_Tuner" xml:space="preserve"><value>Tiwniwr</value></data>
+  <data name="Tuner_Hint" xml:space="preserve"><value>Tapiwch dant i'w glywed a thiwnio dim ond hwnnw; mae Awto yn dewis y tant agosaf.</value></data>
+  <data name="Tuner_Listening" xml:space="preserve"><value>Chwaraewch dant…</value></data>
+  <data name="Tuner_InTune" xml:space="preserve"><value>Mewn tiwn</value></data>
+  <data name="Tuner_TuneUp" xml:space="preserve"><value>Tynhau</value></data>
+  <data name="Tuner_TuneDown" xml:space="preserve"><value>Llacio</value></data>
+  <data name="Tuner_Auto" xml:space="preserve"><value>Awto</value></data>
+  <data name="Tuner_MicDenied" xml:space="preserve"><value>Mae angen mynediad i'r meicroffon ar y tiwniwr.</value></data>
+  <data name="Tuner_OpenSettings" xml:space="preserve"><value>Agor y gosodiadau</value></data>
+  <data name="Tuner_MicError" xml:space="preserve"><value>Nid oes modd cychwyn y meicroffon.</value></data>
+  <data name="Tab_Chords" xml:space="preserve"><value>Cordiau</value></data>
+  <data name="Tab_Favorites" xml:space="preserve"><value>Ffefrynnau</value></data>
+  <data name="Tab_Theory" xml:space="preserve"><value>Theori</value></data>
+  <data name="Tab_More" xml:space="preserve"><value>Mwy</value></data>
+  <data name="Group_Tools" xml:space="preserve"><value>Offer</value></data>
+  <data name="Related_Title" xml:space="preserve"><value>Gweler hefyd</value></data>
 </root>

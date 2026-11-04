@@ -123,6 +123,14 @@ public class ChordPlayer(ISoundBank soundBank)
         return (sample, rate);
     }
 
+    /// <summary>Plays a single note (MIDI pitch), e.g. an open string as the tuner's reference.</summary>
+    public void PlayPitch(int pitch, float volume = 1f)
+    {
+        var (sample, rate) = SampleFor(pitch, 0);
+
+        soundBank.PlayString(sample, rate, volume);
+    }
+
     /// <summary>Plays the notes of a chord (English name, e.g. "F#m") as a quick arpeggio on the A string.</summary>
     public void PlayChord(string id, float volume = 1f)
     {

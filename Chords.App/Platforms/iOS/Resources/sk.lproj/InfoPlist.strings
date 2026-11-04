@@ -1,1 +1,2 @@
 "CFBundleDisplayName" = "Gitarové akordy";
+"NSMicrophoneUsageDescription" = "Ladička počúva váš nástroj, aby ukázala, či je naladený.";

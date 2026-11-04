@@ -98,4 +98,20 @@
   <data name="Style_Klezmer" xml:space="preserve"><value>Klezmer</value></data>
   <data name="Prog_Generate" xml:space="preserve"><value>Genera una progressione</value></data>
   <data name="Prog_Hint" xml:space="preserve"><value>Tocca una progressione per vederne i diagrammi; ‹ › cambia la diteggiatura. ▶ la riproduce, tocca di nuovo per fermarla.</value></data>
+  <data name="Nav_Tuner" xml:space="preserve"><value>Accordatore</value></data>
+  <data name="Tuner_Hint" xml:space="preserve"><value>Tocca una corda per ascoltarla e accordare solo quella; Auto sceglie la corda più vicina.</value></data>
+  <data name="Tuner_Listening" xml:space="preserve"><value>Suona una corda…</value></data>
+  <data name="Tuner_InTune" xml:space="preserve"><value>Accordato</value></data>
+  <data name="Tuner_TuneUp" xml:space="preserve"><value>Alza</value></data>
+  <data name="Tuner_TuneDown" xml:space="preserve"><value>Abbassa</value></data>
+  <data name="Tuner_Auto" xml:space="preserve"><value>Auto</value></data>
+  <data name="Tuner_MicDenied" xml:space="preserve"><value>L’accordatore ha bisogno di accedere al microfono.</value></data>
+  <data name="Tuner_OpenSettings" xml:space="preserve"><value>Apri impostazioni</value></data>
+  <data name="Tuner_MicError" xml:space="preserve"><value>Impossibile avviare il microfono.</value></data>
+  <data name="Tab_Chords" xml:space="preserve"><value>Accordi</value></data>
+  <data name="Tab_Favorites" xml:space="preserve"><value>Preferiti</value></data>
+  <data name="Tab_Theory" xml:space="preserve"><value>Teoria</value></data>
+  <data name="Tab_More" xml:space="preserve"><value>Altro</value></data>
+  <data name="Group_Tools" xml:space="preserve"><value>Strumenti</value></data>
+  <data name="Related_Title" xml:space="preserve"><value>Vedi anche</value></data>
 </root>

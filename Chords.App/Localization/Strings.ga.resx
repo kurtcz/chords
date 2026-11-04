@@ -101,4 +101,20 @@
   <data name="Style_Klezmer" xml:space="preserve"><value>Klezmer</value></data>
   <data name="Prog_Generate" xml:space="preserve"><value>Gin dul chun cinn</value></data>
   <data name="Prog_Hint" xml:space="preserve"><value>Tapáil dul chun cinn chun na léaráidí a fheiceáil; athraíonn ‹ › an méarú. Seinneann ▶ é, tapáil arís chun stopadh.</value></data>
+  <data name="Nav_Tuner" xml:space="preserve"><value>Tiúnóir</value></data>
+  <data name="Tuner_Hint" xml:space="preserve"><value>Tapáil sreang chun í a chloisteáil agus í sin amháin a thiúnadh; roghnaíonn Uath an tsreang is gaire.</value></data>
+  <data name="Tuner_Listening" xml:space="preserve"><value>Seinn sreang…</value></data>
+  <data name="Tuner_InTune" xml:space="preserve"><value>I dtiún</value></data>
+  <data name="Tuner_TuneUp" xml:space="preserve"><value>Teannaigh</value></data>
+  <data name="Tuner_TuneDown" xml:space="preserve"><value>Scaoil</value></data>
+  <data name="Tuner_Auto" xml:space="preserve"><value>Uath</value></data>
+  <data name="Tuner_MicDenied" xml:space="preserve"><value>Teastaíonn rochtain ar an micreafón ón tiúnóir.</value></data>
+  <data name="Tuner_OpenSettings" xml:space="preserve"><value>Oscail na socruithe</value></data>
+  <data name="Tuner_MicError" xml:space="preserve"><value>Ní féidir an micreafón a thosú.</value></data>
+  <data name="Tab_Chords" xml:space="preserve"><value>Córda</value></data>
+  <data name="Tab_Favorites" xml:space="preserve"><value>Ceanáin</value></data>
+  <data name="Tab_Theory" xml:space="preserve"><value>Teoiric</value></data>
+  <data name="Tab_More" xml:space="preserve"><value>Tuilleadh</value></data>
+  <data name="Group_Tools" xml:space="preserve"><value>Uirlisí</value></data>
+  <data name="Related_Title" xml:space="preserve"><value>Féach freisin</value></data>
 </root>

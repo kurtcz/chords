@@ -97,4 +97,20 @@
   <data name="Style_Klezmer" xml:space="preserve"><value>クレズマー</value></data>
   <data name="Prog_Generate" xml:space="preserve"><value>コード進行を生成</value></data>
   <data name="Prog_Hint" xml:space="preserve"><value>コード進行をタップするとダイアグラムが表示されます。‹ › で押さえ方を切り替えます。▶ で再生、もう一度タップで停止します。</value></data>
+  <data name="Nav_Tuner" xml:space="preserve"><value>チューナー</value></data>
+  <data name="Tuner_Hint" xml:space="preserve"><value>弦をタップするとその音が鳴り、その弦だけをチューニングします。オートは一番近い弦を選びます。</value></data>
+  <data name="Tuner_Listening" xml:space="preserve"><value>弦を弾いてください…</value></data>
+  <data name="Tuner_InTune" xml:space="preserve"><value>合っています</value></data>
+  <data name="Tuner_TuneUp" xml:space="preserve"><value>上げて</value></data>
+  <data name="Tuner_TuneDown" xml:space="preserve"><value>下げて</value></data>
+  <data name="Tuner_Auto" xml:space="preserve"><value>オート</value></data>
+  <data name="Tuner_MicDenied" xml:space="preserve"><value>チューナーにはマイクへのアクセスが必要です。</value></data>
+  <data name="Tuner_OpenSettings" xml:space="preserve"><value>設定を開く</value></data>
+  <data name="Tuner_MicError" xml:space="preserve"><value>マイクを開始できません。</value></data>
+  <data name="Tab_Chords" xml:space="preserve"><value>コード</value></data>
+  <data name="Tab_Favorites" xml:space="preserve"><value>お気に入り</value></data>
+  <data name="Tab_Theory" xml:space="preserve"><value>理論</value></data>
+  <data name="Tab_More" xml:space="preserve"><value>その他</value></data>
+  <data name="Group_Tools" xml:space="preserve"><value>ツール</value></data>
+  <data name="Related_Title" xml:space="preserve"><value>関連項目</value></data>
 </root>

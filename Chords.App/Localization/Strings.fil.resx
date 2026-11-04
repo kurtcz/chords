@@ -98,4 +98,20 @@
   <data name="Style_Klezmer" xml:space="preserve"><value>Klezmer</value></data>
   <data name="Prog_Generate" xml:space="preserve"><value>Gumawa ng progression</value></data>
   <data name="Prog_Hint" xml:space="preserve"><value>I-tap ang isang progression para makita ang mga diagram; ‹ › ay nagpapalit ng fingering. ▶ ay tumutugtog nito, i-tap ulit para huminto.</value></data>
+  <data name="Nav_Tuner" xml:space="preserve"><value>Tuner</value></data>
+  <data name="Tuner_Hint" xml:space="preserve"><value>I-tap ang isang kuwerdas para marinig ito at iyon lang ang i-tune; pinipili ng Auto ang pinakamalapit na kuwerdas.</value></data>
+  <data name="Tuner_Listening" xml:space="preserve"><value>Tumugtog ng kuwerdas…</value></data>
+  <data name="Tuner_InTune" xml:space="preserve"><value>Nakatono</value></data>
+  <data name="Tuner_TuneUp" xml:space="preserve"><value>Higpitan</value></data>
+  <data name="Tuner_TuneDown" xml:space="preserve"><value>Luwagan</value></data>
+  <data name="Tuner_Auto" xml:space="preserve"><value>Auto</value></data>
+  <data name="Tuner_MicDenied" xml:space="preserve"><value>Kailangan ng tuner ng access sa mikropono.</value></data>
+  <data name="Tuner_OpenSettings" xml:space="preserve"><value>Buksan ang settings</value></data>
+  <data name="Tuner_MicError" xml:space="preserve"><value>Hindi masimulan ang mikropono.</value></data>
+  <data name="Tab_Chords" xml:space="preserve"><value>Mga chord</value></data>
+  <data name="Tab_Favorites" xml:space="preserve"><value>Mga paborito</value></data>
+  <data name="Tab_Theory" xml:space="preserve"><value>Teorya</value></data>
+  <data name="Tab_More" xml:space="preserve"><value>Iba pa</value></data>
+  <data name="Group_Tools" xml:space="preserve"><value>Mga tool</value></data>
+  <data name="Related_Title" xml:space="preserve"><value>Tingnan din</value></data>
 </root>

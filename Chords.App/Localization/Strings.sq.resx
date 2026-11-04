@@ -98,4 +98,20 @@
   <data name="Style_Klezmer" xml:space="preserve"><value>Klezmer</value></data>
   <data name="Prog_Generate" xml:space="preserve"><value>Krijo një progresion</value></data>
   <data name="Prog_Hint" xml:space="preserve"><value>Prek një progresion për të parë diagramet; ‹ › ndryshon pozicionin e gishtave. ▶ e luan, prek përsëri për ta ndalur.</value></data>
+  <data name="Nav_Tuner" xml:space="preserve"><value>Akordues</value></data>
+  <data name="Tuner_Hint" xml:space="preserve"><value>Prek një tel për ta dëgjuar dhe për të akorduar vetëm atë; Auto zgjedh telin më të afërt.</value></data>
+  <data name="Tuner_Listening" xml:space="preserve"><value>Luaj një tel…</value></data>
+  <data name="Tuner_InTune" xml:space="preserve"><value>I akorduar</value></data>
+  <data name="Tuner_TuneUp" xml:space="preserve"><value>Tendose</value></data>
+  <data name="Tuner_TuneDown" xml:space="preserve"><value>Lirojë</value></data>
+  <data name="Tuner_Auto" xml:space="preserve"><value>Auto</value></data>
+  <data name="Tuner_MicDenied" xml:space="preserve"><value>Akorduesi ka nevojë për qasje në mikrofon.</value></data>
+  <data name="Tuner_OpenSettings" xml:space="preserve"><value>Hap cilësimet</value></data>
+  <data name="Tuner_MicError" xml:space="preserve"><value>Mikrofoni nuk mund të niset.</value></data>
+  <data name="Tab_Chords" xml:space="preserve"><value>Akordet</value></data>
+  <data name="Tab_Favorites" xml:space="preserve"><value>Të preferuarat</value></data>
+  <data name="Tab_Theory" xml:space="preserve"><value>Teoria</value></data>
+  <data name="Tab_More" xml:space="preserve"><value>Më shumë</value></data>
+  <data name="Group_Tools" xml:space="preserve"><value>Mjete</value></data>
+  <data name="Related_Title" xml:space="preserve"><value>Shih gjithashtu</value></data>
 </root>

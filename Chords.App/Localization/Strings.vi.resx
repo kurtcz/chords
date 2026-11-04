@@ -97,4 +97,20 @@
   <data name="Style_Klezmer" xml:space="preserve"><value>Klezmer</value></data>
   <data name="Prog_Generate" xml:space="preserve"><value>Tạo vòng hợp âm</value></data>
   <data name="Prog_Hint" xml:space="preserve"><value>Chạm vào một vòng hợp âm để xem sơ đồ; ‹ › đổi thế bấm. ▶ phát, chạm lại để dừng.</value></data>
+  <data name="Nav_Tuner" xml:space="preserve"><value>Bộ chỉnh dây</value></data>
+  <data name="Tuner_Hint" xml:space="preserve"><value>Chạm vào một dây để nghe và chỉ chỉnh dây đó; Tự động chọn dây gần nhất.</value></data>
+  <data name="Tuner_Listening" xml:space="preserve"><value>Hãy gảy một dây…</value></data>
+  <data name="Tuner_InTune" xml:space="preserve"><value>Đã chuẩn</value></data>
+  <data name="Tuner_TuneUp" xml:space="preserve"><value>Lên dây</value></data>
+  <data name="Tuner_TuneDown" xml:space="preserve"><value>Hạ dây</value></data>
+  <data name="Tuner_Auto" xml:space="preserve"><value>Tự động</value></data>
+  <data name="Tuner_MicDenied" xml:space="preserve"><value>Bộ chỉnh dây cần quyền truy cập micrô.</value></data>
+  <data name="Tuner_OpenSettings" xml:space="preserve"><value>Mở cài đặt</value></data>
+  <data name="Tuner_MicError" xml:space="preserve"><value>Không thể bật micrô.</value></data>
+  <data name="Tab_Chords" xml:space="preserve"><value>Hợp âm</value></data>
+  <data name="Tab_Favorites" xml:space="preserve"><value>Yêu thích</value></data>
+  <data name="Tab_Theory" xml:space="preserve"><value>Lý thuyết</value></data>
+  <data name="Tab_More" xml:space="preserve"><value>Thêm</value></data>
+  <data name="Group_Tools" xml:space="preserve"><value>Công cụ</value></data>
+  <data name="Related_Title" xml:space="preserve"><value>Xem thêm</value></data>
 </root>

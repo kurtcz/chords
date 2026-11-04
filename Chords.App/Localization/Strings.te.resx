@@ -98,4 +98,20 @@
   <data name="Style_Klezmer" xml:space="preserve"><value>క్లెజ్‌మర్</value></data>
   <data name="Prog_Generate" xml:space="preserve"><value>ప్రోగ్రెషన్‌ను రూపొందించండి</value></data>
   <data name="Prog_Hint" xml:space="preserve"><value>డయాగ్రామ్‌లను చూడటానికి ప్రోగ్రెషన్‌పై నొక్కండి; ‹ › ఫింగరింగ్‌ను మారుస్తుంది. ▶ దాన్ని ప్లే చేస్తుంది, ఆపడానికి మళ్లీ నొక్కండి.</value></data>
+  <data name="Nav_Tuner" xml:space="preserve"><value>ట్యూనర్</value></data>
+  <data name="Tuner_Hint" xml:space="preserve"><value>తీగను వినడానికి, దాన్ని మాత్రమే ట్యూన్ చేయడానికి దానిపై నొక్కండి; ఆటో దగ్గరి తీగను ఎంచుకుంటుంది.</value></data>
+  <data name="Tuner_Listening" xml:space="preserve"><value>ఒక తీగను మీటండి…</value></data>
+  <data name="Tuner_InTune" xml:space="preserve"><value>ట్యూన్ అయింది</value></data>
+  <data name="Tuner_TuneUp" xml:space="preserve"><value>బిగించండి</value></data>
+  <data name="Tuner_TuneDown" xml:space="preserve"><value>వదులు చేయండి</value></data>
+  <data name="Tuner_Auto" xml:space="preserve"><value>ఆటో</value></data>
+  <data name="Tuner_MicDenied" xml:space="preserve"><value>ట్యూనర్‌కు మైక్రోఫోన్ యాక్సెస్ అవసరం.</value></data>
+  <data name="Tuner_OpenSettings" xml:space="preserve"><value>సెట్టింగ్‌లను తెరవండి</value></data>
+  <data name="Tuner_MicError" xml:space="preserve"><value>మైక్రోఫోన్‌ను ప్రారంభించలేము.</value></data>
+  <data name="Tab_Chords" xml:space="preserve"><value>కార్డ్‌లు</value></data>
+  <data name="Tab_Favorites" xml:space="preserve"><value>ఇష్టమైనవి</value></data>
+  <data name="Tab_Theory" xml:space="preserve"><value>సిద్ధాంతం</value></data>
+  <data name="Tab_More" xml:space="preserve"><value>మరిన్ని</value></data>
+  <data name="Group_Tools" xml:space="preserve"><value>సాధనాలు</value></data>
+  <data name="Related_Title" xml:space="preserve"><value>ఇవి కూడా చూడండి</value></data>
 </root>

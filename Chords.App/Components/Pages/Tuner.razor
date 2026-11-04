@@ -1,0 +1,266 @@
+@page "/tuner"
+@using System.Globalization
+@using Chords.Core.Tuning
+@implements IDisposable
+@inject AppState State
+@inject TunerListener Listener
+@inject ChordPlayer Player
+
+<TopNav Title="@L["Nav_Tuner"]" />
+
+@if (status == TunerStatus.Denied)
+{
+    <div class="alert alert-warning">
+        <p>@L["Tuner_MicDenied"]</p>
+        <button type="button" class="btn btn-default" @onclick="() => AppInfo.ShowSettingsUI()">@L["Tuner_OpenSettings"]</button>
+    </div>
+}
+else if (status == TunerStatus.Failed)
+{
+    <div class="alert alert-danger">@L["Tuner_MicError"]</div>
+}
+
+<div class="tuner-display @StateClass">
+    <div class="tuner-note">
+        @if (reading == null)
+        {
+            <span class="text-muted">–</span>
+        }
+        else
+        {
+            @NoteName(reading.Target)
+        }
+    </div>
+    <svg class="tuner-gauge" viewBox="0 0 300 165" xmlns="http://www.w3.org/2000/svg">
+        <path d="@Arc(-InTuneCents, InTuneCents)" fill="none" stroke="#5cb85c" stroke-width="14" />
+        @for (var c = -50; c <= 50; c += 10)
+        {
+            var (x1, y1) = Point(c, c == 0 ? 112 : 120);
+            var (x2, y2) = Point(c, 134);
+            <line x1="@F(x1)" y1="@F(y1)" x2="@F(x2)" y2="@F(y2)" stroke="#888" stroke-width="@(c == 0 ? 3 : 1.5)" />
+        }
+        <text x="@F(Point(-50, 100).X)" y="@F(Point(-50, 100).Y)" font-size="13" fill="#888" text-anchor="middle">−50</text>
+        <text x="@F(Point(50, 100).X)" y="@F(Point(50, 100).Y)" font-size="13" fill="#888" text-anchor="middle">+50</text>
+        @if (reading != null)
+        {
+            <g class="tuner-needle" style="transform: rotate(@F(NeedleAngle)deg)">
+                <line x1="@F(Cx)" y1="@F(Cy)" x2="@F(Cx)" y2="@F(Cy - 128)" stroke-width="3" stroke-linecap="round" />
+            </g>
+        }
+        <circle cx="@F(Cx)" cy="@F(Cy)" r="7" fill="#333" />
+    </svg>
+    <div class="tuner-cents">
+        @if (reading != null)
+        {
+            <span>@reading.Cents.ToString("+0;−0;0", CultureInfo.InvariantCulture) ¢</span>
+            <span class="text-muted">@reading.Frequency.ToString("0.0", CultureInfo.CurrentCulture) Hz</span>
+            @if ((int)Math.Round(reading.Pitch) != reading.Target)
+            {
+                <span class="text-muted">♪ @NoteName((int)Math.Round(reading.Pitch))</span>
+            }
+        }
+        else if (status == TunerStatus.Listening)
+        {
+            <span class="text-muted">@L["Tuner_Listening"]</span>
+        }
+    </div>
+    <div class="tuner-direction">@Direction</div>
+</div>
+
+<div class="tuner-strings">
+    <button type="button" class="btn btn-default tuner-auto @(lockedString < 0 ? "active" : null)" @onclick="() => Lock(-1)">
+        @L["Tuner_Auto"]
+    </button>
+    @for (var s = 0; s < instrument.StringCount; s++)
+    {
+        var str = s;
+        var css = (lockedString == s ? "locked " : "") + (reading?.String == s ? "heard" : "");
+        <button type="button" class="btn btn-default tuner-string @css" @onclick="() => Lock(str)">@NoteName(instrument.Pitches[s])</button>
+    }
+</div>
+
+<div class="tuner-a4">
+    <button type="button" class="btn btn-default" @onclick="() => SetA4(a4 - 1)" disabled="@(a4 <= MinA4)">−</button>
+    <span>@TunerMath.NoteOf(69).ToString(conv)4 = @a4 Hz</span>
+    <button type="button" class="btn btn-default" @onclick="() => SetA4(a4 + 1)" disabled="@(a4 >= MaxA4)">+</button>
+</div>
+
+@if (State.Settings.ShowTips && !tipClosed)
+{
+    <div class="alert alert-info tuner-tip">
+        <button type="button" class="close" @onclick="() => tipClosed = true">&times;</button>
+        @L["Tuner_Hint"]
+    </div>
+}
+
+@code {
+    private const int MinA4 = 430;
+    private const int MaxA4 = 450;
+    /// <summary>Green zone of the gauge.</summary>
+    private const double InTuneCents = 5;
+    /// <summary>The string counts as tuned when it stays this close for <see cref="SettleTime"/>.</summary>
+    private const double TunedCents = 3;
+    private static readonly TimeSpan SettleTime = TimeSpan.FromSeconds(0.8);
+    /// <summary>Redraws per second at most.</summary>
+    private const int FrameRate = 15;
+    private const double Cx = 150, Cy = 150;
+    /// <summary>Degrees the needle turns per cent (±50 cents = ±60°).</summary>
+    private const double DegreesPerCent = 1.2;
+
+    private InstrumentInfo instrument;
+    private NamingConvention conv;
+    private int a4;
+    private int lockedString = -1;
+    private TunerStatus status;
+    private TunerReading reading;
+    private volatile TunerReading latest;
+    private volatile bool dirty;
+    private DateTime? inTuneSince;
+    private bool tuned;
+    private bool tipClosed;
+    private Timer timer;
+    private Window window;
+    private bool disposed;
+
+    protected override async Task OnInitializedAsync()
+    {
+        instrument = InstrumentInfo.Get(State.Settings.Instrument);
+        conv = State.Settings.conv;
+        a4 = Math.Clamp(State.Settings.TunerA4, MinA4, MaxA4);
+        Listener.ReadingChanged += OnReading;
+        timer = new Timer(_ => Redraw(), null, 1000 / FrameRate, 1000 / FrameRate);
+        window = Application.Current?.Windows.FirstOrDefault();
+        if (window != null)
+        {
+            // Release the microphone while the app is in the background.
+            window.Stopped += OnAppStopped;
+            window.Resumed += OnAppResumed;
+        }
+        await StartAsync();
+    }
+
+    private async Task StartAsync()
+    {
+        status = await Listener.StartAsync(instrument, a4, lockedString);
+        if (disposed)
+        {
+            Listener.Stop();
+        }
+    }
+
+    private void OnAppStopped(object sender, EventArgs e) => Listener.Stop();
+
+    private void OnAppResumed(object sender, EventArgs e) => InvokeAsync(async () =>
+    {
+        if (!disposed)
+        {
+            // Also picks up a microphone permission granted in the system settings meanwhile.
+            await StartAsync();
+            StateHasChanged();
+        }
+    });
+
+    private void OnReading(TunerReading value)
+    {
+        latest = value;
+        dirty = true;
+    }
+
+    private void Redraw()
+    {
+        if (!dirty)
+        {
+            return;
+        }
+        dirty = false;
+        InvokeAsync(() =>
+        {
+            reading = latest;
+            UpdateTuned();
+            StateHasChanged();
+        });
+    }
+
+    private void UpdateTuned()
+    {
+        if (reading == null)
+        {
+            // The last string tuned stays ticked until the next note.
+            inTuneSince = null;
+            return;
+        }
+        if (Math.Abs(reading.Cents) <= TunedCents)
+        {
+            inTuneSince ??= DateTime.UtcNow;
+            tuned = DateTime.UtcNow - inTuneSince >= SettleTime;
+        }
+        else
+        {
+            inTuneSince = null;
+            tuned = false;
+        }
+    }
+
+    private void Lock(int s)
+    {
+        lockedString = s;
+        if (s >= 0)
+        {
+            Player.PlayPitch(instrument.Pitches[s]);
+        }
+        Listener.Configure(instrument, a4, lockedString);
+    }
+
+    private void SetA4(int value)
+    {
+        a4 = Math.Clamp(value, MinA4, MaxA4);
+        State.Settings.TunerA4 = a4;
+        State.Settings.Save();
+        Listener.Configure(instrument, a4, lockedString);
+    }
+
+    private string NoteName(int pitch) => TunerMath.NoteOf(pitch).ToString(conv) + TunerMath.OctaveOf(pitch);
+
+    private string StateClass => reading == null ? "silent"
+        : tuned ? "tuned"
+        : Math.Abs(reading.Cents) <= InTuneCents ? "close"
+        : null;
+
+    private string Direction => reading == null ? (tuned ? "✓ " + L["Tuner_InTune"] : "")
+        : tuned || Math.Abs(reading.Cents) <= InTuneCents ? "✓ " + L["Tuner_InTune"]
+        : reading.Cents < 0 ? "↑ " + L["Tuner_TuneUp"]
+        : "↓ " + L["Tuner_TuneDown"];
+
+    /// <summary>Needle angle; beyond ±50 cents it rests at the edge of the scale.</summary>
+    private double NeedleAngle => Math.Clamp(reading.Cents, -55, 55) * DegreesPerCent;
+
+    private static (double X, double Y) Point(double cents, double radius)
+    {
+        var angle = cents * DegreesPerCent * Math.PI / 180;
+
+        return (Cx + radius * Math.Sin(angle), Cy - radius * Math.Cos(angle));
+    }
+
+    private static string Arc(double fromCents, double toCents)
+    {
+        var (x1, y1) = Point(fromCents, 127);
+        var (x2, y2) = Point(toCents, 127);
+
+        return $"M {F(x1)} {F(y1)} A 127 127 0 0 1 {F(x2)} {F(y2)}";
+    }
+
+    private static string F(double value) => value.ToString("0.##", CultureInfo.InvariantCulture);
+
+    public void Dispose()
+    {
+        disposed = true;
+        Listener.ReadingChanged -= OnReading;
+        Listener.Stop();
+        timer?.Dispose();
+        if (window != null)
+        {
+            window.Stopped -= OnAppStopped;
+            window.Resumed -= OnAppResumed;
+        }
+    }
+}

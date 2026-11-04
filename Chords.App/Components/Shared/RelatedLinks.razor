@@ -1,0 +1,21 @@
+@* "See also" list at the end of a page, leading to the pages that continue what the user is doing. *@
+<div class="related">
+    <div class="related-heading">@L["Related_Title"]</div>
+    <div class="list-group">
+        @foreach (var item in Pages)
+        {
+            <a href="@item.Href" class="list-group-item related-link">
+                <Icon Name="@item.Icon" />
+                <span>@(Titles?.GetValueOrDefault(item) ?? L[item.TitleKey])</span>
+                <Icon Name="chevron" Size="18" Class="related-chevron" />
+            </a>
+        }
+    </div>
+</div>
+
+@code {
+    [Parameter, EditorRequired] public AppPage[] Pages { get; set; }
+
+    /// <summary>Optional titles that replace the page title, e.g. "Progressions in this key".</summary>
+    [Parameter] public Dictionary<AppPage, string> Titles { get; set; }
+}

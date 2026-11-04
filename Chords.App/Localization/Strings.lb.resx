@@ -98,4 +98,20 @@
   <data name="Style_Klezmer" xml:space="preserve"><value>Klezmer</value></data>
   <data name="Prog_Generate" xml:space="preserve"><value>Akkordfolg generéieren</value></data>
   <data name="Prog_Hint" xml:space="preserve"><value>Tipp op eng Akkordfolg fir hir Diagrammer ze gesinn; ‹ › wiesselt de Grëff. ▶ spillt se of, nach eng Kéier tippen stoppt.</value></data>
+  <data name="Nav_Tuner" xml:space="preserve"><value>Stëmmgerät</value></data>
+  <data name="Tuner_Hint" xml:space="preserve"><value>Tipp op eng Saite, fir se ze héieren an nëmmen déi ze stëmmen; Auto wielt déi noosten Saite.</value></data>
+  <data name="Tuner_Listening" xml:space="preserve"><value>Spill eng Saite…</value></data>
+  <data name="Tuner_InTune" xml:space="preserve"><value>Gestëmmt</value></data>
+  <data name="Tuner_TuneUp" xml:space="preserve"><value>Méi héich stëmmen</value></data>
+  <data name="Tuner_TuneDown" xml:space="preserve"><value>Méi déif stëmmen</value></data>
+  <data name="Tuner_Auto" xml:space="preserve"><value>Auto</value></data>
+  <data name="Tuner_MicDenied" xml:space="preserve"><value>D'Stëmmgerät brauch Zougang zum Mikro.</value></data>
+  <data name="Tuner_OpenSettings" xml:space="preserve"><value>Astellungen opmaachen</value></data>
+  <data name="Tuner_MicError" xml:space="preserve"><value>De Mikro kann net gestart ginn.</value></data>
+  <data name="Tab_Chords" xml:space="preserve"><value>Akkorden</value></data>
+  <data name="Tab_Favorites" xml:space="preserve"><value>Favoritten</value></data>
+  <data name="Tab_Theory" xml:space="preserve"><value>Theorie</value></data>
+  <data name="Tab_More" xml:space="preserve"><value>Méi</value></data>
+  <data name="Group_Tools" xml:space="preserve"><value>Tools</value></data>
+  <data name="Related_Title" xml:space="preserve"><value>Kuckt och</value></data>
 </root>

@@ -98,4 +98,20 @@
   <data name="Style_Klezmer" xml:space="preserve"><value>क्लेझमर</value></data>
   <data name="Prog_Generate" xml:space="preserve"><value>प्रोग्रेशन तयार करा</value></data>
   <data name="Prog_Hint" xml:space="preserve"><value>डायग्राम पाहण्यासाठी प्रोग्रेशनवर टॅप करा; ‹ › फिंगरिंग बदलते. ▶ ते वाजवते, थांबवण्यासाठी पुन्हा टॅप करा.</value></data>
+  <data name="Nav_Tuner" xml:space="preserve"><value>ट्यूनर</value></data>
+  <data name="Tuner_Hint" xml:space="preserve"><value>तार ऐकण्यासाठी आणि फक्त तीच ट्यून करण्यासाठी त्यावर टॅप करा; ऑटो सर्वात जवळची तार निवडते.</value></data>
+  <data name="Tuner_Listening" xml:space="preserve"><value>एखादी तार वाजवा…</value></data>
+  <data name="Tuner_InTune" xml:space="preserve"><value>ट्यून आहे</value></data>
+  <data name="Tuner_TuneUp" xml:space="preserve"><value>ताणा</value></data>
+  <data name="Tuner_TuneDown" xml:space="preserve"><value>सैल करा</value></data>
+  <data name="Tuner_Auto" xml:space="preserve"><value>ऑटो</value></data>
+  <data name="Tuner_MicDenied" xml:space="preserve"><value>ट्यूनरला मायक्रोफोनचा प्रवेश हवा आहे.</value></data>
+  <data name="Tuner_OpenSettings" xml:space="preserve"><value>सेटिंग्ज उघडा</value></data>
+  <data name="Tuner_MicError" xml:space="preserve"><value>मायक्रोफोन सुरू करता येत नाही.</value></data>
+  <data name="Tab_Chords" xml:space="preserve"><value>कॉर्ड</value></data>
+  <data name="Tab_Favorites" xml:space="preserve"><value>आवडते</value></data>
+  <data name="Tab_Theory" xml:space="preserve"><value>सिद्धांत</value></data>
+  <data name="Tab_More" xml:space="preserve"><value>अधिक</value></data>
+  <data name="Group_Tools" xml:space="preserve"><value>साधने</value></data>
+  <data name="Related_Title" xml:space="preserve"><value>हेही पाहा</value></data>
 </root>

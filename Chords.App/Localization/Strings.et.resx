@@ -98,4 +98,20 @@
   <data name="Style_Klezmer" xml:space="preserve"><value>Klezmer</value></data>
   <data name="Prog_Generate" xml:space="preserve"><value>Loo akordijärgnevus</value></data>
   <data name="Prog_Hint" xml:space="preserve"><value>Puuduta järgnevust, et näha diagramme; ‹ › vahetab sõrmestust. ▶ mängib selle, puuduta uuesti peatamiseks.</value></data>
+  <data name="Nav_Tuner" xml:space="preserve"><value>Häälestaja</value></data>
+  <data name="Tuner_Hint" xml:space="preserve"><value>Puuduta keelt, et seda kuulda ja häälestada ainult seda; Auto valib lähima keele.</value></data>
+  <data name="Tuner_Listening" xml:space="preserve"><value>Mängi keelt…</value></data>
+  <data name="Tuner_InTune" xml:space="preserve"><value>Hääles</value></data>
+  <data name="Tuner_TuneUp" xml:space="preserve"><value>Pinguta</value></data>
+  <data name="Tuner_TuneDown" xml:space="preserve"><value>Lõdvenda</value></data>
+  <data name="Tuner_Auto" xml:space="preserve"><value>Auto</value></data>
+  <data name="Tuner_MicDenied" xml:space="preserve"><value>Häälestaja vajab ligipääsu mikrofonile.</value></data>
+  <data name="Tuner_OpenSettings" xml:space="preserve"><value>Ava seaded</value></data>
+  <data name="Tuner_MicError" xml:space="preserve"><value>Mikrofoni ei saa käivitada.</value></data>
+  <data name="Tab_Chords" xml:space="preserve"><value>Akordid</value></data>
+  <data name="Tab_Favorites" xml:space="preserve"><value>Lemmikud</value></data>
+  <data name="Tab_Theory" xml:space="preserve"><value>Teooria</value></data>
+  <data name="Tab_More" xml:space="preserve"><value>Veel</value></data>
+  <data name="Group_Tools" xml:space="preserve"><value>Tööriistad</value></data>
+  <data name="Related_Title" xml:space="preserve"><value>Vaata ka</value></data>
 </root>

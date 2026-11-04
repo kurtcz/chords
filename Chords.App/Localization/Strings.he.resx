@@ -99,4 +99,20 @@
   <data name="Style_Klezmer" xml:space="preserve"><value>כליזמר</value></data>
   <data name="Prog_Generate" xml:space="preserve"><value>יצירת מהלך</value></data>
   <data name="Prog_Hint" xml:space="preserve"><value>הקישו על מהלך כדי לראות את הדיאגרמות; ‹ › מחליף את האצבוע. ▶ מנגן אותו, הקשה נוספת עוצרת.</value></data>
+  <data name="Nav_Tuner" xml:space="preserve"><value>מכוון</value></data>
+  <data name="Tuner_Hint" xml:space="preserve"><value>הקישו על מיתר כדי לשמוע אותו ולכוון רק אותו; אוטומטי בוחר את המיתר הקרוב ביותר.</value></data>
+  <data name="Tuner_Listening" xml:space="preserve"><value>נגנו על מיתר…</value></data>
+  <data name="Tuner_InTune" xml:space="preserve"><value>מכוון</value></data>
+  <data name="Tuner_TuneUp" xml:space="preserve"><value>הדקו</value></data>
+  <data name="Tuner_TuneDown" xml:space="preserve"><value>שחררו</value></data>
+  <data name="Tuner_Auto" xml:space="preserve"><value>אוטומטי</value></data>
+  <data name="Tuner_MicDenied" xml:space="preserve"><value>המכוון צריך גישה למיקרופון.</value></data>
+  <data name="Tuner_OpenSettings" xml:space="preserve"><value>פתיחת ההגדרות</value></data>
+  <data name="Tuner_MicError" xml:space="preserve"><value>לא ניתן להפעיל את המיקרופון.</value></data>
+  <data name="Tab_Chords" xml:space="preserve"><value>אקורדים</value></data>
+  <data name="Tab_Favorites" xml:space="preserve"><value>מועדפים</value></data>
+  <data name="Tab_Theory" xml:space="preserve"><value>תאוריה</value></data>
+  <data name="Tab_More" xml:space="preserve"><value>עוד</value></data>
+  <data name="Group_Tools" xml:space="preserve"><value>כלים</value></data>
+  <data name="Related_Title" xml:space="preserve"><value>ראו גם</value></data>
 </root>
