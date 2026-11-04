@@ -77,7 +77,7 @@
               @onclick="() => ToggleOpen(str)" />
 
         @* Fret cells *@
-        @for (var fret = 1; fret <= Frets && !instrument.IsShortString(s); fret++)
+        @for (var fret = instrument.FirstFrets[s] + 1; fret <= Frets; fret++)
         {
             var f = fret;
             @if (frets[s] == fret)
@@ -139,7 +139,7 @@
         Recognize();
     }
 
-    private Note Sounding(int s) => instrument.Strings[s].NoteAtChromaticDistance(frets[s]);
+    private Note Sounding(int s) => instrument.NoteAt(s, frets[s]);
 
     private string NoteName(int s) => Sounding(s).ToString(conv);
 
@@ -178,7 +178,7 @@
             return;
         }
         // The lowest pitch, not the lowest string – the ukulele is tuned re-entrant.
-        bassNote = Sounding(sounding.OrderBy(s => instrument.Pitches[s] + frets[s]).First());
+        bassNote = Sounding(sounding.OrderBy(s => instrument.Pitches[s] + instrument.Semitones(s, frets[s])).First());
         chords = Chord.FindByNotes(notes, bassNote);
     }
 

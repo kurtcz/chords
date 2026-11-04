@@ -24,7 +24,7 @@ namespace Chords.Core.Models
         public bool AllowMutedStrings { get; }
         /// <summary>
         /// Fret where each string's nut sits: 0 for full-length strings, 5 for the banjo's short 5th string.
-        /// A short string is only played open (or muted) – its first frets do not exist.
+        /// A short string can be fretted only beyond its nut; it then sounds <c>fret - FirstFret</c> half-steps above open.
         /// </summary>
         public int[] FirstFrets { get; }
 
@@ -44,8 +44,17 @@ namespace Chords.Core.Models
             FirstFrets = firstFrets;
         }
 
-        /// <summary>Whether a string is shorter than the neck and so only sounds open (banjo's 5th string).</summary>
+        /// <summary>Whether a string is shorter than the neck (banjo's 5th string).</summary>
         public bool IsShortString(int s) => FirstFrets[s] > 0;
+
+        /// <summary>Whether a string can be pressed at a fret (0 = open): a short string only beyond its own nut.</summary>
+        public bool CanFret(int s, int fret) => fret <= 0 || fret > FirstFrets[s];
+
+        /// <summary>Half-steps a string sounds above its open note when pressed at a fret of the neck.</summary>
+        public int Semitones(int s, int fret) => fret <= 0 ? 0 : fret - FirstFrets[s];
+
+        /// <summary>Note a string sounds when pressed at a fret of the neck (0 = open).</summary>
+        public Note NoteAt(int s, int fret) => Strings[s].NoteAtChromaticDistance(Semitones(s, fret));
 
         /// <summary>
         /// Lowest string a fret wire reaches: on the banjo frets 1–4 lie under four strings only,

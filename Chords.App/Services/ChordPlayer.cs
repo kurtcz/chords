@@ -18,7 +18,7 @@ public class ChordPlayer(ISoundBank soundBank)
                 {
                     continue;
                 }
-                var (sample, rate) = SampleFor(instrument.Pitches[i], positions[i]);
+                var (sample, rate) = SampleFor(instrument.Pitches[i], instrument.Semitones(i, positions[i]));
 
                 soundBank.PlayString(sample, rate, volume);
                 await Task.Delay(pass == 0 ? 200 : 50);

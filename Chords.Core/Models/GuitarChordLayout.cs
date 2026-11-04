@@ -33,11 +33,15 @@ namespace Chords.Core.Models
         private static Note[][] StringNotes(Instrument instrument)
         {
             return _stringNotesCache.GetOrAdd(instrument, i =>
-                InstrumentInfo.Get(i).Strings
-                              .Select(s => Enumerable.Range(0, MaxPosition + 1)
-                                                     .Select(pos => s.NoteAtChromaticDistance(pos))
-                                                     .ToArray())
-                              .ToArray());
+            {
+                var info = InstrumentInfo.Get(i);
+
+                return Enumerable.Range(0, info.StringCount)
+                                 .Select(s => Enumerable.Range(0, MaxPosition + 1)
+                                                        .Select(pos => info.NoteAt(s, info.CanFret(s, pos) ? pos : 0))
+                                                        .ToArray())
+                                 .ToArray();
+            });
         }
 
         public GuitarChordLayout(Chord chord, int[] positions, GuitarChordType? guitarChordType = null, Instrument instrument = Instrument.Guitar)
@@ -92,19 +96,16 @@ namespace Chords.Core.Models
             for (var s = 0; s < info.StringCount; s++)
             {
                 positionsPerString[s] = new HashSet<int>();
-                //a short string (banjo's drone) sounds open when its note belongs to the chord, otherwise it is muted
-                if (info.IsShortString(s))
-                {
-                    positionsPerString[s].Add(chord.Notes.Any(i => Note.Normalize(i) == stringNotes[s][0]) ? 0 : X);
-                    continue;
-                }
-                if (info.AllowMutedStrings)
+                //a short string (banjo's drone) may be muted unless it can ring open
+                if (info.AllowMutedStrings ||
+                    (info.IsShortString(s) && !chord.Notes.Any(i => Note.Normalize(i) == stringNotes[s][0])))
                 {
                     positionsPerString[s].Add(X);
                 }
                 for (var pos = 0; pos <= maxFret + 3 && pos <= MaxPosition; pos++)
                 {
-                    if (chord.Notes.Any(i => Note.Normalize(i) == stringNotes[s][pos]))
+                    if (info.CanFret(s, pos) &&
+                        chord.Notes.Any(i => Note.Normalize(i) == stringNotes[s][pos]))
                     {
                         positionsPerString[s].Add(pos);
                     }
@@ -234,6 +235,12 @@ namespace Chords.Core.Models
             //distance between positions should not exceed 4 frets
             var usedPositions = Positions.Where(i => i > 0).ToArray();
             if (usedPositions.Length > 0 && usedPositions.Max() - usedPositions.Min() + 1 > 4)
+            {
+                return false;
+            }
+            //four fingers, the index finger may hold a barre across the lowest fret
+            if (usedPositions.Length > 4 &&
+                usedPositions.Length - usedPositions.Count(i => i == usedPositions.Min()) + 1 > 4)
             {
                 return false;
             }
