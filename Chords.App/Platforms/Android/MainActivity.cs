@@ -7,7 +7,7 @@ namespace Chords.App;
 // Xamarin version point at it.
 [Activity(
     Name = "com.tnemec.chords.android.MainActivity",
-    Label = "Guitar Chords",
+    Label = "ChordGuide",
     Theme = "@style/Maui.SplashTheme",
     MainLauncher = true,
     Exported = true,

@@ -1,2 +1,2 @@
-# chords
-Guitar chords generator
+# ChordGuide
+Guitar chords, keys, progressions and a tuner.
