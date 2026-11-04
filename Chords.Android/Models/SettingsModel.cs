@@ -9,7 +9,7 @@ namespace Chords.Android.Models
 {
     public class SettingsModel
     {
-		public static string FilePath = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "settings.json");
+		public static string FilePath = AppPaths.File("settings.json");
 		public NamingConvention conv { get; set; } = NamingConvention.English;
         public int maxFret { get; set; } = 10;
         public bool ShowBasicChordTypes { get; set; } = true;

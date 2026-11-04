@@ -1,12 +1,13 @@
-﻿﻿﻿﻿﻿using System;
+using System;
 using Android.App;
-using Android.Content;
+using Android.Content.PM;
+using Android.Graphics;
 using Android.Media;
-using Android.Runtime;
 using Android.Views;
 using Android.Webkit;
-using Android.Widget;
+using Android.Window;
 using Android.OS;
+using Java.Interop;
 using System.Collections.Specialized;
 using System.Threading.Tasks;
 using System.Linq;
@@ -19,23 +20,30 @@ using System.Collections.Generic;
 
 namespace Chords.Android
 {
-    [Activity(Label = "Guitar Chords", MainLauncher = true, Icon = "@mipmap/icon")]
+    [Activity(
+        Name = "com.tnemec.chords.android.MainActivity",
+        Label = "Guitar Chords",
+        MainLauncher = true,
+        Exported = true,
+        Icon = "@mipmap/icon",
+        Theme = "@android:style/Theme.Material.Light.NoActionBar",
+        ConfigurationChanges = ConfigChanges.Orientation | ConfigChanges.ScreenSize | ConfigChanges.ScreenLayout | ConfigChanges.SmallestScreenSize)]
     public class MainActivity : Activity
     {
+        private const string HybridScheme = "hybrid:";
+        private static readonly Color NavbarColor = Color.ParseColor("#222222");
+
         private static Bundle _bundle;
         private WebView _webView;
         private HybridWebViewClient _viewClient;
+        private BackCallback _backCallback;
+        private bool _backCallbackRegistered;
+        // Pages are loaded with LoadDataWithBaseURL, so history items carry no usable URL or title;
+        // remember which page each history index holds instead.
+        private readonly System.Collections.Generic.Dictionary<int, string> _historyPages = new();
+        private string _pendingPage;
 		private static SoundPool _soundPool;
         private static int[] _soundIds;
-        private static int[] _nextStringPosition =
-        {
-            5,
-            5,
-            5,
-            4,
-            4,
-            int.MaxValue
-        };
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -44,18 +52,30 @@ namespace Chords.Android
 			Favorites.Init();
 			// Set our view from the "main" layout resource
 			SetContentView(Resource.Layout.Main);
+            VolumeControlStream = global::Android.Media.Stream.Music;
 
 			_webView = FindViewById<WebView>(Resource.Id.webView);
             _webView.Settings.JavaScriptEnabled = true;
 
             // Use subclassed WebViewClient to intercept hybrid native calls
-            _viewClient = new HybridWebViewClient();
+            _viewClient = new HybridWebViewClient(this);
             _webView.SetWebViewClient(_viewClient);
+            _webView.AddJavascriptInterface(new HybridBridge(_viewClient, _webView), HybridBridge.Name);
             _webView.LongClick += (object sender, View.LongClickEventArgs e) => { e.Handled = true; };
+
+            SetupEdgeToEdge((View)_webView.Parent);
+            SetupBackNavigation();
 
             if (_soundPool == null)
             {
-                _soundPool = new SoundPool(6, Stream.Music, 0);
+                var audioAttributes = new AudioAttributes.Builder()
+                    .SetUsage(AudioUsageKind.Media)
+                    .SetContentType(AudioContentType.Music)
+                    .Build();
+                _soundPool = new SoundPool.Builder()
+                    .SetMaxStreams(6)
+                    .SetAudioAttributes(audioAttributes)
+                    .Build();
                 _soundIds = new int[6];
                 _soundIds[0] = _soundPool.Load(Application, Resource.Raw.E6, 1);
                 _soundIds[1] = _soundPool.Load(Application, Resource.Raw.A5, 1);
@@ -71,6 +91,7 @@ namespace Chords.Android
             else
             {
                 _webView.RestoreState(_bundle);
+                UpdateBackCallback();
             }
         }
 
@@ -92,10 +113,12 @@ namespace Chords.Android
 
                     return true;
                 }
+                // Android 13+ delivers back through OnBackInvokedCallback (see SetupBackNavigation).
                 else if (keyCode == Keycode.Back &&
+                    !OperatingSystem.IsAndroidVersionAtLeast(33) &&
                     _webView.CanGoBack())
                 {
-                    _webView.GoBack();
+                    GoBack();
 
                     return true;
                 }
@@ -104,8 +127,164 @@ namespace Chords.Android
             return base.OnKeyDown(keyCode, e);
         }
 
+        /// <summary>
+        /// Apps targeting API 35+ are drawn edge-to-edge on Android 15+, so pad the content
+        /// to keep the fixed HTML navbar out from under the status and navigation bars.
+        /// </summary>
+        private static void SetupEdgeToEdge(View root)
+        {
+            root.SetBackgroundColor(NavbarColor);
+            if (!OperatingSystem.IsAndroidVersionAtLeast(35))
+            {
+                return;
+            }
+            root.SetOnApplyWindowInsetsListener(new SystemBarsInsetsListener());
+            root.RequestApplyInsets();
+        }
+
+        /// <summary>
+        /// Apps targeting API 36 no longer receive KEYCODE_BACK on Android 16 (predictive back).
+        /// A callback is registered only while the WebView has history, so that otherwise
+        /// the system back-to-home animation is used.
+        /// </summary>
+        private void SetupBackNavigation()
+        {
+            if (!OperatingSystem.IsAndroidVersionAtLeast(33))
+            {
+                return;
+            }
+            _backCallback = new BackCallback(() =>
+            {
+                GoBack();
+                UpdateBackCallback();
+            });
+        }
+
+        /// <summary>
+        /// The ShowChordResults page immediately ajax-loads ShowChordLayouts as a new history
+        /// entry, so stepping back onto it would just bounce forward again; skip over it.
+        /// </summary>
+        private void GoBack()
+        {
+            var history = _webView.CopyBackForwardList();
+            var index = history.CurrentIndex;
+            var steps = -1;
+
+            if (index >= 2 &&
+                PageAt(index) == "ShowChordLayouts" &&
+                PageAt(index - 1) == "ShowChordResults")
+            {
+                steps = -2;
+            }
+            if (_webView.CanGoBackOrForward(steps))
+            {
+                _webView.GoBackOrForward(steps);
+            }
+        }
+
+        private string PageAt(int index) => _historyPages.TryGetValue(index, out var page) ? page : null;
+
+        /// <summary>Called on the UI thread right before a page is loaded.</summary>
+        internal void OnPageLoading(string pageName) => _pendingPage = pageName;
+
+        internal void OnHistoryUpdated()
+        {
+            if (_pendingPage != null)
+            {
+                _historyPages[_webView.CopyBackForwardList().CurrentIndex] = _pendingPage;
+                _pendingPage = null;
+            }
+            UpdateBackCallback();
+        }
+
+        internal void UpdateBackCallback()
+        {
+            if (_backCallback == null || !OperatingSystem.IsAndroidVersionAtLeast(33))
+            {
+                return;
+            }
+            var canGoBack = _webView.CanGoBack();
+
+            if (canGoBack == _backCallbackRegistered)
+            {
+                return;
+            }
+            if (canGoBack)
+            {
+                OnBackInvokedDispatcher.RegisterOnBackInvokedCallback(IOnBackInvokedDispatcher.PriorityDefault, _backCallback);
+            }
+            else
+            {
+                OnBackInvokedDispatcher.UnregisterOnBackInvokedCallback(_backCallback);
+            }
+            _backCallbackRegistered = canGoBack;
+        }
+
+        private sealed class BackCallback : Java.Lang.Object, IOnBackInvokedCallback
+        {
+            private readonly Action _onBack;
+
+            public BackCallback(Action onBack) => _onBack = onBack;
+
+            public void OnBackInvoked() => _onBack();
+        }
+
+        private sealed class SystemBarsInsetsListener : Java.Lang.Object, View.IOnApplyWindowInsetsListener
+        {
+            public WindowInsets OnApplyWindowInsets(View v, WindowInsets insets)
+            {
+                var bars = insets.GetInsets(WindowInsets.Type.SystemBars() | WindowInsets.Type.DisplayCutout());
+
+                v.SetPadding(bars.Left, bars.Top, bars.Right, bars.Bottom);
+
+                return WindowInsets.Consumed;
+            }
+        }
+
+        /// <summary>
+        /// The views fire-and-forget $.ajax('hybrid:...') requests. Modern WebView refuses
+        /// XHR to unknown schemes before any WebViewClient callback runs, so the pages get a
+        /// small shim (see <see cref="HybridWebViewClient.InjectBridge"/>) that routes those
+        /// requests to this JavaScript interface instead.
+        /// </summary>
+        private sealed class HybridBridge : Java.Lang.Object
+        {
+            public const string Name = "ChordsHost";
+
+            private readonly HybridWebViewClient _client;
+            private readonly WebView _webView;
+
+            public HybridBridge(HybridWebViewClient client, WebView webView)
+            {
+                _client = client;
+                _webView = webView;
+            }
+
+            [JavascriptInterface]
+            [Export("invoke")]
+            public void Invoke(string url)
+            {
+                // Called on the WebView's JavaBridge thread.
+                if (url != null && url.StartsWith(HybridScheme))
+                {
+                    _client.HandleInBackground(_webView, url);
+                }
+            }
+        }
+
         private class HybridWebViewClient : WebViewClient
         {
+            private const string BridgeScript =
+                "<script>(function(){" +
+                "var p=XMLHttpRequest.prototype,o=p.open,s=p.send,h=p.setRequestHeader;" +
+                "p.open=function(m,u){this.__hybrid=(typeof u==='string'&&u.indexOf('" + HybridScheme + "')===0)?u:null;" +
+                "if(!this.__hybrid)return o.apply(this,arguments);};" +
+                "p.setRequestHeader=function(){if(!this.__hybrid)return h.apply(this,arguments);};" +
+                "p.send=function(){if(this.__hybrid){" + HybridBridge.Name + ".invoke(this.__hybrid);return;}return s.apply(this,arguments);};" +
+                "})();</script>";
+
+            private readonly MainActivity _activity;
+            private readonly object _sync = new object();
 			private Note _currentRoot;
 			private ChordType _currentChordType;
             private bool _allowPartial;
@@ -113,41 +292,72 @@ namespace Chords.Android
             private Note[] _allRoots;
             private string[] _allChordTypes;
 
-            public override void OnReceivedError(WebView view, IWebResourceRequest request, WebResourceError error)
+            public HybridWebViewClient(MainActivity activity)
             {
-				//Hack to handle $.ajax('hybrid:xxx'); calls that are failing with ERR_UNKNOWN_URL_SCHEME
-                //Alternatively we could also override ShouldInterceptRequest()
-				var scheme = "hybrid:";
-                var url = request.Url.ToString();
-
-                if (url.StartsWith(scheme))
-                {
-                    //fetch the page in the background thread as this is an ajax call so we do not want to block the webview
-                    Task.Run(() => ShouldOverrideUrlLoading(view, url));
-                }
-                else
-                {
-                    base.OnReceivedError(view, request, error);
-                }
+                _activity = activity;
             }
+
+            public override void DoUpdateVisitedHistory(WebView view, string url, bool isReload)
+            {
+                base.DoUpdateVisitedHistory(view, url, isReload);
+                _activity.OnHistoryUpdated();
+            }
+
+            public override bool ShouldOverrideUrlLoading(WebView webView, IWebResourceRequest request)
+                => ShouldOverrideUrlLoading(webView, request.Url?.ToString());
 
             public override bool ShouldOverrideUrlLoading(WebView webView, string url)
             {
                 // If the URL is not our own custom scheme, just let the webView load the URL as usual
-                var scheme = "hybrid:";
-
-                if (!url.StartsWith(scheme))
+                if (url == null || !url.StartsWith(HybridScheme))
                 {
                     return false;
                 }
+                HandleInBackground(webView, url);
 
+                return true;
+            }
+
+            /// <summary>
+            /// Renders pages off the UI thread (chord layout generation and chord playback can
+            /// take a while); every WebView call is posted back to the UI thread.
+            /// </summary>
+            public void HandleInBackground(WebView webView, string url)
+            {
+                Task.Run(() =>
+                {
+                    try
+                    {
+                        var method = url.Substring(HybridScheme.Length).Split('?')[0];
+
+                        if (method == "PlayChord")
+                        {
+                            // Playback only touches the SoundPool; don't block navigation while it plays.
+                            HandleUrl(webView, url);
+                        }
+                        else
+                        {
+                            lock (_sync)
+                            {
+                                HandleUrl(webView, url);
+                            }
+                        }
+                    }
+                    catch (Exception e)
+                    {
+                        System.Diagnostics.Debug.WriteLine($"Error handling {url}\n{e}");
+                    }
+                });
+            }
+
+            private bool HandleUrl(WebView webView, string url)
+            {
                 // This handler will treat everything between the protocol and "?"
                 // as the method name.  The querystring has all of the parameters.
-                var resources = url.Substring(scheme.Length).Split('?');
+                var resources = url.Substring(HybridScheme.Length).Split('?');
                 var method = resources[0];
                 var parameters = resources.Length > 1 ? System.Web.HttpUtility.ParseQueryString(resources[1]) : new NameValueCollection();
 
-				webView.ScrollbarFadingEnabled = true;  //default value unless changed
 				if (method == "ShowChord")
                 {
                     ShowChord(webView, parameters);
@@ -195,6 +405,33 @@ namespace Chords.Android
 				return true;
             }
 
+            private void LoadPage(WebView webView, string page, string pageName)
+            {
+                page = InjectBridge(page);
+                webView.Post(() =>
+                {
+                    webView.ScrollbarFadingEnabled = true;  //default value unless changed
+                    _activity.OnPageLoading(pageName);
+                    // Load the rendered HTML into the view with a base URL
+                    // that points to the root of the bundled Assets folder
+                    webView.LoadDataWithBaseURL($"file:///android_asset/?page={pageName}", page, "text/html", "UTF-8", null);
+                });
+            }
+
+            private static void RunScript(WebView webView, string js)
+            {
+                webView.Post(() => webView.EvaluateJavascript(js, null));
+            }
+
+            internal static string InjectBridge(string page)
+            {
+                var head = page.IndexOf("<head>", StringComparison.OrdinalIgnoreCase);
+
+                return head < 0
+                    ? BridgeScript + page
+                    : page.Insert(head + "<head>".Length, BridgeScript);
+            }
+
             public void ShowChord(WebView webView, NameValueCollection parameters)
             {
                 string page;
@@ -213,9 +450,7 @@ namespace Chords.Android
 				var template = new ShowChordView { Model = model };
 
                 page = template.GenerateString();
-                // Load the rendered HTML into the view with a base URL 
-                // that points to the root of the bundled Assets folder
-                webView.LoadDataWithBaseURL("file:///android_asset/?page=ShowChord", page, "text/html", "UTF-8", null);
+                LoadPage(webView, page, "ShowChord");
             }
 
 			public void ShowChordResults(WebView webView, NameValueCollection parameters)
@@ -268,7 +503,7 @@ namespace Chords.Android
 					page = template.GenerateString();
 				}
 
-				webView.LoadDataWithBaseURL("file:///android_asset/?page=ShowChordResults", page, "text/html", "UTF-8", null);
+				LoadPage(webView, page, "ShowChordResults");
             }
 
 			public void ShowChordLayouts(WebView webView, NameValueCollection parameters)
@@ -305,7 +540,7 @@ namespace Chords.Android
                 var page = template.GenerateString();
 
                 //webView.ScrollbarFadingEnabled = false;
-				webView.LoadDataWithBaseURL("file:///android_asset/?page=ShowChordLayouts", page, "text/html", "UTF-8", null);
+				LoadPage(webView, page, "ShowChordLayouts");
             }
 
 			public void FindChord(WebView webView, NameValueCollection parameters)
@@ -369,7 +604,7 @@ namespace Chords.Android
 					page = template.GenerateString();
 				}
 
-				webView.LoadDataWithBaseURL("file:///android_asset/?page=FindChord", page, "text/html", "UTF-8", null);
+				LoadPage(webView, page, "FindChord");
 			}
 
             public void PlayChord(WebView webView, NameValueCollection parameters)
@@ -448,7 +683,7 @@ namespace Chords.Android
 				var template = new CircleView() { Model = model };
 				var page = template.GenerateString();
 
-                webView.LoadDataWithBaseURL("file:///android_asset/?page=CircleOfFifths", page, "text/html", "UTF-8", null);
+                LoadPage(webView, page, "CircleOfFifths");
 			}
 
             public void AddToFavorites(WebView webView, NameValueCollection parameters)
@@ -474,7 +709,7 @@ namespace Chords.Android
 					Favorites.Save();
 
 					var js = string.Format("setFavorite('.chord-layout[data-positions=\"{0}\"]', '{1}');", parameters["positions"], true);
-					webView.LoadUrl("javascript:" + js);
+					RunScript(webView, js);
 				}
                 catch(Exception e)
                 {
@@ -505,7 +740,7 @@ namespace Chords.Android
                     Favorites.Save();
 
                     var js = string.Format("setFavorite('.chord-layout[data-positions=\"{0}\"]', '{1}');", parameters["positions"], false);
-                    webView.LoadUrl("javascript:" + js);
+                    RunScript(webView, js);
                 }
 				catch (Exception e)
 				{
@@ -531,7 +766,7 @@ namespace Chords.Android
 				var template = new FavoriteChordsView() { Model = model };
 				var page = template.GenerateString();
 
-				webView.LoadDataWithBaseURL("file:///android_asset/?page=FavoriteChords", page, "text/html", "UTF-8", null);
+				LoadPage(webView, page, "FavoriteChords");
             }
 
             public void Settings(WebView webView, NameValueCollection parameters)
@@ -546,7 +781,7 @@ namespace Chords.Android
                 var template = new SettingsView() { Model = _currentSettings };
 				var page = template.GenerateString();
 
-				webView.LoadDataWithBaseURL("file:///android_asset/?page=Settings", page, "text/html", "UTF-8", null);
+				LoadPage(webView, page, "Settings");
 			}
 		}
     }

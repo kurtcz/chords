@@ -11,7 +11,7 @@ namespace Chords.Android
     public static class Favorites
     {
         //public static string FilePath = Path.Combine(Environment.ExternalStorageDirectory.AbsolutePath, "favorites.json");
-        public static string FilePath = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "favorites.json");
+        public static string FilePath = AppPaths.File("favorites.json");
         public static Dictionary<Chord, HashSet<GuitarChordLayout>> Chords { get; }
 
         static Favorites()

@@ -1,7 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionName="1.0" package="com.tnemec.chords.android" android:versionCode="10">
-	<uses-sdk android:minSdkVersion="10" />
-	<application android:allowBackup="true" android:icon="@mipmap/icon" android:label="@string/app_name">
-		<activity android:name="MainActivity" android:configChanges="orientation|screenSize"></activity>
+<!-- package, versionCode/versionName and minSdk/targetSdk come from Chords.Android.csproj -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+	<application
+		android:allowBackup="true"
+		android:icon="@mipmap/icon"
+		android:label="@string/app_name"
+		android:enableOnBackInvokedCallback="true">
 	</application>
 </manifest>

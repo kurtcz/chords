@@ -377,7 +377,7 @@ WriteLiteral(@"',
     </div>
     <hr />
     <footer>
-        <p>&copy; 2017 - TomÃ¡Å¡ NÄmec</p>
+        <p>&copy; 2017 - Tomáš Němec</p>
     </footer>
 </body>
 </html>
