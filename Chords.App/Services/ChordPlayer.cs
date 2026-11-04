@@ -7,8 +7,17 @@ public class ChordPlayer(ISoundBank soundBank)
     /// <summary>MIDI pitches of the recorded open guitar strings (sound bank indexes 0..5).</summary>
     private static readonly int[] SamplePitches = InstrumentInfo.Guitar.Pitches;
 
+    /// <summary>Pause between strings of the first, slow strum and of the second, fast one (ms).</summary>
+    private const int SlowStrumDelay = 350;
+    private const int FastStrumDelay = 50;
+    /// <summary>How long the last strum rings before another chord may start (ms).</summary>
+    private const int RingDelay = 500;
+
+    /// <summary>1 while a chord is playing; taps meanwhile are ignored so the sounds don't pile up.</summary>
+    private int _playing;
+
     /// <summary>Strums a chord diagram twice (slow, then fast). -1 = muted string.</summary>
-    public void PlayLayout(InstrumentInfo instrument, int[] positions, float volume = 1f) => Task.Run(async () =>
+    public void PlayLayout(InstrumentInfo instrument, int[] positions, float volume = 1f) => PlayExclusive(async () =>
     {
         for (var pass = 0; pass < 2; pass++)
         {
@@ -21,11 +30,31 @@ public class ChordPlayer(ISoundBank soundBank)
                 var (sample, rate) = SampleFor(instrument.Pitches[i], instrument.Semitones(i, positions[i]));
 
                 soundBank.PlayString(sample, rate, volume);
-                await Task.Delay(pass == 0 ? 200 : 50);
+                await Task.Delay(pass == 0 ? SlowStrumDelay : FastStrumDelay);
             }
-            await Task.Delay(200);
+            await Task.Delay(pass == 0 ? 200 : RingDelay);
         }
     });
+
+    /// <summary>Runs a playback unless another one is still in progress.</summary>
+    private void PlayExclusive(Func<Task> play)
+    {
+        if (Interlocked.CompareExchange(ref _playing, 1, 0) != 0)
+        {
+            return;
+        }
+        Task.Run(async () =>
+        {
+            try
+            {
+                await play();
+            }
+            finally
+            {
+                Volatile.Write(ref _playing, 0);
+            }
+        });
+    }
 
     /// <summary>
     /// Picks the highest recorded string not above the open string (on the guitar its own recording)
@@ -50,7 +79,7 @@ public class ChordPlayer(ISoundBank soundBank)
     }
 
     /// <summary>Plays the notes of a chord (English name, e.g. "F#m") as a quick arpeggio on the A string.</summary>
-    public void PlayChord(string id, float volume = 1f) => Task.Run(async () =>
+    public void PlayChord(string id, float volume = 1f) => PlayExclusive(async () =>
     {
         if (!Chord.TryParse(id, NamingConvention.English, out var chord))
         {
@@ -68,7 +97,8 @@ public class ChordPlayer(ISoundBank soundBank)
                 pos += 12;
             }
             soundBank.PlayString(1, Note.HalfStepsToPlayRate(pos), volume);
-            await Task.Delay(50);
+            await Task.Delay(FastStrumDelay);
         }
+        await Task.Delay(RingDelay);
     });
 }
