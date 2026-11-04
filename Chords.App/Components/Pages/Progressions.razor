@@ -5,6 +5,13 @@
 <TopNav Title="@L["Nav_Progressions"]" />
 
 <KeySelector Changed="KeyChanged" />
+<p class="key-scale">
+    <strong>@L["Key_ScaleNotes"]</strong>
+    @foreach (var note in Current.Scale.Notes)
+    {
+        <span>@note.ToString(conv) </span>
+    }
+</p>
 <div class="row vertical-align" style="margin-bottom: 15px">
     <span class="col-xs-9">@L["Key_Sevenths"]</span>
     <span class="col-xs-3 justify-right"><Toggle Value="State.KeySevenths" ValueChanged="SeventhsChanged" /></span>
@@ -48,6 +55,13 @@
                             var layouts = current.Layouts[i];
                             <div class="progression-chord">
                                 <a href="@ChordPage.Url(chord.Root, chord.ChordType.ToDescription(), true)">@Symbol(chord)</a>
+                                @* Tones outside the scale show where the melody material changes (a borrowed ♭VII, the leading tone of V in minor). *@
+                                <div class="progression-notes">
+                                    @foreach (var note in chord.Notes)
+                                    {
+                                        <span class="@(InScale(note) ? null : "out-of-scale")">@note.ToString(conv)</span>
+                                    }
+                                </div>
                                 @if (layouts.Length == 0)
                                 {
                                     <div class="text-muted">–</div>
@@ -141,6 +155,9 @@
         Build();
         await Select(generated);
     }
+
+    /// <summary>Whether the note belongs to the scale shown for the key (enharmonics are equal).</summary>
+    private bool InScale(Note note) => Current.Scale.Notes.Any(i => Note.Normalize(i) == Note.Normalize(note));
 
     private string Symbol(Chord chord) => new ChordDecorator(chord, conv).Symbols[0];
 

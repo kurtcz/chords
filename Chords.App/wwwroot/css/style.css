@@ -529,6 +529,11 @@ footer {
     margin: 10px 0;
 }
 
+/* Razor drops the whitespace between the note spans. */
+.key-scale span {
+    margin-left: 6px;
+}
+
 .key-chords td {
     vertical-align: middle !important;
     font-size: 1.2em;
@@ -563,6 +568,20 @@ footer {
     cursor: pointer;
 }
 
+.progression-notes {
+    font-size: 0.85em;
+    color: #777;
+}
+
+.progression-notes span {
+    margin: 0 2px;
+}
+
+.progression-notes .out-of-scale {
+    color: #d9534f;
+    font-weight: bold;
+}
+
 .progression-numerals {
     margin-left: 8px;
     font-family: Georgia, "Times New Roman", serif;
@@ -588,8 +607,20 @@ footer {
 
 .progression-chord {
     width: 25%;
-    min-width: 110px;
+    min-width: 0;
     text-align: center;
+}
+
+/* Two diagrams a row on a phone: four at full size (155px for a guitar) would run into each other. */
+@media (max-width: 767px) {
+    .progression-chord {
+        width: 50%;
+    }
+
+    /* A horizontal diagram is twice as wide; give it the whole row. */
+    .progression-chord:has(.chord-layout.horizontal) {
+        width: 100%;
+    }
 }
 
 .progression-chord .chord-layout,
@@ -597,6 +628,14 @@ footer {
     float: none;
     width: 100%;
     padding: 5px;
+}
+
+/* The diagram has a fixed width; shrink it to its column rather than overflow into the next one. */
+.progression-chord .chord-layout svg {
+    max-width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .progression-pick span {
