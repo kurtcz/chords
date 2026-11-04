@@ -32,7 +32,7 @@
   <data name="Find_Strict" xml:space="preserve"><value>கண்டிப்பான பயன்முறை</value></data>
   <data name="Find_Loose" xml:space="preserve"><value>தளர்வான பயன்முறை</value></data>
   <data name="Find_NoChord" xml:space="preserve"><value>கார்டு எதுவும் இல்லை</value></data>
-  <data name="Settings_SystemLanguage" xml:space="preserve"><value>கணினி மொழி ({0})</value></data>
+  <data name="Settings_SystemLanguage" xml:space="preserve"><value>{0} (கணினி)</value></data>
   <data name="Notation_English" xml:space="preserve"><value>ஆங்கிலக் குறியீடு</value></data>
   <data name="Notation_German" xml:space="preserve"><value>ஜெர்மன் குறியீடு</value></data>
   <data name="Notation_Latin" xml:space="preserve"><value>லத்தீன் குறியீடு</value></data>
@@ -41,6 +41,7 @@
   <data name="Settings_MaxFret" xml:space="preserve"><value>அதிகபட்ச ஃப்ரெட்:</value></data>
   <data name="Settings_AllowBarre" xml:space="preserve"><value>பாரே கார்டுகளை அனுமதி</value></data>
   <data name="Settings_AllowSpecial" xml:space="preserve"><value>உயர் கம்பிகள் ஒலியடக்கப்பட்ட கார்டுகளை அனுமதி</value></data>
+  <data name="Settings_EasyOnly" xml:space="preserve"><value>எளிய விரலமைப்புகள் மட்டும்</value></data>
   <data name="Settings_Vertical" xml:space="preserve"><value>செங்குத்து வரைபடங்கள்</value></data>
   <data name="Settings_Horizontal" xml:space="preserve"><value>கிடைமட்ட வரைபடங்கள்</value></data>
   <data name="Settings_LeftHanded" xml:space="preserve"><value>இடக்கை (பிரதிபலித்த வரைபடங்கள்)</value></data>

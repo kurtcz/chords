@@ -31,7 +31,7 @@
   <data name="Find_Strict" xml:space="preserve"><value>Chế độ nghiêm ngặt</value></data>
   <data name="Find_Loose" xml:space="preserve"><value>Chế độ linh hoạt</value></data>
   <data name="Find_NoChord" xml:space="preserve"><value>Không tìm thấy hợp âm</value></data>
-  <data name="Settings_SystemLanguage" xml:space="preserve"><value>Ngôn ngữ hệ thống ({0})</value></data>
+  <data name="Settings_SystemLanguage" xml:space="preserve"><value>{0} (hệ thống)</value></data>
   <data name="Notation_English" xml:space="preserve"><value>Ký âm kiểu Anh</value></data>
   <data name="Notation_German" xml:space="preserve"><value>Ký âm kiểu Đức</value></data>
   <data name="Notation_Latin" xml:space="preserve"><value>Ký âm kiểu La-tinh</value></data>
@@ -40,6 +40,7 @@
   <data name="Settings_MaxFret" xml:space="preserve"><value>Phím đàn cao nhất:</value></data>
   <data name="Settings_AllowBarre" xml:space="preserve"><value>Cho phép hợp âm chặn</value></data>
   <data name="Settings_AllowSpecial" xml:space="preserve"><value>Cho phép thế bấm có dây cao bị chặn tiếng</value></data>
+  <data name="Settings_EasyOnly" xml:space="preserve"><value>Chỉ thế bấm dễ</value></data>
   <data name="Settings_Vertical" xml:space="preserve"><value>Sơ đồ dọc</value></data>
   <data name="Settings_Horizontal" xml:space="preserve"><value>Sơ đồ ngang</value></data>
   <data name="Settings_LeftHanded" xml:space="preserve"><value>Người thuận tay trái (sơ đồ lật gương)</value></data>

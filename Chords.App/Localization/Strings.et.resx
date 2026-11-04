@@ -32,7 +32,7 @@
   <data name="Find_Strict" xml:space="preserve"><value>Range režiim</value></data>
   <data name="Find_Loose" xml:space="preserve"><value>Vaba režiim</value></data>
   <data name="Find_NoChord" xml:space="preserve"><value>Akordi ei leitud</value></data>
-  <data name="Settings_SystemLanguage" xml:space="preserve"><value>Süsteemi keel ({0})</value></data>
+  <data name="Settings_SystemLanguage" xml:space="preserve"><value>{0} (süsteem)</value></data>
   <data name="Notation_English" xml:space="preserve"><value>Inglise noodinimed</value></data>
   <data name="Notation_German" xml:space="preserve"><value>Saksa noodinimed</value></data>
   <data name="Notation_Latin" xml:space="preserve"><value>Ladina noodinimed</value></data>
@@ -41,6 +41,7 @@
   <data name="Settings_MaxFret" xml:space="preserve"><value>Kõrgeim pand:</value></data>
   <data name="Settings_AllowBarre" xml:space="preserve"><value>Luba barrée-haarded</value></data>
   <data name="Settings_AllowSpecial" xml:space="preserve"><value>Luba haarded summutatud kõrgete keeltega</value></data>
+  <data name="Settings_EasyOnly" xml:space="preserve"><value>Ainult lihtsad sõrmestused</value></data>
   <data name="Settings_Vertical" xml:space="preserve"><value>Püstised skeemid</value></data>
   <data name="Settings_Horizontal" xml:space="preserve"><value>Rõhtsad skeemid</value></data>
   <data name="Settings_LeftHanded" xml:space="preserve"><value>Vasakukäeline (peegeldatud skeemid)</value></data>

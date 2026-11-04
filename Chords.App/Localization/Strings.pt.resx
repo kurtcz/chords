@@ -32,7 +32,7 @@
   <data name="Find_Strict" xml:space="preserve"><value>Modo estrito</value></data>
   <data name="Find_Loose" xml:space="preserve"><value>Modo flexível</value></data>
   <data name="Find_NoChord" xml:space="preserve"><value>Nenhum acorde encontrado</value></data>
-  <data name="Settings_SystemLanguage" xml:space="preserve"><value>Idioma do sistema ({0})</value></data>
+  <data name="Settings_SystemLanguage" xml:space="preserve"><value>{0} (sistema)</value></data>
   <data name="Notation_English" xml:space="preserve"><value>Notação inglesa</value></data>
   <data name="Notation_German" xml:space="preserve"><value>Notação alemã</value></data>
   <data name="Notation_Latin" xml:space="preserve"><value>Notação latina</value></data>
@@ -41,6 +41,7 @@
   <data name="Settings_MaxFret" xml:space="preserve"><value>Traste mais alto:</value></data>
   <data name="Settings_AllowBarre" xml:space="preserve"><value>Permitir pestanas</value></data>
   <data name="Settings_AllowSpecial" xml:space="preserve"><value>Permitir acordes com cordas agudas abafadas</value></data>
+  <data name="Settings_EasyOnly" xml:space="preserve"><value>Apenas posições fáceis</value></data>
   <data name="Settings_Vertical" xml:space="preserve"><value>Diagramas verticais</value></data>
   <data name="Settings_Horizontal" xml:space="preserve"><value>Diagramas horizontais</value></data>
   <data name="Settings_LeftHanded" xml:space="preserve"><value>Canhoto (diagramas espelhados)</value></data>

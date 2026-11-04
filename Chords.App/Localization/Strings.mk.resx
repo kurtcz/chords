@@ -32,7 +32,7 @@
   <data name="Find_Strict" xml:space="preserve"><value>Строг режим</value></data>
   <data name="Find_Loose" xml:space="preserve"><value>Слободен режим</value></data>
   <data name="Find_NoChord" xml:space="preserve"><value>Не е пронајден акорд</value></data>
-  <data name="Settings_SystemLanguage" xml:space="preserve"><value>Јазик на системот ({0})</value></data>
+  <data name="Settings_SystemLanguage" xml:space="preserve"><value>{0} (систем)</value></data>
   <data name="Notation_English" xml:space="preserve"><value>Англиска нотација</value></data>
   <data name="Notation_German" xml:space="preserve"><value>Германска нотација</value></data>
   <data name="Notation_Latin" xml:space="preserve"><value>Латинска нотација</value></data>
@@ -41,6 +41,7 @@
   <data name="Settings_MaxFret" xml:space="preserve"><value>Највисок праг:</value></data>
   <data name="Settings_AllowBarre" xml:space="preserve"><value>Дозволи баре</value></data>
   <data name="Settings_AllowSpecial" xml:space="preserve"><value>Дозволи акорди со пригушени високи жици</value></data>
+  <data name="Settings_EasyOnly" xml:space="preserve"><value>Само лесни апликатури</value></data>
   <data name="Settings_Vertical" xml:space="preserve"><value>Вертикални дијаграми</value></data>
   <data name="Settings_Horizontal" xml:space="preserve"><value>Хоризонтални дијаграми</value></data>
   <data name="Settings_LeftHanded" xml:space="preserve"><value>За левораки (огледални дијаграми)</value></data>

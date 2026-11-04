@@ -31,7 +31,7 @@
   <data name="Find_Strict" xml:space="preserve"><value>厳密モード</value></data>
   <data name="Find_Loose" xml:space="preserve"><value>ゆるやかモード</value></data>
   <data name="Find_NoChord" xml:space="preserve"><value>コードが見つかりません</value></data>
-  <data name="Settings_SystemLanguage" xml:space="preserve"><value>システムの言語 ({0})</value></data>
+  <data name="Settings_SystemLanguage" xml:space="preserve"><value>{0} (システム)</value></data>
   <data name="Notation_English" xml:space="preserve"><value>英語式表記</value></data>
   <data name="Notation_German" xml:space="preserve"><value>ドイツ式表記</value></data>
   <data name="Notation_Latin" xml:space="preserve"><value>ラテン式表記</value></data>
@@ -40,6 +40,7 @@
   <data name="Settings_MaxFret" xml:space="preserve"><value>最高フレット:</value></data>
   <data name="Settings_AllowBarre" xml:space="preserve"><value>セーハを許可</value></data>
   <data name="Settings_AllowSpecial" xml:space="preserve"><value>高音弦をミュートした押さえ方を許可</value></data>
+  <data name="Settings_EasyOnly" xml:space="preserve"><value>簡単な押さえ方のみ</value></data>
   <data name="Settings_Vertical" xml:space="preserve"><value>縦向きダイアグラム</value></data>
   <data name="Settings_Horizontal" xml:space="preserve"><value>横向きダイアグラム</value></data>
   <data name="Settings_LeftHanded" xml:space="preserve"><value>左利き (反転ダイアグラム)</value></data>

@@ -32,7 +32,7 @@
   <data name="Find_Strict" xml:space="preserve"><value>Strikt läge</value></data>
   <data name="Find_Loose" xml:space="preserve"><value>Fritt läge</value></data>
   <data name="Find_NoChord" xml:space="preserve"><value>Inget ackord hittades</value></data>
-  <data name="Settings_SystemLanguage" xml:space="preserve"><value>Systemspråk ({0})</value></data>
+  <data name="Settings_SystemLanguage" xml:space="preserve"><value>{0} (system)</value></data>
   <data name="Notation_English" xml:space="preserve"><value>Engelsk notation</value></data>
   <data name="Notation_German" xml:space="preserve"><value>Tysk notation</value></data>
   <data name="Notation_Latin" xml:space="preserve"><value>Latinsk notation</value></data>
@@ -41,8 +41,9 @@
   <data name="Settings_MaxFret" xml:space="preserve"><value>Högsta band:</value></data>
   <data name="Settings_AllowBarre" xml:space="preserve"><value>Tillåt barréackord</value></data>
   <data name="Settings_AllowSpecial" xml:space="preserve"><value>Tillåt grepp med dämpade ljusa strängar</value></data>
-  <data name="Settings_Vertical" xml:space="preserve"><value>Lodräta ackorddiagram</value></data>
-  <data name="Settings_Horizontal" xml:space="preserve"><value>Vågräta ackorddiagram</value></data>
+  <data name="Settings_EasyOnly" xml:space="preserve"><value>Endast enkla grepp</value></data>
+  <data name="Settings_Vertical" xml:space="preserve"><value>Lodräta diagram</value></data>
+  <data name="Settings_Horizontal" xml:space="preserve"><value>Vågräta diagram</value></data>
   <data name="Settings_LeftHanded" xml:space="preserve"><value>Vänsterhänt (spegelvända diagram)</value></data>
   <data name="Settings_ShowTips" xml:space="preserve"><value>Visa tips</value></data>
   <data name="Instrument_Guitar" xml:space="preserve"><value>Gitarr</value></data>

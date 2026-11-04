@@ -27,7 +27,7 @@
 ### Zobrazení
 - **Stupnice a arpeggia na hmatníku** – zobrazení celé stupnice nebo tónů akordu přes celý hmatník (s intervaly).
 - **Prstoklad v diagramech** – čísla prstů (1–4) a možnost zobrazit místo názvů tónů intervaly (1, 3, 5, b7…).
-- **Hodnocení obtížnosti hmatu** – řazení hmatů od nejsnadnějšího, filtr „jen snadné hmaty“.
+- **Hodnocení obtížnosti hmatu** – ✅ skóre podle počtu prstů, rozpětí, natažení malíčku, barré a tlumených strun (s pravidly každého nástroje), úrovně snadný/střední/těžký; řazení od nejsnadnějšího, přepínač „Jen snadné hmaty“ (u akordu bez snadného hmatu ukáže nejsnadnější dostupné). Zbývá: zobrazit obtížnost přímo u diagramu.
 - **Plynulé přechody (voice leading)** – v progresi vybírat hmaty, které jsou na hmatníku blízko sebe.
 - **Inverze a slash akordy** – např. C/G, D/F#; hledání hmatů s daným basovým tónem.
 - **Tmavý režim** a lepší rozvržení na tabletu / na šířku.

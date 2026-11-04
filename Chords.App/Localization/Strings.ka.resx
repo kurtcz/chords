@@ -32,7 +32,7 @@
   <data name="Find_Strict" xml:space="preserve"><value>მკაცრი რეჟიმი</value></data>
   <data name="Find_Loose" xml:space="preserve"><value>თავისუფალი რეჟიმი</value></data>
   <data name="Find_NoChord" xml:space="preserve"><value>აკორდი ვერ მოიძებნა</value></data>
-  <data name="Settings_SystemLanguage" xml:space="preserve"><value>სისტემის ენა ({0})</value></data>
+  <data name="Settings_SystemLanguage" xml:space="preserve"><value>{0} (სისტემა)</value></data>
   <data name="Notation_English" xml:space="preserve"><value>ინგლისური აღნიშვნა</value></data>
   <data name="Notation_German" xml:space="preserve"><value>გერმანული აღნიშვნა</value></data>
   <data name="Notation_Latin" xml:space="preserve"><value>ლათინური აღნიშვნა</value></data>
@@ -41,6 +41,7 @@
   <data name="Settings_MaxFret" xml:space="preserve"><value>უმაღლესი ლადი:</value></data>
   <data name="Settings_AllowBarre" xml:space="preserve"><value>ბარეს დაშვება</value></data>
   <data name="Settings_AllowSpecial" xml:space="preserve"><value>ჩახშობილი მაღალი სიმებით აკორდების დაშვება</value></data>
+  <data name="Settings_EasyOnly" xml:space="preserve"><value>მხოლოდ მარტივი აპლიკატურა</value></data>
   <data name="Settings_Vertical" xml:space="preserve"><value>ვერტიკალური სქემები</value></data>
   <data name="Settings_Horizontal" xml:space="preserve"><value>ჰორიზონტალური სქემები</value></data>
   <data name="Settings_LeftHanded" xml:space="preserve"><value>ცაცია (სარკისებური სქემები)</value></data>

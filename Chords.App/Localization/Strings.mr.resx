@@ -32,7 +32,7 @@
   <data name="Find_Strict" xml:space="preserve"><value>काटेकोर मोड</value></data>
   <data name="Find_Loose" xml:space="preserve"><value>लवचिक मोड</value></data>
   <data name="Find_NoChord" xml:space="preserve"><value>कोणताही कॉर्ड सापडला नाही</value></data>
-  <data name="Settings_SystemLanguage" xml:space="preserve"><value>सिस्टम भाषा ({0})</value></data>
+  <data name="Settings_SystemLanguage" xml:space="preserve"><value>{0} (सिस्टम)</value></data>
   <data name="Notation_English" xml:space="preserve"><value>इंग्रजी नामपद्धती</value></data>
   <data name="Notation_German" xml:space="preserve"><value>जर्मन नामपद्धती</value></data>
   <data name="Notation_Latin" xml:space="preserve"><value>लॅटिन नामपद्धती</value></data>
@@ -41,6 +41,7 @@
   <data name="Settings_MaxFret" xml:space="preserve"><value>सर्वात उंच फ्रेट:</value></data>
   <data name="Settings_AllowBarre" xml:space="preserve"><value>बॅरे कॉर्डना परवानगी द्या</value></data>
   <data name="Settings_AllowSpecial" xml:space="preserve"><value>उंच तारा म्यूट असलेल्या कॉर्डना परवानगी द्या</value></data>
+  <data name="Settings_EasyOnly" xml:space="preserve"><value>फक्त सोपी बोटांची रचना</value></data>
   <data name="Settings_Vertical" xml:space="preserve"><value>उभ्या आकृत्या</value></data>
   <data name="Settings_Horizontal" xml:space="preserve"><value>आडव्या आकृत्या</value></data>
   <data name="Settings_LeftHanded" xml:space="preserve"><value>डावखुरे (आरशातील आकृत्या)</value></data>

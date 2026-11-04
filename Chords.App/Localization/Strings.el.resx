@@ -32,7 +32,7 @@
   <data name="Find_Strict" xml:space="preserve"><value>Αυστηρή λειτουργία</value></data>
   <data name="Find_Loose" xml:space="preserve"><value>Χαλαρή λειτουργία</value></data>
   <data name="Find_NoChord" xml:space="preserve"><value>Δεν βρέθηκε συγχορδία</value></data>
-  <data name="Settings_SystemLanguage" xml:space="preserve"><value>Γλώσσα συστήματος ({0})</value></data>
+  <data name="Settings_SystemLanguage" xml:space="preserve"><value>{0} (σύστημα)</value></data>
   <data name="Notation_English" xml:space="preserve"><value>Αγγλική ονομασία</value></data>
   <data name="Notation_German" xml:space="preserve"><value>Γερμανική ονομασία</value></data>
   <data name="Notation_Latin" xml:space="preserve"><value>Λατινική ονομασία</value></data>
@@ -41,6 +41,7 @@
   <data name="Settings_MaxFret" xml:space="preserve"><value>Υψηλότερο τάστο:</value></data>
   <data name="Settings_AllowBarre" xml:space="preserve"><value>Να επιτρέπεται το μπαρέ</value></data>
   <data name="Settings_AllowSpecial" xml:space="preserve"><value>Να επιτρέπονται θέσεις με σβησμένες ψηλές χορδές</value></data>
+  <data name="Settings_EasyOnly" xml:space="preserve"><value>Μόνο εύκολοι δακτυλισμοί</value></data>
   <data name="Settings_Vertical" xml:space="preserve"><value>Κάθετα διαγράμματα</value></data>
   <data name="Settings_Horizontal" xml:space="preserve"><value>Οριζόντια διαγράμματα</value></data>
   <data name="Settings_LeftHanded" xml:space="preserve"><value>Αριστερόχειρας (κατοπτρικά διαγράμματα)</value></data>

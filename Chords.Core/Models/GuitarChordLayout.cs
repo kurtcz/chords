@@ -1,5 +1,5 @@
-﻿﻿﻿#if DEBUG
-//﻿#define TESTING
+﻿#if DEBUG
+//#define TESTING
 #endif
 using System;
 using System.Collections.Concurrent;
@@ -28,6 +28,18 @@ namespace Chords.Core.Models
         public Note[] Notes { get; private set; }
         [JsonIgnore]
         public bool Complete { get; private set; }
+        /// <summary>How hard the fingering is for the fretting hand: 0 for open strings, higher is harder.</summary>
+        /// <remarks>See <see cref="ComputeDifficulty"/>; <see cref="DifficultyLevel"/> groups it for filtering and sorting.</remarks>
+        [JsonIgnore]
+        public int Difficulty => _difficulty ?? (_difficulty = ComputeDifficulty()).Value;
+        [JsonIgnore]
+        public DifficultyLevel DifficultyLevel => Difficulty <= EasyMaxDifficulty ? DifficultyLevel.Easy
+                                                : Difficulty <= MediumMaxDifficulty ? DifficultyLevel.Medium
+                                                : DifficultyLevel.Hard;
+
+        private const int EasyMaxDifficulty = 4;
+        private const int MediumMaxDifficulty = 7;
+        private int? _difficulty;
 
         /// <summary>Notes at positions 0..<see cref="MaxPosition"/> for each string of the instrument.</summary>
         private static Note[][] StringNotes(Instrument instrument)
@@ -74,7 +86,7 @@ namespace Chords.Core.Models
 					? Positions.Where(i => i > 0).Min()
 					: 0;
 			//if possible try to render chords from the 1st fret
-			if (Positions.All(i => i <= 4))
+			if (Positions.All(i => i <= InstrumentInfo.DiagramFrets))
 			{
 				Fret = 1;
 			}
@@ -102,7 +114,7 @@ namespace Chords.Core.Models
                 {
                     positionsPerString[s].Add(X);
                 }
-                for (var pos = 0; pos <= maxFret + 3 && pos <= MaxPosition; pos++)
+                for (var pos = 0; pos <= maxFret + info.MaxFretSpan - 1 && pos <= MaxPosition; pos++)
                 {
                     if (info.CanFret(s, pos) &&
                         chord.Notes.Any(i => Note.Normalize(i) == stringNotes[s][pos]))
@@ -223,7 +235,9 @@ namespace Chords.Core.Models
                                             Chord.NonMandatoryNotes.Contains(i)) > 1);
         }
 
-        /// <summary>Rules for instruments other than the guitar (4 strings, so every string has its own finger).</summary>
+        /// <summary>
+        /// Rules for instruments other than the guitar, whose reach and muting come from <see cref="InstrumentInfo"/>.
+        /// </summary>
         private bool IsValidGeneric(bool allowPartial)
         {
             if (!HasChordNotes(allowPartial))
@@ -243,26 +257,42 @@ namespace Chords.Core.Models
                     return false;
                 }
             }
-            //distance between positions should not exceed 4 frets
             var usedPositions = Positions.Where(i => i > 0).ToArray();
-            if (usedPositions.Length > 0 && usedPositions.Max() - usedPositions.Min() + 1 > 4)
+            if (usedPositions.Length > 0 && !IsReachable(usedPositions, info))
             {
                 return false;
             }
-            //four fingers, the index finger may hold a barre across the lowest fret
-            if (usedPositions.Length > 4 &&
-                usedPositions.Length - usedPositions.Count(i => i == usedPositions.Min()) + 1 > 4)
-            {
-                return false;
-            }
-            //silent strings are allowed only at the edges
+            //at least two strings ring; silent strings only at the edges unless the strings are plucked one by one
             var played = Positions.Select((pos, idx) => new { pos, idx }).Where(i => i.pos != X).Select(i => i.idx).ToArray();
             if (played.Length < 2 ||
-                played.Last() - played.First() + 1 != played.Length)
+                (!info.AllowInnerMutedStrings && played.Last() - played.First() + 1 != played.Length))
             {
                 return false;
             }
             return true;
+        }
+
+        /// <summary>Whether one hand can press all the given frets (1 and above) on an instrument.</summary>
+        private static bool IsReachable(int[] usedPositions, InstrumentInfo info)
+        {
+            var min = usedPositions.Min();
+            var max = usedPositions.Max();
+            var span = max - min + 1;
+
+            if (span > info.MaxFretSpan)
+            {
+                return false;
+            }
+            //beyond the comfortable span only the little finger stretches, alone on the farthest fret,
+            //while the other fingers stay within the comfortable span
+            if (span > info.ComfortableFretSpan &&
+                (usedPositions.Count(i => i == max) > 1 ||
+                 usedPositions.Where(i => i != max).Max() - min + 1 > info.ComfortableFretSpan))
+            {
+                return false;
+            }
+            //four fingers, the index finger may hold a barre across the lowest fret
+            return usedPositions.Count(i => i > min) + 1 <= 4;
         }
 
         private bool IsValid(bool allowPartial)
@@ -457,6 +487,62 @@ namespace Chords.Core.Models
                 }
 			}
 			return true;
+        }
+
+        /// <summary>
+        /// Difficulty score, the sum of:
+        /// <list type="bullet">
+        /// <item>one point per finger pressing a string, one more when the little finger is needed too,</item>
+        /// <item>a point per fret the hand spans beyond the comfortable span less one (the hand opens wide),</item>
+        /// <item>4 points for stretching the little finger beyond the comfortable span (always hard),</item>
+        /// <item>2 points for a barre, needed when more strings are pressed than there are fingers,</item>
+        /// <item>2 points for silent strings in the middle of a strummed guitar chord (they must be damped),</item>
+        /// <item>2 points for pressing the banjo's short drone string (with the thumb or a stretch over the neck).</item>
+        /// </list>
+        /// Classic open chords (C, G, Am on the guitar, C or F on the ukulele) score 1–4, four-finger shapes 5–6,
+        /// barre chords 6–7 (the guitar's F 1 3 3 2 1 1 is 7), stretches of the little finger 8 and more.
+        /// </summary>
+        private int ComputeDifficulty()
+        {
+            var info = InstrumentInfo;
+            var used = Positions.Where(i => i > 0).ToArray();
+
+            if (used.Length == 0)
+            {
+                return 0;
+            }
+            var min = used.Min();
+            var max = used.Max();
+            var span = max - min + 1;
+            var comfortable = info.ComfortableFretSpan;
+            //more strings pressed than fingers: the index finger lies across all strings at the lowest fret
+            var barre = used.Length > 4;
+            var fingers = barre ? used.Count(i => i > min) + 1 : used.Length;
+            var result = fingers + (fingers == 4 ? 1 : 0);
+
+            if (barre)
+            {
+                result += 2;
+            }
+            result += Math.Max(0, span - (comfortable - 1));
+            if (span > comfortable)
+            {
+                result += 4;
+            }
+            //strings silenced between ringing ones (a strummed guitar only; bass strings are plucked one by one)
+            var played = Positions.Select((pos, idx) => new { pos, idx }).Where(i => i.pos != X).Select(i => i.idx).ToArray();
+            if (!info.AllowInnerMutedStrings &&
+                played.Length > 0 &&
+                played.Last() - played.First() + 1 != played.Length)
+            {
+                result += 2;
+            }
+            if (Positions.Where((pos, s) => pos > 0 && info.IsShortString(s)).Any())
+            {
+                result += 2;
+            }
+
+            return result;
         }
 
 		public override bool Equals(object obj)

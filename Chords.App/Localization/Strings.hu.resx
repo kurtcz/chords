@@ -32,7 +32,7 @@
   <data name="Find_Strict" xml:space="preserve"><value>Szigorú mód</value></data>
   <data name="Find_Loose" xml:space="preserve"><value>Laza mód</value></data>
   <data name="Find_NoChord" xml:space="preserve"><value>Nem található akkord</value></data>
-  <data name="Settings_SystemLanguage" xml:space="preserve"><value>Rendszernyelv ({0})</value></data>
+  <data name="Settings_SystemLanguage" xml:space="preserve"><value>{0} (rendszer)</value></data>
   <data name="Notation_English" xml:space="preserve"><value>Angol hangjelölés</value></data>
   <data name="Notation_German" xml:space="preserve"><value>Német hangjelölés</value></data>
   <data name="Notation_Latin" xml:space="preserve"><value>Latin hangjelölés</value></data>
@@ -41,8 +41,9 @@
   <data name="Settings_MaxFret" xml:space="preserve"><value>Legmagasabb bund:</value></data>
   <data name="Settings_AllowBarre" xml:space="preserve"><value>Barré fogások engedélyezése</value></data>
   <data name="Settings_AllowSpecial" xml:space="preserve"><value>Tompított magas húros fogások engedélyezése</value></data>
-  <data name="Settings_Vertical" xml:space="preserve"><value>Függőleges akkordábrák</value></data>
-  <data name="Settings_Horizontal" xml:space="preserve"><value>Vízszintes akkordábrák</value></data>
+  <data name="Settings_EasyOnly" xml:space="preserve"><value>Csak könnyű fogások</value></data>
+  <data name="Settings_Vertical" xml:space="preserve"><value>Függőleges ábrák</value></data>
+  <data name="Settings_Horizontal" xml:space="preserve"><value>Vízszintes ábrák</value></data>
   <data name="Settings_LeftHanded" xml:space="preserve"><value>Balkezes (tükrözött ábrák)</value></data>
   <data name="Settings_ShowTips" xml:space="preserve"><value>Tippek megjelenítése</value></data>
   <data name="Instrument_Guitar" xml:space="preserve"><value>Gitár</value></data>

@@ -35,7 +35,7 @@
   <data name="Find_Strict" xml:space="preserve"><value>Mód docht</value></data>
   <data name="Find_Loose" xml:space="preserve"><value>Mód scaoilte</value></data>
   <data name="Find_NoChord" xml:space="preserve"><value>Níor aimsíodh aon chorda</value></data>
-  <data name="Settings_SystemLanguage" xml:space="preserve"><value>Teanga an chórais ({0})</value></data>
+  <data name="Settings_SystemLanguage" xml:space="preserve"><value>{0} (córas)</value></data>
   <data name="Notation_English" xml:space="preserve"><value>Nodaireacht Bhéarla</value></data>
   <data name="Notation_German" xml:space="preserve"><value>Nodaireacht Ghearmánach</value></data>
   <data name="Notation_Latin" xml:space="preserve"><value>Nodaireacht Laidineach</value></data>
@@ -44,6 +44,7 @@
   <data name="Settings_MaxFret" xml:space="preserve"><value>An fret is airde:</value></data>
   <data name="Settings_AllowBarre" xml:space="preserve"><value>Ceadaigh barré</value></data>
   <data name="Settings_AllowSpecial" xml:space="preserve"><value>Ceadaigh cordaí le téada arda balbhaithe</value></data>
+  <data name="Settings_EasyOnly" xml:space="preserve"><value>Méarú éasca amháin</value></data>
   <data name="Settings_Vertical" xml:space="preserve"><value>Léaráidí ingearacha</value></data>
   <data name="Settings_Horizontal" xml:space="preserve"><value>Léaráidí cothrománacha</value></data>
   <data name="Settings_LeftHanded" xml:space="preserve"><value>Ciotógach (léaráidí scáthánaithe)</value></data>

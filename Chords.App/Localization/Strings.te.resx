@@ -32,7 +32,7 @@
   <data name="Find_Strict" xml:space="preserve"><value>కఠిన మోడ్</value></data>
   <data name="Find_Loose" xml:space="preserve"><value>సడలింపు మోడ్</value></data>
   <data name="Find_NoChord" xml:space="preserve"><value>కార్డ్ ఏదీ కనుగొనబడలేదు</value></data>
-  <data name="Settings_SystemLanguage" xml:space="preserve"><value>సిస్టమ్ భాష ({0})</value></data>
+  <data name="Settings_SystemLanguage" xml:space="preserve"><value>{0} (సిస్టమ్)</value></data>
   <data name="Notation_English" xml:space="preserve"><value>ఆంగ్ల నామకరణం</value></data>
   <data name="Notation_German" xml:space="preserve"><value>జర్మన్ నామకరణం</value></data>
   <data name="Notation_Latin" xml:space="preserve"><value>లాటిన్ నామకరణం</value></data>
@@ -41,6 +41,7 @@
   <data name="Settings_MaxFret" xml:space="preserve"><value>అత్యధిక ఫ్రెట్:</value></data>
   <data name="Settings_AllowBarre" xml:space="preserve"><value>బారే కార్డ్‌లను అనుమతించు</value></data>
   <data name="Settings_AllowSpecial" xml:space="preserve"><value>ఎత్తైన తీగలు మ్యూట్ చేసిన కార్డ్‌లను అనుమతించు</value></data>
+  <data name="Settings_EasyOnly" xml:space="preserve"><value>సులభమైన వేళ్ల అమరికలు మాత్రమే</value></data>
   <data name="Settings_Vertical" xml:space="preserve"><value>నిలువు రేఖాచిత్రాలు</value></data>
   <data name="Settings_Horizontal" xml:space="preserve"><value>అడ్డం రేఖాచిత్రాలు</value></data>
   <data name="Settings_LeftHanded" xml:space="preserve"><value>ఎడమచేతి వాటం (ప్రతిబింబ రేఖాచిత్రాలు)</value></data>

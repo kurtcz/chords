@@ -32,7 +32,7 @@
   <data name="Find_Strict" xml:space="preserve"><value>Qatʼiy rejim</value></data>
   <data name="Find_Loose" xml:space="preserve"><value>Erkin rejim</value></data>
   <data name="Find_NoChord" xml:space="preserve"><value>Akkord topilmadi</value></data>
-  <data name="Settings_SystemLanguage" xml:space="preserve"><value>Tizim tili ({0})</value></data>
+  <data name="Settings_SystemLanguage" xml:space="preserve"><value>{0} (tizim)</value></data>
   <data name="Notation_English" xml:space="preserve"><value>Ingliz belgilanishi</value></data>
   <data name="Notation_German" xml:space="preserve"><value>Nemis belgilanishi</value></data>
   <data name="Notation_Latin" xml:space="preserve"><value>Lotin belgilanishi</value></data>
@@ -41,6 +41,7 @@
   <data name="Settings_MaxFret" xml:space="preserve"><value>Eng yuqori lad:</value></data>
   <data name="Settings_AllowBarre" xml:space="preserve"><value>Barrega ruxsat berish</value></data>
   <data name="Settings_AllowSpecial" xml:space="preserve"><value>Yuqori torlari boʻgʻilgan qoʻyilishlarga ruxsat berish</value></data>
+  <data name="Settings_EasyOnly" xml:space="preserve"><value>Faqat oson barmoq qoʻyilishlari</value></data>
   <data name="Settings_Vertical" xml:space="preserve"><value>Vertikal sxemalar</value></data>
   <data name="Settings_Horizontal" xml:space="preserve"><value>Gorizontal sxemalar</value></data>
   <data name="Settings_LeftHanded" xml:space="preserve"><value>Chapaqay (koʻzgu sxemalar)</value></data>

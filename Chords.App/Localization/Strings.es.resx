@@ -32,7 +32,7 @@
   <data name="Find_Strict" xml:space="preserve"><value>Modo estricto</value></data>
   <data name="Find_Loose" xml:space="preserve"><value>Modo flexible</value></data>
   <data name="Find_NoChord" xml:space="preserve"><value>No se encontró ningún acorde</value></data>
-  <data name="Settings_SystemLanguage" xml:space="preserve"><value>Idioma del sistema ({0})</value></data>
+  <data name="Settings_SystemLanguage" xml:space="preserve"><value>{0} (sistema)</value></data>
   <data name="Notation_English" xml:space="preserve"><value>Notación inglesa</value></data>
   <data name="Notation_German" xml:space="preserve"><value>Notación alemana</value></data>
   <data name="Notation_Latin" xml:space="preserve"><value>Notación latina</value></data>
@@ -41,6 +41,7 @@
   <data name="Settings_MaxFret" xml:space="preserve"><value>Traste más alto:</value></data>
   <data name="Settings_AllowBarre" xml:space="preserve"><value>Permitir cejillas</value></data>
   <data name="Settings_AllowSpecial" xml:space="preserve"><value>Permitir acordes con cuerdas agudas apagadas</value></data>
+  <data name="Settings_EasyOnly" xml:space="preserve"><value>Solo digitaciones fáciles</value></data>
   <data name="Settings_Vertical" xml:space="preserve"><value>Diagramas verticales</value></data>
   <data name="Settings_Horizontal" xml:space="preserve"><value>Diagramas horizontales</value></data>
   <data name="Settings_LeftHanded" xml:space="preserve"><value>Zurdo (diagramas reflejados)</value></data>

@@ -361,13 +361,33 @@ footer {
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
-/* Always use Bootstrap's collapsed (phone) navbar, also on tablets and in landscape. */
+/* Always use Bootstrap's collapsed (phone) navbar, also on tablets and in landscape.
+   Title and hamburger share one line: a title too long for it ends with an ellipsis. */
 .navbar-header {
     float: none;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-header::before,
+.navbar-header::after {
+    display: none;
+}
+
+.navbar-header > .navbar-brand {
+    float: none;
+    flex: 1 1 auto;
+    min-width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 .navbar-toggle {
     display: block;
+    float: none;
+    flex: none;
+    order: 1;
 }
 
 .navbar-collapse {
@@ -441,12 +461,7 @@ footer {
 
 /* Right-to-left languages (Arabic, Persian): mirror the page layout. Chord diagrams, the fretboard
    and the toggle switches keep their left-to-right geometry – strings and frets do not follow text direction. */
-[dir=rtl] .navbar-brand {
-    float: right;
-}
-
 [dir=rtl] .navbar-toggle {
-    float: left;
     margin-right: 0;
     margin-left: 15px;
 }

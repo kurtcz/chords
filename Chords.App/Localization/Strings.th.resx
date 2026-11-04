@@ -31,7 +31,7 @@
   <data name="Find_Strict" xml:space="preserve"><value>โหมดเข้มงวด</value></data>
   <data name="Find_Loose" xml:space="preserve"><value>โหมดยืดหยุ่น</value></data>
   <data name="Find_NoChord" xml:space="preserve"><value>ไม่พบคอร์ด</value></data>
-  <data name="Settings_SystemLanguage" xml:space="preserve"><value>ภาษาของระบบ ({0})</value></data>
+  <data name="Settings_SystemLanguage" xml:space="preserve"><value>{0} (ระบบ)</value></data>
   <data name="Notation_English" xml:space="preserve"><value>ระบบเรียกโน้ตแบบอังกฤษ</value></data>
   <data name="Notation_German" xml:space="preserve"><value>ระบบเรียกโน้ตแบบเยอรมัน</value></data>
   <data name="Notation_Latin" xml:space="preserve"><value>ระบบเรียกโน้ตแบบละติน</value></data>
@@ -40,6 +40,7 @@
   <data name="Settings_MaxFret" xml:space="preserve"><value>เฟร็ตสูงสุด:</value></data>
   <data name="Settings_AllowBarre" xml:space="preserve"><value>อนุญาตคอร์ดทาบ</value></data>
   <data name="Settings_AllowSpecial" xml:space="preserve"><value>อนุญาตท่าจับที่บอดสายเสียงสูง</value></data>
+  <data name="Settings_EasyOnly" xml:space="preserve"><value>เฉพาะท่าจับคอร์ดที่ง่าย</value></data>
   <data name="Settings_Vertical" xml:space="preserve"><value>แผนภาพแนวตั้ง</value></data>
   <data name="Settings_Horizontal" xml:space="preserve"><value>แผนภาพแนวนอน</value></data>
   <data name="Settings_LeftHanded" xml:space="preserve"><value>ถนัดซ้าย (แผนภาพกลับด้าน)</value></data>

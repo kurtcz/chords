@@ -32,7 +32,7 @@
   <data name="Find_Strict" xml:space="preserve"><value>Խիստ ռեժիմ</value></data>
   <data name="Find_Loose" xml:space="preserve"><value>Ազատ ռեժիմ</value></data>
   <data name="Find_NoChord" xml:space="preserve"><value>Ակորդ չի գտնվել</value></data>
-  <data name="Settings_SystemLanguage" xml:space="preserve"><value>Համակարգի լեզուն ({0})</value></data>
+  <data name="Settings_SystemLanguage" xml:space="preserve"><value>{0} (համակարգ)</value></data>
   <data name="Notation_English" xml:space="preserve"><value>Անգլիական նշագրում</value></data>
   <data name="Notation_German" xml:space="preserve"><value>Գերմանական նշագրում</value></data>
   <data name="Notation_Latin" xml:space="preserve"><value>Լատինական նշագրում</value></data>
@@ -41,6 +41,7 @@
   <data name="Settings_MaxFret" xml:space="preserve"><value>Ամենաբարձր լադը.</value></data>
   <data name="Settings_AllowBarre" xml:space="preserve"><value>Թույլատրել բարե</value></data>
   <data name="Settings_AllowSpecial" xml:space="preserve"><value>Թույլատրել խլացված բարձր լարերով դիրքեր</value></data>
+  <data name="Settings_EasyOnly" xml:space="preserve"><value>Միայն հեշտ մատնադրություններ</value></data>
   <data name="Settings_Vertical" xml:space="preserve"><value>Ուղղահայաց սխեմաներ</value></data>
   <data name="Settings_Horizontal" xml:space="preserve"><value>Հորիզոնական սխեմաներ</value></data>
   <data name="Settings_LeftHanded" xml:space="preserve"><value>Ձախլիկ (հայելային սխեմաներ)</value></data>

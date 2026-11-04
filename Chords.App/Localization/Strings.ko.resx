@@ -31,7 +31,7 @@
   <data name="Find_Strict" xml:space="preserve"><value>엄격 모드</value></data>
   <data name="Find_Loose" xml:space="preserve"><value>느슨한 모드</value></data>
   <data name="Find_NoChord" xml:space="preserve"><value>코드를 찾을 수 없습니다</value></data>
-  <data name="Settings_SystemLanguage" xml:space="preserve"><value>시스템 언어 ({0})</value></data>
+  <data name="Settings_SystemLanguage" xml:space="preserve"><value>{0} (시스템)</value></data>
   <data name="Notation_English" xml:space="preserve"><value>영미식 표기</value></data>
   <data name="Notation_German" xml:space="preserve"><value>독일식 표기</value></data>
   <data name="Notation_Latin" xml:space="preserve"><value>라틴식 표기</value></data>
@@ -40,6 +40,7 @@
   <data name="Settings_MaxFret" xml:space="preserve"><value>최고 프렛:</value></data>
   <data name="Settings_AllowBarre" xml:space="preserve"><value>바레 코드 허용</value></data>
   <data name="Settings_AllowSpecial" xml:space="preserve"><value>고음 현을 뮤트한 운지 허용</value></data>
+  <data name="Settings_EasyOnly" xml:space="preserve"><value>쉬운 운지만</value></data>
   <data name="Settings_Vertical" xml:space="preserve"><value>세로 다이어그램</value></data>
   <data name="Settings_Horizontal" xml:space="preserve"><value>가로 다이어그램</value></data>
   <data name="Settings_LeftHanded" xml:space="preserve"><value>왼손잡이 (반전 다이어그램)</value></data>

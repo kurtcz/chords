@@ -32,7 +32,7 @@
   <data name="Find_Strict" xml:space="preserve"><value>Strikte modus</value></data>
   <data name="Find_Loose" xml:space="preserve"><value>Losse modus</value></data>
   <data name="Find_NoChord" xml:space="preserve"><value>Geen akkoord gevonden</value></data>
-  <data name="Settings_SystemLanguage" xml:space="preserve"><value>Systeemtaal ({0})</value></data>
+  <data name="Settings_SystemLanguage" xml:space="preserve"><value>{0} (systeem)</value></data>
   <data name="Notation_English" xml:space="preserve"><value>Engelse notatie</value></data>
   <data name="Notation_German" xml:space="preserve"><value>Duitse notatie</value></data>
   <data name="Notation_Latin" xml:space="preserve"><value>Latijnse notatie</value></data>
@@ -41,8 +41,9 @@
   <data name="Settings_MaxFret" xml:space="preserve"><value>Hoogste fret:</value></data>
   <data name="Settings_AllowBarre" xml:space="preserve"><value>Barré-akkoorden toestaan</value></data>
   <data name="Settings_AllowSpecial" xml:space="preserve"><value>Akkoorden met gedempte hoge snaren toestaan</value></data>
-  <data name="Settings_Vertical" xml:space="preserve"><value>Verticale akkoorddiagrammen</value></data>
-  <data name="Settings_Horizontal" xml:space="preserve"><value>Horizontale akkoorddiagrammen</value></data>
+  <data name="Settings_EasyOnly" xml:space="preserve"><value>Alleen makkelijke grepen</value></data>
+  <data name="Settings_Vertical" xml:space="preserve"><value>Verticale diagrammen</value></data>
+  <data name="Settings_Horizontal" xml:space="preserve"><value>Horizontale diagrammen</value></data>
   <data name="Settings_LeftHanded" xml:space="preserve"><value>Linkshandig (gespiegelde diagrammen)</value></data>
   <data name="Settings_ShowTips" xml:space="preserve"><value>Tips tonen</value></data>
   <data name="Instrument_Guitar" xml:space="preserve"><value>Gitaar</value></data>

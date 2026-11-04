@@ -32,7 +32,7 @@
   <data name="Find_Strict" xml:space="preserve"><value>Presný režim</value></data>
   <data name="Find_Loose" xml:space="preserve"><value>Voľný režim</value></data>
   <data name="Find_NoChord" xml:space="preserve"><value>Nenašiel sa žiadny akord</value></data>
-  <data name="Settings_SystemLanguage" xml:space="preserve"><value>Jazyk systému ({0})</value></data>
+  <data name="Settings_SystemLanguage" xml:space="preserve"><value>{0} (systém)</value></data>
   <data name="Notation_English" xml:space="preserve"><value>Anglické názvoslovie</value></data>
   <data name="Notation_German" xml:space="preserve"><value>Nemecké názvoslovie</value></data>
   <data name="Notation_Latin" xml:space="preserve"><value>Latinské názvoslovie</value></data>
@@ -41,8 +41,9 @@
   <data name="Settings_MaxFret" xml:space="preserve"><value>Najvyšší pražec:</value></data>
   <data name="Settings_AllowBarre" xml:space="preserve"><value>Povoliť barré akordy</value></data>
   <data name="Settings_AllowSpecial" xml:space="preserve"><value>Povoliť akordy s tlmenými vysokými strunami</value></data>
-  <data name="Settings_Vertical" xml:space="preserve"><value>Zvislé diagramy akordov</value></data>
-  <data name="Settings_Horizontal" xml:space="preserve"><value>Vodorovné diagramy akordov</value></data>
+  <data name="Settings_EasyOnly" xml:space="preserve"><value>Len ľahké hmaty</value></data>
+  <data name="Settings_Vertical" xml:space="preserve"><value>Zvislé diagramy</value></data>
+  <data name="Settings_Horizontal" xml:space="preserve"><value>Vodorovné diagramy</value></data>
   <data name="Settings_LeftHanded" xml:space="preserve"><value>Pre ľavákov (zrkadlové diagramy)</value></data>
   <data name="Settings_ShowTips" xml:space="preserve"><value>Zobrazovať tipy</value></data>
   <data name="Instrument_Guitar" xml:space="preserve"><value>Gitara</value></data>

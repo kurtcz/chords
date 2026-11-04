@@ -32,7 +32,7 @@
   <data name="Find_Strict" xml:space="preserve"><value>सख़्त मोड</value></data>
   <data name="Find_Loose" xml:space="preserve"><value>लचीला मोड</value></data>
   <data name="Find_NoChord" xml:space="preserve"><value>कोई कॉर्ड नहीं मिला</value></data>
-  <data name="Settings_SystemLanguage" xml:space="preserve"><value>सिस्टम भाषा ({0})</value></data>
+  <data name="Settings_SystemLanguage" xml:space="preserve"><value>{0} (सिस्टम)</value></data>
   <data name="Notation_English" xml:space="preserve"><value>अंग्रेज़ी नामकरण</value></data>
   <data name="Notation_German" xml:space="preserve"><value>जर्मन नामकरण</value></data>
   <data name="Notation_Latin" xml:space="preserve"><value>लैटिन नामकरण</value></data>
@@ -41,6 +41,7 @@
   <data name="Settings_MaxFret" xml:space="preserve"><value>सबसे ऊँचा फ्रेट:</value></data>
   <data name="Settings_AllowBarre" xml:space="preserve"><value>बैरे कॉर्ड की अनुमति दें</value></data>
   <data name="Settings_AllowSpecial" xml:space="preserve"><value>ऊँचे तार म्यूट वाले कॉर्ड की अनुमति दें</value></data>
+  <data name="Settings_EasyOnly" xml:space="preserve"><value>केवल आसान फिंगरिंग</value></data>
   <data name="Settings_Vertical" xml:space="preserve"><value>खड़े डायग्राम</value></data>
   <data name="Settings_Horizontal" xml:space="preserve"><value>आड़े डायग्राम</value></data>
   <data name="Settings_LeftHanded" xml:space="preserve"><value>बाएँ हाथ वाले (उलटे डायग्राम)</value></data>

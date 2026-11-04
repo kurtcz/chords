@@ -7,9 +7,9 @@
     <Brand>@LanguageName(settings.Language)</Brand>
     <ChildContent>
         <li><a @onclick="() => SetLanguage(null)">@LanguageName(null)</a></li>
-        @foreach (var (code, name) in Localizer.Languages)
+        @foreach (var (code, name, flag) in Localizer.Languages)
         {
-            <li><a @onclick="() => SetLanguage(code)">@name</a></li>
+            <li><a @onclick="() => SetLanguage(code)">@flag @name</a></li>
         }
     </ChildContent>
 </DropdownBar>
@@ -76,6 +76,12 @@
     </span>
 </div>
 }
+<div class="row vertical-align" style="margin-bottom: 20px;">
+    <span class="col-xs-9 col-sm-9 col-md-9 col-lg-9">@L["Settings_EasyOnly"]</span>
+    <span class="col-xs-3 col-sm-3 col-md-3 col-lg-3 justify-right">
+        <Toggle Value="settings.EasyOnly" ValueChanged="v => Update(() => settings.EasyOnly = v)" />
+    </span>
+</div>
 @* Mirroring only matters when the neck runs sideways. *@
 @if (settings.Horizontal)
 {
@@ -108,9 +114,11 @@
     {
         if (string.IsNullOrEmpty(code))
         {
-            return L["Settings_SystemLanguage", Localizer.SystemLanguageName];
+            return L["Settings_SystemLanguage", LanguageName(Localizer.SystemLanguage)];
         }
-        return Localizer.Languages.FirstOrDefault(i => i.Code == code).Name ?? code;
+        var language = Localizer.Languages.FirstOrDefault(i => i.Code == code);
+
+        return language.Name == null ? code : $"{language.Flag} {language.Name}";
     }
 
     /// <summary>Open strings from the lowest, e.g. "E-A-D-G-B-E", in the chosen notation.</summary>

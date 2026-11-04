@@ -33,7 +33,7 @@
   <data name="Find_Strict" xml:space="preserve"><value>Mod strict</value></data>
   <data name="Find_Loose" xml:space="preserve"><value>Mod flexibil</value></data>
   <data name="Find_NoChord" xml:space="preserve"><value>Niciun acord găsit</value></data>
-  <data name="Settings_SystemLanguage" xml:space="preserve"><value>Limba sistemului ({0})</value></data>
+  <data name="Settings_SystemLanguage" xml:space="preserve"><value>{0} (sistem)</value></data>
   <data name="Notation_English" xml:space="preserve"><value>Notație engleză</value></data>
   <data name="Notation_German" xml:space="preserve"><value>Notație germană</value></data>
   <data name="Notation_Latin" xml:space="preserve"><value>Notație latină</value></data>
@@ -42,6 +42,7 @@
   <data name="Settings_MaxFret" xml:space="preserve"><value>Tasta cea mai înaltă:</value></data>
   <data name="Settings_AllowBarre" xml:space="preserve"><value>Permite barré</value></data>
   <data name="Settings_AllowSpecial" xml:space="preserve"><value>Permite acorduri cu corzi înalte înăbușite</value></data>
+  <data name="Settings_EasyOnly" xml:space="preserve"><value>Doar digitații ușoare</value></data>
   <data name="Settings_Vertical" xml:space="preserve"><value>Diagrame verticale</value></data>
   <data name="Settings_Horizontal" xml:space="preserve"><value>Diagrame orizontale</value></data>
   <data name="Settings_LeftHanded" xml:space="preserve"><value>Stângaci (diagrame în oglindă)</value></data>

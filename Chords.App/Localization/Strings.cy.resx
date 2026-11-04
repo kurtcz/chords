@@ -36,7 +36,7 @@
   <data name="Find_Strict" xml:space="preserve"><value>Modd caeth</value></data>
   <data name="Find_Loose" xml:space="preserve"><value>Modd llac</value></data>
   <data name="Find_NoChord" xml:space="preserve"><value>Dim cord wedi'i ganfod</value></data>
-  <data name="Settings_SystemLanguage" xml:space="preserve"><value>Iaith y system ({0})</value></data>
+  <data name="Settings_SystemLanguage" xml:space="preserve"><value>{0} (system)</value></data>
   <data name="Notation_English" xml:space="preserve"><value>Nodiant Saesneg</value></data>
   <data name="Notation_German" xml:space="preserve"><value>Nodiant Almaeneg</value></data>
   <data name="Notation_Latin" xml:space="preserve"><value>Nodiant Lladin</value></data>
@@ -45,6 +45,7 @@
   <data name="Settings_MaxFret" xml:space="preserve"><value>Ffret uchaf:</value></data>
   <data name="Settings_AllowBarre" xml:space="preserve"><value>Caniatáu barré</value></data>
   <data name="Settings_AllowSpecial" xml:space="preserve"><value>Caniatáu cordiau â thannau uchel wedi'u tawelu</value></data>
+  <data name="Settings_EasyOnly" xml:space="preserve"><value>Byseddu hawdd yn unig</value></data>
   <data name="Settings_Vertical" xml:space="preserve"><value>Diagramau fertigol</value></data>
   <data name="Settings_Horizontal" xml:space="preserve"><value>Diagramau llorweddol</value></data>
   <data name="Settings_LeftHanded" xml:space="preserve"><value>Llaw chwith (diagramau drych)</value></data>

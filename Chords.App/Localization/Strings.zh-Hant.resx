@@ -31,7 +31,7 @@
   <data name="Find_Strict" xml:space="preserve"><value>嚴格模式</value></data>
   <data name="Find_Loose" xml:space="preserve"><value>寬鬆模式</value></data>
   <data name="Find_NoChord" xml:space="preserve"><value>找不到和弦</value></data>
-  <data name="Settings_SystemLanguage" xml:space="preserve"><value>系統語言 ({0})</value></data>
+  <data name="Settings_SystemLanguage" xml:space="preserve"><value>{0} (系統)</value></data>
   <data name="Notation_English" xml:space="preserve"><value>英式記譜</value></data>
   <data name="Notation_German" xml:space="preserve"><value>德式記譜</value></data>
   <data name="Notation_Latin" xml:space="preserve"><value>拉丁記譜</value></data>
@@ -40,6 +40,7 @@
   <data name="Settings_MaxFret" xml:space="preserve"><value>最高琴格：</value></data>
   <data name="Settings_AllowBarre" xml:space="preserve"><value>允許封閉和弦</value></data>
   <data name="Settings_AllowSpecial" xml:space="preserve"><value>允許高音弦悶音的指法</value></data>
+  <data name="Settings_EasyOnly" xml:space="preserve"><value>僅顯示簡單指法</value></data>
   <data name="Settings_Vertical" xml:space="preserve"><value>直向和弦圖</value></data>
   <data name="Settings_Horizontal" xml:space="preserve"><value>橫向和弦圖</value></data>
   <data name="Settings_LeftHanded" xml:space="preserve"><value>左手模式（鏡像和弦圖）</value></data>

@@ -33,7 +33,7 @@
   <data name="Find_Strict" xml:space="preserve"><value>Griežtas režimas</value></data>
   <data name="Find_Loose" xml:space="preserve"><value>Laisvas režimas</value></data>
   <data name="Find_NoChord" xml:space="preserve"><value>Akordas nerastas</value></data>
-  <data name="Settings_SystemLanguage" xml:space="preserve"><value>Sistemos kalba ({0})</value></data>
+  <data name="Settings_SystemLanguage" xml:space="preserve"><value>{0} (sistema)</value></data>
   <data name="Notation_English" xml:space="preserve"><value>Angliška notacija</value></data>
   <data name="Notation_German" xml:space="preserve"><value>Vokiška notacija</value></data>
   <data name="Notation_Latin" xml:space="preserve"><value>Lotyniška notacija</value></data>
@@ -42,6 +42,7 @@
   <data name="Settings_MaxFret" xml:space="preserve"><value>Aukščiausias laukelis:</value></data>
   <data name="Settings_AllowBarre" xml:space="preserve"><value>Leisti barė</value></data>
   <data name="Settings_AllowSpecial" xml:space="preserve"><value>Leisti pirštuotes su prislopintomis aukštomis stygomis</value></data>
+  <data name="Settings_EasyOnly" xml:space="preserve"><value>Tik lengvi pirštuotės variantai</value></data>
   <data name="Settings_Vertical" xml:space="preserve"><value>Vertikalios schemos</value></data>
   <data name="Settings_Horizontal" xml:space="preserve"><value>Horizontalios schemos</value></data>
   <data name="Settings_LeftHanded" xml:space="preserve"><value>Kairiarankiams (veidrodinės schemos)</value></data>

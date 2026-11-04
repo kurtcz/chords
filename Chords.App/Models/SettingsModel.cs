@@ -14,6 +14,8 @@ namespace Chords.App.Models
         public bool ShowBasicChordTypes { get; set; } = true;
         public bool AllowBarre { get; set; } = true;
         public bool AllowSpecial { get; set; } = false;
+        /// <summary>Show only easy fingerings (or the easiest ones there are), see <see cref="GuitarChordLayout.DifficultyLevel"/>.</summary>
+        public bool EasyOnly { get; set; } = false;
         public bool ShowTips { get; set; } = true;
         public Instrument Instrument { get; set; } = Instrument.Guitar;
         /// <summary>Draw chord diagrams with horizontal strings (nut on the left), like looking at the neck.</summary>

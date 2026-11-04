@@ -40,15 +40,25 @@ namespace Chords.App.Models
 			_namingConvention = namingConvention;
 		}
 
-		public GuitarChordLayoutDecorator[] GenerateLayouts(Instrument instrument, bool allowBarre, bool allowSpecial, bool allowPartial, int maxFret)
+		/// <summary>Fingerings from the easiest, each difficulty level ordered up the neck.</summary>
+		/// <param name="easyOnly">Only easy fingerings; when the chord has none, the easiest level it has.</param>
+		public GuitarChordLayoutDecorator[] GenerateLayouts(Instrument instrument, bool allowBarre, bool allowSpecial, bool allowPartial, int maxFret, bool easyOnly)
 		{
-			return GuitarChordLayout.Generate(_chord, instrument, allowBarre, allowSpecial, allowPartial, maxFret)
-									.OrderBy(i => i.GuitarChordType)
-									.Select(i => new GuitarChordLayoutDecorator(i, _namingConvention))
-									.OrderBy(i => i.RenderingFret)
-									.ThenBy(i => i.Complete ? 0 : 1)
-									.ThenBy(i => (i.Notes[0] == _chord.Root ? 0 : 1))
-									.ToArray();
+			var layouts = GuitarChordLayout.Generate(_chord, instrument, allowBarre, allowSpecial, allowPartial, maxFret).ToArray();
+
+			if (easyOnly && layouts.Length > 0)
+			{
+				var easiest = layouts.Min(i => i.DifficultyLevel);
+				layouts = layouts.Where(i => i.DifficultyLevel == easiest).ToArray();
+			}
+
+			return layouts.OrderBy(i => i.GuitarChordType)
+						  .Select(i => new GuitarChordLayoutDecorator(i, _namingConvention))
+						  .OrderBy(i => i.Layout.DifficultyLevel)
+						  .ThenBy(i => i.RenderingFret)
+						  .ThenBy(i => i.Complete ? 0 : 1)
+						  .ThenBy(i => (i.Notes[0] == _chord.Root ? 0 : 1))
+						  .ToArray();
 		}
 	}
 }

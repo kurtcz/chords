@@ -32,7 +32,7 @@
   <data name="Find_Strict" xml:space="preserve"><value>Modalitet i rreptë</value></data>
   <data name="Find_Loose" xml:space="preserve"><value>Modalitet i lirë</value></data>
   <data name="Find_NoChord" xml:space="preserve"><value>Nuk u gjet asnjë akord</value></data>
-  <data name="Settings_SystemLanguage" xml:space="preserve"><value>Gjuha e sistemit ({0})</value></data>
+  <data name="Settings_SystemLanguage" xml:space="preserve"><value>{0} (sistemi)</value></data>
   <data name="Notation_English" xml:space="preserve"><value>Shënim anglez</value></data>
   <data name="Notation_German" xml:space="preserve"><value>Shënim gjerman</value></data>
   <data name="Notation_Latin" xml:space="preserve"><value>Shënim latin</value></data>
@@ -41,6 +41,7 @@
   <data name="Settings_MaxFret" xml:space="preserve"><value>Tasti më i lartë:</value></data>
   <data name="Settings_AllowBarre" xml:space="preserve"><value>Lejo barré</value></data>
   <data name="Settings_AllowSpecial" xml:space="preserve"><value>Lejo akorde me tela të lartë të shuar</value></data>
+  <data name="Settings_EasyOnly" xml:space="preserve"><value>Vetëm pozicione të lehta gishtash</value></data>
   <data name="Settings_Vertical" xml:space="preserve"><value>Diagrame vertikale</value></data>
   <data name="Settings_Horizontal" xml:space="preserve"><value>Diagrame horizontale</value></data>
   <data name="Settings_LeftHanded" xml:space="preserve"><value>Mëngjarash (diagrame të pasqyruara)</value></data>

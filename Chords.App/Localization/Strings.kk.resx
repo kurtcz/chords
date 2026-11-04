@@ -32,7 +32,7 @@
   <data name="Find_Strict" xml:space="preserve"><value>Қатаң режим</value></data>
   <data name="Find_Loose" xml:space="preserve"><value>Еркін режим</value></data>
   <data name="Find_NoChord" xml:space="preserve"><value>Аккорд табылмады</value></data>
-  <data name="Settings_SystemLanguage" xml:space="preserve"><value>Жүйе тілі ({0})</value></data>
+  <data name="Settings_SystemLanguage" xml:space="preserve"><value>{0} (жүйе)</value></data>
   <data name="Notation_English" xml:space="preserve"><value>Ағылшын белгілеуі</value></data>
   <data name="Notation_German" xml:space="preserve"><value>Неміс белгілеуі</value></data>
   <data name="Notation_Latin" xml:space="preserve"><value>Латын белгілеуі</value></data>
@@ -41,6 +41,7 @@
   <data name="Settings_MaxFret" xml:space="preserve"><value>Ең жоғары лад:</value></data>
   <data name="Settings_AllowBarre" xml:space="preserve"><value>Барреге рұқсат беру</value></data>
   <data name="Settings_AllowSpecial" xml:space="preserve"><value>Жоғары ішектері басылған қойылымдарға рұқсат беру</value></data>
+  <data name="Settings_EasyOnly" xml:space="preserve"><value>Тек оңай аппликатуралар</value></data>
   <data name="Settings_Vertical" xml:space="preserve"><value>Тік сызбалар</value></data>
   <data name="Settings_Horizontal" xml:space="preserve"><value>Көлденең сызбалар</value></data>
   <data name="Settings_LeftHanded" xml:space="preserve"><value>Солақай (айналы сызбалар)</value></data>

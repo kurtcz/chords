@@ -1,3 +1,4 @@
+using System;
 using System.Linq;
 
 namespace Chords.Core.Models
@@ -27,6 +28,20 @@ namespace Chords.Core.Models
         /// A short string can be fretted only beyond its nut; it then sounds <c>fret - FirstFret</c> half-steps above open.
         /// </summary>
         public int[] FirstFrets { get; }
+        /// <summary>Frets the fretting hand covers with one finger per fret, without stretching.</summary>
+        public int ComfortableFretSpan { get; private set; } = 4;
+        /// <summary>
+        /// Widest span reachable by stretching the little finger alone to the farthest fret
+        /// (equal to <see cref="ComfortableFretSpan"/> when the frets are too wide to stretch).
+        /// </summary>
+        public int MaxFretSpan { get; private set; } = 4;
+        /// <summary>
+        /// Whether a string in the middle may stay silent: only when the strings are plucked one by one
+        /// (fingerstyle bass), never when strummed.
+        /// </summary>
+        public bool AllowInnerMutedStrings { get; private set; }
+        /// <summary>Frets shown in a chord diagram, enough for the widest chord.</summary>
+        public int DiagramFrets => Math.Max(4, MaxFretSpan);
 
         public int StringCount => Strings.Length;
 
@@ -74,16 +89,41 @@ namespace Chords.Core.Models
 
         public static readonly InstrumentInfo Guitar = new InstrumentInfo(true,
             (Tone.E, 40), (Tone.A, 45), (Tone.D, 50), (Tone.G, 55), (Tone.B, 59), (Tone.E, 64));
-        /// <summary>Standard re-entrant tuning G4 C4 E4 A4.</summary>
+        /// <summary>
+        /// Standard re-entrant tuning G4 C4 E4 A4, strummed. The short scale (33–38 cm) lets the little finger
+        /// stretch one fret beyond the usual four.
+        /// </summary>
         public static readonly InstrumentInfo Ukulele = new InstrumentInfo(false,
-            (Tone.G, 67), (Tone.C, 60), (Tone.E, 64), (Tone.A, 69));
-        /// <summary>Four double courses tuned G3 D4 A4 E5.</summary>
+            (Tone.G, 67), (Tone.C, 60), (Tone.E, 64), (Tone.A, 69))
+        {
+            ComfortableFretSpan = 4,
+            MaxFretSpan = 5
+        };
+        /// <summary>
+        /// Four double courses tuned G3 D4 A4 E5, strummed. Tuned in fifths like a violin, with a 35 cm scale whose
+        /// frets are about half as wide as a guitar's: closed shapes span five frets and the little finger
+        /// reaches a sixth (e.g. the G chop chord 7 5 2 3).
+        /// </summary>
         public static readonly InstrumentInfo Mandolin = new InstrumentInfo(false,
-            (Tone.G, 55), (Tone.D, 62), (Tone.A, 69), (Tone.E, 76));
+            (Tone.G, 55), (Tone.D, 62), (Tone.A, 69), (Tone.E, 76))
+        {
+            ComfortableFretSpan = 5,
+            MaxFretSpan = 6
+        };
+        /// <summary>
+        /// Plucked with the fingers, so any string may stay silent. The long scale (86 cm) has wide frets:
+        /// three under the hand, the fourth only with a stretch of the little finger.
+        /// </summary>
         public static readonly InstrumentInfo BassGuitar = new InstrumentInfo(true,
-            (Tone.E, 28), (Tone.A, 33), (Tone.D, 38), (Tone.G, 43));
+            (Tone.E, 28), (Tone.A, 33), (Tone.D, 38), (Tone.G, 43))
+        {
+            ComfortableFretSpan = 3,
+            MaxFretSpan = 4,
+            AllowInnerMutedStrings = true
+        };
         /// <summary>
         /// Five-string banjo in open G: the short drone string G4 (starting at the 5th fret) on the left, then D3 G3 B3 D4.
+        /// Its scale is about the guitar's, so is the reach: four frets.
         /// </summary>
         public static readonly InstrumentInfo Banjo = new InstrumentInfo(new[] { 5, 0, 0, 0, 0 }, false,
             (Tone.G, 67), (Tone.D, 50), (Tone.G, 55), (Tone.B, 59), (Tone.D, 62));

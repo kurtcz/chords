@@ -33,7 +33,7 @@
   <data name="Find_Strict" xml:space="preserve"><value>Строгі рэжым</value></data>
   <data name="Find_Loose" xml:space="preserve"><value>Свабодны рэжым</value></data>
   <data name="Find_NoChord" xml:space="preserve"><value>Акорд не знойдзены</value></data>
-  <data name="Settings_SystemLanguage" xml:space="preserve"><value>Мова сістэмы ({0})</value></data>
+  <data name="Settings_SystemLanguage" xml:space="preserve"><value>{0} (сістэма)</value></data>
   <data name="Notation_English" xml:space="preserve"><value>Англійская натацыя</value></data>
   <data name="Notation_German" xml:space="preserve"><value>Нямецкая натацыя</value></data>
   <data name="Notation_Latin" xml:space="preserve"><value>Лацінская натацыя</value></data>
@@ -42,6 +42,7 @@
   <data name="Settings_MaxFret" xml:space="preserve"><value>Найвышэйшы лад:</value></data>
   <data name="Settings_AllowBarre" xml:space="preserve"><value>Дазволіць барэ</value></data>
   <data name="Settings_AllowSpecial" xml:space="preserve"><value>Дазволіць акорды з заглушанымі высокімі струнамі</value></data>
+  <data name="Settings_EasyOnly" xml:space="preserve"><value>Толькі простыя аплікатуры</value></data>
   <data name="Settings_Vertical" xml:space="preserve"><value>Вертыкальныя аплікатуры</value></data>
   <data name="Settings_Horizontal" xml:space="preserve"><value>Гарызантальныя аплікатуры</value></data>
   <data name="Settings_LeftHanded" xml:space="preserve"><value>Для ляўшы (люстраныя аплікатуры)</value></data>

@@ -28,7 +28,8 @@ namespace Chords.App.Models
 		{
 			_layout = layout;
 			RenderingFret = Fret - 1;
-			if (Fret <= 4 && IntPositions.All(i => i <= 4))
+			var frets = layout.InstrumentInfo.DiagramFrets;
+			if (Fret <= frets && IntPositions.All(i => i <= frets))
 			{
 				RenderingFret = 0;
 			}
@@ -48,7 +49,9 @@ namespace Chords.App.Models
             //diagram coordinates: a = across the strings (lowest string 0, next +20),
             //f = along the neck (note names 10, nut 20, frets every 40, dot of fret n at n*40)
             var span = (strings - 1) * 20;
-            const int neck = 180;
+            var info = _layout.InstrumentInfo;
+            var frets = info.DiagramFrets;
+            var neck = 20 + frets * 40;
             int svgWidth, svgHeight;
             Func<int, int, (int X, int Y)> P;
             if (horizontal)
@@ -60,7 +63,7 @@ namespace Chords.App.Models
             else
             {
                 svgWidth = 25 + span + 30;
-                svgHeight = 190;
+                svgHeight = neck + 10;
                 P = (a, f) => (25 + a, f);
             }
             int A(int s) => s * 20;
@@ -74,7 +77,6 @@ namespace Chords.App.Models
             var star = horizontal ? P(span, neck + 25) : (X: 25 + span + 17, Y: 12);
             sb.Append($"\t\t<path class=\"star\" fill=\"#F8D64E\" d=\"M {star.X - 7} {star.Y + 11} l 7 -23 l 7 23 l -19 -14 h 24 Z\" />\n");
             //fretboard; fret wire n lies at 20 + (n - RenderingFret) * 40
-            var info = _layout.InstrumentInfo;
             for (var s = 0; s < strings; s++)
             {
                 //a short string (banjo's 5th) starts at its own nut further up the neck
@@ -88,7 +90,7 @@ namespace Chords.App.Models
                     sb.Append(Line(P(A(s) - 4, start), P(A(s) + 4, start), color, 3));
                 }
             }
-            for (var i = 0; i < 5; i++)
+            for (var i = 0; i <= frets; i++)
             {
                 sb.Append(Line(P(A(info.FirstStringAtFret(RenderingFret + i)), 20 + i * 40), P(span, 20 + i * 40), color, 1));
             }
@@ -144,7 +146,7 @@ namespace Chords.App.Models
                 }
             }
             //fret numbers: left of a vertical neck, above a horizontal one
-            for (var i = 0; i < 5; i++)
+            for (var i = 0; i <= frets; i++)
             {
                 var p = horizontal ? (P(span, 20 + i * 40).X, 12) : (15, 23 + i * 40);
                 sb.Append($"\t\t<text x=\"{p.Item1}\" y=\"{p.Item2}\" text-anchor=\"{(horizontal ? "middle" : "end")}\" fill=\"{color}\" stroke=\"none\" font-size=\"12\">{RenderingFret + i}</text>\n");

@@ -32,7 +32,7 @@
   <data name="Find_Strict" xml:space="preserve"><value>Mahigpit na mode</value></data>
   <data name="Find_Loose" xml:space="preserve"><value>Maluwag na mode</value></data>
   <data name="Find_NoChord" xml:space="preserve"><value>Walang nahanap na chord</value></data>
-  <data name="Settings_SystemLanguage" xml:space="preserve"><value>Wika ng system ({0})</value></data>
+  <data name="Settings_SystemLanguage" xml:space="preserve"><value>{0} (system)</value></data>
   <data name="Notation_English" xml:space="preserve"><value>English na notasyon</value></data>
   <data name="Notation_German" xml:space="preserve"><value>German na notasyon</value></data>
   <data name="Notation_Latin" xml:space="preserve"><value>Latin na notasyon</value></data>
@@ -41,6 +41,7 @@
   <data name="Settings_MaxFret" xml:space="preserve"><value>Pinakamataas na fret:</value></data>
   <data name="Settings_AllowBarre" xml:space="preserve"><value>Payagan ang barre chord</value></data>
   <data name="Settings_AllowSpecial" xml:space="preserve"><value>Payagan ang mga chord na may naka-mute na matataas na kuwerdas</value></data>
+  <data name="Settings_EasyOnly" xml:space="preserve"><value>Madadaling pagdiin lamang</value></data>
   <data name="Settings_Vertical" xml:space="preserve"><value>Patayong diagram</value></data>
   <data name="Settings_Horizontal" xml:space="preserve"><value>Pahigang diagram</value></data>
   <data name="Settings_LeftHanded" xml:space="preserve"><value>Kaliwete (naka-salamin na diagram)</value></data>
