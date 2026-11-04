@@ -35,87 +35,108 @@ namespace Chords.App.Models
 			_namingConvention = namingConvention;
 		}
 
-        public MarkupString Schema
+        public MarkupString Schema => RenderSchema(false, false);
+
+        /// <summary>SVG chord diagram.</summary>
+        /// <param name="horizontal">Strings run left to right with the nut on the left and the lowest string at the bottom.</param>
+        /// <param name="leftHanded">Mirrors a horizontal diagram so the nut is on the right.</param>
+        public MarkupString RenderSchema(bool horizontal, bool leftHanded)
         {
-            get
+            var sb = new StringBuilder();
+            var strings = IntPositions.Length;
+            var color = Complete ? "black" : "grey";
+            //diagram coordinates: a = across the strings (lowest string 0, next +20),
+            //f = along the neck (note names 10, nut 20, frets every 40, dot of fret n at n*40)
+            var span = (strings - 1) * 20;
+            const int neck = 180;
+            int svgWidth, svgHeight;
+            Func<int, int, (int X, int Y)> P;
+            if (horizontal)
             {
-				var sb = new StringBuilder();
-				var strings = IntPositions.Length;
-				var width = (strings - 1) * 20;
-				//star right next to the last string
-				var star = $"M {25 + width + 10} 23 l 7 -23 l 7 23 l -19 -14 h 24 Z";
-				var svgWidth = 25 + width + 30;
-                var fret0 = $"M 25 20 h {width}";
-                var frets = string.Join(" ", Enumerable.Range(0, strings).Select(i => $"M {25 + i * 20} 20 v 160")
-                                                       .Concat(Enumerable.Range(0, 5).Select(i => $"M 25 {20 + i * 40} h {width}")));
-				sb.AppendLine($"\t<svg viewBox=\"0 0 {svgWidth} 190\" width=\"{svgWidth}\" style=\"display:block; margin-bottom:10px;\">");
-				//sb.AppendLine("\t<svg width=\"160\" height=\"200\" style=\"display:block;\">");
-                //star
-                sb.AppendFormat("\t\t<path class=\"star\" fill=\"#F8D64E\" d=\"{0}\" />\n", star);
-				//fretboard
-				sb.AppendFormat("\t\t<path d=\"{0}\" fill=\"none\" stroke=\"{1}\" stroke-width=\"1\" />\n", frets, Complete ? "black" : "grey");
-                if (RenderingFret == 0)
-                {
-                    sb.AppendFormat("\t\t<path d=\"{0}\" fill=\"{1}\" stroke=\"{1}\" stroke-width=\"2\" />\n", fret0, Complete ? "black" : "grey");
-                }
-				//note names
-				var notes = ToString().Split(' ');
-
-                for (var s = 0; s < strings; s++)
-                {
-                    if (notes[s] == "X")
-                    {
-                        continue;
-                    }
-                    sb.AppendFormat("\t\t<text x=\"{0}\", y=\"{1}\" font-size=\"12\" fill=\"{2}\" stroke=\"{2}\" stroke-width=\"1\" text-anchor=\"middle\">{3}</text>\n", 
-                                    25 + s * 20, 10, Complete ? "black" : "grey", notes[s]);
-                }
-				//barre
-				if (_layout.GuitarChordType == Core.Models.GuitarChordType.FiveStringBarre ||
-                    _layout.GuitarChordType == Core.Models.GuitarChordType.SixStringBarre)
-                {
-                    var loBarreString = _layout.GuitarChordType == Core.Models.GuitarChordType.SixStringBarre ? 0 : 1;
-					var hiBarreString = strings - 1;
-
-                    sb.AppendFormat("\t\t<line x1=\"{0}\" y1=\"{1}\" x2=\"{2}\" y2=\"{3}\" stroke=\"blue\" stroke-width=\"5\" />\n",
-                                    25 + loBarreString * 20, (IntPositions[loBarreString] - RenderingFret) * 40, 
-                                    25 + hiBarreString * 20, (IntPositions[loBarreString] - RenderingFret) * 40);
-                    sb.AppendFormat("\t\t<circle cx=\"{0}\" cy=\"{1}\" r=\"2\" fill=\"blue\" stroke=\"blue\" stroke-width=\"1\" />\n",
-                                    25 + hiBarreString * 20, (IntPositions[loBarreString] - RenderingFret) * 40);
-                }
-				for (var s = 0; s < strings; s++)
-				{
-                    //muted string
-					if (IntPositions[s] == GuitarChordLayout.X)
-                    {
-                        sb.AppendFormat("\t\t<line x1=\"{0}\" y1=\"{1}\" x2=\"{2}\" y2=\"{3}\" stroke=\"red\" stroke-width=\"4\" />\n",
-                                        25 + s * 20 - 6, 20 - 6,
-                                        25 + s * 20 + 6, 20 + 6);
-						sb.AppendFormat("\t\t<line x1=\"{0}\" y1=\"{1}\" x2=\"{2}\" y2=\"{3}\" stroke=\"red\" stroke-width=\"4\" />\n",
-										25 + s * 20 - 6, 20 + 6,
-										25 + s * 20 + 6, 20 - 6);
-					}
-                    //empty string
-                    else if (IntPositions[s] == 0)
-                    {
-						sb.AppendFormat("\t\t<circle cx=\"{0}\" cy=\"{1}\" r=\"6\" fill=\"white\" stroke=\"blue\" stroke-width=\"1\" />\n", 25 + s * 20, 20);
-					}
-                    //pressed string
-                    else
-					{
-                        sb.AppendFormat("\t\t<circle cx=\"{0}\" cy=\"{1}\" r=\"6\" fill=\"blue\" stroke=\"blue\" stroke-width=\"1\" />\n", 25 + s * 20, (IntPositions[s] - RenderingFret) * 40);
-					}
-				}
-                //fret numbers
-                for (var f = 0; f < 5; f++)
-                {
-                    sb.AppendFormat("\t\t<text x=\"{0}\" y=\"{1}\" text-anchor=\"end\" fill=\"{2}\" stroke=\"none\" font-size=\"12\">{3}</text>\n",
-                                     15, 23 + f * 40, Complete ? "black" : "grey", RenderingFret + f);
-                }
-                sb.AppendLine("\t</svg>");
-
-				return new MarkupString(sb.ToString());
+                svgWidth = 20 + neck + 40;
+                svgHeight = 25 + span + 10;
+                P = (a, f) => (leftHanded ? svgWidth - 20 - f : 20 + f, 25 + span - a);
             }
+            else
+            {
+                svgWidth = 25 + span + 30;
+                svgHeight = 190;
+                P = (a, f) => (25 + a, f);
+            }
+            int A(int s) => s * 20;
+            string Line((int X, int Y) p1, (int X, int Y) p2, string stroke, int width)
+                => $"\t\t<line x1=\"{p1.X}\" y1=\"{p1.Y}\" x2=\"{p2.X}\" y2=\"{p2.Y}\" stroke=\"{stroke}\" stroke-width=\"{width}\" />\n";
+            string Circle((int X, int Y) c, string fill)
+                => $"\t\t<circle cx=\"{c.X}\" cy=\"{c.Y}\" r=\"6\" fill=\"{fill}\" stroke=\"blue\" stroke-width=\"1\" />\n";
+
+            sb.AppendLine($"\t<svg viewBox=\"0 0 {svgWidth} {svgHeight}\" width=\"{svgWidth}\" style=\"display:block; margin-bottom:10px;\">");
+            //star next to the highest string, past the end of the neck when horizontal
+            var star = horizontal ? P(span, neck + 25) : (X: 25 + span + 17, Y: 12);
+            sb.Append($"\t\t<path class=\"star\" fill=\"#F8D64E\" d=\"M {star.X - 7} {star.Y + 11} l 7 -23 l 7 23 l -19 -14 h 24 Z\" />\n");
+            //fretboard
+            for (var s = 0; s < strings; s++)
+            {
+                sb.Append(Line(P(A(s), 20), P(A(s), neck), color, 1));
+            }
+            for (var i = 0; i < 5; i++)
+            {
+                sb.Append(Line(P(0, 20 + i * 40), P(span, 20 + i * 40), color, 1));
+            }
+            if (RenderingFret == 0)
+            {
+                sb.Append(Line(P(0, 20), P(span, 20), color, 2));
+            }
+            //note names
+            var notes = ToString().Split(' ');
+            for (var s = 0; s < strings; s++)
+            {
+                if (notes[s] == "X")
+                {
+                    continue;
+                }
+                //sideways the names need more room so they don't touch open-string circles
+                var p = P(A(s), horizontal ? 0 : 10);
+                sb.Append($"\t\t<text x=\"{p.X}\" y=\"{p.Y + (horizontal ? 4 : 0)}\" font-size=\"12\" fill=\"{color}\" stroke=\"{color}\" stroke-width=\"1\" text-anchor=\"middle\">{notes[s]}</text>\n");
+            }
+            //barre
+            if (_layout.GuitarChordType == Core.Models.GuitarChordType.FiveStringBarre ||
+                _layout.GuitarChordType == Core.Models.GuitarChordType.SixStringBarre)
+            {
+                var loBarreString = _layout.GuitarChordType == Core.Models.GuitarChordType.SixStringBarre ? 0 : 1;
+                var f = (IntPositions[loBarreString] - RenderingFret) * 40;
+                var end = P(A(strings - 1), f);
+                sb.Append(Line(P(A(loBarreString), f), end, "blue", 5));
+                sb.Append($"\t\t<circle cx=\"{end.X}\" cy=\"{end.Y}\" r=\"2\" fill=\"blue\" stroke=\"blue\" stroke-width=\"1\" />\n");
+            }
+            for (var s = 0; s < strings; s++)
+            {
+                //muted string
+                if (IntPositions[s] == GuitarChordLayout.X)
+                {
+                    var c = P(A(s), 20);
+                    sb.Append(Line((c.X - 6, c.Y - 6), (c.X + 6, c.Y + 6), "red", 4));
+                    sb.Append(Line((c.X - 6, c.Y + 6), (c.X + 6, c.Y - 6), "red", 4));
+                }
+                //empty string
+                else if (IntPositions[s] == 0)
+                {
+                    sb.Append(Circle(P(A(s), 20), "white"));
+                }
+                //pressed string
+                else
+                {
+                    sb.Append(Circle(P(A(s), (IntPositions[s] - RenderingFret) * 40), "blue"));
+                }
+            }
+            //fret numbers: left of a vertical neck, above a horizontal one
+            for (var i = 0; i < 5; i++)
+            {
+                var p = horizontal ? (P(span, 20 + i * 40).X, 12) : (15, 23 + i * 40);
+                sb.Append($"\t\t<text x=\"{p.Item1}\" y=\"{p.Item2}\" text-anchor=\"{(horizontal ? "middle" : "end")}\" fill=\"{color}\" stroke=\"none\" font-size=\"12\">{RenderingFret + i}</text>\n");
+            }
+            sb.AppendLine("\t</svg>");
+
+            return new MarkupString(sb.ToString());
         }
 
 		public override string ToString()

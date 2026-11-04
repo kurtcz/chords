@@ -41,6 +41,9 @@
   <data name="Settings_MaxFret" xml:space="preserve"><value>Najvyšší pražec:</value></data>
   <data name="Settings_AllowBarre" xml:space="preserve"><value>Povoliť barré akordy</value></data>
   <data name="Settings_AllowSpecial" xml:space="preserve"><value>Povoliť akordy s tlmenými vysokými strunami</value></data>
+  <data name="Settings_Vertical" xml:space="preserve"><value>Zvislé diagramy akordov</value></data>
+  <data name="Settings_Horizontal" xml:space="preserve"><value>Vodorovné diagramy akordov</value></data>
+  <data name="Settings_LeftHanded" xml:space="preserve"><value>Pre ľavákov (zrkadlové diagramy)</value></data>
   <data name="Settings_ShowTips" xml:space="preserve"><value>Zobrazovať tipy</value></data>
   <data name="Instrument_Guitar" xml:space="preserve"><value>Gitara</value></data>
   <data name="Instrument_Ukulele" xml:space="preserve"><value>Ukulele</value></data>

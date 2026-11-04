@@ -7,7 +7,7 @@
 
 ## Navržené
 
-- **Generátor pro leváky (Left-handed mode)** – zrcadlově převrácené diagramy akordů a hmatníku.
+- **Generátor pro leváky (Left-handed mode)** – ✅ svislé/vodorovné diagramy, vodorovné lze zrcadlit pro leváky. Zbývá: hmatník se stupnicemi, až vznikne.
 - **Custom ladění** – Drop D, DADGAD, Half-step down (Eb), Open G/D a vlastní ladění; generátor hmatů i přehrávání zvuku podle zvoleného ladění.
 - **Přepínač nástrojů** – ✅ kytara, ukulele, mandolína, baskytara (oblíbené zvlášť pro každý nástroj). Zbývá: banjo (krátká 5. struna), vlastní nahrávky zvuku pro jednotlivé nástroje. Housle záměrně ne – nemají pražce.
 - **Hledání akordu podle hmatu** – uživatel naklikne prsty na diagramu hmatníku a aplikace určí název akordu (dnes lze hledat jen podle tónů).

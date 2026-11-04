@@ -1,11 +1,12 @@
 @implements IDisposable
 @inject ChordPlayer Player
+@inject AppState State
 
 @* Tap plays the chord, tap and hold toggles it as a favourite. *@
-<div class="chord-layout @(favorite ? "favorite" : null)"
+<div class="chord-layout @(favorite ? "favorite" : null) @(State.Settings.Horizontal ? "horizontal" : null)"
      @onpointerdown="PointerDown" @onpointerup="CancelHold" @onpointercancel="CancelHold" @onpointerleave="CancelHold"
      @onclick="Click" @oncontextmenu:preventDefault="true">
-    @Layout.Schema
+    @Layout.RenderSchema(State.Settings.Horizontal, State.Settings.Horizontal && State.Settings.LeftHanded)
 </div>
 
 @code {

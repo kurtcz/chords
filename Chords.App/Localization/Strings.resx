@@ -41,6 +41,9 @@
   <data name="Settings_MaxFret" xml:space="preserve"><value>Highest fret:</value></data>
   <data name="Settings_AllowBarre" xml:space="preserve"><value>Allow barre chords</value></data>
   <data name="Settings_AllowSpecial" xml:space="preserve"><value>Allow chords with muted high strings</value></data>
+  <data name="Settings_Vertical" xml:space="preserve"><value>Vertical chord diagrams</value></data>
+  <data name="Settings_Horizontal" xml:space="preserve"><value>Horizontal chord diagrams</value></data>
+  <data name="Settings_LeftHanded" xml:space="preserve"><value>Left-handed (mirrored diagrams)</value></data>
   <data name="Settings_ShowTips" xml:space="preserve"><value>Show tips</value></data>
   <data name="Instrument_Guitar" xml:space="preserve"><value>Guitar</value></data>
   <data name="Instrument_Ukulele" xml:space="preserve"><value>Ukulele</value></data>

@@ -16,6 +16,10 @@ namespace Chords.App.Models
         public bool AllowSpecial { get; set; } = false;
         public bool ShowTips { get; set; } = true;
         public Instrument Instrument { get; set; } = Instrument.Guitar;
+        /// <summary>Draw chord diagrams with horizontal strings (nut on the left), like looking at the neck.</summary>
+        public bool Horizontal { get; set; } = false;
+        /// <summary>Mirror horizontal chord diagrams so the nut is on the right.</summary>
+        public bool LeftHanded { get; set; } = false;
         /// <summary>UI language ("en", "cs", "sk"); null follows the device language.</summary>
         public string Language { get; set; }
         public string Error { get; set; }

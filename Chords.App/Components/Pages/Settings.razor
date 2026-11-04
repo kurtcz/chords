@@ -34,6 +34,13 @@
     </ChildContent>
 </DropdownBar>
 <DropdownBar>
+    <Brand>@L[settings.Horizontal ? "Settings_Horizontal" : "Settings_Vertical"]</Brand>
+    <ChildContent>
+        <li><a @onclick="() => Update(() => settings.Horizontal = false)">@L["Settings_Vertical"]</a></li>
+        <li><a @onclick="() => Update(() => settings.Horizontal = true)">@L["Settings_Horizontal"]</a></li>
+    </ChildContent>
+</DropdownBar>
+<DropdownBar>
     <Brand>@L[settings.ShowBasicChordTypes ? "Settings_BasicChords" : "Settings_AllChords"]</Brand>
     <ChildContent>
         <li><a @onclick="() => Update(() => settings.ShowBasicChordTypes = true)">@L["Settings_BasicChords"]</a></li>
@@ -66,6 +73,16 @@
     <span class="col-xs-9 col-sm-9 col-md-9 col-lg-9">@L["Settings_AllowSpecial"]</span>
     <span class="col-xs-3 col-sm-3 col-md-3 col-lg-3 justify-right">
         <Toggle Value="settings.AllowSpecial" ValueChanged="v => Update(() => settings.AllowSpecial = v)" />
+    </span>
+</div>
+}
+@* Mirroring only matters when the neck runs sideways. *@
+@if (settings.Horizontal)
+{
+<div class="row vertical-align" style="margin-bottom: 20px;">
+    <span class="col-xs-9 col-sm-9 col-md-9 col-lg-9">@L["Settings_LeftHanded"]</span>
+    <span class="col-xs-3 col-sm-3 col-md-3 col-lg-3 justify-right">
+        <Toggle Value="settings.LeftHanded" ValueChanged="v => Update(() => settings.LeftHanded = v)" />
     </span>
 </div>
 }
