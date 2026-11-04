@@ -156,6 +156,73 @@ public class PitchDetectorTests(ITestOutputHelper output)
         }
     }
 
+    /// <summary>
+    /// Low-passes like <c>TunerListener</c> (only with a locked string) and reads the steadied pitch every 1024 samples.
+    /// </summary>
+    private static List<TunerReading> Listen(float[] samples, int sampleRate, InstrumentInfo instrument, int lockedString,
+        bool filtered = true)
+    {
+        var detector = For(instrument, sampleRate);
+        var tracker = new PitchTracker(instrument) { LockedString = lockedString };
+        var cutoff = filtered ? TunerMath.FilterCutoff(instrument, lockedString) : null;
+        var input = cutoff.HasValue ? LowPassFilter.Apply(samples, sampleRate, cutoff.Value) : samples;
+        var readings = new List<TunerReading>();
+
+        for (var end = detector.FrameSize; end <= input.Length; end += 1024)
+        {
+            var reading = tracker.Add(detector.Detect(input, end));
+
+            if (reading != null)
+            {
+                readings.Add(reading);
+            }
+        }
+
+        return readings;
+    }
+
+    private static double MedianCents(IEnumerable<TunerReading> readings)
+    {
+        var cents = readings.Select(r => r.Cents).OrderBy(c => c).ToArray();
+
+        return cents[cents.Length / 2];
+    }
+
+    /// <summary>
+    /// The E2 reference tone played by the phone's speaker and recorded by its microphone. The speaker leaves the
+    /// fundamental about 50 dB down, and the string's upper partials run sharp; unfiltered this read +14 cents.
+    /// </summary>
+    [Fact]
+    public void ReferenceToneFromPhoneSpeakerReadsInTune()
+    {
+        var (samples, sampleRate) = Wav.Read(Path.Combine(AppContext.BaseDirectory, "Samples", "E2-phone-speaker.wav"));
+
+        var unfiltered = Listen(samples, sampleRate, InstrumentInfo.Guitar, 0, filtered: false);
+        var locked = Listen(samples, sampleRate, InstrumentInfo.Guitar, 0);
+
+        output.WriteLine($"unfiltered {MedianCents(unfiltered):+0.0;-0.0}, filtered {MedianCents(locked):+0.0;-0.0} cents");
+        Assert.True(MedianCents(unfiltered) > 10, "the recording no longer shows the sharp reading the filter fixes");
+        Assert.NotEmpty(locked);
+        Assert.InRange(MedianCents(locked), -3, 3);
+        Assert.All(locked, r => Assert.InRange(r.Cents, -50, 50));
+    }
+
+    /// <summary>The filter leaves the period of a harmonic-rich tone alone on every string of every instrument.</summary>
+    [Theory]
+    [MemberData(nameof(OpenStrings))]
+    public void FilteredOpenStringIsAccurate(string instrument, int pitch, int sampleRate)
+    {
+        var info = Instrument(instrument);
+        var frequency = TunerMath.FrequencyOf(pitch - 0.07);
+        // Sawtooth-like: 12 harmonics falling as 1/k.
+        var samples = Signal(sampleRate, 0.5, t => Enumerable.Range(1, 12)
+            .Sum(k => 0.3 / k * Math.Sin(2 * Math.PI * k * frequency * t + k)));
+
+        var reading = Listen(samples, sampleRate, info, Array.IndexOf(info.Pitches, pitch)).Last();
+
+        Assert.InRange(Cents(reading.Frequency, frequency), -1, 1);
+    }
+
     /// <summary>The app's own recordings of the six guitar strings (E6 = low E … E1 = high E).</summary>
     [Theory]
     [InlineData("E6", 40)]
@@ -167,19 +234,14 @@ public class PitchDetectorTests(ITestOutputHelper output)
     public void RecordedGuitarStringReadsItsNote(string file, int pitch)
     {
         var (samples, sampleRate) = Wav.Read(Path.Combine(AppContext.BaseDirectory, "Samples", file + ".wav"));
-        var detector = For(InstrumentInfo.Guitar, sampleRate);
-        var tracker = new PitchTracker(InstrumentInfo.Guitar);
-        var readings = new List<TunerReading>();
 
-        for (var end = detector.FrameSize; end <= samples.Length; end += 1024)
-        {
-            var reading = tracker.Add(detector.Detect(samples, end));
+        // Locked to its string, through the filter.
+        var locked = Listen(samples, sampleRate, InstrumentInfo.Guitar, Array.IndexOf(InstrumentInfo.Guitar.Pitches, pitch));
 
-            if (reading != null)
-            {
-                readings.Add(reading);
-            }
-        }
+        Assert.All(locked, r => Assert.Equal(pitch, (int)Math.Round(r.Pitch)));
+        Assert.InRange(MedianCents(locked), -5, 5);
+
+        var readings = Listen(samples, sampleRate, InstrumentInfo.Guitar, -1);
 
         Assert.NotEmpty(readings);
         var wrong = readings.Count(r => Math.Round(r.Pitch) != pitch);
@@ -238,6 +300,19 @@ public class TunerTests
         tracker.Add(At(pitch));
 
         return tracker.Add(At(pitch));
+    }
+
+    [Fact]
+    public void LockedStringIgnoresOctaveErrors()
+    {
+        var tracker = new PitchTracker(InstrumentInfo.Guitar) { LockedString = 0 };
+
+        // The 2nd and 3rd harmonic of the low E, and an octave below it: never the string itself.
+        Assert.Null(Hear(tracker, 52.1));
+        Assert.Null(Hear(tracker, 59));
+        Assert.Null(Hear(tracker, 28));
+        // A string tuned far off still reads.
+        Assert.Equal(-500, Hear(tracker, 35).Cents, 3);
     }
 
     [Fact]

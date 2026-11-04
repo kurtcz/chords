@@ -24,6 +24,8 @@
   <!-- The app's recorded guitar strings: real plucks to check the pitch detector against. -->
   <ItemGroup>
     <None Include="..\Chords.App\Platforms\iOS\Resources\*.wav" LinkBase="Samples" CopyToOutputDirectory="PreserveNewest" />
+    <!-- The E2 reference tone as a phone's microphone heard it from the phone's own speaker (almost no fundamental). -->
+    <None Include="Samples\*.wav" CopyToOutputDirectory="PreserveNewest" />
   </ItemGroup>
 
 </Project>

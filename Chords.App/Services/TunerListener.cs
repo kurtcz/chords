@@ -14,8 +14,8 @@ public enum TunerStatus
 }
 
 /// <summary>
-/// Feeds the microphone to a <see cref="PitchDetector"/> about 20 times a second and reports the steadied
-/// <see cref="TunerReading"/>s (null = silence) on a background thread.
+/// Feeds the microphone (low-passed while a string is locked, see <see cref="TunerMath.FilterCutoff"/>) to a
+/// <see cref="PitchDetector"/> about 20 times a second and reports the steadied <see cref="TunerReading"/>s (null = silence) on a background thread.
 /// </summary>
 public sealed class TunerListener(IAudioInput input)
 {
@@ -25,6 +25,9 @@ public sealed class TunerListener(IAudioInput input)
     private readonly object _sync = new();
     private PitchTracker _tracker;
     private PitchDetector _detector;
+    private LowPassFilter _filter;
+    /// <summary>The filtered piece of the current block.</summary>
+    private float[] _filtered = [];
     private float[] _buffer;
     private int _sampleRate;
     private int _hop;
@@ -96,6 +99,7 @@ public sealed class TunerListener(IAudioInput input)
                 return;
             }
             var rangeChanged = _tracker.Instrument != instrument || _tracker.A4 != a4;
+            var lockChanged = _tracker.LockedString != lockedString;
 
             _tracker.Instrument = instrument;
             _tracker.A4 = a4;
@@ -104,6 +108,10 @@ public sealed class TunerListener(IAudioInput input)
             {
                 _tracker.Reset();
                 CreateDetector();
+            }
+            else if (lockChanged)
+            {
+                CreateFilter();
             }
         }
     }
@@ -120,6 +128,19 @@ public sealed class TunerListener(IAudioInput input)
         _buffer = new float[_detector.FrameSize];
         _hop = _sampleRate / Rate;
         _sinceAnalysis = 0;
+        CreateFilter();
+    }
+
+    /// <summary>The cutoff follows the locked string, so a new filter whenever it changes; none in auto mode.</summary>
+    private void CreateFilter()
+    {
+        if (_sampleRate <= 0)
+        {
+            return;
+        }
+        var cutoff = TunerMath.FilterCutoff(_tracker.Instrument, _tracker.LockedString, _tracker.A4);
+
+        _filter = cutoff.HasValue ? new LowPassFilter(_sampleRate, cutoff.Value) : null;
     }
 
     /// <summary>Appends a block in pieces of at most one hop, analysing after each full hop.</summary>
@@ -140,15 +161,29 @@ public sealed class TunerListener(IAudioInput input)
                 }
                 var n = Math.Min(count - offset, _hop - _sinceAnalysis);
 
+                var source = block;
+                var start = offset;
+
+                if (_filter != null)
+                {
+                    if (_filtered.Length < n)
+                    {
+                        _filtered = new float[n];
+                    }
+                    // Every sample goes through the filter, even those dropped below: it keeps state between them.
+                    _filter.Process(block, offset, n, _filtered);
+                    source = _filtered;
+                    start = 0;
+                }
                 if (n >= _buffer.Length)
                 {
                     // A hop longer than the frame (high instruments): keep its newest samples.
-                    Array.Copy(block, offset + n - _buffer.Length, _buffer, 0, _buffer.Length);
+                    Array.Copy(source, start + n - _buffer.Length, _buffer, 0, _buffer.Length);
                 }
                 else
                 {
                     Array.Copy(_buffer, n, _buffer, 0, _buffer.Length - n);
-                    Array.Copy(block, offset, _buffer, _buffer.Length - n, n);
+                    Array.Copy(source, start, _buffer, _buffer.Length - n, n);
                 }
                 offset += n;
                 _sinceAnalysis += n;

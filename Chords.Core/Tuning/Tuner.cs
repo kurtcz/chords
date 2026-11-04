@@ -48,6 +48,19 @@ namespace Chords.Core.Tuning
         public static (float Min, float Max) Range(InstrumentInfo instrument, double a4 = DefaultA4)
             => ((float)FrequencyOf(instrument.Pitches.Min() - 5, a4), (float)FrequencyOf(instrument.Pitches.Max() + 12, a4));
 
+        /// <summary>Cutoff of the <see cref="LowPassFilter"/>, in harmonics of the locked string.</summary>
+        private const double CutoffHarmonics = 6;
+
+        /// <summary>
+        /// Low-pass cutoff for the microphone with a locked string: keeps its fundamental and lowest harmonics and
+        /// drops the upper partials, which run sharp. Null in auto mode, where the note is not known: a cutoff low
+        /// enough for the low strings smooths the attack of the high ones into octave-low readings.
+        /// </summary>
+        public static float? FilterCutoff(InstrumentInfo instrument, int lockedString, double a4 = DefaultA4)
+            => lockedString >= 0 && lockedString < instrument.StringCount
+                ? (float)(CutoffHarmonics * FrequencyOf(instrument.Pitches[lockedString], a4))
+                : (float?)null;
+
         private static int Mod(int a, int n) => ((a % n) + n) % n;
     }
 
@@ -96,6 +109,9 @@ namespace Chords.Core.Tuning
         /// </summary>
         private const double ConfirmTolerance = 0.5;
 
+        /// <summary>With a locked string, estimates this many semitones or more from it are ignored (octave errors).</summary>
+        private const double OctaveGuard = 11.5;
+
         private readonly List<double> _pitches = new List<double>(History);
         /// <summary>First estimate of a possible new note, waiting for a second one to confirm it.</summary>
         private double? _pending;
@@ -121,10 +137,10 @@ namespace Chords.Core.Tuning
         /// <summary>Adds an estimate; returns the current reading, null when nothing is sounding.</summary>
         public TunerReading Add(PitchEstimate estimate)
         {
-            if (estimate.HasPitch && estimate.Clarity >= MinClarity)
-            {
-                var pitch = TunerMath.PitchOf(estimate.Frequency, A4);
+            var pitch = estimate.HasPitch ? TunerMath.PitchOf(estimate.Frequency, A4) : 0;
 
+            if (estimate.HasPitch && estimate.Clarity >= MinClarity && !IsOctaveOffLockedString(pitch))
+            {
                 // A different note than the ones heard: start over so the old note doesn't linger.
                 if (_pitches.Count > 0 && Math.Abs(pitch - Median()) > 1 && _gap > 0)
                 {
@@ -185,6 +201,15 @@ namespace Chords.Core.Tuning
                 return new TunerReading(frequency, pitch, (int)Math.Round(pitch), -1);
             }
         }
+
+        /// <summary>
+        /// An octave or more from the locked string: an octave error, never the string itself (no string is tuned
+        /// that far off). When the fundamental is weak (a phone speaker playing a low string) the attack can briefly
+        /// read the 2nd or 3rd harmonic; a smoothed attack of a high string can read an octave low.
+        /// </summary>
+        private bool IsOctaveOffLockedString(double pitch)
+            => LockedString >= 0 && LockedString < Instrument.StringCount
+               && Math.Abs(pitch - Instrument.Pitches[LockedString]) >= OctaveGuard;
 
         private double Median()
         {
