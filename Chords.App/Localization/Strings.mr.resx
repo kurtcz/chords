@@ -49,6 +49,7 @@
   <data name="Instrument_Ukulele" xml:space="preserve"><value>युकुलेले</value></data>
   <data name="Instrument_Mandolin" xml:space="preserve"><value>मँडोलिन</value></data>
   <data name="Instrument_BassGuitar" xml:space="preserve"><value>बेस गिटार</value></data>
+  <data name="Instrument_Banjo" xml:space="preserve"><value>बँजो</value></data>
   <data name="Shape_Hint" xml:space="preserve"><value>जिथे तुमची बोटे तारा दाबतात त्या फ्रेटवर टॅप करा. तार उघडी (○) आणि म्यूट (×) यांमध्ये बदलण्यासाठी नटच्या वर टॅप करा.</value></data>
   <data name="Shape_Alternatives" xml:space="preserve"><value>याला असेही म्हणतात:</value></data>
   <data name="Shape_TooFew" xml:space="preserve"><value>किमान दोन वेगळे स्वर वाजवा</value></data>

@@ -48,6 +48,7 @@
   <data name="Instrument_Ukulele" xml:space="preserve"><value>Ukulele</value></data>
   <data name="Instrument_Mandolin" xml:space="preserve"><value>Mandolin</value></data>
   <data name="Instrument_BassGuitar" xml:space="preserve"><value>Gitar bes</value></data>
+  <data name="Instrument_Banjo" xml:space="preserve"><value>Banjo</value></data>
   <data name="Shape_Hint" xml:space="preserve"><value>Ketik fret tempat jari anda menekan tali. Ketik di atas nat untuk menukar tali antara terbuka (○) dan diredam (×).</value></data>
   <data name="Shape_Alternatives" xml:space="preserve"><value>Juga dikenali sebagai:</value></data>
   <data name="Shape_TooFew" xml:space="preserve"><value>Mainkan sekurang-kurangnya dua not berbeza</value></data>

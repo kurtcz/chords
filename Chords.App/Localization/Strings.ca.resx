@@ -49,6 +49,7 @@
   <data name="Instrument_Ukulele" xml:space="preserve"><value>Ukulele</value></data>
   <data name="Instrument_Mandolin" xml:space="preserve"><value>Mandolina</value></data>
   <data name="Instrument_BassGuitar" xml:space="preserve"><value>Baix elèctric</value></data>
+  <data name="Instrument_Banjo" xml:space="preserve"><value>Banjo</value></data>
   <data name="Shape_Hint" xml:space="preserve"><value>Toca els trasts on els dits premen les cordes. Toca damunt de la celleta per canviar una corda entre a l'aire (○) i apagada (×).</value></data>
   <data name="Shape_Alternatives" xml:space="preserve"><value>També conegut com:</value></data>
   <data name="Shape_TooFew" xml:space="preserve"><value>Toca almenys dues notes diferents</value></data>

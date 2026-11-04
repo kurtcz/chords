@@ -49,6 +49,7 @@
   <data name="Instrument_Ukulele" xml:space="preserve"><value>Γιουκαλίλι</value></data>
   <data name="Instrument_Mandolin" xml:space="preserve"><value>Μαντολίνο</value></data>
   <data name="Instrument_BassGuitar" xml:space="preserve"><value>Μπάσο</value></data>
+  <data name="Instrument_Banjo" xml:space="preserve"><value>Μπάντζο</value></data>
   <data name="Shape_Hint" xml:space="preserve"><value>Πατήστε τα τάστα όπου τα δάχτυλά σας πατούν τις χορδές. Πατήστε πάνω από το καβαλάρη για να αλλάξετε μια χορδή μεταξύ ανοιχτής (○) και σβησμένης (×).</value></data>
   <data name="Shape_Alternatives" xml:space="preserve"><value>Γνωστή και ως:</value></data>
   <data name="Shape_TooFew" xml:space="preserve"><value>Παίξτε τουλάχιστον δύο διαφορετικές νότες</value></data>

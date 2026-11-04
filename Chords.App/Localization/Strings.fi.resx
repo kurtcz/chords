@@ -49,6 +49,7 @@
   <data name="Instrument_Ukulele" xml:space="preserve"><value>Ukulele</value></data>
   <data name="Instrument_Mandolin" xml:space="preserve"><value>Mandoliini</value></data>
   <data name="Instrument_BassGuitar" xml:space="preserve"><value>Bassokitara</value></data>
+  <data name="Instrument_Banjo" xml:space="preserve"><value>Banjo</value></data>
   <data name="Shape_Hint" xml:space="preserve"><value>Napauta nauhoja, joilla sormesi painavat kieliä. Napauta satulan yläpuolelta vaihtaaksesi kielen avoimen (○) ja vaimennetun (×) välillä.</value></data>
   <data name="Shape_Alternatives" xml:space="preserve"><value>Tunnetaan myös nimellä:</value></data>
   <data name="Shape_TooFew" xml:space="preserve"><value>Soita vähintään kaksi eri säveltä</value></data>

@@ -53,6 +53,7 @@
   <data name="Instrument_Ukulele" xml:space="preserve"><value>Iwcalili</value></data>
   <data name="Instrument_Mandolin" xml:space="preserve"><value>Mandolin</value></data>
   <data name="Instrument_BassGuitar" xml:space="preserve"><value>Gitâr fas</value></data>
+  <data name="Instrument_Banjo" xml:space="preserve"><value>Banjo</value></data>
   <data name="Shape_Hint" xml:space="preserve"><value>Tapiwch y ffretiau lle mae'ch bysedd yn dal y tannau. Tapiwch uwchben y gnau i newid tant rhwng agored (○) a thawel (×).</value></data>
   <data name="Shape_Alternatives" xml:space="preserve"><value>Hefyd yn cael ei alw'n:</value></data>
   <data name="Shape_TooFew" xml:space="preserve"><value>Chwaraewch o leiaf ddau nodyn gwahanol</value></data>

@@ -49,6 +49,7 @@
   <data name="Instrument_Ukulele" xml:space="preserve"><value>Ukulele</value></data>
   <data name="Instrument_Mandolin" xml:space="preserve"><value>Mandoline</value></data>
   <data name="Instrument_BassGuitar" xml:space="preserve"><value>E-Bass</value></data>
+  <data name="Instrument_Banjo" xml:space="preserve"><value>Banjo</value></data>
   <data name="Shape_Hint" xml:space="preserve"><value>Tippe auf die Bünde, an denen deine Finger die Saiten greifen. Tippe über dem Sattel, um eine Saite zwischen leer (○) und gedämpft (×) umzuschalten.</value></data>
   <data name="Shape_Alternatives" xml:space="preserve"><value>Auch bekannt als:</value></data>
   <data name="Shape_TooFew" xml:space="preserve"><value>Spiele mindestens zwei verschiedene Töne</value></data>

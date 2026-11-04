@@ -49,6 +49,7 @@
   <data name="Instrument_Ukulele" xml:space="preserve"><value>Ukulélé</value></data>
   <data name="Instrument_Mandolin" xml:space="preserve"><value>Mandoline</value></data>
   <data name="Instrument_BassGuitar" xml:space="preserve"><value>Guitare basse</value></data>
+  <data name="Instrument_Banjo" xml:space="preserve"><value>Banjo</value></data>
   <data name="Shape_Hint" xml:space="preserve"><value>Touchez les cases où vos doigts appuient sur les cordes. Touchez au-dessus du sillet pour faire passer une corde de à vide (○) à étouffée (×).</value></data>
   <data name="Shape_Alternatives" xml:space="preserve"><value>Aussi appelé :</value></data>
   <data name="Shape_TooFew" xml:space="preserve"><value>Jouez au moins deux notes différentes</value></data>

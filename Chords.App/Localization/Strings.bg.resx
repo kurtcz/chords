@@ -49,6 +49,7 @@
   <data name="Instrument_Ukulele" xml:space="preserve"><value>Укулеле</value></data>
   <data name="Instrument_Mandolin" xml:space="preserve"><value>Мандолина</value></data>
   <data name="Instrument_BassGuitar" xml:space="preserve"><value>Бас китара</value></data>
+  <data name="Instrument_Banjo" xml:space="preserve"><value>Банджо</value></data>
   <data name="Shape_Hint" xml:space="preserve"><value>Докоснете праговете, където пръстите притискат струните. Докоснете над горния праг, за да превключите струна между отворена (○) и заглушена (×).</value></data>
   <data name="Shape_Alternatives" xml:space="preserve"><value>Известен също като:</value></data>
   <data name="Shape_TooFew" xml:space="preserve"><value>Изсвирете поне два различни тона</value></data>

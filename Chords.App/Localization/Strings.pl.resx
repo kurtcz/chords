@@ -50,6 +50,7 @@
   <data name="Instrument_Ukulele" xml:space="preserve"><value>Ukulele</value></data>
   <data name="Instrument_Mandolin" xml:space="preserve"><value>Mandolina</value></data>
   <data name="Instrument_BassGuitar" xml:space="preserve"><value>Gitara basowa</value></data>
+  <data name="Instrument_Banjo" xml:space="preserve"><value>Banjo</value></data>
   <data name="Shape_Hint" xml:space="preserve"><value>Dotknij progów, na których palce dociskają struny. Dotknij nad siodełkiem, aby przełączyć strunę między pustą (○) a wytłumioną (×).</value></data>
   <data name="Shape_Alternatives" xml:space="preserve"><value>Znany również jako:</value></data>
   <data name="Shape_TooFew" xml:space="preserve"><value>Zagraj co najmniej dwa różne dźwięki</value></data>

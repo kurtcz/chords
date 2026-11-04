@@ -48,6 +48,7 @@
   <data name="Instrument_Ukulele" xml:space="preserve"><value>Ukulele</value></data>
   <data name="Instrument_Mandolin" xml:space="preserve"><value>Mandolin</value></data>
   <data name="Instrument_BassGuitar" xml:space="preserve"><value>Guitar bass</value></data>
+  <data name="Instrument_Banjo" xml:space="preserve"><value>Đàn banjo</value></data>
   <data name="Shape_Hint" xml:space="preserve"><value>Chạm vào các phím đàn nơi ngón tay bấm dây. Chạm phía trên lược đàn để chuyển một dây giữa dây buông (○) và chặn tiếng (×).</value></data>
   <data name="Shape_Alternatives" xml:space="preserve"><value>Còn gọi là:</value></data>
   <data name="Shape_TooFew" xml:space="preserve"><value>Hãy chơi ít nhất hai nốt khác nhau</value></data>

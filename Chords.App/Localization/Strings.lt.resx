@@ -50,6 +50,7 @@
   <data name="Instrument_Ukulele" xml:space="preserve"><value>Ukulelė</value></data>
   <data name="Instrument_Mandolin" xml:space="preserve"><value>Mandolina</value></data>
   <data name="Instrument_BassGuitar" xml:space="preserve"><value>Bosinė gitara</value></data>
+  <data name="Instrument_Banjo" xml:space="preserve"><value>Bandža</value></data>
   <data name="Shape_Hint" xml:space="preserve"><value>Palieskite laukelius, kuriuose pirštai spaudžia stygas. Palieskite virš viršutinio slenkstelio, kad perjungtumėte stygą tarp atviros (○) ir prislopintos (×).</value></data>
   <data name="Shape_Alternatives" xml:space="preserve"><value>Dar žinomas kaip:</value></data>
   <data name="Shape_TooFew" xml:space="preserve"><value>Sugrokite bent du skirtingus garsus</value></data>

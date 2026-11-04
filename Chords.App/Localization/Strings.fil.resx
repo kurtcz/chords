@@ -49,6 +49,7 @@
   <data name="Instrument_Ukulele" xml:space="preserve"><value>Ukulele</value></data>
   <data name="Instrument_Mandolin" xml:space="preserve"><value>Mandolin</value></data>
   <data name="Instrument_BassGuitar" xml:space="preserve"><value>Bass guitar</value></data>
+  <data name="Instrument_Banjo" xml:space="preserve"><value>Banjo</value></data>
   <data name="Shape_Hint" xml:space="preserve"><value>I-tap ang mga fret kung saan pinipindot ng iyong mga daliri ang mga kuwerdas. I-tap sa itaas ng nut para palitan ang kuwerdas sa pagitan ng bukas (○) at naka-mute (×).</value></data>
   <data name="Shape_Alternatives" xml:space="preserve"><value>Kilala rin bilang:</value></data>
   <data name="Shape_TooFew" xml:space="preserve"><value>Tumugtog ng hindi bababa sa dalawang magkaibang nota</value></data>

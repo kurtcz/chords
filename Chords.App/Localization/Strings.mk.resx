@@ -49,6 +49,7 @@
   <data name="Instrument_Ukulele" xml:space="preserve"><value>Укулеле</value></data>
   <data name="Instrument_Mandolin" xml:space="preserve"><value>Мандолина</value></data>
   <data name="Instrument_BassGuitar" xml:space="preserve"><value>Бас-гитара</value></data>
+  <data name="Instrument_Banjo" xml:space="preserve"><value>Бенџо</value></data>
   <data name="Shape_Hint" xml:space="preserve"><value>Допрете ги прагчињата каде прстите ги притискаат жиците. Допрете над прагот за да префрлите жица меѓу отворена (○) и пригушена (×).</value></data>
   <data name="Shape_Alternatives" xml:space="preserve"><value>Познат и како:</value></data>
   <data name="Shape_TooFew" xml:space="preserve"><value>Свирете најмалку два различни тона</value></data>

@@ -73,18 +73,28 @@ namespace Chords.App.Models
             //star next to the highest string, past the end of the neck when horizontal
             var star = horizontal ? P(span, neck + 25) : (X: 25 + span + 17, Y: 12);
             sb.Append($"\t\t<path class=\"star\" fill=\"#F8D64E\" d=\"M {star.X - 7} {star.Y + 11} l 7 -23 l 7 23 l -19 -14 h 24 Z\" />\n");
-            //fretboard
+            //fretboard; fret wire n lies at 20 + (n - RenderingFret) * 40
+            var info = _layout.InstrumentInfo;
             for (var s = 0; s < strings; s++)
             {
-                sb.Append(Line(P(A(s), 20), P(A(s), neck), color, 1));
+                //a short string (banjo's 5th) starts at its own nut further up the neck
+                var start = Math.Max(20, 20 + (info.FirstFrets[s] - RenderingFret) * 40);
+                if (start < neck)
+                {
+                    sb.Append(Line(P(A(s), start), P(A(s), neck), color, 1));
+                }
+                if (info.IsShortString(s) && start > 20 && start < neck)
+                {
+                    sb.Append(Line(P(A(s) - 4, start), P(A(s) + 4, start), color, 3));
+                }
             }
             for (var i = 0; i < 5; i++)
             {
-                sb.Append(Line(P(0, 20 + i * 40), P(span, 20 + i * 40), color, 1));
+                sb.Append(Line(P(A(info.FirstStringAtFret(RenderingFret + i)), 20 + i * 40), P(span, 20 + i * 40), color, 1));
             }
             if (RenderingFret == 0)
             {
-                sb.Append(Line(P(0, 20), P(span, 20), color, 2));
+                sb.Append(Line(P(A(info.FirstStringAtFret(0)), 20), P(span, 20), color, 2));
             }
             //note names
             var notes = ToString().Split(' ');

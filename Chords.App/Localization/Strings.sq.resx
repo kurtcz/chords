@@ -49,6 +49,7 @@
   <data name="Instrument_Ukulele" xml:space="preserve"><value>Ukulele</value></data>
   <data name="Instrument_Mandolin" xml:space="preserve"><value>Mandolinë</value></data>
   <data name="Instrument_BassGuitar" xml:space="preserve"><value>Kitarë bas</value></data>
+  <data name="Instrument_Banjo" xml:space="preserve"><value>Banxho</value></data>
   <data name="Shape_Hint" xml:space="preserve"><value>Prek tastet ku gishtat shtypin telat. Prek mbi kapëzën për ta ndërruar një tel midis të lirë (○) dhe të shuar (×).</value></data>
   <data name="Shape_Alternatives" xml:space="preserve"><value>I njohur gjithashtu si:</value></data>
   <data name="Shape_TooFew" xml:space="preserve"><value>Luaj të paktën dy nota të ndryshme</value></data>

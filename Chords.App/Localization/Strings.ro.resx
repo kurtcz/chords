@@ -50,6 +50,7 @@
   <data name="Instrument_Ukulele" xml:space="preserve"><value>Ukulele</value></data>
   <data name="Instrument_Mandolin" xml:space="preserve"><value>Mandolină</value></data>
   <data name="Instrument_BassGuitar" xml:space="preserve"><value>Chitară bas</value></data>
+  <data name="Instrument_Banjo" xml:space="preserve"><value>Banjo</value></data>
   <data name="Shape_Hint" xml:space="preserve"><value>Atinge tastele unde degetele apasă corzile. Atinge deasupra călușului pentru a comuta o coardă între liberă (○) și înăbușită (×).</value></data>
   <data name="Shape_Alternatives" xml:space="preserve"><value>Cunoscut și ca:</value></data>
   <data name="Shape_TooFew" xml:space="preserve"><value>Cântă cel puțin două note diferite</value></data>

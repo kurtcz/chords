@@ -49,6 +49,7 @@
   <data name="Instrument_Ukulele" xml:space="preserve"><value>Ukulele</value></data>
   <data name="Instrument_Mandolin" xml:space="preserve"><value>Mandoliin</value></data>
   <data name="Instrument_BassGuitar" xml:space="preserve"><value>Basskitarr</value></data>
+  <data name="Instrument_Banjo" xml:space="preserve"><value>Bändžo</value></data>
   <data name="Shape_Hint" xml:space="preserve"><value>Puuduta pandesid, kus sõrmed keeli vajutavad. Puuduta sadula kohal, et lülitada keel lahtise (○) ja summutatud (×) vahel.</value></data>
   <data name="Shape_Alternatives" xml:space="preserve"><value>Tuntud ka kui:</value></data>
   <data name="Shape_TooFew" xml:space="preserve"><value>Mängi vähemalt kaks erinevat nooti</value></data>

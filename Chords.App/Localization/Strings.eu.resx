@@ -49,6 +49,7 @@
   <data name="Instrument_Ukulele" xml:space="preserve"><value>Ukelelea</value></data>
   <data name="Instrument_Mandolin" xml:space="preserve"><value>Mandolina</value></data>
   <data name="Instrument_BassGuitar" xml:space="preserve"><value>Baxu elektrikoa</value></data>
+  <data name="Instrument_Banjo" xml:space="preserve"><value>Banjoa</value></data>
   <data name="Shape_Hint" xml:space="preserve"><value>Sakatu hatzek sokak sakatzen dituzten trasteak. Sakatu zelaren gainean soka bat huts (○) eta isildu (×) artean aldatzeko.</value></data>
   <data name="Shape_Alternatives" xml:space="preserve"><value>Beste izen batzuk:</value></data>
   <data name="Shape_TooFew" xml:space="preserve"><value>Jo gutxienez bi nota desberdin</value></data>

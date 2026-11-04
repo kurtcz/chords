@@ -49,6 +49,7 @@
   <data name="Instrument_Ukulele" xml:space="preserve"><value>ইউকুলেলে</value></data>
   <data name="Instrument_Mandolin" xml:space="preserve"><value>ম্যান্ডোলিন</value></data>
   <data name="Instrument_BassGuitar" xml:space="preserve"><value>বেস গিটার</value></data>
+  <data name="Instrument_Banjo" xml:space="preserve"><value>ব্যাঞ্জো</value></data>
   <data name="Shape_Hint" xml:space="preserve"><value>যেখানে আপনার আঙুল তার চেপে ধরে সেই ফ্রেটগুলিতে ট্যাপ করুন। কোনো তার খোলা (○) ও মিউট (×) এর মধ্যে বদলাতে নাটের উপরে ট্যাপ করুন।</value></data>
   <data name="Shape_Alternatives" xml:space="preserve"><value>আরও পরিচিত:</value></data>
   <data name="Shape_TooFew" xml:space="preserve"><value>অন্তত দুটি আলাদা স্বর বাজান</value></data>

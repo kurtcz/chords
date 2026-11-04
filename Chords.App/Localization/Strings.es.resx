@@ -49,6 +49,7 @@
   <data name="Instrument_Ukulele" xml:space="preserve"><value>Ukelele</value></data>
   <data name="Instrument_Mandolin" xml:space="preserve"><value>Mandolina</value></data>
   <data name="Instrument_BassGuitar" xml:space="preserve"><value>Bajo eléctrico</value></data>
+  <data name="Instrument_Banjo" xml:space="preserve"><value>Banjo</value></data>
   <data name="Shape_Hint" xml:space="preserve"><value>Toca los trastes donde tus dedos pisan las cuerdas. Toca encima de la cejuela para cambiar una cuerda entre al aire (○) y apagada (×).</value></data>
   <data name="Shape_Alternatives" xml:space="preserve"><value>También conocido como:</value></data>
   <data name="Shape_TooFew" xml:space="preserve"><value>Toca al menos dos notas distintas</value></data>

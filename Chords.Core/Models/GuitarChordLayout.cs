@@ -92,6 +92,12 @@ namespace Chords.Core.Models
             for (var s = 0; s < info.StringCount; s++)
             {
                 positionsPerString[s] = new HashSet<int>();
+                //a short string (banjo's drone) sounds open when its note belongs to the chord, otherwise it is muted
+                if (info.IsShortString(s))
+                {
+                    positionsPerString[s].Add(chord.Notes.Any(i => Note.Normalize(i) == stringNotes[s][0]) ? 0 : X);
+                    continue;
+                }
                 if (info.AllowMutedStrings)
                 {
                     positionsPerString[s].Add(X);

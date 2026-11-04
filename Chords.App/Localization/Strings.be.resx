@@ -50,6 +50,7 @@
   <data name="Instrument_Ukulele" xml:space="preserve"><value>Укулеле</value></data>
   <data name="Instrument_Mandolin" xml:space="preserve"><value>Мандаліна</value></data>
   <data name="Instrument_BassGuitar" xml:space="preserve"><value>Бас-гітара</value></data>
+  <data name="Instrument_Banjo" xml:space="preserve"><value>Банджа</value></data>
   <data name="Shape_Hint" xml:space="preserve"><value>Націсніце на лады, дзе пальцы прыціскаюць струны. Націсніце над парожкам, каб пераключыць струну паміж адкрытай (○) і заглушанай (×).</value></data>
   <data name="Shape_Alternatives" xml:space="preserve"><value>Таксама вядомы як:</value></data>
   <data name="Shape_TooFew" xml:space="preserve"><value>Сыграйце хаця б дзве розныя ноты</value></data>

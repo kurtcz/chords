@@ -49,6 +49,7 @@
   <data name="Instrument_Ukulele" xml:space="preserve"><value>Ukulele</value></data>
   <data name="Instrument_Mandolin" xml:space="preserve"><value>Mandolina</value></data>
   <data name="Instrument_BassGuitar" xml:space="preserve"><value>Bas-gitara</value></data>
+  <data name="Instrument_Banjo" xml:space="preserve"><value>Banjo</value></data>
   <data name="Shape_Hint" xml:space="preserve"><value>Barmoqlaringiz torlarni bosgan ladlarga teging. Torni ochiq (○) va boʻgʻilgan (×) holatlar orasida almashtirish uchun yuqori xarrak ustiga teging.</value></data>
   <data name="Shape_Alternatives" xml:space="preserve"><value>Boshqa nomi:</value></data>
   <data name="Shape_TooFew" xml:space="preserve"><value>Kamida ikkita turli nota chaling</value></data>

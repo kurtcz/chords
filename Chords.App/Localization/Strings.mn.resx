@@ -49,6 +49,7 @@
   <data name="Instrument_Ukulele" xml:space="preserve"><value>Укулеле</value></data>
   <data name="Instrument_Mandolin" xml:space="preserve"><value>Мандолин</value></data>
   <data name="Instrument_BassGuitar" xml:space="preserve"><value>Бас гитар</value></data>
+  <data name="Instrument_Banjo" xml:space="preserve"><value>Банжо</value></data>
   <data name="Shape_Hint" xml:space="preserve"><value>Хуруу тань утсыг дарж буй ладуудыг дарна уу. Утсыг задгай (○) болон дарагдсан (×) хооронд солихын тулд эмээлийн дээр дарна уу.</value></data>
   <data name="Shape_Alternatives" xml:space="preserve"><value>Мөн нэрлэдэг:</value></data>
   <data name="Shape_TooFew" xml:space="preserve"><value>Дор хаяж хоёр өөр авиа тоглоно уу</value></data>

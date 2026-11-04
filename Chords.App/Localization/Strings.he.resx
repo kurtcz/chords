@@ -50,6 +50,7 @@
   <data name="Instrument_Ukulele" xml:space="preserve"><value>יוקלילי</value></data>
   <data name="Instrument_Mandolin" xml:space="preserve"><value>מנדולינה</value></data>
   <data name="Instrument_BassGuitar" xml:space="preserve"><value>גיטרה בס</value></data>
+  <data name="Instrument_Banjo" xml:space="preserve"><value>בנג׳ו</value></data>
   <data name="Shape_Hint" xml:space="preserve"><value>יש להקיש על השריגים שבהם האצבעות לוחצות על המיתרים. הקשה מעל האוכף מחליפה מיתר בין פתוח (○) למושתק (×).</value></data>
   <data name="Shape_Alternatives" xml:space="preserve"><value>מוכר גם בשם:</value></data>
   <data name="Shape_TooFew" xml:space="preserve"><value>יש לנגן לפחות שני צלילים שונים</value></data>

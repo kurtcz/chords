@@ -49,6 +49,7 @@
   <data name="Instrument_Ukulele" xml:space="preserve"><value>Ukulele</value></data>
   <data name="Instrument_Mandolin" xml:space="preserve"><value>Mandólín</value></data>
   <data name="Instrument_BassGuitar" xml:space="preserve"><value>Bassagítar</value></data>
+  <data name="Instrument_Banjo" xml:space="preserve"><value>Banjó</value></data>
   <data name="Shape_Hint" xml:space="preserve"><value>Ýttu á böndin þar sem fingurnir halda strengjunum. Ýttu fyrir ofan söðulinn til að skipta streng milli opins (○) og deyfðs (×).</value></data>
   <data name="Shape_Alternatives" xml:space="preserve"><value>Einnig þekktur sem:</value></data>
   <data name="Shape_TooFew" xml:space="preserve"><value>Spilaðu að minnsta kosti tvo ólíka tóna</value></data>

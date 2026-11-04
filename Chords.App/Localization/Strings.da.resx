@@ -49,6 +49,7 @@
   <data name="Instrument_Ukulele" xml:space="preserve"><value>Ukulele</value></data>
   <data name="Instrument_Mandolin" xml:space="preserve"><value>Mandolin</value></data>
   <data name="Instrument_BassGuitar" xml:space="preserve"><value>Basguitar</value></data>
+  <data name="Instrument_Banjo" xml:space="preserve"><value>Banjo</value></data>
   <data name="Shape_Hint" xml:space="preserve"><value>Tryk på de bånd, hvor dine fingre holder strengene. Tryk over sadlen for at skifte en streng mellem løs (○) og dæmpet (×).</value></data>
   <data name="Shape_Alternatives" xml:space="preserve"><value>Også kendt som:</value></data>
   <data name="Shape_TooFew" xml:space="preserve"><value>Spil mindst to forskellige toner</value></data>

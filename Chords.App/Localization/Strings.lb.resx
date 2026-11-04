@@ -49,6 +49,7 @@
   <data name="Instrument_Ukulele" xml:space="preserve"><value>Ukulele</value></data>
   <data name="Instrument_Mandolin" xml:space="preserve"><value>Mandolin</value></data>
   <data name="Instrument_BassGuitar" xml:space="preserve"><value>Bassgittar</value></data>
+  <data name="Instrument_Banjo" xml:space="preserve"><value>Banjo</value></data>
   <data name="Shape_Hint" xml:space="preserve"><value>Tipp op d'Bënn, wou deng Fanger d'Saiten drécken. Tipp iwwer dem Sattel, fir eng Saite tëscht eidel (○) a gedämpft (×) ze wiesselen.</value></data>
   <data name="Shape_Alternatives" xml:space="preserve"><value>Och bekannt als:</value></data>
   <data name="Shape_TooFew" xml:space="preserve"><value>Spill mindestens zwee verschidden Téin</value></data>

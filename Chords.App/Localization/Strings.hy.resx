@@ -49,6 +49,7 @@
   <data name="Instrument_Ukulele" xml:space="preserve"><value>Ուկուլելե</value></data>
   <data name="Instrument_Mandolin" xml:space="preserve"><value>Մանդոլին</value></data>
   <data name="Instrument_BassGuitar" xml:space="preserve"><value>Բաս կիթառ</value></data>
+  <data name="Instrument_Banjo" xml:space="preserve"><value>Բանջո</value></data>
   <data name="Shape_Hint" xml:space="preserve"><value>Հպեք այն լադերին, որտեղ մատները սեղմում են լարերը։ Հպեք շեմից վեր՝ լարը բաց (○) և խլացված (×) վիճակների միջև փոխելու համար։</value></data>
   <data name="Shape_Alternatives" xml:space="preserve"><value>Հայտնի է նաև որպես.</value></data>
   <data name="Shape_TooFew" xml:space="preserve"><value>Նվագեք առնվազն երկու տարբեր հնչյուն</value></data>

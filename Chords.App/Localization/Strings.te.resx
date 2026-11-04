@@ -49,6 +49,7 @@
   <data name="Instrument_Ukulele" xml:space="preserve"><value>యుకులేలే</value></data>
   <data name="Instrument_Mandolin" xml:space="preserve"><value>మాండొలిన్</value></data>
   <data name="Instrument_BassGuitar" xml:space="preserve"><value>బేస్ గిటార్</value></data>
+  <data name="Instrument_Banjo" xml:space="preserve"><value>బాంజో</value></data>
   <data name="Shape_Hint" xml:space="preserve"><value>మీ వేళ్లు తీగలను నొక్కే ఫ్రెట్‌లను నొక్కండి. తీగను తెరిచిన (○) మరియు మ్యూట్ (×) మధ్య మార్చడానికి నట్ పైన నొక్కండి.</value></data>
   <data name="Shape_Alternatives" xml:space="preserve"><value>ఇలా కూడా పిలుస్తారు:</value></data>
   <data name="Shape_TooFew" xml:space="preserve"><value>కనీసం రెండు వేర్వేరు స్వరాలు వాయించండి</value></data>

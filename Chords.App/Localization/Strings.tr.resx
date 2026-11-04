@@ -49,6 +49,7 @@
   <data name="Instrument_Ukulele" xml:space="preserve"><value>Ukulele</value></data>
   <data name="Instrument_Mandolin" xml:space="preserve"><value>Mandolin</value></data>
   <data name="Instrument_BassGuitar" xml:space="preserve"><value>Bas gitar</value></data>
+  <data name="Instrument_Banjo" xml:space="preserve"><value>Banjo</value></data>
   <data name="Shape_Hint" xml:space="preserve"><value>Parmaklarınızın tellere bastığı perdelere dokunun. Bir teli açık (○) ve susturulmuş (×) arasında değiştirmek için eşiğin üstüne dokunun.</value></data>
   <data name="Shape_Alternatives" xml:space="preserve"><value>Diğer adıyla:</value></data>
   <data name="Shape_TooFew" xml:space="preserve"><value>En az iki farklı nota çalın</value></data>

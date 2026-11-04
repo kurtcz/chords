@@ -49,6 +49,7 @@
   <data name="Instrument_Ukulele" xml:space="preserve"><value>Ukelele</value></data>
   <data name="Instrument_Mandolin" xml:space="preserve"><value>Mandoline</value></data>
   <data name="Instrument_BassGuitar" xml:space="preserve"><value>Basgitaar</value></data>
+  <data name="Instrument_Banjo" xml:space="preserve"><value>Banjo</value></data>
   <data name="Shape_Hint" xml:space="preserve"><value>Tik op de frets waar je vingers de snaren indrukken. Tik boven de topkam om een snaar te wisselen tussen open (○) en gedempt (×).</value></data>
   <data name="Shape_Alternatives" xml:space="preserve"><value>Ook bekend als:</value></data>
   <data name="Shape_TooFew" xml:space="preserve"><value>Speel minstens twee verschillende tonen</value></data>

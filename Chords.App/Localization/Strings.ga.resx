@@ -52,6 +52,7 @@
   <data name="Instrument_Ukulele" xml:space="preserve"><value>Ukulele</value></data>
   <data name="Instrument_Mandolin" xml:space="preserve"><value>Maindilín</value></data>
   <data name="Instrument_BassGuitar" xml:space="preserve"><value>Dordghiotár</value></data>
+  <data name="Instrument_Banjo" xml:space="preserve"><value>Bainseó</value></data>
   <data name="Shape_Hint" xml:space="preserve"><value>Tapáil na freaiteanna ina gcoinníonn do mhéara na téada. Tapáil os cionn an chnó chun téad a athrú idir oscailte (○) agus balbhaithe (×).</value></data>
   <data name="Shape_Alternatives" xml:space="preserve"><value>Ar a dtugtar freisin:</value></data>
   <data name="Shape_TooFew" xml:space="preserve"><value>Seinn dhá nóta éagsúla ar a laghad</value></data>

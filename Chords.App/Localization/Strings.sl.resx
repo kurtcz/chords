@@ -51,6 +51,7 @@
   <data name="Instrument_Ukulele" xml:space="preserve"><value>Ukulele</value></data>
   <data name="Instrument_Mandolin" xml:space="preserve"><value>Mandolina</value></data>
   <data name="Instrument_BassGuitar" xml:space="preserve"><value>Bas kitara</value></data>
+  <data name="Instrument_Banjo" xml:space="preserve"><value>Bendžo</value></data>
   <data name="Shape_Hint" xml:space="preserve"><value>Tapnite prečke, kjer prsti pritiskajo strune. Tapnite nad sedlom, da struno preklopite med prazno (○) in utišano (×).</value></data>
   <data name="Shape_Alternatives" xml:space="preserve"><value>Znan tudi kot:</value></data>
   <data name="Shape_TooFew" xml:space="preserve"><value>Zaigrajte vsaj dva različna tona</value></data>

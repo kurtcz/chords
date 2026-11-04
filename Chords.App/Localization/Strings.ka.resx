@@ -49,6 +49,7 @@
   <data name="Instrument_Ukulele" xml:space="preserve"><value>უკულელე</value></data>
   <data name="Instrument_Mandolin" xml:space="preserve"><value>მანდოლინა</value></data>
   <data name="Instrument_BassGuitar" xml:space="preserve"><value>ბას-გიტარა</value></data>
+  <data name="Instrument_Banjo" xml:space="preserve"><value>ბანჯო</value></data>
   <data name="Shape_Hint" xml:space="preserve"><value>შეეხეთ ლადებს, სადაც თითები სიმებს აჭერენ. სიმის ღია (○) და ჩახშობილ (×) მდგომარეობებს შორის გადასართავად შეეხეთ ზღურბლის ზემოთ.</value></data>
   <data name="Shape_Alternatives" xml:space="preserve"><value>ასევე ცნობილია როგორც:</value></data>
   <data name="Shape_TooFew" xml:space="preserve"><value>დაუკარით მინიმუმ ორი განსხვავებული ბგერა</value></data>

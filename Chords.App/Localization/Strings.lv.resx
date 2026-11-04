@@ -50,6 +50,7 @@
   <data name="Instrument_Ukulele" xml:space="preserve"><value>Ukulele</value></data>
   <data name="Instrument_Mandolin" xml:space="preserve"><value>Mandolīna</value></data>
   <data name="Instrument_BassGuitar" xml:space="preserve"><value>Basģitāra</value></data>
+  <data name="Instrument_Banjo" xml:space="preserve"><value>Bandžo</value></data>
   <data name="Shape_Hint" xml:space="preserve"><value>Pieskarieties ladiņiem, kur pirksti piespiež stīgas. Pieskarieties virs augšējā sliekšņa, lai pārslēgtu stīgu starp brīvu (○) un apslāpētu (×).</value></data>
   <data name="Shape_Alternatives" xml:space="preserve"><value>Zināms arī kā:</value></data>
   <data name="Shape_TooFew" xml:space="preserve"><value>Nospēlējiet vismaz divas dažādas skaņas</value></data>

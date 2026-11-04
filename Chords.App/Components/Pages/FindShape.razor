@@ -45,7 +45,8 @@
     @* Fret wires and numbers *@
     @for (var fret = 0; fret <= Frets; fret++)
     {
-        <line x1="@X(0)" y1="@FretY(fret)" x2="@X(StringCount - 1)" y2="@FretY(fret)"
+        @* On the banjo frets 1–4 do not reach the short 5th string *@
+        <line x1="@X(instrument.FirstStringAtFret(fret))" y1="@FretY(fret)" x2="@X(StringCount - 1)" y2="@FretY(fret)"
               stroke="#000" stroke-width="@(fret == 0 ? 4 : 1)" />
         @if (fret > 0)
         {
@@ -56,7 +57,12 @@
     @for (var s = 0; s < StringCount; s++)
     {
         var str = s;
-        <line x1="@X(s)" y1="@FretY(0)" x2="@X(s)" y2="@FretY(Frets)" stroke="#000" stroke-width="1" />
+        @* A short string (banjo's 5th) starts at its own nut further up the neck *@
+        <line x1="@X(s)" y1="@FretY(instrument.FirstFrets[s])" x2="@X(s)" y2="@FretY(Frets)" stroke="#000" stroke-width="1" />
+        @if (instrument.IsShortString(s))
+        {
+            <rect x="@(X(s) - 6)" y="@(FretY(instrument.FirstFrets[s]) - 3)" width="12" height="6" fill="#000" />
+        }
 
         @* Open / muted marker above the nut *@
         @if (frets[s] < 0)
@@ -71,7 +77,7 @@
               @onclick="() => ToggleOpen(str)" />
 
         @* Fret cells *@
-        @for (var fret = 1; fret <= Frets; fret++)
+        @for (var fret = 1; fret <= Frets && !instrument.IsShortString(s); fret++)
         {
             var f = fret;
             @if (frets[s] == fret)

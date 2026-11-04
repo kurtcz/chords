@@ -48,6 +48,7 @@
   <data name="Instrument_Ukulele" xml:space="preserve"><value>烏克麗麗</value></data>
   <data name="Instrument_Mandolin" xml:space="preserve"><value>曼陀林</value></data>
   <data name="Instrument_BassGuitar" xml:space="preserve"><value>貝斯</value></data>
+  <data name="Instrument_Banjo" xml:space="preserve"><value>班卓琴</value></data>
   <data name="Shape_Hint" xml:space="preserve"><value>點一下手指按住琴弦的琴格。點一下上弦枕上方可在空弦 (○) 和悶音 (×) 之間切換。</value></data>
   <data name="Shape_Alternatives" xml:space="preserve"><value>又稱：</value></data>
   <data name="Shape_TooFew" xml:space="preserve"><value>請至少彈奏兩個不同的音</value></data>

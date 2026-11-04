@@ -49,6 +49,7 @@
   <data name="Instrument_Ukulele" xml:space="preserve"><value>یوکللی</value></data>
   <data name="Instrument_Mandolin" xml:space="preserve"><value>ماندولین</value></data>
   <data name="Instrument_BassGuitar" xml:space="preserve"><value>گیتار باس</value></data>
+  <data name="Instrument_Banjo" xml:space="preserve"><value>بانجو</value></data>
   <data name="Shape_Hint" xml:space="preserve"><value>روی دستان‌هایی که انگشتانتان سیم‌ها را می‌گیرند ضربه بزنید. برای تغییر سیم بین باز (○) و خفه (×)، بالای شیطانک ضربه بزنید.</value></data>
   <data name="Shape_Alternatives" xml:space="preserve"><value>همچنین معروف به:</value></data>
   <data name="Shape_TooFew" xml:space="preserve"><value>دست‌کم دو نت متفاوت بنوازید</value></data>

@@ -48,6 +48,7 @@
   <data name="Instrument_Ukulele" xml:space="preserve"><value>ウクレレ</value></data>
   <data name="Instrument_Mandolin" xml:space="preserve"><value>マンドリン</value></data>
   <data name="Instrument_BassGuitar" xml:space="preserve"><value>ベース</value></data>
+  <data name="Instrument_Banjo" xml:space="preserve"><value>バンジョー</value></data>
   <data name="Shape_Hint" xml:space="preserve"><value>指で弦を押さえているフレットをタップしてください。ナットの上をタップすると、弦を開放 (○) とミュート (×) で切り替えられます。</value></data>
   <data name="Shape_Alternatives" xml:space="preserve"><value>別名:</value></data>
   <data name="Shape_TooFew" xml:space="preserve"><value>異なる音を2つ以上鳴らしてください</value></data>

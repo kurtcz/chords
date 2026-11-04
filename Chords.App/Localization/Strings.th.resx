@@ -48,6 +48,7 @@
   <data name="Instrument_Ukulele" xml:space="preserve"><value>อูคูเลเล่</value></data>
   <data name="Instrument_Mandolin" xml:space="preserve"><value>แมนโดลิน</value></data>
   <data name="Instrument_BassGuitar" xml:space="preserve"><value>กีตาร์เบส</value></data>
+  <data name="Instrument_Banjo" xml:space="preserve"><value>แบนโจ</value></data>
   <data name="Shape_Hint" xml:space="preserve"><value>แตะเฟร็ตที่นิ้วของคุณกดสายไว้ แตะเหนือนัตเพื่อสลับสายระหว่างสายเปล่า (○) และบอดเสียง (×)</value></data>
   <data name="Shape_Alternatives" xml:space="preserve"><value>หรือเรียกว่า:</value></data>
   <data name="Shape_TooFew" xml:space="preserve"><value>เล่นโน้ตที่ต่างกันอย่างน้อยสองตัว</value></data>

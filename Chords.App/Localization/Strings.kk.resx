@@ -49,6 +49,7 @@
   <data name="Instrument_Ukulele" xml:space="preserve"><value>Укулеле</value></data>
   <data name="Instrument_Mandolin" xml:space="preserve"><value>Мандолина</value></data>
   <data name="Instrument_BassGuitar" xml:space="preserve"><value>Бас-гитара</value></data>
+  <data name="Instrument_Banjo" xml:space="preserve"><value>Банджо</value></data>
   <data name="Shape_Hint" xml:space="preserve"><value>Саусақтарыңыз ішектерді басқан ладтарды түртіңіз. Ішекті ашық (○) және басылған (×) күйлер арасында ауыстыру үшін қарақшаның үстін түртіңіз.</value></data>
   <data name="Shape_Alternatives" xml:space="preserve"><value>Басқаша аталуы:</value></data>
   <data name="Shape_TooFew" xml:space="preserve"><value>Кемінде екі түрлі дыбыс ойнаңыз</value></data>

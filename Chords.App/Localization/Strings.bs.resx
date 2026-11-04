@@ -50,6 +50,7 @@
   <data name="Instrument_Ukulele" xml:space="preserve"><value>Ukulele</value></data>
   <data name="Instrument_Mandolin" xml:space="preserve"><value>Mandolina</value></data>
   <data name="Instrument_BassGuitar" xml:space="preserve"><value>Bas-gitara</value></data>
+  <data name="Instrument_Banjo" xml:space="preserve"><value>Bendžo</value></data>
   <data name="Shape_Hint" xml:space="preserve"><value>Dodirnite pragove na kojima prsti pritišću žice. Dodirnite iznad gornjeg praga da biste prebacili žicu između prazne (○) i prigušene (×).</value></data>
   <data name="Shape_Alternatives" xml:space="preserve"><value>Poznat i kao:</value></data>
   <data name="Shape_TooFew" xml:space="preserve"><value>Odsvirajte barem dva različita tona</value></data>

@@ -49,6 +49,7 @@
   <data name="Instrument_Ukulele" xml:space="preserve"><value>Ukulele</value></data>
   <data name="Instrument_Mandolin" xml:space="preserve"><value>Mandolina</value></data>
   <data name="Instrument_BassGuitar" xml:space="preserve"><value>Bas-gitara</value></data>
+  <data name="Instrument_Banjo" xml:space="preserve"><value>Banco</value></data>
   <data name="Shape_Hint" xml:space="preserve"><value>Barmaqlarınızın simləri basdığı ladlara toxunun. Simi açıq (○) və boğulmuş (×) arasında dəyişmək üçün yəhərin üstünə toxunun.</value></data>
   <data name="Shape_Alternatives" xml:space="preserve"><value>Digər adı:</value></data>
   <data name="Shape_TooFew" xml:space="preserve"><value>Ən azı iki fərqli not çalın</value></data>

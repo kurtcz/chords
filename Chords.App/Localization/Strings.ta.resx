@@ -49,6 +49,7 @@
   <data name="Instrument_Ukulele" xml:space="preserve"><value>யுகுலேலே</value></data>
   <data name="Instrument_Mandolin" xml:space="preserve"><value>மாண்டலின்</value></data>
   <data name="Instrument_BassGuitar" xml:space="preserve"><value>பேஸ் கிட்டார்</value></data>
+  <data name="Instrument_Banjo" xml:space="preserve"><value>பாஞ்சோ</value></data>
   <data name="Shape_Hint" xml:space="preserve"><value>உங்கள் விரல்கள் கம்பிகளை அழுத்தும் ஃப்ரெட்டுகளைத் தட்டவும். கம்பியைத் திறந்த (○) மற்றும் ஒலியடக்கிய (×) நிலைகளுக்கு இடையே மாற்ற நட்டுக்கு மேலே தட்டவும்.</value></data>
   <data name="Shape_Alternatives" xml:space="preserve"><value>வேறு பெயர்:</value></data>
   <data name="Shape_TooFew" xml:space="preserve"><value>குறைந்தது இரண்டு வெவ்வேறு ஸ்வரங்களை வாசிக்கவும்</value></data>
