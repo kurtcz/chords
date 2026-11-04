@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="Nav_ShowChord" xml:space="preserve"><value>Dangos diagram cord</value></data>
+  <data name="Nav_FindChord" xml:space="preserve"><value>Dod o hyd i enw cord</value></data>
+  <data name="Nav_FindShape" xml:space="preserve"><value>Dod o hyd i gord yn ôl siâp</value></data>
+  <data name="Nav_Favorites" xml:space="preserve"><value>Hoff gordiau</value></data>
+  <data name="Nav_Circle" xml:space="preserve"><value>Cylch y pumedau</value></data>
+  <data name="Nav_Settings" xml:space="preserve"><value>Gosodiadau</value></data>
+  <data name="Nav_Toggle" xml:space="preserve"><value>Dangos y ddewislen</value></data>
+  <data name="Yes" xml:space="preserve"><value>Ie</value></data>
+  <data name="No" xml:space="preserve"><value>Na</value></data>
+  <data name="Find" xml:space="preserve"><value>Chwilio</value></data>
+  <data name="ChordType_Major" xml:space="preserve"><value>Mwyaf</value></data>
+  <data name="ShowChord_Partial" xml:space="preserve"><value>Caniatáu cordiau anghyflawn</value></data>
+  <data name="Chord_Found" xml:space="preserve"><value>Cordiau a ganfuwyd:</value></data>
+  <data name="Chord_OtherSymbols" xml:space="preserve"><value>Symbolau eraill:</value></data>
+  <data name="Chord_Intervals" xml:space="preserve"><value>Cyfyngau'r cord:</value></data>
+  <data name="Chord_Notes" xml:space="preserve"><value>Nodau'r cord:</value></data>
+  <data name="Chord_Diagrams" xml:space="preserve"><value>Diagramau'r cord:</value></data>
+  <data name="Chord_Results_Zero" xml:space="preserve"><value>{0} canlyniad</value></data>
+  <data name="Chord_Results_One" xml:space="preserve"><value>{0} canlyniad</value></data>
+  <data name="Chord_Results_Two" xml:space="preserve"><value>{0} ganlyniad</value></data>
+  <data name="Chord_Results_Few" xml:space="preserve"><value>{0} chanlyniad</value></data>
+  <data name="Chord_Results_Many" xml:space="preserve"><value>{0} chanlyniad</value></data>
+  <data name="Chord_Results_Other" xml:space="preserve"><value>{0} canlyniad</value></data>
+  <data name="Chord_Invalid" xml:space="preserve"><value>Nid yw {0} yn gord dilys</value></data>
+  <data name="Tip" xml:space="preserve"><value>Awgrym:</value></data>
+  <data name="Tip_Play" xml:space="preserve"><value>Tapiwch ddiagram i wrando arno.</value></data>
+  <data name="Tip_Favorite" xml:space="preserve"><value>Daliwch eich bys ar ddiagram i'w ychwanegu at ffefrynnau.</value></data>
+  <data name="Favorites_Empty" xml:space="preserve"><value>Does gennych chi ddim hoff siapiau cord.</value></data>
+  <data name="Favorites_Hint" xml:space="preserve"><value>Daliwch eich bys ar siâp cord i'w ychwanegu at ffefrynnau.</value></data>
+  <data name="Find_Strict" xml:space="preserve"><value>Modd caeth</value></data>
+  <data name="Find_Loose" xml:space="preserve"><value>Modd llac</value></data>
+  <data name="Find_NoChord" xml:space="preserve"><value>Dim cord wedi'i ganfod</value></data>
+  <data name="Settings_SystemLanguage" xml:space="preserve"><value>Iaith y system ({0})</value></data>
+  <data name="Notation_English" xml:space="preserve"><value>Nodiant Saesneg</value></data>
+  <data name="Notation_German" xml:space="preserve"><value>Nodiant Almaeneg</value></data>
+  <data name="Notation_Latin" xml:space="preserve"><value>Nodiant Lladin</value></data>
+  <data name="Settings_BasicChords" xml:space="preserve"><value>Cordiau sylfaenol</value></data>
+  <data name="Settings_AllChords" xml:space="preserve"><value>Pob cord</value></data>
+  <data name="Settings_MaxFret" xml:space="preserve"><value>Ffret uchaf:</value></data>
+  <data name="Settings_AllowBarre" xml:space="preserve"><value>Caniatáu barré</value></data>
+  <data name="Settings_AllowSpecial" xml:space="preserve"><value>Caniatáu cordiau â thannau uchel wedi'u tawelu</value></data>
+  <data name="Settings_Vertical" xml:space="preserve"><value>Diagramau fertigol</value></data>
+  <data name="Settings_Horizontal" xml:space="preserve"><value>Diagramau llorweddol</value></data>
+  <data name="Settings_LeftHanded" xml:space="preserve"><value>Llaw chwith (diagramau drych)</value></data>
+  <data name="Settings_ShowTips" xml:space="preserve"><value>Dangos awgrymiadau</value></data>
+  <data name="Instrument_Guitar" xml:space="preserve"><value>Gitâr</value></data>
+  <data name="Instrument_Ukulele" xml:space="preserve"><value>Iwcalili</value></data>
+  <data name="Instrument_Mandolin" xml:space="preserve"><value>Mandolin</value></data>
+  <data name="Instrument_BassGuitar" xml:space="preserve"><value>Gitâr fas</value></data>
+  <data name="Shape_Hint" xml:space="preserve"><value>Tapiwch y ffretiau lle mae'ch bysedd yn dal y tannau. Tapiwch uwchben y gnau i newid tant rhwng agored (○) a thawel (×).</value></data>
+  <data name="Shape_Alternatives" xml:space="preserve"><value>Hefyd yn cael ei alw'n:</value></data>
+  <data name="Shape_TooFew" xml:space="preserve"><value>Chwaraewch o leiaf ddau nodyn gwahanol</value></data>
+  <data name="Shape_Play" xml:space="preserve"><value>Chwarae</value></data>
+  <data name="Shape_Clear" xml:space="preserve"><value>Clirio</value></data>
+</root>

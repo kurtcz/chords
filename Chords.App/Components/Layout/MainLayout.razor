@@ -4,12 +4,14 @@
 @inject AppState State
 
 @* Keyed by language: switching the language rebuilds the page so every component shows the new texts. *@
-<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 main-content" @key="language">
-    @Body
+<div dir="@(Localizer.IsRightToLeft ? "rtl" : "ltr")" lang="@Localizer.CurrentLanguage" @key="language">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 main-content">
+        @Body
+    </div>
+    <footer>
+        <p>&copy; 2017 - Tomáš Němec</p>
+    </footer>
 </div>
-<footer>
-    <p>&copy; 2017 - Tomáš Němec</p>
-</footer>
 
 @code {
     private string language = System.Globalization.CultureInfo.CurrentUICulture.Name;

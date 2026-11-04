@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="Nav_ShowChord" xml:space="preserve"><value>코드표 보기</value></data>
+  <data name="Nav_FindChord" xml:space="preserve"><value>코드 이름 찾기</value></data>
+  <data name="Nav_FindShape" xml:space="preserve"><value>운지로 코드 찾기</value></data>
+  <data name="Nav_Favorites" xml:space="preserve"><value>즐겨찾는 코드</value></data>
+  <data name="Nav_Circle" xml:space="preserve"><value>5도권</value></data>
+  <data name="Nav_Settings" xml:space="preserve"><value>설정</value></data>
+  <data name="Nav_Toggle" xml:space="preserve"><value>메뉴 표시</value></data>
+  <data name="Yes" xml:space="preserve"><value>예</value></data>
+  <data name="No" xml:space="preserve"><value>아니요</value></data>
+  <data name="Find" xml:space="preserve"><value>찾기</value></data>
+  <data name="ChordType_Major" xml:space="preserve"><value>메이저</value></data>
+  <data name="ShowChord_Partial" xml:space="preserve"><value>불완전한 코드 허용</value></data>
+  <data name="Chord_Found" xml:space="preserve"><value>찾은 코드:</value></data>
+  <data name="Chord_OtherSymbols" xml:space="preserve"><value>다른 표기:</value></data>
+  <data name="Chord_Intervals" xml:space="preserve"><value>코드 음정:</value></data>
+  <data name="Chord_Notes" xml:space="preserve"><value>코드 구성음:</value></data>
+  <data name="Chord_Diagrams" xml:space="preserve"><value>코드 다이어그램:</value></data>
+  <data name="Chord_Results_Many" xml:space="preserve"><value>{0}개 결과</value></data>
+  <data name="Chord_Invalid" xml:space="preserve"><value>{0}은(는) 올바른 코드가 아닙니다</value></data>
+  <data name="Tip" xml:space="preserve"><value>팁:</value></data>
+  <data name="Tip_Play" xml:space="preserve"><value>다이어그램을 탭하면 소리를 들을 수 있습니다.</value></data>
+  <data name="Tip_Favorite" xml:space="preserve"><value>다이어그램을 길게 누르면 즐겨찾기에 추가됩니다.</value></data>
+  <data name="Favorites_Empty" xml:space="preserve"><value>즐겨찾는 운지가 없습니다.</value></data>
+  <data name="Favorites_Hint" xml:space="preserve"><value>운지를 길게 누르면 즐겨찾기에 추가됩니다.</value></data>
+  <data name="Find_Strict" xml:space="preserve"><value>엄격 모드</value></data>
+  <data name="Find_Loose" xml:space="preserve"><value>느슨한 모드</value></data>
+  <data name="Find_NoChord" xml:space="preserve"><value>코드를 찾을 수 없습니다</value></data>
+  <data name="Settings_SystemLanguage" xml:space="preserve"><value>시스템 언어 ({0})</value></data>
+  <data name="Notation_English" xml:space="preserve"><value>영미식 표기</value></data>
+  <data name="Notation_German" xml:space="preserve"><value>독일식 표기</value></data>
+  <data name="Notation_Latin" xml:space="preserve"><value>라틴식 표기</value></data>
+  <data name="Settings_BasicChords" xml:space="preserve"><value>기본 코드</value></data>
+  <data name="Settings_AllChords" xml:space="preserve"><value>모든 코드</value></data>
+  <data name="Settings_MaxFret" xml:space="preserve"><value>최고 프렛:</value></data>
+  <data name="Settings_AllowBarre" xml:space="preserve"><value>바레 코드 허용</value></data>
+  <data name="Settings_AllowSpecial" xml:space="preserve"><value>고음 현을 뮤트한 운지 허용</value></data>
+  <data name="Settings_Vertical" xml:space="preserve"><value>세로 다이어그램</value></data>
+  <data name="Settings_Horizontal" xml:space="preserve"><value>가로 다이어그램</value></data>
+  <data name="Settings_LeftHanded" xml:space="preserve"><value>왼손잡이 (반전 다이어그램)</value></data>
+  <data name="Settings_ShowTips" xml:space="preserve"><value>팁 표시</value></data>
+  <data name="Instrument_Guitar" xml:space="preserve"><value>기타</value></data>
+  <data name="Instrument_Ukulele" xml:space="preserve"><value>우쿨렐레</value></data>
+  <data name="Instrument_Mandolin" xml:space="preserve"><value>만돌린</value></data>
+  <data name="Instrument_BassGuitar" xml:space="preserve"><value>베이스 기타</value></data>
+  <data name="Shape_Hint" xml:space="preserve"><value>손가락으로 현을 누르는 프렛을 탭하세요. 너트 위를 탭하면 현을 개방 (○)과 뮤트 (×) 사이에서 전환할 수 있습니다.</value></data>
+  <data name="Shape_Alternatives" xml:space="preserve"><value>다른 이름:</value></data>
+  <data name="Shape_TooFew" xml:space="preserve"><value>서로 다른 음을 두 개 이상 연주하세요</value></data>
+  <data name="Shape_Play" xml:space="preserve"><value>재생</value></data>
+  <data name="Shape_Clear" xml:space="preserve"><value>지우기</value></data>
+</root>

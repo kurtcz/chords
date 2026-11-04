@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="Nav_ShowChord" xml:space="preserve"><value>Tampilkan diagram akor</value></data>
+  <data name="Nav_FindChord" xml:space="preserve"><value>Cari nama akor</value></data>
+  <data name="Nav_FindShape" xml:space="preserve"><value>Cari akor dari posisi jari</value></data>
+  <data name="Nav_Favorites" xml:space="preserve"><value>Akor favorit</value></data>
+  <data name="Nav_Circle" xml:space="preserve"><value>Lingkaran kelima</value></data>
+  <data name="Nav_Settings" xml:space="preserve"><value>Pengaturan</value></data>
+  <data name="Nav_Toggle" xml:space="preserve"><value>Tampilkan menu</value></data>
+  <data name="Yes" xml:space="preserve"><value>Ya</value></data>
+  <data name="No" xml:space="preserve"><value>Tidak</value></data>
+  <data name="Find" xml:space="preserve"><value>Cari</value></data>
+  <data name="ChordType_Major" xml:space="preserve"><value>Mayor</value></data>
+  <data name="ShowChord_Partial" xml:space="preserve"><value>Izinkan akor tidak lengkap</value></data>
+  <data name="Chord_Found" xml:space="preserve"><value>Akor yang ditemukan:</value></data>
+  <data name="Chord_OtherSymbols" xml:space="preserve"><value>Simbol lain:</value></data>
+  <data name="Chord_Intervals" xml:space="preserve"><value>Interval akor:</value></data>
+  <data name="Chord_Notes" xml:space="preserve"><value>Nada akor:</value></data>
+  <data name="Chord_Diagrams" xml:space="preserve"><value>Diagram akor:</value></data>
+  <data name="Chord_Results_Many" xml:space="preserve"><value>{0} hasil</value></data>
+  <data name="Chord_Invalid" xml:space="preserve"><value>{0} bukan akor yang valid</value></data>
+  <data name="Tip" xml:space="preserve"><value>Tips:</value></data>
+  <data name="Tip_Play" xml:space="preserve"><value>Ketuk diagram untuk mendengarkannya.</value></data>
+  <data name="Tip_Favorite" xml:space="preserve"><value>Ketuk lama diagram untuk menambahkannya ke favorit.</value></data>
+  <data name="Favorites_Empty" xml:space="preserve"><value>Anda belum punya posisi akor favorit.</value></data>
+  <data name="Favorites_Hint" xml:space="preserve"><value>Ketuk lama posisi akor untuk menambahkannya ke favorit.</value></data>
+  <data name="Find_Strict" xml:space="preserve"><value>Mode ketat</value></data>
+  <data name="Find_Loose" xml:space="preserve"><value>Mode longgar</value></data>
+  <data name="Find_NoChord" xml:space="preserve"><value>Akor tidak ditemukan</value></data>
+  <data name="Settings_SystemLanguage" xml:space="preserve"><value>Bahasa sistem ({0})</value></data>
+  <data name="Notation_English" xml:space="preserve"><value>Notasi Inggris</value></data>
+  <data name="Notation_German" xml:space="preserve"><value>Notasi Jerman</value></data>
+  <data name="Notation_Latin" xml:space="preserve"><value>Notasi Latin</value></data>
+  <data name="Settings_BasicChords" xml:space="preserve"><value>Akor dasar</value></data>
+  <data name="Settings_AllChords" xml:space="preserve"><value>Semua akor</value></data>
+  <data name="Settings_MaxFret" xml:space="preserve"><value>Fret tertinggi:</value></data>
+  <data name="Settings_AllowBarre" xml:space="preserve"><value>Izinkan akor barre</value></data>
+  <data name="Settings_AllowSpecial" xml:space="preserve"><value>Izinkan akor dengan senar tinggi diredam</value></data>
+  <data name="Settings_Vertical" xml:space="preserve"><value>Diagram vertikal</value></data>
+  <data name="Settings_Horizontal" xml:space="preserve"><value>Diagram horizontal</value></data>
+  <data name="Settings_LeftHanded" xml:space="preserve"><value>Kidal (diagram dicerminkan)</value></data>
+  <data name="Settings_ShowTips" xml:space="preserve"><value>Tampilkan tips</value></data>
+  <data name="Instrument_Guitar" xml:space="preserve"><value>Gitar</value></data>
+  <data name="Instrument_Ukulele" xml:space="preserve"><value>Ukulele</value></data>
+  <data name="Instrument_Mandolin" xml:space="preserve"><value>Mandolin</value></data>
+  <data name="Instrument_BassGuitar" xml:space="preserve"><value>Gitar bas</value></data>
+  <data name="Shape_Hint" xml:space="preserve"><value>Ketuk fret tempat jari Anda menekan senar. Ketuk di atas nut untuk mengganti senar antara terbuka (○) dan diredam (×).</value></data>
+  <data name="Shape_Alternatives" xml:space="preserve"><value>Juga dikenal sebagai:</value></data>
+  <data name="Shape_TooFew" xml:space="preserve"><value>Mainkan setidaknya dua nada berbeda</value></data>
+  <data name="Shape_Play" xml:space="preserve"><value>Putar</value></data>
+  <data name="Shape_Clear" xml:space="preserve"><value>Hapus</value></data>
+</root>

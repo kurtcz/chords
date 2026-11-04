@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="Nav_ShowChord" xml:space="preserve"><value>Akkordtabell weisen</value></data>
+  <data name="Nav_FindChord" xml:space="preserve"><value>Akkordnumm fannen</value></data>
+  <data name="Nav_FindShape" xml:space="preserve"><value>Akkord no Grëff fannen</value></data>
+  <data name="Nav_Favorites" xml:space="preserve"><value>Léifste Akkorden</value></data>
+  <data name="Nav_Circle" xml:space="preserve"><value>Quintenzirkel</value></data>
+  <data name="Nav_Settings" xml:space="preserve"><value>Astellungen</value></data>
+  <data name="Nav_Toggle" xml:space="preserve"><value>Menü wiesselen</value></data>
+  <data name="Yes" xml:space="preserve"><value>Jo</value></data>
+  <data name="No" xml:space="preserve"><value>Neen</value></data>
+  <data name="Find" xml:space="preserve"><value>Sichen</value></data>
+  <data name="ChordType_Major" xml:space="preserve"><value>Dur</value></data>
+  <data name="ShowChord_Partial" xml:space="preserve"><value>Onvollstänneg Akkorden erlaben</value></data>
+  <data name="Chord_Found" xml:space="preserve"><value>Fonnt Akkorden:</value></data>
+  <data name="Chord_OtherSymbols" xml:space="preserve"><value>Aner Schreifweisen:</value></data>
+  <data name="Chord_Intervals" xml:space="preserve"><value>Intervaller vum Akkord:</value></data>
+  <data name="Chord_Notes" xml:space="preserve"><value>Téin vum Akkord:</value></data>
+  <data name="Chord_Diagrams" xml:space="preserve"><value>Grëffbiller:</value></data>
+  <data name="Chord_Results_One" xml:space="preserve"><value>{0} Resultat</value></data>
+  <data name="Chord_Results_Many" xml:space="preserve"><value>{0} Resultater</value></data>
+  <data name="Chord_Invalid" xml:space="preserve"><value>{0} ass keen gültegen Akkord</value></data>
+  <data name="Tip" xml:space="preserve"><value>Tipp:</value></data>
+  <data name="Tip_Play" xml:space="preserve"><value>Tipp op e Grëffbild, fir et ze lauschteren.</value></data>
+  <data name="Tip_Favorite" xml:space="preserve"><value>Hal e Grëffbild gedréckt, fir et bei d'Favoritten derbäizesetzen.</value></data>
+  <data name="Favorites_Empty" xml:space="preserve"><value>Du hues keng léifste Grëffer.</value></data>
+  <data name="Favorites_Hint" xml:space="preserve"><value>Hal e Grëffbild gedréckt, fir et bei d'Favoritten derbäizesetzen.</value></data>
+  <data name="Find_Strict" xml:space="preserve"><value>Strenge Modus</value></data>
+  <data name="Find_Loose" xml:space="preserve"><value>Lockere Modus</value></data>
+  <data name="Find_NoChord" xml:space="preserve"><value>Keen Akkord fonnt</value></data>
+  <data name="Settings_SystemLanguage" xml:space="preserve"><value>Systemsprooch ({0})</value></data>
+  <data name="Notation_English" xml:space="preserve"><value>Englesch Notatioun</value></data>
+  <data name="Notation_German" xml:space="preserve"><value>Däitsch Notatioun</value></data>
+  <data name="Notation_Latin" xml:space="preserve"><value>Laténgesch Notatioun</value></data>
+  <data name="Settings_BasicChords" xml:space="preserve"><value>Basisakkorden</value></data>
+  <data name="Settings_AllChords" xml:space="preserve"><value>All Akkorden</value></data>
+  <data name="Settings_MaxFret" xml:space="preserve"><value>Héchste Bond:</value></data>
+  <data name="Settings_AllowBarre" xml:space="preserve"><value>Barré-Grëffer erlaben</value></data>
+  <data name="Settings_AllowSpecial" xml:space="preserve"><value>Grëffer mat gedämpften héije Saiten erlaben</value></data>
+  <data name="Settings_Vertical" xml:space="preserve"><value>Vertikal Grëffbiller</value></data>
+  <data name="Settings_Horizontal" xml:space="preserve"><value>Horizontal Grëffbiller</value></data>
+  <data name="Settings_LeftHanded" xml:space="preserve"><value>Lénkshänner (gespigelt Grëffbiller)</value></data>
+  <data name="Settings_ShowTips" xml:space="preserve"><value>Tipps weisen</value></data>
+  <data name="Instrument_Guitar" xml:space="preserve"><value>Gittar</value></data>
+  <data name="Instrument_Ukulele" xml:space="preserve"><value>Ukulele</value></data>
+  <data name="Instrument_Mandolin" xml:space="preserve"><value>Mandolin</value></data>
+  <data name="Instrument_BassGuitar" xml:space="preserve"><value>Bassgittar</value></data>
+  <data name="Shape_Hint" xml:space="preserve"><value>Tipp op d'Bënn, wou deng Fanger d'Saiten drécken. Tipp iwwer dem Sattel, fir eng Saite tëscht eidel (○) a gedämpft (×) ze wiesselen.</value></data>
+  <data name="Shape_Alternatives" xml:space="preserve"><value>Och bekannt als:</value></data>
+  <data name="Shape_TooFew" xml:space="preserve"><value>Spill mindestens zwee verschidden Téin</value></data>
+  <data name="Shape_Play" xml:space="preserve"><value>Ofspillen</value></data>
+  <data name="Shape_Clear" xml:space="preserve"><value>Läschen</value></data>
+</root>

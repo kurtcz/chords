@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="Nav_ShowChord" xml:space="preserve"><value>Mostrar diagrama de acorde</value></data>
+  <data name="Nav_FindChord" xml:space="preserve"><value>Buscar nombre del acorde</value></data>
+  <data name="Nav_FindShape" xml:space="preserve"><value>Buscar acorde por posición</value></data>
+  <data name="Nav_Favorites" xml:space="preserve"><value>Acordes favoritos</value></data>
+  <data name="Nav_Circle" xml:space="preserve"><value>Círculo de quintas</value></data>
+  <data name="Nav_Settings" xml:space="preserve"><value>Ajustes</value></data>
+  <data name="Nav_Toggle" xml:space="preserve"><value>Mostrar menú</value></data>
+  <data name="Yes" xml:space="preserve"><value>Sí</value></data>
+  <data name="No" xml:space="preserve"><value>No</value></data>
+  <data name="Find" xml:space="preserve"><value>Buscar</value></data>
+  <data name="ChordType_Major" xml:space="preserve"><value>Mayor</value></data>
+  <data name="ShowChord_Partial" xml:space="preserve"><value>Permitir acordes incompletos</value></data>
+  <data name="Chord_Found" xml:space="preserve"><value>Acordes encontrados:</value></data>
+  <data name="Chord_OtherSymbols" xml:space="preserve"><value>Otros símbolos:</value></data>
+  <data name="Chord_Intervals" xml:space="preserve"><value>Intervalos del acorde:</value></data>
+  <data name="Chord_Notes" xml:space="preserve"><value>Notas del acorde:</value></data>
+  <data name="Chord_Diagrams" xml:space="preserve"><value>Diagramas del acorde:</value></data>
+  <data name="Chord_Results_One" xml:space="preserve"><value>{0} resultado</value></data>
+  <data name="Chord_Results_Many" xml:space="preserve"><value>{0} resultados</value></data>
+  <data name="Chord_Invalid" xml:space="preserve"><value>{0} no es un acorde válido</value></data>
+  <data name="Tip" xml:space="preserve"><value>Consejo:</value></data>
+  <data name="Tip_Play" xml:space="preserve"><value>Toca un diagrama para escucharlo.</value></data>
+  <data name="Tip_Favorite" xml:space="preserve"><value>Mantén pulsado un diagrama para añadirlo a favoritos.</value></data>
+  <data name="Favorites_Empty" xml:space="preserve"><value>No tienes posiciones de acordes favoritas.</value></data>
+  <data name="Favorites_Hint" xml:space="preserve"><value>Mantén pulsada una posición para añadirla a favoritos.</value></data>
+  <data name="Find_Strict" xml:space="preserve"><value>Modo estricto</value></data>
+  <data name="Find_Loose" xml:space="preserve"><value>Modo flexible</value></data>
+  <data name="Find_NoChord" xml:space="preserve"><value>No se encontró ningún acorde</value></data>
+  <data name="Settings_SystemLanguage" xml:space="preserve"><value>Idioma del sistema ({0})</value></data>
+  <data name="Notation_English" xml:space="preserve"><value>Notación inglesa</value></data>
+  <data name="Notation_German" xml:space="preserve"><value>Notación alemana</value></data>
+  <data name="Notation_Latin" xml:space="preserve"><value>Notación latina</value></data>
+  <data name="Settings_BasicChords" xml:space="preserve"><value>Acordes básicos</value></data>
+  <data name="Settings_AllChords" xml:space="preserve"><value>Todos los acordes</value></data>
+  <data name="Settings_MaxFret" xml:space="preserve"><value>Traste más alto:</value></data>
+  <data name="Settings_AllowBarre" xml:space="preserve"><value>Permitir cejillas</value></data>
+  <data name="Settings_AllowSpecial" xml:space="preserve"><value>Permitir acordes con cuerdas agudas apagadas</value></data>
+  <data name="Settings_Vertical" xml:space="preserve"><value>Diagramas verticales</value></data>
+  <data name="Settings_Horizontal" xml:space="preserve"><value>Diagramas horizontales</value></data>
+  <data name="Settings_LeftHanded" xml:space="preserve"><value>Zurdo (diagramas reflejados)</value></data>
+  <data name="Settings_ShowTips" xml:space="preserve"><value>Mostrar consejos</value></data>
+  <data name="Instrument_Guitar" xml:space="preserve"><value>Guitarra</value></data>
+  <data name="Instrument_Ukulele" xml:space="preserve"><value>Ukelele</value></data>
+  <data name="Instrument_Mandolin" xml:space="preserve"><value>Mandolina</value></data>
+  <data name="Instrument_BassGuitar" xml:space="preserve"><value>Bajo eléctrico</value></data>
+  <data name="Shape_Hint" xml:space="preserve"><value>Toca los trastes donde tus dedos pisan las cuerdas. Toca encima de la cejuela para cambiar una cuerda entre al aire (○) y apagada (×).</value></data>
+  <data name="Shape_Alternatives" xml:space="preserve"><value>También conocido como:</value></data>
+  <data name="Shape_TooFew" xml:space="preserve"><value>Toca al menos dos notas distintas</value></data>
+  <data name="Shape_Play" xml:space="preserve"><value>Reproducir</value></data>
+  <data name="Shape_Clear" xml:space="preserve"><value>Borrar</value></data>
+</root>

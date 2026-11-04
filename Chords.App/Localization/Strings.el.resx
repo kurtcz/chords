@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="Nav_ShowChord" xml:space="preserve"><value>Εμφάνιση διαγράμματος συγχορδίας</value></data>
+  <data name="Nav_FindChord" xml:space="preserve"><value>Εύρεση ονόματος συγχορδίας</value></data>
+  <data name="Nav_FindShape" xml:space="preserve"><value>Εύρεση συγχορδίας από θέση</value></data>
+  <data name="Nav_Favorites" xml:space="preserve"><value>Αγαπημένες συγχορδίες</value></data>
+  <data name="Nav_Circle" xml:space="preserve"><value>Κύκλος των πεμπτών</value></data>
+  <data name="Nav_Settings" xml:space="preserve"><value>Ρυθμίσεις</value></data>
+  <data name="Nav_Toggle" xml:space="preserve"><value>Εμφάνιση μενού</value></data>
+  <data name="Yes" xml:space="preserve"><value>Ναι</value></data>
+  <data name="No" xml:space="preserve"><value>Όχι</value></data>
+  <data name="Find" xml:space="preserve"><value>Αναζήτηση</value></data>
+  <data name="ChordType_Major" xml:space="preserve"><value>Μείζονα</value></data>
+  <data name="ShowChord_Partial" xml:space="preserve"><value>Να επιτρέπονται ελλιπείς συγχορδίες</value></data>
+  <data name="Chord_Found" xml:space="preserve"><value>Συγχορδίες που βρέθηκαν:</value></data>
+  <data name="Chord_OtherSymbols" xml:space="preserve"><value>Άλλα σύμβολα:</value></data>
+  <data name="Chord_Intervals" xml:space="preserve"><value>Διαστήματα συγχορδίας:</value></data>
+  <data name="Chord_Notes" xml:space="preserve"><value>Νότες συγχορδίας:</value></data>
+  <data name="Chord_Diagrams" xml:space="preserve"><value>Διαγράμματα συγχορδίας:</value></data>
+  <data name="Chord_Results_One" xml:space="preserve"><value>{0} αποτέλεσμα</value></data>
+  <data name="Chord_Results_Many" xml:space="preserve"><value>{0} αποτελέσματα</value></data>
+  <data name="Chord_Invalid" xml:space="preserve"><value>Το {0} δεν είναι έγκυρη συγχορδία</value></data>
+  <data name="Tip" xml:space="preserve"><value>Συμβουλή:</value></data>
+  <data name="Tip_Play" xml:space="preserve"><value>Πατήστε ένα διάγραμμα για να το ακούσετε.</value></data>
+  <data name="Tip_Favorite" xml:space="preserve"><value>Πατήστε παρατεταμένα ένα διάγραμμα για να το προσθέσετε στα αγαπημένα.</value></data>
+  <data name="Favorites_Empty" xml:space="preserve"><value>Δεν έχετε αγαπημένες θέσεις συγχορδιών.</value></data>
+  <data name="Favorites_Hint" xml:space="preserve"><value>Πατήστε παρατεταμένα μια θέση για να την προσθέσετε στα αγαπημένα.</value></data>
+  <data name="Find_Strict" xml:space="preserve"><value>Αυστηρή λειτουργία</value></data>
+  <data name="Find_Loose" xml:space="preserve"><value>Χαλαρή λειτουργία</value></data>
+  <data name="Find_NoChord" xml:space="preserve"><value>Δεν βρέθηκε συγχορδία</value></data>
+  <data name="Settings_SystemLanguage" xml:space="preserve"><value>Γλώσσα συστήματος ({0})</value></data>
+  <data name="Notation_English" xml:space="preserve"><value>Αγγλική ονομασία</value></data>
+  <data name="Notation_German" xml:space="preserve"><value>Γερμανική ονομασία</value></data>
+  <data name="Notation_Latin" xml:space="preserve"><value>Λατινική ονομασία</value></data>
+  <data name="Settings_BasicChords" xml:space="preserve"><value>Βασικές συγχορδίες</value></data>
+  <data name="Settings_AllChords" xml:space="preserve"><value>Όλες οι συγχορδίες</value></data>
+  <data name="Settings_MaxFret" xml:space="preserve"><value>Υψηλότερο τάστο:</value></data>
+  <data name="Settings_AllowBarre" xml:space="preserve"><value>Να επιτρέπεται το μπαρέ</value></data>
+  <data name="Settings_AllowSpecial" xml:space="preserve"><value>Να επιτρέπονται θέσεις με σβησμένες ψηλές χορδές</value></data>
+  <data name="Settings_Vertical" xml:space="preserve"><value>Κάθετα διαγράμματα</value></data>
+  <data name="Settings_Horizontal" xml:space="preserve"><value>Οριζόντια διαγράμματα</value></data>
+  <data name="Settings_LeftHanded" xml:space="preserve"><value>Αριστερόχειρας (κατοπτρικά διαγράμματα)</value></data>
+  <data name="Settings_ShowTips" xml:space="preserve"><value>Εμφάνιση συμβουλών</value></data>
+  <data name="Instrument_Guitar" xml:space="preserve"><value>Κιθάρα</value></data>
+  <data name="Instrument_Ukulele" xml:space="preserve"><value>Γιουκαλίλι</value></data>
+  <data name="Instrument_Mandolin" xml:space="preserve"><value>Μαντολίνο</value></data>
+  <data name="Instrument_BassGuitar" xml:space="preserve"><value>Μπάσο</value></data>
+  <data name="Shape_Hint" xml:space="preserve"><value>Πατήστε τα τάστα όπου τα δάχτυλά σας πατούν τις χορδές. Πατήστε πάνω από το καβαλάρη για να αλλάξετε μια χορδή μεταξύ ανοιχτής (○) και σβησμένης (×).</value></data>
+  <data name="Shape_Alternatives" xml:space="preserve"><value>Γνωστή και ως:</value></data>
+  <data name="Shape_TooFew" xml:space="preserve"><value>Παίξτε τουλάχιστον δύο διαφορετικές νότες</value></data>
+  <data name="Shape_Play" xml:space="preserve"><value>Αναπαραγωγή</value></data>
+  <data name="Shape_Clear" xml:space="preserve"><value>Καθαρισμός</value></data>
+</root>

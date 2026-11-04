@@ -438,3 +438,47 @@ footer {
 .shape-buttons .btn {
     flex: 1 1 0;
 }
+
+/* Right-to-left languages (Arabic, Persian): mirror the page layout. Chord diagrams, the fretboard
+   and the toggle switches keep their left-to-right geometry – strings and frets do not follow text direction. */
+[dir=rtl] .navbar-brand {
+    float: right;
+}
+
+[dir=rtl] .navbar-toggle {
+    float: left;
+    margin-right: 0;
+    margin-left: 15px;
+}
+
+[dir=rtl] .navbar-nav > li > a,
+[dir=rtl] .dropdown-menu {
+    text-align: right;
+}
+
+[dir=rtl] span .toggle {
+    float: left;
+}
+
+[dir=rtl] .other-chords {
+    float: left;
+    text-align: left;
+}
+
+[dir=rtl] .chord-layout {
+    float: right;
+}
+
+[dir=rtl] .close {
+    float: left;
+}
+
+[dir=rtl] .toggle,
+[dir=rtl] .chord-layout svg,
+[dir=rtl] .shape-board {
+    direction: ltr;
+}
+
+[dir=rtl] [class*="col-xs-"] {
+    float: right;
+}

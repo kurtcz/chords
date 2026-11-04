@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="Nav_ShowChord" xml:space="preserve"><value>Prikaži dijagram akorda</value></data>
+  <data name="Nav_FindChord" xml:space="preserve"><value>Pronađi naziv akorda</value></data>
+  <data name="Nav_FindShape" xml:space="preserve"><value>Pronađi akord po hvatu</value></data>
+  <data name="Nav_Favorites" xml:space="preserve"><value>Omiljeni akordi</value></data>
+  <data name="Nav_Circle" xml:space="preserve"><value>Kvintni krug</value></data>
+  <data name="Nav_Settings" xml:space="preserve"><value>Postavke</value></data>
+  <data name="Nav_Toggle" xml:space="preserve"><value>Prikaži izbornik</value></data>
+  <data name="Yes" xml:space="preserve"><value>Da</value></data>
+  <data name="No" xml:space="preserve"><value>Ne</value></data>
+  <data name="Find" xml:space="preserve"><value>Traži</value></data>
+  <data name="ChordType_Major" xml:space="preserve"><value>Dur</value></data>
+  <data name="ShowChord_Partial" xml:space="preserve"><value>Dopusti nepotpune akorde</value></data>
+  <data name="Chord_Found" xml:space="preserve"><value>Pronađeni akordi:</value></data>
+  <data name="Chord_OtherSymbols" xml:space="preserve"><value>Druge oznake:</value></data>
+  <data name="Chord_Intervals" xml:space="preserve"><value>Intervali akorda:</value></data>
+  <data name="Chord_Notes" xml:space="preserve"><value>Tonovi akorda:</value></data>
+  <data name="Chord_Diagrams" xml:space="preserve"><value>Dijagrami akorda:</value></data>
+  <data name="Chord_Results_One" xml:space="preserve"><value>{0} rezultat</value></data>
+  <data name="Chord_Results_Few" xml:space="preserve"><value>{0} rezultata</value></data>
+  <data name="Chord_Results_Many" xml:space="preserve"><value>{0} rezultata</value></data>
+  <data name="Chord_Invalid" xml:space="preserve"><value>{0} nije valjan akord</value></data>
+  <data name="Tip" xml:space="preserve"><value>Savjet:</value></data>
+  <data name="Tip_Play" xml:space="preserve"><value>Dodirnite dijagram da biste ga poslušali.</value></data>
+  <data name="Tip_Favorite" xml:space="preserve"><value>Zadržite dijagram da biste ga dodali u omiljene.</value></data>
+  <data name="Favorites_Empty" xml:space="preserve"><value>Nemate omiljenih hvatova.</value></data>
+  <data name="Favorites_Hint" xml:space="preserve"><value>Zadržite hvat da biste ga dodali u omiljene.</value></data>
+  <data name="Find_Strict" xml:space="preserve"><value>Strogi način</value></data>
+  <data name="Find_Loose" xml:space="preserve"><value>Slobodni način</value></data>
+  <data name="Find_NoChord" xml:space="preserve"><value>Akord nije pronađen</value></data>
+  <data name="Settings_SystemLanguage" xml:space="preserve"><value>Jezik sustava ({0})</value></data>
+  <data name="Notation_English" xml:space="preserve"><value>Engleska notacija</value></data>
+  <data name="Notation_German" xml:space="preserve"><value>Njemačka notacija</value></data>
+  <data name="Notation_Latin" xml:space="preserve"><value>Latinska notacija</value></data>
+  <data name="Settings_BasicChords" xml:space="preserve"><value>Osnovni akordi</value></data>
+  <data name="Settings_AllChords" xml:space="preserve"><value>Svi akordi</value></data>
+  <data name="Settings_MaxFret" xml:space="preserve"><value>Najviši prag:</value></data>
+  <data name="Settings_AllowBarre" xml:space="preserve"><value>Dopusti barré</value></data>
+  <data name="Settings_AllowSpecial" xml:space="preserve"><value>Dopusti hvatove s prigušenim visokim žicama</value></data>
+  <data name="Settings_Vertical" xml:space="preserve"><value>Okomiti dijagrami</value></data>
+  <data name="Settings_Horizontal" xml:space="preserve"><value>Vodoravni dijagrami</value></data>
+  <data name="Settings_LeftHanded" xml:space="preserve"><value>Ljevoruki (zrcaljeni dijagrami)</value></data>
+  <data name="Settings_ShowTips" xml:space="preserve"><value>Prikaži savjete</value></data>
+  <data name="Instrument_Guitar" xml:space="preserve"><value>Gitara</value></data>
+  <data name="Instrument_Ukulele" xml:space="preserve"><value>Ukulele</value></data>
+  <data name="Instrument_Mandolin" xml:space="preserve"><value>Mandolina</value></data>
+  <data name="Instrument_BassGuitar" xml:space="preserve"><value>Bas-gitara</value></data>
+  <data name="Shape_Hint" xml:space="preserve"><value>Dodirnite pragove na kojima prsti pritišću žice. Dodirnite iznad gornjeg praga da biste prebacili žicu između prazne (○) i prigušene (×).</value></data>
+  <data name="Shape_Alternatives" xml:space="preserve"><value>Poznat i kao:</value></data>
+  <data name="Shape_TooFew" xml:space="preserve"><value>Odsvirajte barem dva različita tona</value></data>
+  <data name="Shape_Play" xml:space="preserve"><value>Sviraj</value></data>
+  <data name="Shape_Clear" xml:space="preserve"><value>Očisti</value></data>
+</root>

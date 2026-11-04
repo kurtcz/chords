@@ -20,9 +20,12 @@ namespace Chords.App.Models
         public bool Horizontal { get; set; } = false;
         /// <summary>Mirror horizontal chord diagrams so the nut is on the right.</summary>
         public bool LeftHanded { get; set; } = false;
-        /// <summary>UI language ("en", "cs", "sk"); null follows the device language.</summary>
+        /// <summary>UI language (a code from Localizer.Languages); null follows the device language.</summary>
         public string Language { get; set; }
         public string Error { get; set; }
+        /// <summary>No settings were saved yet (first run).</summary>
+        [JsonIgnore]
+        public bool IsNew { get; private set; }
 
 		public readonly NamingConvention[] NamingConventions = Enum.GetValues(typeof(NamingConvention))
 																   .Cast<NamingConvention>()
@@ -49,7 +52,7 @@ namespace Chords.App.Models
             catch(Exception e)
             {
                 System.Diagnostics.Debug.WriteLine(string.Format("Cannot load settings\n{0}", e.Message));
-                result = new SettingsModel();
+                result = new SettingsModel { IsNew = true };
             }
 
             return result;

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="Nav_ShowChord" xml:space="preserve"><value>கார்டு வரைபடத்தைக் காட்டு</value></data>
+  <data name="Nav_FindChord" xml:space="preserve"><value>கார்டு பெயரைக் கண்டறி</value></data>
+  <data name="Nav_FindShape" xml:space="preserve"><value>வடிவத்தைக் கொண்டு கார்டைக் கண்டறி</value></data>
+  <data name="Nav_Favorites" xml:space="preserve"><value>பிடித்த கார்டுகள்</value></data>
+  <data name="Nav_Circle" xml:space="preserve"><value>ஐந்தாம் வட்டம்</value></data>
+  <data name="Nav_Settings" xml:space="preserve"><value>அமைப்புகள்</value></data>
+  <data name="Nav_Toggle" xml:space="preserve"><value>மெனுவைக் காட்டு</value></data>
+  <data name="Yes" xml:space="preserve"><value>ஆம்</value></data>
+  <data name="No" xml:space="preserve"><value>இல்லை</value></data>
+  <data name="Find" xml:space="preserve"><value>தேடு</value></data>
+  <data name="ChordType_Major" xml:space="preserve"><value>மேஜர்</value></data>
+  <data name="ShowChord_Partial" xml:space="preserve"><value>முழுமையற்ற கார்டுகளை அனுமதி</value></data>
+  <data name="Chord_Found" xml:space="preserve"><value>கண்டறிந்த கார்டுகள்:</value></data>
+  <data name="Chord_OtherSymbols" xml:space="preserve"><value>பிற குறியீடுகள்:</value></data>
+  <data name="Chord_Intervals" xml:space="preserve"><value>கார்டு இடைவெளிகள்:</value></data>
+  <data name="Chord_Notes" xml:space="preserve"><value>கார்டு ஸ்வரங்கள்:</value></data>
+  <data name="Chord_Diagrams" xml:space="preserve"><value>கார்டு வரைபடங்கள்:</value></data>
+  <data name="Chord_Results_One" xml:space="preserve"><value>{0} முடிவு</value></data>
+  <data name="Chord_Results_Many" xml:space="preserve"><value>{0} முடிவுகள்</value></data>
+  <data name="Chord_Invalid" xml:space="preserve"><value>{0} சரியான கார்டு அல்ல</value></data>
+  <data name="Tip" xml:space="preserve"><value>குறிப்பு:</value></data>
+  <data name="Tip_Play" xml:space="preserve"><value>கேட்க ஒரு வரைபடத்தைத் தட்டவும்.</value></data>
+  <data name="Tip_Favorite" xml:space="preserve"><value>பிடித்தவையில் சேர்க்க வரைபடத்தை அழுத்திப் பிடிக்கவும்.</value></data>
+  <data name="Favorites_Empty" xml:space="preserve"><value>உங்களுக்குப் பிடித்த கார்டு வடிவங்கள் இல்லை.</value></data>
+  <data name="Favorites_Hint" xml:space="preserve"><value>பிடித்தவையில் சேர்க்க கார்டு வடிவத்தை அழுத்திப் பிடிக்கவும்.</value></data>
+  <data name="Find_Strict" xml:space="preserve"><value>கண்டிப்பான பயன்முறை</value></data>
+  <data name="Find_Loose" xml:space="preserve"><value>தளர்வான பயன்முறை</value></data>
+  <data name="Find_NoChord" xml:space="preserve"><value>கார்டு எதுவும் இல்லை</value></data>
+  <data name="Settings_SystemLanguage" xml:space="preserve"><value>கணினி மொழி ({0})</value></data>
+  <data name="Notation_English" xml:space="preserve"><value>ஆங்கிலக் குறியீடு</value></data>
+  <data name="Notation_German" xml:space="preserve"><value>ஜெர்மன் குறியீடு</value></data>
+  <data name="Notation_Latin" xml:space="preserve"><value>லத்தீன் குறியீடு</value></data>
+  <data name="Settings_BasicChords" xml:space="preserve"><value>அடிப்படைக் கார்டுகள்</value></data>
+  <data name="Settings_AllChords" xml:space="preserve"><value>அனைத்து கார்டுகளும்</value></data>
+  <data name="Settings_MaxFret" xml:space="preserve"><value>அதிகபட்ச ஃப்ரெட்:</value></data>
+  <data name="Settings_AllowBarre" xml:space="preserve"><value>பாரே கார்டுகளை அனுமதி</value></data>
+  <data name="Settings_AllowSpecial" xml:space="preserve"><value>உயர் கம்பிகள் ஒலியடக்கப்பட்ட கார்டுகளை அனுமதி</value></data>
+  <data name="Settings_Vertical" xml:space="preserve"><value>செங்குத்து வரைபடங்கள்</value></data>
+  <data name="Settings_Horizontal" xml:space="preserve"><value>கிடைமட்ட வரைபடங்கள்</value></data>
+  <data name="Settings_LeftHanded" xml:space="preserve"><value>இடக்கை (பிரதிபலித்த வரைபடங்கள்)</value></data>
+  <data name="Settings_ShowTips" xml:space="preserve"><value>குறிப்புகளைக் காட்டு</value></data>
+  <data name="Instrument_Guitar" xml:space="preserve"><value>கிட்டார்</value></data>
+  <data name="Instrument_Ukulele" xml:space="preserve"><value>யுகுலேலே</value></data>
+  <data name="Instrument_Mandolin" xml:space="preserve"><value>மாண்டலின்</value></data>
+  <data name="Instrument_BassGuitar" xml:space="preserve"><value>பேஸ் கிட்டார்</value></data>
+  <data name="Shape_Hint" xml:space="preserve"><value>உங்கள் விரல்கள் கம்பிகளை அழுத்தும் ஃப்ரெட்டுகளைத் தட்டவும். கம்பியைத் திறந்த (○) மற்றும் ஒலியடக்கிய (×) நிலைகளுக்கு இடையே மாற்ற நட்டுக்கு மேலே தட்டவும்.</value></data>
+  <data name="Shape_Alternatives" xml:space="preserve"><value>வேறு பெயர்:</value></data>
+  <data name="Shape_TooFew" xml:space="preserve"><value>குறைந்தது இரண்டு வெவ்வேறு ஸ்வரங்களை வாசிக்கவும்</value></data>
+  <data name="Shape_Play" xml:space="preserve"><value>இயக்கு</value></data>
+  <data name="Shape_Clear" xml:space="preserve"><value>அழி</value></data>
+</root>

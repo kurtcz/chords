@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="Nav_ShowChord" xml:space="preserve"><value>نمایش نمودار آکورد</value></data>
+  <data name="Nav_FindChord" xml:space="preserve"><value>یافتن نام آکورد</value></data>
+  <data name="Nav_FindShape" xml:space="preserve"><value>یافتن آکورد از روی انگشت‌گذاری</value></data>
+  <data name="Nav_Favorites" xml:space="preserve"><value>آکوردهای محبوب</value></data>
+  <data name="Nav_Circle" xml:space="preserve"><value>دایره پنجم‌ها</value></data>
+  <data name="Nav_Settings" xml:space="preserve"><value>تنظیمات</value></data>
+  <data name="Nav_Toggle" xml:space="preserve"><value>نمایش منو</value></data>
+  <data name="Yes" xml:space="preserve"><value>بله</value></data>
+  <data name="No" xml:space="preserve"><value>خیر</value></data>
+  <data name="Find" xml:space="preserve"><value>جستجو</value></data>
+  <data name="ChordType_Major" xml:space="preserve"><value>ماژور</value></data>
+  <data name="ShowChord_Partial" xml:space="preserve"><value>اجازه آکوردهای ناقص</value></data>
+  <data name="Chord_Found" xml:space="preserve"><value>آکوردهای یافت‌شده:</value></data>
+  <data name="Chord_OtherSymbols" xml:space="preserve"><value>نمادهای دیگر:</value></data>
+  <data name="Chord_Intervals" xml:space="preserve"><value>فواصل آکورد:</value></data>
+  <data name="Chord_Notes" xml:space="preserve"><value>نت‌های آکورد:</value></data>
+  <data name="Chord_Diagrams" xml:space="preserve"><value>نمودارهای آکورد:</value></data>
+  <data name="Chord_Results_One" xml:space="preserve"><value>{0} نتیجه</value></data>
+  <data name="Chord_Results_Many" xml:space="preserve"><value>{0} نتیجه</value></data>
+  <data name="Chord_Invalid" xml:space="preserve"><value>{0} آکورد معتبری نیست</value></data>
+  <data name="Tip" xml:space="preserve"><value>نکته:</value></data>
+  <data name="Tip_Play" xml:space="preserve"><value>برای شنیدن، روی یک نمودار ضربه بزنید.</value></data>
+  <data name="Tip_Favorite" xml:space="preserve"><value>برای افزودن به محبوب‌ها، یک نمودار را لمس کنید و نگه دارید.</value></data>
+  <data name="Favorites_Empty" xml:space="preserve"><value>هیچ انگشت‌گذاری محبوبی ندارید.</value></data>
+  <data name="Favorites_Hint" xml:space="preserve"><value>برای افزودن به محبوب‌ها، یک انگشت‌گذاری را لمس کنید و نگه دارید.</value></data>
+  <data name="Find_Strict" xml:space="preserve"><value>حالت دقیق</value></data>
+  <data name="Find_Loose" xml:space="preserve"><value>حالت آزاد</value></data>
+  <data name="Find_NoChord" xml:space="preserve"><value>آکوردی یافت نشد</value></data>
+  <data name="Settings_SystemLanguage" xml:space="preserve"><value>زبان سیستم ({0})</value></data>
+  <data name="Notation_English" xml:space="preserve"><value>نام‌گذاری انگلیسی</value></data>
+  <data name="Notation_German" xml:space="preserve"><value>نام‌گذاری آلمانی</value></data>
+  <data name="Notation_Latin" xml:space="preserve"><value>نام‌گذاری لاتین</value></data>
+  <data name="Settings_BasicChords" xml:space="preserve"><value>آکوردهای پایه</value></data>
+  <data name="Settings_AllChords" xml:space="preserve"><value>همه آکوردها</value></data>
+  <data name="Settings_MaxFret" xml:space="preserve"><value>بالاترین دستان:</value></data>
+  <data name="Settings_AllowBarre" xml:space="preserve"><value>اجازه باره</value></data>
+  <data name="Settings_AllowSpecial" xml:space="preserve"><value>اجازه آکورد با سیم‌های زیر خفه‌شده</value></data>
+  <data name="Settings_Vertical" xml:space="preserve"><value>نمودارهای عمودی</value></data>
+  <data name="Settings_Horizontal" xml:space="preserve"><value>نمودارهای افقی</value></data>
+  <data name="Settings_LeftHanded" xml:space="preserve"><value>چپ‌دست (نمودارهای قرینه)</value></data>
+  <data name="Settings_ShowTips" xml:space="preserve"><value>نمایش نکته‌ها</value></data>
+  <data name="Instrument_Guitar" xml:space="preserve"><value>گیتار</value></data>
+  <data name="Instrument_Ukulele" xml:space="preserve"><value>یوکللی</value></data>
+  <data name="Instrument_Mandolin" xml:space="preserve"><value>ماندولین</value></data>
+  <data name="Instrument_BassGuitar" xml:space="preserve"><value>گیتار باس</value></data>
+  <data name="Shape_Hint" xml:space="preserve"><value>روی دستان‌هایی که انگشتانتان سیم‌ها را می‌گیرند ضربه بزنید. برای تغییر سیم بین باز (○) و خفه (×)، بالای شیطانک ضربه بزنید.</value></data>
+  <data name="Shape_Alternatives" xml:space="preserve"><value>همچنین معروف به:</value></data>
+  <data name="Shape_TooFew" xml:space="preserve"><value>دست‌کم دو نت متفاوت بنوازید</value></data>
+  <data name="Shape_Play" xml:space="preserve"><value>پخش</value></data>
+  <data name="Shape_Clear" xml:space="preserve"><value>پاک کردن</value></data>
+</root>

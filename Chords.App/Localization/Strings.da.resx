@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="Nav_ShowChord" xml:space="preserve"><value>Vis akkorddiagram</value></data>
+  <data name="Nav_FindChord" xml:space="preserve"><value>Find akkordnavn</value></data>
+  <data name="Nav_FindShape" xml:space="preserve"><value>Find akkord ud fra greb</value></data>
+  <data name="Nav_Favorites" xml:space="preserve"><value>Yndlingsakkorder</value></data>
+  <data name="Nav_Circle" xml:space="preserve"><value>Kvintcirklen</value></data>
+  <data name="Nav_Settings" xml:space="preserve"><value>Indstillinger</value></data>
+  <data name="Nav_Toggle" xml:space="preserve"><value>Vis menu</value></data>
+  <data name="Yes" xml:space="preserve"><value>Ja</value></data>
+  <data name="No" xml:space="preserve"><value>Nej</value></data>
+  <data name="Find" xml:space="preserve"><value>Søg</value></data>
+  <data name="ChordType_Major" xml:space="preserve"><value>Dur</value></data>
+  <data name="ShowChord_Partial" xml:space="preserve"><value>Tillad ufuldstændige akkorder</value></data>
+  <data name="Chord_Found" xml:space="preserve"><value>Fundne akkorder:</value></data>
+  <data name="Chord_OtherSymbols" xml:space="preserve"><value>Andre symboler:</value></data>
+  <data name="Chord_Intervals" xml:space="preserve"><value>Akkordens intervaller:</value></data>
+  <data name="Chord_Notes" xml:space="preserve"><value>Akkordens toner:</value></data>
+  <data name="Chord_Diagrams" xml:space="preserve"><value>Akkorddiagrammer:</value></data>
+  <data name="Chord_Results_One" xml:space="preserve"><value>{0} resultat</value></data>
+  <data name="Chord_Results_Many" xml:space="preserve"><value>{0} resultater</value></data>
+  <data name="Chord_Invalid" xml:space="preserve"><value>{0} er ikke en gyldig akkord</value></data>
+  <data name="Tip" xml:space="preserve"><value>Tip:</value></data>
+  <data name="Tip_Play" xml:space="preserve"><value>Tryk på et diagram for at høre det.</value></data>
+  <data name="Tip_Favorite" xml:space="preserve"><value>Hold et diagram nede for at føje det til favoritter.</value></data>
+  <data name="Favorites_Empty" xml:space="preserve"><value>Du har ingen yndlingsgreb.</value></data>
+  <data name="Favorites_Hint" xml:space="preserve"><value>Hold et greb nede for at føje det til favoritter.</value></data>
+  <data name="Find_Strict" xml:space="preserve"><value>Streng tilstand</value></data>
+  <data name="Find_Loose" xml:space="preserve"><value>Løs tilstand</value></data>
+  <data name="Find_NoChord" xml:space="preserve"><value>Ingen akkord fundet</value></data>
+  <data name="Settings_SystemLanguage" xml:space="preserve"><value>Systemsprog ({0})</value></data>
+  <data name="Notation_English" xml:space="preserve"><value>Engelsk notation</value></data>
+  <data name="Notation_German" xml:space="preserve"><value>Tysk notation</value></data>
+  <data name="Notation_Latin" xml:space="preserve"><value>Latinsk notation</value></data>
+  <data name="Settings_BasicChords" xml:space="preserve"><value>Grundakkorder</value></data>
+  <data name="Settings_AllChords" xml:space="preserve"><value>Alle akkorder</value></data>
+  <data name="Settings_MaxFret" xml:space="preserve"><value>Højeste bånd:</value></data>
+  <data name="Settings_AllowBarre" xml:space="preserve"><value>Tillad barré-greb</value></data>
+  <data name="Settings_AllowSpecial" xml:space="preserve"><value>Tillad greb med dæmpede høje strenge</value></data>
+  <data name="Settings_Vertical" xml:space="preserve"><value>Lodrette akkorddiagrammer</value></data>
+  <data name="Settings_Horizontal" xml:space="preserve"><value>Vandrette akkorddiagrammer</value></data>
+  <data name="Settings_LeftHanded" xml:space="preserve"><value>Venstrehåndet (spejlvendte diagrammer)</value></data>
+  <data name="Settings_ShowTips" xml:space="preserve"><value>Vis tips</value></data>
+  <data name="Instrument_Guitar" xml:space="preserve"><value>Guitar</value></data>
+  <data name="Instrument_Ukulele" xml:space="preserve"><value>Ukulele</value></data>
+  <data name="Instrument_Mandolin" xml:space="preserve"><value>Mandolin</value></data>
+  <data name="Instrument_BassGuitar" xml:space="preserve"><value>Basguitar</value></data>
+  <data name="Shape_Hint" xml:space="preserve"><value>Tryk på de bånd, hvor dine fingre holder strengene. Tryk over sadlen for at skifte en streng mellem løs (○) og dæmpet (×).</value></data>
+  <data name="Shape_Alternatives" xml:space="preserve"><value>Også kendt som:</value></data>
+  <data name="Shape_TooFew" xml:space="preserve"><value>Spil mindst to forskellige toner</value></data>
+  <data name="Shape_Play" xml:space="preserve"><value>Afspil</value></data>
+  <data name="Shape_Clear" xml:space="preserve"><value>Ryd</value></data>
+</root>

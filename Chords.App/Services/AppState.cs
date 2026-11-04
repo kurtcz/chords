@@ -12,6 +12,11 @@ public class AppState
     public AppState(Localizer localizer)
     {
         localizer.SetLanguage(Settings.Language);
+        if (Settings.IsNew)
+        {
+            // First run: name notes the way musicians of the device language do.
+            Settings.conv = Localizer.DefaultNotation(Localizer.CurrentLanguage);
+        }
     }
 
     /// <summary>Chord last shown on the chord page; preselected when returning to "Show chord chart".</summary>

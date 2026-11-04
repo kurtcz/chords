@@ -121,6 +121,8 @@
     {
         settings.Language = code;
         L.SetLanguage(code);
+        // Switch to the note names musicians of that language use; the notation can still be changed below.
+        settings.conv = Localizer.DefaultNotation(Localizer.CurrentLanguage);
     });
 
     private void Update(Action change)

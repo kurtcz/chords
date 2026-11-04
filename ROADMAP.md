@@ -37,7 +37,7 @@
 - **Skupiny oblíbených** – oblíbené akordy po skupinách (např. podle písně), řazení.
 - **Sdílení a export** – export diagramů jako obrázek/PDF, sdílení oblíbených nebo progrese.
 - **Synchronizace** – záloha oblíbených a nastavení (iCloud / Google Drive).
-- **Další jazyky** – angličtina, čeština a slovenština jsou hotové; další jazyk = nový `Strings.<kód>.resx` + položka v `Localizer.Languages`.
+- **Další jazyky** – ✅ 64 jazyků (evropské, turečtina, asijské, arabština/perština/hebrejština/urdština zprava doleva). Zbývá: kontrola strojových překladů rodilými mluvčími. Další jazyk = nový `Strings.<kód>.resx` + položka v `Localizer.Languages`.
 
 ### Pokročilé
 - **Rozpoznání akordu z mikrofonu** – zahraj akord a aplikace určí jeho název.
