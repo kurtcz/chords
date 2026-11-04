@@ -56,12 +56,22 @@ public class ChordPlayer(ISoundBank soundBank)
         _stop = false;
         PlayExclusive(async () =>
         {
+            var first = true;
+
             foreach (var positions in layouts)
             {
                 if (_stop)
                 {
                     break;
                 }
+                // Damp the previous chord: left ringing, its notes clash with the next one
+                // (C major's C and E against G major's B and D).
+                if (!first)
+                {
+                    soundBank.StopAll();
+                }
+                first = false;
+
                 var strings = 0;
 
                 for (var i = 0; i < positions.Length; i++)
@@ -140,21 +150,33 @@ public class ChordPlayer(ISoundBank soundBank)
         }
     }
 
-    /// <summary>Plays the notes of a chord as a quick arpeggio on the A string.</summary>
+    /// <summary>MIDI pitch of C3, the lowest root of <see cref="PlayChord(Chord, float)"/>.</summary>
+    private const int ArpeggioBase = 48;
+
+    /// <summary>
+    /// Plays the notes of a chord as a quick rising arpeggio from its root (C3..B3).
+    /// Each note is shifted from the nearest recorded string below it, so the rate stays
+    /// within SoundPool's 0.5–2× (shifting everything from the A string pushed e.g. the B and D
+    /// of G major past 2×, where Android clamped them both to A).
+    /// </summary>
     public void PlayChord(Chord chord, float volume = 1f) => PlayExclusive(async () =>
     {
         var c = new Note(Tone.C);
-        var minDistance = 3 + c.ChromaticDistance(chord.Notes[0]);
+        var previous = -1;
 
         foreach (var note in chord.Notes)
         {
-            var pos = 3 + c.ChromaticDistance(note);
+            var pitch = ArpeggioBase + c.ChromaticDistance(note);
 
-            if (pos < minDistance)
+            while (pitch <= previous)
             {
-                pos += 12;
+                pitch += 12;
             }
-            soundBank.PlayString(1, Note.HalfStepsToPlayRate(pos), volume);
+            previous = pitch;
+
+            var (sample, rate) = SampleFor(pitch, 0);
+
+            soundBank.PlayString(sample, rate, volume);
             await Task.Delay(FastStrumDelay);
         }
         await Task.Delay(RingDelay);

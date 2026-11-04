@@ -75,4 +75,15 @@ public sealed class PlatformSoundBank : ISoundBank
             player.Play();
         }
     }
+
+    public void StopAll()
+    {
+        lock (_sync)
+        {
+            foreach (var (player, _) in _voices)
+            {
+                player.Stop();
+            }
+        }
+    }
 }
