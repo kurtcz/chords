@@ -1,0 +1,205 @@
+@page "/shape"
+@inject AppState State
+@inject ChordPlayer Player
+
+<TopNav Title="@L["Nav_FindShape"]" />
+
+@if (State.Settings.ShowTips && !tipClosed)
+{
+    <div class="alert alert-info shape-tip">
+        <button type="button" class="close" @onclick="() => tipClosed = true">&times;</button>
+        @L["Shape_Hint"]
+    </div>
+}
+<div class="shape-result">
+    @if (chords.Length > 0)
+    {
+        <h2><a href="@Link(chords[0])">@Name(chords[0])</a></h2>
+        @if (chords.Length > 1)
+        {
+            <p>
+                @L["Shape_Alternatives"]
+                @foreach (var other in chords.Skip(1).Take(MaxAlternatives))
+                {
+                    <a href="@Link(other)">@Name(other)</a>
+                    @(" ")
+                }
+            </p>
+        }
+    }
+    else
+    {
+        <h2 class="text-muted">@(distinctNotes < 2 ? L["Shape_TooFew"] : L["Find_NoChord"])</h2>
+    }
+</div>
+
+<svg class="shape-board" viewBox="0 0 @Width @Height" xmlns="http://www.w3.org/2000/svg">
+    @* Fret inlays *@
+    @foreach (var fret in new[] { 5, 7 })
+    {
+        <circle cx="@(X(0) + (StringCount - 1) * Gap / 2.0)" cy="@CellY(fret)" r="7" fill="#e4e4e4" />
+    }
+    <circle cx="@(X(0) + ((StringCount - 1) / 2.0 - 1) * Gap)" cy="@CellY(12)" r="7" fill="#e4e4e4" />
+    <circle cx="@(X(0) + ((StringCount - 1) / 2.0 + 1) * Gap)" cy="@CellY(12)" r="7" fill="#e4e4e4" />
+
+    @* Fret wires and numbers *@
+    @for (var fret = 0; fret <= Frets; fret++)
+    {
+        <line x1="@X(0)" y1="@FretY(fret)" x2="@X(StringCount - 1)" y2="@FretY(fret)"
+              stroke="#000" stroke-width="@(fret == 0 ? 4 : 1)" />
+        @if (fret > 0)
+        {
+            <g><text x="14" y="@(CellY(fret) + 5)" text-anchor="middle" font-size="14" fill="#888">@fret</text></g>
+        }
+    }
+
+    @for (var s = 0; s < StringCount; s++)
+    {
+        var str = s;
+        <line x1="@X(s)" y1="@FretY(0)" x2="@X(s)" y2="@FretY(Frets)" stroke="#000" stroke-width="1" />
+
+        @* Open / muted marker above the nut *@
+        @if (frets[s] < 0)
+        {
+            <g><text x="@X(s)" y="@(Top - 12)" text-anchor="middle" font-size="22" fill="#c00">×</text></g>
+        }
+        else if (frets[s] == 0)
+        {
+            <circle cx="@X(s)" cy="@(Top - 19)" r="9" fill="none" stroke="#000" stroke-width="1.5" />
+        }
+        <rect x="@(X(s) - Gap / 2.0)" y="0" width="@Gap" height="@Top" fill="transparent"
+              @onclick="() => ToggleOpen(str)" />
+
+        @* Fret cells *@
+        @for (var fret = 1; fret <= Frets; fret++)
+        {
+            var f = fret;
+            @if (frets[s] == fret)
+            {
+                <circle cx="@X(s)" cy="@CellY(fret)" r="14" fill="blue" />
+                <g><text x="@X(s)" y="@(CellY(fret) + 5)" text-anchor="middle" font-size="13" fill="#fff">@NoteName(s)</text></g>
+            }
+            <rect x="@(X(s) - Gap / 2.0)" y="@FretY(fret - 1)" width="@Gap" height="@FretHeight" fill="transparent"
+                  @onclick="() => SetFret(str, f)" />
+        }
+
+        @* Sounding note of each string *@
+        <g><text x="@X(s)" y="@(FretY(Frets) + 24)" text-anchor="middle" font-size="15"
+              font-weight="@(frets[s] == 0 ? "bold" : "normal")">@(frets[s] < 0 ? "" : NoteName(s))</text></g>
+    }
+</svg>
+
+<div class="shape-buttons">
+    <button type="button" class="btn btn-default btn-lg" @onclick="Play">@L["Shape_Play"]</button>
+    <button type="button" class="btn btn-default btn-lg" @onclick="Clear">@L["Shape_Clear"]</button>
+</div>
+
+@code {
+    private const int Frets = 12;
+    private const int Gap = 44;
+    private const int FretHeight = 36;
+    private const int Left = 34;
+    private const int Top = 44;
+    private const int MaxAlternatives = 8;
+
+    private InstrumentInfo instrument;
+    private NamingConvention conv;
+    private int[] frets;
+    private Chord[] chords = [];
+    private int distinctNotes;
+    private Note bassNote;
+    private bool tipClosed;
+
+    private int StringCount => instrument.StringCount;
+    private int Width => Left + (StringCount - 1) * Gap + Left;
+    private int Height => FretY(Frets) + 34;
+    private int X(int s) => Left + s * Gap;
+    private int FretY(int fret) => Top + fret * FretHeight;
+    private double CellY(int fret) => Top + (fret - 0.5) * FretHeight;
+
+    protected override void OnInitialized()
+    {
+        var settings = State.Settings;
+
+        instrument = InstrumentInfo.Get(settings.Instrument);
+        conv = settings.conv;
+        if (State.ShapeFrets == null || State.ShapeInstrument != settings.Instrument ||
+            State.ShapeFrets.Length != instrument.StringCount)
+        {
+            State.ShapeInstrument = settings.Instrument;
+            State.ShapeFrets = new int[instrument.StringCount];
+        }
+        frets = State.ShapeFrets;
+        Recognize();
+    }
+
+    private Note Sounding(int s) => instrument.Strings[s].NoteAtChromaticDistance(frets[s]);
+
+    private string NoteName(int s) => Sounding(s).ToString(conv);
+
+    private void SetFret(int s, int fret)
+    {
+        frets[s] = frets[s] == fret ? 0 : fret;
+        Recognize();
+    }
+
+    private void ToggleOpen(int s)
+    {
+        frets[s] = frets[s] == 0 ? -1 : 0;
+        Recognize();
+    }
+
+    private void Clear()
+    {
+        Array.Fill(frets, 0);
+        Recognize();
+    }
+
+    private void Play() => Player.PlayLayout(instrument, frets);
+
+    private void Recognize()
+    {
+        var sounding = Enumerable.Range(0, StringCount)
+            .Where(s => frets[s] >= 0)
+            .ToArray();
+        var notes = sounding.Select(Sounding).ToArray();
+
+        distinctNotes = notes.Select(Note.Normalize).Distinct().Count();
+        chords = [];
+        bassNote = null;
+        if (distinctNotes < 2)
+        {
+            return;
+        }
+        // The lowest pitch, not the lowest string – the ukulele is tuned re-entrant.
+        bassNote = Sounding(sounding.OrderBy(s => instrument.Pitches[s] + frets[s]).First());
+        chords = Chord.FindByNotes(notes, bassNote);
+    }
+
+    /// <summary>Chord symbol, with the bass as a slash chord when the chord is inverted (C/E).</summary>
+    private string Name(Chord chord)
+    {
+        var symbol = new ChordDecorator(chord, conv).Symbols[0];
+
+        if (bassNote == null || Note.Normalize(chord.Root) == Note.Normalize(bassNote))
+        {
+            return symbol;
+        }
+        var bass = chord.Notes.FirstOrDefault(i => Note.Normalize(i) == Note.Normalize(bassNote)) ?? bassNote;
+
+        return $"{symbol}/{bass.ToString(conv)}";
+    }
+
+    private string Link(Chord chord)
+    {
+        var shown = chords.Take(MaxAlternatives + 1).ToArray();
+        string roots = null, types = null;
+
+        if (shown.Length > 1)
+        {
+            roots = string.Join(",", shown.Select(i => i.Root.ToString()));
+            types = string.Join(",", shown.Select(i => i.ChordType.ToDescription()));
+        }
+        return ChordPage.Url(chord.Root, chord.ChordType.ToDescription(), true, roots, types);
+    }
+}

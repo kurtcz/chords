@@ -49,4 +49,10 @@
   <data name="Instrument_Ukulele" xml:space="preserve"><value>Ukulele</value></data>
   <data name="Instrument_Mandolin" xml:space="preserve"><value>Mandolin</value></data>
   <data name="Instrument_BassGuitar" xml:space="preserve"><value>Bass guitar</value></data>
+  <data name="Nav_FindShape" xml:space="preserve"><value>Find chord by shape</value></data>
+  <data name="Shape_Hint" xml:space="preserve"><value>Tap the frets where your fingers hold the strings. Tap above the nut to switch a string between open (○) and muted (×).</value></data>
+  <data name="Shape_Alternatives" xml:space="preserve"><value>Also known as:</value></data>
+  <data name="Shape_TooFew" xml:space="preserve"><value>Play at least two different notes</value></data>
+  <data name="Shape_Play" xml:space="preserve"><value>Play</value></data>
+  <data name="Shape_Clear" xml:space="preserve"><value>Clear</value></data>
 </root>

@@ -49,4 +49,10 @@
   <data name="Instrument_Ukulele" xml:space="preserve"><value>Ukulele</value></data>
   <data name="Instrument_Mandolin" xml:space="preserve"><value>Mandolína</value></data>
   <data name="Instrument_BassGuitar" xml:space="preserve"><value>Baskytara</value></data>
+  <data name="Nav_FindShape" xml:space="preserve"><value>Najít akord podle hmatu</value></data>
+  <data name="Shape_Hint" xml:space="preserve"><value>Klepněte na pražce, kde prsty drží struny. Klepnutím nad nultý pražec přepnete strunu mezi prázdnou (○) a tlumenou (×).</value></data>
+  <data name="Shape_Alternatives" xml:space="preserve"><value>Lze ho nazvat také:</value></data>
+  <data name="Shape_TooFew" xml:space="preserve"><value>Zahrajte aspoň dva různé tóny</value></data>
+  <data name="Shape_Play" xml:space="preserve"><value>Přehrát</value></data>
+  <data name="Shape_Clear" xml:space="preserve"><value>Vymazat</value></data>
 </root>

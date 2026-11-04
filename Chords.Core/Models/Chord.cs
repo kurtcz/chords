@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Chords.Core.Extensions;
@@ -67,6 +67,76 @@ namespace Chords.Core.Models
             return results.OrderBy(i => i.ChordType)
                           .ToArray();
 		}
+
+        /// <summary>
+        /// Names the chord sounded by notes played on an instrument (octaves and spelling are ignored).
+        /// A chord matches when every played note belongs to it and the only chord notes not played
+        /// are those that may be omitted (e.g. the fifth of a seventh chord).
+        /// </summary>
+        /// <param name="notes">Notes sounding on the strings.</param>
+        /// <param name="bass">Note of the lowest sounding string, preferred as the root.</param>
+        /// <returns>Matches ordered from the most likely: chords rooted in the bass first, then
+        /// complete chords. Rootless voicings are returned only when nothing else matches.</returns>
+        public static Chord[] FindByNotes(Note[] notes, Note bass)
+        {
+            var played = notes.Select(Note.Normalize)
+                              .Distinct()
+                              .ToArray();
+            var normalizedBass = bass == null ? null : Note.Normalize(bass);
+            var results = new List<(Chord Chord, int Missing, bool Rooted)>();
+
+            foreach (var root in Note.AllNotesNormalized)
+            {
+                foreach (var chordType in Enum.GetValues(typeof(ChordType)).Cast<ChordType>())
+                {
+                    Chord chord;
+
+                    try
+                    {
+                        chord = new Chord(PreferredSpelling(root), chordType);
+                    }
+                    catch (Exception)
+                    {
+                        continue;
+                    }
+                    var chordNotes = chord.NormalizedNotes.Distinct().ToArray();
+                    var optional = chord.NonMandatoryNotes.Select(Note.Normalize).ToArray();
+                    var missing = chordNotes.Where(i => !played.Contains(i)).ToArray();
+
+                    if (played.All(i => chordNotes.Contains(i)) &&
+                        missing.All(i => optional.Contains(i)))
+                    {
+                        results.Add((chord, missing.Length, played.Contains(root)));
+                    }
+                }
+            }
+            if (results.Any(i => i.Rooted))
+            {
+                results.RemoveAll(i => !i.Rooted);
+            }
+
+            return results.OrderBy(i => Note.Normalize(i.Chord.Root) == normalizedBass ? 0 : 1)
+                          .ThenBy(i => i.Missing)
+                          .ThenBy(i => i.Chord.ChordType)
+                          .Select(i => i.Chord)
+                          .ToArray();
+        }
+
+        /// <summary>Usual spelling of a root: C#, Eb, F#, Ab, Bb.</summary>
+        private static Note PreferredSpelling(Note normalized)
+        {
+            if (normalized.Accidental != Accidental.Sharp)
+            {
+                return normalized;
+            }
+            switch (normalized.Tone)
+            {
+                case Tone.D: return new Note(Tone.E, Accidental.Flat);
+                case Tone.G: return new Note(Tone.A, Accidental.Flat);
+                case Tone.A: return new Note(Tone.B, Accidental.Flat);
+                default: return normalized;
+            }
+        }
 
 		public static bool TryParse(string str, NamingConvention conv, out Chord chord)
 		{

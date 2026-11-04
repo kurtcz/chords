@@ -27,4 +27,8 @@ public class AppState
     /// <summary>Notes selected on the "Find chord name" page, kept while navigating.</summary>
     public HashSet<string> FindNotes { get; } = [];
     public NamingConvention FindNotesConvention { get; set; }
+
+    /// <summary>Fret held on each string on the "Find chord by shape" page (0 = open, -1 = muted).</summary>
+    public int[] ShapeFrets { get; set; }
+    public Instrument ShapeInstrument { get; set; }
 }

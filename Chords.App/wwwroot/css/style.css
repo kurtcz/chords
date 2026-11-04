@@ -403,3 +403,38 @@ footer {
     margin-right: -15px;
     margin-left: -15px;
 }
+
+/* Find chord by shape */
+.shape-result {
+    min-height: 80px;
+    text-align: center;
+}
+
+.shape-result h2 {
+    margin-top: 10px;
+}
+
+.shape-result a {
+    margin: 0 4px;
+}
+
+.shape-board {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.shape-buttons {
+    display: flex;
+    gap: 10px;
+    margin: 15px auto 20px;
+    max-width: 300px;
+}
+
+.shape-buttons .btn {
+    flex: 1 1 0;
+}
