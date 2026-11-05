@@ -648,7 +648,7 @@ h1.navbar-brand {
     transition: color 0.2s;
 }
 
-.tuner-display.close .tuner-note,
+.tuner-display.near .tuner-note,
 .tuner-display.tuned .tuner-note {
     color: #3c9a3c;
 }
@@ -666,7 +666,7 @@ h1.navbar-brand {
     stroke: #d9534f;
 }
 
-.tuner-display.close .tuner-needle,
+.tuner-display.near .tuner-needle,
 .tuner-display.tuned .tuner-needle {
     stroke: #3c9a3c;
 }
@@ -687,7 +687,7 @@ h1.navbar-brand {
 }
 
 .tuner-display.tuned .tuner-direction,
-.tuner-display.close .tuner-direction {
+.tuner-display.near .tuner-direction {
     color: #3c9a3c;
 }
 

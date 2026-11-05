@@ -223,7 +223,7 @@ else if (status == TunerStatus.Failed)
 
     private string StateClass => reading == null ? "silent"
         : tuned ? "tuned"
-        : Math.Abs(reading.Cents) <= InTuneCents ? "close"
+        : Math.Abs(reading.Cents) <= InTuneCents ? "near"
         : null;
 
     private string Direction => reading == null ? (tuned ? "✓ " + L["Tuner_InTune"] : "")
