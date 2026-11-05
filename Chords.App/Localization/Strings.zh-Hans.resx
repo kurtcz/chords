@@ -115,4 +115,18 @@
   <data name="Tab_More" xml:space="preserve"><value>更多</value></data>
   <data name="Group_Tools" xml:space="preserve"><value>工具</value></data>
   <data name="Related_Title" xml:space="preserve"><value>另请参阅</value></data>
+  <data name="Tuning_Standard" xml:space="preserve"><value>标准调弦</value></data>
+  <data name="Tuning_HalfStepDown" xml:space="preserve"><value>降半音</value></data>
+  <data name="Tuning_WholeStepDown" xml:space="preserve"><value>降全音</value></data>
+  <data name="Tuning_LowG" xml:space="preserve"><value>低音G</value></data>
+  <data name="Tuning_UkuleleD" xml:space="preserve"><value>D调弦</value></data>
+  <data name="Tuning_Baritone" xml:space="preserve"><value>上低音</value></data>
+  <data name="Tuning_Tenor" xml:space="preserve"><value>次中音</value></data>
+  <data name="Tuning_Custom" xml:space="preserve"><value>自定义调弦</value></data>
+  <data name="Tuning_New" xml:space="preserve"><value>自定义调弦…</value></data>
+  <data name="Tuning_Edit" xml:space="preserve"><value>编辑</value></data>
+  <data name="Tuning_Delete" xml:space="preserve"><value>删除</value></data>
+  <data name="Tuning_Save" xml:space="preserve"><value>保存</value></data>
+  <data name="Tuning_Cancel" xml:space="preserve"><value>取消</value></data>
+  <data name="Tuning_EditorHint" xml:space="preserve"><value>点按 ▲ ▼ 将琴弦升高或降低半音；点按音名可试听。</value></data>
 </root>

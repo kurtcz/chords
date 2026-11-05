@@ -33,6 +33,7 @@
     }
 </div>
 
+<TuningBadge />
 <svg class="shape-board" viewBox="0 0 @Width @Height" xmlns="http://www.w3.org/2000/svg">
     @* Fret inlays *@
     @foreach (var fret in new[] { 5, 7 })
@@ -129,7 +130,7 @@
     {
         var settings = State.Settings;
 
-        instrument = InstrumentInfo.Get(settings.Instrument);
+        instrument = settings.InstrumentInfo;
         conv = settings.conv;
         if (State.ShapeFrets == null || State.ShapeInstrument != settings.Instrument ||
             State.ShapeFrets.Length != instrument.StringCount)

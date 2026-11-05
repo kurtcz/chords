@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using Chords.Core.Models;
@@ -18,6 +19,10 @@ namespace Chords.App.Models
         public bool EasyOnly { get; set; } = false;
         public bool ShowTips { get; set; } = true;
         public Instrument Instrument { get; set; } = Instrument.Guitar;
+        /// <summary>Tuning chosen for each instrument: MIDI pitches of the open strings; missing = standard tuning.</summary>
+        public Dictionary<Instrument, int[]> Tunings { get; set; } = new Dictionary<Instrument, int[]>();
+        /// <summary>Tunings the player has defined and named, of all instruments.</summary>
+        public List<InstrumentTuning> CustomTunings { get; set; } = new List<InstrumentTuning>();
         /// <summary>Draw chord diagrams with horizontal strings (nut on the left), like looking at the neck.</summary>
         public bool Horizontal { get; set; } = false;
         /// <summary>Mirror horizontal chord diagrams so the nut is on the right.</summary>
@@ -46,6 +51,36 @@ namespace Chords.App.Models
 			new Note(Tone.A),
 			new Note(Tone.B)
 		};
+
+        /// <summary>The chosen instrument in its chosen tuning.</summary>
+        [JsonIgnore]
+        public InstrumentInfo InstrumentInfo => InstrumentInfo.Get(Instrument, Tunings.GetValueOrDefault(Instrument));
+
+        /// <summary>Tuning chosen for an instrument: a preset, a saved custom tuning, or an unnamed custom one.</summary>
+        public InstrumentTuning TuningOf(Instrument instrument)
+            => Describe(instrument, InstrumentInfo.Get(instrument, Tunings.GetValueOrDefault(instrument)).Pitches);
+
+        /// <summary>Preset or saved custom tuning with these pitches, or an unnamed custom one.</summary>
+        public InstrumentTuning Describe(Instrument instrument, int[] pitches)
+            => InstrumentTuning.FindPreset(instrument, pitches)
+               ?? CustomTunings.FirstOrDefault(i => i.Instrument == instrument && InstrumentTuning.SamePitches(i.Pitches, pitches))
+               ?? new InstrumentTuning(null, instrument, pitches);
+
+        /// <summary>Presets of the instrument followed by the player's own tunings.</summary>
+        public IEnumerable<InstrumentTuning> TuningsFor(Instrument instrument)
+            => InstrumentTuning.Presets(instrument).Concat(CustomTunings.Where(i => i.Instrument == instrument));
+
+        public void SelectTuning(Instrument instrument, int[] pitches)
+        {
+            if (InstrumentInfo.Get(instrument, pitches).IsStandardTuning)
+            {
+                Tunings.Remove(instrument);
+            }
+            else
+            {
+                Tunings[instrument] = pitches.ToArray();
+            }
+        }
 
         public static SettingsModel Load()
         {

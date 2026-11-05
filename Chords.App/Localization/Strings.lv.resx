@@ -117,4 +117,18 @@
   <data name="Tab_More" xml:space="preserve"><value>Vairāk</value></data>
   <data name="Group_Tools" xml:space="preserve"><value>Rīki</value></data>
   <data name="Related_Title" xml:space="preserve"><value>Skatīt arī</value></data>
+  <data name="Tuning_Standard" xml:space="preserve"><value>Standarta skaņojums</value></data>
+  <data name="Tuning_HalfStepDown" xml:space="preserve"><value>Par pustoni zemāk</value></data>
+  <data name="Tuning_WholeStepDown" xml:space="preserve"><value>Par toni zemāk</value></data>
+  <data name="Tuning_LowG" xml:space="preserve"><value>Zemais G</value></data>
+  <data name="Tuning_UkuleleD" xml:space="preserve"><value>D skaņojums</value></data>
+  <data name="Tuning_Baritone" xml:space="preserve"><value>Baritons</value></data>
+  <data name="Tuning_Tenor" xml:space="preserve"><value>Tenors</value></data>
+  <data name="Tuning_Custom" xml:space="preserve"><value>Savs skaņojums</value></data>
+  <data name="Tuning_New" xml:space="preserve"><value>Savs skaņojums…</value></data>
+  <data name="Tuning_Edit" xml:space="preserve"><value>Rediģēt</value></data>
+  <data name="Tuning_Delete" xml:space="preserve"><value>Dzēst</value></data>
+  <data name="Tuning_Save" xml:space="preserve"><value>Saglabāt</value></data>
+  <data name="Tuning_Cancel" xml:space="preserve"><value>Atcelt</value></data>
+  <data name="Tuning_EditorHint" xml:space="preserve"><value>Pieskarieties ▲ ▼, lai paaugstinātu vai pazeminātu stīgu par pustoni; pieskarieties notij, lai to dzirdētu.</value></data>
 </root>

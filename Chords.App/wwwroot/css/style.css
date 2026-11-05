@@ -1138,3 +1138,145 @@ h1.navbar-brand {
 [dir=rtl] .related-chevron {
     transform: scaleX(-1);
 }
+
+/* Alternate tuning: orange marks what differs from the standard tuning. */
+.tuning-badge {
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 4px;
+    margin: 2px 0 8px;
+    padding: 3px 10px;
+    border: 1px solid #f0c48f;
+    border-radius: 12px;
+    background-color: #fdf1e2;
+    color: #8a5a1c;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+.tuning-badge-name {
+    font-weight: 600;
+    margin-right: 4px;
+}
+
+.tuning-badge .retuned {
+    color: #d9822b;
+    font-weight: bold;
+}
+
+.tuning-actions {
+    display: flex;
+    gap: 8px;
+    margin: -10px 0 20px;
+}
+
+.tuning-editor {
+    margin: -10px 0 20px;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+
+.tuning-editor-strings {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 12px;
+}
+
+.tuning-editor-string {
+    display: flex;
+    flex: 0 1 52px;
+    min-width: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 4px;
+}
+
+.tuning-editor-string button {
+    height: 34px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: #f6f6f6;
+    color: #555;
+    padding: 0;
+}
+
+.tuning-editor-string button:disabled {
+    color: #ccc;
+}
+
+.tuning-editor-string .tuning-editor-note {
+    height: 44px;
+    background-color: white;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.tuning-editor-note sub {
+    font-size: 0.6em;
+    color: #999;
+    bottom: 0;
+}
+
+.tuning-editor-string.retuned .tuning-editor-note {
+    border: 2px solid #d9822b;
+    color: #d9822b;
+}
+
+.tuning-editor-offset {
+    text-align: center;
+    font-size: 12px;
+    font-weight: 600;
+    color: #d9822b;
+}
+
+.tuning-editor-hint {
+    margin: 8px 0 0;
+    color: #999;
+    font-size: 13px;
+    text-align: center;
+}
+
+.tuning-editor-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.tuner-tuning {
+    display: flex;
+    justify-content: center;
+    margin-top: 14px;
+}
+
+.tuner-tuning select {
+    max-width: 100%;
+    height: 34px;
+    padding: 0 12px;
+    border: 1px solid #ddd;
+    border-radius: 17px;
+    background-color: white;
+    color: #555;
+}
+
+.tuner-string.retuned {
+    border-color: #f0c48f;
+}
+
+/* Half steps away from the standard tuning, under the string. */
+.tuner-offset {
+    position: absolute;
+    bottom: -9px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0 5px;
+    border-radius: 8px;
+    background-color: #d9822b;
+    color: white;
+    font-size: 10px;
+    line-height: 16px;
+    white-space: nowrap;
+}

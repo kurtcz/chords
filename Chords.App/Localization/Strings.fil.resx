@@ -116,4 +116,18 @@
   <data name="Tab_More" xml:space="preserve"><value>Iba pa</value></data>
   <data name="Group_Tools" xml:space="preserve"><value>Mga tool</value></data>
   <data name="Related_Title" xml:space="preserve"><value>Tingnan din</value></data>
+  <data name="Tuning_Standard" xml:space="preserve"><value>Karaniwang tono</value></data>
+  <data name="Tuning_HalfStepDown" xml:space="preserve"><value>Ibaba nang kalahating tono</value></data>
+  <data name="Tuning_WholeStepDown" xml:space="preserve"><value>Ibaba nang isang tono</value></data>
+  <data name="Tuning_LowG" xml:space="preserve"><value>Mababang G</value></data>
+  <data name="Tuning_UkuleleD" xml:space="preserve"><value>D na tono</value></data>
+  <data name="Tuning_Baritone" xml:space="preserve"><value>Baritone</value></data>
+  <data name="Tuning_Tenor" xml:space="preserve"><value>Tenor</value></data>
+  <data name="Tuning_Custom" xml:space="preserve"><value>Sariling tono</value></data>
+  <data name="Tuning_New" xml:space="preserve"><value>Sariling tono…</value></data>
+  <data name="Tuning_Edit" xml:space="preserve"><value>I-edit</value></data>
+  <data name="Tuning_Delete" xml:space="preserve"><value>Burahin</value></data>
+  <data name="Tuning_Save" xml:space="preserve"><value>I-save</value></data>
+  <data name="Tuning_Cancel" xml:space="preserve"><value>Kanselahin</value></data>
+  <data name="Tuning_EditorHint" xml:space="preserve"><value>I-tap ang ▲ ▼ para itaas o ibaba ang kuwerdas nang kalahating tono; i-tap ang nota para marinig ito.</value></data>
 </root>

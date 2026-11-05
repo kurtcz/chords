@@ -26,6 +26,7 @@
     </div>
 }
 
+<TuningBadge />
 <div class="list-group progression-list">
     @foreach (var item in items)
     {
@@ -187,7 +188,7 @@
                 .Select(i => i.Chord)
                 .Distinct()
                 .ToDictionary(c => c, c => new ChordDecorator(c, conv)
-                    .GenerateLayouts(s.Instrument, s.AllowBarre, s.AllowSpecial, true, s.maxFret, s.EasyOnly)
+                    .GenerateLayouts(s.InstrumentInfo, s.AllowBarre, s.AllowSpecial, true, s.maxFret, s.EasyOnly)
                     .OrderBy(l => l.Favorite ? 0 : 1)
                     .ToArray());
 
@@ -214,6 +215,6 @@
             .Where(i => i != null)
             .ToArray();
 
-        Player.PlaySequence(InstrumentInfo.Get(State.Settings.Instrument), positions);
+        Player.PlaySequence(State.Settings.InstrumentInfo, positions);
     }
 }

@@ -52,18 +52,22 @@ namespace Chords.App.Models
             var info = _layout.InstrumentInfo;
             var frets = info.DiagramFrets;
             var neck = 20 + frets * 40;
+            //an alternate tuning is spelled out past the end of the neck, its retuned strings highlighted
+            var tuning = info.IsStandardTuning ? null
+                : InstrumentTuning.FindPreset(info.Instrument, info.Pitches) ?? new InstrumentTuning(null, info.Instrument, info.Pitches);
+            var tuningRoom = tuning == null ? 0 : 18;
             int svgWidth, svgHeight;
             Func<int, int, (int X, int Y)> P;
             if (horizontal)
             {
-                svgWidth = 20 + neck + 40;
+                svgWidth = 20 + neck + 40 + tuningRoom;
                 svgHeight = 25 + span + 10;
                 P = (a, f) => (leftHanded ? svgWidth - 20 - f : 20 + f, 25 + span - a);
             }
             else
             {
                 svgWidth = 25 + span + 30;
-                svgHeight = neck + 10;
+                svgHeight = neck + 10 + tuningRoom;
                 P = (a, f) => (25 + a, f);
             }
             int A(int s) => s * 20;
@@ -74,7 +78,7 @@ namespace Chords.App.Models
 
             sb.AppendLine($"\t<svg viewBox=\"0 0 {svgWidth} {svgHeight}\" width=\"{svgWidth}\" style=\"display:block; margin-bottom:10px;\">");
             //star next to the highest string, past the end of the neck when horizontal
-            var star = horizontal ? P(span, neck + 25) : (X: 25 + span + 17, Y: 12);
+            var star = horizontal ? P(span, neck + 25 + tuningRoom) : (X: 25 + span + 17, Y: 12);
             sb.Append($"\t\t<path class=\"star\" fill=\"#F8D64E\" d=\"M {star.X - 7} {star.Y + 11} l 7 -23 l 7 23 l -19 -14 h 24 Z\" />\n");
             //fretboard; fret wire n lies at 20 + (n - RenderingFret) * 40
             for (var s = 0; s < strings; s++)
@@ -143,6 +147,15 @@ namespace Chords.App.Models
                 else
                 {
                     sb.Append(Circle(P(A(s), (IntPositions[s] - RenderingFret) * 40), "blue"));
+                }
+            }
+            if (tuning != null)
+            {
+                for (var s = 0; s < strings; s++)
+                {
+                    var p = P(A(s), neck + (horizontal ? 16 : 17));
+                    var retuned = tuning.Offset(s) != 0;
+                    sb.Append($"\t\t<text class=\"tuning{(retuned ? " retuned" : null)}\" x=\"{p.X}\" y=\"{p.Y + (horizontal ? 4 : 0)}\" font-size=\"11\" text-anchor=\"middle\" fill=\"{(retuned ? "#d9822b" : "#999")}\" font-weight=\"{(retuned ? "bold" : "normal")}\">{tuning.NoteOf(s).ToString(_namingConvention)}</text>\n");
                 }
             }
             //fret numbers: left of a vertical neck, above a horizontal one

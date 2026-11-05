@@ -116,4 +116,18 @@
   <data name="Tab_More" xml:space="preserve"><value>Meer</value></data>
   <data name="Group_Tools" xml:space="preserve"><value>Hulpmiddelen</value></data>
   <data name="Related_Title" xml:space="preserve"><value>Zie ook</value></data>
+  <data name="Tuning_Standard" xml:space="preserve"><value>Standaardstemming</value></data>
+  <data name="Tuning_HalfStepDown" xml:space="preserve"><value>Halve toon lager</value></data>
+  <data name="Tuning_WholeStepDown" xml:space="preserve"><value>Hele toon lager</value></data>
+  <data name="Tuning_LowG" xml:space="preserve"><value>Lage G</value></data>
+  <data name="Tuning_UkuleleD" xml:space="preserve"><value>D-stemming</value></data>
+  <data name="Tuning_Baritone" xml:space="preserve"><value>Bariton</value></data>
+  <data name="Tuning_Tenor" xml:space="preserve"><value>Tenor</value></data>
+  <data name="Tuning_Custom" xml:space="preserve"><value>Eigen stemming</value></data>
+  <data name="Tuning_New" xml:space="preserve"><value>Eigen stemming…</value></data>
+  <data name="Tuning_Edit" xml:space="preserve"><value>Bewerken</value></data>
+  <data name="Tuning_Delete" xml:space="preserve"><value>Verwijderen</value></data>
+  <data name="Tuning_Save" xml:space="preserve"><value>Opslaan</value></data>
+  <data name="Tuning_Cancel" xml:space="preserve"><value>Annuleren</value></data>
+  <data name="Tuning_EditorHint" xml:space="preserve"><value>Tik op ▲ ▼ om een snaar een halve toon hoger of lager te stemmen; tik op een noot om hem te horen.</value></data>
 </root>

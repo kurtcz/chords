@@ -116,4 +116,18 @@
   <data name="Tab_More" xml:space="preserve"><value>Ավելին</value></data>
   <data name="Group_Tools" xml:space="preserve"><value>Գործիքներ</value></data>
   <data name="Related_Title" xml:space="preserve"><value>Տես նաև</value></data>
+  <data name="Tuning_Standard" xml:space="preserve"><value>Ստանդարտ լարվածք</value></data>
+  <data name="Tuning_HalfStepDown" xml:space="preserve"><value>Կես տոն ցածր</value></data>
+  <data name="Tuning_WholeStepDown" xml:space="preserve"><value>Մեկ տոն ցածր</value></data>
+  <data name="Tuning_LowG" xml:space="preserve"><value>Ցածր Սոլ</value></data>
+  <data name="Tuning_UkuleleD" xml:space="preserve"><value>Ռե լարվածք</value></data>
+  <data name="Tuning_Baritone" xml:space="preserve"><value>Բարիտոն</value></data>
+  <data name="Tuning_Tenor" xml:space="preserve"><value>Տենոր</value></data>
+  <data name="Tuning_Custom" xml:space="preserve"><value>Սեփական լարվածք</value></data>
+  <data name="Tuning_New" xml:space="preserve"><value>Սեփական լարվածք…</value></data>
+  <data name="Tuning_Edit" xml:space="preserve"><value>Խմբագրել</value></data>
+  <data name="Tuning_Delete" xml:space="preserve"><value>Ջնջել</value></data>
+  <data name="Tuning_Save" xml:space="preserve"><value>Պահել</value></data>
+  <data name="Tuning_Cancel" xml:space="preserve"><value>Չեղարկել</value></data>
+  <data name="Tuning_EditorHint" xml:space="preserve"><value>Սեղմեք ▲ ▼՝ լարը կես տոնով բարձրացնելու կամ իջեցնելու համար, սեղմեք նոտային՝ այն լսելու համար։</value></data>
 </root>

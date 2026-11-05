@@ -195,6 +195,19 @@ namespace Chords.Core.Models
             return new Note(tone, (Accidental)correction);
 		}
 
+        /// <summary>Note of a MIDI pitch (60 = C4), a black key spelled as a sharp or a flat.</summary>
+        public static Note FromPitch(int pitch, bool flats = false)
+        {
+            var note = AllNotesNormalized[((pitch % NumberOfHalfTones) + NumberOfHalfTones) % NumberOfHalfTones];
+
+            if (flats && note.Accidental == Accidental.Sharp)
+            {
+                return new Note(Tones[Array.IndexOf(Tones, note.Tone) + 1], Accidental.Flat);
+            }
+
+            return note;
+        }
+
         public static float HalfStepsToPlayRate(int halfSteps)
         {
             return (1 + halfSteps / PitchRates.Length) * PitchRates[halfSteps % PitchRates.Length];

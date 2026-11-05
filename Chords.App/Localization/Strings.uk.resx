@@ -117,4 +117,18 @@
   <data name="Tab_More" xml:space="preserve"><value>Ще</value></data>
   <data name="Group_Tools" xml:space="preserve"><value>Інструменти</value></data>
   <data name="Related_Title" xml:space="preserve"><value>Див. також</value></data>
+  <data name="Tuning_Standard" xml:space="preserve"><value>Стандартний стрій</value></data>
+  <data name="Tuning_HalfStepDown" xml:space="preserve"><value>На пів тону нижче</value></data>
+  <data name="Tuning_WholeStepDown" xml:space="preserve"><value>На тон нижче</value></data>
+  <data name="Tuning_LowG" xml:space="preserve"><value>Низька соль</value></data>
+  <data name="Tuning_UkuleleD" xml:space="preserve"><value>Стрій ре</value></data>
+  <data name="Tuning_Baritone" xml:space="preserve"><value>Баритон</value></data>
+  <data name="Tuning_Tenor" xml:space="preserve"><value>Тенор</value></data>
+  <data name="Tuning_Custom" xml:space="preserve"><value>Власний стрій</value></data>
+  <data name="Tuning_New" xml:space="preserve"><value>Власний стрій…</value></data>
+  <data name="Tuning_Edit" xml:space="preserve"><value>Змінити</value></data>
+  <data name="Tuning_Delete" xml:space="preserve"><value>Видалити</value></data>
+  <data name="Tuning_Save" xml:space="preserve"><value>Зберегти</value></data>
+  <data name="Tuning_Cancel" xml:space="preserve"><value>Скасувати</value></data>
+  <data name="Tuning_EditorHint" xml:space="preserve"><value>Натискайте ▲ ▼, щоб підняти чи опустити струну на пів тону; торкніться ноти, щоб її почути.</value></data>
 </root>

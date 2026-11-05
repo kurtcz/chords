@@ -2,13 +2,13 @@
 
 ## Doporučené pořadí
 
-1. **Custom ladění a kapodastr** – obojí mění hlavně generátor hmatů a přehrávání.
+1. **Kapodastr** (custom ladění ✅) – mění hlavně generátor hmatů a přehrávání.
 2. Ostatní funkce podle zájmu uživatelů.
 
 ## Navržené
 
 - **Generátor pro leváky (Left-handed mode)** – ✅ svislé/vodorovné diagramy, vodorovné lze zrcadlit pro leváky. Zbývá: hmatník se stupnicemi, až vznikne.
-- **Custom ladění** – Drop D, DADGAD, Half-step down (Eb), Open G/D a vlastní ladění; generátor hmatů i přehrávání zvuku podle zvoleného ladění.
+- **Custom ladění** – ✅ Drop D, DADGAD, Half-step down (Eb), Open G/D a vlastní ladění; generátor hmatů i přehrávání zvuku podle zvoleného ladění.
 - **Přepínač nástrojů** – ✅ kytara, ukulele, mandolína, baskytara, pětistrunné banjo v Open G (krátká 5. struna od 5. pražce, barré i u ostatních nástrojů; oblíbené zvlášť pro každý nástroj). Zbývá: tenorové banjo, vlastní nahrávky zvuku pro jednotlivé nástroje. Housle záměrně ne – nemají pražce.
 - **Hledání akordu podle hmatu** – ✅ uživatel naklikne prsty na hmatníku zvoleného nástroje a aplikace určí název akordu (včetně obratů jako C/E a neúplných akordů).
 - **Hledač akordů do tóniny (Key & Scale Finder)** – ✅ pro zvolenou tóninu a stupnici (dur, mollové, církevní módy) zobrazí diatonické akordy I–vii° nebo septakordy s přehráním; naopak z několika zadaných akordů určí nejpravděpodobnější tóniny (v mollu i s harmonickými akordy, upřednostní začátek/konec na tónice). Sdílí tóninu s kvintovým kruhem (kruh ukazuje příbuznou durovou tóninu, posun v kruhu zachová stupnici) a obě stránky na sebe odkazují. Zbývá: zobrazení stupnice na hmatníku.

@@ -14,14 +14,17 @@ namespace Chords.Core.Models
     {
         public const int X = -1;       //this symbol denotes a silent string
         private const int MaxPosition = 15 + 3;
-        private static readonly ConcurrentDictionary<Instrument, Note[][]> _stringNotesCache = new ConcurrentDictionary<Instrument, Note[][]>();
+        private static readonly ConcurrentDictionary<InstrumentInfo, Note[][]> _stringNotesCache = new ConcurrentDictionary<InstrumentInfo, Note[][]>();
 
 		public Chord Chord { get; private set; }
 		public int[] Positions { get; private set; } = new int[6];
         public GuitarChordType GuitarChordType { get; private set; }
         public Instrument Instrument { get; private set; }
+        /// <summary>MIDI pitches of the open strings in an alternate tuning; null in the standard tuning.</summary>
+        [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
+        public int[] Tuning { get; private set; }
         [JsonIgnore]
-        public InstrumentInfo InstrumentInfo => InstrumentInfo.Get(Instrument);
+        public InstrumentInfo InstrumentInfo { get; private set; }
         [JsonIgnore]
         public int Fret { get; private set; }
         [JsonIgnore]
@@ -42,12 +45,10 @@ namespace Chords.Core.Models
         private int? _difficulty;
 
         /// <summary>Notes at positions 0..<see cref="MaxPosition"/> for each string of the instrument.</summary>
-        private static Note[][] StringNotes(Instrument instrument)
+        private static Note[][] StringNotes(InstrumentInfo instrument)
         {
-            return _stringNotesCache.GetOrAdd(instrument, i =>
+            return _stringNotesCache.GetOrAdd(instrument, info =>
             {
-                var info = InstrumentInfo.Get(i);
-
                 return Enumerable.Range(0, info.StringCount)
                                  .Select(s => Enumerable.Range(0, MaxPosition + 1)
                                                         .Select(pos => info.NoteAt(s, info.CanFret(s, pos) ? pos : 0))
@@ -56,11 +57,21 @@ namespace Chords.Core.Models
             });
         }
 
-        public GuitarChordLayout(Chord chord, int[] positions, GuitarChordType? guitarChordType = null, Instrument instrument = Instrument.Guitar)
+        [JsonConstructor]
+        public GuitarChordLayout(Chord chord, int[] positions, GuitarChordType? guitarChordType = null, Instrument instrument = Instrument.Guitar, int[] tuning = null)
+            : this(chord, positions, guitarChordType, InstrumentInfo.Get(instrument, tuning))
         {
+        }
+
+        public GuitarChordLayout(Chord chord, int[] positions, GuitarChordType? guitarChordType, InstrumentInfo instrumentInfo)
+        {
+            var instrument = instrumentInfo.Instrument;
+
             Chord = chord;
             Positions = positions;
             Instrument = instrument;
+            InstrumentInfo = instrumentInfo;
+            Tuning = instrumentInfo.IsStandardTuning ? null : instrumentInfo.Pitches;
 			Notes = GetUsedNotes();
             if (guitarChordType.HasValue)
             {
@@ -99,8 +110,13 @@ namespace Chords.Core.Models
 
         public static IEnumerable<GuitarChordLayout> Generate(Chord chord, Instrument instrument, bool allowBarre, bool allowSpecial, bool allowPartial, int maxFret)
         {
-            var info = InstrumentInfo.Get(instrument);
-            var stringNotes = StringNotes(instrument);
+            return Generate(chord, InstrumentInfo.Get(instrument), allowBarre, allowSpecial, allowPartial, maxFret);
+        }
+
+        public static IEnumerable<GuitarChordLayout> Generate(Chord chord, InstrumentInfo info, bool allowBarre, bool allowSpecial, bool allowPartial, int maxFret)
+        {
+            var instrument = info.Instrument;
+            var stringNotes = StringNotes(info);
             var results = new ConcurrentBag<GuitarChordLayout>();
             var positionsPerString = new HashSet<int>[info.StringCount];
 
@@ -146,7 +162,7 @@ namespace Chords.Core.Models
             {
                 foreach (var guitarChordType in guitarChordTypes)
                 {
-                    var result = new GuitarChordLayout(chord, layout, guitarChordType, instrument);
+                    var result = new GuitarChordLayout(chord, layout, guitarChordType, info);
                     var b = result.IsValid(allowPartial) &&
                             result.Fret <= maxFret;
                     if (b)
@@ -165,7 +181,7 @@ namespace Chords.Core.Models
         private static IEnumerable<int[]> GetPositionsForStrings(HashSet<int>[] positionsPerString, Note[][] stringNotes, InstrumentInfo info, int s)
         {
             var count = positionsPerString.Length;
-            var guitar = info == InstrumentInfo.Guitar;
+            var guitar = info.Instrument == Instrument.Guitar;
 
             if (s == count - 1)
             {
@@ -203,7 +219,7 @@ namespace Chords.Core.Models
 
         private Note[] GetUsedNotes()
         {
-            var stringNotes = StringNotes(Instrument);
+            var stringNotes = StringNotes(InstrumentInfo);
             var notesUsed = new List<Note>(Positions.Length);
 
 			for (var s = 0; s < Positions.Length; s++)
@@ -247,7 +263,7 @@ namespace Chords.Core.Models
             //do not allow same notes on neighbouring strings, except next to a short drone string (banjo's 5th),
             //which rings along in most banjo chords
             var info = InstrumentInfo;
-            var stringNotes = StringNotes(Instrument);
+            var stringNotes = StringNotes(InstrumentInfo);
             for (var s = 0; s < Positions.Length - 1; s++)
             {
                 if (Positions[s] != X && Positions[s + 1] != X &&
@@ -554,7 +570,7 @@ namespace Chords.Core.Models
                 return false;
             }
 
-            return Instrument == other.Instrument && Positions.SequenceEqual(other.Positions);
+            return InstrumentInfo == other.InstrumentInfo && Positions.SequenceEqual(other.Positions);
 		}
 
         public override int GetHashCode()

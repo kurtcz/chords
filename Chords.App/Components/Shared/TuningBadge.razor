@@ -1,0 +1,16 @@
+@inject AppState State
+@inject NavigationManager Nav
+
+@* Reminds that the instrument is in an alternate tuning; nothing in the standard one. Opens the settings. *@
+@if (!State.Settings.InstrumentInfo.IsStandardTuning)
+{
+    var tuning = State.Settings.TuningOf(State.Settings.Instrument);
+
+    <button type="button" class="tuning-badge" @onclick='() => Nav.NavigateTo("settings")'>
+        <span class="tuning-badge-name">@L.TuningName(tuning)</span>
+        @for (var s = 0; s < tuning.Pitches.Length; s++)
+        {
+            <span class="@(tuning.Offset(s) != 0 ? "retuned" : null)">@tuning.NoteOf(s).ToString(State.Settings.conv)</span>
+        }
+    </button>
+}

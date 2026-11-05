@@ -19,10 +19,34 @@
     <ChildContent>
         @foreach (var instrument in Enum.GetValues<Instrument>())
         {
-            <li><a @onclick="() => Update(() => settings.Instrument = instrument)">@L[$"Instrument_{instrument}"] <sub>(@Tuning(instrument))</sub></a></li>
+            <li><a @onclick="() => Update(() => { settings.Instrument = instrument; editing = null; })">@L[$"Instrument_{instrument}"] <sub>(@Localizer.TuningNotes(settings.TuningOf(instrument), settings.conv))</sub></a></li>
         }
     </ChildContent>
 </DropdownBar>
+
+@* Tuning of the chosen instrument: the usual ones, the player's own, or a new one. *@
+<DropdownBar>
+    <Brand>@L.TuningName(tuning) <sub>(@Localizer.TuningNotes(tuning, settings.conv))</sub></Brand>
+    <ChildContent>
+        @foreach (var t in settings.TuningsFor(settings.Instrument))
+        {
+            <li><a @onclick="() => Update(() => { settings.SelectTuning(settings.Instrument, t.Pitches); editing = null; })">@L.TuningName(t) <sub>(@Localizer.TuningNotes(t, settings.conv))</sub></a></li>
+        }
+        <li><a @onclick="() => editing = new InstrumentTuning(null, settings.Instrument, tuning.Pitches)">+ @L["Tuning_New"]</a></li>
+    </ChildContent>
+</DropdownBar>
+@if (editing != null)
+{
+    <TuningEditor @key="editing" Instrument="settings.Instrument" Initial="editing" Conv="settings.conv"
+                  OnSave="SaveTuning" OnCancel="() => editing = null" />
+}
+else if (IsSaved(tuning))
+{
+    <div class="tuning-actions">
+        <button type="button" class="btn btn-default" @onclick="() => editing = tuning">@L["Tuning_Edit"]</button>
+        <button type="button" class="btn btn-default" @onclick="() => DeleteTuning(tuning)">@L["Tuning_Delete"]</button>
+    </div>
+}
 
 <DropdownBar>
     <Brand>@L[$"Notation_{settings.conv}"]</Brand>
@@ -121,9 +145,35 @@
         return language.Name == null ? code : $"{language.Flag} {language.Name}";
     }
 
-    /// <summary>Open strings from the lowest, e.g. "E-A-D-G-B-E", in the chosen notation.</summary>
-    private string Tuning(Instrument instrument)
-        => string.Join("-", InstrumentInfo.Get(instrument).Strings.Select(i => i.ToString(settings.conv)));
+    private InstrumentTuning tuning => settings.TuningOf(settings.Instrument);
+    /// <summary>Tuning open in the editor: a saved one being changed, or a new one; null when closed.</summary>
+    private InstrumentTuning editing;
+
+    private bool IsSaved(InstrumentTuning t) => settings.CustomTunings.Contains(t);
+
+    /// <summary>
+    /// Saves the edited tuning in place of the one it started from and chooses it.
+    /// Pitches of a preset just choose the preset; a saved tuning of the same pitches is replaced.
+    /// </summary>
+    private void SaveTuning(InstrumentTuning saved) => Update(() =>
+    {
+        var instrument = settings.Instrument;
+
+        settings.CustomTunings.Remove(editing);
+        if (InstrumentTuning.FindPreset(instrument, saved.Pitches) == null)
+        {
+            settings.CustomTunings.RemoveAll(i => i.Instrument == instrument && InstrumentTuning.SamePitches(i.Pitches, saved.Pitches));
+            settings.CustomTunings.Add(saved);
+        }
+        settings.SelectTuning(instrument, saved.Pitches);
+        editing = null;
+    });
+
+    private void DeleteTuning(InstrumentTuning t) => Update(() =>
+    {
+        settings.CustomTunings.Remove(t);
+        settings.SelectTuning(t.Instrument, null);
+    });
 
     private void SetLanguage(string code) => Update(() =>
     {

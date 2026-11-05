@@ -28,7 +28,7 @@ else if (status == TunerStatus.Failed)
         }
         else
         {
-            @NoteLetter(reading.Target)<sub>@TunerMath.OctaveOf(reading.Target)</sub>
+            @NoteLetter(reading.Target, reading.String)<sub>@TunerMath.OctaveOf(reading.Target)</sub>
         }
     </div>
     <svg class="tuner-gauge" viewBox="0 -12 300 186" xmlns="http://www.w3.org/2000/svg">
@@ -94,6 +94,17 @@ else if (status == TunerStatus.Failed)
 
 @if (!chromatic)
 {
+    @* Quick switch between the tunings of the instrument; the strings below follow it. *@
+    <div class="tuner-tuning">
+        <select aria-label="@L["Tuning_Custom"]" @onchange="e => SetTuning((string)e.Value)">
+            @{ var i = 0; }
+            @foreach (var t in tunings)
+            {
+                <option value="@i" selected="@(InstrumentTuning.SamePitches(t.Pitches, instrument.Pitches))">@L.TuningName(t) (@Localizer.TuningNotes(t, conv, " "))</option>
+                i++;
+            }
+        </select>
+    </div>
     <div class="tuner-strings">
         <button type="button" class="tuner-auto @(lockedString < 0 ? "active" : null)" @onclick="() => Lock(-1)">
             @L["Tuner_Auto"]
@@ -104,7 +115,15 @@ else if (status == TunerStatus.Failed)
             {
                 var str = s;
                 var css = (lockedString == s ? "locked " : "") + (reading?.String == s ? "heard " : "") + (tunedStrings.Contains(s) ? "done" : "");
-                <button type="button" class="tuner-string @css" title="@NoteName(instrument.Pitches[s])" @onclick="() => Lock(str)">@NoteLetter(instrument.Pitches[s])</button>
+                var offset = tuning.Offset(s);
+                @* A string tuned away from the standard tuning shows by how many half steps, so it is retuned first. *@
+                <button type="button" class="tuner-string @css @(offset != 0 ? "retuned" : null)" title="@NoteName(instrument.Pitches[s], s)" @onclick="() => Lock(str)">
+                    @NoteLetter(instrument.Pitches[s], s)
+                    @if (offset != 0)
+                    {
+                        <span class="tuner-offset">@offset.ToString("+0;−0")</span>
+                    }
+                </button>
             }
         </div>
     </div>
@@ -153,6 +172,8 @@ else if (status == TunerStatus.Failed)
     private const double DegreesPerCent = 1.2;
 
     private InstrumentInfo instrument;
+    private InstrumentTuning tuning;
+    private InstrumentTuning[] tunings = [];
     private NamingConvention conv;
     private int a4;
     private int lockedString = -1;
@@ -173,7 +194,13 @@ else if (status == TunerStatus.Failed)
 
     protected override async Task OnInitializedAsync()
     {
-        instrument = InstrumentInfo.Get(State.Settings.Instrument);
+        instrument = State.Settings.InstrumentInfo;
+        tuning = State.Settings.TuningOf(State.Settings.Instrument);
+        tunings = State.Settings.TuningsFor(State.Settings.Instrument).ToArray();
+        if (!tunings.Any(t => InstrumentTuning.SamePitches(t.Pitches, tuning.Pitches)))
+        {
+            tunings = [tuning, .. tunings];
+        }
         conv = State.Settings.conv;
         a4 = Math.Clamp(State.Settings.TunerA4, MinA4, MaxA4);
         chromatic = State.Settings.TunerChromatic;
@@ -280,6 +307,24 @@ else if (status == TunerStatus.Failed)
         Listener.Configure(instrument, a4, lockedString, chromatic);
     }
 
+    private void SetTuning(string index)
+    {
+        if (!int.TryParse(index, out var i) || i < 0 || i >= tunings.Length)
+        {
+            return;
+        }
+        State.Settings.SelectTuning(State.Settings.Instrument, tunings[i].Pitches);
+        State.Settings.Save();
+        instrument = State.Settings.InstrumentInfo;
+        tuning = State.Settings.TuningOf(State.Settings.Instrument);
+        // The strings now have other targets.
+        tunedStrings.Clear();
+        reading = null;
+        inTuneSince = null;
+        tuned = false;
+        Listener.Configure(instrument, a4, lockedString, chromatic);
+    }
+
     private void SetA4(int value)
     {
         a4 = Math.Clamp(value, MinA4, MaxA4);
@@ -290,9 +335,11 @@ else if (status == TunerStatus.Failed)
         Listener.Configure(instrument, a4, lockedString, chromatic);
     }
 
-    private string NoteName(int pitch) => NoteLetter(pitch) + TunerMath.OctaveOf(pitch);
+    private string NoteName(int pitch, int s = -1) => NoteLetter(pitch, s) + TunerMath.OctaveOf(pitch);
 
-    private string NoteLetter(int pitch) => TunerMath.NoteOf(pitch).ToString(conv);
+    /// <summary>Name of a pitch; an open string's spelled like its tuning (E♭ in the half-step-down tuning).</summary>
+    private string NoteLetter(int pitch, int s = -1)
+        => (s >= 0 && s < tuning.Pitches.Length && tuning.Pitches[s] == pitch ? tuning.NoteOf(s) : TunerMath.NoteOf(pitch)).ToString(conv);
 
     private string StateClass => reading == null ? "silent"
         : tuned ? "tuned"

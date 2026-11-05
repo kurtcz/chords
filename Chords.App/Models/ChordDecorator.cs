@@ -42,7 +42,7 @@ namespace Chords.App.Models
 
 		/// <summary>Fingerings from the easiest, each difficulty level ordered up the neck.</summary>
 		/// <param name="easyOnly">Only easy fingerings; when the chord has none, the easiest level it has.</param>
-		public GuitarChordLayoutDecorator[] GenerateLayouts(Instrument instrument, bool allowBarre, bool allowSpecial, bool allowPartial, int maxFret, bool easyOnly)
+		public GuitarChordLayoutDecorator[] GenerateLayouts(InstrumentInfo instrument, bool allowBarre, bool allowSpecial, bool allowPartial, int maxFret, bool easyOnly)
 		{
 			var layouts = GuitarChordLayout.Generate(_chord, instrument, allowBarre, allowSpecial, allowPartial, maxFret).ToArray();
 

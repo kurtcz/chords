@@ -127,6 +127,14 @@ public class Localizer
 
     public string this[string key] => Resources.GetString(key, CultureInfo.CurrentUICulture) ?? key;
 
+    /// <summary>Name of a tuning: translated for presets like "Standard tuning", as given otherwise.</summary>
+    public string TuningName(InstrumentTuning tuning)
+        => tuning.NameKey != null ? this[tuning.NameKey] : string.IsNullOrEmpty(tuning.Name) ? this["Tuning_Custom"] : tuning.Name;
+
+    /// <summary>Open strings from the lowest, e.g. "D-A-D-G-B-E".</summary>
+    public static string TuningNotes(InstrumentTuning tuning, NamingConvention conv, string separator = "-")
+        => string.Join(separator, Enumerable.Range(0, tuning.Pitches.Length).Select(s => tuning.NoteOf(s).ToString(conv)));
+
     public string this[string key, params object[] args] => string.Format(CultureInfo.CurrentCulture, this[key], args);
 
     /// <summary>

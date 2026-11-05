@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Concurrent;
 using System.Linq;
 
 namespace Chords.Core.Models
@@ -17,6 +18,11 @@ namespace Chords.Core.Models
     /// <summary>Tuning and fingering rules of an <see cref="Instrument"/>.</summary>
     public class InstrumentInfo
     {
+        private static readonly ConcurrentDictionary<string, InstrumentInfo> _tuned = new ConcurrentDictionary<string, InstrumentInfo>();
+
+        public Instrument Instrument { get; private set; }
+        /// <summary>Whether the strings are tuned the usual way (not to an alternate <see cref="InstrumentTuning"/>).</summary>
+        public bool IsStandardTuning => ReferenceEquals(this, Get(Instrument));
         /// <summary>Open strings from the lowest (left in diagrams) to the highest.</summary>
         public Note[] Strings { get; }
         /// <summary>MIDI pitch of each open string (E2 = 40), used for playback.</summary>
@@ -59,6 +65,19 @@ namespace Chords.Core.Models
             FirstFrets = firstFrets;
         }
 
+        /// <summary>The same instrument with its strings tuned to other pitches.</summary>
+        private InstrumentInfo(InstrumentInfo standard, int[] pitches)
+        {
+            Strings = pitches.Select(p => Note.FromPitch(p)).ToArray();
+            Pitches = pitches.ToArray();
+            AllowMutedStrings = standard.AllowMutedStrings;
+            FirstFrets = standard.FirstFrets;
+            ComfortableFretSpan = standard.ComfortableFretSpan;
+            MaxFretSpan = standard.MaxFretSpan;
+            AllowInnerMutedStrings = standard.AllowInnerMutedStrings;
+            Instrument = standard.Instrument;
+        }
+
         /// <summary>Whether a string is shorter than the neck (banjo's 5th string).</summary>
         public bool IsShortString(int s) => FirstFrets[s] > 0;
 
@@ -88,7 +107,10 @@ namespace Chords.Core.Models
         }
 
         public static readonly InstrumentInfo Guitar = new InstrumentInfo(true,
-            (Tone.E, 40), (Tone.A, 45), (Tone.D, 50), (Tone.G, 55), (Tone.B, 59), (Tone.E, 64));
+            (Tone.E, 40), (Tone.A, 45), (Tone.D, 50), (Tone.G, 55), (Tone.B, 59), (Tone.E, 64))
+        {
+            Instrument = Instrument.Guitar
+        };
         /// <summary>
         /// Standard re-entrant tuning G4 C4 E4 A4, strummed. The short scale (33–38 cm) lets the little finger
         /// stretch one fret beyond the usual four.
@@ -96,6 +118,7 @@ namespace Chords.Core.Models
         public static readonly InstrumentInfo Ukulele = new InstrumentInfo(false,
             (Tone.G, 67), (Tone.C, 60), (Tone.E, 64), (Tone.A, 69))
         {
+            Instrument = Instrument.Ukulele,
             ComfortableFretSpan = 4,
             MaxFretSpan = 5
         };
@@ -107,6 +130,7 @@ namespace Chords.Core.Models
         public static readonly InstrumentInfo Mandolin = new InstrumentInfo(false,
             (Tone.G, 55), (Tone.D, 62), (Tone.A, 69), (Tone.E, 76))
         {
+            Instrument = Instrument.Mandolin,
             ComfortableFretSpan = 5,
             MaxFretSpan = 6
         };
@@ -117,6 +141,7 @@ namespace Chords.Core.Models
         public static readonly InstrumentInfo BassGuitar = new InstrumentInfo(true,
             (Tone.E, 28), (Tone.A, 33), (Tone.D, 38), (Tone.G, 43))
         {
+            Instrument = Instrument.BassGuitar,
             ComfortableFretSpan = 3,
             MaxFretSpan = 4,
             AllowInnerMutedStrings = true
@@ -126,7 +151,10 @@ namespace Chords.Core.Models
         /// Its scale is about the guitar's, so is the reach: four frets.
         /// </summary>
         public static readonly InstrumentInfo Banjo = new InstrumentInfo(new[] { 5, 0, 0, 0, 0 }, false,
-            (Tone.G, 67), (Tone.D, 50), (Tone.G, 55), (Tone.B, 59), (Tone.D, 62));
+            (Tone.G, 67), (Tone.D, 50), (Tone.G, 55), (Tone.B, 59), (Tone.D, 62))
+        {
+            Instrument = Instrument.Banjo
+        };
 
         public static InstrumentInfo Get(Instrument instrument)
         {
@@ -138,6 +166,23 @@ namespace Chords.Core.Models
                 case Instrument.Banjo: return Banjo;
                 default: return Guitar;
             }
+        }
+
+        /// <summary>
+        /// The instrument with its open strings tuned to the given MIDI pitches (lowest string first);
+        /// the standard one for null, standard pitches or a wrong number of strings.
+        /// </summary>
+        /// <remarks>Instances are cached: one tuning is always the same instance.</remarks>
+        public static InstrumentInfo Get(Instrument instrument, int[] pitches)
+        {
+            var standard = Get(instrument);
+
+            if (pitches == null || pitches.Length != standard.StringCount || pitches.SequenceEqual(standard.Pitches))
+            {
+                return standard;
+            }
+
+            return _tuned.GetOrAdd($"{instrument}:{string.Join(",", pitches)}", _ => new InstrumentInfo(standard, pitches));
         }
     }
 }

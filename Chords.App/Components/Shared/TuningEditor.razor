@@ -1,0 +1,64 @@
+@using Chords.Core.Tuning
+@inject ChordPlayer Player
+
+@* Defines a custom tuning: each open string up or down by half steps, and a name. *@
+<div class="tuning-editor">
+    <input class="form-control" type="text" maxlength="30" placeholder="@AutoName" @bind="name" />
+    <div class="tuning-editor-strings">
+        @for (var s = 0; s < pitches.Length; s++)
+        {
+            var str = s;
+            var offset = pitches[s] - standard[s];
+            <div class="tuning-editor-string @(offset != 0 ? "retuned" : null)">
+                <button type="button" @onclick="() => Step(str, 1)" disabled="@(offset >= MaxOffset)">▲</button>
+                <button type="button" class="tuning-editor-note" @onclick="() => Player.PlayPitch(pitches[str])">
+                    @Current.NoteOf(str).ToString(Conv)<sub>@TunerMath.OctaveOf(pitches[str])</sub>
+                </button>
+                <button type="button" @onclick="() => Step(str, -1)" disabled="@(offset <= -MaxOffset)">▼</button>
+                <span class="tuning-editor-offset">@(offset == 0 ? " " : offset.ToString("+0;−0"))</span>
+            </div>
+        }
+    </div>
+    <p class="tuning-editor-hint">@L["Tuning_EditorHint"]</p>
+    <div class="tuning-editor-actions">
+        <button type="button" class="btn btn-default" @onclick="OnCancel">@L["Tuning_Cancel"]</button>
+        <button type="button" class="btn btn-primary" @onclick="Save">@L["Tuning_Save"]</button>
+    </div>
+</div>
+
+@code {
+    /// <summary>Half steps a string may be tuned away from the standard tuning.</summary>
+    private const int MaxOffset = 12;
+
+    [Parameter, EditorRequired] public Instrument Instrument { get; set; }
+    /// <summary>Tuning to start from (edited when it is a saved custom one).</summary>
+    [Parameter, EditorRequired] public InstrumentTuning Initial { get; set; }
+    [Parameter] public NamingConvention Conv { get; set; }
+    [Parameter] public EventCallback<InstrumentTuning> OnSave { get; set; }
+    [Parameter] public EventCallback OnCancel { get; set; }
+
+    private int[] standard;
+    private int[] pitches;
+    private string name;
+
+    private InstrumentTuning Current => new(null, Instrument, pitches);
+
+    /// <summary>Name used when none is typed: the open strings, e.g. "DADGBE".</summary>
+    private string AutoName => Localizer.TuningNotes(Current, Conv, "");
+
+    protected override void OnInitialized()
+    {
+        standard = InstrumentTuning.Standard(Instrument);
+        pitches = Initial.Pitches.ToArray();
+        name = Initial.NameKey == null ? Initial.Name : null;
+    }
+
+    private void Step(int s, int delta)
+    {
+        pitches[s] += delta;
+        Player.PlayPitch(pitches[s]);
+    }
+
+    private Task Save()
+        => OnSave.InvokeAsync(new InstrumentTuning(string.IsNullOrWhiteSpace(name) ? AutoName : name.Trim(), Instrument, pitches.ToArray()));
+}
