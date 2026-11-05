@@ -39,7 +39,7 @@ public sealed class TunerListener(IAudioInput input)
     /// <summary>Raised after each analysis whose reading differs from the previous one.</summary>
     public event Action<TunerReading> ReadingChanged;
 
-    public async Task<TunerStatus> StartAsync(InstrumentInfo instrument, double a4, int lockedString)
+    public async Task<TunerStatus> StartAsync(InstrumentInfo instrument, double a4, int lockedString, bool chromatic)
     {
         Stop();
 
@@ -56,7 +56,7 @@ public sealed class TunerListener(IAudioInput input)
         }
         lock (_sync)
         {
-            _tracker = new PitchTracker(instrument) { A4 = a4, LockedString = lockedString };
+            _tracker = new PitchTracker(instrument) { A4 = a4, LockedString = chromatic ? -1 : lockedString, Chromatic = chromatic };
             _sampleRate = 0;
         }
 
@@ -90,8 +90,10 @@ public sealed class TunerListener(IAudioInput input)
     }
 
     /// <summary>Changes what is tuned while listening.</summary>
-    public void Configure(InstrumentInfo instrument, double a4, int lockedString)
+    public void Configure(InstrumentInfo instrument, double a4, int lockedString, bool chromatic)
     {
+        // No string is tuned in chromatic mode: no lock, so no low-pass filter either.
+        lockedString = chromatic ? -1 : lockedString;
         lock (_sync)
         {
             if (_tracker == null)
@@ -100,10 +102,16 @@ public sealed class TunerListener(IAudioInput input)
             }
             var rangeChanged = _tracker.Instrument != instrument || _tracker.A4 != a4;
             var lockChanged = _tracker.LockedString != lockedString;
+            var modeChanged = _tracker.Chromatic != chromatic;
 
             _tracker.Instrument = instrument;
             _tracker.A4 = a4;
             _tracker.LockedString = lockedString;
+            _tracker.Chromatic = chromatic;
+            if (modeChanged)
+            {
+                _tracker.Reset();
+            }
             if (rangeChanged)
             {
                 _tracker.Reset();

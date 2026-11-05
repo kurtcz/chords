@@ -112,15 +112,25 @@ namespace Chords.Core.Tuning
         /// <summary>With a locked string, estimates this many semitones or more from it are ignored (octave errors).</summary>
         private const double OctaveGuard = 11.5;
 
+        /// <summary>
+        /// In chromatic mode the target moves to the next semitone only this far past it (semitones; 0.5 is halfway):
+        /// a note right between two semitones would otherwise flip between them.
+        /// </summary>
+        private const double ChromaticHysteresis = 0.55;
+
         private readonly List<double> _pitches = new List<double>(History);
         /// <summary>First estimate of a possible new note, waiting for a second one to confirm it.</summary>
         private double? _pending;
         private int _gap;
+        /// <summary>Semitone the chromatic reading targets, kept while the note stays near it.</summary>
+        private int? _chromaticTarget;
 
         public InstrumentInfo Instrument { get; set; }
         public double A4 { get; set; } = TunerMath.DefaultA4;
         /// <summary>String to tune regardless of the note heard; -1 picks the nearest string or semitone.</summary>
         public int LockedString { get; set; } = -1;
+        /// <summary>Targets the nearest semitone and ignores the strings (and <see cref="LockedString"/>).</summary>
+        public bool Chromatic { get; set; }
 
         public PitchTracker(InstrumentInfo instrument)
         {
@@ -132,6 +142,7 @@ namespace Chords.Core.Tuning
             _pitches.Clear();
             _pending = null;
             _gap = 0;
+            _chromaticTarget = null;
         }
 
         /// <summary>Adds an estimate; returns the current reading, null when nothing is sounding.</summary>
@@ -171,6 +182,7 @@ namespace Chords.Core.Tuning
             {
                 _pitches.Clear();
                 _pending = null;
+                _chromaticTarget = null;
             }
 
             return Current;
@@ -187,6 +199,10 @@ namespace Chords.Core.Tuning
                 var pitch = Median();
                 var frequency = TunerMath.FrequencyOf(pitch, A4);
 
+                if (Chromatic)
+                {
+                    return new TunerReading(frequency, pitch, ChromaticTarget(pitch), -1);
+                }
                 if (LockedString >= 0 && LockedString < Instrument.StringCount)
                 {
                     return new TunerReading(frequency, pitch, Instrument.Pitches[LockedString], LockedString);
@@ -210,6 +226,16 @@ namespace Chords.Core.Tuning
         private bool IsOctaveOffLockedString(double pitch)
             => LockedString >= 0 && LockedString < Instrument.StringCount
                && Math.Abs(pitch - Instrument.Pitches[LockedString]) >= OctaveGuard;
+
+        private int ChromaticTarget(double pitch)
+        {
+            if (!_chromaticTarget.HasValue || Math.Abs(pitch - _chromaticTarget.Value) > ChromaticHysteresis)
+            {
+                _chromaticTarget = (int)Math.Round(pitch);
+            }
+
+            return _chromaticTarget.Value;
+        }
 
         private double Median()
         {

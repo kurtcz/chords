@@ -101,6 +101,8 @@
   <data name="Nav_Tuner" xml:space="preserve"><value>Stillitæki</value></data>
   <data name="Tuner_Hint" xml:space="preserve"><value>Ýttu á streng til að heyra hann og stilla aðeins hann; Auto velur næsta streng.</value></data>
   <data name="Tuner_Listening" xml:space="preserve"><value>Spilaðu á streng…</value></data>
+  <data name="Tuner_ListeningNote" xml:space="preserve"><value>Spilaðu tón…</value></data>
+  <data name="Tuner_Chromatic" xml:space="preserve"><value>Krómatískt</value></data>
   <data name="Tuner_InTune" xml:space="preserve"><value>Rétt stilltur</value></data>
   <data name="Tuner_TuneUp" xml:space="preserve"><value>Herða</value></data>
   <data name="Tuner_TuneDown" xml:space="preserve"><value>Slaka</value></data>

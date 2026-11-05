@@ -101,6 +101,8 @@
   <data name="Nav_Tuner" xml:space="preserve"><value>تیونر</value></data>
   <data name="Tuner_Hint" xml:space="preserve"><value>روی یک سیم بزنید تا آن را بشنوید و فقط همان را کوک کنید؛ خودکار نزدیک‌ترین سیم را انتخاب می‌کند.</value></data>
   <data name="Tuner_Listening" xml:space="preserve"><value>یک سیم را بنوازید…</value></data>
+  <data name="Tuner_ListeningNote" xml:space="preserve"><value>یک نت بنوازید…</value></data>
+  <data name="Tuner_Chromatic" xml:space="preserve"><value>کروماتیک</value></data>
   <data name="Tuner_InTune" xml:space="preserve"><value>کوک است</value></data>
   <data name="Tuner_TuneUp" xml:space="preserve"><value>سفت کنید</value></data>
   <data name="Tuner_TuneDown" xml:space="preserve"><value>شل کنید</value></data>

@@ -101,6 +101,8 @@
   <data name="Nav_Tuner" xml:space="preserve"><value>Kökləyici</value></data>
   <data name="Tuner_Hint" xml:space="preserve"><value>Simi eşitmək və yalnız onu kökləmək üçün ona toxunun; Avto ən yaxın simi seçir.</value></data>
   <data name="Tuner_Listening" xml:space="preserve"><value>Bir sim çalın…</value></data>
+  <data name="Tuner_ListeningNote" xml:space="preserve"><value>Bir not çalın…</value></data>
+  <data name="Tuner_Chromatic" xml:space="preserve"><value>Xromatik</value></data>
   <data name="Tuner_InTune" xml:space="preserve"><value>Köklənib</value></data>
   <data name="Tuner_TuneUp" xml:space="preserve"><value>Dartın</value></data>
   <data name="Tuner_TuneDown" xml:space="preserve"><value>Boşaldın</value></data>

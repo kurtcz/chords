@@ -101,6 +101,8 @@
   <data name="Nav_Tuner" xml:space="preserve"><value>Κουρδιστήρι</value></data>
   <data name="Tuner_Hint" xml:space="preserve"><value>Πατήστε μια χορδή για να την ακούσετε και να κουρδίσετε μόνο αυτήν· το Αυτόματο επιλέγει την πλησιέστερη χορδή.</value></data>
   <data name="Tuner_Listening" xml:space="preserve"><value>Παίξτε μια χορδή…</value></data>
+  <data name="Tuner_ListeningNote" xml:space="preserve"><value>Παίξτε μια νότα…</value></data>
+  <data name="Tuner_Chromatic" xml:space="preserve"><value>Χρωματικό</value></data>
   <data name="Tuner_InTune" xml:space="preserve"><value>Κουρδισμένο</value></data>
   <data name="Tuner_TuneUp" xml:space="preserve"><value>Τεντώστε</value></data>
   <data name="Tuner_TuneDown" xml:space="preserve"><value>Χαλαρώστε</value></data>

@@ -102,6 +102,8 @@
   <data name="Nav_Tuner" xml:space="preserve"><value>Acordor</value></data>
   <data name="Tuner_Hint" xml:space="preserve"><value>Atinge o coardă ca să o auzi și să acordezi doar acea coardă; Auto alege coarda cea mai apropiată.</value></data>
   <data name="Tuner_Listening" xml:space="preserve"><value>Cântă o coardă…</value></data>
+  <data name="Tuner_ListeningNote" xml:space="preserve"><value>Cântați o notă…</value></data>
+  <data name="Tuner_Chromatic" xml:space="preserve"><value>Cromatic</value></data>
   <data name="Tuner_InTune" xml:space="preserve"><value>Acordat</value></data>
   <data name="Tuner_TuneUp" xml:space="preserve"><value>Întinde</value></data>
   <data name="Tuner_TuneDown" xml:space="preserve"><value>Slăbește</value></data>

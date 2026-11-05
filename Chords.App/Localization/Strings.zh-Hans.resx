@@ -100,6 +100,8 @@
   <data name="Nav_Tuner" xml:space="preserve"><value>调音器</value></data>
   <data name="Tuner_Hint" xml:space="preserve"><value>点按一根弦可听到它并只调这根弦；自动会选择最接近的弦。</value></data>
   <data name="Tuner_Listening" xml:space="preserve"><value>请拨一根弦…</value></data>
+  <data name="Tuner_ListeningNote" xml:space="preserve"><value>请弹奏一个音…</value></data>
+  <data name="Tuner_Chromatic" xml:space="preserve"><value>半音阶</value></data>
   <data name="Tuner_InTune" xml:space="preserve"><value>已调准</value></data>
   <data name="Tuner_TuneUp" xml:space="preserve"><value>调高</value></data>
   <data name="Tuner_TuneDown" xml:space="preserve"><value>调低</value></data>

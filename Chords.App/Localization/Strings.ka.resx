@@ -101,6 +101,8 @@
   <data name="Nav_Tuner" xml:space="preserve"><value>ტიუნერი</value></data>
   <data name="Tuner_Hint" xml:space="preserve"><value>შეეხეთ სიმს, რომ მოისმინოთ და მხოლოდ ის ააწყოთ; ავტო ირჩევს უახლოეს სიმს.</value></data>
   <data name="Tuner_Listening" xml:space="preserve"><value>დაუკარით სიმს…</value></data>
+  <data name="Tuner_ListeningNote" xml:space="preserve"><value>დაუკარით ნოტა…</value></data>
+  <data name="Tuner_Chromatic" xml:space="preserve"><value>ქრომატიკული</value></data>
   <data name="Tuner_InTune" xml:space="preserve"><value>აწყობილია</value></data>
   <data name="Tuner_TuneUp" xml:space="preserve"><value>დაჭიმეთ</value></data>
   <data name="Tuner_TuneDown" xml:space="preserve"><value>მოუშვით</value></data>

@@ -101,6 +101,8 @@
   <data name="Nav_Tuner" xml:space="preserve"><value>Tyuner</value></data>
   <data name="Tuner_Hint" xml:space="preserve"><value>Torni eshitish va faqat uni sozlash uchun unga teging; Avto eng yaqin torni tanlaydi.</value></data>
   <data name="Tuner_Listening" xml:space="preserve"><value>Torni chaling…</value></data>
+  <data name="Tuner_ListeningNote" xml:space="preserve"><value>Nota chaling…</value></data>
+  <data name="Tuner_Chromatic" xml:space="preserve"><value>Xromatik</value></data>
   <data name="Tuner_InTune" xml:space="preserve"><value>Sozlangan</value></data>
   <data name="Tuner_TuneUp" xml:space="preserve"><value>Torting</value></data>
   <data name="Tuner_TuneDown" xml:space="preserve"><value>Bo‘shating</value></data>

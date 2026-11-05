@@ -101,6 +101,8 @@
   <data name="Nav_Tuner" xml:space="preserve"><value>Akordues</value></data>
   <data name="Tuner_Hint" xml:space="preserve"><value>Prek një tel për ta dëgjuar dhe për të akorduar vetëm atë; Auto zgjedh telin më të afërt.</value></data>
   <data name="Tuner_Listening" xml:space="preserve"><value>Luaj një tel…</value></data>
+  <data name="Tuner_ListeningNote" xml:space="preserve"><value>Luani një notë…</value></data>
+  <data name="Tuner_Chromatic" xml:space="preserve"><value>Kromatik</value></data>
   <data name="Tuner_InTune" xml:space="preserve"><value>I akorduar</value></data>
   <data name="Tuner_TuneUp" xml:space="preserve"><value>Tendose</value></data>
   <data name="Tuner_TuneDown" xml:space="preserve"><value>Lirojë</value></data>

@@ -101,6 +101,8 @@
   <data name="Nav_Tuner" xml:space="preserve"><value>Stemmeapparat</value></data>
   <data name="Tuner_Hint" xml:space="preserve"><value>Tryk på en streng for at høre den og kun stemme den; Auto vælger den nærmeste streng.</value></data>
   <data name="Tuner_Listening" xml:space="preserve"><value>Spil en streng…</value></data>
+  <data name="Tuner_ListeningNote" xml:space="preserve"><value>Spil en tone…</value></data>
+  <data name="Tuner_Chromatic" xml:space="preserve"><value>Kromatisk</value></data>
   <data name="Tuner_InTune" xml:space="preserve"><value>Stemt</value></data>
   <data name="Tuner_TuneUp" xml:space="preserve"><value>Stram</value></data>
   <data name="Tuner_TuneDown" xml:space="preserve"><value>Løsn</value></data>

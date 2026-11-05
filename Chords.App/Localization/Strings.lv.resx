@@ -102,6 +102,8 @@
   <data name="Nav_Tuner" xml:space="preserve"><value>Skaņotājs</value></data>
   <data name="Tuner_Hint" xml:space="preserve"><value>Pieskarieties stīgai, lai to dzirdētu un skaņotu tikai to; Auto izvēlas tuvāko stīgu.</value></data>
   <data name="Tuner_Listening" xml:space="preserve"><value>Uzspēlējiet stīgu…</value></data>
+  <data name="Tuner_ListeningNote" xml:space="preserve"><value>Nospēlējiet noti…</value></data>
+  <data name="Tuner_Chromatic" xml:space="preserve"><value>Hromatisks</value></data>
   <data name="Tuner_InTune" xml:space="preserve"><value>Noskaņots</value></data>
   <data name="Tuner_TuneUp" xml:space="preserve"><value>Savelciet</value></data>
   <data name="Tuner_TuneDown" xml:space="preserve"><value>Atlaidiet</value></data>

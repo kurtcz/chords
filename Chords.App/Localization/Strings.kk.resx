@@ -101,6 +101,8 @@
   <data name="Nav_Tuner" xml:space="preserve"><value>Тюнер</value></data>
   <data name="Tuner_Hint" xml:space="preserve"><value>Ішекті естіп, тек соны күйге келтіру үшін оны түртіңіз; Авто ең жақын ішекті таңдайды.</value></data>
   <data name="Tuner_Listening" xml:space="preserve"><value>Ішекті шертіңіз…</value></data>
+  <data name="Tuner_ListeningNote" xml:space="preserve"><value>Нота ойнаңыз…</value></data>
+  <data name="Tuner_Chromatic" xml:space="preserve"><value>Хроматикалық</value></data>
   <data name="Tuner_InTune" xml:space="preserve"><value>Күйге келтірілді</value></data>
   <data name="Tuner_TuneUp" xml:space="preserve"><value>Тартыңыз</value></data>
   <data name="Tuner_TuneDown" xml:space="preserve"><value>Босатыңыз</value></data>

@@ -101,6 +101,8 @@
   <data name="Nav_Tuner" xml:space="preserve"><value>Afinagailua</value></data>
   <data name="Tuner_Hint" xml:space="preserve"><value>Ukitu soka bat entzuteko eta hura bakarrik afinatzeko; Auto-k soka hurbilena aukeratzen du.</value></data>
   <data name="Tuner_Listening" xml:space="preserve"><value>Jo soka bat…</value></data>
+  <data name="Tuner_ListeningNote" xml:space="preserve"><value>Jo nota bat…</value></data>
+  <data name="Tuner_Chromatic" xml:space="preserve"><value>Kromatikoa</value></data>
   <data name="Tuner_InTune" xml:space="preserve"><value>Afinatuta</value></data>
   <data name="Tuner_TuneUp" xml:space="preserve"><value>Igo</value></data>
   <data name="Tuner_TuneDown" xml:space="preserve"><value>Jaitsi</value></data>

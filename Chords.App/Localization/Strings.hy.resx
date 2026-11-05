@@ -101,6 +101,8 @@
   <data name="Nav_Tuner" xml:space="preserve"><value>Լարիչ</value></data>
   <data name="Tuner_Hint" xml:space="preserve"><value>Հպեք լարին՝ այն լսելու և միայն այն լարելու համար. Ավտոն ընտրում է ամենամոտ լարը։</value></data>
   <data name="Tuner_Listening" xml:space="preserve"><value>Նվագեք լարը…</value></data>
+  <data name="Tuner_ListeningNote" xml:space="preserve"><value>Նվագեք նոտա…</value></data>
+  <data name="Tuner_Chromatic" xml:space="preserve"><value>Քրոմատիկ</value></data>
   <data name="Tuner_InTune" xml:space="preserve"><value>Լարված է</value></data>
   <data name="Tuner_TuneUp" xml:space="preserve"><value>Ձգեք</value></data>
   <data name="Tuner_TuneDown" xml:space="preserve"><value>Թուլացրեք</value></data>

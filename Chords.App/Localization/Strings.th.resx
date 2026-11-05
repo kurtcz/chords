@@ -100,6 +100,8 @@
   <data name="Nav_Tuner" xml:space="preserve"><value>จูนเนอร์</value></data>
   <data name="Tuner_Hint" xml:space="preserve"><value>แตะสายเพื่อฟังเสียงและตั้งเฉพาะสายนั้น อัตโนมัติจะเลือกสายที่ใกล้ที่สุด</value></data>
   <data name="Tuner_Listening" xml:space="preserve"><value>ดีดสาย…</value></data>
+  <data name="Tuner_ListeningNote" xml:space="preserve"><value>เล่นโน้ตหนึ่งตัว…</value></data>
+  <data name="Tuner_Chromatic" xml:space="preserve"><value>โครมาติก</value></data>
   <data name="Tuner_InTune" xml:space="preserve"><value>ตรงเสียงแล้ว</value></data>
   <data name="Tuner_TuneUp" xml:space="preserve"><value>ขันขึ้น</value></data>
   <data name="Tuner_TuneDown" xml:space="preserve"><value>คลายลง</value></data>

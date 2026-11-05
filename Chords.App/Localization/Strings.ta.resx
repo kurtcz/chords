@@ -101,6 +101,8 @@
   <data name="Nav_Tuner" xml:space="preserve"><value>ட்யூனர்</value></data>
   <data name="Tuner_Hint" xml:space="preserve"><value>ஒரு நரம்பைக் கேட்டு அதை மட்டும் ட்யூன் செய்ய அதைத் தட்டவும்; ஆட்டோ அருகிலுள்ள நரம்பைத் தேர்ந்தெடுக்கும்.</value></data>
   <data name="Tuner_Listening" xml:space="preserve"><value>ஒரு நரம்பை மீட்டவும்…</value></data>
+  <data name="Tuner_ListeningNote" xml:space="preserve"><value>ஒரு சுரத்தை இசையுங்கள்…</value></data>
+  <data name="Tuner_Chromatic" xml:space="preserve"><value>குரோமாடிக்</value></data>
   <data name="Tuner_InTune" xml:space="preserve"><value>சுருதி சரி</value></data>
   <data name="Tuner_TuneUp" xml:space="preserve"><value>இறுக்கவும்</value></data>
   <data name="Tuner_TuneDown" xml:space="preserve"><value>தளர்த்தவும்</value></data>

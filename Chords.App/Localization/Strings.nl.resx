@@ -101,6 +101,8 @@
   <data name="Nav_Tuner" xml:space="preserve"><value>Stemapparaat</value></data>
   <data name="Tuner_Hint" xml:space="preserve"><value>Tik op een snaar om hem te horen en alleen die te stemmen; Auto kiest de dichtstbijzijnde snaar.</value></data>
   <data name="Tuner_Listening" xml:space="preserve"><value>Speel een snaar…</value></data>
+  <data name="Tuner_ListeningNote" xml:space="preserve"><value>Speel een toon…</value></data>
+  <data name="Tuner_Chromatic" xml:space="preserve"><value>Chromatisch</value></data>
   <data name="Tuner_InTune" xml:space="preserve"><value>Gestemd</value></data>
   <data name="Tuner_TuneUp" xml:space="preserve"><value>Hoger stemmen</value></data>
   <data name="Tuner_TuneDown" xml:space="preserve"><value>Lager stemmen</value></data>

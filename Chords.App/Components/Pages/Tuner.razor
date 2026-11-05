@@ -24,68 +24,101 @@ else if (status == TunerStatus.Failed)
     <div class="tuner-note">
         @if (reading == null)
         {
-            <span class="text-muted">–</span>
+            <span>–</span>
         }
         else
         {
-            @NoteName(reading.Target)
+            @NoteLetter(reading.Target)<sub>@TunerMath.OctaveOf(reading.Target)</sub>
         }
     </div>
-    <svg class="tuner-gauge" viewBox="0 0 300 165" xmlns="http://www.w3.org/2000/svg">
-        <path d="@Arc(-InTuneCents, InTuneCents)" fill="none" stroke="#5cb85c" stroke-width="14" />
-        @for (var c = -50; c <= 50; c += 10)
+    <svg class="tuner-gauge" viewBox="0 -12 300 186" xmlns="http://www.w3.org/2000/svg">
+        @foreach (var (from, to, zone) in Zones)
         {
-            var (x1, y1) = Point(c, c == 0 ? 112 : 120);
-            var (x2, y2) = Point(c, 134);
-            <line x1="@F(x1)" y1="@F(y1)" x2="@F(x2)" y2="@F(y2)" stroke="#888" stroke-width="@(c == 0 ? 3 : 1.5)" />
+            if (from == 0)
+            {
+                <path class="@zone" d="@Arc(-to + ZoneGap, to - ZoneGap)" />
+            }
+            else
+            {
+                <path class="@zone" d="@Arc(-to, -from - ZoneGap)" />
+                <path class="@zone" d="@Arc(from + ZoneGap, to)" />
+            }
         }
-        <text x="@F(Point(-50, 100).X)" y="@F(Point(-50, 100).Y)" font-size="13" fill="#888" text-anchor="middle">−50</text>
-        <text x="@F(Point(50, 100).X)" y="@F(Point(50, 100).Y)" font-size="13" fill="#888" text-anchor="middle">+50</text>
+        @for (var c = -50; c <= 50; c += 5)
+        {
+            var major = c % 25 == 0;
+            var (x1, y1) = Point(c, R - (major ? 24 : 17));
+            var (x2, y2) = Point(c, R - 9);
+            <line class="@(c == 0 ? "tick center" : major ? "tick major" : "tick")" x1="@F(x1)" y1="@F(y1)" x2="@F(x2)" y2="@F(y2)" />
+        }
+        <text class="tuner-label" x="@F(Point(-50, R - 35).X)" y="@F(Point(-50, R - 35).Y + 4)">−50</text>
+        <text class="tuner-label" x="@F(Point(-25, R - 35).X)" y="@F(Point(-25, R - 35).Y + 4)">−25</text>
+        <text class="tuner-label" x="@F(Point(25, R - 35).X)" y="@F(Point(25, R - 35).Y + 4)">+25</text>
+        <text class="tuner-label" x="@F(Point(50, R - 35).X)" y="@F(Point(50, R - 35).Y + 4)">+50</text>
+        <text class="tuner-accidental" x="@F(Point(-62, R - 4).X - 4)" y="@F(Point(-62, R - 4).Y + 16)">♭</text>
+        <text class="tuner-accidental" x="@F(Point(62, R - 4).X + 4)" y="@F(Point(62, R - 4).Y + 16)">♯</text>
         @if (reading != null)
         {
             <g class="tuner-needle" style="transform: rotate(@F(NeedleAngle)deg)">
-                <line x1="@F(Cx)" y1="@F(Cy)" x2="@F(Cx)" y2="@F(Cy - 128)" stroke-width="3" stroke-linecap="round" />
+                <path d="M @F(Cx - 4) @F(Cy) L @F(Cx - 1) @F(Cy - R + 6) Q @F(Cx) @F(Cy - R + 3) @F(Cx + 1) @F(Cy - R + 6) L @F(Cx + 4) @F(Cy) Z" />
             </g>
         }
-        <circle cx="@F(Cx)" cy="@F(Cy)" r="7" fill="#333" />
+        <circle class="tuner-hub" cx="@F(Cx)" cy="@F(Cy)" r="10" />
+        <circle cx="@F(Cx)" cy="@F(Cy)" r="3.5" fill="#fff" />
     </svg>
-    <div class="tuner-cents">
+    <div class="tuner-readout">
         @if (reading != null)
         {
-            <span>@reading.Cents.ToString("+0;−0;0", CultureInfo.InvariantCulture) ¢</span>
-            <span class="text-muted">@reading.Frequency.ToString("0.0", CultureInfo.CurrentCulture) Hz</span>
+            <span class="tuner-cents">@reading.Cents.ToString("+0;−0;0", CultureInfo.InvariantCulture)¢</span>
+            <span class="tuner-hz">@reading.Frequency.ToString("0.0", CultureInfo.CurrentCulture) Hz</span>
             @if ((int)Math.Round(reading.Pitch) != reading.Target)
             {
-                <span class="text-muted">♪ @NoteName((int)Math.Round(reading.Pitch))</span>
+                <span class="tuner-hz">♪ @NoteName((int)Math.Round(reading.Pitch))</span>
             }
         }
-        else if (status == TunerStatus.Listening)
-        {
-            <span class="text-muted">@L["Tuner_Listening"]</span>
-        }
     </div>
-    <div class="tuner-direction">@Direction</div>
-</div>
-
-<div class="tuner-strings">
-    <button type="button" class="btn btn-default tuner-auto @(lockedString < 0 ? "active" : null)" @onclick="() => Lock(-1)">
-        @L["Tuner_Auto"]
-    </button>
-    @for (var s = 0; s < instrument.StringCount; s++)
+    @if (Direction is { } direction)
     {
-        var str = s;
-        var css = (lockedString == s ? "locked " : "") + (reading?.String == s ? "heard" : "");
-        <button type="button" class="btn btn-default tuner-string @css" @onclick="() => Lock(str)">@NoteName(instrument.Pitches[s])</button>
+        <div class="tuner-direction @direction.Css">@direction.Text</div>
     }
 </div>
 
-<div class="tuner-a4">
-    <button type="button" class="btn btn-default" @onclick="() => SetA4(a4 - 1)" disabled="@(a4 <= MinA4)">−</button>
-    <span>@TunerMath.NoteOf(69).ToString(conv)4 = @a4 Hz</span>
-    <button type="button" class="btn btn-default" @onclick="() => SetA4(a4 + 1)" disabled="@(a4 >= MaxA4)">+</button>
+<div class="tuner-mode" role="group">
+    <button type="button" class="@(chromatic ? null : "active")" aria-pressed="@(!chromatic)" @onclick="() => SetChromatic(false)">
+        @L[$"Instrument_{State.Settings.Instrument}"]
+    </button>
+    <button type="button" class="@(chromatic ? "active" : null)" aria-pressed="@chromatic" @onclick="() => SetChromatic(true)">
+        @L["Tuner_Chromatic"]
+    </button>
 </div>
 
-@if (State.Settings.ShowTips && !tipClosed)
+@if (!chromatic)
+{
+    <div class="tuner-strings">
+        <button type="button" class="tuner-auto @(lockedString < 0 ? "active" : null)" @onclick="() => Lock(-1)">
+            @L["Tuner_Auto"]
+        </button>
+        @* The strings stay on one line; when Auto does not fit beside them, it goes on a line of its own. *@
+        <div class="tuner-string-row">
+            @for (var s = 0; s < instrument.StringCount; s++)
+            {
+                var str = s;
+                var css = (lockedString == s ? "locked " : "") + (reading?.String == s ? "heard " : "") + (tunedStrings.Contains(s) ? "done" : "");
+                <button type="button" class="tuner-string @css" title="@NoteName(instrument.Pitches[s])" @onclick="() => Lock(str)">@NoteLetter(instrument.Pitches[s])</button>
+            }
+        </div>
+    </div>
+}
+
+<div class="tuner-a4">
+    <div class="tuner-stepper">
+        <button type="button" @onclick="() => SetA4(a4 - 1)" disabled="@(a4 <= MinA4)">−</button>
+        <span>@TunerMath.NoteOf(69).ToString(conv)4 = @a4 Hz</span>
+        <button type="button" @onclick="() => SetA4(a4 + 1)" disabled="@(a4 >= MaxA4)">+</button>
+    </div>
+</div>
+
+@if (State.Settings.ShowTips && !tipClosed && !chromatic)
 {
     <div class="alert alert-info tuner-tip">
         <button type="button" class="close" @onclick="() => tipClosed = true">&times;</button>
@@ -103,7 +136,19 @@ else if (status == TunerStatus.Failed)
     private static readonly TimeSpan SettleTime = TimeSpan.FromSeconds(0.8);
     /// <summary>Redraws per second at most.</summary>
     private const int FrameRate = 15;
-    private const double Cx = 150, Cy = 150;
+    private const double Cx = 150, Cy = 160;
+    /// <summary>Radius of the coloured scale.</summary>
+    private const double R = 130;
+    /// <summary>Cents left blank between two zones of the scale.</summary>
+    private const double ZoneGap = 0.6;
+    /// <summary>Zones of the scale, mirrored around 0 cents: from, to (cents) and CSS class.</summary>
+    private static readonly (double From, double To, string Css)[] Zones =
+    {
+        (0, InTuneCents, "zone in-tune"),
+        (InTuneCents, 12, "zone near"),
+        (12, 25, "zone off"),
+        (25, 55, "zone far"),
+    };
     /// <summary>Degrees the needle turns per cent (±50 cents = ±60°).</summary>
     private const double DegreesPerCent = 1.2;
 
@@ -111,12 +156,16 @@ else if (status == TunerStatus.Failed)
     private NamingConvention conv;
     private int a4;
     private int lockedString = -1;
+    /// <summary>Tunes to the nearest semitone instead of the strings of the instrument.</summary>
+    private bool chromatic;
     private TunerStatus status;
     private TunerReading reading;
     private volatile TunerReading latest;
     private volatile bool dirty;
     private DateTime? inTuneSince;
     private bool tuned;
+    /// <summary>Strings tuned since the page was opened.</summary>
+    private readonly HashSet<int> tunedStrings = new();
     private bool tipClosed;
     private Timer timer;
     private Window window;
@@ -127,6 +176,7 @@ else if (status == TunerStatus.Failed)
         instrument = InstrumentInfo.Get(State.Settings.Instrument);
         conv = State.Settings.conv;
         a4 = Math.Clamp(State.Settings.TunerA4, MinA4, MaxA4);
+        chromatic = State.Settings.TunerChromatic;
         Listener.ReadingChanged += OnReading;
         timer = new Timer(_ => Redraw(), null, 1000 / FrameRate, 1000 / FrameRate);
         window = Application.Current?.Windows.FirstOrDefault();
@@ -141,7 +191,7 @@ else if (status == TunerStatus.Failed)
 
     private async Task StartAsync()
     {
-        status = await Listener.StartAsync(instrument, a4, lockedString);
+        status = await Listener.StartAsync(instrument, a4, lockedString, chromatic);
         if (disposed)
         {
             Listener.Stop();
@@ -193,6 +243,10 @@ else if (status == TunerStatus.Failed)
         {
             inTuneSince ??= DateTime.UtcNow;
             tuned = DateTime.UtcNow - inTuneSince >= SettleTime;
+            if (tuned && reading.String >= 0)
+            {
+                tunedStrings.Add(reading.String);
+            }
         }
         else
         {
@@ -208,28 +262,51 @@ else if (status == TunerStatus.Failed)
         {
             Player.PlayPitch(instrument.Pitches[s]);
         }
-        Listener.Configure(instrument, a4, lockedString);
+        Listener.Configure(instrument, a4, lockedString, chromatic);
+    }
+
+    private void SetChromatic(bool value)
+    {
+        if (chromatic == value)
+        {
+            return;
+        }
+        chromatic = value;
+        reading = null;
+        inTuneSince = null;
+        tuned = false;
+        State.Settings.TunerChromatic = chromatic;
+        State.Settings.Save();
+        Listener.Configure(instrument, a4, lockedString, chromatic);
     }
 
     private void SetA4(int value)
     {
         a4 = Math.Clamp(value, MinA4, MaxA4);
+        // Strings tuned to the old reference pitch are no longer in tune.
+        tunedStrings.Clear();
         State.Settings.TunerA4 = a4;
         State.Settings.Save();
-        Listener.Configure(instrument, a4, lockedString);
+        Listener.Configure(instrument, a4, lockedString, chromatic);
     }
 
-    private string NoteName(int pitch) => TunerMath.NoteOf(pitch).ToString(conv) + TunerMath.OctaveOf(pitch);
+    private string NoteName(int pitch) => NoteLetter(pitch) + TunerMath.OctaveOf(pitch);
+
+    private string NoteLetter(int pitch) => TunerMath.NoteOf(pitch).ToString(conv);
 
     private string StateClass => reading == null ? "silent"
         : tuned ? "tuned"
         : Math.Abs(reading.Cents) <= InTuneCents ? "near"
         : null;
 
-    private string Direction => reading == null ? (tuned ? "✓ " + L["Tuner_InTune"] : "")
-        : tuned || Math.Abs(reading.Cents) <= InTuneCents ? "✓ " + L["Tuner_InTune"]
-        : reading.Cents < 0 ? "↑ " + L["Tuner_TuneUp"]
-        : "↓ " + L["Tuner_TuneDown"];
+    /// <summary>CSS class and text of the hint below the gauge; null when there is none.</summary>
+    private (string Css, string Text)? Direction => reading == null
+            ? tuned ? ("ok", "✓ " + L["Tuner_InTune"])
+            : status == TunerStatus.Listening ? ("idle", L[chromatic ? "Tuner_ListeningNote" : "Tuner_Listening"])
+            : null
+        : tuned || Math.Abs(reading.Cents) <= InTuneCents ? ("ok", "✓ " + L["Tuner_InTune"])
+        : reading.Cents < 0 ? ("up", "↑ " + L["Tuner_TuneUp"])
+        : ("down", "↓ " + L["Tuner_TuneDown"]);
 
     /// <summary>Needle angle; beyond ±50 cents it rests at the edge of the scale.</summary>
     private double NeedleAngle => Math.Clamp(reading.Cents, -55, 55) * DegreesPerCent;
@@ -243,10 +320,10 @@ else if (status == TunerStatus.Failed)
 
     private static string Arc(double fromCents, double toCents)
     {
-        var (x1, y1) = Point(fromCents, 127);
-        var (x2, y2) = Point(toCents, 127);
+        var (x1, y1) = Point(fromCents, R);
+        var (x2, y2) = Point(toCents, R);
 
-        return $"M {F(x1)} {F(y1)} A 127 127 0 0 1 {F(x2)} {F(y2)}";
+        return $"M {F(x1)} {F(y1)} A {F(R)} {F(R)} 0 0 1 {F(x2)} {F(y2)}";
     }
 
     private static string F(double value) => value.ToString("0.##", CultureInfo.InvariantCulture);

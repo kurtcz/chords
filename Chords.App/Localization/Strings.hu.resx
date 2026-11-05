@@ -101,6 +101,8 @@
   <data name="Nav_Tuner" xml:space="preserve"><value>Hangoló</value></data>
   <data name="Tuner_Hint" xml:space="preserve"><value>Koppints egy húrra, hogy meghalld és csak azt hangold; az Auto a legközelebbi húrt választja.</value></data>
   <data name="Tuner_Listening" xml:space="preserve"><value>Pengess meg egy húrt…</value></data>
+  <data name="Tuner_ListeningNote" xml:space="preserve"><value>Játsszon egy hangot…</value></data>
+  <data name="Tuner_Chromatic" xml:space="preserve"><value>Kromatikus</value></data>
   <data name="Tuner_InTune" xml:space="preserve"><value>Hangolva</value></data>
   <data name="Tuner_TuneUp" xml:space="preserve"><value>Feljebb</value></data>
   <data name="Tuner_TuneDown" xml:space="preserve"><value>Lejjebb</value></data>

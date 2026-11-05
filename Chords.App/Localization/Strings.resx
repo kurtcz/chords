@@ -102,6 +102,8 @@
   <data name="Nav_Tuner" xml:space="preserve"><value>Tuner</value></data>
   <data name="Tuner_Hint" xml:space="preserve"><value>Tap a string to hear it and tune only that one; Auto picks the nearest string.</value></data>
   <data name="Tuner_Listening" xml:space="preserve"><value>Play a string…</value></data>
+  <data name="Tuner_ListeningNote" xml:space="preserve"><value>Play a note…</value></data>
+  <data name="Tuner_Chromatic" xml:space="preserve"><value>Chromatic</value></data>
   <data name="Tuner_InTune" xml:space="preserve"><value>In tune</value></data>
   <data name="Tuner_TuneUp" xml:space="preserve"><value>Tune up</value></data>
   <data name="Tuner_TuneDown" xml:space="preserve"><value>Tune down</value></data>

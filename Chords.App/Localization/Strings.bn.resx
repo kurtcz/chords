@@ -101,6 +101,8 @@
   <data name="Nav_Tuner" xml:space="preserve"><value>টিউনার</value></data>
   <data name="Tuner_Hint" xml:space="preserve"><value>কোনো তার শুনতে এবং শুধু সেটিই টিউন করতে তাতে ট্যাপ করুন; অটো সবচেয়ে কাছের তারটি বেছে নেয়।</value></data>
   <data name="Tuner_Listening" xml:space="preserve"><value>একটি তার বাজান…</value></data>
+  <data name="Tuner_ListeningNote" xml:space="preserve"><value>একটি স্বর বাজান…</value></data>
+  <data name="Tuner_Chromatic" xml:space="preserve"><value>ক্রোম্যাটিক</value></data>
   <data name="Tuner_InTune" xml:space="preserve"><value>টিউন হয়েছে</value></data>
   <data name="Tuner_TuneUp" xml:space="preserve"><value>টাইট করুন</value></data>
   <data name="Tuner_TuneDown" xml:space="preserve"><value>ঢিলা করুন</value></data>

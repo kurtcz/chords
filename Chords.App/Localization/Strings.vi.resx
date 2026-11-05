@@ -100,6 +100,8 @@
   <data name="Nav_Tuner" xml:space="preserve"><value>Bộ chỉnh dây</value></data>
   <data name="Tuner_Hint" xml:space="preserve"><value>Chạm vào một dây để nghe và chỉ chỉnh dây đó; Tự động chọn dây gần nhất.</value></data>
   <data name="Tuner_Listening" xml:space="preserve"><value>Hãy gảy một dây…</value></data>
+  <data name="Tuner_ListeningNote" xml:space="preserve"><value>Hãy chơi một nốt…</value></data>
+  <data name="Tuner_Chromatic" xml:space="preserve"><value>Chromatic</value></data>
   <data name="Tuner_InTune" xml:space="preserve"><value>Đã chuẩn</value></data>
   <data name="Tuner_TuneUp" xml:space="preserve"><value>Lên dây</value></data>
   <data name="Tuner_TuneDown" xml:space="preserve"><value>Hạ dây</value></data>

@@ -101,6 +101,8 @@
   <data name="Nav_Tuner" xml:space="preserve"><value>Akort aleti</value></data>
   <data name="Tuner_Hint" xml:space="preserve"><value>Bir teli duymak ve yalnızca onu akort etmek için ona dokunun; Otomatik en yakın teli seçer.</value></data>
   <data name="Tuner_Listening" xml:space="preserve"><value>Bir tel çalın…</value></data>
+  <data name="Tuner_ListeningNote" xml:space="preserve"><value>Bir nota çalın…</value></data>
+  <data name="Tuner_Chromatic" xml:space="preserve"><value>Kromatik</value></data>
   <data name="Tuner_InTune" xml:space="preserve"><value>Akortlu</value></data>
   <data name="Tuner_TuneUp" xml:space="preserve"><value>Gerin</value></data>
   <data name="Tuner_TuneDown" xml:space="preserve"><value>Gevşetin</value></data>

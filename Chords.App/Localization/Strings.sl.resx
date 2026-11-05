@@ -103,6 +103,8 @@
   <data name="Nav_Tuner" xml:space="preserve"><value>Uglaševalnik</value></data>
   <data name="Tuner_Hint" xml:space="preserve"><value>Tapnite struno, da jo slišite in uglašujete samo njo; Samodejno izbere najbližjo struno.</value></data>
   <data name="Tuner_Listening" xml:space="preserve"><value>Zaigrajte struno…</value></data>
+  <data name="Tuner_ListeningNote" xml:space="preserve"><value>Zaigrajte ton…</value></data>
+  <data name="Tuner_Chromatic" xml:space="preserve"><value>Kromatično</value></data>
   <data name="Tuner_InTune" xml:space="preserve"><value>Uglašeno</value></data>
   <data name="Tuner_TuneUp" xml:space="preserve"><value>Napnite</value></data>
   <data name="Tuner_TuneDown" xml:space="preserve"><value>Popustite</value></data>

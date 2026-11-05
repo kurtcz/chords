@@ -403,6 +403,39 @@ public class TunerTests
     }
 
     [Fact]
+    public void ChromaticTargetsTheNearestSemitoneNotAString()
+    {
+        // D2 on a guitar: two semitones below the low E, which auto mode would show as a flat E.
+        var tracker = new PitchTracker(InstrumentInfo.Guitar) { Chromatic = true, LockedString = 0 };
+
+        var reading = Hear(tracker, 38.1);
+
+        Assert.Equal(-1, reading.String);
+        Assert.Equal(38, reading.Target);
+        Assert.Equal(10, reading.Cents, 3);
+    }
+
+    [Fact]
+    public void ChromaticTargetDoesNotFlipBetweenSemitones()
+    {
+        var tracker = new PitchTracker(InstrumentInfo.Guitar) { Chromatic = true };
+
+        Assert.Equal(45, Hear(tracker, 45.45).Target);
+        // Just past halfway the target stays; well past it, it moves.
+        for (var i = 0; i < 5; i++)
+        {
+            tracker.Add(At(45.52));
+        }
+        Assert.Equal(45, tracker.Current.Target);
+        Assert.Equal(52, tracker.Current.Cents, 3);
+        for (var i = 0; i < 5; i++)
+        {
+            tracker.Add(At(45.6));
+        }
+        Assert.Equal(46, tracker.Current.Target);
+    }
+
+    [Fact]
     public void RangeCoversDetunedStrings()
     {
         var (min, max) = TunerMath.Range(InstrumentInfo.BassGuitar);

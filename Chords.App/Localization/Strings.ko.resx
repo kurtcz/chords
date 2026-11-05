@@ -100,6 +100,8 @@
   <data name="Nav_Tuner" xml:space="preserve"><value>튜너</value></data>
   <data name="Tuner_Hint" xml:space="preserve"><value>줄을 탭하면 소리를 듣고 그 줄만 조율합니다. 자동은 가장 가까운 줄을 고릅니다.</value></data>
   <data name="Tuner_Listening" xml:space="preserve"><value>줄을 튕겨 보세요…</value></data>
+  <data name="Tuner_ListeningNote" xml:space="preserve"><value>음을 연주하세요…</value></data>
+  <data name="Tuner_Chromatic" xml:space="preserve"><value>크로매틱</value></data>
   <data name="Tuner_InTune" xml:space="preserve"><value>맞음</value></data>
   <data name="Tuner_TuneUp" xml:space="preserve"><value>올리세요</value></data>
   <data name="Tuner_TuneDown" xml:space="preserve"><value>내리세요</value></data>

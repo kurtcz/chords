@@ -100,6 +100,8 @@
   <data name="Nav_Tuner" xml:space="preserve"><value>チューナー</value></data>
   <data name="Tuner_Hint" xml:space="preserve"><value>弦をタップするとその音が鳴り、その弦だけをチューニングします。オートは一番近い弦を選びます。</value></data>
   <data name="Tuner_Listening" xml:space="preserve"><value>弦を弾いてください…</value></data>
+  <data name="Tuner_ListeningNote" xml:space="preserve"><value>音を鳴らしてください…</value></data>
+  <data name="Tuner_Chromatic" xml:space="preserve"><value>クロマチック</value></data>
   <data name="Tuner_InTune" xml:space="preserve"><value>合っています</value></data>
   <data name="Tuner_TuneUp" xml:space="preserve"><value>上げて</value></data>
   <data name="Tuner_TuneDown" xml:space="preserve"><value>下げて</value></data>

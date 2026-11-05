@@ -101,6 +101,8 @@
   <data name="Nav_Tuner" xml:space="preserve"><value>Häälestaja</value></data>
   <data name="Tuner_Hint" xml:space="preserve"><value>Puuduta keelt, et seda kuulda ja häälestada ainult seda; Auto valib lähima keele.</value></data>
   <data name="Tuner_Listening" xml:space="preserve"><value>Mängi keelt…</value></data>
+  <data name="Tuner_ListeningNote" xml:space="preserve"><value>Mängi nooti…</value></data>
+  <data name="Tuner_Chromatic" xml:space="preserve"><value>Kromaatiline</value></data>
   <data name="Tuner_InTune" xml:space="preserve"><value>Hääles</value></data>
   <data name="Tuner_TuneUp" xml:space="preserve"><value>Pinguta</value></data>
   <data name="Tuner_TuneDown" xml:space="preserve"><value>Lõdvenda</value></data>

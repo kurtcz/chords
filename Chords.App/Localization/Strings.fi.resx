@@ -101,6 +101,8 @@
   <data name="Nav_Tuner" xml:space="preserve"><value>Viritin</value></data>
   <data name="Tuner_Hint" xml:space="preserve"><value>Napauta kieltä kuullaksesi sen ja virittääksesi vain sen; Auto valitsee lähimmän kielen.</value></data>
   <data name="Tuner_Listening" xml:space="preserve"><value>Soita kieltä…</value></data>
+  <data name="Tuner_ListeningNote" xml:space="preserve"><value>Soita sävel…</value></data>
+  <data name="Tuner_Chromatic" xml:space="preserve"><value>Kromaattinen</value></data>
   <data name="Tuner_InTune" xml:space="preserve"><value>Vireessä</value></data>
   <data name="Tuner_TuneUp" xml:space="preserve"><value>Kiristä</value></data>
   <data name="Tuner_TuneDown" xml:space="preserve"><value>Löysää</value></data>

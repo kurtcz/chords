@@ -105,6 +105,8 @@
   <data name="Nav_Tuner" xml:space="preserve"><value>Tiwniwr</value></data>
   <data name="Tuner_Hint" xml:space="preserve"><value>Tapiwch dant i'w glywed a thiwnio dim ond hwnnw; mae Awto yn dewis y tant agosaf.</value></data>
   <data name="Tuner_Listening" xml:space="preserve"><value>Chwaraewch dant…</value></data>
+  <data name="Tuner_ListeningNote" xml:space="preserve"><value>Chwaraewch nodyn…</value></data>
+  <data name="Tuner_Chromatic" xml:space="preserve"><value>Cromatig</value></data>
   <data name="Tuner_InTune" xml:space="preserve"><value>Mewn tiwn</value></data>
   <data name="Tuner_TuneUp" xml:space="preserve"><value>Tynhau</value></data>
   <data name="Tuner_TuneDown" xml:space="preserve"><value>Llacio</value></data>

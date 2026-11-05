@@ -100,6 +100,8 @@
   <data name="Nav_Tuner" xml:space="preserve"><value>Penyetem</value></data>
   <data name="Tuner_Hint" xml:space="preserve"><value>Ketuk senar untuk mendengarnya dan menyetem senar itu saja; Otomatis memilih senar terdekat.</value></data>
   <data name="Tuner_Listening" xml:space="preserve"><value>Petik sebuah senar…</value></data>
+  <data name="Tuner_ListeningNote" xml:space="preserve"><value>Mainkan sebuah nada…</value></data>
+  <data name="Tuner_Chromatic" xml:space="preserve"><value>Kromatis</value></data>
   <data name="Tuner_InTune" xml:space="preserve"><value>Sudah pas</value></data>
   <data name="Tuner_TuneUp" xml:space="preserve"><value>Kencangkan</value></data>
   <data name="Tuner_TuneDown" xml:space="preserve"><value>Kendurkan</value></data>

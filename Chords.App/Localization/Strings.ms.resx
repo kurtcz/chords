@@ -100,6 +100,8 @@
   <data name="Nav_Tuner" xml:space="preserve"><value>Penala</value></data>
   <data name="Tuner_Hint" xml:space="preserve"><value>Ketik tali untuk mendengarnya dan menala tali itu sahaja; Auto memilih tali terdekat.</value></data>
   <data name="Tuner_Listening" xml:space="preserve"><value>Petik satu tali…</value></data>
+  <data name="Tuner_ListeningNote" xml:space="preserve"><value>Mainkan satu not…</value></data>
+  <data name="Tuner_Chromatic" xml:space="preserve"><value>Kromatik</value></data>
   <data name="Tuner_InTune" xml:space="preserve"><value>Sudah ditala</value></data>
   <data name="Tuner_TuneUp" xml:space="preserve"><value>Ketatkan</value></data>
   <data name="Tuner_TuneDown" xml:space="preserve"><value>Longgarkan</value></data>

@@ -101,6 +101,8 @@
   <data name="Nav_Tuner" xml:space="preserve"><value>Stëmmgerät</value></data>
   <data name="Tuner_Hint" xml:space="preserve"><value>Tipp op eng Saite, fir se ze héieren an nëmmen déi ze stëmmen; Auto wielt déi noosten Saite.</value></data>
   <data name="Tuner_Listening" xml:space="preserve"><value>Spill eng Saite…</value></data>
+  <data name="Tuner_ListeningNote" xml:space="preserve"><value>Spillt en Toun…</value></data>
+  <data name="Tuner_Chromatic" xml:space="preserve"><value>Chromatesch</value></data>
   <data name="Tuner_InTune" xml:space="preserve"><value>Gestëmmt</value></data>
   <data name="Tuner_TuneUp" xml:space="preserve"><value>Méi héich stëmmen</value></data>
   <data name="Tuner_TuneDown" xml:space="preserve"><value>Méi déif stëmmen</value></data>

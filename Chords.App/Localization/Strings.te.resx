@@ -101,6 +101,8 @@
   <data name="Nav_Tuner" xml:space="preserve"><value>ట్యూనర్</value></data>
   <data name="Tuner_Hint" xml:space="preserve"><value>తీగను వినడానికి, దాన్ని మాత్రమే ట్యూన్ చేయడానికి దానిపై నొక్కండి; ఆటో దగ్గరి తీగను ఎంచుకుంటుంది.</value></data>
   <data name="Tuner_Listening" xml:space="preserve"><value>ఒక తీగను మీటండి…</value></data>
+  <data name="Tuner_ListeningNote" xml:space="preserve"><value>ఒక స్వరాన్ని వాయించండి…</value></data>
+  <data name="Tuner_Chromatic" xml:space="preserve"><value>క్రొమాటిక్</value></data>
   <data name="Tuner_InTune" xml:space="preserve"><value>ట్యూన్ అయింది</value></data>
   <data name="Tuner_TuneUp" xml:space="preserve"><value>బిగించండి</value></data>
   <data name="Tuner_TuneDown" xml:space="preserve"><value>వదులు చేయండి</value></data>

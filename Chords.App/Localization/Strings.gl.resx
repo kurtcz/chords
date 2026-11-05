@@ -101,6 +101,8 @@
   <data name="Nav_Tuner" xml:space="preserve"><value>Afinador</value></data>
   <data name="Tuner_Hint" xml:space="preserve"><value>Toca unha corda para escoitala e afinar só esa; Auto escolle a corda máis próxima.</value></data>
   <data name="Tuner_Listening" xml:space="preserve"><value>Toca unha corda…</value></data>
+  <data name="Tuner_ListeningNote" xml:space="preserve"><value>Toca unha nota…</value></data>
+  <data name="Tuner_Chromatic" xml:space="preserve"><value>Cromático</value></data>
   <data name="Tuner_InTune" xml:space="preserve"><value>Afinado</value></data>
   <data name="Tuner_TuneUp" xml:space="preserve"><value>Sube</value></data>
   <data name="Tuner_TuneDown" xml:space="preserve"><value>Baixa</value></data>

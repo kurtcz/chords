@@ -102,6 +102,8 @@
   <data name="Nav_Tuner" xml:space="preserve"><value>Štimer</value></data>
   <data name="Tuner_Hint" xml:space="preserve"><value>Dodirnite žicu da je čujete i štimate samo nju; Auto bira najbližu žicu.</value></data>
   <data name="Tuner_Listening" xml:space="preserve"><value>Odsvirajte žicu…</value></data>
+  <data name="Tuner_ListeningNote" xml:space="preserve"><value>Odsvirajte ton…</value></data>
+  <data name="Tuner_Chromatic" xml:space="preserve"><value>Kromatski</value></data>
   <data name="Tuner_InTune" xml:space="preserve"><value>Naštimano</value></data>
   <data name="Tuner_TuneUp" xml:space="preserve"><value>Zategnite</value></data>
   <data name="Tuner_TuneDown" xml:space="preserve"><value>Olabavite</value></data>

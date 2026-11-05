@@ -101,6 +101,8 @@
   <data name="Nav_Tuner" xml:space="preserve"><value>Accordatore</value></data>
   <data name="Tuner_Hint" xml:space="preserve"><value>Tocca una corda per ascoltarla e accordare solo quella; Auto sceglie la corda più vicina.</value></data>
   <data name="Tuner_Listening" xml:space="preserve"><value>Suona una corda…</value></data>
+  <data name="Tuner_ListeningNote" xml:space="preserve"><value>Suona una nota…</value></data>
+  <data name="Tuner_Chromatic" xml:space="preserve"><value>Cromatico</value></data>
   <data name="Tuner_InTune" xml:space="preserve"><value>Accordato</value></data>
   <data name="Tuner_TuneUp" xml:space="preserve"><value>Alza</value></data>
   <data name="Tuner_TuneDown" xml:space="preserve"><value>Abbassa</value></data>

@@ -101,6 +101,8 @@
   <data name="Nav_Tuner" xml:space="preserve"><value>Stimmgerät</value></data>
   <data name="Tuner_Hint" xml:space="preserve"><value>Tippe auf eine Saite, um sie zu hören und nur sie zu stimmen; Auto wählt die nächste Saite.</value></data>
   <data name="Tuner_Listening" xml:space="preserve"><value>Spiele eine Saite…</value></data>
+  <data name="Tuner_ListeningNote" xml:space="preserve"><value>Spiele einen Ton…</value></data>
+  <data name="Tuner_Chromatic" xml:space="preserve"><value>Chromatisch</value></data>
   <data name="Tuner_InTune" xml:space="preserve"><value>Gestimmt</value></data>
   <data name="Tuner_TuneUp" xml:space="preserve"><value>Höher stimmen</value></data>
   <data name="Tuner_TuneDown" xml:space="preserve"><value>Tiefer stimmen</value></data>

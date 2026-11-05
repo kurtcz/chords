@@ -104,6 +104,8 @@
   <data name="Nav_Tuner" xml:space="preserve"><value>Tuner</value></data>
   <data name="Tuner_Hint" xml:space="preserve"><value>Agħfas korda biex tismagħha u tkanta biss dik; Awto jagħżel l-eqreb korda.</value></data>
   <data name="Tuner_Listening" xml:space="preserve"><value>Daqq korda…</value></data>
+  <data name="Tuner_ListeningNote" xml:space="preserve"><value>Indoqq nota…</value></data>
+  <data name="Tuner_Chromatic" xml:space="preserve"><value>Kromatiku</value></data>
   <data name="Tuner_InTune" xml:space="preserve"><value>Fit-ton</value></data>
   <data name="Tuner_TuneUp" xml:space="preserve"><value>Issikka</value></data>
   <data name="Tuner_TuneDown" xml:space="preserve"><value>Erħi</value></data>

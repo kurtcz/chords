@@ -102,6 +102,8 @@
   <data name="Nav_Tuner" xml:space="preserve"><value>Ladička</value></data>
   <data name="Tuner_Hint" xml:space="preserve"><value>Klepnutím na strunu ji uslyšíte a budete ladit jen ji; Auto vybere nejbližší strunu.</value></data>
   <data name="Tuner_Listening" xml:space="preserve"><value>Zahrajte na strunu…</value></data>
+  <data name="Tuner_ListeningNote" xml:space="preserve"><value>Zahrajte tón…</value></data>
+  <data name="Tuner_Chromatic" xml:space="preserve"><value>Chromaticky</value></data>
   <data name="Tuner_InTune" xml:space="preserve"><value>Naladěno</value></data>
   <data name="Tuner_TuneUp" xml:space="preserve"><value>Přitáhněte</value></data>
   <data name="Tuner_TuneDown" xml:space="preserve"><value>Povolte</value></data>

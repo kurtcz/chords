@@ -101,6 +101,8 @@
   <data name="Nav_Tuner" xml:space="preserve"><value>Тааруулагч</value></data>
   <data name="Tuner_Hint" xml:space="preserve"><value>Утсыг сонсож, зөвхөн түүнийг тааруулахын тулд дарна уу; Авто хамгийн ойрын утсыг сонгоно.</value></data>
   <data name="Tuner_Listening" xml:space="preserve"><value>Утас тоглоно уу…</value></data>
+  <data name="Tuner_ListeningNote" xml:space="preserve"><value>Нот тоглоно уу…</value></data>
+  <data name="Tuner_Chromatic" xml:space="preserve"><value>Хроматик</value></data>
   <data name="Tuner_InTune" xml:space="preserve"><value>Тааруулсан</value></data>
   <data name="Tuner_TuneUp" xml:space="preserve"><value>Чангална уу</value></data>
   <data name="Tuner_TuneDown" xml:space="preserve"><value>Сулруулна уу</value></data>

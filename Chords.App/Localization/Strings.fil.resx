@@ -101,6 +101,8 @@
   <data name="Nav_Tuner" xml:space="preserve"><value>Tuner</value></data>
   <data name="Tuner_Hint" xml:space="preserve"><value>I-tap ang isang kuwerdas para marinig ito at iyon lang ang i-tune; pinipili ng Auto ang pinakamalapit na kuwerdas.</value></data>
   <data name="Tuner_Listening" xml:space="preserve"><value>Tumugtog ng kuwerdas…</value></data>
+  <data name="Tuner_ListeningNote" xml:space="preserve"><value>Tumugtog ng nota…</value></data>
+  <data name="Tuner_Chromatic" xml:space="preserve"><value>Chromatic</value></data>
   <data name="Tuner_InTune" xml:space="preserve"><value>Nakatono</value></data>
   <data name="Tuner_TuneUp" xml:space="preserve"><value>Higpitan</value></data>
   <data name="Tuner_TuneDown" xml:space="preserve"><value>Luwagan</value></data>

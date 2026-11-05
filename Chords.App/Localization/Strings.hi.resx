@@ -101,6 +101,8 @@
   <data name="Nav_Tuner" xml:space="preserve"><value>ट्यूनर</value></data>
   <data name="Tuner_Hint" xml:space="preserve"><value>किसी तार को सुनने और केवल उसी को ट्यून करने के लिए उस पर टैप करें; ऑटो सबसे निकट का तार चुनता है।</value></data>
   <data name="Tuner_Listening" xml:space="preserve"><value>कोई तार बजाएँ…</value></data>
+  <data name="Tuner_ListeningNote" xml:space="preserve"><value>कोई स्वर बजाएँ…</value></data>
+  <data name="Tuner_Chromatic" xml:space="preserve"><value>क्रोमैटिक</value></data>
   <data name="Tuner_InTune" xml:space="preserve"><value>ट्यून है</value></data>
   <data name="Tuner_TuneUp" xml:space="preserve"><value>कसें</value></data>
   <data name="Tuner_TuneDown" xml:space="preserve"><value>ढीला करें</value></data>

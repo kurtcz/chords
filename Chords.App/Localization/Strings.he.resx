@@ -102,6 +102,8 @@
   <data name="Nav_Tuner" xml:space="preserve"><value>מכוון</value></data>
   <data name="Tuner_Hint" xml:space="preserve"><value>הקישו על מיתר כדי לשמוע אותו ולכוון רק אותו; אוטומטי בוחר את המיתר הקרוב ביותר.</value></data>
   <data name="Tuner_Listening" xml:space="preserve"><value>נגנו על מיתר…</value></data>
+  <data name="Tuner_ListeningNote" xml:space="preserve"><value>נגנו צליל…</value></data>
+  <data name="Tuner_Chromatic" xml:space="preserve"><value>כרומטי</value></data>
   <data name="Tuner_InTune" xml:space="preserve"><value>מכוון</value></data>
   <data name="Tuner_TuneUp" xml:space="preserve"><value>הדקו</value></data>
   <data name="Tuner_TuneDown" xml:space="preserve"><value>שחררו</value></data>

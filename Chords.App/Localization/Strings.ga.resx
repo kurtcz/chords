@@ -104,6 +104,8 @@
   <data name="Nav_Tuner" xml:space="preserve"><value>Tiúnóir</value></data>
   <data name="Tuner_Hint" xml:space="preserve"><value>Tapáil sreang chun í a chloisteáil agus í sin amháin a thiúnadh; roghnaíonn Uath an tsreang is gaire.</value></data>
   <data name="Tuner_Listening" xml:space="preserve"><value>Seinn sreang…</value></data>
+  <data name="Tuner_ListeningNote" xml:space="preserve"><value>Seinn nóta…</value></data>
+  <data name="Tuner_Chromatic" xml:space="preserve"><value>Crómatach</value></data>
   <data name="Tuner_InTune" xml:space="preserve"><value>I dtiún</value></data>
   <data name="Tuner_TuneUp" xml:space="preserve"><value>Teannaigh</value></data>
   <data name="Tuner_TuneDown" xml:space="preserve"><value>Scaoil</value></data>

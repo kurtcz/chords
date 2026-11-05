@@ -105,6 +105,8 @@
   <data name="Nav_Tuner" xml:space="preserve"><value>الموالف</value></data>
   <data name="Tuner_Hint" xml:space="preserve"><value>اضغط على وتر لتسمعه وتضبط هذا الوتر فقط؛ يختار تلقائي أقرب وتر.</value></data>
   <data name="Tuner_Listening" xml:space="preserve"><value>اعزف على وتر…</value></data>
+  <data name="Tuner_ListeningNote" xml:space="preserve"><value>اعزف نغمة…</value></data>
+  <data name="Tuner_Chromatic" xml:space="preserve"><value>لوني</value></data>
   <data name="Tuner_InTune" xml:space="preserve"><value>مضبوط</value></data>
   <data name="Tuner_TuneUp" xml:space="preserve"><value>شُدّ</value></data>
   <data name="Tuner_TuneDown" xml:space="preserve"><value>أرخِ</value></data>

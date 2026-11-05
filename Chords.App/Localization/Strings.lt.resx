@@ -102,6 +102,8 @@
   <data name="Nav_Tuner" xml:space="preserve"><value>Derintuvas</value></data>
   <data name="Tuner_Hint" xml:space="preserve"><value>Bakstelėkite stygą, kad ją išgirstumėte ir derintumėte tik ją; Auto parenka artimiausią stygą.</value></data>
   <data name="Tuner_Listening" xml:space="preserve"><value>Paskambinkite stygą…</value></data>
+  <data name="Tuner_ListeningNote" xml:space="preserve"><value>Sugrokite natą…</value></data>
+  <data name="Tuner_Chromatic" xml:space="preserve"><value>Chromatinis</value></data>
   <data name="Tuner_InTune" xml:space="preserve"><value>Suderinta</value></data>
   <data name="Tuner_TuneUp" xml:space="preserve"><value>Įtempkite</value></data>
   <data name="Tuner_TuneDown" xml:space="preserve"><value>Atleiskite</value></data>

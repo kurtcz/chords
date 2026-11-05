@@ -102,6 +102,8 @@
   <data name="Nav_Tuner" xml:space="preserve"><value>Stroik</value></data>
   <data name="Tuner_Hint" xml:space="preserve"><value>Dotknij struny, aby ją usłyszeć i stroić tylko ją; Auto wybiera najbliższą strunę.</value></data>
   <data name="Tuner_Listening" xml:space="preserve"><value>Zagraj na strunie…</value></data>
+  <data name="Tuner_ListeningNote" xml:space="preserve"><value>Zagraj dźwięk…</value></data>
+  <data name="Tuner_Chromatic" xml:space="preserve"><value>Chromatyczny</value></data>
   <data name="Tuner_InTune" xml:space="preserve"><value>Nastrojone</value></data>
   <data name="Tuner_TuneUp" xml:space="preserve"><value>Podciągnij</value></data>
   <data name="Tuner_TuneDown" xml:space="preserve"><value>Popuść</value></data>

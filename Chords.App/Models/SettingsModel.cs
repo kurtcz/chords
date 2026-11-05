@@ -24,6 +24,8 @@ namespace Chords.App.Models
         public bool LeftHanded { get; set; } = false;
         /// <summary>Concert pitch the tuner tunes to: frequency of A4 in Hz.</summary>
         public int TunerA4 { get; set; } = 440;
+        /// <summary>The tuner shows the nearest semitone instead of the nearest string of the instrument.</summary>
+        public bool TunerChromatic { get; set; }
         /// <summary>UI language (a code from Localizer.Languages); null follows the device language.</summary>
         public string Language { get; set; }
         public string Error { get; set; }

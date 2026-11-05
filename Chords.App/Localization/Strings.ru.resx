@@ -102,6 +102,8 @@
   <data name="Nav_Tuner" xml:space="preserve"><value>Тюнер</value></data>
   <data name="Tuner_Hint" xml:space="preserve"><value>Нажмите на струну, чтобы услышать её и настраивать только её; Авто выбирает ближайшую струну.</value></data>
   <data name="Tuner_Listening" xml:space="preserve"><value>Сыграйте на струне…</value></data>
+  <data name="Tuner_ListeningNote" xml:space="preserve"><value>Сыграйте ноту…</value></data>
+  <data name="Tuner_Chromatic" xml:space="preserve"><value>Хроматический</value></data>
   <data name="Tuner_InTune" xml:space="preserve"><value>Настроено</value></data>
   <data name="Tuner_TuneUp" xml:space="preserve"><value>Подтяните</value></data>
   <data name="Tuner_TuneDown" xml:space="preserve"><value>Ослабьте</value></data>

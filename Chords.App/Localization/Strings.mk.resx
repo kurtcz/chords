@@ -101,6 +101,8 @@
   <data name="Nav_Tuner" xml:space="preserve"><value>Штимер</value></data>
   <data name="Tuner_Hint" xml:space="preserve"><value>Допрете жица за да ја слушнете и да ја штимате само неа; Авто ја избира најблиската жица.</value></data>
   <data name="Tuner_Listening" xml:space="preserve"><value>Свирете жица…</value></data>
+  <data name="Tuner_ListeningNote" xml:space="preserve"><value>Отсвирете тон…</value></data>
+  <data name="Tuner_Chromatic" xml:space="preserve"><value>Хроматски</value></data>
   <data name="Tuner_InTune" xml:space="preserve"><value>Наштимано</value></data>
   <data name="Tuner_TuneUp" xml:space="preserve"><value>Затегнете</value></data>
   <data name="Tuner_TuneDown" xml:space="preserve"><value>Олабавете</value></data>
