@@ -94,17 +94,6 @@ else if (status == TunerStatus.Failed)
 
 @if (!chromatic)
 {
-    @* Quick switch between the tunings of the instrument; the strings below follow it. *@
-    <div class="tuner-tuning">
-        <select aria-label="@L["Tuning_Custom"]" @onchange="e => SetTuning((string)e.Value)">
-            @{ var i = 0; }
-            @foreach (var t in tunings)
-            {
-                <option value="@i" selected="@(InstrumentTuning.SamePitches(t.Pitches, instrument.Pitches))">@L.TuningName(t) (@Localizer.TuningNotes(t, conv, " "))</option>
-                i++;
-            }
-        </select>
-    </div>
     <div class="tuner-strings">
         <button type="button" class="tuner-auto @(lockedString < 0 ? "active" : null)" @onclick="() => Lock(-1)">
             @L["Tuner_Auto"]
@@ -126,6 +115,18 @@ else if (status == TunerStatus.Failed)
                 </button>
             }
         </div>
+    </div>
+
+    @* Quick switch between the tunings of the instrument; the strings above follow it. Below them, so they stay in view. *@
+    <div class="tuner-tuning">
+        <select aria-label="@L["Tuning_Custom"]" @onchange="e => SetTuning((string)e.Value)">
+            @{ var i = 0; }
+            @foreach (var t in tunings)
+            {
+                <option value="@i" selected="@(InstrumentTuning.SamePitches(t.Pitches, instrument.Pitches))">@L.TuningName(t) (@Localizer.TuningNotes(t, conv, " "))</option>
+                i++;
+            }
+        </select>
     </div>
 }
 
