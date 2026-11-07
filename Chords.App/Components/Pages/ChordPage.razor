@@ -22,6 +22,11 @@
 @if (decorator != null)
 {
     <h2>@decorator.Symbols[0]</h2>
+    @* With a capo the diagrams show the shape to hold, which has a name of its own. *@
+    @if (State.Settings.Capo > 0)
+    {
+        <p class="capo-shape">@L["Capo_Shape", State.Settings.Capo, new ChordDecorator(chord.Transpose(-State.Settings.Capo), conv).Symbols[0]]</p>
+    }
 
     @if (decorator.Symbols.Length > 1)
     {
@@ -73,6 +78,7 @@
 
 @if (layouts != null)
 {
+    <FretboardView Notes="chord.Notes" Intervals="chord.Intervals" Hint="@L["Fretboard_ChordHint", decorator.Symbols[0]]" />
     <RelatedLinks Pages="[AppPages.Favorites, AppPages.FindChord, AppPages.FindShape]" />
 }
 

@@ -11,9 +11,9 @@
 @if (!detect)
 {
     <div class="settings-card page-card">
-        <KeySelector Changed="StateHasChanged" />
+        <KeySelector Changed="SuggestCapo" />
         <SettingRow Label="@L["Key_Sevenths"]">
-            <Toggle @bind-Value="State.KeySevenths" />
+            <Toggle Value="State.KeySevenths" ValueChanged="SeventhsChanged" />
         </SettingRow>
     </div>
     <table class="table key-chords">
@@ -25,6 +25,10 @@
                 <tr>
                     <td class="numeral">@degree.Numeral</td>
                     <td><a href="@ChordUrl(chord)">@Symbol(chord)</a></td>
+                    @if (capo > 0)
+                    {
+                        <td class="capo-shape-short">@L["Capo_ShapeShort", Symbol(chord.Transpose(-capo))]</td>
+                    }
                     <td class="text-right">
                         <button type="button" class="btn btn-default btn-sm" @onclick="() => Player.PlayChord(chord)">▶</button>
                     </td>
@@ -32,6 +36,43 @@
             }
         </tbody>
     </table>
+    @* Where to put the capo so the main chords of the key (I, IV, V, vi) are the easiest shapes to hold. *@
+    <section class="settings-section capo-suggestions">
+        <h2>@L["Key_CapoTitle"]</h2>
+        @if (capoOptions?.FirstOrDefault(i => i.Capo == 0) is { } noCapo)
+        {
+            <p class="section-hint">@L["Key_CapoHint", string.Join("\u00a0", noCapo.Shapes.Select(Symbol))]</p>
+        }
+        <div class="settings-card">
+            @if (capoOptions == null)
+            {
+                <div class="setting-row text-muted">…</div>
+            }
+            else
+            {
+                @foreach (var option in capoOptions)
+                {
+                    var o = option;
+                    <div class="setting-row capo-option">
+                        <div class="capo-option-text">
+                            <strong>@(o.Capo == 0 ? L["Capo_None"] : L["Capo_Badge", o.Capo])</strong>
+                            <span class="capo-option-shapes">@string.Join("  ", o.Shapes.Select(Symbol))</span>
+                        </div>
+                        @if (o.Capo == capo)
+                        {
+                            <span class="capo-option-current">✓</span>
+                        }
+                        else
+                        {
+                            <button type="button" class="btn btn-default btn-sm" @onclick="() => UseCapo(o.Capo)">@L["Key_CapoUse"]</button>
+                        }
+                    </div>
+                }
+            }
+        </div>
+    </section>
+    <FretboardView Notes="Current.Scale.Notes" Intervals="Current.ScaleType.ToIntervals()"
+                   Hint="@L["Fretboard_ScaleHint", KeyName(Current)]" />
     <RelatedLinks Pages="[AppPages.Progressions, AppPages.Circle]"
                   Titles="@(new() { [AppPages.Progressions] = L["Key_Progressions"] })" />
 }
@@ -123,11 +164,84 @@ else
 
     private Key Current => new(State.KeyTonic, State.KeyScale);
 
-    protected override void OnInitialized()
+    /// <summary>Capo of the chosen instrument (0 = none).</summary>
+    private int capo => State.Settings.Capo;
+
+    /// <summary>A capo position and the shapes the main chords of the key are played as there.</summary>
+    private record CapoOption(int Capo, Chord[] Shapes, int Difficulty);
+
+    /// <summary>Capo positions offered: beyond the 7th fret the frets get narrow and the sound thin.</summary>
+    private const int MaxSuggestedCapo = 7;
+    private const int CapoSuggestions = 3;
+    /// <summary>Difficulty counted for a chord with no fingering at all.</summary>
+    private const int NoFingering = 20;
+
+    /// <summary>The easiest capo positions, easiest first; null while they are being found.</summary>
+    private CapoOption[] capoOptions;
+    private int capoRequest;
+
+    protected override async Task OnInitializedAsync()
     {
         conv = State.Settings.conv;
         detect = Tab != "chords" && State.KeyDetectChords.Count > 0;
         Detect();
+        await SuggestCapo();
+    }
+
+    private async Task SeventhsChanged(bool value)
+    {
+        State.KeySevenths = value;
+        await SuggestCapo();
+    }
+
+    /// <summary>
+    /// Scores each capo position by the easiest fingering of the key's I, IV, V and vi chords
+    /// (see <see cref="GuitarChordLayout.Difficulty"/>) and keeps the easiest ones; no capo is always among them.
+    /// </summary>
+    private async Task SuggestCapo()
+    {
+        var request = ++capoRequest;
+        var key = Current;
+        var s = State.Settings;
+        var info = s.InstrumentInfo;
+        var chords = key.DiatonicChords(State.KeySevenths)
+            .Where(i => i.Degree is 1 or 4 or 5 or 6 && key.Contains(i.Chord))
+            .Select(i => i.Chord)
+            .ToArray();
+
+        capoOptions = null;
+        var options = await Task.Run(() => Enumerable.Range(0, MaxSuggestedCapo + 1)
+            .Select(fret =>
+            {
+                var capoed = info.WithCapo(fret);
+                var difficulty = chords.Sum(chord =>
+                {
+                    var layouts = GuitarChordLayout.Generate(chord, capoed, s.AllowBarre, s.AllowSpecial, true, s.maxFret).ToArray();
+
+                    return layouts.Length == 0 ? NoFingering : layouts.Min(l => l.Difficulty);
+                });
+
+                return new CapoOption(fret, chords.Select(c => c.Transpose(-fret)).ToArray(), difficulty);
+            })
+            .ToArray());
+
+        if (request != capoRequest)
+        {
+            return;
+        }
+        var best = options.OrderBy(i => i.Difficulty).ThenBy(i => i.Capo).Take(CapoSuggestions).ToList();
+
+        if (!best.Any(i => i.Capo == 0))
+        {
+            best.Add(options[0]);
+        }
+        capoOptions = best.ToArray();
+    }
+
+    private void UseCapo(int fret)
+    {
+        State.Settings.Capo = fret;
+        State.Settings.Save();
     }
 
     private string Symbol(Chord chord) => new ChordDecorator(chord, conv).Symbols[0];
@@ -164,10 +278,11 @@ else
         matches = found.Where(i => i.Fitting >= found[0].Fitting - 1).Take(MaxMatches).ToArray();
     }
 
-    private void Show(Key key)
+    private async Task Show(Key key)
     {
         State.KeyTonic = key.Tonic;
         State.KeyScale = key.ScaleType;
         detect = false;
+        await SuggestCapo();
     }
 }

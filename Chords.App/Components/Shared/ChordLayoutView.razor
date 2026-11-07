@@ -7,6 +7,8 @@
      @onpointerdown="PointerDown" @onpointerup="CancelHold" @onpointercancel="CancelHold" @onpointerleave="CancelHold"
      @onclick="Click" @oncontextmenu:preventDefault="true">
     @Layout.RenderSchema(State.Settings.Horizontal, State.Settings.Horizontal && State.Settings.LeftHanded)
+    @{ var level = Layout.Layout.DifficultyLevel; }
+    <div class="difficulty difficulty-@level.ToString().ToLowerInvariant()">@L[$"Difficulty_{level}"]</div>
 </div>
 
 @code {

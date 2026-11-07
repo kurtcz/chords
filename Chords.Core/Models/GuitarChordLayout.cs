@@ -23,6 +23,9 @@ namespace Chords.Core.Models
         /// <summary>MIDI pitches of the open strings in an alternate tuning; null in the standard tuning.</summary>
         [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
         public int[] Tuning { get; private set; }
+        /// <summary>Fret the capo is on (0 = none); <see cref="Positions"/> count from it.</summary>
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public int Capo { get; private set; }
         [JsonIgnore]
         public InstrumentInfo InstrumentInfo { get; private set; }
         [JsonIgnore]
@@ -39,6 +42,24 @@ namespace Chords.Core.Models
         public DifficultyLevel DifficultyLevel => Difficulty <= EasyMaxDifficulty ? DifficultyLevel.Easy
                                                 : Difficulty <= MediumMaxDifficulty ? DifficultyLevel.Medium
                                                 : DifficultyLevel.Hard;
+
+        /// <summary>Finger of each string (1 index … 4 little, 0 none), or null when four fingers cannot hold the shape; see <see cref="Fingering"/>.</summary>
+        [JsonIgnore]
+        public int[] Fingers
+        {
+            get
+            {
+                if (!_fingersDone)
+                {
+                    _fingers = Fingering.Assign(Positions);
+                    _fingersDone = true;
+                }
+                return _fingers;
+            }
+        }
+
+        private bool _fingersDone;
+        private int[] _fingers;
 
         private const int EasyMaxDifficulty = 4;
         private const int MediumMaxDifficulty = 7;
@@ -58,8 +79,8 @@ namespace Chords.Core.Models
         }
 
         [JsonConstructor]
-        public GuitarChordLayout(Chord chord, int[] positions, GuitarChordType? guitarChordType = null, Instrument instrument = Instrument.Guitar, int[] tuning = null)
-            : this(chord, positions, guitarChordType, InstrumentInfo.Get(instrument, tuning))
+        public GuitarChordLayout(Chord chord, int[] positions, GuitarChordType? guitarChordType = null, Instrument instrument = Instrument.Guitar, int[] tuning = null, int capo = 0)
+            : this(chord, positions, guitarChordType, InstrumentInfo.Get(instrument, tuning, capo))
         {
         }
 
@@ -71,7 +92,8 @@ namespace Chords.Core.Models
             Positions = positions;
             Instrument = instrument;
             InstrumentInfo = instrumentInfo;
-            Tuning = instrumentInfo.IsStandardTuning ? null : instrumentInfo.Pitches;
+            Tuning = instrumentInfo.IsStandardTuning ? null : instrumentInfo.Uncapoed.Pitches;
+            Capo = instrumentInfo.Capo;
 			Notes = GetUsedNotes();
             if (guitarChordType.HasValue)
             {
@@ -130,7 +152,8 @@ namespace Chords.Core.Models
                 {
                     positionsPerString[s].Add(X);
                 }
-                for (var pos = 0; pos <= maxFret + info.MaxFretSpan - 1 && pos <= MaxPosition; pos++)
+                //frets count from the capo, which leaves less of the neck
+                for (var pos = 0; pos <= maxFret + info.MaxFretSpan - 1 && pos + info.Capo <= MaxPosition; pos++)
                 {
                     if (info.CanFret(s, pos) &&
                         chord.Notes.Any(i => Note.Normalize(i) == stringNotes[s][pos]))

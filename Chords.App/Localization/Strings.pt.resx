@@ -141,4 +141,21 @@
   <data name="Tuning_Save" xml:space="preserve"><value>Guardar</value></data>
   <data name="Tuning_Cancel" xml:space="preserve"><value>Cancelar</value></data>
   <data name="Tuning_EditorHint" xml:space="preserve"><value>Toque em ▲ ▼ para subir ou descer uma corda meio tom; toque numa nota para a ouvir.</value></data>
+  <data name="Settings_Capo" xml:space="preserve"><value>Capotraste</value></data>
+  <data name="Capo_None" xml:space="preserve"><value>Sem capotraste</value></data>
+  <data name="Capo_Fret" xml:space="preserve"><value>{0}.º traste</value></data>
+  <data name="Capo_Badge" xml:space="preserve"><value>Capo {0}</value></data>
+  <data name="Capo_Shape" xml:space="preserve"><value>Capotraste no {0}.º traste: faz a forma de {1}</value></data>
+  <data name="Capo_ShapeShort" xml:space="preserve"><value>forma de {0}</value></data>
+  <data name="Key_CapoTitle" xml:space="preserve"><value>Posições de capotraste mais fáceis</value></data>
+  <data name="Key_CapoUse" xml:space="preserve"><value>Usar</value></data>
+  <data name="Fretboard_Title" xml:space="preserve"><value>No braço</value></data>
+  <data name="Fretboard_Intervals" xml:space="preserve"><value>Intervalos</value></data>
+  <data name="Fretboard_Notes" xml:space="preserve"><value>Notas</value></data>
+  <data name="Difficulty_Easy" xml:space="preserve"><value>Fácil</value></data>
+  <data name="Difficulty_Medium" xml:space="preserve"><value>Média</value></data>
+  <data name="Difficulty_Hard" xml:space="preserve"><value>Difícil</value></data>
+  <data name="Key_CapoHint" xml:space="preserve"><value>Toque as formas mostradas – com o capo soam como {0}.</value></data>
+  <data name="Fretboard_ScaleHint" xml:space="preserve"><value>Onde estão as notas da escala {0} no braço. 1 é a tónica.</value></data>
+  <data name="Fretboard_ChordHint" xml:space="preserve"><value>Onde estão as notas do acorde {0} no braço. 1 é a fundamental.</value></data>
 </root>

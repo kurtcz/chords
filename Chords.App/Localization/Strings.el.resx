@@ -141,4 +141,21 @@
   <data name="Tuning_Save" xml:space="preserve"><value>Αποθήκευση</value></data>
   <data name="Tuning_Cancel" xml:space="preserve"><value>Ακύρωση</value></data>
   <data name="Tuning_EditorHint" xml:space="preserve"><value>Πατήστε ▲ ▼ για να ανεβάσετε ή να κατεβάσετε μια χορδή κατά ημιτόνιο· πατήστε μια νότα για να την ακούσετε.</value></data>
+  <data name="Settings_Capo" xml:space="preserve"><value>Καποτάστο</value></data>
+  <data name="Capo_None" xml:space="preserve"><value>Χωρίς καποτάστο</value></data>
+  <data name="Capo_Fret" xml:space="preserve"><value>{0}ο τάστο</value></data>
+  <data name="Capo_Badge" xml:space="preserve"><value>Κάπο {0}</value></data>
+  <data name="Capo_Shape" xml:space="preserve"><value>Καποτάστο στο {0}ο τάστο: πιάσε το σχήμα {1}</value></data>
+  <data name="Capo_ShapeShort" xml:space="preserve"><value>σχήμα {0}</value></data>
+  <data name="Key_CapoTitle" xml:space="preserve"><value>Ευκολότερες θέσεις καποτάστο</value></data>
+  <data name="Key_CapoUse" xml:space="preserve"><value>Χρήση</value></data>
+  <data name="Fretboard_Title" xml:space="preserve"><value>Στην ταστιέρα</value></data>
+  <data name="Fretboard_Intervals" xml:space="preserve"><value>Διαστήματα</value></data>
+  <data name="Fretboard_Notes" xml:space="preserve"><value>Νότες</value></data>
+  <data name="Difficulty_Easy" xml:space="preserve"><value>Εύκολο</value></data>
+  <data name="Difficulty_Medium" xml:space="preserve"><value>Μέτριο</value></data>
+  <data name="Difficulty_Hard" xml:space="preserve"><value>Δύσκολο</value></data>
+  <data name="Key_CapoHint" xml:space="preserve"><value>Πιάσε τα σχήματα που φαίνονται – με το καποτάστο ακούγονται ως {0}.</value></data>
+  <data name="Fretboard_ScaleHint" xml:space="preserve"><value>Πού βρίσκονται οι νότες της κλίμακας {0} στην ταστιέρα. Το 1 είναι η τονική.</value></data>
+  <data name="Fretboard_ChordHint" xml:space="preserve"><value>Πού βρίσκονται οι νότες της συγχορδίας {0} στην ταστιέρα. Το 1 είναι η θεμέλιος.</value></data>
 </root>

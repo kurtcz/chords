@@ -250,7 +250,7 @@ else if (status == TunerStatus.Failed)
 
     protected override async Task OnInitializedAsync()
     {
-        instrument = State.Settings.InstrumentInfo;
+        instrument = State.Settings.InstrumentInfo.Uncapoed;
         tuning = State.Settings.TuningOf(State.Settings.Instrument);
         tunings = State.Settings.TuningsFor(State.Settings.Instrument).ToArray();
         if (!tunings.Any(t => InstrumentTuning.SamePitches(t.Pitches, tuning.Pitches)))
@@ -477,7 +477,7 @@ else if (status == TunerStatus.Failed)
         }
         State.Settings.SelectTuning(State.Settings.Instrument, tunings[i].Pitches);
         State.Settings.Save();
-        instrument = State.Settings.InstrumentInfo;
+        instrument = State.Settings.InstrumentInfo.Uncapoed;
         tuning = State.Settings.TuningOf(State.Settings.Instrument);
         // The strings now have other targets.
         tunedStrings.Clear();

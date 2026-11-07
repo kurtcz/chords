@@ -1,0 +1,157 @@
+@* The notes of a scale or a chord across the whole neck of the chosen instrument, labeled by interval or by name; a tap plays a note. *@
+@inject AppState State
+@inject ChordPlayer Player
+
+<section class="fretboard">
+    <h4>@L["Fretboard_Title"]</h4>
+    @if (Hint != null)
+    {
+        <p class="section-hint">@Hint</p>
+    }
+    <div class="page-segment">
+        <Segmented Value="State.FretboardNoteNames" ValueChanged="v => State.FretboardNoteNames = v"
+                   Off="@L["Fretboard_Intervals"]" On="@L["Fretboard_Notes"]" />
+    </div>
+    <div class="fretboard-scroll">
+        <svg class="@(horizontal ? "fretboard-board horizontal" : "fretboard-board")" viewBox="0 0 @Width @Height"
+             width="@(horizontal ? Width : null)" xmlns="http://www.w3.org/2000/svg">
+            @* Inlays *@
+            @foreach (var fret in Inlays.Where(i => i <= frets))
+            {
+                @if (fret % 12 == 0)
+                {
+                    <circle cx="@Pt(span / 2.0 - Gap, Cell(fret)).X" cy="@Pt(span / 2.0 - Gap, Cell(fret)).Y" r="6" fill="#e4e4e4" />
+                    <circle cx="@Pt(span / 2.0 + Gap, Cell(fret)).X" cy="@Pt(span / 2.0 + Gap, Cell(fret)).Y" r="6" fill="#e4e4e4" />
+                }
+                else
+                {
+                    <circle cx="@Pt(span / 2.0, Cell(fret)).X" cy="@Pt(span / 2.0, Cell(fret)).Y" r="6" fill="#e4e4e4" />
+                }
+            }
+
+            @* Fret wires (on the banjo frets 1–4 do not reach the short 5th string) and their numbers *@
+            @for (var fret = 0; fret <= frets; fret++)
+            {
+                var from = Pt(A(info.FirstStringAtFret(fret)), fret * Cell0);
+                var to = Pt(span, fret * Cell0);
+                <line x1="@from.X" y1="@from.Y" x2="@to.X" y2="@to.Y" stroke="#000" stroke-width="@(fret == 0 ? 4 : 1)" />
+                @if (fret > 0)
+                {
+                    var n = NumberAt(fret);
+                    <g><text x="@n.X" y="@n.Y" text-anchor="middle" font-size="11" fill="#888">@fret</text></g>
+                }
+            }
+
+            @* Strings; a short string (banjo's 5th) starts at its own nut further up the neck *@
+            @for (var s = 0; s < info.StringCount; s++)
+            {
+                var from = Pt(A(s), info.FirstFrets[s] * Cell0);
+                var to = Pt(A(s), frets * Cell0);
+                <line x1="@from.X" y1="@from.Y" x2="@to.X" y2="@to.Y" stroke="#000" stroke-width="1" />
+                @if (info.IsShortString(s))
+                {
+                    var nut1 = Pt(A(s) - 5, info.FirstFrets[s] * Cell0);
+                    var nut2 = Pt(A(s) + 5, info.FirstFrets[s] * Cell0);
+                    <line x1="@nut1.X" y1="@nut1.Y" x2="@nut2.X" y2="@nut2.Y" stroke="#000" stroke-width="4" />
+                }
+            }
+
+            @* The frets below the capo are not played; the capo itself is where the strings ring open *@
+            @if (capo > 0)
+            {
+                var shade = Box(-Gap / 2.0, 0, span + Gap / 2.0, Cell(capo) - 8);
+                var bar = Box(-8, Cell(capo) - 7, span + 8, Cell(capo) + 7);
+                <rect x="@shade.X" y="@shade.Y" width="@shade.W" height="@shade.H" fill="#fff" fill-opacity="0.7" />
+                <rect class="capo" x="@bar.X" y="@bar.Y" width="@bar.W" height="@bar.H" rx="3" fill="#555" />
+            }
+
+            @foreach (var spot in spots)
+            {
+                var c = Pt(A(spot.String), Cell(spot.Fret));
+                var pitch = spot.Pitch;
+                <g class="fretboard-note" @onclick="() => Player.PlayPitch(pitch)">
+                    <circle cx="@c.X" cy="@c.Y" r="10" fill="@(spot.Index == 0 ? RootColor : NoteColor)" />
+                    <text x="@c.X" y="@(c.Y + 3.5)" text-anchor="middle" font-size="@(Label(spot).Length > 2 ? 8 : 10)"
+                          font-weight="bold" fill="#fff">@Label(spot)</text>
+                </g>
+            }
+        </svg>
+    </div>
+</section>
+
+@code {
+    /// <summary>Notes to show, the root first.</summary>
+    [Parameter] public IReadOnlyList<Note> Notes { get; set; }
+    /// <summary>Interval of each note above the root.</summary>
+    [Parameter] public IReadOnlyList<Interval> Intervals { get; set; }
+    /// <summary>A line under the heading saying what is shown.</summary>
+    [Parameter] public string Hint { get; set; }
+
+    private const string RootColor = "#c62828";
+    private const string NoteColor = "#1f5fbf";
+    private static readonly int[] Inlays = { 5, 7, 12, 17, 19, 24 };
+    /// <summary>Length of a fret along the neck.</summary>
+    private const int Cell0 = 40;
+    /// <summary>Room before the nut for the open strings.</summary>
+    private const int Before = 34;
+    /// <summary>Room for the fret numbers beside the neck.</summary>
+    private const int Side = 32;
+
+    private InstrumentInfo info;
+    private int capo;
+    private int frets;
+    private bool horizontal;
+    private bool leftHanded;
+    private NamingConvention conv;
+    private FretboardNote[] spots = [];
+
+    /// <summary>Distance between strings.</summary>
+    private int Gap => horizontal ? 26 : 36;
+    private int span => (info.StringCount - 1) * Gap;
+    private int Length => Before + frets * Cell0 + 12;
+    private int Width => horizontal ? Length : Side + span + Side;
+    private int Height => horizontal ? Side + span + 14 : Length;
+
+    /// <summary>Across the strings: the lowest string 0.</summary>
+    private double A(int s) => s * Gap;
+    /// <summary>Along the neck: the middle of a fret, the open strings just before their nut.</summary>
+    private static double Cell(int fret) => (fret - 0.5) * Cell0;
+
+    /// <summary>
+    /// A point given across the strings and along the neck from the nut. Horizontally the lowest string is at the bottom
+    /// and the nut on the left, or on the right for the left-handed; upright the nut is at the top.
+    /// </summary>
+    private (double X, double Y) Pt(double a, double f) => horizontal
+        ? (leftHanded ? Width - Before - f : Before + f, Side + span - a)
+        : (Side + a, Before + f);
+
+    private (double X, double Y) NumberAt(int fret) => horizontal
+        ? (Pt(0, Cell(fret)).X, 14)
+        : (11, Pt(0, Cell(fret)).Y + 4);
+
+    /// <summary>Rectangle between two corners given across the strings and along the neck.</summary>
+    private (double X, double Y, double W, double H) Box(double a1, double f1, double a2, double f2)
+    {
+        var p1 = Pt(a1, f1);
+        var p2 = Pt(a2, f2);
+
+        return (Math.Min(p1.X, p2.X), Math.Min(p1.Y, p2.Y), Math.Abs(p2.X - p1.X), Math.Abs(p2.Y - p1.Y));
+    }
+
+    private string Label(FretboardNote spot) => State.FretboardNoteNames
+        ? Notes[spot.Index].ToString(conv)
+        : Fretboard.DegreeName(Intervals[spot.Index]);
+
+    protected override void OnParametersSet()
+    {
+        var settings = State.Settings;
+
+        info = settings.InstrumentInfo.Uncapoed;
+        capo = settings.Capo;
+        frets = Math.Max(12, capo + 7);
+        horizontal = settings.Horizontal;
+        leftHanded = settings.LeftHanded;
+        conv = settings.conv;
+        spots = Fretboard.Find(info, Notes, capo, frets);
+    }
+}

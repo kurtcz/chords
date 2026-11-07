@@ -50,6 +50,10 @@
                             var layouts = current.Layouts[i];
                             <div class="progression-chord">
                                 <a href="@ChordPage.Url(chord.Root, chord.ChordType.ToDescription(), true)">@Symbol(chord)</a>
+                                @if (State.Settings.Capo > 0)
+                                {
+                                    <div class="capo-shape-short">@L["Capo_ShapeShort", Symbol(chord.Transpose(-State.Settings.Capo))]</div>
+                                }
                                 @* Tones outside the scale show where the melody material changes (a borrowed ♭VII, the leading tone of V in minor). *@
                                 <div class="progression-notes">
                                     @foreach (var note in chord.Notes)

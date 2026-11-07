@@ -1496,3 +1496,112 @@ h1.navbar-brand {
     color: #888;
     font-size: 13px;
 }
+
+/* Capo: the shape to hold for a sounding chord, and the capo positions suggested for a key. */
+.capo-shape {
+    margin: -4px 0 12px;
+    color: #8a5a1c;
+}
+
+.capo-shape-short {
+    color: #8a5a1c;
+    font-size: 13px;
+}
+
+.capo-option {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.capo-option-text {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.capo-option-shapes {
+    font-size: 14px;
+    opacity: 0.75;
+}
+
+.capo-option-current {
+    font-size: 18px;
+    color: #3c9a4b;
+    padding: 0 8px;
+}
+
+/* Notes of a scale or chord across the neck */
+.fretboard {
+    /* below the floated chord diagrams */
+    clear: both;
+    margin: 20px 0;
+}
+
+.fretboard-scroll {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.fretboard-board {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.fretboard-board.horizontal {
+    width: auto;
+    max-width: none;
+}
+
+.fretboard-note {
+    cursor: pointer;
+}
+
+[dir=rtl] .fretboard-scroll {
+    direction: ltr;
+}
+
+/* How hard a fingering is, under its diagram */
+.chord-layout .difficulty {
+    margin-top: -6px;
+    font-size: 12px;
+    text-align: center;
+}
+
+.chord-layout .difficulty::before {
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin-right: 4px;
+    border-radius: 50%;
+    background: currentColor;
+}
+
+.difficulty-easy {
+    color: #2e7d32;
+}
+
+.difficulty-medium {
+    color: #b26a00;
+}
+
+.difficulty-hard {
+    color: #c62828;
+}
+
+/* A line under a section heading saying what the section shows */
+.section-hint {
+    margin: -4px 0 10px;
+    color: #777;
+    font-size: 14px;
+}
+
+.settings-section .section-hint {
+    margin: 0 4px 8px;
+}

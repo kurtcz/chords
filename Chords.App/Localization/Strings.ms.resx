@@ -140,4 +140,21 @@
   <data name="Tuning_Save" xml:space="preserve"><value>Simpan</value></data>
   <data name="Tuning_Cancel" xml:space="preserve"><value>Batal</value></data>
   <data name="Tuning_EditorHint" xml:space="preserve"><value>Ketik ▲ ▼ untuk menaikkan atau menurunkan tali separuh nada; ketik not untuk mendengarnya.</value></data>
+  <data name="Settings_Capo" xml:space="preserve"><value>Capo</value></data>
+  <data name="Capo_None" xml:space="preserve"><value>Tanpa capo</value></data>
+  <data name="Capo_Fret" xml:space="preserve"><value>Fret {0}</value></data>
+  <data name="Capo_Badge" xml:space="preserve"><value>Capo {0}</value></data>
+  <data name="Capo_Shape" xml:space="preserve"><value>Capo pada fret {0}: tekan bentuk {1}</value></data>
+  <data name="Capo_ShapeShort" xml:space="preserve"><value>bentuk {0}</value></data>
+  <data name="Key_CapoTitle" xml:space="preserve"><value>Kedudukan capo paling mudah</value></data>
+  <data name="Key_CapoUse" xml:space="preserve"><value>Guna</value></data>
+  <data name="Fretboard_Title" xml:space="preserve"><value>Pada fretboard</value></data>
+  <data name="Fretboard_Intervals" xml:space="preserve"><value>Selang</value></data>
+  <data name="Fretboard_Notes" xml:space="preserve"><value>Not</value></data>
+  <data name="Difficulty_Easy" xml:space="preserve"><value>Mudah</value></data>
+  <data name="Difficulty_Medium" xml:space="preserve"><value>Sederhana</value></data>
+  <data name="Difficulty_Hard" xml:space="preserve"><value>Sukar</value></data>
+  <data name="Key_CapoHint" xml:space="preserve"><value>Mainkan bentuk yang ditunjukkan – dengan kapo ia berbunyi seperti {0}.</value></data>
+  <data name="Fretboard_ScaleHint" xml:space="preserve"><value>Kedudukan not skala {0} pada leher. 1 ialah tonik.</value></data>
+  <data name="Fretboard_ChordHint" xml:space="preserve"><value>Kedudukan not kord {0} pada leher. 1 ialah not dasar.</value></data>
 </root>

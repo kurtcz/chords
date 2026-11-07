@@ -50,6 +50,17 @@
                 <button type="button" class="btn btn-default tuning-delete" @onclick="() => DeleteTuning(tuning)">@L["Tuning_Delete"]</button>
             </div>
         }
+        @* Capo of the chosen instrument: diagrams then show the shapes to hold, counted from the capo. *@
+        <SettingSelect Label="@L["Settings_Capo"]">
+            <Value>@CapoName(settings.Capo)</Value>
+            <ChildContent>
+                @for (var fret = 0; fret <= InstrumentInfo.MaxCapo; fret++)
+                {
+                    var f = fret;
+                    <li><a @onclick="() => Update(() => settings.Capo = f)">@CapoName(f)</a></li>
+                }
+            </ChildContent>
+        </SettingSelect>
         <SettingSelect Label="@L["Settings_Notation"]">
             <Value>@string.Join(" ", settings.Notes.Select(i => i.ToString(settings.conv)))</Value>
             <ChildContent>
@@ -134,6 +145,8 @@
 
         return language.Name == null ? code : $"{language.Flag} {language.Name}";
     }
+
+    private string CapoName(int fret) => fret == 0 ? L["Capo_None"] : L["Capo_Fret", fret];
 
     /// <summary>Name of the instrument's drawing in <see cref="Icon"/>.</summary>
     private static string InstrumentIcon(Instrument instrument) => instrument.ToString().ToLowerInvariant();

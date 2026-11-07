@@ -21,6 +21,8 @@ namespace Chords.App.Models
         public Instrument Instrument { get; set; } = Instrument.Guitar;
         /// <summary>Tuning chosen for each instrument: MIDI pitches of the open strings; missing = standard tuning.</summary>
         public Dictionary<Instrument, int[]> Tunings { get; set; } = new Dictionary<Instrument, int[]>();
+        /// <summary>Fret the capo is on for each instrument; missing = no capo.</summary>
+        public Dictionary<Instrument, int> Capos { get; set; } = new Dictionary<Instrument, int>();
         /// <summary>Tunings the player has defined and named, of all instruments.</summary>
         public List<InstrumentTuning> CustomTunings { get; set; } = new List<InstrumentTuning>();
         /// <summary>Draw chord diagrams with horizontal strings (nut on the left), like looking at the neck.</summary>
@@ -52,9 +54,27 @@ namespace Chords.App.Models
 			new Note(Tone.B)
 		};
 
-        /// <summary>The chosen instrument in its chosen tuning.</summary>
+        /// <summary>The chosen instrument in its chosen tuning, with its capo on; frets of diagrams count from the capo.</summary>
         [JsonIgnore]
-        public InstrumentInfo InstrumentInfo => InstrumentInfo.Get(Instrument, Tunings.GetValueOrDefault(Instrument));
+        public InstrumentInfo InstrumentInfo => InstrumentInfo.Get(Instrument, Tunings.GetValueOrDefault(Instrument), Capo);
+
+        /// <summary>Fret the capo of the chosen instrument is on (0 = none).</summary>
+        [JsonIgnore]
+        public int Capo
+        {
+            get => Capos.GetValueOrDefault(Instrument);
+            set
+            {
+                if (value <= 0)
+                {
+                    Capos.Remove(Instrument);
+                }
+                else
+                {
+                    Capos[Instrument] = Math.Min(value, InstrumentInfo.MaxCapo);
+                }
+            }
+        }
 
         /// <summary>Tuning chosen for an instrument: a preset, a saved custom tuning, or an unnamed custom one.</summary>
         public InstrumentTuning TuningOf(Instrument instrument)

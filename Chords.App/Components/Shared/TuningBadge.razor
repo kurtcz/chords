@@ -1,7 +1,7 @@
 @inject AppState State
 @inject NavigationManager Nav
 
-@* Reminds that the instrument is in an alternate tuning; nothing in the standard one. Opens the settings. *@
+@* Reminds that the instrument is in an alternate tuning or has a capo on; nothing in the standard one. Opens the settings. *@
 @if (!State.Settings.InstrumentInfo.IsStandardTuning)
 {
     var tuning = State.Settings.TuningOf(State.Settings.Instrument);
@@ -12,5 +12,11 @@
         {
             <span class="@(tuning.Offset(s) != 0 ? "retuned" : null)">@tuning.NoteOf(s).ToString(State.Settings.conv)</span>
         }
+    </button>
+}
+@if (State.Settings.Capo > 0)
+{
+    <button type="button" class="tuning-badge capo-badge" @onclick='() => Nav.NavigateTo("settings")'>
+        <span class="tuning-badge-name">@L["Capo_Badge", State.Settings.Capo]</span>
     </button>
 }

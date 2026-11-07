@@ -142,4 +142,21 @@
   <data name="Tuning_Save" xml:space="preserve"><value>Uložiť</value></data>
   <data name="Tuning_Cancel" xml:space="preserve"><value>Zrušiť</value></data>
   <data name="Tuning_EditorHint" xml:space="preserve"><value>Šípkami ▲ ▼ naladíte strunu o poltón vyššie alebo nižšie, ťuknutím na tón si ho prehráte.</value></data>
+  <data name="Settings_Capo" xml:space="preserve"><value>Kapodaster</value></data>
+  <data name="Capo_None" xml:space="preserve"><value>Bez kapodastra</value></data>
+  <data name="Capo_Fret" xml:space="preserve"><value>{0}. pražec</value></data>
+  <data name="Capo_Badge" xml:space="preserve"><value>Kapodaster {0}</value></data>
+  <data name="Capo_Shape" xml:space="preserve"><value>Kapodaster na {0}. pražci: hraj tvar {1}</value></data>
+  <data name="Capo_ShapeShort" xml:space="preserve"><value>tvar {0}</value></data>
+  <data name="Key_CapoTitle" xml:space="preserve"><value>Najľahšie polohy kapodastra</value></data>
+  <data name="Key_CapoUse" xml:space="preserve"><value>Použiť</value></data>
+  <data name="Fretboard_Title" xml:space="preserve"><value>Na hmatníku</value></data>
+  <data name="Fretboard_Intervals" xml:space="preserve"><value>Intervaly</value></data>
+  <data name="Fretboard_Notes" xml:space="preserve"><value>Tóny</value></data>
+  <data name="Difficulty_Easy" xml:space="preserve"><value>Ľahký</value></data>
+  <data name="Difficulty_Medium" xml:space="preserve"><value>Stredný</value></data>
+  <data name="Difficulty_Hard" xml:space="preserve"><value>Ťažký</value></data>
+  <data name="Key_CapoHint" xml:space="preserve"><value>Stlač zobrazené tvary – s kapodastrom znejú ako {0}.</value></data>
+  <data name="Fretboard_ScaleHint" xml:space="preserve"><value>Kde na hmatníku ležia tóny stupnice {0}. 1 je tónika.</value></data>
+  <data name="Fretboard_ChordHint" xml:space="preserve"><value>Kde na hmatníku ležia tóny akordu {0}. 1 je základný tón.</value></data>
 </root>

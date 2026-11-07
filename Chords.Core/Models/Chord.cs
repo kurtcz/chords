@@ -181,6 +181,25 @@ namespace Chords.Core.Models
             return false;
 		}
 
+        /// <summary>
+        /// The same chord a number of half-steps higher (or lower, for a negative number), its root spelled the way
+        /// chord charts write it: B♭, E♭ and A♭ as flats, C♯ and F♯ as sharps.
+        /// </summary>
+        /// <remarks>
+        /// With a capo on fret n the shape to hold for a sounding chord is <c>Transpose(-n)</c>: D with the capo on 2 is a C shape.
+        /// </remarks>
+        public Chord Transpose(int halftones)
+        {
+            var root = Note.FromPitch(Note.AllNotesNormalized[0].ChromaticDistance(Root) + halftones);
+
+            if (root.Accidental == Accidental.Sharp && root.Tone != Tone.C && root.Tone != Tone.F)
+            {
+                root = Note.FromPitch(Note.AllNotesNormalized[0].ChromaticDistance(root), true);
+            }
+
+            return new Chord(root, ChordType);
+        }
+
         public override bool Equals(object obj)
         {
             var other = obj as Chord;

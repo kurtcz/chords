@@ -141,4 +141,21 @@
   <data name="Tuning_Save" xml:space="preserve"><value>Saxla</value></data>
   <data name="Tuning_Cancel" xml:space="preserve"><value>Ləğv et</value></data>
   <data name="Tuning_EditorHint" xml:space="preserve"><value>Simi yarım ton yuxarı və ya aşağı kökləmək üçün ▲ ▼ toxunun; eşitmək üçün nota toxunun.</value></data>
+  <data name="Settings_Capo" xml:space="preserve"><value>Kapodastr</value></data>
+  <data name="Capo_None" xml:space="preserve"><value>Kapodastrsız</value></data>
+  <data name="Capo_Fret" xml:space="preserve"><value>{0}-cü pərdə</value></data>
+  <data name="Capo_Badge" xml:space="preserve"><value>Kapo {0}</value></data>
+  <data name="Capo_Shape" xml:space="preserve"><value>Kapodastr {0}-cü pərdədə: {1} formasını basın</value></data>
+  <data name="Capo_ShapeShort" xml:space="preserve"><value>{0} forması</value></data>
+  <data name="Key_CapoTitle" xml:space="preserve"><value>Ən asan kapodastr mövqeləri</value></data>
+  <data name="Key_CapoUse" xml:space="preserve"><value>İstifadə et</value></data>
+  <data name="Fretboard_Title" xml:space="preserve"><value>Qrifdə</value></data>
+  <data name="Fretboard_Intervals" xml:space="preserve"><value>İntervallar</value></data>
+  <data name="Fretboard_Notes" xml:space="preserve"><value>Notlar</value></data>
+  <data name="Difficulty_Easy" xml:space="preserve"><value>Asan</value></data>
+  <data name="Difficulty_Medium" xml:space="preserve"><value>Orta</value></data>
+  <data name="Difficulty_Hard" xml:space="preserve"><value>Çətin</value></data>
+  <data name="Key_CapoHint" xml:space="preserve"><value>Göstərilən formaları bas – kapodastrla onlar {0} kimi səslənir.</value></data>
+  <data name="Fretboard_ScaleHint" xml:space="preserve"><value>{0} qammasının notları qrifdə harada yerləşir. 1 tonikadır.</value></data>
+  <data name="Fretboard_ChordHint" xml:space="preserve"><value>{0} akkordunun notları qrifdə harada yerləşir. 1 əsas tondur.</value></data>
 </root>

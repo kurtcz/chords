@@ -43,6 +43,9 @@ public class AppState
     /// <summary>Seventh chords instead of triads in a key and its progressions.</summary>
     public bool KeySevenths { get; set; }
 
+    /// <summary>The fretboard labels the notes by name instead of by interval.</summary>
+    public bool FretboardNoteNames { get; set; }
+
     /// <summary>Chords entered to find the key of a song.</summary>
     public List<Chord> KeyDetectChords { get; } = [];
 

@@ -145,4 +145,21 @@
   <data name="Tuning_Save" xml:space="preserve"><value>Cadw</value></data>
   <data name="Tuning_Cancel" xml:space="preserve"><value>Diddymu</value></data>
   <data name="Tuning_EditorHint" xml:space="preserve"><value>Tapiwch ▲ ▼ i diwnio tant hanner tôn i fyny neu i lawr; tapiwch nodyn i’w glywed.</value></data>
+  <data name="Settings_Capo" xml:space="preserve"><value>Capo</value></data>
+  <data name="Capo_None" xml:space="preserve"><value>Dim capo</value></data>
+  <data name="Capo_Fret" xml:space="preserve"><value>Ffret {0}</value></data>
+  <data name="Capo_Badge" xml:space="preserve"><value>Capo {0}</value></data>
+  <data name="Capo_Shape" xml:space="preserve"><value>Capo ar ffret {0}: daliwch siâp {1}</value></data>
+  <data name="Capo_ShapeShort" xml:space="preserve"><value>siâp {0}</value></data>
+  <data name="Key_CapoTitle" xml:space="preserve"><value>Safleoedd capo hawsaf</value></data>
+  <data name="Key_CapoUse" xml:space="preserve"><value>Defnyddio</value></data>
+  <data name="Fretboard_Title" xml:space="preserve"><value>Ar y gwddf</value></data>
+  <data name="Fretboard_Intervals" xml:space="preserve"><value>Cyfyngau</value></data>
+  <data name="Fretboard_Notes" xml:space="preserve"><value>Nodau</value></data>
+  <data name="Difficulty_Easy" xml:space="preserve"><value>Hawdd</value></data>
+  <data name="Difficulty_Medium" xml:space="preserve"><value>Canolig</value></data>
+  <data name="Difficulty_Hard" xml:space="preserve"><value>Anodd</value></data>
+  <data name="Key_CapoHint" xml:space="preserve"><value>Chwaraewch y siapiau a ddangosir – gyda'r capo maen nhw'n swnio fel {0}.</value></data>
+  <data name="Fretboard_ScaleHint" xml:space="preserve"><value>Ble mae nodau graddfa {0} ar y gwddf. 1 yw'r tonydd.</value></data>
+  <data name="Fretboard_ChordHint" xml:space="preserve"><value>Ble mae nodau cord {0} ar y gwddf. 1 yw'r gwreiddyn.</value></data>
 </root>

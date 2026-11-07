@@ -141,4 +141,21 @@
   <data name="Tuning_Save" xml:space="preserve"><value>შენახვა</value></data>
   <data name="Tuning_Cancel" xml:space="preserve"><value>გაუქმება</value></data>
   <data name="Tuning_EditorHint" xml:space="preserve"><value>შეეხეთ ▲ ▼ სიმის ნახევარი ტონით ასაწევად ან დასაწევად; შეეხეთ ნოტს მის მოსასმენად.</value></data>
+  <data name="Settings_Capo" xml:space="preserve"><value>კაპო</value></data>
+  <data name="Capo_None" xml:space="preserve"><value>კაპოს გარეშე</value></data>
+  <data name="Capo_Fret" xml:space="preserve"><value>{0}-ე ლადი</value></data>
+  <data name="Capo_Badge" xml:space="preserve"><value>კაპო {0}</value></data>
+  <data name="Capo_Shape" xml:space="preserve"><value>კაპო {0}-ე ლადზე: დააჭირეთ {1} ფორმას</value></data>
+  <data name="Capo_ShapeShort" xml:space="preserve"><value>{0} ფორმა</value></data>
+  <data name="Key_CapoTitle" xml:space="preserve"><value>კაპოს ყველაზე მარტივი პოზიციები</value></data>
+  <data name="Key_CapoUse" xml:space="preserve"><value>გამოყენება</value></data>
+  <data name="Fretboard_Title" xml:space="preserve"><value>გრიფზე</value></data>
+  <data name="Fretboard_Intervals" xml:space="preserve"><value>ინტერვალები</value></data>
+  <data name="Fretboard_Notes" xml:space="preserve"><value>ნოტები</value></data>
+  <data name="Difficulty_Easy" xml:space="preserve"><value>მარტივი</value></data>
+  <data name="Difficulty_Medium" xml:space="preserve"><value>საშუალო</value></data>
+  <data name="Difficulty_Hard" xml:space="preserve"><value>რთული</value></data>
+  <data name="Key_CapoHint" xml:space="preserve"><value>დაიჭირეთ ნაჩვენები ფორმები – კაპოთი ისინი ჟღერს როგორც {0}.</value></data>
+  <data name="Fretboard_ScaleHint" xml:space="preserve"><value>სად არის {0} გამის ნოტები გრიფზე. 1 ტონიკაა.</value></data>
+  <data name="Fretboard_ChordHint" xml:space="preserve"><value>სად არის {0} აკორდის ნოტები გრიფზე. 1 ძირითადი ტონია.</value></data>
 </root>

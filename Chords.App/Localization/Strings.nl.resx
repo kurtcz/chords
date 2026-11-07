@@ -141,4 +141,21 @@
   <data name="Tuning_Save" xml:space="preserve"><value>Opslaan</value></data>
   <data name="Tuning_Cancel" xml:space="preserve"><value>Annuleren</value></data>
   <data name="Tuning_EditorHint" xml:space="preserve"><value>Tik op ▲ ▼ om een snaar een halve toon hoger of lager te stemmen; tik op een noot om hem te horen.</value></data>
+  <data name="Settings_Capo" xml:space="preserve"><value>Capo</value></data>
+  <data name="Capo_None" xml:space="preserve"><value>Geen capo</value></data>
+  <data name="Capo_Fret" xml:space="preserve"><value>{0}e fret</value></data>
+  <data name="Capo_Badge" xml:space="preserve"><value>Capo {0}</value></data>
+  <data name="Capo_Shape" xml:space="preserve"><value>Capo op de {0}e fret: neem de {1}-vorm</value></data>
+  <data name="Capo_ShapeShort" xml:space="preserve"><value>{0}-vorm</value></data>
+  <data name="Key_CapoTitle" xml:space="preserve"><value>Makkelijkste capoposities</value></data>
+  <data name="Key_CapoUse" xml:space="preserve"><value>Gebruiken</value></data>
+  <data name="Fretboard_Title" xml:space="preserve"><value>Op de hals</value></data>
+  <data name="Fretboard_Intervals" xml:space="preserve"><value>Intervallen</value></data>
+  <data name="Fretboard_Notes" xml:space="preserve"><value>Noten</value></data>
+  <data name="Difficulty_Easy" xml:space="preserve"><value>Makkelijk</value></data>
+  <data name="Difficulty_Medium" xml:space="preserve"><value>Gemiddeld</value></data>
+  <data name="Difficulty_Hard" xml:space="preserve"><value>Moeilijk</value></data>
+  <data name="Key_CapoHint" xml:space="preserve"><value>Speel de getoonde grepen – met capo klinken ze als {0}.</value></data>
+  <data name="Fretboard_ScaleHint" xml:space="preserve"><value>Waar de tonen van de toonladder {0} op de hals liggen. 1 is de grondtoon.</value></data>
+  <data name="Fretboard_ChordHint" xml:space="preserve"><value>Waar de tonen van het akkoord {0} op de hals liggen. 1 is de grondtoon.</value></data>
 </root>

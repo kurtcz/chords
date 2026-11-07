@@ -53,8 +53,11 @@ namespace Chords.App.Models
             var frets = info.DiagramFrets;
             var neck = 20 + frets * 40;
             //an alternate tuning is spelled out past the end of the neck, its retuned strings highlighted
+            var tuned = info.Uncapoed;
             var tuning = info.IsStandardTuning ? null
-                : InstrumentTuning.FindPreset(info.Instrument, info.Pitches) ?? new InstrumentTuning(null, info.Instrument, info.Pitches);
+                : InstrumentTuning.FindPreset(info.Instrument, tuned.Pitches) ?? new InstrumentTuning(null, info.Instrument, tuned.Pitches);
+            //frets of the diagram count from the capo; its labels give the frets of the neck
+            var capo = info.Capo;
             var tuningRoom = tuning == null ? 0 : 18;
             int svgWidth, svgHeight;
             Func<int, int, (int X, int Y)> P;
@@ -98,7 +101,14 @@ namespace Chords.App.Models
             {
                 sb.Append(Line(P(A(info.FirstStringAtFret(RenderingFret + i)), 20 + i * 40), P(span, 20 + i * 40), color, 1));
             }
-            if (RenderingFret == 0)
+            if (RenderingFret == 0 && capo > 0)
+            {
+                //the capo clamps all strings just behind its fret wire, a little wider than the strings
+                var from = P(A(info.FirstStringAtFret(0)) - 8, 16);
+                var to = P(span + 8, 24);
+                sb.Append($"\t\t<rect class=\"capo\" x=\"{Math.Min(from.X, to.X)}\" y=\"{Math.Min(from.Y, to.Y)}\" width=\"{Math.Abs(to.X - from.X)}\" height=\"{Math.Abs(to.Y - from.Y)}\" rx=\"3\" fill=\"#555\" />\n");
+            }
+            else if (RenderingFret == 0)
             {
                 sb.Append(Line(P(A(info.FirstStringAtFret(0)), 20), P(span, 20), color, 2));
             }
@@ -129,6 +139,7 @@ namespace Chords.App.Models
                 var f = (IntPositions[first] - RenderingFret) * 40;
                 sb.Append(Line(P(A(first), f), P(A(last), f), "blue", 5));
             }
+            var fingers = _layout.Fingers;
             for (var s = 0; s < strings; s++)
             {
                 //muted string
@@ -138,15 +149,24 @@ namespace Chords.App.Models
                     sb.Append(Line((c.X - 6, c.Y - 6), (c.X + 6, c.Y + 6), "red", 4));
                     sb.Append(Line((c.X - 6, c.Y + 6), (c.X + 6, c.Y - 6), "red", 4));
                 }
-                //empty string
+                //empty string (with a capo it rings from the capo, the circle drawn on it)
                 else if (IntPositions[s] == 0)
                 {
                     sb.Append(Circle(P(A(s), 20), "white"));
                 }
-                //pressed string
+                //pressed string, with the finger that presses it
                 else
                 {
-                    sb.Append(Circle(P(A(s), (IntPositions[s] - RenderingFret) * 40), "blue"));
+                    var c = P(A(s), (IntPositions[s] - RenderingFret) * 40);
+                    if (fingers == null)
+                    {
+                        sb.Append(Circle(c, "blue"));
+                    }
+                    else
+                    {
+                        sb.Append($"\t\t<circle cx=\"{c.X}\" cy=\"{c.Y}\" r=\"8\" fill=\"blue\" />\n");
+                        sb.Append($"\t\t<text class=\"finger\" x=\"{c.X}\" y=\"{c.Y + 3.5}\" font-size=\"10\" font-weight=\"bold\" fill=\"white\" text-anchor=\"middle\">{fingers[s]}</text>\n");
+                    }
                 }
             }
             if (tuning != null)
@@ -162,7 +182,7 @@ namespace Chords.App.Models
             for (var i = 0; i <= frets; i++)
             {
                 var p = horizontal ? (P(span, 20 + i * 40).X, 12) : (15, 23 + i * 40);
-                sb.Append($"\t\t<text x=\"{p.Item1}\" y=\"{p.Item2}\" text-anchor=\"{(horizontal ? "middle" : "end")}\" fill=\"{color}\" stroke=\"none\" font-size=\"12\">{RenderingFret + i}</text>\n");
+                sb.Append($"\t\t<text x=\"{p.Item1}\" y=\"{p.Item2}\" text-anchor=\"{(horizontal ? "middle" : "end")}\" fill=\"{color}\" stroke=\"none\" font-size=\"12\">{capo + RenderingFret + i}</text>\n");
             }
             sb.AppendLine("\t</svg>");
 

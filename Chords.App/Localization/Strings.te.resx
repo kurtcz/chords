@@ -141,4 +141,21 @@
   <data name="Tuning_Save" xml:space="preserve"><value>సేవ్ చేయి</value></data>
   <data name="Tuning_Cancel" xml:space="preserve"><value>రద్దు చేయి</value></data>
   <data name="Tuning_EditorHint" xml:space="preserve"><value>తీగను అర స్వరం పైకి లేదా కిందకు మార్చడానికి ▲ ▼ నొక్కండి; వినడానికి స్వరాన్ని నొక్కండి.</value></data>
+  <data name="Settings_Capo" xml:space="preserve"><value>కాపో</value></data>
+  <data name="Capo_None" xml:space="preserve"><value>కాపో లేకుండా</value></data>
+  <data name="Capo_Fret" xml:space="preserve"><value>ఫ్రెట్ {0}</value></data>
+  <data name="Capo_Badge" xml:space="preserve"><value>కాపో {0}</value></data>
+  <data name="Capo_Shape" xml:space="preserve"><value>ఫ్రెట్ {0} వద్ద కాపో: {1} ఆకారం పట్టండి</value></data>
+  <data name="Capo_ShapeShort" xml:space="preserve"><value>{0} ఆకారం</value></data>
+  <data name="Key_CapoTitle" xml:space="preserve"><value>సులభమైన కాపో స్థానాలు</value></data>
+  <data name="Key_CapoUse" xml:space="preserve"><value>వాడు</value></data>
+  <data name="Fretboard_Title" xml:space="preserve"><value>ఫింగర్‌బోర్డ్‌పై</value></data>
+  <data name="Fretboard_Intervals" xml:space="preserve"><value>అంతరాలు</value></data>
+  <data name="Fretboard_Notes" xml:space="preserve"><value>స్వరాలు</value></data>
+  <data name="Difficulty_Easy" xml:space="preserve"><value>సులభం</value></data>
+  <data name="Difficulty_Medium" xml:space="preserve"><value>మధ్యస్థం</value></data>
+  <data name="Difficulty_Hard" xml:space="preserve"><value>కష్టం</value></data>
+  <data name="Key_CapoHint" xml:space="preserve"><value>చూపిన ఆకారాలను పట్టుకోండి – కాపోతో అవి {0} లా వినిపిస్తాయి.</value></data>
+  <data name="Fretboard_ScaleHint" xml:space="preserve"><value>{0} స్కేల్ స్వరాలు ఫింగర్‌బోర్డ్‌పై ఎక్కడ ఉన్నాయి. 1 టానిక్.</value></data>
+  <data name="Fretboard_ChordHint" xml:space="preserve"><value>{0} కార్డ్ స్వరాలు ఫింగర్‌బోర్డ్‌పై ఎక్కడ ఉన్నాయి. 1 మూల స్వరం.</value></data>
 </root>

@@ -141,4 +141,21 @@
   <data name="Tuning_Save" xml:space="preserve"><value>Desa</value></data>
   <data name="Tuning_Cancel" xml:space="preserve"><value>Cancel·la</value></data>
   <data name="Tuning_EditorHint" xml:space="preserve"><value>Toca ▲ ▼ per pujar o baixar una corda mig to; toca una nota per escoltar-la.</value></data>
+  <data name="Settings_Capo" xml:space="preserve"><value>Capodastre</value></data>
+  <data name="Capo_None" xml:space="preserve"><value>Sense capodastre</value></data>
+  <data name="Capo_Fret" xml:space="preserve"><value>Trast {0}</value></data>
+  <data name="Capo_Badge" xml:space="preserve"><value>Capo {0}</value></data>
+  <data name="Capo_Shape" xml:space="preserve"><value>Capodastre al trast {0}: fes la forma de {1}</value></data>
+  <data name="Capo_ShapeShort" xml:space="preserve"><value>forma de {0}</value></data>
+  <data name="Key_CapoTitle" xml:space="preserve"><value>Posicions de capodastre més fàcils</value></data>
+  <data name="Key_CapoUse" xml:space="preserve"><value>Utilitza</value></data>
+  <data name="Fretboard_Title" xml:space="preserve"><value>Al diapasó</value></data>
+  <data name="Fretboard_Intervals" xml:space="preserve"><value>Intervals</value></data>
+  <data name="Fretboard_Notes" xml:space="preserve"><value>Notes</value></data>
+  <data name="Difficulty_Easy" xml:space="preserve"><value>Fàcil</value></data>
+  <data name="Difficulty_Medium" xml:space="preserve"><value>Mitjana</value></data>
+  <data name="Difficulty_Hard" xml:space="preserve"><value>Difícil</value></data>
+  <data name="Key_CapoHint" xml:space="preserve"><value>Toca les formes mostrades: amb la cellilla sonen com {0}.</value></data>
+  <data name="Fretboard_ScaleHint" xml:space="preserve"><value>On són les notes de l’escala {0} al mànec. 1 és la tònica.</value></data>
+  <data name="Fretboard_ChordHint" xml:space="preserve"><value>On són les notes de l’acord {0} al mànec. 1 és la fonamental.</value></data>
 </root>

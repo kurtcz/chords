@@ -21,11 +21,19 @@ namespace Chords.Core.Models
         private static readonly ConcurrentDictionary<string, InstrumentInfo> _tuned = new ConcurrentDictionary<string, InstrumentInfo>();
 
         public Instrument Instrument { get; private set; }
-        /// <summary>Whether the strings are tuned the usual way (not to an alternate <see cref="InstrumentTuning"/>).</summary>
-        public bool IsStandardTuning => ReferenceEquals(this, Get(Instrument));
-        /// <summary>Open strings from the lowest (left in diagrams) to the highest.</summary>
+        /// <summary>Whether the strings are tuned the usual way (not to an alternate <see cref="InstrumentTuning"/>), with or without a capo.</summary>
+        public bool IsStandardTuning => ReferenceEquals(Uncapoed, Get(Instrument));
+        /// <summary>
+        /// Fret the capo clamps (0 = none). Frets of a capoed instrument count from the capo, which acts as the nut:
+        /// <see cref="Strings"/> and <see cref="Pitches"/> are what the strings sound with the capo on.
+        /// The banjo's short string is raised alike (by a spike or its own capo).
+        /// </summary>
+        public int Capo { get; private set; }
+        /// <summary>The same instrument without the capo: its tuning.</summary>
+        public InstrumentInfo Uncapoed { get; private set; }
+        /// <summary>Open strings from the lowest (left in diagrams) to the highest, as they sound with the capo on.</summary>
         public Note[] Strings { get; }
-        /// <summary>MIDI pitch of each open string (E2 = 40), used for playback.</summary>
+        /// <summary>MIDI pitch of each open string (E2 = 40), as it sounds with the capo on; used for playback.</summary>
         public int[] Pitches { get; }
         /// <summary>Whether some strings may stay silent (only at the edges, never in the middle).</summary>
         public bool AllowMutedStrings { get; }
@@ -57,6 +65,7 @@ namespace Chords.Core.Models
             Pitches = strings.Select(i => i.Pitch).ToArray();
             AllowMutedStrings = allowMutedStrings;
             FirstFrets = new int[strings.Length];
+            Uncapoed = this;
         }
 
         private InstrumentInfo(int[] firstFrets, bool allowMutedStrings, params (Tone Tone, int Pitch)[] strings)
@@ -65,17 +74,19 @@ namespace Chords.Core.Models
             FirstFrets = firstFrets;
         }
 
-        /// <summary>The same instrument with its strings tuned to other pitches.</summary>
-        private InstrumentInfo(InstrumentInfo standard, int[] pitches)
+        /// <summary>The same instrument with its strings tuned to other pitches, or with a capo on.</summary>
+        private InstrumentInfo(InstrumentInfo standard, int[] pitches, int capo = 0)
         {
-            Strings = pitches.Select(p => Note.FromPitch(p)).ToArray();
-            Pitches = pitches.ToArray();
+            Strings = pitches.Select(p => Note.FromPitch(p + capo)).ToArray();
+            Pitches = pitches.Select(p => p + capo).ToArray();
+            Capo = capo;
             AllowMutedStrings = standard.AllowMutedStrings;
             FirstFrets = standard.FirstFrets;
             ComfortableFretSpan = standard.ComfortableFretSpan;
             MaxFretSpan = standard.MaxFretSpan;
             AllowInnerMutedStrings = standard.AllowInnerMutedStrings;
             Instrument = standard.Instrument;
+            Uncapoed = capo == 0 ? this : Get(standard.Instrument, pitches);
         }
 
         /// <summary>Whether a string is shorter than the neck (banjo's 5th string).</summary>
@@ -184,5 +195,28 @@ namespace Chords.Core.Models
 
             return _tuned.GetOrAdd($"{instrument}:{string.Join(",", pitches)}", _ => new InstrumentInfo(standard, pitches));
         }
+
+        /// <summary>Highest fret a capo is offered at: beyond it the frets get too narrow for chord shapes.</summary>
+        public const int MaxCapo = 9;
+
+        /// <summary>
+        /// The instrument in a tuning (null = standard) with a capo on a fret (0 = none, clamped to <see cref="MaxCapo"/>).
+        /// </summary>
+        /// <remarks>Instances are cached like the tunings.</remarks>
+        public static InstrumentInfo Get(Instrument instrument, int[] pitches, int capo)
+        {
+            var tuned = Get(instrument, pitches);
+
+            capo = Math.Max(0, Math.Min(MaxCapo, capo));
+            if (capo == 0)
+            {
+                return tuned;
+            }
+
+            return _tuned.GetOrAdd($"{instrument}:{string.Join(",", tuned.Pitches)}@{capo}", _ => new InstrumentInfo(Get(instrument), tuned.Pitches, capo));
+        }
+
+        /// <summary>The same instrument and tuning with the capo on another fret (0 = none).</summary>
+        public InstrumentInfo WithCapo(int capo) => Get(Instrument, Uncapoed.Pitches, capo);
     }
 }
