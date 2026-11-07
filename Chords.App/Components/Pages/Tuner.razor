@@ -323,7 +323,7 @@ else if (status == TunerStatus.Failed)
         lockedString = s;
         if (s >= 0)
         {
-            Player.PlayPitch(instrument.Pitches[s]);
+            Player.PlayPitch(instrument.Pitches[s], a4: a4);
         }
         Listener.Configure(instrument, a4, lockedString, chromatic);
     }

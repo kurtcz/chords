@@ -116,10 +116,11 @@ public class ChordPlayer(ISoundBank soundBank)
     /// and the rate that shifts it to the played note.
     /// Android's SoundPool only plays at 0.5–2×, so notes beyond that sound an octave closer.
     /// </summary>
-    private static (int Sample, float Rate) SampleFor(int openPitch, int fret)
+    private static (int Sample, float Rate) SampleFor(int openPitch, int fret, double a4 = StandardA4)
     {
         var sample = Math.Max(0, Array.FindLastIndex(SamplePitches, p => p <= openPitch));
-        var rate = (float)Math.Pow(2, (openPitch + fret - SamplePitches[sample]) / 12.0);
+        // The recordings are tuned to A4 = 440 Hz; another reference pitch scales every note alike.
+        var rate = (float)(Math.Pow(2, (openPitch + fret - SamplePitches[sample]) / 12.0) * a4 / StandardA4);
 
         while (rate > 2f)
         {
@@ -133,10 +134,16 @@ public class ChordPlayer(ISoundBank soundBank)
         return (sample, rate);
     }
 
-    /// <summary>Plays a single note (MIDI pitch), e.g. an open string as the tuner's reference.</summary>
-    public void PlayPitch(int pitch, float volume = 1f)
+    /// <summary>Reference pitch of A4 (Hz) the recorded samples are tuned to.</summary>
+    public const double StandardA4 = 440;
+
+    /// <summary>
+    /// Plays a single note (MIDI pitch), e.g. an open string as the tuner's reference,
+    /// tuned to the given A4 reference pitch (Hz).
+    /// </summary>
+    public void PlayPitch(int pitch, float volume = 1f, double a4 = StandardA4)
     {
-        var (sample, rate) = SampleFor(pitch, 0);
+        var (sample, rate) = SampleFor(pitch, 0, a4);
 
         soundBank.PlayString(sample, rate, volume);
     }
