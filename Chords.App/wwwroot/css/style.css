@@ -699,14 +699,15 @@ h1.navbar-brand {
 }
 
 .tuner-label {
-    font-size: 11px;
-    fill: #aaa;
+    font-size: 14px;
+    font-weight: 600;
+    fill: #888;
     text-anchor: middle;
 }
 
 .tuner-accidental {
-    font-size: 18px;
-    fill: #999;
+    font-size: 26px;
+    fill: #777;
     text-anchor: middle;
 }
 

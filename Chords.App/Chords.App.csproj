@@ -22,6 +22,15 @@
     <SupportedOSPlatformVersion Condition="$(TargetFramework.Contains('-ios'))">15.0</SupportedOSPlatformVersion>
   </PropertyGroup>
 
+  <!--
+    A Debug build would run everything on the Mono interpreter (for hot reload), and the tuner's signal processing
+    (filter, FFT, pitch detection 50 times a second) is many times slower interpreted. Without it Android and the iOS
+    simulator JIT-compile and an iOS device AOT-compiles, as in Release; C# hot reload is not available.
+  -->
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <UseInterpreter>false</UseInterpreter>
+  </PropertyGroup>
+
   <PropertyGroup Condition="$(TargetFramework.Contains('-android')) and '$(Configuration)' == 'Release'">
     <AndroidPackageFormat>aab</AndroidPackageFormat>
     <AndroidKeyStore Condition="'$(AndroidSigningKeyStore)' != ''">true</AndroidKeyStore>
