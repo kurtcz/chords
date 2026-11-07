@@ -158,4 +158,8 @@
   <data name="Key_CapoHint" xml:space="preserve"><value>दाखवलेले आकार धरा – कॅपोसह ते {0} सारखे वाजतात.</value></data>
   <data name="Fretboard_ScaleHint" xml:space="preserve"><value>{0} स्केलचे सूर फिंगरबोर्डवर कुठे आहेत. 1 हा टॉनिक आहे.</value></data>
   <data name="Fretboard_ChordHint" xml:space="preserve"><value>{0} कॉर्डचे सूर फिंगरबोर्डवर कुठे आहेत. 1 हा मूळ सूर आहे.</value></data>
+  <data name="Fretboard_ScaleOnly" xml:space="preserve"><value>स्केल</value></data>
+  <data name="Fretboard_WholeNeck" xml:space="preserve"><value>संपूर्ण मान</value></data>
+  <data name="Fretboard_Position" xml:space="preserve"><value>फ्रेट {0}–{1}</value></data>
+  <data name="Fretboard_ChordInScaleHint" xml:space="preserve"><value>कॉर्ड {0} चे स्वर लेबल केलेले आहेत (1 हा त्याचा मूळ स्वर); ठिपके हे {1} स्केलचे इतर स्वर आहेत.</value></data>
 </root>

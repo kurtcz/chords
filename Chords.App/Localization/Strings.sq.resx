@@ -158,4 +158,8 @@
   <data name="Key_CapoHint" xml:space="preserve"><value>Kap format e treguara – me kapodaster tingëllojnë si {0}.</value></data>
   <data name="Fretboard_ScaleHint" xml:space="preserve"><value>Ku ndodhen notat e shkallës {0} në qafë. 1 është tonika.</value></data>
   <data name="Fretboard_ChordHint" xml:space="preserve"><value>Ku ndodhen notat e akordit {0} në qafë. 1 është toni bazë.</value></data>
+  <data name="Fretboard_ScaleOnly" xml:space="preserve"><value>Shkalla</value></data>
+  <data name="Fretboard_WholeNeck" xml:space="preserve"><value>I gjithë qafa</value></data>
+  <data name="Fretboard_Position" xml:space="preserve"><value>Tastet {0}–{1}</value></data>
+  <data name="Fretboard_ChordInScaleHint" xml:space="preserve"><value>Notat e akordit {0} janë të etiketuara (1 është tingulli bazë); pikat janë notat e tjera të shkallës {1}.</value></data>
 </root>

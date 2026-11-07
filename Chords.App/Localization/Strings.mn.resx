@@ -158,4 +158,8 @@
   <data name="Key_CapoHint" xml:space="preserve"><value>Үзүүлсэн хэлбэрүүдийг дар – каподастртай бол {0} шиг сонсогдоно.</value></data>
   <data name="Fretboard_ScaleHint" xml:space="preserve"><value>{0} гаммын нотууд хүзүүн дээр хаана байгааг харуулна. 1 бол тоник.</value></data>
   <data name="Fretboard_ChordHint" xml:space="preserve"><value>{0} аккордын нотууд хүзүүн дээр хаана байгааг харуулна. 1 бол үндсэн аялгуу.</value></data>
+  <data name="Fretboard_ScaleOnly" xml:space="preserve"><value>Гамм</value></data>
+  <data name="Fretboard_WholeNeck" xml:space="preserve"><value>Бүх гриф</value></data>
+  <data name="Fretboard_Position" xml:space="preserve"><value>{0}–{1} лад</value></data>
+  <data name="Fretboard_ChordInScaleHint" xml:space="preserve"><value>{0} аккордын авиануудыг тэмдэглэсэн (1 нь үндсэн авиа); цэгүүд нь {1} гаммын бусад авиа.</value></data>
 </root>

@@ -158,4 +158,8 @@
   <data name="Key_CapoHint" xml:space="preserve"><value>Tugtugin ang mga hugis na ipinakita – sa capo, tunog nila ay {0}.</value></data>
   <data name="Fretboard_ScaleHint" xml:space="preserve"><value>Kung saan nasa leeg ang mga nota ng scale na {0}. Ang 1 ay ang tonic.</value></data>
   <data name="Fretboard_ChordHint" xml:space="preserve"><value>Kung saan nasa leeg ang mga nota ng chord na {0}. Ang 1 ay ang root.</value></data>
+  <data name="Fretboard_ScaleOnly" xml:space="preserve"><value>Iskala</value></data>
+  <data name="Fretboard_WholeNeck" xml:space="preserve"><value>Buong leeg</value></data>
+  <data name="Fretboard_Position" xml:space="preserve"><value>Fret {0}–{1}</value></data>
+  <data name="Fretboard_ChordInScaleHint" xml:space="preserve"><value>May label ang mga nota ng chord na {0} (1 ang ugat nito); ang mga tuldok ay ang iba pang nota ng iskalang {1}.</value></data>
 </root>

@@ -157,4 +157,8 @@
   <data name="Key_CapoHint" xml:space="preserve"><value>Mainkan bentuk yang ditampilkan – dengan kapo terdengar sebagai {0}.</value></data>
   <data name="Fretboard_ScaleHint" xml:space="preserve"><value>Letak nada tangga nada {0} di leher gitar. 1 adalah tonika.</value></data>
   <data name="Fretboard_ChordHint" xml:space="preserve"><value>Letak nada akor {0} di leher gitar. 1 adalah nada dasar.</value></data>
+  <data name="Fretboard_ScaleOnly" xml:space="preserve"><value>Tangga nada</value></data>
+  <data name="Fretboard_WholeNeck" xml:space="preserve"><value>Seluruh leher</value></data>
+  <data name="Fretboard_Position" xml:space="preserve"><value>Fret {0}–{1}</value></data>
+  <data name="Fretboard_ChordInScaleHint" xml:space="preserve"><value>Nada-nada akor {0} diberi label (1 adalah nada dasarnya); titik-titik adalah nada lain dari tangga nada {1}.</value></data>
 </root>

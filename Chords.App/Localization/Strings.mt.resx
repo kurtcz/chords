@@ -161,4 +161,8 @@
   <data name="Key_CapoHint" xml:space="preserve"><value>Żomm il-forom murija – bil-capo jinstemgħu bħal {0}.</value></data>
   <data name="Fretboard_ScaleHint" xml:space="preserve"><value>Fejn jinsabu n-noti tal-iskala {0} fuq l-għonq. 1 hija t-tonika.</value></data>
   <data name="Fretboard_ChordHint" xml:space="preserve"><value>Fejn jinsabu n-noti tal-akkordju {0} fuq l-għonq. 1 hija l-għerq.</value></data>
+  <data name="Fretboard_ScaleOnly" xml:space="preserve"><value>Skala</value></data>
+  <data name="Fretboard_WholeNeck" xml:space="preserve"><value>L-għonq kollu</value></data>
+  <data name="Fretboard_Position" xml:space="preserve"><value>Frets {0}–{1}</value></data>
+  <data name="Fretboard_ChordInScaleHint" xml:space="preserve"><value>In-noti tal-korda {0} huma mmarkati (1 hija l-għerq tagħha); it-tikek huma n-noti l-oħra tal-iskala {1}.</value></data>
 </root>

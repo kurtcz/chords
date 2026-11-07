@@ -158,4 +158,8 @@
   <data name="Key_CapoHint" xml:space="preserve"><value>დაიჭირეთ ნაჩვენები ფორმები – კაპოთი ისინი ჟღერს როგორც {0}.</value></data>
   <data name="Fretboard_ScaleHint" xml:space="preserve"><value>სად არის {0} გამის ნოტები გრიფზე. 1 ტონიკაა.</value></data>
   <data name="Fretboard_ChordHint" xml:space="preserve"><value>სად არის {0} აკორდის ნოტები გრიფზე. 1 ძირითადი ტონია.</value></data>
+  <data name="Fretboard_ScaleOnly" xml:space="preserve"><value>გამა</value></data>
+  <data name="Fretboard_WholeNeck" xml:space="preserve"><value>მთელი გრიფი</value></data>
+  <data name="Fretboard_Position" xml:space="preserve"><value>ლადები {0}–{1}</value></data>
+  <data name="Fretboard_ChordInScaleHint" xml:space="preserve"><value>{0} აკორდის ბგერები აღნიშნულია (1 მისი ძირითადი ტონია); წერტილები {1} გამის დანარჩენი ბგერებია.</value></data>
 </root>

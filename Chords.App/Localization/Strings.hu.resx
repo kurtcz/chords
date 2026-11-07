@@ -158,4 +158,8 @@
   <data name="Key_CapoHint" xml:space="preserve"><value>Fogd a mutatott fogásokat – kapodaszterrel úgy szólnak, mint {0}.</value></data>
   <data name="Fretboard_ScaleHint" xml:space="preserve"><value>Hol vannak a(z) {0} skála hangjai a fogólapon. Az 1 az alaphang.</value></data>
   <data name="Fretboard_ChordHint" xml:space="preserve"><value>Hol vannak a(z) {0} akkord hangjai a fogólapon. Az 1 az alaphang.</value></data>
+  <data name="Fretboard_ScaleOnly" xml:space="preserve"><value>Skála</value></data>
+  <data name="Fretboard_WholeNeck" xml:space="preserve"><value>Teljes fogólap</value></data>
+  <data name="Fretboard_Position" xml:space="preserve"><value>{0}–{1}. bund</value></data>
+  <data name="Fretboard_ChordInScaleHint" xml:space="preserve"><value>A(z) {0} akkord hangjai feliratosak (1 az alaphangja); a pöttyök a(z) {1} skála többi hangja.</value></data>
 </root>

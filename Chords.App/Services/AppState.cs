@@ -45,6 +45,10 @@ public class AppState
 
     /// <summary>The fretboard labels the notes by name instead of by interval.</summary>
     public bool FretboardNoteNames { get; set; }
+    /// <summary>Fret the position shown on the fretboard starts at; null shows the whole neck.</summary>
+    public int? FretboardPosition { get; set; }
+    /// <summary>Degree of the chord (1–7) that stands out in the scale on the key page's fretboard; null shows the scale alone.</summary>
+    public int? KeyFretboardDegree { get; set; }
 
     /// <summary>Chords entered to find the key of a song.</summary>
     public List<Chord> KeyDetectChords { get; } = [];

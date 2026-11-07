@@ -159,4 +159,8 @@
   <data name="Key_CapoHint" xml:space="preserve"><value>Zagraj pokazane chwyty – z kapodastrem zabrzmią jak {0}.</value></data>
   <data name="Fretboard_ScaleHint" xml:space="preserve"><value>Gdzie na gryfie leżą dźwięki skali {0}. 1 to tonika.</value></data>
   <data name="Fretboard_ChordHint" xml:space="preserve"><value>Gdzie na gryfie leżą dźwięki akordu {0}. 1 to pryma.</value></data>
+  <data name="Fretboard_ScaleOnly" xml:space="preserve"><value>Skala</value></data>
+  <data name="Fretboard_WholeNeck" xml:space="preserve"><value>Cały gryf</value></data>
+  <data name="Fretboard_Position" xml:space="preserve"><value>Progi {0}–{1}</value></data>
+  <data name="Fretboard_ChordInScaleHint" xml:space="preserve"><value>Opisane są dźwięki akordu {0} (1 to jego pryma); kropki to pozostałe dźwięki skali {1}.</value></data>
 </root>

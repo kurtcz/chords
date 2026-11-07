@@ -159,4 +159,8 @@
   <data name="Key_CapoHint" xml:space="preserve"><value>נגנו את הצורות המוצגות – עם קאפו הן נשמעות כמו {0}.</value></data>
   <data name="Fretboard_ScaleHint" xml:space="preserve"><value>היכן נמצאים צלילי הסולם {0} על הצוואר. 1 הוא הטוניקה.</value></data>
   <data name="Fretboard_ChordHint" xml:space="preserve"><value>היכן נמצאים צלילי האקורד {0} על הצוואר. 1 הוא צליל היסוד.</value></data>
+  <data name="Fretboard_ScaleOnly" xml:space="preserve"><value>סולם</value></data>
+  <data name="Fretboard_WholeNeck" xml:space="preserve"><value>כל הצוואר</value></data>
+  <data name="Fretboard_Position" xml:space="preserve"><value>שריגים {0}–{1}</value></data>
+  <data name="Fretboard_ChordInScaleHint" xml:space="preserve"><value>צלילי האקורד {0} מסומנים (1 הוא הצליל היסודי שלו); הנקודות הן שאר צלילי הסולם {1}.</value></data>
 </root>

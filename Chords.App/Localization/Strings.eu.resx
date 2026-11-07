@@ -158,4 +158,8 @@
   <data name="Key_CapoHint" xml:space="preserve"><value>Jo erakutsitako formak – kapodastroarekin {0} bezala entzuten dira.</value></data>
   <data name="Fretboard_ScaleHint" xml:space="preserve"><value>Non dauden {0} eskalaren notak mastilean. 1 tonika da.</value></data>
   <data name="Fretboard_ChordHint" xml:space="preserve"><value>Non dauden {0} akordearen notak mastilean. 1 oinarria da.</value></data>
+  <data name="Fretboard_ScaleOnly" xml:space="preserve"><value>Eskala</value></data>
+  <data name="Fretboard_WholeNeck" xml:space="preserve"><value>Mastil osoa</value></data>
+  <data name="Fretboard_Position" xml:space="preserve"><value>{0}–{1} trasteak</value></data>
+  <data name="Fretboard_ChordInScaleHint" xml:space="preserve"><value>{0} akordearen notak izendatuta daude (1 haren oinarria da); puntuak {1} eskalaren gainerako notak dira.</value></data>
 </root>

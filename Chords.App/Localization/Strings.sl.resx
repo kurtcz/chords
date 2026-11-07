@@ -160,4 +160,8 @@
   <data name="Key_CapoHint" xml:space="preserve"><value>Primi prikazane oblike – s kapodastrom zvenijo kot {0}.</value></data>
   <data name="Fretboard_ScaleHint" xml:space="preserve"><value>Kje na vratu ležijo toni lestvice {0}. 1 je tonika.</value></data>
   <data name="Fretboard_ChordHint" xml:space="preserve"><value>Kje na vratu ležijo toni akorda {0}. 1 je osnovni ton.</value></data>
+  <data name="Fretboard_ScaleOnly" xml:space="preserve"><value>Lestvica</value></data>
+  <data name="Fretboard_WholeNeck" xml:space="preserve"><value>Ves vrat</value></data>
+  <data name="Fretboard_Position" xml:space="preserve"><value>Polja {0}–{1}</value></data>
+  <data name="Fretboard_ChordInScaleHint" xml:space="preserve"><value>Toni akorda {0} so označeni (1 je njegov osnovni ton); pike so drugi toni lestvice {1}.</value></data>
 </root>

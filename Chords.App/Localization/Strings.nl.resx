@@ -158,4 +158,8 @@
   <data name="Key_CapoHint" xml:space="preserve"><value>Speel de getoonde grepen – met capo klinken ze als {0}.</value></data>
   <data name="Fretboard_ScaleHint" xml:space="preserve"><value>Waar de tonen van de toonladder {0} op de hals liggen. 1 is de grondtoon.</value></data>
   <data name="Fretboard_ChordHint" xml:space="preserve"><value>Waar de tonen van het akkoord {0} op de hals liggen. 1 is de grondtoon.</value></data>
+  <data name="Fretboard_ScaleOnly" xml:space="preserve"><value>Toonladder</value></data>
+  <data name="Fretboard_WholeNeck" xml:space="preserve"><value>Hele hals</value></data>
+  <data name="Fretboard_Position" xml:space="preserve"><value>Fretten {0}–{1}</value></data>
+  <data name="Fretboard_ChordInScaleHint" xml:space="preserve"><value>De tonen van het akkoord {0} hebben een label (1 is de grondtoon); de stippen zijn de overige tonen van de toonladder {1}.</value></data>
 </root>

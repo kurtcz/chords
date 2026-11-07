@@ -159,4 +159,8 @@
   <data name="Key_CapoHint" xml:space="preserve"><value>Spausk parodytas formas – su kapodastru jos skamba kaip {0}.</value></data>
   <data name="Fretboard_ScaleHint" xml:space="preserve"><value>Kur ant grifo yra gamos {0} natos. 1 yra tonika.</value></data>
   <data name="Fretboard_ChordHint" xml:space="preserve"><value>Kur ant grifo yra akordo {0} natos. 1 yra pagrindinis tonas.</value></data>
+  <data name="Fretboard_ScaleOnly" xml:space="preserve"><value>Gama</value></data>
+  <data name="Fretboard_WholeNeck" xml:space="preserve"><value>Visas grifas</value></data>
+  <data name="Fretboard_Position" xml:space="preserve"><value>Skersiniai {0}–{1}</value></data>
+  <data name="Fretboard_ChordInScaleHint" xml:space="preserve"><value>Akordo {0} garsai pažymėti (1 yra jo pagrindinis tonas); taškai – kiti gamos {1} garsai.</value></data>
 </root>

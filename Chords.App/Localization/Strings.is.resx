@@ -158,4 +158,8 @@
   <data name="Key_CapoHint" xml:space="preserve"><value>Taktu gripin sem sýnd eru – með capo hljóma þau eins og {0}.</value></data>
   <data name="Fretboard_ScaleHint" xml:space="preserve"><value>Hvar tónar tónstigans {0} liggja á hálsinum. 1 er grunntónninn.</value></data>
   <data name="Fretboard_ChordHint" xml:space="preserve"><value>Hvar tónar hljómsins {0} liggja á hálsinum. 1 er grunntónninn.</value></data>
+  <data name="Fretboard_ScaleOnly" xml:space="preserve"><value>Tónstigi</value></data>
+  <data name="Fretboard_WholeNeck" xml:space="preserve"><value>Allur hálsinn</value></data>
+  <data name="Fretboard_Position" xml:space="preserve"><value>Bönd {0}–{1}</value></data>
+  <data name="Fretboard_ChordInScaleHint" xml:space="preserve"><value>Tónar hljómsins {0} eru merktir (1 er grunntónninn); punktarnir eru hinir tónar tónstigans {1}.</value></data>
 </root>

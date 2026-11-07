@@ -158,4 +158,8 @@
   <data name="Key_CapoHint" xml:space="preserve"><value>Көрсетілген пішіндерді бас – каподастрмен олар {0} болып естіледі.</value></data>
   <data name="Fretboard_ScaleHint" xml:space="preserve"><value>{0} гаммасының ноталары грифте қай жерде. 1 – тоника.</value></data>
   <data name="Fretboard_ChordHint" xml:space="preserve"><value>{0} аккордының ноталары грифте қай жерде. 1 – негізгі тон.</value></data>
+  <data name="Fretboard_ScaleOnly" xml:space="preserve"><value>Гамма</value></data>
+  <data name="Fretboard_WholeNeck" xml:space="preserve"><value>Бүкіл гриф</value></data>
+  <data name="Fretboard_Position" xml:space="preserve"><value>{0}–{1} ладтар</value></data>
+  <data name="Fretboard_ChordInScaleHint" xml:space="preserve"><value>{0} аккордының дыбыстары белгіленген (1 — оның негізгі тоны); нүктелер — {1} гаммасының қалған дыбыстары.</value></data>
 </root>

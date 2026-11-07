@@ -1,4 +1,4 @@
-@page "/key"
+﻿@page "/key"
 @inject AppState State
 @inject ChordPlayer Player
 
@@ -19,7 +19,7 @@
     <table class="table key-chords">
         <tbody>
             @* Stacking thirds in the non-diatonic scales can give a chord with no symbol (B D♭ F in C double harmonic); it is left out. *@
-            @foreach (var degree in Current.DiatonicChords(State.KeySevenths).Where(i => Current.Contains(i.Chord)))
+            @foreach (var degree in KeyChords)
             {
                 var chord = degree.Chord;
                 <tr>
@@ -71,8 +71,22 @@
             }
         </div>
     </section>
+    @* A chord of the key can stand out in the scale: its notes to lean on, the others to pass through. *@
+    var shown = FretboardChord;
     <FretboardView Notes="Current.Scale.Notes" Intervals="Current.ScaleType.ToIntervals()"
-                   Hint="@L["Fretboard_ScaleHint", KeyName(Current)]" />
+                   Chord="shown?.Notes" ChordIntervals="shown?.Intervals"
+                   Hint="@(shown == null ? L["Fretboard_ScaleHint", KeyName(Current)] : L["Fretboard_ChordInScaleHint", Symbol(shown), KeyName(Current)])">
+        <div class="fretboard-chords">
+            <button type="button" class="btn btn-sm @(shown == null ? "btn-primary" : "btn-default")"
+                    @onclick="() => State.KeyFretboardDegree = null">@L["Fretboard_ScaleOnly"]</button>
+            @foreach (var degree in KeyChords)
+            {
+                var d = degree.Degree;
+                <button type="button" class="btn btn-sm @(State.KeyFretboardDegree == d ? "btn-primary" : "btn-default")"
+                        @onclick="() => State.KeyFretboardDegree = d">@Symbol(degree.Chord)</button>
+            }
+        </div>
+    </FretboardView>
     <RelatedLinks Pages="[AppPages.Progressions, AppPages.Circle]"
                   Titles="@(new() { [AppPages.Progressions] = L["Key_Progressions"] })" />
 }
@@ -163,6 +177,12 @@ else
     [SupplyParameterFromQuery] public string Tab { get; set; }
 
     private Key Current => new(State.KeyTonic, State.KeyScale);
+
+    /// <summary>Chords of the key by degree.</summary>
+    private IEnumerable<DegreeChord> KeyChords => Current.DiatonicChords(State.KeySevenths).Where(i => Current.Contains(i.Chord));
+
+    /// <summary>Chord standing out in the scale on the fretboard, null for none (or none at that degree in this scale).</summary>
+    private Chord FretboardChord => KeyChords.FirstOrDefault(i => i.Degree == State.KeyFretboardDegree)?.Chord;
 
     /// <summary>Capo of the chosen instrument (0 = none).</summary>
     private int capo => State.Settings.Capo;

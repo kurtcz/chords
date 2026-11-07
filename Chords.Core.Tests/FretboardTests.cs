@@ -1,4 +1,4 @@
-using System.Linq;
+﻿using System.Linq;
 using Chords.Core.Extensions;
 using Chords.Core.Models;
 using Xunit;
@@ -46,6 +46,37 @@ public class FretboardTests
         Assert.DoesNotContain(found, i => i.String == 0 && i.Fret < 5);
         Assert.Equal(5, Fretboard.OpenFret(InstrumentInfo.Banjo, 0, 2));
         Assert.Equal(7, Fretboard.OpenFret(InstrumentInfo.Banjo, 0, 7));
+    }
+
+    [Fact]
+    public void PositionsStartWhereTheLowStringHasANote()
+    {
+        var notes = new Scale(new Note(Tone.A), ScaleType.Minor).Notes;
+
+        Assert.Equal(new[] { 0, 1, 3, 5, 7, 8 }, Fretboard.Positions(InstrumentInfo.Guitar, notes, 0, 12));
+        //the open position reaches the 4th fret, the others span four frets
+        Assert.Equal(4, Fretboard.PositionEnd(InstrumentInfo.Guitar, 0, 0));
+        Assert.Equal(8, Fretboard.PositionEnd(InstrumentInfo.Guitar, 5, 0));
+    }
+
+    [Fact]
+    public void PositionsStartFromTheCapo()
+    {
+        var notes = new Scale(new Note(Tone.D), ScaleType.Major).Notes;
+        var positions = Fretboard.Positions(InstrumentInfo.Guitar, notes, 2, 12);
+
+        Assert.Equal(2, positions[0]);
+        Assert.All(positions, i => Assert.True(i >= 2));
+        Assert.Equal(6, Fretboard.PositionEnd(InstrumentInfo.Guitar, 2, 2));
+    }
+
+    [Fact]
+    public void BanjoPositionsFollowTheLowFullString()
+    {
+        //D string (the 4th) is the lowest that runs from the nut
+        var positions = Fretboard.Positions(InstrumentInfo.Banjo, new[] { new Note(Tone.D) }, 0, 12);
+
+        Assert.Equal(new[] { 0 }, positions);
     }
 
     [Theory]

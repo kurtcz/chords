@@ -157,4 +157,8 @@
   <data name="Key_CapoHint" xml:space="preserve"><value>Mainkan bentuk yang ditunjukkan – dengan kapo ia berbunyi seperti {0}.</value></data>
   <data name="Fretboard_ScaleHint" xml:space="preserve"><value>Kedudukan not skala {0} pada leher. 1 ialah tonik.</value></data>
   <data name="Fretboard_ChordHint" xml:space="preserve"><value>Kedudukan not kord {0} pada leher. 1 ialah not dasar.</value></data>
+  <data name="Fretboard_ScaleOnly" xml:space="preserve"><value>Skala</value></data>
+  <data name="Fretboard_WholeNeck" xml:space="preserve"><value>Seluruh leher</value></data>
+  <data name="Fretboard_Position" xml:space="preserve"><value>Fret {0}–{1}</value></data>
+  <data name="Fretboard_ChordInScaleHint" xml:space="preserve"><value>Not kord {0} dilabelkan (1 ialah not dasarnya); titik-titik ialah not lain dalam skala {1}.</value></data>
 </root>

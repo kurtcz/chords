@@ -157,4 +157,8 @@
   <data name="Key_CapoHint" xml:space="preserve"><value>表示された形で押さえると、カポで {0} として鳴ります。</value></data>
   <data name="Fretboard_ScaleHint" xml:space="preserve"><value>{0} スケールの音が指板のどこにあるか。1 は主音です。</value></data>
   <data name="Fretboard_ChordHint" xml:space="preserve"><value>{0} コードの音が指板のどこにあるか。1 はルートです。</value></data>
+  <data name="Fretboard_ScaleOnly" xml:space="preserve"><value>スケール</value></data>
+  <data name="Fretboard_WholeNeck" xml:space="preserve"><value>ネック全体</value></data>
+  <data name="Fretboard_Position" xml:space="preserve"><value>{0}–{1} フレット</value></data>
+  <data name="Fretboard_ChordInScaleHint" xml:space="preserve"><value>{0} コードの音にラベルがあります（1 はルート）。点は {1} スケールのほかの音です。</value></data>
 </root>

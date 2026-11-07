@@ -60,6 +60,28 @@ namespace Chords.Core.Models
             return result.ToArray();
         }
 
+        /// <summary>
+        /// Positions to play the notes in, one hand's span of frets each, by the fret they start at: every fret from the capo
+        /// (or the nut) where the lowest full-length string sounds one of the notes, the way scale shapes are counted.
+        /// </summary>
+        public static int[] Positions(InstrumentInfo info, IReadOnlyList<Note> notes, int capo, int frets)
+        {
+            var normalized = notes.Select(Note.Normalize).ToArray();
+            var low = Enumerable.Range(0, info.StringCount).Where(s => !info.IsShortString(s)).OrderBy(s => info.Pitches[s]).First();
+            var last = frets - info.ComfortableFretSpan + 1;
+
+            return Enumerable.Range(capo, Math.Max(0, last - capo + 1))
+                             .Where(fret => normalized.Contains(Note.Normalize(info.NoteAt(low, fret))))
+                             .ToArray();
+        }
+
+        /// <summary>
+        /// Last fret of the position starting at <paramref name="start"/>: a span of frets for the fingers,
+        /// and from the open strings the frets above them.
+        /// </summary>
+        public static int PositionEnd(InstrumentInfo info, int start, int capo) =>
+            start + info.ComfortableFretSpan - (start <= capo ? 0 : 1);
+
         /// <summary>Fret a string rings open from: the capo, or for a short string (banjo's 5th) its own nut if that is higher.</summary>
         public static int OpenFret(InstrumentInfo info, int s, int capo) => Math.Max(capo, info.FirstFrets[s]);
 

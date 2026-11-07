@@ -158,4 +158,8 @@
   <data name="Key_CapoHint" xml:space="preserve"><value>Ko‘rsatilgan shakllarni bosing – kapodastr bilan ular {0} kabi yangraydi.</value></data>
   <data name="Fretboard_ScaleHint" xml:space="preserve"><value>{0} gammasining notalari grifda qayerda joylashgan. 1 – tonika.</value></data>
   <data name="Fretboard_ChordHint" xml:space="preserve"><value>{0} akkordining notalari grifda qayerda joylashgan. 1 – asosiy ton.</value></data>
+  <data name="Fretboard_ScaleOnly" xml:space="preserve"><value>Gamma</value></data>
+  <data name="Fretboard_WholeNeck" xml:space="preserve"><value>Butun grif</value></data>
+  <data name="Fretboard_Position" xml:space="preserve"><value>{0}–{1} pardalar</value></data>
+  <data name="Fretboard_ChordInScaleHint" xml:space="preserve"><value>{0} akkordining tovushlari belgilangan (1 — uning asosiy tovushi); nuqtalar — {1} gammasining qolgan tovushlari.</value></data>
 </root>

@@ -161,4 +161,8 @@
   <data name="Key_CapoHint" xml:space="preserve"><value>Seinn na cruthanna a thaispeántar – leis an capo fuaimníonn siad mar {0}.</value></data>
   <data name="Fretboard_ScaleHint" xml:space="preserve"><value>Cá bhfuil nótaí an scála {0} ar an muineál. Is é 1 an tonach.</value></data>
   <data name="Fretboard_ChordHint" xml:space="preserve"><value>Cá bhfuil nótaí an chorda {0} ar an muineál. Is é 1 an fréamh.</value></data>
+  <data name="Fretboard_ScaleOnly" xml:space="preserve"><value>Scála</value></data>
+  <data name="Fretboard_WholeNeck" xml:space="preserve"><value>An muineál ar fad</value></data>
+  <data name="Fretboard_Position" xml:space="preserve"><value>Fretanna {0}–{1}</value></data>
+  <data name="Fretboard_ChordInScaleHint" xml:space="preserve"><value>Tá lipéad ar nótaí an chorda {0} (is é 1 a fhréamh); is iad na poncanna nótaí eile an scála {1}.</value></data>
 </root>

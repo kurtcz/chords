@@ -159,4 +159,8 @@
   <data name="Key_CapoHint" xml:space="preserve"><value>Хватај приказане облике – са каподастером звуче као {0}.</value></data>
   <data name="Fretboard_ScaleHint" xml:space="preserve"><value>Где на врату леже тонови лествице {0}. 1 је тоника.</value></data>
   <data name="Fretboard_ChordHint" xml:space="preserve"><value>Где на врату леже тонови акорда {0}. 1 је основни тон.</value></data>
+  <data name="Fretboard_ScaleOnly" xml:space="preserve"><value>Лествица</value></data>
+  <data name="Fretboard_WholeNeck" xml:space="preserve"><value>Цео врат</value></data>
+  <data name="Fretboard_Position" xml:space="preserve"><value>Поља {0}–{1}</value></data>
+  <data name="Fretboard_ChordInScaleHint" xml:space="preserve"><value>Тонови акорда {0} су означени (1 је његов основни тон); тачке су остали тонови лествице {1}.</value></data>
 </root>

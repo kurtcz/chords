@@ -158,4 +158,8 @@
   <data name="Key_CapoHint" xml:space="preserve"><value>చూపిన ఆకారాలను పట్టుకోండి – కాపోతో అవి {0} లా వినిపిస్తాయి.</value></data>
   <data name="Fretboard_ScaleHint" xml:space="preserve"><value>{0} స్కేల్ స్వరాలు ఫింగర్‌బోర్డ్‌పై ఎక్కడ ఉన్నాయి. 1 టానిక్.</value></data>
   <data name="Fretboard_ChordHint" xml:space="preserve"><value>{0} కార్డ్ స్వరాలు ఫింగర్‌బోర్డ్‌పై ఎక్కడ ఉన్నాయి. 1 మూల స్వరం.</value></data>
+  <data name="Fretboard_ScaleOnly" xml:space="preserve"><value>స్కేల్</value></data>
+  <data name="Fretboard_WholeNeck" xml:space="preserve"><value>మొత్తం నెక్</value></data>
+  <data name="Fretboard_Position" xml:space="preserve"><value>ఫ్రెట్లు {0}–{1}</value></data>
+  <data name="Fretboard_ChordInScaleHint" xml:space="preserve"><value>{0} కార్డ్ స్వరాలకు లేబుల్ ఉంది (1 దాని మూల స్వరం); చుక్కలు {1} స్కేల్‌లోని మిగతా స్వరాలు.</value></data>
 </root>

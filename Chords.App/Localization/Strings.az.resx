@@ -158,4 +158,8 @@
   <data name="Key_CapoHint" xml:space="preserve"><value>Göstərilən formaları bas – kapodastrla onlar {0} kimi səslənir.</value></data>
   <data name="Fretboard_ScaleHint" xml:space="preserve"><value>{0} qammasının notları qrifdə harada yerləşir. 1 tonikadır.</value></data>
   <data name="Fretboard_ChordHint" xml:space="preserve"><value>{0} akkordunun notları qrifdə harada yerləşir. 1 əsas tondur.</value></data>
+  <data name="Fretboard_ScaleOnly" xml:space="preserve"><value>Qamma</value></data>
+  <data name="Fretboard_WholeNeck" xml:space="preserve"><value>Bütün qol</value></data>
+  <data name="Fretboard_Position" xml:space="preserve"><value>{0}–{1} pərdələr</value></data>
+  <data name="Fretboard_ChordInScaleHint" xml:space="preserve"><value>{0} akkordunun notları işarələnib (1 onun əsas tonudur); nöqtələr {1} qammasının digər notlarıdır.</value></data>
 </root>

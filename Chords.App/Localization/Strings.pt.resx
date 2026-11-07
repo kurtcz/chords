@@ -158,4 +158,8 @@
   <data name="Key_CapoHint" xml:space="preserve"><value>Toque as formas mostradas – com o capo soam como {0}.</value></data>
   <data name="Fretboard_ScaleHint" xml:space="preserve"><value>Onde estão as notas da escala {0} no braço. 1 é a tónica.</value></data>
   <data name="Fretboard_ChordHint" xml:space="preserve"><value>Onde estão as notas do acorde {0} no braço. 1 é a fundamental.</value></data>
+  <data name="Fretboard_ScaleOnly" xml:space="preserve"><value>Escala</value></data>
+  <data name="Fretboard_WholeNeck" xml:space="preserve"><value>Braço inteiro</value></data>
+  <data name="Fretboard_Position" xml:space="preserve"><value>Trastes {0}–{1}</value></data>
+  <data name="Fretboard_ChordInScaleHint" xml:space="preserve"><value>As notas do acorde {0} estão identificadas (1 é a sua fundamental); os pontos são as outras notas da escala {1}.</value></data>
 </root>

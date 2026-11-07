@@ -158,4 +158,8 @@
   <data name="Key_CapoHint" xml:space="preserve"><value>Gräif déi gewisen Grëffer – mam Kapodaster klénge se wéi {0}.</value></data>
   <data name="Fretboard_ScaleHint" xml:space="preserve"><value>Wou d'Téin vun der Tounleeder {0} um Grëffbriet leien. 1 ass de Grondtoun.</value></data>
   <data name="Fretboard_ChordHint" xml:space="preserve"><value>Wou d'Téin vum Akkord {0} um Grëffbriet leien. 1 ass de Grondtoun.</value></data>
+  <data name="Fretboard_ScaleOnly" xml:space="preserve"><value>Tounleeder</value></data>
+  <data name="Fretboard_WholeNeck" xml:space="preserve"><value>Ganze Grëffbriet</value></data>
+  <data name="Fretboard_Position" xml:space="preserve"><value>Bënn {0}–{1}</value></data>
+  <data name="Fretboard_ChordInScaleHint" xml:space="preserve"><value>Beschrëft sinn d’Téin vum Akkord {0} (1 ass säi Grondtoun), d’Punkten sinn déi aner Téin vun der Tounleeder {1}.</value></data>
 </root>

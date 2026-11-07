@@ -157,4 +157,8 @@
   <data name="Key_CapoHint" xml:space="preserve"><value>จับคอร์ดตามรูปที่แสดง – เมื่อใส่คาโป้จะเป็นเสียง {0}</value></data>
   <data name="Fretboard_ScaleHint" xml:space="preserve"><value>ตำแหน่งโน้ตของสเกล {0} บนคอกีตาร์ 1 คือโทนิก</value></data>
   <data name="Fretboard_ChordHint" xml:space="preserve"><value>ตำแหน่งโน้ตของคอร์ด {0} บนคอกีตาร์ 1 คือรูทโน้ต</value></data>
+  <data name="Fretboard_ScaleOnly" xml:space="preserve"><value>สเกล</value></data>
+  <data name="Fretboard_WholeNeck" xml:space="preserve"><value>ทั้งคอ</value></data>
+  <data name="Fretboard_Position" xml:space="preserve"><value>เฟรต {0}–{1}</value></data>
+  <data name="Fretboard_ChordInScaleHint" xml:space="preserve"><value>โน้ตของคอร์ด {0} มีป้ายกำกับ (1 คือโน้ตราก) ส่วนจุดคือโน้ตอื่นในสเกล {1}</value></data>
 </root>

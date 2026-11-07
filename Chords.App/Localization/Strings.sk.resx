@@ -159,4 +159,8 @@
   <data name="Key_CapoHint" xml:space="preserve"><value>Stlač zobrazené tvary – s kapodastrom znejú ako {0}.</value></data>
   <data name="Fretboard_ScaleHint" xml:space="preserve"><value>Kde na hmatníku ležia tóny stupnice {0}. 1 je tónika.</value></data>
   <data name="Fretboard_ChordHint" xml:space="preserve"><value>Kde na hmatníku ležia tóny akordu {0}. 1 je základný tón.</value></data>
+  <data name="Fretboard_ScaleOnly" xml:space="preserve"><value>Stupnica</value></data>
+  <data name="Fretboard_WholeNeck" xml:space="preserve"><value>Celý krk</value></data>
+  <data name="Fretboard_Position" xml:space="preserve"><value>Pražce {0}–{1}</value></data>
+  <data name="Fretboard_ChordInScaleHint" xml:space="preserve"><value>Popísané sú tóny akordu {0} (1 je jeho základný tón), bodky sú ostatné tóny stupnice {1}.</value></data>
 </root>

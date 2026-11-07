@@ -158,4 +158,8 @@
   <data name="Key_CapoHint" xml:space="preserve"><value>Soita näytetyt otteet – kapon kanssa ne kuulostavat kuin {0}.</value></data>
   <data name="Fretboard_ScaleHint" xml:space="preserve"><value>Missä asteikon {0} sävelet ovat otelaudalla. 1 on toonika.</value></data>
   <data name="Fretboard_ChordHint" xml:space="preserve"><value>Missä soinnun {0} sävelet ovat otelaudalla. 1 on pohjasävel.</value></data>
+  <data name="Fretboard_ScaleOnly" xml:space="preserve"><value>Asteikko</value></data>
+  <data name="Fretboard_WholeNeck" xml:space="preserve"><value>Koko kaula</value></data>
+  <data name="Fretboard_Position" xml:space="preserve"><value>Nauhat {0}–{1}</value></data>
+  <data name="Fretboard_ChordInScaleHint" xml:space="preserve"><value>Soinnun {0} sävelet on nimetty (1 on sen pohjasävel); pisteet ovat asteikon {1} muut sävelet.</value></data>
 </root>

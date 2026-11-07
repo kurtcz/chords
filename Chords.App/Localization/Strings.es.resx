@@ -158,4 +158,8 @@
   <data name="Key_CapoHint" xml:space="preserve"><value>Toca las formas mostradas: con la cejilla suenan como {0}.</value></data>
   <data name="Fretboard_ScaleHint" xml:space="preserve"><value>Dónde están las notas de la escala {0} en el mástil. 1 es la tónica.</value></data>
   <data name="Fretboard_ChordHint" xml:space="preserve"><value>Dónde están las notas del acorde {0} en el mástil. 1 es la fundamental.</value></data>
+  <data name="Fretboard_ScaleOnly" xml:space="preserve"><value>Escala</value></data>
+  <data name="Fretboard_WholeNeck" xml:space="preserve"><value>Todo el mástil</value></data>
+  <data name="Fretboard_Position" xml:space="preserve"><value>Trastes {0}–{1}</value></data>
+  <data name="Fretboard_ChordInScaleHint" xml:space="preserve"><value>Las notas del acorde {0} llevan nombre (1 es su raíz); los puntos son las demás notas de la escala {1}.</value></data>
 </root>

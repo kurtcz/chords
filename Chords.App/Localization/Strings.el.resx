@@ -158,4 +158,8 @@
   <data name="Key_CapoHint" xml:space="preserve"><value>Πιάσε τα σχήματα που φαίνονται – με το καποτάστο ακούγονται ως {0}.</value></data>
   <data name="Fretboard_ScaleHint" xml:space="preserve"><value>Πού βρίσκονται οι νότες της κλίμακας {0} στην ταστιέρα. Το 1 είναι η τονική.</value></data>
   <data name="Fretboard_ChordHint" xml:space="preserve"><value>Πού βρίσκονται οι νότες της συγχορδίας {0} στην ταστιέρα. Το 1 είναι η θεμέλιος.</value></data>
+  <data name="Fretboard_ScaleOnly" xml:space="preserve"><value>Κλίμακα</value></data>
+  <data name="Fretboard_WholeNeck" xml:space="preserve"><value>Όλη η ταστιέρα</value></data>
+  <data name="Fretboard_Position" xml:space="preserve"><value>Τάστα {0}–{1}</value></data>
+  <data name="Fretboard_ChordInScaleHint" xml:space="preserve"><value>Οι νότες της συγχορδίας {0} έχουν ετικέτα (1 είναι η θεμέλιός της)· οι τελείες είναι οι υπόλοιπες νότες της κλίμακας {1}.</value></data>
 </root>

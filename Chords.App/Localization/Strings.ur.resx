@@ -158,4 +158,8 @@
   <data name="Key_CapoHint" xml:space="preserve"><value>دکھائی گئی شکلیں پکڑیں – کیپو کے ساتھ یہ {0} کی طرح بجتی ہیں۔</value></data>
   <data name="Fretboard_ScaleHint" xml:space="preserve"><value>{0} اسکیل کے سُر فنگر بورڈ پر کہاں ہیں۔ 1 ٹانک ہے۔</value></data>
   <data name="Fretboard_ChordHint" xml:space="preserve"><value>{0} کورڈ کے سُر فنگر بورڈ پر کہاں ہیں۔ 1 بنیادی سُر ہے۔</value></data>
+  <data name="Fretboard_ScaleOnly" xml:space="preserve"><value>سکیل</value></data>
+  <data name="Fretboard_WholeNeck" xml:space="preserve"><value>پوری گردن</value></data>
+  <data name="Fretboard_Position" xml:space="preserve"><value>فریٹس {0}–{1}</value></data>
+  <data name="Fretboard_ChordInScaleHint" xml:space="preserve"><value>کارڈ {0} کے سُروں پر نشان ہیں (1 اس کا روٹ ہے)؛ نقطے {1} سکیل کے باقی سُر ہیں۔</value></data>
 </root>

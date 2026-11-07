@@ -159,4 +159,8 @@
   <data name="Key_CapoHint" xml:space="preserve"><value>Зажимай показанные формы – с каподастром они звучат как {0}.</value></data>
   <data name="Fretboard_ScaleHint" xml:space="preserve"><value>Где на грифе находятся ноты гаммы {0}. 1 – тоника.</value></data>
   <data name="Fretboard_ChordHint" xml:space="preserve"><value>Где на грифе находятся ноты аккорда {0}. 1 – основной тон.</value></data>
+  <data name="Fretboard_ScaleOnly" xml:space="preserve"><value>Гамма</value></data>
+  <data name="Fretboard_WholeNeck" xml:space="preserve"><value>Весь гриф</value></data>
+  <data name="Fretboard_Position" xml:space="preserve"><value>Лады {0}–{1}</value></data>
+  <data name="Fretboard_ChordInScaleHint" xml:space="preserve"><value>Подписаны звуки аккорда {0} (1 — его основной тон); точки — остальные звуки гаммы {1}.</value></data>
 </root>

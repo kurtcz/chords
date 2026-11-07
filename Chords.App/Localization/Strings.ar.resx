@@ -162,4 +162,8 @@
   <data name="Key_CapoHint" xml:space="preserve"><value>اعزف الأشكال المعروضة – مع الكابو تبدو مثل {0}.</value></data>
   <data name="Fretboard_ScaleHint" xml:space="preserve"><value>مواقع نغمات سلم {0} على زند الآلة. 1 هي القرار.</value></data>
   <data name="Fretboard_ChordHint" xml:space="preserve"><value>مواقع نغمات كورد {0} على زند الآلة. 1 هي الجذر.</value></data>
+  <data name="Fretboard_ScaleOnly" xml:space="preserve"><value>السلم</value></data>
+  <data name="Fretboard_WholeNeck" xml:space="preserve"><value>الزند كله</value></data>
+  <data name="Fretboard_Position" xml:space="preserve"><value>الدساتين {0}–{1}</value></data>
+  <data name="Fretboard_ChordInScaleHint" xml:space="preserve"><value>نغمات الكورد {0} مُعلَّمة (1 هي جذره)، والنقاط هي باقي نغمات سلم {1}.</value></data>
 </root>

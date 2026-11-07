@@ -159,4 +159,8 @@
   <data name="Key_CapoHint" xml:space="preserve"><value>Play the shapes shown – with the capo they sound as {0}.</value></data>
   <data name="Fretboard_ScaleHint" xml:space="preserve"><value>Where the notes of the {0} scale lie on the neck. 1 is the tonic.</value></data>
   <data name="Fretboard_ChordHint" xml:space="preserve"><value>Where the notes of the {0} chord lie on the neck. 1 is the root.</value></data>
+  <data name="Fretboard_ScaleOnly" xml:space="preserve"><value>Scale</value></data>
+  <data name="Fretboard_WholeNeck" xml:space="preserve"><value>Whole neck</value></data>
+  <data name="Fretboard_Position" xml:space="preserve"><value>Frets {0}–{1}</value></data>
+  <data name="Fretboard_ChordInScaleHint" xml:space="preserve"><value>Notes of the {0} chord are labeled (1 is its root); the dots are the other notes of the {1} scale.</value></data>
 </root>

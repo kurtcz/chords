@@ -159,4 +159,8 @@
   <data name="Key_CapoHint" xml:space="preserve"><value>Cântă pozițiile afișate – cu capodastrul sună ca {0}.</value></data>
   <data name="Fretboard_ScaleHint" xml:space="preserve"><value>Unde se află notele gamei {0} pe grif. 1 este tonica.</value></data>
   <data name="Fretboard_ChordHint" xml:space="preserve"><value>Unde se află notele acordului {0} pe grif. 1 este fundamentala.</value></data>
+  <data name="Fretboard_ScaleOnly" xml:space="preserve"><value>Gamă</value></data>
+  <data name="Fretboard_WholeNeck" xml:space="preserve"><value>Tot gâtul</value></data>
+  <data name="Fretboard_Position" xml:space="preserve"><value>Tastele {0}–{1}</value></data>
+  <data name="Fretboard_ChordInScaleHint" xml:space="preserve"><value>Notele acordului {0} sunt etichetate (1 este fundamentala); punctele sunt celelalte note ale gamei {1}.</value></data>
 </root>

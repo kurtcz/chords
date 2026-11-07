@@ -158,4 +158,8 @@
   <data name="Key_CapoHint" xml:space="preserve"><value>दिखाए गए आकार पकड़ें – कैपो के साथ ये {0} जैसे बजते हैं।</value></data>
   <data name="Fretboard_ScaleHint" xml:space="preserve"><value>{0} स्केल के सुर फ़िंगरबोर्ड पर कहाँ हैं। 1 टॉनिक है।</value></data>
   <data name="Fretboard_ChordHint" xml:space="preserve"><value>{0} कॉर्ड के सुर फ़िंगरबोर्ड पर कहाँ हैं। 1 मूल सुर है।</value></data>
+  <data name="Fretboard_ScaleOnly" xml:space="preserve"><value>स्केल</value></data>
+  <data name="Fretboard_WholeNeck" xml:space="preserve"><value>पूरी गर्दन</value></data>
+  <data name="Fretboard_Position" xml:space="preserve"><value>फ़्रेट {0}–{1}</value></data>
+  <data name="Fretboard_ChordInScaleHint" xml:space="preserve"><value>कॉर्ड {0} के स्वर लेबल किए गए हैं (1 उसका मूल स्वर है); बिंदु {1} स्केल के बाकी स्वर हैं।</value></data>
 </root>

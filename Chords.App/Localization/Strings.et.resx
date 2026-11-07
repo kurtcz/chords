@@ -158,4 +158,8 @@
   <data name="Key_CapoHint" xml:space="preserve"><value>Võta näidatud haarded – kapoga kõlavad need nagu {0}.</value></data>
   <data name="Fretboard_ScaleHint" xml:space="preserve"><value>Kus asuvad helirea {0} noodid kaelal. 1 on toonika.</value></data>
   <data name="Fretboard_ChordHint" xml:space="preserve"><value>Kus asuvad akordi {0} noodid kaelal. 1 on põhitoon.</value></data>
+  <data name="Fretboard_ScaleOnly" xml:space="preserve"><value>Helilaad</value></data>
+  <data name="Fretboard_WholeNeck" xml:space="preserve"><value>Kogu kael</value></data>
+  <data name="Fretboard_Position" xml:space="preserve"><value>Krihvid {0}–{1}</value></data>
+  <data name="Fretboard_ChordInScaleHint" xml:space="preserve"><value>Akordi {0} helid on tähistatud (1 on selle põhitoon); täpid on helilaadi {1} ülejäänud helid.</value></data>
 </root>

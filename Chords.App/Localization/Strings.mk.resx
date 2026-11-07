@@ -158,4 +158,8 @@
   <data name="Key_CapoHint" xml:space="preserve"><value>Фаќај ги прикажаните форми – со каподастер звучат како {0}.</value></data>
   <data name="Fretboard_ScaleHint" xml:space="preserve"><value>Каде на вратот се тоновите на скалата {0}. 1 е тониката.</value></data>
   <data name="Fretboard_ChordHint" xml:space="preserve"><value>Каде на вратот се тоновите на акордот {0}. 1 е основниот тон.</value></data>
+  <data name="Fretboard_ScaleOnly" xml:space="preserve"><value>Скала</value></data>
+  <data name="Fretboard_WholeNeck" xml:space="preserve"><value>Цел врат</value></data>
+  <data name="Fretboard_Position" xml:space="preserve"><value>Прагови {0}–{1}</value></data>
+  <data name="Fretboard_ChordInScaleHint" xml:space="preserve"><value>Тоновите на акордот {0} се означени (1 е неговиот основен тон); точките се другите тонови на скалата {1}.</value></data>
 </root>

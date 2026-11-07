@@ -158,4 +158,8 @@
   <data name="Key_CapoHint" xml:space="preserve"><value>Jouez les formes indiquées – avec le capodastre, elles sonnent comme {0}.</value></data>
   <data name="Fretboard_ScaleHint" xml:space="preserve"><value>Où se trouvent les notes de la gamme {0} sur le manche. 1 est la tonique.</value></data>
   <data name="Fretboard_ChordHint" xml:space="preserve"><value>Où se trouvent les notes de l’accord {0} sur le manche. 1 est la fondamentale.</value></data>
+  <data name="Fretboard_ScaleOnly" xml:space="preserve"><value>Gamme</value></data>
+  <data name="Fretboard_WholeNeck" xml:space="preserve"><value>Tout le manche</value></data>
+  <data name="Fretboard_Position" xml:space="preserve"><value>Cases {0}–{1}</value></data>
+  <data name="Fretboard_ChordInScaleHint" xml:space="preserve"><value>Les notes de l’accord {0} sont nommées (1 est sa fondamentale) ; les points sont les autres notes de la gamme {1}.</value></data>
 </root>

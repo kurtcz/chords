@@ -157,4 +157,8 @@
   <data name="Key_CapoHint" xml:space="preserve"><value>按显示的指型弹奏——夹上变调夹后听起来是 {0}。</value></data>
   <data name="Fretboard_ScaleHint" xml:space="preserve"><value>{0} 音阶的音在指板上的位置。1 是主音。</value></data>
   <data name="Fretboard_ChordHint" xml:space="preserve"><value>{0} 和弦的音在指板上的位置。1 是根音。</value></data>
+  <data name="Fretboard_ScaleOnly" xml:space="preserve"><value>音阶</value></data>
+  <data name="Fretboard_WholeNeck" xml:space="preserve"><value>整个琴颈</value></data>
+  <data name="Fretboard_Position" xml:space="preserve"><value>{0}–{1} 品</value></data>
+  <data name="Fretboard_ChordInScaleHint" xml:space="preserve"><value>{0} 和弦的音有标注（1 是根音），圆点是 {1} 音阶的其他音。</value></data>
 </root>

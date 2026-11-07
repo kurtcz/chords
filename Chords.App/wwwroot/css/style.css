@@ -1562,6 +1562,33 @@ h1.navbar-brand {
     cursor: pointer;
 }
 
+/* Chords of the key to stand out in the scale */
+.fretboard-chords {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 10px 0;
+}
+
+/* Position on the neck: previous, its frets (a tap shows the whole neck again), next */
+.fretboard-position {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.fretboard-position .btn-default {
+    min-width: 44px;
+    font-size: 18px;
+    line-height: 1;
+}
+
+.fretboard-position-name {
+    min-width: 140px;
+    color: inherit;
+}
+
 [dir=rtl] .fretboard-scroll {
     direction: ltr;
 }

@@ -159,4 +159,8 @@
   <data name="Key_CapoHint" xml:space="preserve"><value>Hvataj prikazane oblike – s kapodasterom zvuče kao {0}.</value></data>
   <data name="Fretboard_ScaleHint" xml:space="preserve"><value>Gdje na vratu leže tonovi ljestvice {0}. 1 je tonika.</value></data>
   <data name="Fretboard_ChordHint" xml:space="preserve"><value>Gdje na vratu leže tonovi akorda {0}. 1 je osnovni ton.</value></data>
+  <data name="Fretboard_ScaleOnly" xml:space="preserve"><value>Ljestvica</value></data>
+  <data name="Fretboard_WholeNeck" xml:space="preserve"><value>Cijeli vrat</value></data>
+  <data name="Fretboard_Position" xml:space="preserve"><value>Polja {0}–{1}</value></data>
+  <data name="Fretboard_ChordInScaleHint" xml:space="preserve"><value>Tonovi akorda {0} su označeni (1 je njegov osnovni ton); točke su ostali tonovi ljestvice {1}.</value></data>
 </root>

@@ -162,4 +162,8 @@
   <data name="Key_CapoHint" xml:space="preserve"><value>Chwaraewch y siapiau a ddangosir – gyda'r capo maen nhw'n swnio fel {0}.</value></data>
   <data name="Fretboard_ScaleHint" xml:space="preserve"><value>Ble mae nodau graddfa {0} ar y gwddf. 1 yw'r tonydd.</value></data>
   <data name="Fretboard_ChordHint" xml:space="preserve"><value>Ble mae nodau cord {0} ar y gwddf. 1 yw'r gwreiddyn.</value></data>
+  <data name="Fretboard_ScaleOnly" xml:space="preserve"><value>Graddfa</value></data>
+  <data name="Fretboard_WholeNeck" xml:space="preserve"><value>Y gwddf cyfan</value></data>
+  <data name="Fretboard_Position" xml:space="preserve"><value>Ffretiau {0}–{1}</value></data>
+  <data name="Fretboard_ChordInScaleHint" xml:space="preserve"><value>Mae nodau’r cord {0} wedi’u labelu (1 yw ei wreiddyn); y dotiau yw nodau eraill y raddfa {1}.</value></data>
 </root>

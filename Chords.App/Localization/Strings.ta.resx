@@ -158,4 +158,8 @@
   <data name="Key_CapoHint" xml:space="preserve"><value>காட்டிய வடிவங்களைப் பிடியுங்கள் – கேப்போவுடன் அவை {0} போல ஒலிக்கும்.</value></data>
   <data name="Fretboard_ScaleHint" xml:space="preserve"><value>{0} ஸ்கேலின் ஸ்வரங்கள் விரல்பலகையில் எங்கே உள்ளன. 1 என்பது டானிக்.</value></data>
   <data name="Fretboard_ChordHint" xml:space="preserve"><value>{0} கார்டின் ஸ்வரங்கள் விரல்பலகையில் எங்கே உள்ளன. 1 என்பது மூல ஸ்வரம்.</value></data>
+  <data name="Fretboard_ScaleOnly" xml:space="preserve"><value>ஸ்கேல்</value></data>
+  <data name="Fretboard_WholeNeck" xml:space="preserve"><value>முழு கழுத்து</value></data>
+  <data name="Fretboard_Position" xml:space="preserve"><value>ஃப்ரெட் {0}–{1}</value></data>
+  <data name="Fretboard_ChordInScaleHint" xml:space="preserve"><value>{0} கார்டின் ஸ்வரங்கள் குறிக்கப்பட்டுள்ளன (1 அதன் மூல ஸ்வரம்); புள்ளிகள் {1} ஸ்கேலின் மற்ற ஸ்வரங்கள்.</value></data>
 </root>

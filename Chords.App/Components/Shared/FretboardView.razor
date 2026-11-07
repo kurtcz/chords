@@ -1,4 +1,8 @@
-@* The notes of a scale or a chord across the whole neck of the chosen instrument, labeled by interval or by name; a tap plays a note. *@
+﻿@using System.Globalization
+@*
+    The notes of a scale or a chord across the whole neck of the chosen instrument, labeled by interval or by name; a tap plays a note.
+    The root, third and fifth have colors of their own. A chord can stand out among the notes of a scale, and one position (a hand's span of frets) among the rest of the neck.
+*@
 @inject AppState State
 @inject ChordPlayer Player
 
@@ -12,20 +16,38 @@
         <Segmented Value="State.FretboardNoteNames" ValueChanged="v => State.FretboardNoteNames = v"
                    Off="@L["Fretboard_Intervals"]" On="@L["Fretboard_Notes"]" />
     </div>
+    @ChildContent
+    @if (positions.Length > 0)
+    {
+        <div class="fretboard-position">
+            <button type="button" class="btn btn-default" @onclick="() => Step(-1)">‹</button>
+            <button type="button" class="btn btn-link fretboard-position-name" @onclick="() => State.FretboardPosition = null">
+                @(position is { } p ? L["Fretboard_Position", p, Fretboard.PositionEnd(info, p, capo)] : L["Fretboard_WholeNeck"])
+            </button>
+            <button type="button" class="btn btn-default" @onclick="() => Step(1)">›</button>
+        </div>
+    }
     <div class="fretboard-scroll">
         <svg class="@(horizontal ? "fretboard-board horizontal" : "fretboard-board")" viewBox="0 0 @Width @Height"
              width="@(horizontal ? Width : null)" xmlns="http://www.w3.org/2000/svg">
+            @* The chosen position *@
+            @if (position is { } start)
+            {
+                var band = Box(-Gap / 2.0, Math.Max(-Before, (start - 1) * Cell0), span + Gap / 2.0, Fretboard.PositionEnd(info, start, capo) * Cell0);
+                <rect x="@F(band.X)" y="@F(band.Y)" width="@F(band.W)" height="@F(band.H)" rx="4" fill="#fff3c4" />
+            }
+
             @* Inlays *@
             @foreach (var fret in Inlays.Where(i => i <= frets))
             {
                 @if (fret % 12 == 0)
                 {
-                    <circle cx="@Pt(span / 2.0 - Gap, Cell(fret)).X" cy="@Pt(span / 2.0 - Gap, Cell(fret)).Y" r="6" fill="#e4e4e4" />
-                    <circle cx="@Pt(span / 2.0 + Gap, Cell(fret)).X" cy="@Pt(span / 2.0 + Gap, Cell(fret)).Y" r="6" fill="#e4e4e4" />
+                    <circle cx="@F(Pt(span / 2.0 - Gap, Cell(fret)).X)" cy="@F(Pt(span / 2.0 - Gap, Cell(fret)).Y)" r="6" fill="#e4e4e4" />
+                    <circle cx="@F(Pt(span / 2.0 + Gap, Cell(fret)).X)" cy="@F(Pt(span / 2.0 + Gap, Cell(fret)).Y)" r="6" fill="#e4e4e4" />
                 }
                 else
                 {
-                    <circle cx="@Pt(span / 2.0, Cell(fret)).X" cy="@Pt(span / 2.0, Cell(fret)).Y" r="6" fill="#e4e4e4" />
+                    <circle cx="@F(Pt(span / 2.0, Cell(fret)).X)" cy="@F(Pt(span / 2.0, Cell(fret)).Y)" r="6" fill="#e4e4e4" />
                 }
             }
 
@@ -34,11 +56,11 @@
             {
                 var from = Pt(A(info.FirstStringAtFret(fret)), fret * Cell0);
                 var to = Pt(span, fret * Cell0);
-                <line x1="@from.X" y1="@from.Y" x2="@to.X" y2="@to.Y" stroke="#000" stroke-width="@(fret == 0 ? 4 : 1)" />
+                <line x1="@F(from.X)" y1="@F(from.Y)" x2="@F(to.X)" y2="@F(to.Y)" stroke="#000" stroke-width="@(fret == 0 ? 4 : 1)" />
                 @if (fret > 0)
                 {
                     var n = NumberAt(fret);
-                    <g><text x="@n.X" y="@n.Y" text-anchor="middle" font-size="11" fill="#888">@fret</text></g>
+                    <g><text x="@F(n.X)" y="@F(n.Y)" text-anchor="middle" font-size="11" fill="#888">@fret</text></g>
                 }
             }
 
@@ -47,12 +69,12 @@
             {
                 var from = Pt(A(s), info.FirstFrets[s] * Cell0);
                 var to = Pt(A(s), frets * Cell0);
-                <line x1="@from.X" y1="@from.Y" x2="@to.X" y2="@to.Y" stroke="#000" stroke-width="1" />
+                <line x1="@F(from.X)" y1="@F(from.Y)" x2="@F(to.X)" y2="@F(to.Y)" stroke="#000" stroke-width="1" />
                 @if (info.IsShortString(s))
                 {
                     var nut1 = Pt(A(s) - 5, info.FirstFrets[s] * Cell0);
                     var nut2 = Pt(A(s) + 5, info.FirstFrets[s] * Cell0);
-                    <line x1="@nut1.X" y1="@nut1.Y" x2="@nut2.X" y2="@nut2.Y" stroke="#000" stroke-width="4" />
+                    <line x1="@F(nut1.X)" y1="@F(nut1.Y)" x2="@F(nut2.X)" y2="@F(nut2.Y)" stroke="#000" stroke-width="4" />
                 }
             }
 
@@ -61,18 +83,29 @@
             {
                 var shade = Box(-Gap / 2.0, 0, span + Gap / 2.0, Cell(capo) - 8);
                 var bar = Box(-8, Cell(capo) - 7, span + 8, Cell(capo) + 7);
-                <rect x="@shade.X" y="@shade.Y" width="@shade.W" height="@shade.H" fill="#fff" fill-opacity="0.7" />
-                <rect class="capo" x="@bar.X" y="@bar.Y" width="@bar.W" height="@bar.H" rx="3" fill="#555" />
+                <rect x="@F(shade.X)" y="@F(shade.Y)" width="@F(shade.W)" height="@F(shade.H)" fill="#fff" fill-opacity="0.7" />
+                <rect class="capo" x="@F(bar.X)" y="@F(bar.Y)" width="@F(bar.W)" height="@F(bar.H)" rx="3" fill="#555" />
             }
 
+            @* Notes off the chord are small dots without a label, notes out of the position faint. *@
             @foreach (var spot in spots)
             {
                 var c = Pt(A(spot.String), Cell(spot.Fret));
                 var pitch = spot.Pitch;
-                <g class="fretboard-note" @onclick="() => Player.PlayPitch(pitch)">
-                    <circle cx="@c.X" cy="@c.Y" r="10" fill="@(spot.Index == 0 ? RootColor : NoteColor)" />
-                    <text x="@c.X" y="@(c.Y + 3.5)" text-anchor="middle" font-size="@(Label(spot).Length > 2 ? 8 : 10)"
-                          font-weight="bold" fill="#fff">@Label(spot)</text>
+                var chordIndex = ChordIndex(spot);
+                var label = Label(spot, chordIndex);
+                <g class="fretboard-note" opacity="@(InPosition(spot) ? null : "0.2")" @onclick="() => Player.PlayPitch(pitch)">
+                    @if (label == null)
+                    {
+                        <circle cx="@F(c.X)" cy="@F(c.Y)" r="10" fill="transparent" />
+                        <circle cx="@F(c.X)" cy="@F(c.Y)" r="5" fill="@NoteColor" fill-opacity="0.45" />
+                    }
+                    else
+                    {
+                        <circle cx="@F(c.X)" cy="@F(c.Y)" r="10" fill="@Color(chordNotes == null ? Intervals : ChordIntervals, chordNotes == null ? spot.Index : chordIndex)" />
+                        <g><text x="@F(c.X)" y="@F(c.Y + 3.5)" text-anchor="middle" font-size="@(label.Length > 2 ? 8 : 10)"
+                                 font-weight="bold" fill="#fff">@label</text></g>
+                    }
                 </g>
             }
         </svg>
@@ -80,14 +113,25 @@
 </section>
 
 @code {
+    /// <summary>A number for SVG: a decimal comma would split it into a list of positions, one per letter.</summary>
+    private static string F(double value) => value.ToString("0.###", CultureInfo.InvariantCulture);
+
     /// <summary>Notes to show, the root first.</summary>
     [Parameter] public IReadOnlyList<Note> Notes { get; set; }
     /// <summary>Interval of each note above the root.</summary>
     [Parameter] public IReadOnlyList<Interval> Intervals { get; set; }
     /// <summary>A line under the heading saying what is shown.</summary>
     [Parameter] public string Hint { get; set; }
+    /// <summary>Notes of a chord to stand out among <see cref="Notes"/>, labeled from its own root; null shows all alike.</summary>
+    [Parameter] public IReadOnlyList<Note> Chord { get; set; }
+    /// <summary>Interval of each note of <see cref="Chord"/> above its root.</summary>
+    [Parameter] public IReadOnlyList<Interval> ChordIntervals { get; set; }
+    /// <summary>Shown above the neck, e.g. a choice of the chord to stand out.</summary>
+    [Parameter] public RenderFragment ChildContent { get; set; }
 
     private const string RootColor = "#c62828";
+    private const string ThirdColor = "#2e7d32";
+    private const string FifthColor = "#e07000";
     private const string NoteColor = "#1f5fbf";
     private static readonly int[] Inlays = { 5, 7, 12, 17, 19, 24 };
     /// <summary>Length of a fret along the neck.</summary>
@@ -104,6 +148,12 @@
     private bool leftHanded;
     private NamingConvention conv;
     private FretboardNote[] spots = [];
+    /// <summary>Frets the positions start at.</summary>
+    private int[] positions = [];
+    private Note[] chordNotes;
+
+    /// <summary>Fret the chosen position starts at; the choice is shared by the pages, so it may not be one of theirs.</summary>
+    private int? position => State.FretboardPosition is { } p && p >= capo && p <= frets ? p : null;
 
     /// <summary>Distance between strings.</summary>
     private int Gap => horizontal ? 26 : 36;
@@ -138,9 +188,62 @@
         return (Math.Min(p1.X, p2.X), Math.Min(p1.Y, p2.Y), Math.Abs(p2.X - p1.X), Math.Abs(p2.Y - p1.Y));
     }
 
-    private string Label(FretboardNote spot) => State.FretboardNoteNames
-        ? Notes[spot.Index].ToString(conv)
-        : Fretboard.DegreeName(Intervals[spot.Index]);
+    /// <summary>Index of the note among the chord's (0 = its root), -1 if not in it or no chord is shown.</summary>
+    private int ChordIndex(FretboardNote spot) => chordNotes == null ? -1 : Array.IndexOf(chordNotes, Note.Normalize(Notes[spot.Index]));
+
+    /// <summary>Name or interval of a note, null for a note of the scale off the chord shown.</summary>
+    private string Label(FretboardNote spot, int chordIndex)
+    {
+        if (chordNotes == null)
+        {
+            return State.FretboardNoteNames ? Notes[spot.Index].ToString(conv) : Fretboard.DegreeName(Intervals[spot.Index]);
+        }
+        if (chordIndex < 0)
+        {
+            return null;
+        }
+
+        return State.FretboardNoteNames ? Chord[chordIndex].ToString(conv) : Fretboard.DegreeName(ChordIntervals[chordIndex]);
+    }
+
+    /// <summary>
+    /// Root red, third green, fifth orange, the other notes blue: the notes a chord is built on stand out among the scale's.
+    /// A diminished or augmented fifth counts as the fifth only when there is no perfect one (the ♭5 of the blues is a passing note).
+    /// </summary>
+    private static string Color(IReadOnlyList<Interval> intervals, int index)
+    {
+        var interval = intervals[index];
+        if (interval == Interval.P1)
+        {
+            return RootColor;
+        }
+        if (interval is Interval.m3 or Interval.M3)
+        {
+            return ThirdColor;
+        }
+        if (interval == Interval.P5 || interval is Interval.d5 or Interval.A5 && !intervals.Contains(Interval.P5))
+        {
+            return FifthColor;
+        }
+
+        return NoteColor;
+    }
+
+    private bool InPosition(FretboardNote spot) => position is not { } p || spot.Fret >= p && spot.Fret <= Fretboard.PositionEnd(info, p, capo);
+
+    /// <summary>
+    /// Moves to the next or the previous position; from the whole neck to the first or the last one,
+    /// and past the ends back to the whole neck.
+    /// </summary>
+    private void Step(int direction)
+    {
+        var current = position;
+        int? next = direction > 0
+            ? positions.Where(i => current == null || i > current).Cast<int?>().FirstOrDefault()
+            : positions.Where(i => current == null || i < current).Cast<int?>().LastOrDefault();
+
+        State.FretboardPosition = next;
+    }
 
     protected override void OnParametersSet()
     {
@@ -148,10 +251,14 @@
 
         info = settings.InstrumentInfo.Uncapoed;
         capo = settings.Capo;
-        frets = Math.Max(12, capo + 7);
+        // At least an octave; further when the chord diagrams may start higher (the highest fret in Settings, counted from
+        // the capo), so the last position starts there too.
+        frets = Math.Max(Math.Max(12, capo + 7), capo + settings.maxFret + info.ComfortableFretSpan - 1);
         horizontal = settings.Horizontal;
         leftHanded = settings.LeftHanded;
         conv = settings.conv;
         spots = Fretboard.Find(info, Notes, capo, frets);
+        positions = Fretboard.Positions(info, Notes, capo, frets);
+        chordNotes = Chord?.Select(Note.Normalize).ToArray();
     }
 }

@@ -158,4 +158,8 @@
   <data name="Key_CapoHint" xml:space="preserve"><value>Suona le posizioni mostrate: con il capotasto suonano come {0}.</value></data>
   <data name="Fretboard_ScaleHint" xml:space="preserve"><value>Dove si trovano le note della scala {0} sul manico. 1 è la tonica.</value></data>
   <data name="Fretboard_ChordHint" xml:space="preserve"><value>Dove si trovano le note dell’accordo {0} sul manico. 1 è la fondamentale.</value></data>
+  <data name="Fretboard_ScaleOnly" xml:space="preserve"><value>Scala</value></data>
+  <data name="Fretboard_WholeNeck" xml:space="preserve"><value>Tutto il manico</value></data>
+  <data name="Fretboard_Position" xml:space="preserve"><value>Tasti {0}–{1}</value></data>
+  <data name="Fretboard_ChordInScaleHint" xml:space="preserve"><value>Le note dell’accordo {0} sono indicate (1 è la sua fondamentale); i punti sono le altre note della scala {1}.</value></data>
 </root>

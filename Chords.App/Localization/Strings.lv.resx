@@ -159,4 +159,8 @@
   <data name="Key_CapoHint" xml:space="preserve"><value>Spēlē parādītos tvērienus – ar kapo tie skan kā {0}.</value></data>
   <data name="Fretboard_ScaleHint" xml:space="preserve"><value>Kur uz grifa atrodas skaņkārtas {0} skaņas. 1 ir tonika.</value></data>
   <data name="Fretboard_ChordHint" xml:space="preserve"><value>Kur uz grifa atrodas akorda {0} skaņas. 1 ir pamattonis.</value></data>
+  <data name="Fretboard_ScaleOnly" xml:space="preserve"><value>Skala</value></data>
+  <data name="Fretboard_WholeNeck" xml:space="preserve"><value>Viss kakls</value></data>
+  <data name="Fretboard_Position" xml:space="preserve"><value>Sliekšņi {0}–{1}</value></data>
+  <data name="Fretboard_ChordInScaleHint" xml:space="preserve"><value>Akorda {0} skaņas ir apzīmētas (1 ir tā pamattonis); punkti ir pārējās skalas {1} skaņas.</value></data>
 </root>

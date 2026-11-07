@@ -158,4 +158,8 @@
   <data name="Key_CapoHint" xml:space="preserve"><value>Սեղմեք ցուցադրված ձևերը – կապոյով դրանք հնչում են որպես {0}։</value></data>
   <data name="Fretboard_ScaleHint" xml:space="preserve"><value>Որտեղ են {0} գամմայի հնչյունները կոթի վրա։ 1-ը տոնիկան է։</value></data>
   <data name="Fretboard_ChordHint" xml:space="preserve"><value>Որտեղ են {0} ակորդի հնչյունները կոթի վրա։ 1-ը հիմնական տոնն է։</value></data>
+  <data name="Fretboard_ScaleOnly" xml:space="preserve"><value>Գամմա</value></data>
+  <data name="Fretboard_WholeNeck" xml:space="preserve"><value>Ամբողջ գրիֆը</value></data>
+  <data name="Fretboard_Position" xml:space="preserve"><value>Լադեր {0}–{1}</value></data>
+  <data name="Fretboard_ChordInScaleHint" xml:space="preserve"><value>{0} ակորդի հնչյունները նշված են (1-ը նրա հիմնական տոնն է), կետերը {1} գամմայի մյուս հնչյուններն են։</value></data>
 </root>

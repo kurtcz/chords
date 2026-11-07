@@ -157,4 +157,8 @@
   <data name="Key_CapoHint" xml:space="preserve"><value>Bấm các thế được hiển thị – với capo chúng vang lên như {0}.</value></data>
   <data name="Fretboard_ScaleHint" xml:space="preserve"><value>Vị trí các nốt của âm giai {0} trên cần đàn. 1 là chủ âm.</value></data>
   <data name="Fretboard_ChordHint" xml:space="preserve"><value>Vị trí các nốt của hợp âm {0} trên cần đàn. 1 là nốt gốc.</value></data>
+  <data name="Fretboard_ScaleOnly" xml:space="preserve"><value>Âm giai</value></data>
+  <data name="Fretboard_WholeNeck" xml:space="preserve"><value>Cả cần đàn</value></data>
+  <data name="Fretboard_Position" xml:space="preserve"><value>Phím {0}–{1}</value></data>
+  <data name="Fretboard_ChordInScaleHint" xml:space="preserve"><value>Các nốt của hợp âm {0} có ghi nhãn (1 là nốt gốc); các chấm là những nốt còn lại của âm giai {1}.</value></data>
 </root>

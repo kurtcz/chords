@@ -158,4 +158,8 @@
   <data name="Key_CapoHint" xml:space="preserve"><value>Greife die gezeigten Griffe – mit Kapodaster klingen sie wie {0}.</value></data>
   <data name="Fretboard_ScaleHint" xml:space="preserve"><value>Wo die Töne der Tonleiter {0} auf dem Griffbrett liegen. 1 ist der Grundton.</value></data>
   <data name="Fretboard_ChordHint" xml:space="preserve"><value>Wo die Töne des Akkords {0} auf dem Griffbrett liegen. 1 ist der Grundton.</value></data>
+  <data name="Fretboard_ScaleOnly" xml:space="preserve"><value>Tonleiter</value></data>
+  <data name="Fretboard_WholeNeck" xml:space="preserve"><value>Ganzes Griffbrett</value></data>
+  <data name="Fretboard_Position" xml:space="preserve"><value>Bünde {0}–{1}</value></data>
+  <data name="Fretboard_ChordInScaleHint" xml:space="preserve"><value>Beschriftet sind die Töne des Akkords {0} (1 ist sein Grundton), die Punkte sind die übrigen Töne der Tonleiter {1}.</value></data>
 </root>

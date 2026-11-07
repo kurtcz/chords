@@ -158,4 +158,8 @@
   <data name="Key_CapoHint" xml:space="preserve"><value>Gösterilen şekilleri bas – kapo ile {0} gibi duyulurlar.</value></data>
   <data name="Fretboard_ScaleHint" xml:space="preserve"><value>{0} dizisinin notalarının sap üzerindeki yerleri. 1 tonik sestir.</value></data>
   <data name="Fretboard_ChordHint" xml:space="preserve"><value>{0} akorunun notalarının sap üzerindeki yerleri. 1 kök sestir.</value></data>
+  <data name="Fretboard_ScaleOnly" xml:space="preserve"><value>Gam</value></data>
+  <data name="Fretboard_WholeNeck" xml:space="preserve"><value>Tüm sap</value></data>
+  <data name="Fretboard_Position" xml:space="preserve"><value>{0}–{1}. perdeler</value></data>
+  <data name="Fretboard_ChordInScaleHint" xml:space="preserve"><value>{0} akorunun notaları etiketli (1 kök sesidir); noktalar {1} gamının diğer notalarıdır.</value></data>
 </root>

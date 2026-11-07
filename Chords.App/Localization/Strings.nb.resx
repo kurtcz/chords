@@ -158,4 +158,8 @@
   <data name="Key_CapoHint" xml:space="preserve"><value>Ta de viste grepene – med capo høres de ut som {0}.</value></data>
   <data name="Fretboard_ScaleHint" xml:space="preserve"><value>Hvor tonene i skalaen {0} ligger på halsen. 1 er grunntonen.</value></data>
   <data name="Fretboard_ChordHint" xml:space="preserve"><value>Hvor tonene i akkorden {0} ligger på halsen. 1 er grunntonen.</value></data>
+  <data name="Fretboard_ScaleOnly" xml:space="preserve"><value>Skala</value></data>
+  <data name="Fretboard_WholeNeck" xml:space="preserve"><value>Hele halsen</value></data>
+  <data name="Fretboard_Position" xml:space="preserve"><value>Bånd {0}–{1}</value></data>
+  <data name="Fretboard_ChordInScaleHint" xml:space="preserve"><value>Tonene i akkorden {0} er merket (1 er grunntonen); prikkene er de andre tonene i skalaen {1}.</value></data>
 </root>

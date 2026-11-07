@@ -158,4 +158,8 @@
   <data name="Key_CapoHint" xml:space="preserve"><value>দেখানো আকারগুলো ধরুন – ক্যাপো দিয়ে এগুলো {0} এর মতো বাজে।</value></data>
   <data name="Fretboard_ScaleHint" xml:space="preserve"><value>{0} স্কেলের সুরগুলো ফিঙ্গারবোর্ডে কোথায়। 1 হলো টনিক।</value></data>
   <data name="Fretboard_ChordHint" xml:space="preserve"><value>{0} কর্ডের সুরগুলো ফিঙ্গারবোর্ডে কোথায়। 1 হলো মূল সুর।</value></data>
+  <data name="Fretboard_ScaleOnly" xml:space="preserve"><value>স্কেল</value></data>
+  <data name="Fretboard_WholeNeck" xml:space="preserve"><value>পুরো নেক</value></data>
+  <data name="Fretboard_Position" xml:space="preserve"><value>ফ্রেট {0}–{1}</value></data>
+  <data name="Fretboard_ChordInScaleHint" xml:space="preserve"><value>কর্ড {0}-এর সুরগুলো চিহ্নিত (1 হল এর মূল সুর); বিন্দুগুলো {1} স্কেলের বাকি সুর।</value></data>
 </root>

@@ -158,4 +158,8 @@
   <data name="Key_CapoHint" xml:space="preserve"><value>Toca les formes mostrades: amb la cellilla sonen com {0}.</value></data>
   <data name="Fretboard_ScaleHint" xml:space="preserve"><value>On són les notes de l’escala {0} al mànec. 1 és la tònica.</value></data>
   <data name="Fretboard_ChordHint" xml:space="preserve"><value>On són les notes de l’acord {0} al mànec. 1 és la fonamental.</value></data>
+  <data name="Fretboard_ScaleOnly" xml:space="preserve"><value>Escala</value></data>
+  <data name="Fretboard_WholeNeck" xml:space="preserve"><value>Tot el mànec</value></data>
+  <data name="Fretboard_Position" xml:space="preserve"><value>Trasts {0}–{1}</value></data>
+  <data name="Fretboard_ChordInScaleHint" xml:space="preserve"><value>Les notes de l’acord {0} estan indicades (1 n’és la fonamental); els punts són les altres notes de l’escala {1}.</value></data>
 </root>
