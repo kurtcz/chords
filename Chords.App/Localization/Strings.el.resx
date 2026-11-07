@@ -46,6 +46,10 @@
   <data name="Settings_Horizontal" xml:space="preserve"><value>Οριζόντια</value></data>
   <data name="Settings_LeftHanded" xml:space="preserve"><value>Αριστερόχειρας (κατοπτρικά διαγράμματα)</value></data>
   <data name="Settings_ShowTips" xml:space="preserve"><value>Εμφάνιση συμβουλών</value></data>
+  <data name="Settings_Theme" xml:space="preserve"><value>Θέμα</value></data>
+  <data name="Theme_System" xml:space="preserve"><value>Όπως η συσκευή</value></data>
+  <data name="Theme_Light" xml:space="preserve"><value>Φωτεινό</value></data>
+  <data name="Theme_Dark" xml:space="preserve"><value>Σκούρο</value></data>
   <data name="Settings_General" xml:space="preserve"><value>Γενικά</value></data>
   <data name="Settings_Language" xml:space="preserve"><value>Γλώσσα</value></data>
   <data name="Settings_Instrument" xml:space="preserve"><value>Όργανο</value></data>

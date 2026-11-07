@@ -46,6 +46,10 @@
   <data name="Settings_Horizontal" xml:space="preserve"><value>Orizzontali</value></data>
   <data name="Settings_LeftHanded" xml:space="preserve"><value>Mancino (diagrammi specchiati)</value></data>
   <data name="Settings_ShowTips" xml:space="preserve"><value>Mostra suggerimenti</value></data>
+  <data name="Settings_Theme" xml:space="preserve"><value>Tema</value></data>
+  <data name="Theme_System" xml:space="preserve"><value>Come il dispositivo</value></data>
+  <data name="Theme_Light" xml:space="preserve"><value>Chiaro</value></data>
+  <data name="Theme_Dark" xml:space="preserve"><value>Scuro</value></data>
   <data name="Settings_General" xml:space="preserve"><value>Generale</value></data>
   <data name="Settings_Language" xml:space="preserve"><value>Lingua</value></data>
   <data name="Settings_Instrument" xml:space="preserve"><value>Strumento</value></data>

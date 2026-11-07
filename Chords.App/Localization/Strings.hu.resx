@@ -46,6 +46,10 @@
   <data name="Settings_Horizontal" xml:space="preserve"><value>Vízszintes</value></data>
   <data name="Settings_LeftHanded" xml:space="preserve"><value>Balkezes (tükrözött ábrák)</value></data>
   <data name="Settings_ShowTips" xml:space="preserve"><value>Tippek megjelenítése</value></data>
+  <data name="Settings_Theme" xml:space="preserve"><value>Téma</value></data>
+  <data name="Theme_System" xml:space="preserve"><value>Az eszköz szerint</value></data>
+  <data name="Theme_Light" xml:space="preserve"><value>Világos</value></data>
+  <data name="Theme_Dark" xml:space="preserve"><value>Sötét</value></data>
   <data name="Settings_General" xml:space="preserve"><value>Általános</value></data>
   <data name="Settings_Language" xml:space="preserve"><value>Nyelv</value></data>
   <data name="Settings_Instrument" xml:space="preserve"><value>Hangszer</value></data>

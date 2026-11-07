@@ -45,6 +45,10 @@
   <data name="Settings_Horizontal" xml:space="preserve"><value>แนวนอน</value></data>
   <data name="Settings_LeftHanded" xml:space="preserve"><value>ถนัดซ้าย (แผนภาพกลับด้าน)</value></data>
   <data name="Settings_ShowTips" xml:space="preserve"><value>แสดงเคล็ดลับ</value></data>
+  <data name="Settings_Theme" xml:space="preserve"><value>ธีม</value></data>
+  <data name="Theme_System" xml:space="preserve"><value>ตามอุปกรณ์</value></data>
+  <data name="Theme_Light" xml:space="preserve"><value>สว่าง</value></data>
+  <data name="Theme_Dark" xml:space="preserve"><value>มืด</value></data>
   <data name="Settings_General" xml:space="preserve"><value>ทั่วไป</value></data>
   <data name="Settings_Language" xml:space="preserve"><value>ภาษา</value></data>
   <data name="Settings_Instrument" xml:space="preserve"><value>เครื่องดนตรี</value></data>

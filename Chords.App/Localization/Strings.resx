@@ -46,6 +46,10 @@
   <data name="Settings_Horizontal" xml:space="preserve"><value>Horizontal</value></data>
   <data name="Settings_LeftHanded" xml:space="preserve"><value>Left-handed (mirrored diagrams)</value></data>
   <data name="Settings_ShowTips" xml:space="preserve"><value>Show tips</value></data>
+  <data name="Settings_Theme" xml:space="preserve"><value>Theme</value></data>
+  <data name="Theme_System" xml:space="preserve"><value>Match device</value></data>
+  <data name="Theme_Light" xml:space="preserve"><value>Light</value></data>
+  <data name="Theme_Dark" xml:space="preserve"><value>Dark</value></data>
   <data name="Settings_General" xml:space="preserve"><value>General</value></data>
   <data name="Settings_Language" xml:space="preserve"><value>Language</value></data>
   <data name="Settings_Instrument" xml:space="preserve"><value>Instrument</value></data>

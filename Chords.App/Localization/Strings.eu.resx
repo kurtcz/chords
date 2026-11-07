@@ -46,6 +46,10 @@
   <data name="Settings_Horizontal" xml:space="preserve"><value>Horizontalak</value></data>
   <data name="Settings_LeftHanded" xml:space="preserve"><value>Ezkertia (ispilatutako diagramak)</value></data>
   <data name="Settings_ShowTips" xml:space="preserve"><value>Erakutsi aholkuak</value></data>
+  <data name="Settings_Theme" xml:space="preserve"><value>Gaia</value></data>
+  <data name="Theme_System" xml:space="preserve"><value>Gailuaren arabera</value></data>
+  <data name="Theme_Light" xml:space="preserve"><value>Argia</value></data>
+  <data name="Theme_Dark" xml:space="preserve"><value>Iluna</value></data>
   <data name="Settings_General" xml:space="preserve"><value>Orokorra</value></data>
   <data name="Settings_Language" xml:space="preserve"><value>Hizkuntza</value></data>
   <data name="Settings_Instrument" xml:space="preserve"><value>Instrumentua</value></data>

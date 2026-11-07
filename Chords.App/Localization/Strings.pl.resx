@@ -47,6 +47,10 @@
   <data name="Settings_Horizontal" xml:space="preserve"><value>Poziome</value></data>
   <data name="Settings_LeftHanded" xml:space="preserve"><value>Leworęczny (odbite diagramy)</value></data>
   <data name="Settings_ShowTips" xml:space="preserve"><value>Pokazuj wskazówki</value></data>
+  <data name="Settings_Theme" xml:space="preserve"><value>Motyw</value></data>
+  <data name="Theme_System" xml:space="preserve"><value>Jak w urządzeniu</value></data>
+  <data name="Theme_Light" xml:space="preserve"><value>Jasny</value></data>
+  <data name="Theme_Dark" xml:space="preserve"><value>Ciemny</value></data>
   <data name="Settings_General" xml:space="preserve"><value>Ogólne</value></data>
   <data name="Settings_Language" xml:space="preserve"><value>Język</value></data>
   <data name="Settings_Instrument" xml:space="preserve"><value>Instrument</value></data>

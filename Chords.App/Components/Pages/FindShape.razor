@@ -11,6 +11,9 @@
         @L["Shape_Hint"]
     </div>
 }
+@* Side by side on a wide or landscape screen: the board, and the chord it makes with the buttons. *@
+<div class="shape-layout">
+<div class="shape-info">
 <div class="shape-result">
     @if (chords.Length > 0)
     {
@@ -34,6 +37,7 @@
 </div>
 
 <TuningBadge />
+</div>
 <svg class="shape-board" viewBox="0 0 @Width @Height" xmlns="http://www.w3.org/2000/svg">
     @* Fret inlays *@
     @foreach (var fret in new[] { 5, 7 })
@@ -99,6 +103,7 @@
 <div class="shape-buttons">
     <button type="button" class="btn btn-default btn-lg" @onclick="Play">@L["Shape_Play"]</button>
     <button type="button" class="btn btn-default btn-lg" @onclick="Clear">@L["Shape_Clear"]</button>
+</div>
 </div>
 
 <RelatedLinks Pages="[AppPages.FindChord, AppPages.ShowChord]" />

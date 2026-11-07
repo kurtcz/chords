@@ -35,6 +35,8 @@ namespace Chords.App.Models
         public bool TunerChromatic { get; set; }
         /// <summary>UI language (a code from Localizer.Languages); null follows the device language.</summary>
         public string Language { get; set; }
+        /// <summary>Light or dark colours, or those of the device.</summary>
+        public ThemeMode Theme { get; set; } = ThemeMode.System;
         public string Error { get; set; }
         /// <summary>No settings were saved yet (first run).</summary>
         [JsonIgnore]

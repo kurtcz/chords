@@ -46,6 +46,10 @@
   <data name="Settings_Horizontal" xml:space="preserve"><value>Horizontaal</value></data>
   <data name="Settings_LeftHanded" xml:space="preserve"><value>Linkshandig (gespiegelde diagrammen)</value></data>
   <data name="Settings_ShowTips" xml:space="preserve"><value>Tips tonen</value></data>
+  <data name="Settings_Theme" xml:space="preserve"><value>Thema</value></data>
+  <data name="Theme_System" xml:space="preserve"><value>Zoals apparaat</value></data>
+  <data name="Theme_Light" xml:space="preserve"><value>Licht</value></data>
+  <data name="Theme_Dark" xml:space="preserve"><value>Donker</value></data>
   <data name="Settings_General" xml:space="preserve"><value>Algemeen</value></data>
   <data name="Settings_Language" xml:space="preserve"><value>Taal</value></data>
   <data name="Settings_Instrument" xml:space="preserve"><value>Instrument</value></data>

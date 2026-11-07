@@ -19,6 +19,53 @@ public class AppState
         }
     }
 
+    private Application app;
+    private bool wasDark;
+
+    /// <summary>The app shows dark colours: chosen in the settings, or the device's while it follows the device.</summary>
+    public bool IsDark => app?.RequestedTheme == AppTheme.Dark;
+
+    /// <summary>The colours switched between light and dark (a new setting or the device's change).</summary>
+    public event Action ThemeChanged;
+
+    /// <summary>Applies the theme setting to the app and reports its changes; called once the app exists.</summary>
+    public void Attach(Application application)
+    {
+        app = application;
+        app.RequestedThemeChanged += (_, _) => OnThemeChanged();
+        ApplyTheme();
+        wasDark = IsDark;
+    }
+
+    /// <summary>
+    /// Makes the native app follow <see cref="SettingsModel.Theme"/>: the safe areas and the system bars,
+    /// and the colour scheme the web view reports to the page before it renders.
+    /// </summary>
+    public void ApplyTheme()
+    {
+        if (app == null)
+        {
+            return;
+        }
+        app.UserAppTheme = Settings.Theme switch
+        {
+            ThemeMode.Light => AppTheme.Light,
+            ThemeMode.Dark => AppTheme.Dark,
+            _ => AppTheme.Unspecified,
+        };
+        // Not every platform raises RequestedThemeChanged for a theme the app chooses.
+        OnThemeChanged();
+    }
+
+    private void OnThemeChanged()
+    {
+        if (IsDark != wasDark)
+        {
+            wasDark = IsDark;
+            ThemeChanged?.Invoke();
+        }
+    }
+
     /// <summary>Chord last shown on the chord page; preselected when returning to "Show chord chart".</summary>
     public Note CurrentRoot { get; set; }
     public ChordType CurrentChordType { get; set; }

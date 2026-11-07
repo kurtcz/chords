@@ -46,6 +46,10 @@
   <data name="Settings_Horizontal" xml:space="preserve"><value>Хоризонтални</value></data>
   <data name="Settings_LeftHanded" xml:space="preserve"><value>За левораки (огледални дијаграми)</value></data>
   <data name="Settings_ShowTips" xml:space="preserve"><value>Прикажувај совети</value></data>
+  <data name="Settings_Theme" xml:space="preserve"><value>Тема</value></data>
+  <data name="Theme_System" xml:space="preserve"><value>Како уредот</value></data>
+  <data name="Theme_Light" xml:space="preserve"><value>Светла</value></data>
+  <data name="Theme_Dark" xml:space="preserve"><value>Темна</value></data>
   <data name="Settings_General" xml:space="preserve"><value>Општо</value></data>
   <data name="Settings_Language" xml:space="preserve"><value>Јазик</value></data>
   <data name="Settings_Instrument" xml:space="preserve"><value>Инструмент</value></data>

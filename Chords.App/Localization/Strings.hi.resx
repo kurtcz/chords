@@ -46,6 +46,10 @@
   <data name="Settings_Horizontal" xml:space="preserve"><value>आड़े</value></data>
   <data name="Settings_LeftHanded" xml:space="preserve"><value>बाएँ हाथ वाले (उलटे डायग्राम)</value></data>
   <data name="Settings_ShowTips" xml:space="preserve"><value>सुझाव दिखाएँ</value></data>
+  <data name="Settings_Theme" xml:space="preserve"><value>थीम</value></data>
+  <data name="Theme_System" xml:space="preserve"><value>डिवाइस के अनुसार</value></data>
+  <data name="Theme_Light" xml:space="preserve"><value>हल्की</value></data>
+  <data name="Theme_Dark" xml:space="preserve"><value>गहरी</value></data>
   <data name="Settings_General" xml:space="preserve"><value>सामान्य</value></data>
   <data name="Settings_Language" xml:space="preserve"><value>भाषा</value></data>
   <data name="Settings_Instrument" xml:space="preserve"><value>वाद्य</value></data>

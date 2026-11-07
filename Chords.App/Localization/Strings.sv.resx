@@ -46,6 +46,10 @@
   <data name="Settings_Horizontal" xml:space="preserve"><value>Vågräta</value></data>
   <data name="Settings_LeftHanded" xml:space="preserve"><value>Vänsterhänt (spegelvända diagram)</value></data>
   <data name="Settings_ShowTips" xml:space="preserve"><value>Visa tips</value></data>
+  <data name="Settings_Theme" xml:space="preserve"><value>Tema</value></data>
+  <data name="Theme_System" xml:space="preserve"><value>Som enheten</value></data>
+  <data name="Theme_Light" xml:space="preserve"><value>Ljust</value></data>
+  <data name="Theme_Dark" xml:space="preserve"><value>Mörkt</value></data>
   <data name="Settings_General" xml:space="preserve"><value>Allmänt</value></data>
   <data name="Settings_Language" xml:space="preserve"><value>Språk</value></data>
   <data name="Settings_Instrument" xml:space="preserve"><value>Instrument</value></data>

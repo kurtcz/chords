@@ -46,6 +46,10 @@
   <data name="Settings_Horizontal" xml:space="preserve"><value>Көлденең</value></data>
   <data name="Settings_LeftHanded" xml:space="preserve"><value>Солақай (айналы сызбалар)</value></data>
   <data name="Settings_ShowTips" xml:space="preserve"><value>Кеңестерді көрсету</value></data>
+  <data name="Settings_Theme" xml:space="preserve"><value>Тақырып</value></data>
+  <data name="Theme_System" xml:space="preserve"><value>Құрылғы бойынша</value></data>
+  <data name="Theme_Light" xml:space="preserve"><value>Ашық</value></data>
+  <data name="Theme_Dark" xml:space="preserve"><value>Қараңғы</value></data>
   <data name="Settings_General" xml:space="preserve"><value>Жалпы</value></data>
   <data name="Settings_Language" xml:space="preserve"><value>Тіл</value></data>
   <data name="Settings_Instrument" xml:space="preserve"><value>Аспап</value></data>

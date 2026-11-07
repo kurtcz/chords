@@ -45,6 +45,10 @@
   <data name="Settings_Horizontal" xml:space="preserve"><value>横向</value></data>
   <data name="Settings_LeftHanded" xml:space="preserve"><value>左手模式（镜像和弦图）</value></data>
   <data name="Settings_ShowTips" xml:space="preserve"><value>显示提示</value></data>
+  <data name="Settings_Theme" xml:space="preserve"><value>主题</value></data>
+  <data name="Theme_System" xml:space="preserve"><value>跟随设备</value></data>
+  <data name="Theme_Light" xml:space="preserve"><value>浅色</value></data>
+  <data name="Theme_Dark" xml:space="preserve"><value>深色</value></data>
   <data name="Settings_General" xml:space="preserve"><value>通用</value></data>
   <data name="Settings_Language" xml:space="preserve"><value>语言</value></data>
   <data name="Settings_Instrument" xml:space="preserve"><value>乐器</value></data>

@@ -49,6 +49,10 @@
   <data name="Settings_Horizontal" xml:space="preserve"><value>Cothrománach</value></data>
   <data name="Settings_LeftHanded" xml:space="preserve"><value>Ciotógach (léaráidí scáthánaithe)</value></data>
   <data name="Settings_ShowTips" xml:space="preserve"><value>Taispeáin leideanna</value></data>
+  <data name="Settings_Theme" xml:space="preserve"><value>Téama</value></data>
+  <data name="Theme_System" xml:space="preserve"><value>De réir an ghléis</value></data>
+  <data name="Theme_Light" xml:space="preserve"><value>Geal</value></data>
+  <data name="Theme_Dark" xml:space="preserve"><value>Dorcha</value></data>
   <data name="Settings_General" xml:space="preserve"><value>Ginearálta</value></data>
   <data name="Settings_Language" xml:space="preserve"><value>Teanga</value></data>
   <data name="Settings_Instrument" xml:space="preserve"><value>Uirlis</value></data>

@@ -1,24 +1,28 @@
 using Chords.App.Components;
+using Chords.App.Services;
 using Microsoft.AspNetCore.Components.WebView.Maui;
 
 namespace Chords.App;
 
 public class MainPage : ContentPage
 {
-    // Matches the fixed Bootstrap navbar, so the status bar area blends in.
+    // Matches the fixed Bootstrap navbar, so the status bar area blends in; the same in both themes.
     public static readonly Color NavbarColor = Color.FromArgb("#222222");
 
-    // Matches the tab bar (wwwroot/css/style.css), so the home indicator area blends in.
+    // Match the tab bar (--tab-bar-bg in wwwroot/css/style.css), so the home indicator area blends in.
     public static readonly Color TabBarColor = Color.FromArgb("#f8f8f8");
+    public static readonly Color DarkTabBarColor = Color.FromArgb("#1c1c1e");
 
-    public MainPage()
+    private readonly AppState state;
+
+    public MainPage(AppState state)
     {
+        this.state = state;
         BackgroundColor = NavbarColor;
-        // Only the safe areas show the page background: the navbar colour above, the tab bar colour below.
-        // The split lies low, so the screen stays mostly dark while the web view starts.
-        Background = new LinearGradientBrush(
-            [new GradientStop(NavbarColor, 0.85f), new GradientStop(TabBarColor, 0.85f)],
-            new Point(0, 0), new Point(0, 1));
+        UpdateColors();
+        state.ThemeChanged += () => Dispatcher.Dispatch(UpdateColors);
+        // The Android window may not be there yet when the page is created.
+        Loaded += (_, _) => UpdateColors();
         // Keep the web content out of the status bar, navigation bar and display cutouts.
         SafeAreaEdges = SafeAreaEdges.All;
 
@@ -29,5 +33,25 @@ public class MainPage : ContentPage
         webView.BlazorWebViewInitialized += (_, e) => e.WebView.AllowsBackForwardNavigationGestures = true;
 #endif
         Content = webView;
+    }
+
+    /// <summary>Colours of the safe areas and system bars for the current theme.</summary>
+    private void UpdateColors()
+    {
+        var tabBar = state.IsDark ? DarkTabBarColor : TabBarColor;
+        // Only the safe areas show the page background: the navbar colour above, the tab bar colour below.
+        // The split lies low, so the screen stays mostly dark while the web view starts.
+        Background = new LinearGradientBrush(
+            [new GradientStop(NavbarColor, 0.85f), new GradientStop(tabBar, 0.85f)],
+            new Point(0, 0), new Point(0, 1));
+#if ANDROID
+        // Icons of the status bar stay light on the dark navbar; those of the navigation bar follow the tab bar.
+        if (Platform.CurrentActivity?.Window is { } window)
+        {
+            var insets = AndroidX.Core.View.WindowCompat.GetInsetsController(window, window.DecorView);
+            insets.AppearanceLightStatusBars = false;
+            insets.AppearanceLightNavigationBars = !state.IsDark;
+        }
+#endif
     }
 }

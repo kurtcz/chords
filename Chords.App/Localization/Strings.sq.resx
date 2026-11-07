@@ -46,6 +46,10 @@
   <data name="Settings_Horizontal" xml:space="preserve"><value>Horizontale</value></data>
   <data name="Settings_LeftHanded" xml:space="preserve"><value>Mëngjarash (diagrame të pasqyruara)</value></data>
   <data name="Settings_ShowTips" xml:space="preserve"><value>Shfaq këshillat</value></data>
+  <data name="Settings_Theme" xml:space="preserve"><value>Tema</value></data>
+  <data name="Theme_System" xml:space="preserve"><value>Si pajisja</value></data>
+  <data name="Theme_Light" xml:space="preserve"><value>E çelët</value></data>
+  <data name="Theme_Dark" xml:space="preserve"><value>E errët</value></data>
   <data name="Settings_General" xml:space="preserve"><value>Të përgjithshme</value></data>
   <data name="Settings_Language" xml:space="preserve"><value>Gjuha</value></data>
   <data name="Settings_Instrument" xml:space="preserve"><value>Instrumenti</value></data>

@@ -8,6 +8,16 @@
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/bootstrap-toggle.min.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <script>
+        // The app sets the theme once it renders (Layout/MainLayout.razor); until then guess it from the
+        // colour scheme the web view reports, which the native app sets from the theme setting.
+        if (window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches) {
+            document.documentElement.classList.add("theme-dark");
+        }
+        window.chordsTheme = {
+            set: dark => document.documentElement.classList.toggle("theme-dark", dark)
+        };
+    </script>
 </head>
 <body>
     <div id="app"></div>

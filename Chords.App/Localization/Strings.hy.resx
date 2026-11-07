@@ -46,6 +46,10 @@
   <data name="Settings_Horizontal" xml:space="preserve"><value>Հորիզոնական</value></data>
   <data name="Settings_LeftHanded" xml:space="preserve"><value>Ձախլիկ (հայելային սխեմաներ)</value></data>
   <data name="Settings_ShowTips" xml:space="preserve"><value>Ցույց տալ խորհուրդները</value></data>
+  <data name="Settings_Theme" xml:space="preserve"><value>Թեմա</value></data>
+  <data name="Theme_System" xml:space="preserve"><value>Ըստ սարքի</value></data>
+  <data name="Theme_Light" xml:space="preserve"><value>Բաց</value></data>
+  <data name="Theme_Dark" xml:space="preserve"><value>Մուգ</value></data>
   <data name="Settings_General" xml:space="preserve"><value>Ընդհանուր</value></data>
   <data name="Settings_Language" xml:space="preserve"><value>Լեզու</value></data>
   <data name="Settings_Instrument" xml:space="preserve"><value>Գործիք</value></data>

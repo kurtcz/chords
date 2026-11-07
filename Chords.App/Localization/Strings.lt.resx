@@ -47,6 +47,10 @@
   <data name="Settings_Horizontal" xml:space="preserve"><value>Horizontalios</value></data>
   <data name="Settings_LeftHanded" xml:space="preserve"><value>Kairiarankiams (veidrodinės schemos)</value></data>
   <data name="Settings_ShowTips" xml:space="preserve"><value>Rodyti patarimus</value></data>
+  <data name="Settings_Theme" xml:space="preserve"><value>Tema</value></data>
+  <data name="Theme_System" xml:space="preserve"><value>Kaip įrenginyje</value></data>
+  <data name="Theme_Light" xml:space="preserve"><value>Šviesi</value></data>
+  <data name="Theme_Dark" xml:space="preserve"><value>Tamsi</value></data>
   <data name="Settings_General" xml:space="preserve"><value>Bendra</value></data>
   <data name="Settings_Language" xml:space="preserve"><value>Kalba</value></data>
   <data name="Settings_Instrument" xml:space="preserve"><value>Instrumentas</value></data>

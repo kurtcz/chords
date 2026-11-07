@@ -45,6 +45,10 @@
   <data name="Settings_Horizontal" xml:space="preserve"><value>가로</value></data>
   <data name="Settings_LeftHanded" xml:space="preserve"><value>왼손잡이 (반전 다이어그램)</value></data>
   <data name="Settings_ShowTips" xml:space="preserve"><value>팁 표시</value></data>
+  <data name="Settings_Theme" xml:space="preserve"><value>테마</value></data>
+  <data name="Theme_System" xml:space="preserve"><value>기기 설정에 따름</value></data>
+  <data name="Theme_Light" xml:space="preserve"><value>라이트</value></data>
+  <data name="Theme_Dark" xml:space="preserve"><value>다크</value></data>
   <data name="Settings_General" xml:space="preserve"><value>일반</value></data>
   <data name="Settings_Language" xml:space="preserve"><value>언어</value></data>
   <data name="Settings_Instrument" xml:space="preserve"><value>악기</value></data>

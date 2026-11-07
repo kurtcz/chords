@@ -46,6 +46,10 @@
   <data name="Settings_Horizontal" xml:space="preserve"><value>Vaakasuorat</value></data>
   <data name="Settings_LeftHanded" xml:space="preserve"><value>Vasenkätinen (peilatut kaaviot)</value></data>
   <data name="Settings_ShowTips" xml:space="preserve"><value>Näytä vinkit</value></data>
+  <data name="Settings_Theme" xml:space="preserve"><value>Teema</value></data>
+  <data name="Theme_System" xml:space="preserve"><value>Kuten laitteessa</value></data>
+  <data name="Theme_Light" xml:space="preserve"><value>Vaalea</value></data>
+  <data name="Theme_Dark" xml:space="preserve"><value>Tumma</value></data>
   <data name="Settings_General" xml:space="preserve"><value>Yleiset</value></data>
   <data name="Settings_Language" xml:space="preserve"><value>Kieli</value></data>
   <data name="Settings_Instrument" xml:space="preserve"><value>Soitin</value></data>

@@ -46,6 +46,10 @@
   <data name="Settings_Horizontal" xml:space="preserve"><value>Gorizontal</value></data>
   <data name="Settings_LeftHanded" xml:space="preserve"><value>Chapaqay (koʻzgu sxemalar)</value></data>
   <data name="Settings_ShowTips" xml:space="preserve"><value>Maslahatlarni koʻrsatish</value></data>
+  <data name="Settings_Theme" xml:space="preserve"><value>Mavzu</value></data>
+  <data name="Theme_System" xml:space="preserve"><value>Qurilmadagidek</value></data>
+  <data name="Theme_Light" xml:space="preserve"><value>Yorugʻ</value></data>
+  <data name="Theme_Dark" xml:space="preserve"><value>Toʻq</value></data>
   <data name="Settings_General" xml:space="preserve"><value>Umumiy</value></data>
   <data name="Settings_Language" xml:space="preserve"><value>Til</value></data>
   <data name="Settings_Instrument" xml:space="preserve"><value>Cholgʻu</value></data>

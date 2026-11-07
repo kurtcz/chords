@@ -1632,3 +1632,610 @@ h1.navbar-brand {
 .settings-section .section-hint {
     margin: 0 4px 8px;
 }
+
+/* ---------------------------------------------------------------------------------------------------------------
+   Tablets and landscape
+   --------------------------------------------------------------------------------------------------------------- */
+
+@media (min-width: 768px) {
+    /* Most pages keep to a readable column in the middle (Layout/MainLayout.razor); grids of diagrams use the width. */
+    .page-narrow {
+        --column: 720px;
+        padding-left: max(15px, calc(50% - var(--column) / 2));
+        padding-right: max(15px, calc(50% - var(--column) / 2));
+    }
+
+    /* Wider than the column, centred on it: margins of calc(50% - width / 2) on both sides work in either direction. */
+    .page-narrow > .fretboard,
+    .page-narrow > .settings-columns,
+    .page-narrow > .tuner-layout,
+    .page-narrow > .shape-layout {
+        --breakout: min(var(--wide, 1000px), 100vw - 30px);
+        margin-left: calc(50% - var(--breakout) / 2);
+        margin-right: calc(50% - var(--breakout) / 2);
+    }
+
+    .page-narrow > .fretboard {
+        --wide: 1400px;
+    }
+
+    /* Tab bar: the label beside its icon, the tabs together in the middle. */
+    .tab-bar {
+        justify-content: center;
+    }
+
+    .tab-bar .tab {
+        flex: 0 1 170px;
+        flex-direction: row;
+        gap: 8px;
+        font-size: 14px;
+    }
+
+    /* Settings: the general ones beside those of the diagrams and chords. */
+    .settings-columns {
+        display: flex;
+        align-items: flex-start;
+        gap: 24px;
+    }
+
+    .settings-column {
+        flex: 1 1 0;
+        min-width: 0;
+    }
+
+    /* Circle of fifths: larger, it has room. */
+    .circle-svg {
+        width: 420px;
+        height: 420px;
+    }
+}
+
+/* Tablet in portrait, or a large one: a bigger gauge. */
+@media (min-width: 768px) and (min-height: 700px) {
+    .tuner-dial,
+    .tuner-readout {
+        max-width: 420px;
+    }
+
+    .tuner-note {
+        font-size: 76px;
+    }
+}
+
+/* Wide enough for two panes (tablet, phone in landscape): the gauge beside what to tune to. */
+@media (min-width: 900px), (orientation: landscape) and (min-width: 640px) {
+    .tuner-layout {
+        --wide: 980px;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        align-items: center;
+        gap: 24px;
+    }
+
+    .tuner-controls > :first-child {
+        margin-top: 0;
+    }
+
+    /* Find chord by shape: the board on one side, the chord it makes and the buttons on the other. */
+    .shape-layout {
+        --wide: 820px;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        grid-template-areas: "board info" "board buttons";
+        grid-template-rows: auto 1fr;
+        column-gap: 24px;
+    }
+
+    .shape-layout .shape-info {
+        grid-area: info;
+        text-align: center;
+    }
+
+    .shape-layout .shape-board {
+        grid-area: board;
+    }
+
+    .shape-layout .shape-buttons {
+        grid-area: buttons;
+        align-self: start;
+        width: 100%;
+    }
+}
+
+/* Phone in landscape: the height is scarce. */
+@media (orientation: landscape) and (max-height: 500px) {
+    body {
+        padding-top: calc(58px + env(safe-area-inset-top));
+    }
+
+    .tuner-dial,
+    .tuner-readout {
+        max-width: 280px;
+    }
+
+    .tuner-note {
+        font-size: 52px;
+    }
+
+    .tuner-mode,
+    .tuner-strings,
+    .tuner-tuning,
+    .tuner-a4 {
+        margin-top: 12px;
+    }
+
+    .circle-svg {
+        width: 300px;
+        height: 300px;
+    }
+
+    .shape-result {
+        min-height: 0;
+    }
+}
+
+/* ---------------------------------------------------------------------------------------------------------------
+   Dark mode: .theme-dark is on <html> and on the root of the app (Layout/MainLayout.razor), see AppState.IsDark.
+   The diagrams are drawn with fixed colours; the rules for them pick those colours out by their attributes.
+   --------------------------------------------------------------------------------------------------------------- */
+
+.theme-dark {
+    --bg: #121212;
+    --surface: #1e1e1e;
+    --surface-2: #2a2a2a;
+    --border: #333;
+    --border-soft: #2a2a2a;
+    --text: #e4e4e4;
+    --text-2: #b4b4b4;
+    --muted: #8c8c8c;
+    --accent: #5b9bf0;
+    --accent-soft: rgba(91, 155, 240, 0.16);
+    --ink: #d6d6d6;
+    --inlay: #3a3a3a;
+    --tab-bar-bg: #1c1c1e; /* MainPage.DarkTabBarColor */
+    color-scheme: dark;
+}
+
+html.theme-dark,
+html.theme-dark body {
+    background-color: var(--bg);
+    color: var(--text);
+}
+
+/* :where keeps this weak, so links styled as tabs, rows or buttons keep their own colours. */
+.theme-dark :where(a:not(.btn):not(.label)),
+.theme-dark :where(a:not(.btn):not(.label)):hover,
+.theme-dark :where(a:not(.btn):not(.label)):focus {
+    color: #6ea8fe;
+}
+
+.theme-dark hr {
+    border-top-color: var(--border);
+}
+
+.theme-dark .text-muted,
+.theme-dark .help-block {
+    color: var(--muted);
+}
+
+/* Bootstrap */
+.theme-dark .btn-default {
+    background-color: var(--surface-2);
+    border-color: #3d3d3d;
+    color: var(--text);
+}
+
+.theme-dark .btn-default:hover,
+.theme-dark .btn-default:focus,
+.theme-dark .btn-default:active,
+.theme-dark .btn-default.active {
+    background-color: #353535;
+    border-color: #4a4a4a;
+    color: var(--text);
+}
+
+.theme-dark .btn-link {
+    color: #6ea8fe;
+}
+
+.theme-dark .form-control {
+    background-color: var(--surface-2);
+    border-color: var(--border);
+    color: var(--text);
+}
+
+.theme-dark .alert-info {
+    background-color: #10283a;
+    border-color: #1f4a66;
+    color: #a5cff0;
+}
+
+.theme-dark .alert-warning {
+    background-color: #2f2610;
+    border-color: #5a4a1e;
+    color: #f0d58a;
+}
+
+.theme-dark .alert-danger {
+    background-color: #341616;
+    border-color: #5c2626;
+    color: #f1a5a5;
+}
+
+.theme-dark .close {
+    color: #fff;
+    text-shadow: none;
+    opacity: 0.4;
+}
+
+.theme-dark .list-group-item {
+    background-color: var(--surface);
+    border-color: var(--border-soft);
+    color: var(--text);
+}
+
+.theme-dark a.list-group-item,
+.theme-dark a.list-group-item .list-group-item-heading {
+    color: var(--text);
+}
+
+.theme-dark a.list-group-item:hover,
+.theme-dark a.list-group-item:focus {
+    background-color: var(--surface-2);
+}
+
+.theme-dark .list-group-item.active-progression {
+    border-color: var(--accent);
+}
+
+.theme-dark .table > tbody > tr > td,
+.theme-dark .table > thead > tr > th {
+    border-color: var(--border);
+}
+
+.theme-dark #loader {
+    border-color: #333;
+    border-top-color: #3498db;
+}
+
+/* Text */
+.theme-dark .O {
+    color: var(--accent);
+}
+
+.theme-dark .error,
+.theme-dark .X {
+    color: #ff6b6b;
+}
+
+.theme-dark .key-scale,
+.theme-dark .key-chords .numeral {
+    color: var(--text-2);
+}
+
+.theme-dark .section-hint,
+.theme-dark .progression-notes {
+    color: var(--muted);
+}
+
+.theme-dark .capo-shape,
+.theme-dark .capo-shape-short {
+    color: #e0b07a;
+}
+
+.theme-dark .capo-option-current {
+    color: #5cc06c;
+}
+
+.theme-dark .difficulty-easy {
+    color: #66bb6a;
+}
+
+.theme-dark .difficulty-medium {
+    color: #ffb74d;
+}
+
+.theme-dark .difficulty-hard {
+    color: #ef6c6c;
+}
+
+/* Tab bar and "More" */
+.theme-dark .tab-bar {
+    border-top-color: #2c2c2e;
+    background-color: var(--tab-bar-bg);
+}
+
+.theme-dark .tab-bar .tab {
+    color: #8e8e93;
+}
+
+.theme-dark .tab-bar .tab:hover,
+.theme-dark .tab-bar .tab:focus {
+    color: #c4c4c8;
+}
+
+.theme-dark .tab-bar .tab.active {
+    color: var(--accent);
+}
+
+.theme-dark .more-backdrop {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.theme-dark .more-sheet {
+    background-color: var(--tab-bar-bg);
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.theme-dark .more-divider {
+    border-top-color: var(--border);
+}
+
+.theme-dark .more-list a {
+    color: var(--text);
+}
+
+.theme-dark .more-list a .icon {
+    color: var(--accent);
+}
+
+.theme-dark .more-list a:hover,
+.theme-dark .more-list a:focus {
+    background-color: var(--surface-2);
+}
+
+.theme-dark .more-list a.active {
+    background-color: var(--accent-soft);
+    color: var(--accent);
+}
+
+.theme-dark .more-copyright {
+    color: #777;
+}
+
+/* Related links, settings cards, segmented choices */
+.theme-dark .related-link > .icon:first-child {
+    color: var(--accent);
+}
+
+.theme-dark .related-chevron,
+.theme-dark .setting-chevron {
+    color: #5c5c5c;
+}
+
+.theme-dark .settings-card {
+    border-color: var(--border-soft);
+    background-color: var(--surface);
+}
+
+.theme-dark .setting-row {
+    border-top-color: var(--border-soft);
+}
+
+.theme-dark .setting-label,
+.theme-dark .setting-options li a {
+    color: var(--text);
+}
+
+.theme-dark .setting-value,
+.theme-dark .setting-number {
+    color: var(--accent);
+}
+
+.theme-dark .setting-options {
+    background-color: #252525;
+    border-top-color: var(--border-soft);
+}
+
+.theme-dark .setting-options li + li a {
+    border-top-color: var(--border-soft);
+}
+
+.theme-dark .segmented button,
+.theme-dark .tuner-mode button {
+    border-color: var(--accent);
+    background-color: transparent;
+    color: var(--accent);
+}
+
+.theme-dark .segmented button.active,
+.theme-dark .tuner-mode button.active {
+    background-color: var(--accent);
+    color: #fff;
+}
+
+/* Tunings */
+.theme-dark .tuning-badge {
+    border-color: #6b4a20;
+    background-color: #2e2213;
+    color: #f0c48f;
+}
+
+.theme-dark .tuning-badge .retuned,
+.theme-dark .tuning-editor-offset,
+.theme-dark .tuning-editor-string.retuned .tuning-editor-note {
+    color: #f0a24b;
+}
+
+.theme-dark .tuning-editor-string.retuned .tuning-editor-note {
+    border-color: #f0a24b;
+}
+
+.theme-dark .tuning-editor {
+    border-color: var(--border);
+}
+
+.theme-dark .tuning-editor-string button {
+    border-color: var(--border);
+    background-color: var(--surface-2);
+    color: var(--text);
+}
+
+.theme-dark .tuning-editor-string .tuning-editor-note {
+    background-color: var(--surface);
+}
+
+.theme-dark .tuning-editor-string button:disabled,
+.theme-dark .tuner-stepper button:disabled {
+    color: #555;
+}
+
+.theme-dark .tuning-delete {
+    color: #ff6b6b;
+}
+
+/* Tuner */
+.theme-dark .tuner-note,
+.theme-dark .tuner-cents {
+    color: var(--text);
+}
+
+.theme-dark .tuner-display.silent .tuner-note {
+    color: #4a4a4a;
+}
+
+.theme-dark .tuner-gauge .tick {
+    stroke: #5a5a5a;
+}
+
+.theme-dark .tuner-gauge .tick.center {
+    stroke: #3aa757;
+}
+
+.theme-dark .tuner-accidental {
+    fill: #9a9a9a;
+}
+
+.theme-dark .tuner-needle,
+.theme-dark .tuner-hub {
+    fill: var(--text);
+}
+
+.theme-dark .tuner-display.silent .tuner-hub {
+    fill: #4a4a4a;
+}
+
+.theme-dark .tuner-display.near .tuner-needle,
+.theme-dark .tuner-display.tuned .tuner-needle,
+.theme-dark .tuner-display.near .tuner-hub,
+.theme-dark .tuner-display.tuned .tuner-hub {
+    fill: var(--tuner-ok);
+}
+
+.theme-dark .tuner-pivot circle[fill="#fff"] {
+    fill: var(--bg);
+}
+
+.theme-dark .tuner-direction.up,
+.theme-dark .tuner-direction.down {
+    background-color: #3a2a14;
+    color: #f0b264;
+}
+
+.theme-dark .tuner-direction.ok {
+    background-color: #15331f;
+    color: #6fd08c;
+}
+
+.theme-dark .tuner-strings button,
+.theme-dark .tuner-tuning select {
+    border-color: #3d3d3d;
+    background-color: var(--surface);
+    color: var(--text);
+}
+
+.theme-dark .tuner-string.heard {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+.theme-dark .tuner-string.retuned {
+    border-color: #6b4a20;
+}
+
+.theme-dark .tuner-stepper {
+    border-color: var(--border);
+    color: var(--text);
+}
+
+.theme-dark .tuner-stepper button {
+    background-color: var(--surface-2);
+    color: var(--text);
+}
+
+/* Chord diagrams (Models/GuitarChordLayoutDecorator.cs): black lines, blue dots, open strings filled white. */
+.theme-dark .chord-layout svg [stroke="black"] {
+    stroke: var(--ink);
+}
+
+.theme-dark .chord-layout svg [fill="black"] {
+    fill: var(--ink);
+}
+
+.theme-dark .chord-layout svg [fill="blue"] {
+    fill: var(--accent);
+}
+
+.theme-dark .chord-layout svg [stroke="blue"] {
+    stroke: var(--accent);
+}
+
+.theme-dark .chord-layout svg circle[fill="white"] {
+    fill: var(--bg);
+}
+
+.theme-dark .chord-layout svg [stroke="red"] {
+    stroke: #ff6b6b;
+}
+
+.theme-dark .chord-layout svg .capo,
+.theme-dark .fretboard-board .capo {
+    fill: #9a9a9a;
+}
+
+.theme-dark .chord-layout svg .tuning.retuned {
+    fill: #f0a24b;
+}
+
+/* Find chord by shape (Pages/FindShape.razor) and the fretboard (Shared/FretboardView.razor) */
+.theme-dark .shape-board [stroke="#000"],
+.theme-dark .fretboard-board [stroke="#000"] {
+    stroke: var(--ink);
+}
+
+.theme-dark .shape-board [fill="#000"],
+.theme-dark .shape-board text:not([fill]) {
+    fill: var(--ink);
+}
+
+.theme-dark .shape-board [fill="#e4e4e4"],
+.theme-dark .fretboard-board [fill="#e4e4e4"] {
+    fill: var(--inlay);
+}
+
+.theme-dark .shape-board [fill="blue"] {
+    fill: var(--accent);
+}
+
+.theme-dark .shape-board [fill="#c00"] {
+    fill: #ff6b6b;
+}
+
+/* The frets outside the chosen position, faded */
+.theme-dark .fretboard-board [fill="#fff"][fill-opacity] {
+    fill: var(--bg);
+}
+
+/* The chosen position on the neck */
+.theme-dark .fretboard-board [fill="#fff3c4"] {
+    fill: rgba(255, 210, 80, 0.16);
+}
+
+/* Circle of fifths (Pages/Circle.razor): black rings with white gaps between the keys */
+.theme-dark .circle-svg path[stroke="black"] {
+    stroke: #333;
+}
+
+.theme-dark .circle-svg line[stroke="white"] {
+    stroke: var(--bg);
+}

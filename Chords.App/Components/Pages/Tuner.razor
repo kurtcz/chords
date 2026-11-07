@@ -22,6 +22,8 @@ else if (status == TunerStatus.Failed)
     <div class="alert alert-danger">@L["Tuner_MicError"]</div>
 }
 
+@* Side by side on a wide or landscape screen: the gauge, and the choices of what to tune to. *@
+<div class="tuner-layout">
 <div class="tuner-display @StateClass">
     @*
         Three layers of the same size: the scale, the needle and the hub. The needle has an <svg> of its own, which the
@@ -88,6 +90,7 @@ else if (status == TunerStatus.Failed)
     }
 </div>
 
+<div class="tuner-controls">
 <div class="tuner-mode" role="group">
     <button type="button" class="@(chromatic ? null : "active")" aria-pressed="@(!chromatic)" @onclick="() => SetChromatic(false)">
         @L[$"Instrument_{State.Settings.Instrument}"]
@@ -150,6 +153,8 @@ else if (status == TunerStatus.Failed)
         @L["Tuner_Hint"]
     </div>
 }
+</div>
+</div>
 
 @code {
     private const int MinA4 = 430;

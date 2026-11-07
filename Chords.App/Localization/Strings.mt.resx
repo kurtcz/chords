@@ -49,6 +49,10 @@
   <data name="Settings_Horizontal" xml:space="preserve"><value>Orizzontali</value></data>
   <data name="Settings_LeftHanded" xml:space="preserve"><value>Xellugi (dijagrammi mirja)</value></data>
   <data name="Settings_ShowTips" xml:space="preserve"><value>Uri l-ħjiel</value></data>
+  <data name="Settings_Theme" xml:space="preserve"><value>Tema</value></data>
+  <data name="Theme_System" xml:space="preserve"><value>Bħall-apparat</value></data>
+  <data name="Theme_Light" xml:space="preserve"><value>Ċar</value></data>
+  <data name="Theme_Dark" xml:space="preserve"><value>Skur</value></data>
   <data name="Settings_General" xml:space="preserve"><value>Ġenerali</value></data>
   <data name="Settings_Language" xml:space="preserve"><value>Lingwa</value></data>
   <data name="Settings_Instrument" xml:space="preserve"><value>Strument</value></data>

@@ -3,6 +3,9 @@
 
 <TopNav Title="@L["Nav_Settings"]" />
 
+@* Two columns side by side on a wide screen: the general settings, the diagrams and chords. *@
+<div class="settings-columns">
+<div class="settings-column">
 <section class="settings-section">
     <h2>@L["Settings_General"]</h2>
     <div class="settings-card">
@@ -70,12 +73,23 @@
                 }
             </ChildContent>
         </SettingSelect>
+        <SettingSelect Label="@L["Settings_Theme"]">
+            <Value>@L[$"Theme_{settings.Theme}"]</Value>
+            <ChildContent>
+                @foreach (var theme in Enum.GetValues<ThemeMode>())
+                {
+                    <li><a @onclick="() => Update(() => { settings.Theme = theme; State.ApplyTheme(); })">@L[$"Theme_{theme}"]</a></li>
+                }
+            </ChildContent>
+        </SettingSelect>
         <SettingRow Label="@L["Settings_ShowTips"]">
             <Toggle Value="settings.ShowTips" ValueChanged="v => Update(() => settings.ShowTips = v)" />
         </SettingRow>
     </div>
 </section>
+</div>
 
+<div class="settings-column">
 <section class="settings-section">
     <h2>@L["Settings_Diagrams"]</h2>
     <div class="settings-card">
@@ -123,6 +137,8 @@
         }
     </div>
 </section>
+</div>
+</div>
 
 @code {
     private SettingsModel settings;

@@ -2,10 +2,15 @@
 @implements IDisposable
 @* Creating AppState applies the language from settings before any page renders. *@
 @inject AppState State
+@using Microsoft.JSInterop
+@inject IJSRuntime JS
+@inject NavigationManager Nav
 
 @* Keyed by language: switching the language rebuilds the page so every component shows the new texts. *@
-<div dir="@(Localizer.IsRightToLeft ? "rtl" : "ltr")" lang="@Localizer.CurrentLanguage" @key="language">
-    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 main-content">
+@* The theme class here colours the page at once; on <html> (set from OnAfterRenderAsync) it colours what lies outside. *@
+<div class="app-root @(State.IsDark ? "theme-dark" : null)" dir="@(Localizer.IsRightToLeft ? "rtl" : "ltr")" lang="@Localizer.CurrentLanguage" @key="language">
+    @* On a tablet most pages keep to a readable column; grids of chord diagrams use the whole width. *@
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 main-content @(WidePage ? "page-wide" : "page-narrow")">
         @Body
     </div>
     <TabBar />
@@ -14,7 +19,28 @@
 @code {
     private string language = System.Globalization.CultureInfo.CurrentUICulture.Name;
 
-    protected override void OnInitialized() => L.LanguageChanged += OnLanguageChanged;
+    private bool? renderedDark;
+
+    /// <summary>Pages that are mostly a grid of chord diagrams (the layout renders again with each new page).</summary>
+    private bool WidePage => AppPages.FromRelativeUri(Nav.ToBaseRelativePath(Nav.Uri)) is var page
+                             && (page == AppPages.ChordDetail || page == AppPages.Favorites);
+
+    protected override void OnInitialized()
+    {
+        L.LanguageChanged += OnLanguageChanged;
+        State.ThemeChanged += OnThemeChanged;
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (renderedDark != State.IsDark)
+        {
+            renderedDark = State.IsDark;
+            await JS.InvokeVoidAsync("chordsTheme.set", State.IsDark);
+        }
+    }
+
+    private void OnThemeChanged() => InvokeAsync(StateHasChanged);
 
     private void OnLanguageChanged()
     {
@@ -22,5 +48,9 @@
         InvokeAsync(StateHasChanged);
     }
 
-    public void Dispose() => L.LanguageChanged -= OnLanguageChanged;
+    public void Dispose()
+    {
+        L.LanguageChanged -= OnLanguageChanged;
+        State.ThemeChanged -= OnThemeChanged;
+    }
 }

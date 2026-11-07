@@ -46,6 +46,10 @@
   <data name="Settings_Horizontal" xml:space="preserve"><value>Vodorovné</value></data>
   <data name="Settings_LeftHanded" xml:space="preserve"><value>Pre ľavákov (zrkadlové diagramy)</value></data>
   <data name="Settings_ShowTips" xml:space="preserve"><value>Zobrazovať tipy</value></data>
+  <data name="Settings_Theme" xml:space="preserve"><value>Motív</value></data>
+  <data name="Theme_System" xml:space="preserve"><value>Podľa systému</value></data>
+  <data name="Theme_Light" xml:space="preserve"><value>Svetlý</value></data>
+  <data name="Theme_Dark" xml:space="preserve"><value>Tmavý</value></data>
   <data name="Settings_General" xml:space="preserve"><value>Všeobecné</value></data>
   <data name="Settings_Language" xml:space="preserve"><value>Jazyk</value></data>
   <data name="Settings_Instrument" xml:space="preserve"><value>Nástroj</value></data>

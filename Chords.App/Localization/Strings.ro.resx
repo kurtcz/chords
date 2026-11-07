@@ -47,6 +47,10 @@
   <data name="Settings_Horizontal" xml:space="preserve"><value>Orizontale</value></data>
   <data name="Settings_LeftHanded" xml:space="preserve"><value>Stângaci (diagrame în oglindă)</value></data>
   <data name="Settings_ShowTips" xml:space="preserve"><value>Afișează sfaturi</value></data>
+  <data name="Settings_Theme" xml:space="preserve"><value>Temă</value></data>
+  <data name="Theme_System" xml:space="preserve"><value>Ca dispozitivul</value></data>
+  <data name="Theme_Light" xml:space="preserve"><value>Luminoasă</value></data>
+  <data name="Theme_Dark" xml:space="preserve"><value>Întunecată</value></data>
   <data name="Settings_General" xml:space="preserve"><value>General</value></data>
   <data name="Settings_Language" xml:space="preserve"><value>Limbă</value></data>
   <data name="Settings_Instrument" xml:space="preserve"><value>Instrument</value></data>

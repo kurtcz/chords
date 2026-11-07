@@ -45,6 +45,10 @@
   <data name="Settings_Horizontal" xml:space="preserve"><value>Horizontal</value></data>
   <data name="Settings_LeftHanded" xml:space="preserve"><value>Kidal (diagram dicerminkan)</value></data>
   <data name="Settings_ShowTips" xml:space="preserve"><value>Tampilkan tips</value></data>
+  <data name="Settings_Theme" xml:space="preserve"><value>Tema</value></data>
+  <data name="Theme_System" xml:space="preserve"><value>Ikuti perangkat</value></data>
+  <data name="Theme_Light" xml:space="preserve"><value>Terang</value></data>
+  <data name="Theme_Dark" xml:space="preserve"><value>Gelap</value></data>
   <data name="Settings_General" xml:space="preserve"><value>Umum</value></data>
   <data name="Settings_Language" xml:space="preserve"><value>Bahasa</value></data>
   <data name="Settings_Instrument" xml:space="preserve"><value>Instrumen</value></data>

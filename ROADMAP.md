@@ -29,7 +29,7 @@
 - **Hodnocení obtížnosti hmatu** – ✅ skóre podle počtu prstů, rozpětí, natažení malíčku, barré a tlumených strun (s pravidly každého nástroje), úrovně snadný/střední/těžký; řazení od nejsnadnějšího, přepínač „Jen snadné hmaty“ (u akordu bez snadného hmatu ukáže nejsnadnější dostupné). Obtížnost se zobrazuje přímo pod diagramem.
 - **Plynulé přechody (voice leading)** – v progresi vybírat hmaty, které jsou na hmatníku blízko sebe.
 - **Inverze a slash akordy** – např. C/G, D/F#; hledání hmatů s daným basovým tónem.
-- **Tmavý režim** a lepší rozvržení na tabletu / na šířku.
+- **Tmavý režim** a lepší rozvržení na tabletu / na šířku – ✅ motiv podle systému, světlý nebo tmavý (nastavení), tmavé barvy i v diagramech, hmatníku, kruhu a ladičce, systémové lišty podle motivu. Na tabletu čitelný sloupec, nastavení ve dvou sloupcích, větší kruh a ladička; na šířku ladička a hledání podle hmatu ve dvou sloupcích, na nízkém displeji menší okraje.
 
 ### Organizace a sdílení
 - **Skupiny oblíbených** – oblíbené akordy po skupinách (např. podle písně), řazení.

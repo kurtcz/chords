@@ -45,6 +45,10 @@
   <data name="Settings_Horizontal" xml:space="preserve"><value>横向き</value></data>
   <data name="Settings_LeftHanded" xml:space="preserve"><value>左利き (反転ダイアグラム)</value></data>
   <data name="Settings_ShowTips" xml:space="preserve"><value>ヒントを表示</value></data>
+  <data name="Settings_Theme" xml:space="preserve"><value>テーマ</value></data>
+  <data name="Theme_System" xml:space="preserve"><value>端末の設定に従う</value></data>
+  <data name="Theme_Light" xml:space="preserve"><value>ライト</value></data>
+  <data name="Theme_Dark" xml:space="preserve"><value>ダーク</value></data>
   <data name="Settings_General" xml:space="preserve"><value>一般</value></data>
   <data name="Settings_Language" xml:space="preserve"><value>言語</value></data>
   <data name="Settings_Instrument" xml:space="preserve"><value>楽器</value></data>
