@@ -1107,10 +1107,27 @@ h1.navbar-brand {
     font-weight: bold;
 }
 
-.more-copyright {
+/* App icon, name, version and copyright at the foot of the sheet. */
+.more-about {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     margin: 10px 12px 6px;
+}
+
+.more-about-icon {
+    flex: none;
+}
+
+.more-copyright {
     color: #aaa;
     font-size: 12px;
+    line-height: 1.35;
+}
+
+.more-app-name {
+    color: #888;
+    font-weight: bold;
 }
 
 /* "See also" links at the end of a page. */
