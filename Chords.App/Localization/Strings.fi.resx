@@ -113,6 +113,7 @@
   <data name="Style_Klezmer" xml:space="preserve"><value>Klezmer</value></data>
   <data name="Prog_Generate" xml:space="preserve"><value>Luo sointukulku</value></data>
   <data name="Prog_Hint" xml:space="preserve"><value>Napauta sointukulkua nähdäksesi otteet; ‹ › vaihtaa otetta. ▶ soittaa sen, napauta uudelleen pysäyttääksesi.</value></data>
+  <data name="Prog_Smooth" xml:space="preserve"><value>Sujuvat siirtymät</value></data>
   <data name="Nav_Tuner" xml:space="preserve"><value>Viritin</value></data>
   <data name="Tuner_Hint" xml:space="preserve"><value>Napauta kieltä kuullaksesi sen ja virittääksesi vain sen; Auto valitsee lähimmän kielen.</value></data>
   <data name="Tuner_Listening" xml:space="preserve"><value>Soita kieltä…</value></data>

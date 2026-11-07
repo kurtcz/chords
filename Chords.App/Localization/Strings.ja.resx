@@ -112,6 +112,7 @@
   <data name="Style_Klezmer" xml:space="preserve"><value>クレズマー</value></data>
   <data name="Prog_Generate" xml:space="preserve"><value>コード進行を生成</value></data>
   <data name="Prog_Hint" xml:space="preserve"><value>コード進行をタップするとダイアグラムが表示されます。‹ › で押さえ方を切り替えます。▶ で再生、もう一度タップで停止します。</value></data>
+  <data name="Prog_Smooth" xml:space="preserve"><value>スムーズな移行</value></data>
   <data name="Nav_Tuner" xml:space="preserve"><value>チューナー</value></data>
   <data name="Tuner_Hint" xml:space="preserve"><value>弦をタップするとその音が鳴り、その弦だけをチューニングします。オートは一番近い弦を選びます。</value></data>
   <data name="Tuner_Listening" xml:space="preserve"><value>弦を弾いてください…</value></data>

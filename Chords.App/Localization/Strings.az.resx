@@ -113,6 +113,7 @@
   <data name="Style_Klezmer" xml:space="preserve"><value>Klezmer</value></data>
   <data name="Prog_Generate" xml:space="preserve"><value>Ardıcıllıq yarat</value></data>
   <data name="Prog_Hint" xml:space="preserve"><value>Diaqramları görmək üçün ardıcıllığa toxunun; ‹ › barmaq düzülüşünü dəyişir. ▶ onu çalır, dayandırmaq üçün yenidən toxunun.</value></data>
+  <data name="Prog_Smooth" xml:space="preserve"><value>Rəvan keçidlər</value></data>
   <data name="Nav_Tuner" xml:space="preserve"><value>Kökləyici</value></data>
   <data name="Tuner_Hint" xml:space="preserve"><value>Simi eşitmək və yalnız onu kökləmək üçün ona toxunun; Avto ən yaxın simi seçir.</value></data>
   <data name="Tuner_Listening" xml:space="preserve"><value>Bir sim çalın…</value></data>

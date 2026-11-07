@@ -116,6 +116,7 @@
   <data name="Style_Klezmer" xml:space="preserve"><value>Klezmer</value></data>
   <data name="Prog_Generate" xml:space="preserve"><value>Gin dul chun cinn</value></data>
   <data name="Prog_Hint" xml:space="preserve"><value>Tapáil dul chun cinn chun na léaráidí a fheiceáil; athraíonn ‹ › an méarú. Seinneann ▶ é, tapáil arís chun stopadh.</value></data>
+  <data name="Prog_Smooth" xml:space="preserve"><value>Aistrithe réidhe</value></data>
   <data name="Nav_Tuner" xml:space="preserve"><value>Tiúnóir</value></data>
   <data name="Tuner_Hint" xml:space="preserve"><value>Tapáil sreang chun í a chloisteáil agus í sin amháin a thiúnadh; roghnaíonn Uath an tsreang is gaire.</value></data>
   <data name="Tuner_Listening" xml:space="preserve"><value>Seinn sreang…</value></data>

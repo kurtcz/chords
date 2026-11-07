@@ -113,6 +113,7 @@
   <data name="Style_Klezmer" xml:space="preserve"><value>Կլեզմեր</value></data>
   <data name="Prog_Generate" xml:space="preserve"><value>Ստեղծել հաջորդականություն</value></data>
   <data name="Prog_Hint" xml:space="preserve"><value>Հպեք հաջորդականությանը՝ դիագրամները տեսնելու համար; ‹ › փոխում է մատնադրությունը։ ▶ նվագում է, կրկին հպեք՝ դադարեցնելու համար։</value></data>
+  <data name="Prog_Smooth" xml:space="preserve"><value>Սահուն անցումներ</value></data>
   <data name="Nav_Tuner" xml:space="preserve"><value>Լարիչ</value></data>
   <data name="Tuner_Hint" xml:space="preserve"><value>Հպեք լարին՝ այն լսելու և միայն այն լարելու համար. Ավտոն ընտրում է ամենամոտ լարը։</value></data>
   <data name="Tuner_Listening" xml:space="preserve"><value>Նվագեք լարը…</value></data>

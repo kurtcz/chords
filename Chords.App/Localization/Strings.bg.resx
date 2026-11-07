@@ -113,6 +113,7 @@
   <data name="Style_Klezmer" xml:space="preserve"><value>Клезмер</value></data>
   <data name="Prog_Generate" xml:space="preserve"><value>Генерирай прогресия</value></data>
   <data name="Prog_Hint" xml:space="preserve"><value>Докоснете прогресия, за да видите диаграмите; ‹ › сменя хвата. ▶ я възпроизвежда, ново докосване спира.</value></data>
+  <data name="Prog_Smooth" xml:space="preserve"><value>Плавни преходи</value></data>
   <data name="Nav_Tuner" xml:space="preserve"><value>Тунер</value></data>
   <data name="Tuner_Hint" xml:space="preserve"><value>Докоснете струна, за да я чуете и настройвате само нея; Авто избира най-близката струна.</value></data>
   <data name="Tuner_Listening" xml:space="preserve"><value>Изсвирете струна…</value></data>

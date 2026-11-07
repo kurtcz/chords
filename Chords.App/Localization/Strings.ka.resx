@@ -113,6 +113,7 @@
   <data name="Style_Klezmer" xml:space="preserve"><value>კლეზმერი</value></data>
   <data name="Prog_Generate" xml:space="preserve"><value>მიმდევრობის შექმნა</value></data>
   <data name="Prog_Hint" xml:space="preserve"><value>შეეხეთ მიმდევრობას დიაგრამების სანახავად; ‹ › ცვლის აპლიკატურას. ▶ უკრავს მას, შესაჩერებლად კვლავ შეეხეთ.</value></data>
+  <data name="Prog_Smooth" xml:space="preserve"><value>გლუვი გადასვლები</value></data>
   <data name="Nav_Tuner" xml:space="preserve"><value>ტიუნერი</value></data>
   <data name="Tuner_Hint" xml:space="preserve"><value>შეეხეთ სიმს, რომ მოისმინოთ და მხოლოდ ის ააწყოთ; ავტო ირჩევს უახლოეს სიმს.</value></data>
   <data name="Tuner_Listening" xml:space="preserve"><value>დაუკარით სიმს…</value></data>

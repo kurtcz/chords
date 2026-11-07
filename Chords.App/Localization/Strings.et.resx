@@ -113,6 +113,7 @@
   <data name="Style_Klezmer" xml:space="preserve"><value>Klezmer</value></data>
   <data name="Prog_Generate" xml:space="preserve"><value>Loo akordijärgnevus</value></data>
   <data name="Prog_Hint" xml:space="preserve"><value>Puuduta järgnevust, et näha diagramme; ‹ › vahetab sõrmestust. ▶ mängib selle, puuduta uuesti peatamiseks.</value></data>
+  <data name="Prog_Smooth" xml:space="preserve"><value>Sujuvad üleminekud</value></data>
   <data name="Nav_Tuner" xml:space="preserve"><value>Häälestaja</value></data>
   <data name="Tuner_Hint" xml:space="preserve"><value>Puuduta keelt, et seda kuulda ja häälestada ainult seda; Auto valib lähima keele.</value></data>
   <data name="Tuner_Listening" xml:space="preserve"><value>Mängi keelt…</value></data>

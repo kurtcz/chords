@@ -113,6 +113,7 @@
   <data name="Style_Klezmer" xml:space="preserve"><value>Klezmer</value></data>
   <data name="Prog_Generate" xml:space="preserve"><value>Generér et akkordforløb</value></data>
   <data name="Prog_Hint" xml:space="preserve"><value>Tryk på et forløb for at se diagrammerne; ‹ › skifter greb. ▶ afspiller det, tryk igen for at stoppe.</value></data>
+  <data name="Prog_Smooth" xml:space="preserve"><value>Glidende skift</value></data>
   <data name="Nav_Tuner" xml:space="preserve"><value>Stemmeapparat</value></data>
   <data name="Tuner_Hint" xml:space="preserve"><value>Tryk på en streng for at høre den og kun stemme den; Auto vælger den nærmeste streng.</value></data>
   <data name="Tuner_Listening" xml:space="preserve"><value>Spil en streng…</value></data>

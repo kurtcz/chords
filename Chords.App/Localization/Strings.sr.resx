@@ -114,6 +114,7 @@
   <data name="Style_Klezmer" xml:space="preserve"><value>Клезмер</value></data>
   <data name="Prog_Generate" xml:space="preserve"><value>Генериши прогресију</value></data>
   <data name="Prog_Hint" xml:space="preserve"><value>Додирните прогресију да видите дијаграме; ‹ › мења хват. ▶ је репродукује, поновни додир зауставља.</value></data>
+  <data name="Prog_Smooth" xml:space="preserve"><value>Глатки прелази</value></data>
   <data name="Nav_Tuner" xml:space="preserve"><value>Штимер</value></data>
   <data name="Tuner_Hint" xml:space="preserve"><value>Додирните жицу да је чујете и штимујете само њу; Ауто бира најближу жицу.</value></data>
   <data name="Tuner_Listening" xml:space="preserve"><value>Одсвирајте жицу…</value></data>

@@ -113,6 +113,7 @@
   <data name="Style_Klezmer" xml:space="preserve"><value>Klezmer</value></data>
   <data name="Prog_Generate" xml:space="preserve"><value>Akkoordenschema genereren</value></data>
   <data name="Prog_Hint" xml:space="preserve"><value>Tik op een schema om de diagrammen te zien; ‹ › wisselt de greep. ▶ speelt het af, tik nogmaals om te stoppen.</value></data>
+  <data name="Prog_Smooth" xml:space="preserve"><value>Vloeiende overgangen</value></data>
   <data name="Nav_Tuner" xml:space="preserve"><value>Stemapparaat</value></data>
   <data name="Tuner_Hint" xml:space="preserve"><value>Tik op een snaar om hem te horen en alleen die te stemmen; Auto kiest de dichtstbijzijnde snaar.</value></data>
   <data name="Tuner_Listening" xml:space="preserve"><value>Speel een snaar…</value></data>

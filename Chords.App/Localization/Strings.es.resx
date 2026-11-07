@@ -113,6 +113,7 @@
   <data name="Style_Klezmer" xml:space="preserve"><value>Klezmer</value></data>
   <data name="Prog_Generate" xml:space="preserve"><value>Generar una progresión</value></data>
   <data name="Prog_Hint" xml:space="preserve"><value>Toca una progresión para ver sus diagramas; ‹ › cambia la digitación. ▶ la reproduce, toca de nuevo para detenerla.</value></data>
+  <data name="Prog_Smooth" xml:space="preserve"><value>Transiciones suaves</value></data>
   <data name="Nav_Tuner" xml:space="preserve"><value>Afinador</value></data>
   <data name="Tuner_Hint" xml:space="preserve"><value>Toca una cuerda para oírla y afinar solo esa; Auto elige la cuerda más cercana.</value></data>
   <data name="Tuner_Listening" xml:space="preserve"><value>Toca una cuerda…</value></data>

@@ -9,6 +9,9 @@
     <SettingRow Label="@L["Key_Sevenths"]">
         <Toggle Value="State.KeySevenths" ValueChanged="SeventhsChanged" />
     </SettingRow>
+    <SettingRow Label="@L["Prog_Smooth"]">
+        <Toggle Value="State.SmoothTransitions" ValueChanged="SmoothChanged" />
+    </SettingRow>
 </div>
 <button type="button" class="btn btn-primary btn-lg btn-block page-action" @onclick="Generate">🎲 @L["Prog_Generate"]</button>
 
@@ -72,7 +75,15 @@
                                     {
                                         <div class="progression-pick">
                                             <button type="button" class="btn btn-default btn-xs" @onclick="() => Pick(current, index, -1)">‹</button>
-                                            <span>@(current.Chosen[index] + 1)/@layouts.Length</span>
+                                            @if (current.Locked[index] != null)
+                                            {
+                                                @* A fingering picked by hand stays; the others follow it. Tapping the pin lets it follow again. *@
+                                                <span class="progression-locked" @onclick="() => Unlock(current, index)">📌 @(current.Chosen[index] + 1)/@layouts.Length</span>
+                                            }
+                                            else
+                                            {
+                                                <span>@(current.Chosen[index] + 1)/@layouts.Length</span>
+                                            }
                                             <button type="button" class="btn btn-default btn-xs" @onclick="() => Pick(current, index, 1)">›</button>
                                         </div>
                                     }
@@ -100,6 +111,8 @@
         public GuitarChordLayoutDecorator[][] Layouts { get; set; }
         /// <summary>Index of the fingering chosen for each chord.</summary>
         public int[] Chosen { get; set; }
+        /// <summary>Fingerings picked by hand, kept when the others are chosen for smooth transitions.</summary>
+        public int?[] Locked { get; set; }
     }
 
     private static readonly Random Random = new();
@@ -121,6 +134,15 @@
     {
         generated = null;
         Build();
+    }
+
+    private void SmoothChanged(bool value)
+    {
+        State.SmoothTransitions = value;
+        foreach (var item in items.Where(i => i.Layouts != null))
+        {
+            Choose(item);
+        }
     }
 
     private void SeventhsChanged(bool value)
@@ -171,7 +193,7 @@
         }
     }
 
-    /// <summary>Finds the fingerings of the progression's chords; the easiest (or favourite) is chosen first.</summary>
+    /// <summary>Finds the fingerings of the progression's chords and chooses one of each (see <see cref="Choose"/>).</summary>
     private async Task EnsureLayouts(Item item)
     {
         if (item.Layouts != null)
@@ -193,15 +215,42 @@
             return item.Chords.Select(i => found[i.Chord]).ToArray();
         });
 
-        item.Chosen = new int[layouts.Length];
+        item.Locked = new int?[layouts.Length];
         item.Layouts = layouts;
+        Choose(item);
+    }
+
+    /// <summary>
+    /// With smooth transitions, fingerings close to each other on the neck around those picked by hand;
+    /// otherwise the easiest (or favourite) fingering of each chord.
+    /// </summary>
+    private void Choose(Item item)
+    {
+        if (State.SmoothTransitions)
+        {
+            item.Chosen = VoiceLeading.Choose(
+                item.Layouts.Select(l => l.Select(i => i.Layout).ToArray()).ToArray(),
+                item.Locked,
+                l => Favorites.Contains(l.Chord, l));
+        }
+        else
+        {
+            item.Chosen = item.Locked.Select(i => i ?? 0).ToArray();
+        }
     }
 
     private void Pick(Item item, int index, int step)
     {
         var count = item.Layouts[index].Length;
 
-        item.Chosen[index] = (item.Chosen[index] + step + count) % count;
+        item.Locked[index] = (item.Chosen[index] + step + count) % count;
+        Choose(item);
+    }
+
+    private void Unlock(Item item, int index)
+    {
+        item.Locked[index] = null;
+        Choose(item);
     }
 
     private async Task Play(Item item)

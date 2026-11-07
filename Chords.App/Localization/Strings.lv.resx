@@ -114,6 +114,7 @@
   <data name="Style_Klezmer" xml:space="preserve"><value>Klezmers</value></data>
   <data name="Prog_Generate" xml:space="preserve"><value>Ģenerēt progresiju</value></data>
   <data name="Prog_Hint" xml:space="preserve"><value>Pieskaries progresijai, lai redzētu diagrammas; ‹ › maina pirkstojumu. ▶ to atskaņo, pieskaries vēlreiz, lai apturētu.</value></data>
+  <data name="Prog_Smooth" xml:space="preserve"><value>Plūstošas pārejas</value></data>
   <data name="Nav_Tuner" xml:space="preserve"><value>Skaņotājs</value></data>
   <data name="Tuner_Hint" xml:space="preserve"><value>Pieskarieties stīgai, lai to dzirdētu un skaņotu tikai to; Auto izvēlas tuvāko stīgu.</value></data>
   <data name="Tuner_Listening" xml:space="preserve"><value>Uzspēlējiet stīgu…</value></data>

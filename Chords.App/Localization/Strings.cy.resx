@@ -117,6 +117,7 @@
   <data name="Style_Klezmer" xml:space="preserve"><value>Klezmer</value></data>
   <data name="Prog_Generate" xml:space="preserve"><value>Creu dilyniant</value></data>
   <data name="Prog_Hint" xml:space="preserve"><value>Tapiwch ddilyniant i weld ei ddiagramau; mae ‹ › yn newid y bysedd. Mae ▶ yn ei chwarae, tapiwch eto i stopio.</value></data>
+  <data name="Prog_Smooth" xml:space="preserve"><value>Trawsnewidiadau llyfn</value></data>
   <data name="Nav_Tuner" xml:space="preserve"><value>Tiwniwr</value></data>
   <data name="Tuner_Hint" xml:space="preserve"><value>Tapiwch dant i'w glywed a thiwnio dim ond hwnnw; mae Awto yn dewis y tant agosaf.</value></data>
   <data name="Tuner_Listening" xml:space="preserve"><value>Chwaraewch dant…</value></data>

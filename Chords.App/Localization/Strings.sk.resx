@@ -114,6 +114,7 @@
   <data name="Style_Klezmer" xml:space="preserve"><value>Klezmer</value></data>
   <data name="Prog_Generate" xml:space="preserve"><value>Vygenerovať progresiu</value></data>
   <data name="Prog_Hint" xml:space="preserve"><value>Ťuknutím na progresiu zobrazíte diagramy; ‹ › mení hmat. ▶ ju prehrá, ďalším ťuknutím zastavíte.</value></data>
+  <data name="Prog_Smooth" xml:space="preserve"><value>Plynulé prechody</value></data>
   <data name="Nav_Tuner" xml:space="preserve"><value>Ladička</value></data>
   <data name="Tuner_Hint" xml:space="preserve"><value>Ťuknutím na strunu ju budete počuť a ladiť len ju; Auto vyberie najbližšiu strunu.</value></data>
   <data name="Tuner_Listening" xml:space="preserve"><value>Zahrajte na strunu…</value></data>

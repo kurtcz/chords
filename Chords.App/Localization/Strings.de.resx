@@ -113,6 +113,7 @@
   <data name="Style_Klezmer" xml:space="preserve"><value>Klezmer</value></data>
   <data name="Prog_Generate" xml:space="preserve"><value>Akkordfolge erzeugen</value></data>
   <data name="Prog_Hint" xml:space="preserve"><value>Tippe auf eine Akkordfolge, um ihre Diagramme zu sehen; ‹ › wechselt den Griff. ▶ spielt sie ab, erneut tippen stoppt.</value></data>
+  <data name="Prog_Smooth" xml:space="preserve"><value>Fließende Übergänge</value></data>
   <data name="Nav_Tuner" xml:space="preserve"><value>Stimmgerät</value></data>
   <data name="Tuner_Hint" xml:space="preserve"><value>Tippe auf eine Saite, um sie zu hören und nur sie zu stimmen; Auto wählt die nächste Saite.</value></data>
   <data name="Tuner_Listening" xml:space="preserve"><value>Spiele eine Saite…</value></data>

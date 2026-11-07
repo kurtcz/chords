@@ -112,6 +112,7 @@
   <data name="Style_Klezmer" xml:space="preserve"><value>Klezmer</value></data>
   <data name="Prog_Generate" xml:space="preserve"><value>Jana progresi</value></data>
   <data name="Prog_Hint" xml:space="preserve"><value>Ketik progresi untuk melihat rajahnya; ‹ › menukar kedudukan jari. ▶ memainkannya, ketik lagi untuk berhenti.</value></data>
+  <data name="Prog_Smooth" xml:space="preserve"><value>Peralihan lancar</value></data>
   <data name="Nav_Tuner" xml:space="preserve"><value>Penala</value></data>
   <data name="Tuner_Hint" xml:space="preserve"><value>Ketik tali untuk mendengarnya dan menala tali itu sahaja; Auto memilih tali terdekat.</value></data>
   <data name="Tuner_Listening" xml:space="preserve"><value>Petik satu tali…</value></data>

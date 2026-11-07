@@ -113,6 +113,7 @@
   <data name="Style_Klezmer" xml:space="preserve"><value>Klezmerra</value></data>
   <data name="Prog_Generate" xml:space="preserve"><value>Sortu progresio bat</value></data>
   <data name="Prog_Hint" xml:space="preserve"><value>Sakatu progresio bat bere diagramak ikusteko; ‹ › hatz-jarrera aldatzen du. ▶ jotzen du, sakatu berriro gelditzeko.</value></data>
+  <data name="Prog_Smooth" xml:space="preserve"><value>Trantsizio leunak</value></data>
   <data name="Nav_Tuner" xml:space="preserve"><value>Afinagailua</value></data>
   <data name="Tuner_Hint" xml:space="preserve"><value>Ukitu soka bat entzuteko eta hura bakarrik afinatzeko; Auto-k soka hurbilena aukeratzen du.</value></data>
   <data name="Tuner_Listening" xml:space="preserve"><value>Jo soka bat…</value></data>

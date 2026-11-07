@@ -113,6 +113,7 @@
   <data name="Style_Klezmer" xml:space="preserve"><value>Klezmer</value></data>
   <data name="Prog_Generate" xml:space="preserve"><value>Krijo një progresion</value></data>
   <data name="Prog_Hint" xml:space="preserve"><value>Prek një progresion për të parë diagramet; ‹ › ndryshon pozicionin e gishtave. ▶ e luan, prek përsëri për ta ndalur.</value></data>
+  <data name="Prog_Smooth" xml:space="preserve"><value>Kalime të buta</value></data>
   <data name="Nav_Tuner" xml:space="preserve"><value>Akordues</value></data>
   <data name="Tuner_Hint" xml:space="preserve"><value>Prek një tel për ta dëgjuar dhe për të akorduar vetëm atë; Auto zgjedh telin më të afërt.</value></data>
   <data name="Tuner_Listening" xml:space="preserve"><value>Luaj një tel…</value></data>

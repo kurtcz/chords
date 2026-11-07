@@ -113,6 +113,7 @@
   <data name="Style_Klezmer" xml:space="preserve"><value>க்ளெஸ்மர்</value></data>
   <data name="Prog_Generate" xml:space="preserve"><value>வரிசையை உருவாக்கு</value></data>
   <data name="Prog_Hint" xml:space="preserve"><value>வரைபடங்களைப் பார்க்க ஒரு வரிசையைத் தட்டவும்; ‹ › விரல் நிலையை மாற்றும். ▶ அதை இசைக்கும், நிறுத்த மீண்டும் தட்டவும்.</value></data>
+  <data name="Prog_Smooth" xml:space="preserve"><value>சீரான மாற்றங்கள்</value></data>
   <data name="Nav_Tuner" xml:space="preserve"><value>ட்யூனர்</value></data>
   <data name="Tuner_Hint" xml:space="preserve"><value>ஒரு நரம்பைக் கேட்டு அதை மட்டும் ட்யூன் செய்ய அதைத் தட்டவும்; ஆட்டோ அருகிலுள்ள நரம்பைத் தேர்ந்தெடுக்கும்.</value></data>
   <data name="Tuner_Listening" xml:space="preserve"><value>ஒரு நரம்பை மீட்டவும்…</value></data>

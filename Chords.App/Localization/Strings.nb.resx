@@ -113,6 +113,7 @@
   <data name="Style_Klezmer" xml:space="preserve"><value>Klezmer</value></data>
   <data name="Prog_Generate" xml:space="preserve"><value>Lag en progresjon</value></data>
   <data name="Prog_Hint" xml:space="preserve"><value>Trykk på en progresjon for å se diagrammene; ‹ › bytter grep. ▶ spiller den, trykk igjen for å stoppe.</value></data>
+  <data name="Prog_Smooth" xml:space="preserve"><value>Glidende overganger</value></data>
   <data name="Nav_Tuner" xml:space="preserve"><value>Stemmeapparat</value></data>
   <data name="Tuner_Hint" xml:space="preserve"><value>Trykk på en streng for å høre den og stemme bare den; Auto velger nærmeste streng.</value></data>
   <data name="Tuner_Listening" xml:space="preserve"><value>Spill en streng…</value></data>

@@ -114,6 +114,7 @@
   <data name="Style_Klezmer" xml:space="preserve"><value>Klezmer</value></data>
   <data name="Prog_Generate" xml:space="preserve"><value>Generează o progresie</value></data>
   <data name="Prog_Hint" xml:space="preserve"><value>Atinge o progresie pentru a-i vedea diagramele; ‹ › schimbă digitația. ▶ o redă, atinge din nou pentru oprire.</value></data>
+  <data name="Prog_Smooth" xml:space="preserve"><value>Tranziții line</value></data>
   <data name="Nav_Tuner" xml:space="preserve"><value>Acordor</value></data>
   <data name="Tuner_Hint" xml:space="preserve"><value>Atinge o coardă ca să o auzi și să acordezi doar acea coardă; Auto alege coarda cea mai apropiată.</value></data>
   <data name="Tuner_Listening" xml:space="preserve"><value>Cântă o coardă…</value></data>

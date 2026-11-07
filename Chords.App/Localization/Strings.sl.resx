@@ -115,6 +115,7 @@
   <data name="Style_Klezmer" xml:space="preserve"><value>Klezmer</value></data>
   <data name="Prog_Generate" xml:space="preserve"><value>Ustvari zaporedje</value></data>
   <data name="Prog_Hint" xml:space="preserve"><value>Tapnite zaporedje za prikaz diagramov; ‹ › zamenja prijem. ▶ ga predvaja, ponovni dotik ustavi.</value></data>
+  <data name="Prog_Smooth" xml:space="preserve"><value>Gladki prehodi</value></data>
   <data name="Nav_Tuner" xml:space="preserve"><value>Uglaševalnik</value></data>
   <data name="Tuner_Hint" xml:space="preserve"><value>Tapnite struno, da jo slišite in uglašujete samo njo; Samodejno izbere najbližjo struno.</value></data>
   <data name="Tuner_Listening" xml:space="preserve"><value>Zaigrajte struno…</value></data>

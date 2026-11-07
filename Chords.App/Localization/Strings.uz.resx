@@ -113,6 +113,7 @@
   <data name="Style_Klezmer" xml:space="preserve"><value>Klezmer</value></data>
   <data name="Prog_Generate" xml:space="preserve"><value>Ketma-ketlik yaratish</value></data>
   <data name="Prog_Hint" xml:space="preserve"><value>Diagrammalarni ko‘rish uchun ketma-ketlikka teging; ‹ › barmoq holatini almashtiradi. ▶ uni chaladi, to‘xtatish uchun yana teging.</value></data>
+  <data name="Prog_Smooth" xml:space="preserve"><value>Ravon oʻtishlar</value></data>
   <data name="Nav_Tuner" xml:space="preserve"><value>Tyuner</value></data>
   <data name="Tuner_Hint" xml:space="preserve"><value>Torni eshitish va faqat uni sozlash uchun unga teging; Avto eng yaqin torni tanlaydi.</value></data>
   <data name="Tuner_Listening" xml:space="preserve"><value>Torni chaling…</value></data>

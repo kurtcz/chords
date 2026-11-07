@@ -89,6 +89,8 @@ public class AppState
     public ScaleType KeyScale { get; set; } = ScaleType.Major;
     /// <summary>Seventh chords instead of triads in a key and its progressions.</summary>
     public bool KeySevenths { get; set; }
+    /// <summary>Progressions choose fingerings close to each other on the neck instead of the easiest of each chord.</summary>
+    public bool SmoothTransitions { get; set; } = true;
 
     /// <summary>The fretboard labels the notes by name instead of by interval.</summary>
     public bool FretboardNoteNames { get; set; }

@@ -113,6 +113,7 @@
   <data name="Style_Klezmer" xml:space="preserve"><value>ক্লেজমার</value></data>
   <data name="Prog_Generate" xml:space="preserve"><value>প্রগ্রেশন তৈরি করুন</value></data>
   <data name="Prog_Hint" xml:space="preserve"><value>ডায়াগ্রাম দেখতে একটি প্রগ্রেশনে ট্যাপ করুন; ‹ › ফিঙ্গারিং বদলায়। ▶ সেটি বাজায়, থামাতে আবার ট্যাপ করুন।</value></data>
+  <data name="Prog_Smooth" xml:space="preserve"><value>মসৃণ পরিবর্তন</value></data>
   <data name="Nav_Tuner" xml:space="preserve"><value>টিউনার</value></data>
   <data name="Tuner_Hint" xml:space="preserve"><value>কোনো তার শুনতে এবং শুধু সেটিই টিউন করতে তাতে ট্যাপ করুন; অটো সবচেয়ে কাছের তারটি বেছে নেয়।</value></data>
   <data name="Tuner_Listening" xml:space="preserve"><value>একটি তার বাজান…</value></data>

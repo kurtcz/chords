@@ -114,6 +114,7 @@
   <data name="Style_Klezmer" xml:space="preserve"><value>כליזמר</value></data>
   <data name="Prog_Generate" xml:space="preserve"><value>יצירת מהלך</value></data>
   <data name="Prog_Hint" xml:space="preserve"><value>הקישו על מהלך כדי לראות את הדיאגרמות; ‹ › מחליף את האצבוע. ▶ מנגן אותו, הקשה נוספת עוצרת.</value></data>
+  <data name="Prog_Smooth" xml:space="preserve"><value>מעברים חלקים</value></data>
   <data name="Nav_Tuner" xml:space="preserve"><value>מכוון</value></data>
   <data name="Tuner_Hint" xml:space="preserve"><value>הקישו על מיתר כדי לשמוע אותו ולכוון רק אותו; אוטומטי בוחר את המיתר הקרוב ביותר.</value></data>
   <data name="Tuner_Listening" xml:space="preserve"><value>נגנו על מיתר…</value></data>

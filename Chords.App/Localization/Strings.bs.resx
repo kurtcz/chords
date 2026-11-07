@@ -114,6 +114,7 @@
   <data name="Style_Klezmer" xml:space="preserve"><value>Klezmer</value></data>
   <data name="Prog_Generate" xml:space="preserve"><value>Generiši progresiju</value></data>
   <data name="Prog_Hint" xml:space="preserve"><value>Dodirnite progresiju da vidite dijagrame; ‹ › mijenja hvat. ▶ je reprodukuje, ponovni dodir zaustavlja.</value></data>
+  <data name="Prog_Smooth" xml:space="preserve"><value>Glatki prijelazi</value></data>
   <data name="Nav_Tuner" xml:space="preserve"><value>Štimer</value></data>
   <data name="Tuner_Hint" xml:space="preserve"><value>Dodirnite žicu da je čujete i štimate samo nju; Auto bira najbližu žicu.</value></data>
   <data name="Tuner_Listening" xml:space="preserve"><value>Odsvirajte žicu…</value></data>

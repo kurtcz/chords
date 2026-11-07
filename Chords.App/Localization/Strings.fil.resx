@@ -113,6 +113,7 @@
   <data name="Style_Klezmer" xml:space="preserve"><value>Klezmer</value></data>
   <data name="Prog_Generate" xml:space="preserve"><value>Gumawa ng progression</value></data>
   <data name="Prog_Hint" xml:space="preserve"><value>I-tap ang isang progression para makita ang mga diagram; ‹ › ay nagpapalit ng fingering. ▶ ay tumutugtog nito, i-tap ulit para huminto.</value></data>
+  <data name="Prog_Smooth" xml:space="preserve"><value>Maayos na paglipat</value></data>
   <data name="Nav_Tuner" xml:space="preserve"><value>Tuner</value></data>
   <data name="Tuner_Hint" xml:space="preserve"><value>I-tap ang isang kuwerdas para marinig ito at iyon lang ang i-tune; pinipili ng Auto ang pinakamalapit na kuwerdas.</value></data>
   <data name="Tuner_Listening" xml:space="preserve"><value>Tumugtog ng kuwerdas…</value></data>

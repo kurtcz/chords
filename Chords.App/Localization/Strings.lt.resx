@@ -114,6 +114,7 @@
   <data name="Style_Klezmer" xml:space="preserve"><value>Klezmeris</value></data>
   <data name="Prog_Generate" xml:space="preserve"><value>Sukurti progresiją</value></data>
   <data name="Prog_Hint" xml:space="preserve"><value>Bakstelėkite progresiją, kad pamatytumėte diagramas; ‹ › keičia pirštuotę. ▶ ją groja, bakstelėkite dar kartą, kad sustabdytumėte.</value></data>
+  <data name="Prog_Smooth" xml:space="preserve"><value>Sklandūs perėjimai</value></data>
   <data name="Nav_Tuner" xml:space="preserve"><value>Derintuvas</value></data>
   <data name="Tuner_Hint" xml:space="preserve"><value>Bakstelėkite stygą, kad ją išgirstumėte ir derintumėte tik ją; Auto parenka artimiausią stygą.</value></data>
   <data name="Tuner_Listening" xml:space="preserve"><value>Paskambinkite stygą…</value></data>

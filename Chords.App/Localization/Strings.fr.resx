@@ -113,6 +113,7 @@
   <data name="Style_Klezmer" xml:space="preserve"><value>Klezmer</value></data>
   <data name="Prog_Generate" xml:space="preserve"><value>Générer une progression</value></data>
   <data name="Prog_Hint" xml:space="preserve"><value>Touchez une progression pour voir ses diagrammes ; ‹ › change le doigté. ▶ la joue, touchez à nouveau pour arrêter.</value></data>
+  <data name="Prog_Smooth" xml:space="preserve"><value>Transitions fluides</value></data>
   <data name="Nav_Tuner" xml:space="preserve"><value>Accordeur</value></data>
   <data name="Tuner_Hint" xml:space="preserve"><value>Touchez une corde pour l’entendre et n’accorder qu’elle ; Auto choisit la corde la plus proche.</value></data>
   <data name="Tuner_Listening" xml:space="preserve"><value>Jouez une corde…</value></data>

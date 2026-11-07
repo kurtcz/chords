@@ -112,6 +112,7 @@
   <data name="Style_Klezmer" xml:space="preserve"><value>เคลซเมอร์</value></data>
   <data name="Prog_Generate" xml:space="preserve"><value>สร้างทางเดินคอร์ด</value></data>
   <data name="Prog_Hint" xml:space="preserve"><value>แตะทางเดินคอร์ดเพื่อดูไดอะแกรม ‹ › เปลี่ยนท่าจับ ▶ เล่น แตะอีกครั้งเพื่อหยุด</value></data>
+  <data name="Prog_Smooth" xml:space="preserve"><value>เปลี่ยนคอร์ดอย่างราบรื่น</value></data>
   <data name="Nav_Tuner" xml:space="preserve"><value>จูนเนอร์</value></data>
   <data name="Tuner_Hint" xml:space="preserve"><value>แตะสายเพื่อฟังเสียงและตั้งเฉพาะสายนั้น อัตโนมัติจะเลือกสายที่ใกล้ที่สุด</value></data>
   <data name="Tuner_Listening" xml:space="preserve"><value>ดีดสาย…</value></data>

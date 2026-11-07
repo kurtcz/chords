@@ -117,6 +117,7 @@
   <data name="Style_Klezmer" xml:space="preserve"><value>كليزمر</value></data>
   <data name="Prog_Generate" xml:space="preserve"><value>إنشاء تتابع</value></data>
   <data name="Prog_Hint" xml:space="preserve"><value>انقر على تتابع لرؤية مخططاته؛ ‹ › يغيّر وضعية الأصابع. ▶ يشغّله، انقر مرة أخرى للإيقاف.</value></data>
+  <data name="Prog_Smooth" xml:space="preserve"><value>انتقالات سلسة</value></data>
   <data name="Nav_Tuner" xml:space="preserve"><value>الموالف</value></data>
   <data name="Tuner_Hint" xml:space="preserve"><value>اضغط على وتر لتسمعه وتضبط هذا الوتر فقط؛ يختار تلقائي أقرب وتر.</value></data>
   <data name="Tuner_Listening" xml:space="preserve"><value>اعزف على وتر…</value></data>

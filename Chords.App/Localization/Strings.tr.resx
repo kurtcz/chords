@@ -113,6 +113,7 @@
   <data name="Style_Klezmer" xml:space="preserve"><value>Klezmer</value></data>
   <data name="Prog_Generate" xml:space="preserve"><value>Akor dizisi oluştur</value></data>
   <data name="Prog_Hint" xml:space="preserve"><value>Diyagramları görmek için bir diziye dokunun; ‹ › parmak pozisyonunu değiştirir. ▶ çalar, durdurmak için tekrar dokunun.</value></data>
+  <data name="Prog_Smooth" xml:space="preserve"><value>Akıcı geçişler</value></data>
   <data name="Nav_Tuner" xml:space="preserve"><value>Akort aleti</value></data>
   <data name="Tuner_Hint" xml:space="preserve"><value>Bir teli duymak ve yalnızca onu akort etmek için ona dokunun; Otomatik en yakın teli seçer.</value></data>
   <data name="Tuner_Listening" xml:space="preserve"><value>Bir tel çalın…</value></data>

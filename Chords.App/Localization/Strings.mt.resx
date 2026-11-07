@@ -116,6 +116,7 @@
   <data name="Style_Klezmer" xml:space="preserve"><value>Klezmer</value></data>
   <data name="Prog_Generate" xml:space="preserve"><value>Iġġenera progressjoni</value></data>
   <data name="Prog_Hint" xml:space="preserve"><value>Agħfas fuq progressjoni biex tara d-dijagrammi; ‹ › ibiddel il-pożizzjoni. ▶ idoqqha, agħfas mill-ġdid biex twaqqafha.</value></data>
+  <data name="Prog_Smooth" xml:space="preserve"><value>Tranżizzjonijiet bla xkiel</value></data>
   <data name="Nav_Tuner" xml:space="preserve"><value>Tuner</value></data>
   <data name="Tuner_Hint" xml:space="preserve"><value>Agħfas korda biex tismagħha u tkanta biss dik; Awto jagħżel l-eqreb korda.</value></data>
   <data name="Tuner_Listening" xml:space="preserve"><value>Daqq korda…</value></data>

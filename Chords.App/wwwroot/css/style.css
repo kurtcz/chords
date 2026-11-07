@@ -598,6 +598,12 @@ h1.navbar-brand {
     margin: 0 6px;
 }
 
+/* A fingering picked by hand: the others follow it; tapping it lets it follow again. */
+.progression-pick .progression-locked {
+    cursor: pointer;
+    font-weight: bold;
+}
+
 /* Tuner */
 .tuner-tip {
     margin-top: 15px;

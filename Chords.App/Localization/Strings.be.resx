@@ -114,6 +114,7 @@
   <data name="Style_Klezmer" xml:space="preserve"><value>Клезмер</value></data>
   <data name="Prog_Generate" xml:space="preserve"><value>Стварыць паслядоўнасць</value></data>
   <data name="Prog_Hint" xml:space="preserve"><value>Націсніце на паслядоўнасць, каб убачыць дыяграмы; ‹ › змяняе аплікатуру. ▶ прайграе яе, паўторнае націсканне спыняе.</value></data>
+  <data name="Prog_Smooth" xml:space="preserve"><value>Плаўныя пераходы</value></data>
   <data name="Nav_Tuner" xml:space="preserve"><value>Цюнер</value></data>
   <data name="Tuner_Hint" xml:space="preserve"><value>Націсніце на струну, каб пачуць яе і наладжваць толькі яе; Аўта выбірае бліжэйшую струну.</value></data>
   <data name="Tuner_Listening" xml:space="preserve"><value>Сыграйце на струне…</value></data>

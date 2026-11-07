@@ -113,6 +113,7 @@
   <data name="Style_Klezmer" xml:space="preserve"><value>Κλέζμερ</value></data>
   <data name="Prog_Generate" xml:space="preserve"><value>Δημιουργία αλληλουχίας</value></data>
   <data name="Prog_Hint" xml:space="preserve"><value>Πατήστε μια αλληλουχία για να δείτε τα διαγράμματα· τα ‹ › αλλάζουν το δάχτυλο. Το ▶ την παίζει, πατήστε ξανά για διακοπή.</value></data>
+  <data name="Prog_Smooth" xml:space="preserve"><value>Ομαλές μεταβάσεις</value></data>
   <data name="Nav_Tuner" xml:space="preserve"><value>Κουρδιστήρι</value></data>
   <data name="Tuner_Hint" xml:space="preserve"><value>Πατήστε μια χορδή για να την ακούσετε και να κουρδίσετε μόνο αυτήν· το Αυτόματο επιλέγει την πλησιέστερη χορδή.</value></data>
   <data name="Tuner_Listening" xml:space="preserve"><value>Παίξτε μια χορδή…</value></data>

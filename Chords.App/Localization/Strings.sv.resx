@@ -113,6 +113,7 @@
   <data name="Style_Klezmer" xml:space="preserve"><value>Klezmer</value></data>
   <data name="Prog_Generate" xml:space="preserve"><value>Skapa en ackordföljd</value></data>
   <data name="Prog_Hint" xml:space="preserve"><value>Tryck på en ackordföljd för att se diagrammen; ‹ › byter grepp. ▶ spelar upp den, tryck igen för att stoppa.</value></data>
+  <data name="Prog_Smooth" xml:space="preserve"><value>Mjuka övergångar</value></data>
   <data name="Nav_Tuner" xml:space="preserve"><value>Stämapparat</value></data>
   <data name="Tuner_Hint" xml:space="preserve"><value>Tryck på en sträng för att höra den och bara stämma den; Auto väljer närmaste sträng.</value></data>
   <data name="Tuner_Listening" xml:space="preserve"><value>Spela en sträng…</value></data>

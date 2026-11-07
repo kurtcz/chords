@@ -112,6 +112,7 @@
   <data name="Style_Klezmer" xml:space="preserve"><value>克莱兹默</value></data>
   <data name="Prog_Generate" xml:space="preserve"><value>生成和弦进行</value></data>
   <data name="Prog_Hint" xml:space="preserve"><value>点按和弦进行查看指法图；‹ › 切换指法。▶ 播放，再次点按停止。</value></data>
+  <data name="Prog_Smooth" xml:space="preserve"><value>平滑过渡</value></data>
   <data name="Nav_Tuner" xml:space="preserve"><value>调音器</value></data>
   <data name="Tuner_Hint" xml:space="preserve"><value>点按一根弦可听到它并只调这根弦；自动会选择最接近的弦。</value></data>
   <data name="Tuner_Listening" xml:space="preserve"><value>请拨一根弦…</value></data>

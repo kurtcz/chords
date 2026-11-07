@@ -113,6 +113,7 @@
   <data name="Style_Klezmer" xml:space="preserve"><value>క్లెజ్‌మర్</value></data>
   <data name="Prog_Generate" xml:space="preserve"><value>ప్రోగ్రెషన్‌ను రూపొందించండి</value></data>
   <data name="Prog_Hint" xml:space="preserve"><value>డయాగ్రామ్‌లను చూడటానికి ప్రోగ్రెషన్‌పై నొక్కండి; ‹ › ఫింగరింగ్‌ను మారుస్తుంది. ▶ దాన్ని ప్లే చేస్తుంది, ఆపడానికి మళ్లీ నొక్కండి.</value></data>
+  <data name="Prog_Smooth" xml:space="preserve"><value>సాఫీ మార్పులు</value></data>
   <data name="Nav_Tuner" xml:space="preserve"><value>ట్యూనర్</value></data>
   <data name="Tuner_Hint" xml:space="preserve"><value>తీగను వినడానికి, దాన్ని మాత్రమే ట్యూన్ చేయడానికి దానిపై నొక్కండి; ఆటో దగ్గరి తీగను ఎంచుకుంటుంది.</value></data>
   <data name="Tuner_Listening" xml:space="preserve"><value>ఒక తీగను మీటండి…</value></data>

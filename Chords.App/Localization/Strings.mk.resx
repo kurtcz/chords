@@ -113,6 +113,7 @@
   <data name="Style_Klezmer" xml:space="preserve"><value>Клезмер</value></data>
   <data name="Prog_Generate" xml:space="preserve"><value>Генерирај прогресија</value></data>
   <data name="Prog_Hint" xml:space="preserve"><value>Допрете прогресија за да ги видите дијаграмите; ‹ › го менува зафатот. ▶ ја пушта, повторен допир ја запира.</value></data>
+  <data name="Prog_Smooth" xml:space="preserve"><value>Мазни премини</value></data>
   <data name="Nav_Tuner" xml:space="preserve"><value>Штимер</value></data>
   <data name="Tuner_Hint" xml:space="preserve"><value>Допрете жица за да ја слушнете и да ја штимате само неа; Авто ја избира најблиската жица.</value></data>
   <data name="Tuner_Listening" xml:space="preserve"><value>Свирете жица…</value></data>

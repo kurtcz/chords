@@ -113,6 +113,7 @@
   <data name="Style_Klezmer" xml:space="preserve"><value>क्लेझमर</value></data>
   <data name="Prog_Generate" xml:space="preserve"><value>प्रोग्रेशन तयार करा</value></data>
   <data name="Prog_Hint" xml:space="preserve"><value>डायग्राम पाहण्यासाठी प्रोग्रेशनवर टॅप करा; ‹ › फिंगरिंग बदलते. ▶ ते वाजवते, थांबवण्यासाठी पुन्हा टॅप करा.</value></data>
+  <data name="Prog_Smooth" xml:space="preserve"><value>सहज बदल</value></data>
   <data name="Nav_Tuner" xml:space="preserve"><value>ट्यूनर</value></data>
   <data name="Tuner_Hint" xml:space="preserve"><value>तार ऐकण्यासाठी आणि फक्त तीच ट्यून करण्यासाठी त्यावर टॅप करा; ऑटो सर्वात जवळची तार निवडते.</value></data>
   <data name="Tuner_Listening" xml:space="preserve"><value>एखादी तार वाजवा…</value></data>
