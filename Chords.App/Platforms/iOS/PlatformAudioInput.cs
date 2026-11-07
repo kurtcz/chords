@@ -11,17 +11,25 @@ namespace Chords.App;
 /// </summary>
 public sealed class PlatformAudioInput : IAudioInput
 {
-    private const uint BlockSize = 2048;
+    /// <summary>
+    /// Samples per tap block (about 21 ms). The tap delivers a block only when it is full, so a larger one would make
+    /// the needle wait for it; iOS may still hand out larger blocks than asked for.
+    /// </summary>
+    private const uint BlockSize = 1024;
+    /// <summary>Hardware buffer asked for, so the tap can deliver its blocks this often.</summary>
+    private const double IoBufferSeconds = 0.005;
 
     private readonly object _sync = new();
     private AVAudioEngine _engine;
     private float[] _block = new float[BlockSize];
+    private bool _loggedBlock;
 
     public int Start(Action<float[], int> onSamples)
     {
         lock (_sync)
         {
             Stop();
+            _loggedBlock = false;
 
             var session = AVAudioSession.SharedInstance();
 
@@ -31,6 +39,8 @@ public sealed class PlatformAudioInput : IAudioInput
             Log("category", error);
             session.SetMode(AVAudioSession.ModeMeasurement, out error);
             Log("mode", error);
+            session.SetPreferredIOBufferDuration(IoBufferSeconds, out error);
+            Log("buffer", error);
             session.SetActive(true, out error);
             Log("activate", error);
 
@@ -47,6 +57,11 @@ public sealed class PlatformAudioInput : IAudioInput
             {
                 var count = (int)buffer.FrameLength;
 
+                if (!_loggedBlock)
+                {
+                    _loggedBlock = true;
+                    System.Diagnostics.Debug.WriteLine($"Tuner microphone: {count} samples per block at {format.SampleRate} Hz");
+                }
                 if (count == 0 || buffer.FloatChannelData == IntPtr.Zero)
                 {
                     return;

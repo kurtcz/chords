@@ -48,18 +48,29 @@ namespace Chords.Core.Tuning
         public static (float Min, float Max) Range(InstrumentInfo instrument, double a4 = DefaultA4)
             => ((float)FrequencyOf(instrument.Pitches.Min() - 5, a4), (float)FrequencyOf(instrument.Pitches.Max() + 12, a4));
 
-        /// <summary>Cutoff of the <see cref="LowPassFilter"/>, in harmonics of the locked string.</summary>
+        /// <summary>Low-pass cutoff of the <see cref="TunerFilter"/> with a locked string, in its harmonics.</summary>
         private const double CutoffHarmonics = 6;
+        /// <summary>Low-pass cutoff without a locked string, in harmonics of the highest string.</summary>
+        private const double AutoCutoffHarmonics = 30;
+        /// <summary>High-pass cutoff, as a fraction of the lowest frequency listened to.</summary>
+        private const double HighPassRatio = 0.5;
 
         /// <summary>
-        /// Low-pass cutoff for the microphone with a locked string: keeps its fundamental and lowest harmonics and
-        /// drops the upper partials, which run sharp. Null in auto mode, where the note is not known: a cutoff low
-        /// enough for the low strings smooths the attack of the high ones into octave-low readings.
+        /// Cutoffs of the <see cref="TunerFilter"/> for the microphone. The high-pass sits an octave below the lowest
+        /// note listened to. With a locked string the low-pass keeps its fundamental and lowest harmonics and drops the
+        /// upper partials, which run sharp. In auto mode the note is not known: a cutoff low enough for the low strings
+        /// smooths the attack of the high ones into octave-low readings (8 harmonics of the high E already did), so it
+        /// only cuts the hiss far above the highest string.
         /// </summary>
-        public static float? FilterCutoff(InstrumentInfo instrument, int lockedString, double a4 = DefaultA4)
-            => lockedString >= 0 && lockedString < instrument.StringCount
-                ? (float)(CutoffHarmonics * FrequencyOf(instrument.Pitches[lockedString], a4))
-                : (float?)null;
+        public static (float HighPass, float LowPass) FilterBand(InstrumentInfo instrument, int lockedString, double a4 = DefaultA4)
+        {
+            var highPass = (float)(HighPassRatio * Range(instrument, a4).Min);
+            var lowPass = lockedString >= 0 && lockedString < instrument.StringCount
+                ? CutoffHarmonics * FrequencyOf(instrument.Pitches[lockedString], a4)
+                : AutoCutoffHarmonics * FrequencyOf(instrument.Pitches.Max(), a4);
+
+            return (highPass, (float)lowPass);
+        }
 
         private static int Mod(int a, int n) => ((a % n) + n) % n;
     }
@@ -88,18 +99,25 @@ namespace Chords.Core.Tuning
     }
 
     /// <summary>
-    /// Turns noisy per-frame pitch estimates into a steady reading: ignores silence and unclear frames,
-    /// takes the median of the last few estimates (an occasional octave jump never shows) and forgets
-    /// the note after a short pause.
+    /// Turns noisy per-frame pitch estimates into a steady reading: ignores frames that do not stand out of the
+    /// room's noise and unclear frames, takes the median of the last few estimates (an occasional octave jump never
+    /// shows) and forgets the note after a short pause.
     /// </summary>
     public class PitchTracker
     {
-        /// <summary>Estimates less periodic than this (noise, the attack of a pluck) are skipped.</summary>
+        /// <summary>Estimates less periodic than this (noise, the attack of a pluck) do not start a note.</summary>
         public const float MinClarity = 0.85f;
+        /// <summary>
+        /// Once a note sounds, estimates near it this periodic still count: as a quiet string decays into the noise
+        /// its clarity drops, and it would vanish long before it stops sounding.
+        /// </summary>
+        public const float SustainClarity = 0.7f;
+        /// <summary>A less clear estimate (see <see cref="SustainClarity"/>) counts only this close to the note (semitones).</summary>
+        private const double SustainRange = 0.5;
         /// <summary>Estimates the median is taken of.</summary>
         private const int History = 5;
-        /// <summary>Frames without a pitch after which the note is gone.</summary>
-        private const int MaxGap = 8;
+        /// <summary>Seconds without a pitch after which the note is gone.</summary>
+        private const double MaxGapSeconds = 0.4;
         /// <summary>A string is shown as the target only when the note is within this many semitones of it.</summary>
         private const double StringCapture = 2.5;
 
@@ -118,12 +136,27 @@ namespace Chords.Core.Tuning
         /// </summary>
         private const double ChromaticHysteresis = 0.55;
 
+        /// <summary>
+        /// Time constant (seconds) of the smoothing applied to a steady note: the median still wavers by a few cents
+        /// from frame to frame, a visible tremble of the needle at 50 readings a second.
+        /// </summary>
+        private const double SmoothSeconds = 0.15;
+
+        /// <summary>
+        /// The smoothing eases off as the median moves away from the shown pitch (cents): at this distance its time
+        /// constant halves, at three times it a change (a peg turned) comes through in a frame or two.
+        /// </summary>
+        private const double SmoothKneeCents = 4;
+
         private readonly List<double> _pitches = new List<double>(History);
         /// <summary>First estimate of a possible new note, waiting for a second one to confirm it.</summary>
         private double? _pending;
         private int _gap;
         /// <summary>Semitone the chromatic reading targets, kept while the note stays near it.</summary>
         private int? _chromaticTarget;
+        /// <summary>The pitch shown: the median, smoothed (see <see cref="SmoothSeconds"/>); null with no note.</summary>
+        private double? _shown;
+        private readonly NoiseFloor _noise = new NoiseFloor();
 
         public InstrumentInfo Instrument { get; set; }
         public double A4 { get; set; } = TunerMath.DefaultA4;
@@ -131,6 +164,13 @@ namespace Chords.Core.Tuning
         public int LockedString { get; set; } = -1;
         /// <summary>Targets the nearest semitone and ignores the strings (and <see cref="LockedString"/>).</summary>
         public bool Chromatic { get; set; }
+        /// <summary>Estimates added per second; times (the pause that ends a note, the noise floor) are counted in them.</summary>
+        public double FrameRate { get; set; } = 50;
+
+        /// <summary>Background noise of the room, which a note must stand out of.</summary>
+        public NoiseFloor Noise => _noise;
+
+        private int MaxGap => Math.Max(1, (int)Math.Round(MaxGapSeconds * FrameRate));
 
         public PitchTracker(InstrumentInfo instrument)
         {
@@ -143,19 +183,28 @@ namespace Chords.Core.Tuning
             _pending = null;
             _gap = 0;
             _chromaticTarget = null;
+            _shown = null;
         }
 
         /// <summary>Adds an estimate; returns the current reading, null when nothing is sounding.</summary>
         public TunerReading Add(PitchEstimate estimate)
         {
             var pitch = estimate.HasPitch ? TunerMath.PitchOf(estimate.Frequency, A4) : 0;
+            var sounding = _pitches.Count > 0;
+            var loud = estimate.Rms >= (sounding ? _noise.SustainThreshold : _noise.StartThreshold);
+            var clear = estimate.HasPitch
+                        && (estimate.Clarity >= MinClarity
+                            || sounding && estimate.Clarity >= SustainClarity && Math.Abs(pitch - Median()) <= SustainRange);
 
-            if (estimate.HasPitch && estimate.Clarity >= MinClarity && !IsOctaveOffLockedString(pitch))
+            _noise.Add(estimate.Rms, estimate.HasPitch && estimate.Clarity >= SustainClarity, FrameRate);
+
+            if (clear && loud && !IsOctaveOffLockedString(pitch))
             {
                 // A different note than the ones heard: start over so the old note doesn't linger.
                 if (_pitches.Count > 0 && Math.Abs(pitch - Median()) > 1 && _gap > 0)
                 {
                     _pitches.Clear();
+                    _shown = null;
                 }
                 if (_pitches.Count > 0)
                 {
@@ -183,6 +232,11 @@ namespace Chords.Core.Tuning
                 _pitches.Clear();
                 _pending = null;
                 _chromaticTarget = null;
+                _shown = null;
+            }
+            if (_pitches.Count > 0)
+            {
+                _shown = Smooth(Median());
             }
 
             return Current;
@@ -196,7 +250,7 @@ namespace Chords.Core.Tuning
                 {
                     return null;
                 }
-                var pitch = Median();
+                var pitch = _shown ?? Median();
                 var frequency = TunerMath.FrequencyOf(pitch, A4);
 
                 if (Chromatic)
@@ -235,6 +289,23 @@ namespace Chords.Core.Tuning
             }
 
             return _chromaticTarget.Value;
+        }
+
+        /// <summary>
+        /// Moves the shown pitch towards the median: slowly while they are within a few cents (the wavering of a
+        /// steady note averages out), at once for a larger change, so the needle neither trembles nor lags.
+        /// </summary>
+        private double Smooth(double median)
+        {
+            if (!_shown.HasValue)
+            {
+                return median;
+            }
+            var cents = (median - _shown.Value) * 100 / SmoothKneeCents;
+            var tau = SmoothSeconds / (1 + cents * cents);
+            var alpha = 1 - Math.Exp(-1 / (FrameRate * tau));
+
+            return _shown.Value + alpha * (median - _shown.Value);
         }
 
         private double Median()

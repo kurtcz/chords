@@ -157,15 +157,15 @@ public class PitchDetectorTests(ITestOutputHelper output)
     }
 
     /// <summary>
-    /// Low-passes like <c>TunerListener</c> (only with a locked string) and reads the steadied pitch every 1024 samples.
+    /// Filters like <c>TunerListener</c> and reads the steadied pitch every 1024 samples.
     /// </summary>
     private static List<TunerReading> Listen(float[] samples, int sampleRate, InstrumentInfo instrument, int lockedString,
         bool filtered = true)
     {
         var detector = For(instrument, sampleRate);
         var tracker = new PitchTracker(instrument) { LockedString = lockedString };
-        var cutoff = filtered ? TunerMath.FilterCutoff(instrument, lockedString) : null;
-        var input = cutoff.HasValue ? LowPassFilter.Apply(samples, sampleRate, cutoff.Value) : samples;
+        tracker.FrameRate = sampleRate / 1024.0;
+        var input = filtered ? TunerFilter.Apply(samples, sampleRate, TunerMath.FilterBand(instrument, lockedString)) : samples;
         var readings = new List<TunerReading>();
 
         for (var end = detector.FrameSize; end <= input.Length; end += 1024)
@@ -253,9 +253,75 @@ public class PitchDetectorTests(ITestOutputHelper output)
         Assert.InRange(cents[cents.Length / 2], -25, 25);
         Assert.All(readings, r => Assert.Equal(Array.IndexOf(InstrumentInfo.Guitar.Pitches, pitch), r.String));
     }
+
+    /// <summary>
+    /// The recordings 30 dB quieter, in a quiet room's noise: a soft pluck far from the phone. A fixed gate at −50 dBFS
+    /// heard almost nothing of them; against the measured noise floor they read nearly as long as the loud ones.
+    /// </summary>
+    [Theory]
+    [InlineData("E6", 40)]
+    [InlineData("D4", 50)]
+    [InlineData("E1", 64)]
+    public void QuietRecordedStringReadsItsNote(string file, int pitch)
+    {
+        var (samples, sampleRate) = Wav.Read(Path.Combine(AppContext.BaseDirectory, "Samples", file + ".wav"));
+        var random = new Random(pitch);
+        var loudRms = Math.Sqrt(samples.Average(x => (double)x * x));
+        // 30 dB down, plus white noise at −75 dBFS.
+        var quiet = samples.Select(x => (float)(x * 0.0316 + (random.NextDouble() - 0.5) * 0.000178 * Math.Sqrt(12))).ToArray();
+
+        var loud = Listen(samples, sampleRate, InstrumentInfo.Guitar, -1);
+        var readings = Listen(quiet, sampleRate, InstrumentInfo.Guitar, -1);
+
+        output.WriteLine($"{file}: loud {20 * Math.Log10(loudRms):0} dBFS, {loud.Count} readings; quiet {readings.Count} readings, " +
+                         $"median {MedianCents(readings):+0.0;-0.0} cents");
+        Assert.True(readings.Count >= loud.Count * 2 / 3, $"{readings.Count} of {loud.Count} readings");
+        var wrong = readings.Count(r => Math.Round(r.Pitch) != pitch);
+        Assert.True(wrong <= readings.Count / 20, $"{wrong} of {readings.Count} readings on a wrong note");
+        Assert.InRange(MedianCents(readings) - MedianCents(loud), -3, 3);
+    }
+
+    [Fact]
+    public void QuietSineStandingOutOfTheNoiseIsHeard()
+    {
+        const int sampleRate = 48000;
+        var detector = For(InstrumentInfo.Guitar, sampleRate);
+        var tracker = new PitchTracker(InstrumentInfo.Guitar) { FrameRate = sampleRate / 960.0 };
+        var random = new Random(3);
+        var f = TunerMath.FrequencyOf(45);
+        // −63 dBFS A2 over −80 dBFS noise; the old fixed gate (−50 dBFS) never let it through.
+        var samples = Signal(sampleRate, 1, t => 0.001 * Math.Sin(2 * Math.PI * f * t) + (random.NextDouble() - 0.5) * 0.0003);
+        TunerReading reading = null;
+
+        for (var end = detector.FrameSize; end <= samples.Length; end += 960)
+        {
+            reading = tracker.Add(detector.Detect(samples, end)) ?? reading;
+        }
+
+        Assert.NotNull(reading);
+        Assert.InRange(reading.Cents, -1, 1);
+    }
+
+    [Fact]
+    public void ToneBuriedInLoudNoiseIsNotAcceptedAsANote()
+    {
+        const int sampleRate = 48000;
+        var detector = For(InstrumentInfo.Guitar, sampleRate);
+        var tracker = new PitchTracker(InstrumentInfo.Guitar) { FrameRate = sampleRate / 960.0 };
+        var random = new Random(4);
+
+        // A noisy room (−40 dBFS): the floor rises to it within seconds.
+        var noise = Signal(sampleRate, 5, _ => (random.NextDouble() - 0.5) * 0.035);
+
+        for (var end = detector.FrameSize; end <= noise.Length; end += 960)
+        {
+            Assert.Null(tracker.Add(detector.Detect(noise, end)));
+        }
+        Assert.InRange(20 * Math.Log10(tracker.Noise.Level), -43, -37);
+    }
 }
 
-public class TunerTests
+public class TunerTests(ITestOutputHelper output)
 {
     [Fact]
     public void ConvertsBetweenFrequencyAndPitch()
@@ -380,11 +446,65 @@ public class TunerTests
         Hear(tracker, 40);
         Assert.NotNull(tracker.Add(At(50, clarity: 0.5f)));
         Assert.Equal(40, tracker.Current.Pitch, 3);
-        for (var i = 0; i < 10; i++)
+        // 0.4 s at 50 frames a second.
+        for (var i = 0; i < 21; i++)
         {
             tracker.Add(default);
         }
         Assert.Null(tracker.Current);
+    }
+
+    [Fact]
+    public void LessClearFramesKeepASoundingNoteButDoNotStartOne()
+    {
+        var tracker = new PitchTracker(InstrumentInfo.Guitar);
+
+        // A decaying string: clear enough to keep the note, not to start one.
+        tracker.Add(At(45.1, clarity: 0.75f));
+        Assert.Null(tracker.Add(At(45.1, clarity: 0.75f)));
+        Hear(tracker, 45);
+        for (var i = 0; i < 40; i++)
+        {
+            tracker.Add(At(45.2, clarity: 0.75f));
+        }
+        Assert.Equal(45.2, tracker.Current.Pitch, 3);
+        // An unclear frame of another note does not count.
+        for (var i = 0; i < 40; i++)
+        {
+            tracker.Add(At(52, clarity: 0.75f));
+        }
+        Assert.Null(tracker.Current);
+    }
+
+    /// <summary>
+    /// A steady note wavers by a few cents from frame to frame; at 50 readings a second the needle trembled. The
+    /// shown pitch averages that out, yet still follows a peg turn within a few frames.
+    /// </summary>
+    [Fact]
+    public void SteadyNoteDoesNotTrembleButAPegTurnShowsAtOnce()
+    {
+        var tracker = new PitchTracker(InstrumentInfo.Guitar) { FrameRate = 50 };
+        var random = new Random(5);
+        var shown = new List<double>();
+
+        // ±3 cents of wavering around A2 −20 cents.
+        for (var i = 0; i < 100; i++)
+        {
+            var reading = tracker.Add(At(45 - 0.2 + (random.NextDouble() - 0.5) * 0.06));
+
+            if (reading != null)
+            {
+                shown.Add(reading.Cents);
+            }
+        }
+        var steady = shown.Skip(20).ToArray();
+        output.WriteLine($"steady: {steady.Min():0.0}…{steady.Max():0.0} cents");
+        Assert.InRange(steady.Max() - steady.Min(), 0, 2);
+
+        // The peg turned to +10 cents.
+        var turned = Enumerable.Range(0, 5).Select(_ => tracker.Add(At(45.1)).Cents).ToArray();
+        output.WriteLine($"turned: {string.Join(" ", turned.Select(c => c.ToString("0.0")))}");
+        Assert.InRange(turned[3], 7, 10.01);
     }
 
     [Fact]
@@ -422,12 +542,12 @@ public class TunerTests
 
         Assert.Equal(45, Hear(tracker, 45.45).Target);
         // Just past halfway the target stays; well past it, it moves.
-        for (var i = 0; i < 5; i++)
+        for (var i = 0; i < 30; i++)
         {
             tracker.Add(At(45.52));
         }
         Assert.Equal(45, tracker.Current.Target);
-        Assert.Equal(52, tracker.Current.Cents, 3);
+        Assert.Equal(52, tracker.Current.Cents, 0);
         for (var i = 0; i < 5; i++)
         {
             tracker.Add(At(45.6));

@@ -14,18 +14,21 @@ public enum TunerStatus
 }
 
 /// <summary>
-/// Feeds the microphone (low-passed while a string is locked, see <see cref="TunerMath.FilterCutoff"/>) to a
-/// <see cref="PitchDetector"/> about 20 times a second and reports the steadied <see cref="TunerReading"/>s (null = silence) on a background thread.
+/// Feeds the microphone (band-filtered, see <see cref="TunerMath.FilterBand"/>) to a
+/// <see cref="PitchDetector"/> 50 times a second and reports the steadied <see cref="TunerReading"/>s (null = silence) on a background thread.
 /// </summary>
 public sealed class TunerListener(IAudioInput input)
 {
-    /// <summary>Analyses per second.</summary>
-    private const int Rate = 20;
+    /// <summary>
+    /// Analyses per second. The frames overlap (one is 50–100 ms long), so the needle follows the string every
+    /// 20 ms; the FFT keeps that cheap even for a bass.
+    /// </summary>
+    private const int Rate = 50;
 
     private readonly object _sync = new();
     private PitchTracker _tracker;
     private PitchDetector _detector;
-    private LowPassFilter _filter;
+    private TunerFilter _filter;
     /// <summary>The filtered piece of the current block.</summary>
     private float[] _filtered = [];
     private float[] _buffer;
@@ -56,7 +59,10 @@ public sealed class TunerListener(IAudioInput input)
         }
         lock (_sync)
         {
-            _tracker = new PitchTracker(instrument) { A4 = a4, LockedString = chromatic ? -1 : lockedString, Chromatic = chromatic };
+            _tracker = new PitchTracker(instrument)
+            {
+                A4 = a4, LockedString = chromatic ? -1 : lockedString, Chromatic = chromatic, FrameRate = Rate
+            };
             _sampleRate = 0;
         }
 
@@ -92,7 +98,7 @@ public sealed class TunerListener(IAudioInput input)
     /// <summary>Changes what is tuned while listening.</summary>
     public void Configure(InstrumentInfo instrument, double a4, int lockedString, bool chromatic)
     {
-        // No string is tuned in chromatic mode: no lock, so no low-pass filter either.
+        // No string is tuned in chromatic mode: no lock, so only the wide filter of auto mode.
         lockedString = chromatic ? -1 : lockedString;
         lock (_sync)
         {
@@ -139,16 +145,14 @@ public sealed class TunerListener(IAudioInput input)
         CreateFilter();
     }
 
-    /// <summary>The cutoff follows the locked string, so a new filter whenever it changes; none in auto mode.</summary>
+    /// <summary>The cutoffs follow the instrument and the locked string, so a new filter whenever they change.</summary>
     private void CreateFilter()
     {
         if (_sampleRate <= 0)
         {
             return;
         }
-        var cutoff = TunerMath.FilterCutoff(_tracker.Instrument, _tracker.LockedString, _tracker.A4);
-
-        _filter = cutoff.HasValue ? new LowPassFilter(_sampleRate, cutoff.Value) : null;
+        _filter = new TunerFilter(_sampleRate, TunerMath.FilterBand(_tracker.Instrument, _tracker.LockedString, _tracker.A4));
     }
 
     /// <summary>Appends a block in pieces of at most one hop, analysing after each full hop.</summary>

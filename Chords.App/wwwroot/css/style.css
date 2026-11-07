@@ -712,10 +712,10 @@ h1.navbar-brand {
 }
 
 .tuner-needle {
-    /* Turns around the hub of the gauge; the short transition smooths the 15 redraws a second. */
+    /* Turns around the hub of the gauge; js/tuner.js sets its angle and shows it while a note sounds. */
     transform-box: view-box;
     transform-origin: 150px 160px;
-    transition: transform 0.12s linear;
+    visibility: hidden;
     fill: #333;
 }
 
