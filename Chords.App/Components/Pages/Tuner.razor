@@ -211,7 +211,8 @@ else if (status == TunerStatus.Failed)
         Label("tuner-label", -25, R - 35, 0, 5, "−25"),
         Label("tuner-label", 25, R - 35, 0, 5, "+25"),
         Label("tuner-label", 50, R - 35, 0, 5, "+50"),
-        Label("tuner-accidental flat", -62, R - 4, -4, 20, "♭"),
+        // The flat's ink stands on the baseline and reaches higher than the sharp's, which hangs below it; lower it to match.
+        Label("tuner-accidental flat", -62, R - 4, -4, 24, "♭"),
         Label("tuner-accidental", 62, R - 4, 4, 20, "♯"),
     };
     private static readonly string NeedlePath =
