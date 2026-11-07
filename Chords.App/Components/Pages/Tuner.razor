@@ -23,17 +23,7 @@ else if (status == TunerStatus.Failed)
 }
 
 <div class="tuner-display @StateClass">
-    <div class="tuner-note">
-        @if (reading == null)
-        {
-            <span>–</span>
-        }
-        else
-        {
-            @NoteLetter(reading.Target, reading.String)<sub>@TunerMath.OctaveOf(reading.Target)</sub>
-        }
-    </div>
-    <svg class="tuner-gauge" viewBox="0 -12 300 186" xmlns="http://www.w3.org/2000/svg">
+    <svg class="tuner-gauge" viewBox="0 22 300 152" xmlns="http://www.w3.org/2000/svg">
         @foreach (var (from, to, zone) in Zones)
         {
             if (from == 0)
@@ -66,16 +56,34 @@ else if (status == TunerStatus.Failed)
         <circle class="tuner-hub" cx="@F(Cx)" cy="@F(Cy)" r="10" />
         <circle cx="@F(Cx)" cy="@F(Cy)" r="3.5" fill="#fff" />
     </svg>
+    @* Below the gauge: the target note in the middle, the cents on its left and the frequency on its right. *@
     <div class="tuner-readout">
-        @if (reading != null)
-        {
-            <span class="tuner-cents">@reading.Cents.ToString("+0;−0;0", CultureInfo.InvariantCulture)¢</span>
-            <span class="tuner-hz">@reading.Frequency.ToString("0.0", CultureInfo.CurrentCulture) Hz</span>
-            @if ((int)Math.Round(reading.Pitch) != reading.Target)
+        <div class="tuner-side tuner-side-left">
+            @if (reading != null)
             {
-                <span class="tuner-hz">♪ @NoteName((int)Math.Round(reading.Pitch))</span>
+                <span class="tuner-cents">@reading.Cents.ToString("+0;−0;0", CultureInfo.InvariantCulture)¢</span>
             }
-        }
+        </div>
+        <div class="tuner-note">
+            @if (reading == null)
+            {
+                <span>–</span>
+            }
+            else
+            {
+                @NoteLetter(reading.Target, reading.String)<sub>@TunerMath.OctaveOf(reading.Target)</sub>
+            }
+        </div>
+        <div class="tuner-side tuner-side-right">
+            @if (reading != null)
+            {
+                <span class="tuner-hz">@reading.Frequency.ToString("0.0", CultureInfo.CurrentCulture)<small> Hz</small></span>
+                @if ((int)Math.Round(reading.Pitch) != reading.Target)
+                {
+                    <span class="tuner-heard">♪ @NoteName((int)Math.Round(reading.Pitch))</span>
+                }
+            }
+        </div>
     </div>
     @if (Direction is { } direction)
     {

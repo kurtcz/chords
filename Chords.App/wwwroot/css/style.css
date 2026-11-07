@@ -644,8 +644,7 @@ h1.navbar-brand {
 .tuner-note {
     font-size: 64px;
     font-weight: bold;
-    line-height: 1.1;
-    margin-bottom: -4px;
+    line-height: 1;
     color: #333;
     transition: color 0.2s;
 }
@@ -735,26 +734,58 @@ h1.navbar-brand {
     fill: var(--tuner-ok);
 }
 
+/* The note under the hub of the gauge, the cents and the frequency on either side of it. */
 .tuner-readout {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 6px;
+    max-width: 340px;
+    margin: -6px auto 0;
+}
+
+.tuner-side {
     display: flex;
-    justify-content: center;
-    align-items: baseline;
-    gap: 14px;
-    min-height: 34px;
-    margin-top: 2px;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.tuner-side-left {
+    align-items: flex-start;
+    padding-left: 4px;
+}
+
+.tuner-side-right {
+    align-items: flex-end;
+    padding-right: 4px;
 }
 
 .tuner-cents {
-    min-width: 3.2em;
+    white-space: nowrap;
     font-size: 26px;
     font-weight: 600;
     font-variant-numeric: tabular-nums;
     color: #333;
 }
 
+/* On one line: the unit is smaller, so even a four-digit frequency fits beside the note. */
 .tuner-hz {
-    color: #999;
+    font-size: 21px;
+    font-weight: 600;
+    white-space: nowrap;
+    color: #888;
     font-variant-numeric: tabular-nums;
+}
+
+.tuner-hz small {
+    font-size: 0.65em;
+    font-weight: normal;
+}
+
+/* The note actually heard, when it is not the target one. */
+.tuner-heard {
+    font-size: 15px;
+    color: #999;
 }
 
 .tuner-direction {
