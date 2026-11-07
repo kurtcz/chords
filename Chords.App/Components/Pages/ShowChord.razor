@@ -4,35 +4,30 @@
 
 <TopNav Title="@L["Nav_ShowChord"]" />
 
-<DropdownBar>
-    <Brand>@root.ToString(conv)</Brand>
-    <ChildContent>
-        @foreach (var note in model.Notes)
-        {
-            <li><a @onclick="() => root = note">@note.ToString(conv)</a></li>
-        }
-    </ChildContent>
-</DropdownBar>
-<DropdownBar>
-    <Brand>@TypeName(typeValue)</Brand>
-    <ChildContent>
-        @foreach (var type in State.Settings.ShowBasicChordTypes ? model.BasicChordTypeList : model.ChordTypeList)
-        {
-            <li><a @onclick="() => typeValue = type.Value">@TypeName(type.Value)</a></li>
-        }
-    </ChildContent>
-</DropdownBar>
-<div class="row vertical-align" style="margin-bottom: 20px">
-    <span class="col-xs-9 col-sm-9 col-md-9 col-lg-9">@L["ShowChord_Partial"]</span>
-    <span class="col-xs-3 col-sm-3 col-md-3 col-lg-3 justify-right">
+<div class="settings-card page-card">
+    <SettingSelect Label="@L["Pick_Root"]">
+        <Value>@root.ToString(conv)</Value>
+        <ChildContent>
+            @foreach (var note in model.Notes)
+            {
+                <li><a @onclick="() => root = note">@note.ToString(conv)</a></li>
+            }
+        </ChildContent>
+    </SettingSelect>
+    <SettingSelect Label="@L["Pick_ChordType"]">
+        <Value>@TypeName(typeValue)</Value>
+        <ChildContent>
+            @foreach (var type in State.Settings.ShowBasicChordTypes ? model.BasicChordTypeList : model.ChordTypeList)
+            {
+                <li><a @onclick="() => typeValue = type.Value">@TypeName(type.Value)</a></li>
+            }
+        </ChildContent>
+    </SettingSelect>
+    <SettingRow Label="@L["ShowChord_Partial"]">
         <Toggle @bind-Value="partial" />
-    </span>
+    </SettingRow>
 </div>
-<div class="row">
-    <span class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-        <button type="button" class="btn btn-default btn-lg" style="width:100%" @onclick="Find">@L["Find"]</button>
-    </span>
-</div>
+<button type="button" class="btn btn-primary btn-lg btn-block page-action" @onclick="Find">@L["Find"]</button>
 
 <RelatedLinks Pages="[AppPages.FindChord, AppPages.FindShape, AppPages.Favorites]" />
 

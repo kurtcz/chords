@@ -90,6 +90,10 @@
   <data name="Key_TabDetect" xml:space="preserve"><value>ค้นหาคีย์</value></data>
   <data name="Key_ScaleNotes" xml:space="preserve"><value>โน้ตในสเกล:</value></data>
   <data name="Key_Sevenths" xml:space="preserve"><value>คอร์ดเซเวนท์</value></data>
+  <data name="Pick_Root" xml:space="preserve"><value>โน้ตราก</value></data>
+  <data name="Pick_ChordType" xml:space="preserve"><value>ชนิดคอร์ด</value></data>
+  <data name="Pick_Tonic" xml:space="preserve"><value>โทนิก</value></data>
+  <data name="Pick_Scale" xml:space="preserve"><value>บันไดเสียง</value></data>
   <data name="Key_Add" xml:space="preserve"><value>เพิ่มคอร์ด</value></data>
   <data name="Key_DetectHint" xml:space="preserve"><value>เพิ่มคอร์ดของเพลง แล้วแอปจะค้นหาคีย์ที่เข้ากัน แตะคีย์เพื่อดูคอร์ดของคีย์นั้น</value></data>
   <data name="Key_NoChords" xml:space="preserve"><value>เพิ่มคอร์ดของเพลง</value></data>

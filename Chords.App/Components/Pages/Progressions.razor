@@ -4,19 +4,13 @@
 
 <TopNav Title="@L["Nav_Progressions"]" />
 
-<KeySelector Changed="KeyChanged" />
-<p class="key-scale">
-    <strong>@L["Key_ScaleNotes"]</strong>
-    @foreach (var note in Current.Scale.Notes)
-    {
-        <span>@note.ToString(conv) </span>
-    }
-</p>
-<div class="row vertical-align" style="margin-bottom: 15px">
-    <span class="col-xs-9">@L["Key_Sevenths"]</span>
-    <span class="col-xs-3 justify-right"><Toggle Value="State.KeySevenths" ValueChanged="SeventhsChanged" /></span>
+<div class="settings-card page-card">
+    <KeySelector Changed="KeyChanged" />
+    <SettingRow Label="@L["Key_Sevenths"]">
+        <Toggle Value="State.KeySevenths" ValueChanged="SeventhsChanged" />
+    </SettingRow>
 </div>
-<button type="button" class="btn btn-primary btn-lg btn-block" @onclick="Generate">🎲 @L["Prog_Generate"]</button>
+<button type="button" class="btn btn-primary btn-lg btn-block page-action" @onclick="Generate">🎲 @L["Prog_Generate"]</button>
 
 @if (State.Settings.ShowTips && !tipClosed)
 {

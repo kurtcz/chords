@@ -1,24 +1,27 @@
-@* Tonic and scale of the key shared by the key and progression pages. *@
+@* Tonic and scale of the key shared by the key and progression pages: two rows of a card, then the notes of the scale. *@
 @inject AppState State
 
-<DropdownBar>
-    <Brand>@State.KeyTonic.ToString(State.Settings.conv)</Brand>
+<SettingSelect Label="@L["Pick_Tonic"]">
+    <Value>@State.KeyTonic.ToString(State.Settings.conv)</Value>
     <ChildContent>
         @foreach (var note in Tonics)
         {
             <li><a @onclick="() => Set(note, State.KeyScale)">@note.ToString(State.Settings.conv)</a></li>
         }
     </ChildContent>
-</DropdownBar>
-<DropdownBar>
-    <Brand>@L[$"Scale_{State.KeyScale}"]</Brand>
+</SettingSelect>
+<SettingSelect Label="@L["Pick_Scale"]">
+    <Value>@L[$"Scale_{State.KeyScale}"]</Value>
     <ChildContent>
         @foreach (var scale in Key.ScaleTypes)
         {
             <li><a @onclick="() => Set(State.KeyTonic, scale)">@L[$"Scale_{scale}"]</a></li>
         }
     </ChildContent>
-</DropdownBar>
+</SettingSelect>
+<SettingRow Label="@(L["Key_ScaleNotes"].TrimEnd(':', '：', ' '))">
+    <span class="key-scale">@string.Join(" ", new Key(State.KeyTonic, State.KeyScale).Scale.Notes.Select(i => i.ToString(State.Settings.conv)))</span>
+</SettingRow>
 
 @code {
     private static readonly Note[] Tonics = new FindChordModel().Notes;

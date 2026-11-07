@@ -1,6 +1,7 @@
 @* Bottom tab bar with the main sections; "More" opens a grouped list of every page. *@
 @implements IDisposable
 @inject NavigationManager Nav
+@inject AppState State
 
 @if (moreOpen)
 {
@@ -37,7 +38,7 @@
 <nav class="tab-bar">
     @foreach (var (tabPage, labelKey, icon) in Tabs)
     {
-        <a href="@tabPage.Href" class="tab @(!moreOpen && current?.Section == tabPage.Section ? "active" : null)"
+        <a href="@(tabPage.Section == AppSection.Theory ? State.TheoryHref : tabPage.Href)" class="tab @(!moreOpen && current?.Section == tabPage.Section ? "active" : null)"
            @onclick="() => moreOpen = false">
             <Icon Name="@icon" />
             <span>@L[labelKey]</span>
@@ -65,15 +66,25 @@
 
     protected override void OnInitialized()
     {
-        current = AppPages.FromRelativeUri(Nav.ToBaseRelativePath(Nav.Uri));
+        SetCurrent(Nav.Uri);
         Nav.LocationChanged += OnLocationChanged;
     }
 
     private void OnLocationChanged(object sender, Microsoft.AspNetCore.Components.Routing.LocationChangedEventArgs e)
     {
-        current = AppPages.FromRelativeUri(Nav.ToBaseRelativePath(e.Location));
+        SetCurrent(e.Location);
         moreOpen = false;
         InvokeAsync(StateHasChanged);
+    }
+
+    private void SetCurrent(string uri)
+    {
+        current = AppPages.FromRelativeUri(Nav.ToBaseRelativePath(uri));
+        if (current?.Section == AppSection.Theory)
+        {
+            // Without the query: the key page then opens on the tab that suits its state.
+            State.TheoryHref = current.Href;
+        }
     }
 
     public void Dispose() => Nav.LocationChanged -= OnLocationChanged;

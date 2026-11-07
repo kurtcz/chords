@@ -91,6 +91,10 @@
   <data name="Key_TabDetect" xml:space="preserve"><value>Trouver la tonalité</value></data>
   <data name="Key_ScaleNotes" xml:space="preserve"><value>Notes de la gamme :</value></data>
   <data name="Key_Sevenths" xml:space="preserve"><value>Accords de septième</value></data>
+  <data name="Pick_Root" xml:space="preserve"><value>Fondamentale</value></data>
+  <data name="Pick_ChordType" xml:space="preserve"><value>Type d'accord</value></data>
+  <data name="Pick_Tonic" xml:space="preserve"><value>Tonique</value></data>
+  <data name="Pick_Scale" xml:space="preserve"><value>Gamme</value></data>
   <data name="Key_Add" xml:space="preserve"><value>Ajouter un accord</value></data>
   <data name="Key_DetectHint" xml:space="preserve"><value>Ajoutez les accords d'une chanson et l'application trouve les tonalités qui leur correspondent. Touchez une tonalité pour voir ses accords.</value></data>
   <data name="Key_NoChords" xml:space="preserve"><value>Ajoutez les accords d'une chanson</value></data>

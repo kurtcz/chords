@@ -336,30 +336,10 @@ input[type=range]:focus::-webkit-slider-runnable-track {
 }
 
 .circle-svg {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+    display: block;
+    margin: 10px auto 5px;
 }
 
-/* Link to the chords of the shown key, above the tab bar and clear of the centred circle. */
-.circle-key {
-    position: fixed;
-    bottom: calc(71px + env(safe-area-inset-bottom));
-    left: calc(15px + env(safe-area-inset-left));
-    right: calc(15px + env(safe-area-inset-right));
-    width: auto;
-}
-
-/* Phone in landscape: no room below the circle, so the link goes beside it. */
-@media (orientation: landscape) and (max-height: 500px) {
-    .circle-key {
-        left: auto;
-        width: calc(50% - 185px);
-        white-space: normal;
-    }
-}
 /* Always use Bootstrap's collapsed (phone) navbar, also on tablets and in landscape (the dropdown bars).
    Title and toggle share one line: a title too long for it ends with an ellipsis. */
 .navbar-header {
@@ -505,21 +485,9 @@ h1.navbar-brand {
 }
 
 /* Chords in a key */
-.key-tabs {
-    margin-bottom: 15px;
-}
-
-.key-tabs a {
-    cursor: pointer;
-}
-
 .key-scale {
-    margin: 10px 0;
-}
-
-/* Razor drops the whitespace between the note spans. */
-.key-scale span {
-    margin-left: 6px;
+    color: #666;
+    word-spacing: 4px;
 }
 
 .key-chords td {
@@ -1047,10 +1015,6 @@ h1.navbar-brand {
         padding-bottom: calc(64px + env(safe-area-inset-bottom));
     }
 
-    .circle-key {
-        bottom: calc(59px + env(safe-area-inset-bottom));
-    }
-
     .more-sheet {
         bottom: calc(44px + env(safe-area-inset-bottom));
     }
@@ -1494,4 +1458,24 @@ h1.navbar-brand {
 .instrument-icon {
     margin-right: 6px;
     vertical-align: -6px;
+}
+
+/* Pages that start with a few choices: the same card as the settings, then the action under it. */
+.settings-card.page-card {
+    margin-bottom: 12px;
+}
+
+.page-action {
+    margin-bottom: 15px;
+}
+
+.page-segment {
+    margin-bottom: 12px;
+}
+
+.page-segment-hint {
+    margin: 6px 0 0;
+    text-align: center;
+    color: #888;
+    font-size: 13px;
 }

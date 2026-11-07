@@ -2,7 +2,6 @@
 @using System.Globalization
 @inject AppState State
 @inject ChordPlayer Player
-@inject NavigationManager Nav
 
 <TopNav Title="@L["Nav_Circle"]" />
 
@@ -42,12 +41,13 @@
         }
     </svg>
 </div>
-<button type="button" class="btn btn-default btn-lg btn-block circle-key" @onclick='() => Nav.NavigateTo("key?tab=chords")'>
-    @L["Nav_Key"]: @KeyName →
-</button>
+@* The key page opens on its chords even when chords for detecting a key were entered. *@
+<RelatedLinks Pages="[KeyChords, AppPages.Progressions]"
+              Titles="@(new() { [KeyChords] = $"{L["Nav_Key"]}: {KeyName}" })" />
 
 @code {
     private const double C = 160;
+    private static readonly AppPage KeyChords = AppPages.Key with { Href = "key?tab=chords" };
     private NamingConvention conv;
     private CircleModel model;
 

@@ -45,4 +45,7 @@ public class AppState
 
     /// <summary>Chords entered to find the key of a song.</summary>
     public List<Chord> KeyDetectChords { get; } = [];
+
+    /// <summary>Theory page visited last (key, circle or progressions); the Theory tab goes back to it.</summary>
+    public string TheoryHref { get; set; } = "key";
 }

@@ -5,13 +5,10 @@
 
 <TopNav Title="@L["Nav_FindChord"]" />
 
-<DropdownBar>
-    <Brand>@ModeText(State.StrictFind)</Brand>
-    <ChildContent>
-        <li><a @onclick="() => State.StrictFind = true">@ModeText(true)</a></li>
-        <li><a @onclick="() => State.StrictFind = false">@ModeText(false)</a></li>
-    </ChildContent>
-</DropdownBar>
+<div class="page-segment">
+    <Segmented Value="State.StrictFind" ValueChanged="v => State.StrictFind = v" Off="@L["Find_Loose"]" On="@L["Find_Strict"]" />
+    <p class="page-segment-hint">@ModeText(State.StrictFind)</p>
+</div>
 <div class="note-grid">
     @foreach (var row in notes.Chunk(5))
     {
@@ -24,9 +21,7 @@
         </div>
     }
 </div>
-<div style="margin-top:20px;">
-    <button type="button" class="btn btn-default btn-lg" style="width:100%;" @onclick="Find">@L["Find"]</button>
-</div>
+<button type="button" class="btn btn-primary btn-lg btn-block page-action" @onclick="Find">@L["Find"]</button>
 <div class="error">@error</div>
 
 <RelatedLinks Pages="[AppPages.FindShape, AppPages.ShowChord]" />
@@ -50,7 +45,8 @@
         }
     }
 
-    private RenderFragment ModeText(bool strict) =>@<text>@L[strict ? "Find_Strict" : "Find_Loose"] (@model.Notes[0].ToString(conv)<sub>#</sub> @(strict ? "≠" : "=") @model.Notes[3].ToString(conv)<sub>b</sub>)</text>;
+    /// <summary>What the mode means, shown under the switch: C♯ and D♭ the same note or not.</summary>
+    private RenderFragment ModeText(bool strict) =>@<text>@model.Notes[0].ToString(conv)<sub>#</sub> @(strict ? "≠" : "=") @model.Notes[3].ToString(conv)<sub>b</sub></text>;
 
     private void SetNote(string value, bool on)
     {

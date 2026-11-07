@@ -92,6 +92,10 @@
   <data name="Key_TabDetect" xml:space="preserve"><value>Nájsť tóninu</value></data>
   <data name="Key_ScaleNotes" xml:space="preserve"><value>Tóny stupnice:</value></data>
   <data name="Key_Sevenths" xml:space="preserve"><value>Septakordy</value></data>
+  <data name="Pick_Root" xml:space="preserve"><value>Základný tón</value></data>
+  <data name="Pick_ChordType" xml:space="preserve"><value>Typ akordu</value></data>
+  <data name="Pick_Tonic" xml:space="preserve"><value>Tónika</value></data>
+  <data name="Pick_Scale" xml:space="preserve"><value>Stupnica</value></data>
   <data name="Key_Add" xml:space="preserve"><value>Pridať akord</value></data>
   <data name="Key_DetectHint" xml:space="preserve"><value>Pridajte akordy piesne a aplikácia nájde tóniny, do ktorých patria. Ťuknutím na tóninu zobrazíte jej akordy.</value></data>
   <data name="Key_NoChords" xml:space="preserve"><value>Pridajte akordy piesne</value></data>
