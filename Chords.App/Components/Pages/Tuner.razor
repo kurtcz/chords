@@ -159,8 +159,8 @@ else if (status == TunerStatus.Failed)
     private const int MaxA4 = 450;
     /// <summary>Green zone of the gauge.</summary>
     private const double InTuneCents = 5;
-    /// <summary>The string counts as tuned when it stays this close for <see cref="SettleTime"/>.</summary>
-    private const double TunedCents = 3;
+    /// <summary>The string counts as tuned when it stays in the green zone for <see cref="SettleTime"/>.</summary>
+    private const double TunedCents = InTuneCents;
     private static readonly TimeSpan SettleTime = TimeSpan.FromSeconds(0.8);
     /// <summary>Redraws of the note, cents and colours per second at most; the needle moves at the display's rate.</summary>
     private const int FrameRate = 30;
