@@ -726,6 +726,11 @@ h1.navbar-brand {
     text-anchor: middle;
 }
 
+/* The flat glyph has less ink than the sharp at the same size; enlarge it so the two read alike. */
+.tuner-accidental.flat {
+    font-size: 34px;
+}
+
 .tuner-needle {
     /*
       Turns around the hub, at (150, 160) of the view box "0 22 300 152": 50 % across and (160 - 22) / 152 down.
