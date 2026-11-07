@@ -179,6 +179,8 @@ else if (status == TunerStatus.Failed)
     };
     /// <summary>Degrees the needle turns per cent (±50 cents = ±60°).</summary>
     private const double DegreesPerCent = 1.2;
+    /// <summary>The screen stays on this long after the last note heard; then the system may dim it again.</summary>
+    private static readonly TimeSpan KeepAwakeFor = TimeSpan.FromSeconds(30);
 
     private InstrumentInfo instrument;
     private InstrumentTuning tuning;
@@ -204,6 +206,10 @@ else if (status == TunerStatus.Failed)
     private int needleQueued;
     private Window window;
     private bool disposed;
+    /// <summary>UTC ticks of the last note heard (0 = none yet).</summary>
+    private long lastNoteTicks;
+    /// <summary>Whether the screen is kept on; touched on the main thread only.</summary>
+    private bool keepingAwake;
 
     protected override async Task OnInitializedAsync()
     {
@@ -238,7 +244,12 @@ else if (status == TunerStatus.Failed)
         }
     }
 
-    private void OnAppStopped(object sender, EventArgs e) => Listener.Stop();
+    private void OnAppStopped(object sender, EventArgs e)
+    {
+        Listener.Stop();
+        Interlocked.Exchange(ref lastNoteTicks, 0);
+        MainThread.BeginInvokeOnMainThread(() => KeepAwake(false));
+    }
 
     private void OnAppResumed(object sender, EventArgs e) => InvokeAsync(async () =>
     {
@@ -259,6 +270,10 @@ else if (status == TunerStatus.Failed)
     {
         latest = value;
         dirty = true;
+        if (value != null)
+        {
+            Interlocked.Exchange(ref lastNoteTicks, DateTime.UtcNow.Ticks);
+        }
         // The needle follows every reading, not just the redraws; at most one update waits at a time.
         if (Interlocked.Exchange(ref needleQueued, 1) == 0)
         {
@@ -289,6 +304,7 @@ else if (status == TunerStatus.Failed)
 
     private void Redraw()
     {
+        UpdateKeepAwake();
         if (!dirty)
         {
             return;
@@ -300,6 +316,38 @@ else if (status == TunerStatus.Failed)
             UpdateTuned();
             StateHasChanged();
         });
+    }
+
+    /// <summary>
+    /// Nobody touches the screen while tuning, so it would dim in the middle of it: keep it on while notes
+    /// are heard, and let the system dim it again once the tuner has been quiet for <see cref="KeepAwakeFor"/>.
+    /// </summary>
+    private void UpdateKeepAwake()
+    {
+        var last = Interlocked.Read(ref lastNoteTicks);
+        var want = !disposed && last != 0 && DateTime.UtcNow.Ticks - last < KeepAwakeFor.Ticks;
+
+        if (want != Volatile.Read(ref keepingAwake))
+        {
+            MainThread.BeginInvokeOnMainThread(() => KeepAwake(want && !disposed));
+        }
+    }
+
+    private void KeepAwake(bool value)
+    {
+        if (keepingAwake == value)
+        {
+            return;
+        }
+        keepingAwake = value;
+        try
+        {
+            DeviceDisplay.Current.KeepScreenOn = value;
+        }
+        catch (Exception)
+        {
+            // Not supported on this platform: the screen dims as usual.
+        }
     }
 
     private void UpdateTuned()
@@ -425,6 +473,7 @@ else if (status == TunerStatus.Failed)
         Listener.ReadingChanged -= OnReading;
         Listener.Stop();
         timer?.Dispose();
+        MainThread.BeginInvokeOnMainThread(() => KeepAwake(false));
         if (window != null)
         {
             window.Stopped -= OnAppStopped;
