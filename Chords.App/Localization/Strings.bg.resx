@@ -26,6 +26,8 @@
   <data name="Chord_Invalid" xml:space="preserve"><value>{0} не е валиден акорд</value></data>
   <data name="Tip" xml:space="preserve"><value>Съвет:</value></data>
   <data name="Tip_Play" xml:space="preserve"><value>Докоснете диаграма, за да я чуете.</value></data>
+  <data name="Tip_Strum" xml:space="preserve"><value>Плъзнете настрани през диаграмата, за да я изсвирите струна по струна.</value></data>
+  <data name="Tip_StrumPick" xml:space="preserve"><value>Плъзнете перцето под диаграмата, за да я изсвирите струна по струна.</value></data>
   <data name="Tip_Favorite" xml:space="preserve"><value>Задръжте диаграма, за да я добавите в любими.</value></data>
   <data name="Favorites_Empty" xml:space="preserve"><value>Нямате любими позиции на акорди.</value></data>
   <data name="Favorites_Hint" xml:space="preserve"><value>Задръжте позиция, за да я добавите в любими.</value></data>
@@ -171,4 +173,22 @@
   <data name="Fretboard_WholeNeck" xml:space="preserve"><value>Целият гриф</value></data>
   <data name="Fretboard_Position" xml:space="preserve"><value>Прагчета {0}–{1}</value></data>
   <data name="Fretboard_ChordInScaleHint" xml:space="preserve"><value>Тоновете на акорда {0} са надписани (1 е основният му тон); точките са останалите тонове на гамата {1}.</value></data>
+  <data name="Nav_About" xml:space="preserve"><value>За приложението</value></data>
+  <data name="About_Version" xml:space="preserve"><value>Версия</value></data>
+  <data name="About_Rate" xml:space="preserve"><value>Оцени приложението</value></data>
+  <data name="About_SoundCredit" xml:space="preserve"><value>Звуци на инструментите</value></data>
+  <data name="About_SoundFont" xml:space="preserve"><value>звукова банка</value></data>
+  <data name="About_License" xml:space="preserve"><value>Лиценз</value></data>
+  <data name="About_By" xml:space="preserve"><value>автор {0}</value></data>
+  <data name="About_PublicDomain" xml:space="preserve"><value>Обществено достояние</value></data>
+  <data name="About_SoundChanges" xml:space="preserve"><value>Семплите са адаптирани за това приложение.</value></data>
+  <data name="Nav_Metronome" xml:space="preserve"><value>Метроном</value></data>
+  <data name="Metronome_Start" xml:space="preserve"><value>Старт</value></data>
+  <data name="Metronome_Stop" xml:space="preserve"><value>Стоп</value></data>
+  <data name="Metronome_Tap" xml:space="preserve"><value>Почукай темпото</value></data>
+  <data name="Metronome_Beats" xml:space="preserve"><value>Удара в такт</value></data>
+  <data name="Metronome_Subdivision" xml:space="preserve"><value>Разделяне</value></data>
+  <data name="Metronome_Accent" xml:space="preserve"><value>Акцент на първия удар</value></data>
+  <data name="Metronome_Hint" xml:space="preserve"><value>Почуквайте „Почукай темпото“ в ритъма на музиката, за да разберете темпото ѝ. Акордовите прогресии свирят с това темпо, по един акорд на такт.</value></data>
+  <data name="Prog_Tempo" xml:space="preserve"><value>Темпо</value></data>
 </root>

@@ -26,6 +26,8 @@
   <data name="Chord_Invalid" xml:space="preserve"><value>{0} жарамды аккорд емес</value></data>
   <data name="Tip" xml:space="preserve"><value>Кеңес:</value></data>
   <data name="Tip_Play" xml:space="preserve"><value>Тыңдау үшін сызбаны түртіңіз.</value></data>
+  <data name="Tip_Strum" xml:space="preserve"><value>Диаграмманы ішек-ішегімен ойнау үшін саусақты көлденең сырғытыңыз.</value></data>
+  <data name="Tip_StrumPick" xml:space="preserve"><value>Диаграмманы ішек-ішегімен ойнау үшін астындағы медиаторды сүйреңіз.</value></data>
   <data name="Tip_Favorite" xml:space="preserve"><value>Таңдаулыларға қосу үшін сызбаны басып тұрыңыз.</value></data>
   <data name="Favorites_Empty" xml:space="preserve"><value>Сізде таңдаулы қойылымдар жоқ.</value></data>
   <data name="Favorites_Hint" xml:space="preserve"><value>Таңдаулыларға қосу үшін қойылымды басып тұрыңыз.</value></data>
@@ -171,4 +173,22 @@
   <data name="Fretboard_WholeNeck" xml:space="preserve"><value>Бүкіл гриф</value></data>
   <data name="Fretboard_Position" xml:space="preserve"><value>{0}–{1} ладтар</value></data>
   <data name="Fretboard_ChordInScaleHint" xml:space="preserve"><value>{0} аккордының дыбыстары белгіленген (1 — оның негізгі тоны); нүктелер — {1} гаммасының қалған дыбыстары.</value></data>
+  <data name="Nav_About" xml:space="preserve"><value>Қолданба туралы</value></data>
+  <data name="About_Version" xml:space="preserve"><value>Нұсқа</value></data>
+  <data name="About_Rate" xml:space="preserve"><value>Қолданбаны бағалау</value></data>
+  <data name="About_SoundCredit" xml:space="preserve"><value>Аспаптардың дыбыстары</value></data>
+  <data name="About_SoundFont" xml:space="preserve"><value>саундфонт</value></data>
+  <data name="About_License" xml:space="preserve"><value>Лицензия</value></data>
+  <data name="About_By" xml:space="preserve"><value>авторы: {0}</value></data>
+  <data name="About_PublicDomain" xml:space="preserve"><value>Қоғамдық игілік</value></data>
+  <data name="About_SoundChanges" xml:space="preserve"><value>Сэмплдер осы қолданбаға бейімделген.</value></data>
+  <data name="Nav_Metronome" xml:space="preserve"><value>Метроном</value></data>
+  <data name="Metronome_Start" xml:space="preserve"><value>Бастау</value></data>
+  <data name="Metronome_Stop" xml:space="preserve"><value>Тоқтату</value></data>
+  <data name="Metronome_Tap" xml:space="preserve"><value>Темпті соғу</value></data>
+  <data name="Metronome_Beats" xml:space="preserve"><value>Тактідегі үлес</value></data>
+  <data name="Metronome_Subdivision" xml:space="preserve"><value>Бөлу</value></data>
+  <data name="Metronome_Accent" xml:space="preserve"><value>Бірінші үлесті ерекшелеу</value></data>
+  <data name="Metronome_Hint" xml:space="preserve"><value>Музыканың темпін білу үшін оның ырғағымен «Темпті соғу» түймесін басыңыз. Аккорд тізбектері осы темпте, әр тактіге бір аккордпен ойналады.</value></data>
+  <data name="Prog_Tempo" xml:space="preserve"><value>Темп</value></data>
 </root>

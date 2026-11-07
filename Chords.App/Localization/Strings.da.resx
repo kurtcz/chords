@@ -26,6 +26,8 @@
   <data name="Chord_Invalid" xml:space="preserve"><value>{0} er ikke en gyldig akkord</value></data>
   <data name="Tip" xml:space="preserve"><value>Tip:</value></data>
   <data name="Tip_Play" xml:space="preserve"><value>Tryk på et diagram for at høre det.</value></data>
+  <data name="Tip_Strum" xml:space="preserve"><value>Stryg sidelæns hen over et diagram for at slå det an streng for streng.</value></data>
+  <data name="Tip_StrumPick" xml:space="preserve"><value>Træk plekteret under et diagram for at slå det an streng for streng.</value></data>
   <data name="Tip_Favorite" xml:space="preserve"><value>Hold et diagram nede for at føje det til favoritter.</value></data>
   <data name="Favorites_Empty" xml:space="preserve"><value>Du har ingen yndlingsgreb.</value></data>
   <data name="Favorites_Hint" xml:space="preserve"><value>Hold et greb nede for at føje det til favoritter.</value></data>
@@ -171,4 +173,22 @@
   <data name="Fretboard_WholeNeck" xml:space="preserve"><value>Hele halsen</value></data>
   <data name="Fretboard_Position" xml:space="preserve"><value>Bånd {0}–{1}</value></data>
   <data name="Fretboard_ChordInScaleHint" xml:space="preserve"><value>Tonerne i akkorden {0} er navngivet (1 er grundtonen); prikkerne er skalaen {1}s øvrige toner.</value></data>
+  <data name="Nav_About" xml:space="preserve"><value>Om appen</value></data>
+  <data name="About_Version" xml:space="preserve"><value>Version</value></data>
+  <data name="About_Rate" xml:space="preserve"><value>Bedøm appen</value></data>
+  <data name="About_SoundCredit" xml:space="preserve"><value>Instrumentlyde</value></data>
+  <data name="About_SoundFont" xml:space="preserve"><value>soundfont</value></data>
+  <data name="About_License" xml:space="preserve"><value>Licens</value></data>
+  <data name="About_By" xml:space="preserve"><value>af {0}</value></data>
+  <data name="About_PublicDomain" xml:space="preserve"><value>Offentligt domæne</value></data>
+  <data name="About_SoundChanges" xml:space="preserve"><value>Samples tilpasset til denne app.</value></data>
+  <data name="Nav_Metronome" xml:space="preserve"><value>Metronom</value></data>
+  <data name="Metronome_Start" xml:space="preserve"><value>Start</value></data>
+  <data name="Metronome_Stop" xml:space="preserve"><value>Stop</value></data>
+  <data name="Metronome_Tap" xml:space="preserve"><value>Tap tempo</value></data>
+  <data name="Metronome_Beats" xml:space="preserve"><value>Slag pr. takt</value></data>
+  <data name="Metronome_Subdivision" xml:space="preserve"><value>Underdeling</value></data>
+  <data name="Metronome_Accent" xml:space="preserve"><value>Fremhæv første slag</value></data>
+  <data name="Metronome_Hint" xml:space="preserve"><value>Tryk på »Tap tempo« i takt med musikken for at finde tempoet. Akkordforløb spiller i dette tempo, én akkord pr. takt.</value></data>
+  <data name="Prog_Tempo" xml:space="preserve"><value>Tempo</value></data>
 </root>

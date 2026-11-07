@@ -26,6 +26,8 @@
   <data name="Chord_Invalid" xml:space="preserve"><value>Το {0} δεν είναι έγκυρη συγχορδία</value></data>
   <data name="Tip" xml:space="preserve"><value>Συμβουλή:</value></data>
   <data name="Tip_Play" xml:space="preserve"><value>Πατήστε ένα διάγραμμα για να το ακούσετε.</value></data>
+  <data name="Tip_Strum" xml:space="preserve"><value>Σύρετε πλάγια πάνω από ένα διάγραμμα για να το παίξετε χορδή χορδή.</value></data>
+  <data name="Tip_StrumPick" xml:space="preserve"><value>Σύρετε την πένα κάτω από ένα διάγραμμα για να το παίξετε χορδή χορδή.</value></data>
   <data name="Tip_Favorite" xml:space="preserve"><value>Πατήστε παρατεταμένα ένα διάγραμμα για να το προσθέσετε στα αγαπημένα.</value></data>
   <data name="Favorites_Empty" xml:space="preserve"><value>Δεν έχετε αγαπημένες θέσεις συγχορδιών.</value></data>
   <data name="Favorites_Hint" xml:space="preserve"><value>Πατήστε παρατεταμένα μια θέση για να την προσθέσετε στα αγαπημένα.</value></data>
@@ -171,4 +173,22 @@
   <data name="Fretboard_WholeNeck" xml:space="preserve"><value>Όλη η ταστιέρα</value></data>
   <data name="Fretboard_Position" xml:space="preserve"><value>Τάστα {0}–{1}</value></data>
   <data name="Fretboard_ChordInScaleHint" xml:space="preserve"><value>Οι νότες της συγχορδίας {0} έχουν ετικέτα (1 είναι η θεμέλιός της)· οι τελείες είναι οι υπόλοιπες νότες της κλίμακας {1}.</value></data>
+  <data name="Nav_About" xml:space="preserve"><value>Σχετικά</value></data>
+  <data name="About_Version" xml:space="preserve"><value>Έκδοση</value></data>
+  <data name="About_Rate" xml:space="preserve"><value>Βαθμολογήστε την εφαρμογή</value></data>
+  <data name="About_SoundCredit" xml:space="preserve"><value>Ήχοι οργάνων</value></data>
+  <data name="About_SoundFont" xml:space="preserve"><value>τράπεζα ήχων</value></data>
+  <data name="About_License" xml:space="preserve"><value>Άδεια</value></data>
+  <data name="About_By" xml:space="preserve"><value>από {0}</value></data>
+  <data name="About_PublicDomain" xml:space="preserve"><value>Δημόσιος τομέας</value></data>
+  <data name="About_SoundChanges" xml:space="preserve"><value>Τα δείγματα προσαρμόστηκαν για την εφαρμογή.</value></data>
+  <data name="Nav_Metronome" xml:space="preserve"><value>Μετρονόμος</value></data>
+  <data name="Metronome_Start" xml:space="preserve"><value>Έναρξη</value></data>
+  <data name="Metronome_Stop" xml:space="preserve"><value>Διακοπή</value></data>
+  <data name="Metronome_Tap" xml:space="preserve"><value>Χτύπα τον ρυθμό</value></data>
+  <data name="Metronome_Beats" xml:space="preserve"><value>Χτύποι ανά μέτρο</value></data>
+  <data name="Metronome_Subdivision" xml:space="preserve"><value>Υποδιαίρεση</value></data>
+  <data name="Metronome_Accent" xml:space="preserve"><value>Τονισμός πρώτου χτύπου</value></data>
+  <data name="Metronome_Hint" xml:space="preserve"><value>Πάτα «Χτύπα τον ρυθμό» στον ρυθμό της μουσικής για να βρεις το τέμπο της. Οι αλληλουχίες συγχορδιών παίζουν σε αυτό το τέμπο, μία συγχορδία ανά μέτρο.</value></data>
+  <data name="Prog_Tempo" xml:space="preserve"><value>Τέμπο</value></data>
 </root>

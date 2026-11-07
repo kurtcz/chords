@@ -11,20 +11,25 @@ namespace Chords.App;
 public sealed class PlatformSoundBank : ISoundBank
 {
     private const int VoiceCount = 12;
-    private static readonly string[] Files = ["E6", "A5", "D4", "G3", "B2", "E1"];
+    /// <summary>Rendered samples are AAC (.m4a), the original guitar recordings WAV.</summary>
+    private static readonly string[] Extensions = ["m4a", "wav"];
 
     private readonly object _sync = new();
     private readonly AVAudioEngine _engine = new();
-    private readonly AVAudioPcmBuffer[] _buffers;
+    /// <summary>Every sample is mono at 44.1 kHz, read as 32-bit float.</summary>
+    private readonly AVAudioFormat _format = new(44100, 1);
+    private readonly Dictionary<string, AVAudioPcmBuffer> _buffers = [];
     private readonly (AVAudioPlayerNode Player, AVAudioUnitVarispeed Varispeed)[] _voices;
+    /// <summary>Id of the note each voice plays (or last played).</summary>
+    private readonly int[] _voiceIds = new int[VoiceCount];
     private int _nextVoice;
+    private int _lastId;
+    /// <summary>Samples asked for by the last <see cref="Prepare"/>; the others are freed.</summary>
+    private HashSet<string> _wanted = [];
 
     public PlatformSoundBank()
     {
         AVAudioSession.SharedInstance().SetCategory(AVAudioSessionCategory.Playback, AVAudioSessionCategoryOptions.MixWithOthers, out _);
-        _buffers = Files.Select(LoadBuffer).ToArray();
-
-        var format = _buffers[0].Format;
 
         _voices = new (AVAudioPlayerNode, AVAudioUnitVarispeed)[VoiceCount];
         for (var i = 0; i < VoiceCount; i++)
@@ -34,45 +39,133 @@ public sealed class PlatformSoundBank : ISoundBank
 
             _engine.AttachNode(player);
             _engine.AttachNode(varispeed);
-            _engine.Connect(player, varispeed, format);
-            _engine.Connect(varispeed, _engine.MainMixerNode, format);
+            _engine.Connect(player, varispeed, _format);
+            _engine.Connect(varispeed, _engine.MainMixerNode, _format);
             _voices[i] = (player, varispeed);
         }
     }
 
-    private static AVAudioPcmBuffer LoadBuffer(string name)
+    public void Prepare(IReadOnlyList<string> samples)
     {
-        var url = NSBundle.MainBundle.GetUrlForResource(name, "wav");
-        var file = new AVAudioFile(url, out var error);
+        var wanted = samples.ToHashSet();
+
+        lock (_sync)
+        {
+            _wanted = wanted;
+            // A voice still playing a freed buffer keeps it until it ends.
+            foreach (var name in _buffers.Keys.Where(n => !wanted.Contains(n)).ToList())
+            {
+                _buffers.Remove(name);
+            }
+        }
+        Task.Run(() =>
+        {
+            foreach (var name in samples)
+            {
+                lock (_sync)
+                {
+                    if (!ReferenceEquals(_wanted, wanted))
+                    {
+                        return;
+                    }
+                }
+                Buffer(name);
+            }
+        });
+    }
+
+    /// <summary>The decoded sample, loading it when needed (decoding runs outside the lock).</summary>
+    private AVAudioPcmBuffer Buffer(string name)
+    {
+        lock (_sync)
+        {
+            if (_buffers.TryGetValue(name, out var loaded))
+            {
+                return loaded;
+            }
+        }
+        var buffer = Load(name);
+
+        lock (_sync)
+        {
+            if (_buffers.TryGetValue(name, out var loaded))
+            {
+                return loaded;
+            }
+            if (buffer != null && _wanted.Contains(name))
+            {
+                _buffers[name] = buffer;
+            }
+        }
+        return buffer;
+    }
+
+    private static AVAudioPcmBuffer Load(string name)
+    {
+        var url = Extensions.Select(e => NSBundle.MainBundle.GetUrlForResource(name, e)).FirstOrDefault(u => u != null);
+
+        if (url == null)
+        {
+            System.Diagnostics.Debug.WriteLine($"Missing sample {name}");
+            return null;
+        }
+        using var file = new AVAudioFile(url, out var error);
 
         if (error != null)
         {
-            throw new InvalidOperationException($"Cannot load {name}.wav: {error.LocalizedDescription}");
+            System.Diagnostics.Debug.WriteLine($"Cannot load {name}: {error.LocalizedDescription}");
+            return null;
         }
         var buffer = new AVAudioPcmBuffer(file.ProcessingFormat, (uint)file.Length);
 
         file.ReadIntoBuffer(buffer, out error);
 
-        return buffer;
+        return error == null ? buffer : null;
     }
 
-    public void PlayString(int stringIndex, float rate, float volume = 1f)
+    public int Play(string sample, float rate, float volume = 1f)
     {
+        var buffer = Buffer(sample);
+
+        if (buffer == null)
+        {
+            return 0;
+        }
         lock (_sync)
         {
             if (!_engine.Running && !_engine.StartAndReturnError(out var error))
             {
                 System.Diagnostics.Debug.WriteLine($"Cannot start audio engine: {error?.LocalizedDescription}");
-                return;
+                return 0;
             }
-            var (player, varispeed) = _voices[_nextVoice];
+            var voice = _nextVoice;
+            var (player, varispeed) = _voices[voice];
 
             _nextVoice = (_nextVoice + 1) % VoiceCount;
             player.Stop();
             varispeed.Rate = rate;
             player.Volume = volume;
-            player.ScheduleBuffer(_buffers[stringIndex], () => { });
+            player.ScheduleBuffer(buffer, () => { });
             player.Play();
+
+            return _voiceIds[voice] = ++_lastId;
+        }
+    }
+
+    public void Stop(int id)
+    {
+        if (id == 0)
+        {
+            return;
+        }
+        lock (_sync)
+        {
+            var voice = Array.IndexOf(_voiceIds, id);
+
+            if (voice >= 0)
+            {
+                _voices[voice].Player.Stop();
+            }
         }
     }
 

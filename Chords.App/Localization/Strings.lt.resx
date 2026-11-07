@@ -27,6 +27,8 @@
   <data name="Chord_Invalid" xml:space="preserve"><value>{0} nėra tinkamas akordas</value></data>
   <data name="Tip" xml:space="preserve"><value>Patarimas:</value></data>
   <data name="Tip_Play" xml:space="preserve"><value>Palieskite schemą, kad ją išklausytumėte.</value></data>
+  <data name="Tip_Strum" xml:space="preserve"><value>Perbraukite skersai diagramą, kad suskambintumėte ją styga po stygos.</value></data>
+  <data name="Tip_StrumPick" xml:space="preserve"><value>Vilkite mediatorių po diagrama, kad suskambintumėte ją styga po stygos.</value></data>
   <data name="Tip_Favorite" xml:space="preserve"><value>Palaikykite schemą, kad pridėtumėte ją prie mėgstamų.</value></data>
   <data name="Favorites_Empty" xml:space="preserve"><value>Neturite mėgstamų pirštuočių.</value></data>
   <data name="Favorites_Hint" xml:space="preserve"><value>Palaikykite pirštuotę, kad pridėtumėte ją prie mėgstamų.</value></data>
@@ -172,4 +174,22 @@
   <data name="Fretboard_WholeNeck" xml:space="preserve"><value>Visas grifas</value></data>
   <data name="Fretboard_Position" xml:space="preserve"><value>Skersiniai {0}–{1}</value></data>
   <data name="Fretboard_ChordInScaleHint" xml:space="preserve"><value>Akordo {0} garsai pažymėti (1 yra jo pagrindinis tonas); taškai – kiti gamos {1} garsai.</value></data>
+  <data name="Nav_About" xml:space="preserve"><value>Apie programėlę</value></data>
+  <data name="About_Version" xml:space="preserve"><value>Versija</value></data>
+  <data name="About_Rate" xml:space="preserve"><value>Įvertinti programėlę</value></data>
+  <data name="About_SoundCredit" xml:space="preserve"><value>Instrumentų garsai</value></data>
+  <data name="About_SoundFont" xml:space="preserve"><value>garsų šriftas</value></data>
+  <data name="About_License" xml:space="preserve"><value>Licencija</value></data>
+  <data name="About_By" xml:space="preserve"><value>autorius {0}</value></data>
+  <data name="About_PublicDomain" xml:space="preserve"><value>Viešasis domenas</value></data>
+  <data name="About_SoundChanges" xml:space="preserve"><value>Garso pavyzdžiai pritaikyti šiai programėlei.</value></data>
+  <data name="Nav_Metronome" xml:space="preserve"><value>Metronomas</value></data>
+  <data name="Metronome_Start" xml:space="preserve"><value>Pradėti</value></data>
+  <data name="Metronome_Stop" xml:space="preserve"><value>Sustabdyti</value></data>
+  <data name="Metronome_Tap" xml:space="preserve"><value>Išmušti tempą</value></data>
+  <data name="Metronome_Beats" xml:space="preserve"><value>Dalių takte</value></data>
+  <data name="Metronome_Subdivision" xml:space="preserve"><value>Padalijimas</value></data>
+  <data name="Metronome_Accent" xml:space="preserve"><value>Pabrėžti pirmą dalį</value></data>
+  <data name="Metronome_Hint" xml:space="preserve"><value>Bakstelėkite „Išmušti tempą“ muzikos ritmu ir sužinosite jos tempą. Akordų sekos groja šiuo tempu, vienas akordas takte.</value></data>
+  <data name="Prog_Tempo" xml:space="preserve"><value>Tempas</value></data>
 </root>

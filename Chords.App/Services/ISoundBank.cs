@@ -1,12 +1,22 @@
 namespace Chords.App.Services;
 
-/// <summary>Plays the six recorded open guitar strings (0 = low E ... 5 = high E).</summary>
+/// <summary>Plays recorded notes (see <see cref="SampleSet"/>), each at a rate that shifts its pitch and speed together.</summary>
 public interface ISoundBank
 {
-    /// <param name="stringIndex">0 = E6, 1 = A5, 2 = D4, 3 = G3, 4 = B2, 5 = E1.</param>
-    /// <param name="rate">Playback rate; 2.0 is one octave up.</param>
-    void PlayString(int stringIndex, float rate, float volume = 1f);
+    /// <summary>
+    /// Starts loading these samples in the background so they play without delay, and frees the others.
+    /// A sample played before it is loaded is loaded then.
+    /// </summary>
+    void Prepare(IReadOnlyList<string> samples);
 
-    /// <summary>Silences every string still ringing (like a guitarist damping before the next chord).</summary>
+    /// <param name="sample">Sound file name without extension (<see cref="SampleSet.Names"/>).</param>
+    /// <param name="rate">Playback rate; 2.0 is one octave up.</param>
+    /// <returns>Id of the sounding note for <see cref="Stop"/>; 0 when it cannot play.</returns>
+    int Play(string sample, float rate, float volume = 1f);
+
+    /// <summary>Silences a note started by <see cref="Play"/>, unless it has already ended.</summary>
+    void Stop(int id);
+
+    /// <summary>Silences every note still ringing (like a guitarist damping before the next chord).</summary>
     void StopAll();
 }

@@ -30,6 +30,8 @@
   <data name="Chord_Invalid" xml:space="preserve"><value>{0} ليس كوردًا صالحًا</value></data>
   <data name="Tip" xml:space="preserve"><value>نصيحة:</value></data>
   <data name="Tip_Play" xml:space="preserve"><value>اضغط على مخطط للاستماع إليه.</value></data>
+  <data name="Tip_Strum" xml:space="preserve"><value>اسحب أفقيًا عبر المخطط للعزف عليه وترًا تلو الآخر.</value></data>
+  <data name="Tip_StrumPick" xml:space="preserve"><value>اسحب الريشة أسفل المخطط للعزف عليه وترًا تلو الآخر.</value></data>
   <data name="Tip_Favorite" xml:space="preserve"><value>اضغط مطولًا على مخطط لإضافته إلى المفضلة.</value></data>
   <data name="Favorites_Empty" xml:space="preserve"><value>ليس لديك وضعيات كوردات مفضلة.</value></data>
   <data name="Favorites_Hint" xml:space="preserve"><value>اضغط مطولًا على وضعية لإضافتها إلى المفضلة.</value></data>
@@ -175,4 +177,22 @@
   <data name="Fretboard_WholeNeck" xml:space="preserve"><value>الزند كله</value></data>
   <data name="Fretboard_Position" xml:space="preserve"><value>الدساتين {0}–{1}</value></data>
   <data name="Fretboard_ChordInScaleHint" xml:space="preserve"><value>نغمات الكورد {0} مُعلَّمة (1 هي جذره)، والنقاط هي باقي نغمات سلم {1}.</value></data>
+  <data name="Nav_About" xml:space="preserve"><value>حول التطبيق</value></data>
+  <data name="About_Version" xml:space="preserve"><value>الإصدار</value></data>
+  <data name="About_Rate" xml:space="preserve"><value>قيّم التطبيق</value></data>
+  <data name="About_SoundCredit" xml:space="preserve"><value>أصوات الآلات</value></data>
+  <data name="About_SoundFont" xml:space="preserve"><value>بنك أصوات</value></data>
+  <data name="About_License" xml:space="preserve"><value>الترخيص</value></data>
+  <data name="About_By" xml:space="preserve"><value>بواسطة {0}</value></data>
+  <data name="About_PublicDomain" xml:space="preserve"><value>ملكية عامة</value></data>
+  <data name="About_SoundChanges" xml:space="preserve"><value>تم تكييف العينات لهذا التطبيق.</value></data>
+  <data name="Nav_Metronome" xml:space="preserve"><value>المترونوم</value></data>
+  <data name="Metronome_Start" xml:space="preserve"><value>ابدأ</value></data>
+  <data name="Metronome_Stop" xml:space="preserve"><value>أوقف</value></data>
+  <data name="Metronome_Tap" xml:space="preserve"><value>انقر الإيقاع</value></data>
+  <data name="Metronome_Beats" xml:space="preserve"><value>نبضات في المازورة</value></data>
+  <data name="Metronome_Subdivision" xml:space="preserve"><value>التقسيم</value></data>
+  <data name="Metronome_Accent" xml:space="preserve"><value>إبراز النبضة الأولى</value></data>
+  <data name="Metronome_Hint" xml:space="preserve"><value>انقر على «انقر الإيقاع» مع إيقاع الموسيقى لمعرفة سرعتها. تُعزف تتابعات الكوردات بهذه السرعة، كورد واحد في كل مازورة.</value></data>
+  <data name="Prog_Tempo" xml:space="preserve"><value>السرعة</value></data>
 </root>

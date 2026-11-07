@@ -27,6 +27,8 @@
   <data name="Chord_Invalid" xml:space="preserve"><value>{0} није исправан акорд</value></data>
   <data name="Tip" xml:space="preserve"><value>Савет:</value></data>
   <data name="Tip_Play" xml:space="preserve"><value>Додирните дијаграм да бисте га преслушали.</value></data>
+  <data name="Tip_Strum" xml:space="preserve"><value>Превуците прстом бочно преко дијаграма да га одсвирате жицу по жицу.</value></data>
+  <data name="Tip_StrumPick" xml:space="preserve"><value>Превуците трзалицу испод дијаграма да га одсвирате жицу по жицу.</value></data>
   <data name="Tip_Favorite" xml:space="preserve"><value>Задржите дијаграм да бисте га додали у омиљене.</value></data>
   <data name="Favorites_Empty" xml:space="preserve"><value>Немате омиљених хватова.</value></data>
   <data name="Favorites_Hint" xml:space="preserve"><value>Задржите хват да бисте га додали у омиљене.</value></data>
@@ -172,4 +174,22 @@
   <data name="Fretboard_WholeNeck" xml:space="preserve"><value>Цео врат</value></data>
   <data name="Fretboard_Position" xml:space="preserve"><value>Поља {0}–{1}</value></data>
   <data name="Fretboard_ChordInScaleHint" xml:space="preserve"><value>Тонови акорда {0} су означени (1 је његов основни тон); тачке су остали тонови лествице {1}.</value></data>
+  <data name="Nav_About" xml:space="preserve"><value>О апликацији</value></data>
+  <data name="About_Version" xml:space="preserve"><value>Верзија</value></data>
+  <data name="About_Rate" xml:space="preserve"><value>Оцени апликацију</value></data>
+  <data name="About_SoundCredit" xml:space="preserve"><value>Звуци инструмената</value></data>
+  <data name="About_SoundFont" xml:space="preserve"><value>звучна банка</value></data>
+  <data name="About_License" xml:space="preserve"><value>Лиценца</value></data>
+  <data name="About_By" xml:space="preserve"><value>аутор {0}</value></data>
+  <data name="About_PublicDomain" xml:space="preserve"><value>Јавно добро</value></data>
+  <data name="About_SoundChanges" xml:space="preserve"><value>Узорци прилагођени за ову апликацију.</value></data>
+  <data name="Nav_Metronome" xml:space="preserve"><value>Метроном</value></data>
+  <data name="Metronome_Start" xml:space="preserve"><value>Покрени</value></data>
+  <data name="Metronome_Stop" xml:space="preserve"><value>Заустави</value></data>
+  <data name="Metronome_Tap" xml:space="preserve"><value>Откуцај темпо</value></data>
+  <data name="Metronome_Beats" xml:space="preserve"><value>Доба у такту</value></data>
+  <data name="Metronome_Subdivision" xml:space="preserve"><value>Подела</value></data>
+  <data name="Metronome_Accent" xml:space="preserve"><value>Нагласи прву добу</value></data>
+  <data name="Metronome_Hint" xml:space="preserve"><value>Додирујте „Откуцај темпо“ у ритму музике да сазнате њен темпо. Акордске прогресије свирају у том темпу, један акорд по такту.</value></data>
+  <data name="Prog_Tempo" xml:space="preserve"><value>Темпо</value></data>
 </root>

@@ -30,6 +30,8 @@
   <data name="Chord_Invalid" xml:space="preserve"><value>Nid yw {0} yn gord dilys</value></data>
   <data name="Tip" xml:space="preserve"><value>Awgrym:</value></data>
   <data name="Tip_Play" xml:space="preserve"><value>Tapiwch ddiagram i wrando arno.</value></data>
+  <data name="Tip_Strum" xml:space="preserve"><value>Llithrwch i'r ochr ar draws diagram i'w strymio tant wrth dant.</value></data>
+  <data name="Tip_StrumPick" xml:space="preserve"><value>Llusgwch y plectrwm o dan ddiagram i'w strymio tant wrth dant.</value></data>
   <data name="Tip_Favorite" xml:space="preserve"><value>Daliwch eich bys ar ddiagram i'w ychwanegu at ffefrynnau.</value></data>
   <data name="Favorites_Empty" xml:space="preserve"><value>Does gennych chi ddim hoff siapiau cord.</value></data>
   <data name="Favorites_Hint" xml:space="preserve"><value>Daliwch eich bys ar siâp cord i'w ychwanegu at ffefrynnau.</value></data>
@@ -175,4 +177,22 @@
   <data name="Fretboard_WholeNeck" xml:space="preserve"><value>Y gwddf cyfan</value></data>
   <data name="Fretboard_Position" xml:space="preserve"><value>Ffretiau {0}–{1}</value></data>
   <data name="Fretboard_ChordInScaleHint" xml:space="preserve"><value>Mae nodau’r cord {0} wedi’u labelu (1 yw ei wreiddyn); y dotiau yw nodau eraill y raddfa {1}.</value></data>
+  <data name="Nav_About" xml:space="preserve"><value>Am yr ap</value></data>
+  <data name="About_Version" xml:space="preserve"><value>Fersiwn</value></data>
+  <data name="About_Rate" xml:space="preserve"><value>Sgorio’r ap</value></data>
+  <data name="About_SoundCredit" xml:space="preserve"><value>Seiniau’r offerynnau</value></data>
+  <data name="About_SoundFont" xml:space="preserve"><value>ffont sain</value></data>
+  <data name="About_License" xml:space="preserve"><value>Trwydded</value></data>
+  <data name="About_By" xml:space="preserve"><value>gan {0}</value></data>
+  <data name="About_PublicDomain" xml:space="preserve"><value>Parth cyhoeddus</value></data>
+  <data name="About_SoundChanges" xml:space="preserve"><value>Samplau wedi’u haddasu ar gyfer yr ap hwn.</value></data>
+  <data name="Nav_Metronome" xml:space="preserve"><value>Metronom</value></data>
+  <data name="Metronome_Start" xml:space="preserve"><value>Dechrau</value></data>
+  <data name="Metronome_Stop" xml:space="preserve"><value>Stopio</value></data>
+  <data name="Metronome_Tap" xml:space="preserve"><value>Tapio’r tempo</value></data>
+  <data name="Metronome_Beats" xml:space="preserve"><value>Curiadau ym mhob bar</value></data>
+  <data name="Metronome_Subdivision" xml:space="preserve"><value>Isrannu</value></data>
+  <data name="Metronome_Accent" xml:space="preserve"><value>Pwysleisio’r curiad cyntaf</value></data>
+  <data name="Metronome_Hint" xml:space="preserve"><value>Tapiwch “Tapio’r tempo” i guriad y gerddoriaeth i ganfod ei thempo. Mae dilyniannau cordiau’n chwarae ar y tempo hwn, un cord ym mhob bar.</value></data>
+  <data name="Prog_Tempo" xml:space="preserve"><value>Tempo</value></data>
 </root>

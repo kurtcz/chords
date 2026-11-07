@@ -25,6 +25,8 @@
   <data name="Chord_Invalid" xml:space="preserve"><value>{0} 不是有效的和弦</value></data>
   <data name="Tip" xml:space="preserve"><value>提示：</value></data>
   <data name="Tip_Play" xml:space="preserve"><value>點一下和弦圖即可試聽。</value></data>
+  <data name="Tip_Strum" xml:space="preserve"><value>在和弦圖上橫向滑動，即可逐弦掃弦。</value></data>
+  <data name="Tip_StrumPick" xml:space="preserve"><value>拖曳和弦圖下方的撥片，即可逐弦掃弦。</value></data>
   <data name="Tip_Favorite" xml:space="preserve"><value>長按和弦圖可加入收藏。</value></data>
   <data name="Favorites_Empty" xml:space="preserve"><value>你還沒有收藏的指法。</value></data>
   <data name="Favorites_Hint" xml:space="preserve"><value>長按指法可將其加入收藏。</value></data>
@@ -170,4 +172,22 @@
   <data name="Fretboard_WholeNeck" xml:space="preserve"><value>整個琴頸</value></data>
   <data name="Fretboard_Position" xml:space="preserve"><value>{0}–{1} 格</value></data>
   <data name="Fretboard_ChordInScaleHint" xml:space="preserve"><value>{0} 和弦的音有標註（1 是根音），圓點是 {1} 音階的其他音。</value></data>
+  <data name="Nav_About" xml:space="preserve"><value>關於</value></data>
+  <data name="About_Version" xml:space="preserve"><value>版本</value></data>
+  <data name="About_Rate" xml:space="preserve"><value>為 App 評分</value></data>
+  <data name="About_SoundCredit" xml:space="preserve"><value>樂器音色</value></data>
+  <data name="About_SoundFont" xml:space="preserve"><value>音色庫</value></data>
+  <data name="About_License" xml:space="preserve"><value>授權</value></data>
+  <data name="About_By" xml:space="preserve"><value>作者：{0}</value></data>
+  <data name="About_PublicDomain" xml:space="preserve"><value>公有領域</value></data>
+  <data name="About_SoundChanges" xml:space="preserve"><value>取樣已為本 App 改編。</value></data>
+  <data name="Nav_Metronome" xml:space="preserve"><value>節拍器</value></data>
+  <data name="Metronome_Start" xml:space="preserve"><value>開始</value></data>
+  <data name="Metronome_Stop" xml:space="preserve"><value>停止</value></data>
+  <data name="Metronome_Tap" xml:space="preserve"><value>敲擊測速</value></data>
+  <data name="Metronome_Beats" xml:space="preserve"><value>每小節拍數</value></data>
+  <data name="Metronome_Subdivision" xml:space="preserve"><value>細分</value></data>
+  <data name="Metronome_Accent" xml:space="preserve"><value>強調第一拍</value></data>
+  <data name="Metronome_Hint" xml:space="preserve"><value>跟著音樂節奏點按「敲擊測速」即可得出速度。和弦進行按此速度演奏，每小節一個和弦。</value></data>
+  <data name="Prog_Tempo" xml:space="preserve"><value>速度</value></data>
 </root>

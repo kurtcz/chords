@@ -24,23 +24,20 @@
                     <li>
                         <a href="@item.Href" class="@(item == current || (item == AppPages.ShowChord && current == AppPages.ChordDetail) ? "active" : null)"
                            @onclick="() => moreOpen = false">
-                            <Icon Name="@item.Icon" />
+                            @if (item.Icon == "app")
+                            {
+                                <AppLogo Class="icon" />
+                            }
+                            else
+                            {
+                                <Icon Name="@item.Icon" />
+                            }
                             <span>@L[item.TitleKey]</span>
                         </a>
                     </li>
                 }
             </ul>
         }
-        <div class="more-about">
-            @* The pick of the app icon (Resources/AppIcon/appiconfg.svg) without its black square; the note is cut out of it. *@
-            <svg class="more-about-icon" viewBox="0 0 90 90" width="30" height="30" aria-hidden="true">
-                <path fill="#0365C0" fill-rule="evenodd" d="@(PickPath + NotePath)" />
-            </svg>
-            <div class="more-copyright">
-                <div class="more-app-name">@AppNameVersion</div>
-                <div>&copy; 2026 Tomáš&nbsp;Němec</div>
-            </div>
-        </div>
     </div>
 }
 
@@ -65,25 +62,10 @@
     private static readonly (AppPage Page, string LabelKey, string Icon)[] Tabs =
     [
         (AppPages.ShowChord, "Tab_Chords", "chord"),
-        (AppPages.Favorites, "Tab_Favorites", "star"),
         (AppPages.Key, "Tab_Theory", "theory"),
         (AppPages.Tuner, "Nav_Tuner", "tuner"),
+        (AppPages.Metronome, "Nav_Metronome", "metronome"),
     ];
-
-    /// <summary>
-    /// The app's name and version as the project file sets them (ApplicationTitle, ApplicationDisplayVersion),
-    /// so they stay as the store shows them.
-    /// </summary>
-    private static readonly string AppNameVersion =
-        $"{Microsoft.Maui.ApplicationModel.AppInfo.Current.Name} {Microsoft.Maui.ApplicationModel.AppInfo.Current.VersionString}";
-
-    /// <summary>The outline of the pick in the app icon (Resources/AppIcon/appiconfg.svg).</summary>
-    private const string PickPath =
-        "M44.931,1.134c-15.861,0-54.806,5.91-25.929,56.296c12.353,21.55,21.042,31.437,26.01,31.437c4.969,0,13.659-9.887,26.012-31.437C99.901,7.043,60.792,1.134,44.931,1.134z";
-
-    /// <summary>The note cut out of the pick in the app icon (Resources/AppIcon/appiconfg.svg).</summary>
-    private const string NotePath =
-        "M59.65,49.304c0,3.564-4.095,4.844-6.729,4.844c-3.713,0-6.726-2.167-6.726-4.844c0-2.673,3.013-4.84,6.726-4.84c1.607,0,3.083,0.406,4.241,1.08c0,0,0-9.399,0-15.722L39.36,31.718v19.75c0,3.561-4.095,4.84-6.729,4.84c-3.714,0-6.726-2.167-6.726-4.84c0-2.678,3.011-4.844,6.726-4.844c1.607,0,3.082,0.405,4.241,1.082c0,0,0-20.322,0-21.22c0-0.898,0.759-1.094,1.24-1.145c0.485-0.053,20.292-2.163,20.292-2.163c0.93-0.061,1.247,0.36,1.247,1.454V49.304z";
 
     private AppPage current;
     private bool moreOpen;

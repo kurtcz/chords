@@ -1,9 +1,11 @@
+@using Microsoft.JSInterop
 @implements IDisposable
 @inject ChordPlayer Player
 @inject AppState State
+@inject IJSRuntime JS
 
-@* Tap plays the chord, tap and hold toggles it as a favourite. *@
-<div class="chord-layout @(favorite ? "favorite" : null) @(State.Settings.Horizontal ? "horizontal" : null)"
+@* Tap plays the chord, tap and hold toggles it as a favourite, a finger across the strings strums them (js/strum.js). *@
+<div @ref="root" class="chord-layout @(favorite ? "favorite" : null) @(State.Settings.Horizontal ? "horizontal" : null)"
      @onpointerdown="PointerDown" @onpointerup="CancelHold" @onpointercancel="CancelHold" @onpointerleave="CancelHold"
      @onclick="Click" @oncontextmenu:preventDefault="true">
     @Layout.RenderSchema(State.Settings.Horizontal, State.Settings.Horizontal && State.Settings.LeftHanded)
@@ -25,6 +27,8 @@
     private bool favorite;
     private bool held;
     private CancellationTokenSource holdCts;
+    private ElementReference root;
+    private DotNetObjectReference<ChordLayoutView> self;
 
     protected override void OnParametersSet() => favorite = Layout.Favorite;
 
@@ -70,5 +74,49 @@
         Player.PlayLayout(Layout.Layout.InstrumentInfo, Layout.IntPositions);
     }
 
-    public void Dispose() => CancelHold();
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            self = DotNetObjectReference.Create(this);
+            try
+            {
+                await JS.InvokeVoidAsync("chordStrum.attach", root, self);
+            }
+            catch (JSDisconnectedException)
+            {
+            }
+        }
+    }
+
+    /// <summary>A finger started strumming: it is not holding the diagram.</summary>
+    [JSInvokable]
+    public void StrumStart() => CancelHold();
+
+    /// <summary>A finger strumming the diagram crossed a string (0 = the lowest).</summary>
+    [JSInvokable]
+    public void Pluck(int stringIndex)
+    {
+        var positions = Layout.IntPositions;
+
+        if (stringIndex < 0 || stringIndex >= positions.Length || positions[stringIndex] < 0)
+        {
+            return;
+        }
+        Player.PlayString(Layout.Layout.InstrumentInfo, positions, stringIndex);
+        try
+        {
+            HapticFeedback.Default.Perform(HapticFeedbackType.Click);
+        }
+        catch
+        {
+            // Haptics are optional.
+        }
+    }
+
+    public void Dispose()
+    {
+        CancelHold();
+        self?.Dispose();
+    }
 }

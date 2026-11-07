@@ -26,6 +26,8 @@
   <data name="Chord_Invalid" xml:space="preserve"><value>{0} toʻgʻri akkord emas</value></data>
   <data name="Tip" xml:space="preserve"><value>Maslahat:</value></data>
   <data name="Tip_Play" xml:space="preserve"><value>Tinglash uchun sxemaga teging.</value></data>
+  <data name="Tip_Strum" xml:space="preserve"><value>Diagrammani tor-tor chalish uchun uning ustida barmoqni yon tomonga suring.</value></data>
+  <data name="Tip_StrumPick" xml:space="preserve"><value>Diagrammani tor-tor chalish uchun ostidagi mediatorni suring.</value></data>
   <data name="Tip_Favorite" xml:space="preserve"><value>Sevimlilarga qoʻshish uchun sxemani bosib turing.</value></data>
   <data name="Favorites_Empty" xml:space="preserve"><value>Sizda sevimli qoʻyilishlar yoʻq.</value></data>
   <data name="Favorites_Hint" xml:space="preserve"><value>Sevimlilarga qoʻshish uchun qoʻyilishni bosib turing.</value></data>
@@ -171,4 +173,22 @@
   <data name="Fretboard_WholeNeck" xml:space="preserve"><value>Butun grif</value></data>
   <data name="Fretboard_Position" xml:space="preserve"><value>{0}–{1} pardalar</value></data>
   <data name="Fretboard_ChordInScaleHint" xml:space="preserve"><value>{0} akkordining tovushlari belgilangan (1 — uning asosiy tovushi); nuqtalar — {1} gammasining qolgan tovushlari.</value></data>
+  <data name="Nav_About" xml:space="preserve"><value>Ilova haqida</value></data>
+  <data name="About_Version" xml:space="preserve"><value>Versiya</value></data>
+  <data name="About_Rate" xml:space="preserve"><value>Ilovani baholash</value></data>
+  <data name="About_SoundCredit" xml:space="preserve"><value>Cholg‘u tovushlari</value></data>
+  <data name="About_SoundFont" xml:space="preserve"><value>tovush to‘plami</value></data>
+  <data name="About_License" xml:space="preserve"><value>Litsenziya</value></data>
+  <data name="About_By" xml:space="preserve"><value>muallif: {0}</value></data>
+  <data name="About_PublicDomain" xml:space="preserve"><value>Jamoat mulki</value></data>
+  <data name="About_SoundChanges" xml:space="preserve"><value>Namunalar ushbu ilova uchun moslashtirilgan.</value></data>
+  <data name="Nav_Metronome" xml:space="preserve"><value>Metronom</value></data>
+  <data name="Metronome_Start" xml:space="preserve"><value>Boshlash</value></data>
+  <data name="Metronome_Stop" xml:space="preserve"><value>Toʻxtatish</value></data>
+  <data name="Metronome_Tap" xml:space="preserve"><value>Tempni urish</value></data>
+  <data name="Metronome_Beats" xml:space="preserve"><value>Taktdagi zarblar</value></data>
+  <data name="Metronome_Subdivision" xml:space="preserve"><value>Boʻlinish</value></data>
+  <data name="Metronome_Accent" xml:space="preserve"><value>Birinchi zarbni urgʻulash</value></data>
+  <data name="Metronome_Hint" xml:space="preserve"><value>Musiqa tempini bilish uchun uning ritmida “Tempni urish”ga bosing. Akkord ketma-ketliklari shu tempda, har taktga bitta akkord chalinadi.</value></data>
+  <data name="Prog_Tempo" xml:space="preserve"><value>Temp</value></data>
 </root>

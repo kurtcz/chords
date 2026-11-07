@@ -26,6 +26,8 @@
   <data name="Chord_Invalid" xml:space="preserve"><value>{0} зөв аккорд биш байна</value></data>
   <data name="Tip" xml:space="preserve"><value>Зөвлөгөө:</value></data>
   <data name="Tip_Play" xml:space="preserve"><value>Сонсохын тулд схем дээр дарна уу.</value></data>
+  <data name="Tip_Strum" xml:space="preserve"><value>Диаграмыг утас утсаар нь тоглохын тулд хажуу тийш шударна уу.</value></data>
+  <data name="Tip_StrumPick" xml:space="preserve"><value>Диаграмыг утас утсаар нь тоглохын тулд доорх медиаторыг чирнэ үү.</value></data>
   <data name="Tip_Favorite" xml:space="preserve"><value>Дуртай руу нэмэхийн тулд схемийг удаан дарна уу.</value></data>
   <data name="Favorites_Empty" xml:space="preserve"><value>Танд дуртай байрлал алга.</value></data>
   <data name="Favorites_Hint" xml:space="preserve"><value>Дуртай руу нэмэхийн тулд байрлалыг удаан дарна уу.</value></data>
@@ -171,4 +173,22 @@
   <data name="Fretboard_WholeNeck" xml:space="preserve"><value>Бүх гриф</value></data>
   <data name="Fretboard_Position" xml:space="preserve"><value>{0}–{1} лад</value></data>
   <data name="Fretboard_ChordInScaleHint" xml:space="preserve"><value>{0} аккордын авиануудыг тэмдэглэсэн (1 нь үндсэн авиа); цэгүүд нь {1} гаммын бусад авиа.</value></data>
+  <data name="Nav_About" xml:space="preserve"><value>Аппын тухай</value></data>
+  <data name="About_Version" xml:space="preserve"><value>Хувилбар</value></data>
+  <data name="About_Rate" xml:space="preserve"><value>Аппыг үнэлэх</value></data>
+  <data name="About_SoundCredit" xml:space="preserve"><value>Хөгжмийн зэмсгийн дуу</value></data>
+  <data name="About_SoundFont" xml:space="preserve"><value>дууны сан</value></data>
+  <data name="About_License" xml:space="preserve"><value>Лиценз</value></data>
+  <data name="About_By" xml:space="preserve"><value>зохиогч {0}</value></data>
+  <data name="About_PublicDomain" xml:space="preserve"><value>Нийтийн өмч</value></data>
+  <data name="About_SoundChanges" xml:space="preserve"><value>Дууны жишээг энэ аппад тохируулсан.</value></data>
+  <data name="Nav_Metronome" xml:space="preserve"><value>Метроном</value></data>
+  <data name="Metronome_Start" xml:space="preserve"><value>Эхлүүлэх</value></data>
+  <data name="Metronome_Stop" xml:space="preserve"><value>Зогсоох</value></data>
+  <data name="Metronome_Tap" xml:space="preserve"><value>Хэмнэл товших</value></data>
+  <data name="Metronome_Beats" xml:space="preserve"><value>Тактын цохилт</value></data>
+  <data name="Metronome_Subdivision" xml:space="preserve"><value>Хуваалт</value></data>
+  <data name="Metronome_Accent" xml:space="preserve"><value>Эхний цохилтыг тодотгох</value></data>
+  <data name="Metronome_Hint" xml:space="preserve"><value>Хөгжмийн хэмнэлийг олохын тулд түүний хэмнэлээр «Хэмнэл товших»-ыг дарна уу. Аккордын дараалал энэ хэмнэлээр, тактад нэг аккордоор тоглогдоно.</value></data>
+  <data name="Prog_Tempo" xml:space="preserve"><value>Хэмнэл</value></data>
 </root>

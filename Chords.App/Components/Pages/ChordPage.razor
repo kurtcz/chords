@@ -68,6 +68,7 @@
             <div class="alert alert-info">
                 <button type="button" class="close" @onclick="() => tipClosed = true">&times;</button>
                 <strong>@L["Tip"]</strong> @L["Tip_Play"]<br />
+                @L[State.Settings.Horizontal ? "Tip_StrumPick" : "Tip_Strum"]<br />
                 @L["Tip_Favorite"]
             </div>
         }

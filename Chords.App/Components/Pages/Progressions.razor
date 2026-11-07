@@ -1,6 +1,9 @@
 @page "/progressions"
+@using Microsoft.JSInterop
+@implements IAsyncDisposable
 @inject AppState State
 @inject ChordPlayer Player
+@inject IJSRuntime JS
 
 <TopNav Title="@L["Nav_Progressions"]" />
 
@@ -11,6 +14,17 @@
     </SettingRow>
     <SettingRow Label="@L["Prog_Smooth"]">
         <Toggle Value="State.SmoothTransitions" ValueChanged="SmoothChanged" />
+    </SettingRow>
+    @* Shared with the metronome page; a chord lasts one of its bars. *@
+    <SettingRow Label="@L["Prog_Tempo"]">
+        <div class="tuner-stepper">
+            <button type="button" @onclick="() => SetBpm(State.Settings.MetronomeBpm - TempoStep)" disabled="@(State.Settings.MetronomeBpm <= Metronome.MinBpm)">−</button>
+            <span>♩ = @State.Settings.MetronomeBpm</span>
+            <button type="button" @onclick="() => SetBpm(State.Settings.MetronomeBpm + TempoStep)" disabled="@(State.Settings.MetronomeBpm >= Metronome.MaxBpm)">+</button>
+        </div>
+    </SettingRow>
+    <SettingRow Label="@L["Nav_Metronome"]">
+        <Toggle Value="State.Settings.ProgressionClick" ValueChanged="ClickChanged" />
     </SettingRow>
 </div>
 <button type="button" class="btn btn-primary btn-lg btn-block page-action" @onclick="Generate">🎲 @L["Prog_Generate"]</button>
@@ -32,10 +46,14 @@
             <div class="progression-head" @onclick="() => Select(current)">
                 <span class="label label-default">@current.Label</span>
                 <span class="progression-numerals">@string.Join(" – ", current.Chords.Select(i => i.Numeral))</span>
-                <button type="button" class="btn btn-default btn-sm pull-right" @onclick="() => Play(current)" @onclick:stopPropagation="true">▶</button>
+                <button type="button" class="btn btn-sm pull-right @(playing == current ? "btn-danger" : "btn-default")" data-audio-unlock
+                        @onclick="() => Play(current)" @onclick:stopPropagation="true">@(playing == current ? "■" : "▶\uFE0E")</button>
             </div>
             <div class="progression-symbols" @onclick="() => Select(current)">
-                @string.Join("  ", current.Chords.Select(i => Symbol(i.Chord)))
+                @for (var i = 0; i < current.Chords.Length; i++)
+                {
+                    <span class="@(playing == current && playingChord == i ? "progression-playing" : null)">@Symbol(current.Chords[i].Chord)</span>
+                }
             </div>
             @if (selected == current)
             {
@@ -51,7 +69,7 @@
                             var index = i;
                             var chord = current.Chords[i].Chord;
                             var layouts = current.Layouts[i];
-                            <div class="progression-chord">
+                            <div class="progression-chord @(playing == current && playingChord == index ? "progression-playing" : null)">
                                 <a href="@ChordPage.Url(chord, true)">@Symbol(chord)</a>
                                 @if (State.Settings.Capo > 0)
                                 {
@@ -97,10 +115,12 @@
     }
 </div>
 
-<RelatedLinks Pages="[AppPages.Key, AppPages.Circle]" />
+<RelatedLinks Pages="[AppPages.Key, AppPages.Circle, AppPages.Metronome]" />
 
 @code {
     private const int GeneratedLength = 4;
+    /// <summary>Change of the tempo with one tap of − or + (the metronome page sets it exactly).</summary>
+    private const int TempoStep = 5;
 
     /// <summary>A progression in the chosen key with the fingerings found for its chords.</summary>
     private class Item
@@ -121,12 +141,19 @@
     private Item generated;
     private Item selected;
     private bool tipClosed;
+    /// <summary>Progression playing to the metronome (null = none) and its chord sounding (-1 while counting in).</summary>
+    private Item playing;
+    private int playingChord = -1;
+    /// <summary>Bars counted in before the progression playing starts.</summary>
+    private int playingCountIn;
+    private DotNetObjectReference<Progressions> self;
 
     private Key Current => new(State.KeyTonic, State.KeyScale);
 
     protected override void OnInitialized()
     {
         conv = State.Settings.conv;
+        self = DotNetObjectReference.Create(this);
         Build();
     }
 
@@ -157,6 +184,8 @@
     {
         var key = Current;
 
+        // The progression playing is gone from the list.
+        _ = StopPlaying();
         selected = null;
         items = Progression.Common
             .Where(i => i.Fits(key))
@@ -253,15 +282,130 @@
         Choose(item);
     }
 
+    /// <summary>Bars counted in before the first chord when the metronome clicks.</summary>
+    private int CountIn => State.Settings.ProgressionClick ? 1 : 0;
+
+    private object Options => new
+    {
+        bpm = State.Settings.MetronomeBpm,
+        beats = State.Settings.MetronomeBeats,
+        subdivision = 1,
+        accent = State.Settings.MetronomeAccent,
+        click = State.Settings.ProgressionClick,
+        countIn = playingCountIn,
+        notify = true,
+    };
+
+    /// <summary>
+    /// Plays the progression over and over to the metronome, one chord per bar strummed on every beat; tapping ▶ of
+    /// the progression playing stops it.
+    /// </summary>
     private async Task Play(Item item)
     {
+        if (playing == item)
+        {
+            await StopPlaying();
+            return;
+        }
         await EnsureLayouts(item);
+        playing = item;
+        playingChord = -1;
+        playingCountIn = CountIn;
+        try
+        {
+            await JS.InvokeAsync<bool>("metronome.start", self, null, Options);
+        }
+        catch (JSException)
+        {
+            playing = null;
+        }
+    }
 
-        var positions = item.Layouts
-            .Select((layouts, i) => layouts.Length == 0 ? null : layouts[item.Chosen[i]].IntPositions)
-            .Where(i => i != null)
-            .ToArray();
+    private async Task StopPlaying()
+    {
+        if (playing == null)
+        {
+            return;
+        }
+        playing = null;
+        playingChord = -1;
+        Player.Damp();
+        try
+        {
+            await JS.InvokeVoidAsync("metronome.stop");
+        }
+        catch (JSDisconnectedException)
+        {
+        }
+    }
 
-        Player.PlaySequence(State.Settings.InstrumentInfo, positions);
+    /// <summary>A beat heard: the chord of its bar is strummed, harder on the first beat.</summary>
+    [JSInvokable]
+    public void OnMetronomeBeat(int bar, int beat) => InvokeAsync(() =>
+    {
+        var item = playing;
+
+        if (item?.Layouts == null || bar < playingCountIn)
+        {
+            return;
+        }
+        var index = (bar - playingCountIn) % item.Chords.Length;
+        var layouts = item.Layouts[index];
+
+        if (layouts.Length > 0)
+        {
+            var strings = layouts[0].IntPositions.Length;
+            // The strum takes at most a quarter of the beat, so it is over well before the next one.
+            var spread = (int)Math.Min(30, 60000.0 / State.Settings.MetronomeBpm / 4 / strings);
+
+            // The fingering chosen now: a change of it while playing is heard from the next beat.
+            Player.Strum(State.Settings.InstrumentInfo, layouts[item.Chosen[index]].IntPositions, beat == 0, beat == 0 ? 1f : 0.55f, spread);
+        }
+        else if (beat == 0)
+        {
+            Player.Damp();
+        }
+        if (beat == 0 && playingChord != index)
+        {
+            playingChord = index;
+            StateHasChanged();
+        }
+    });
+
+    /// <summary>The app went to the background, which stops the metronome (js/metronome.js).</summary>
+    [JSInvokable]
+    public void OnMetronomeStopped() => InvokeAsync(() =>
+    {
+        playing = null;
+        playingChord = -1;
+        StateHasChanged();
+    });
+
+    private async Task SetBpm(int value)
+    {
+        State.Settings.MetronomeBpm = Math.Clamp(value, Metronome.MinBpm, Metronome.MaxBpm);
+        State.Settings.Save();
+        await UpdatePlaying();
+    }
+
+    private async Task ClickChanged(bool value)
+    {
+        State.Settings.ProgressionClick = value;
+        State.Settings.Save();
+        await UpdatePlaying();
+    }
+
+    private async Task UpdatePlaying()
+    {
+        if (playing != null)
+        {
+            await JS.InvokeVoidAsync("metronome.update", Options);
+        }
+    }
+
+    public async ValueTask DisposeAsync()
+    {
+        await StopPlaying();
+        self?.Dispose();
     }
 }

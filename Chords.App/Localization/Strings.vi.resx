@@ -25,6 +25,8 @@
   <data name="Chord_Invalid" xml:space="preserve"><value>{0} không phải là hợp âm hợp lệ</value></data>
   <data name="Tip" xml:space="preserve"><value>Mẹo:</value></data>
   <data name="Tip_Play" xml:space="preserve"><value>Chạm vào sơ đồ để nghe.</value></data>
+  <data name="Tip_Strum" xml:space="preserve"><value>Vuốt ngang qua sơ đồ để gảy từng dây một.</value></data>
+  <data name="Tip_StrumPick" xml:space="preserve"><value>Kéo phím gảy bên dưới sơ đồ để gảy từng dây một.</value></data>
   <data name="Tip_Favorite" xml:space="preserve"><value>Chạm và giữ sơ đồ để thêm vào mục yêu thích.</value></data>
   <data name="Favorites_Empty" xml:space="preserve"><value>Bạn chưa có thế bấm yêu thích nào.</value></data>
   <data name="Favorites_Hint" xml:space="preserve"><value>Chạm và giữ một thế bấm để thêm vào mục yêu thích.</value></data>
@@ -170,4 +172,22 @@
   <data name="Fretboard_WholeNeck" xml:space="preserve"><value>Cả cần đàn</value></data>
   <data name="Fretboard_Position" xml:space="preserve"><value>Phím {0}–{1}</value></data>
   <data name="Fretboard_ChordInScaleHint" xml:space="preserve"><value>Các nốt của hợp âm {0} có ghi nhãn (1 là nốt gốc); các chấm là những nốt còn lại của âm giai {1}.</value></data>
+  <data name="Nav_About" xml:space="preserve"><value>Giới thiệu</value></data>
+  <data name="About_Version" xml:space="preserve"><value>Phiên bản</value></data>
+  <data name="About_Rate" xml:space="preserve"><value>Đánh giá ứng dụng</value></data>
+  <data name="About_SoundCredit" xml:space="preserve"><value>Âm thanh nhạc cụ</value></data>
+  <data name="About_SoundFont" xml:space="preserve"><value>soundfont</value></data>
+  <data name="About_License" xml:space="preserve"><value>Giấy phép</value></data>
+  <data name="About_By" xml:space="preserve"><value>của {0}</value></data>
+  <data name="About_PublicDomain" xml:space="preserve"><value>Phạm vi công cộng</value></data>
+  <data name="About_SoundChanges" xml:space="preserve"><value>Các mẫu âm đã được điều chỉnh cho ứng dụng này.</value></data>
+  <data name="Nav_Metronome" xml:space="preserve"><value>Máy đếm nhịp</value></data>
+  <data name="Metronome_Start" xml:space="preserve"><value>Bắt đầu</value></data>
+  <data name="Metronome_Stop" xml:space="preserve"><value>Dừng</value></data>
+  <data name="Metronome_Tap" xml:space="preserve"><value>Gõ nhịp</value></data>
+  <data name="Metronome_Beats" xml:space="preserve"><value>Phách mỗi ô nhịp</value></data>
+  <data name="Metronome_Subdivision" xml:space="preserve"><value>Chia phách</value></data>
+  <data name="Metronome_Accent" xml:space="preserve"><value>Nhấn phách đầu</value></data>
+  <data name="Metronome_Hint" xml:space="preserve"><value>Chạm “Gõ nhịp” theo nhịp nhạc để tìm tốc độ của bài. Vòng hợp âm sẽ chơi ở tốc độ này, mỗi ô nhịp một hợp âm.</value></data>
+  <data name="Prog_Tempo" xml:space="preserve"><value>Tốc độ</value></data>
 </root>

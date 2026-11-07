@@ -27,6 +27,8 @@
   <data name="Chord_Invalid" xml:space="preserve"><value>{0} nu este un acord valid</value></data>
   <data name="Tip" xml:space="preserve"><value>Sfat:</value></data>
   <data name="Tip_Play" xml:space="preserve"><value>Atinge o diagramă pentru a o asculta.</value></data>
+  <data name="Tip_Strum" xml:space="preserve"><value>Glisează lateral peste o diagramă pentru a o cânta coardă cu coardă.</value></data>
+  <data name="Tip_StrumPick" xml:space="preserve"><value>Trage pana sub o diagramă pentru a o cânta coardă cu coardă.</value></data>
   <data name="Tip_Favorite" xml:space="preserve"><value>Ține apăsat pe o diagramă pentru a o adăuga la preferate.</value></data>
   <data name="Favorites_Empty" xml:space="preserve"><value>Nu ai poziții de acorduri preferate.</value></data>
   <data name="Favorites_Hint" xml:space="preserve"><value>Ține apăsat pe o poziție pentru a o adăuga la preferate.</value></data>
@@ -172,4 +174,22 @@
   <data name="Fretboard_WholeNeck" xml:space="preserve"><value>Tot gâtul</value></data>
   <data name="Fretboard_Position" xml:space="preserve"><value>Tastele {0}–{1}</value></data>
   <data name="Fretboard_ChordInScaleHint" xml:space="preserve"><value>Notele acordului {0} sunt etichetate (1 este fundamentala); punctele sunt celelalte note ale gamei {1}.</value></data>
+  <data name="Nav_About" xml:space="preserve"><value>Despre aplicație</value></data>
+  <data name="About_Version" xml:space="preserve"><value>Versiune</value></data>
+  <data name="About_Rate" xml:space="preserve"><value>Evaluează aplicația</value></data>
+  <data name="About_SoundCredit" xml:space="preserve"><value>Sunetele instrumentelor</value></data>
+  <data name="About_SoundFont" xml:space="preserve"><value>soundfont</value></data>
+  <data name="About_License" xml:space="preserve"><value>Licență</value></data>
+  <data name="About_By" xml:space="preserve"><value>de {0}</value></data>
+  <data name="About_PublicDomain" xml:space="preserve"><value>Domeniu public</value></data>
+  <data name="About_SoundChanges" xml:space="preserve"><value>Mostre adaptate pentru această aplicație.</value></data>
+  <data name="Nav_Metronome" xml:space="preserve"><value>Metronom</value></data>
+  <data name="Metronome_Start" xml:space="preserve"><value>Pornește</value></data>
+  <data name="Metronome_Stop" xml:space="preserve"><value>Oprește</value></data>
+  <data name="Metronome_Tap" xml:space="preserve"><value>Bate tempoul</value></data>
+  <data name="Metronome_Beats" xml:space="preserve"><value>Timpi pe măsură</value></data>
+  <data name="Metronome_Subdivision" xml:space="preserve"><value>Subdiviziune</value></data>
+  <data name="Metronome_Accent" xml:space="preserve"><value>Accentuează primul timp</value></data>
+  <data name="Metronome_Hint" xml:space="preserve"><value>Atinge „Bate tempoul” în ritmul muzicii pentru a-i afla tempoul. Progresiile de acorduri cântă în acest tempo, un acord pe măsură.</value></data>
+  <data name="Prog_Tempo" xml:space="preserve"><value>Tempo</value></data>
 </root>

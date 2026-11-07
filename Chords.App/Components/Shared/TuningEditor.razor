@@ -11,7 +11,7 @@
             var offset = pitches[s] - standard[s];
             <div class="tuning-editor-string @(offset != 0 ? "retuned" : null)">
                 <button type="button" @onclick="() => Step(str, 1)" disabled="@(offset >= MaxOffset)">▲</button>
-                <button type="button" class="tuning-editor-note" @onclick="() => Player.PlayPitch(pitches[str])">
+                <button type="button" class="tuning-editor-note" @onclick="() => Player.PlayPitch(pitches[str], instrument: Instrument)">
                     @Current.NoteOf(str).ToString(Conv)<sub>@TunerMath.OctaveOf(pitches[str])</sub>
                 </button>
                 <button type="button" @onclick="() => Step(str, -1)" disabled="@(offset <= -MaxOffset)">▼</button>
@@ -56,7 +56,7 @@
     private void Step(int s, int delta)
     {
         pitches[s] += delta;
-        Player.PlayPitch(pitches[s]);
+        Player.PlayPitch(pitches[s], instrument: Instrument);
     }
 
     private Task Save()

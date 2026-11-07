@@ -1,0 +1,40 @@
+@page "/about"
+
+<TopNav Title="@L["Nav_About"]" />
+
+<div class="about">
+    <AppLogo Size="112" Tile="true" Class="about-icon" />
+    <div class="about-name">@Microsoft.Maui.ApplicationModel.AppInfo.Current.Name</div>
+    <div class="about-version">@L["About_Version"] @Microsoft.Maui.ApplicationModel.AppInfo.Current.VersionString</div>
+
+    <div class="settings-card about-card">
+        @* TODO: open the app's page in the store (Google Play / App Store). *@
+        <button type="button" class="about-row">
+            <Icon Name="star" />
+            <span class="setting-label">@L["About_Rate"]</span>
+        </button>
+    </div>
+
+    <div class="about-credits">
+        <div>&copy; 2026 Tomáš&nbsp;Němec</div>
+        @* Attribution the sound font's licence (CC BY 4.0) asks for: creator, link to the material, licence, changes. *@
+        <div class="about-sound">
+            <div>@L["About_SoundCredit"]: <a href="@SoundFontUrl">@L["About_SoundFont"]</a> &copy; @SoundFontAuthor</div>
+            <div>@L["About_License"]: <a href="@LicenseUrl">CC BY 4.0</a></div>
+            @* The mandolin's sound font, in the public domain (credited though not required). *@
+            <div>@L["Instrument_Mandolin"]: <a href="@MandolinUrl">Mandolino</a> @L["About_By", MandolinAuthor]</div>
+            <div>@L["About_License"]: @L["About_PublicDomain"]</div>
+            <div>@L["About_SoundChanges"]</div>
+        </div>
+    </div>
+</div>
+
+@code {
+    /// <summary>The sound font the other instruments' samples (Platforms/*/Resources) were made from.</summary>
+    private const string SoundFontUrl = "https://musical-artifacts.com/artifacts/738";
+    private const string SoundFontAuthor = "Frank\u00a0Wen";
+    private const string LicenseUrl = "https://creativecommons.org/licenses/by/4.0/deed.en";
+    /// <summary>The mandolin's sound font (Mandolino.sf2, preset Mandolino2).</summary>
+    private const string MandolinUrl = "https://www.polyphone.io/en/soundfonts/plucked-strings/633-mandolino";
+    private const string MandolinAuthor = "bottrop";
+}

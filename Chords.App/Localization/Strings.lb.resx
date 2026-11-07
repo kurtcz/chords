@@ -26,6 +26,8 @@
   <data name="Chord_Invalid" xml:space="preserve"><value>{0} ass keen gültegen Akkord</value></data>
   <data name="Tip" xml:space="preserve"><value>Tipp:</value></data>
   <data name="Tip_Play" xml:space="preserve"><value>Tipp op e Grëffbild, fir et ze lauschteren.</value></data>
+  <data name="Tip_Strum" xml:space="preserve"><value>Wëscht säitlech iwwer e Grëffbild, fir et Sait fir Sait unzeschloen.</value></data>
+  <data name="Tip_StrumPick" xml:space="preserve"><value>Zitt de Plektrum ënner engem Grëffbild, fir et Sait fir Sait unzeschloen.</value></data>
   <data name="Tip_Favorite" xml:space="preserve"><value>Hal e Grëffbild gedréckt, fir et bei d'Favoritten derbäizesetzen.</value></data>
   <data name="Favorites_Empty" xml:space="preserve"><value>Du hues keng léifste Grëffer.</value></data>
   <data name="Favorites_Hint" xml:space="preserve"><value>Hal e Grëffbild gedréckt, fir et bei d'Favoritten derbäizesetzen.</value></data>
@@ -171,4 +173,22 @@
   <data name="Fretboard_WholeNeck" xml:space="preserve"><value>Ganze Grëffbriet</value></data>
   <data name="Fretboard_Position" xml:space="preserve"><value>Bënn {0}–{1}</value></data>
   <data name="Fretboard_ChordInScaleHint" xml:space="preserve"><value>Beschrëft sinn d’Téin vum Akkord {0} (1 ass säi Grondtoun), d’Punkten sinn déi aner Téin vun der Tounleeder {1}.</value></data>
+  <data name="Nav_About" xml:space="preserve"><value>Iwwer d’App</value></data>
+  <data name="About_Version" xml:space="preserve"><value>Versioun</value></data>
+  <data name="About_Rate" xml:space="preserve"><value>App bewäerten</value></data>
+  <data name="About_SoundCredit" xml:space="preserve"><value>Instrumentekläng</value></data>
+  <data name="About_SoundFont" xml:space="preserve"><value>Soundfont</value></data>
+  <data name="About_License" xml:space="preserve"><value>Lizenz</value></data>
+  <data name="About_By" xml:space="preserve"><value>vum {0}</value></data>
+  <data name="About_PublicDomain" xml:space="preserve"><value>Ëffentlechen Domän</value></data>
+  <data name="About_SoundChanges" xml:space="preserve"><value>Samples fir dës App ugepasst.</value></data>
+  <data name="Nav_Metronome" xml:space="preserve"><value>Metronom</value></data>
+  <data name="Metronome_Start" xml:space="preserve"><value>Start</value></data>
+  <data name="Metronome_Stop" xml:space="preserve"><value>Stopp</value></data>
+  <data name="Metronome_Tap" xml:space="preserve"><value>Tempo tippen</value></data>
+  <data name="Metronome_Beats" xml:space="preserve"><value>Schléi pro Takt</value></data>
+  <data name="Metronome_Subdivision" xml:space="preserve"><value>Ënnerdeelung</value></data>
+  <data name="Metronome_Accent" xml:space="preserve"><value>Éischte Schlag betounen</value></data>
+  <data name="Metronome_Hint" xml:space="preserve"><value>Tipp am Takt vun der Musek op „Tempo tippen“, fir hiren Tempo erauszefannen. Akkordfolgen spillen an dësem Tempo, een Akkord pro Takt.</value></data>
+  <data name="Prog_Tempo" xml:space="preserve"><value>Tempo</value></data>
 </root>

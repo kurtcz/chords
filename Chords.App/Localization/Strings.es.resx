@@ -26,6 +26,8 @@
   <data name="Chord_Invalid" xml:space="preserve"><value>{0} no es un acorde válido</value></data>
   <data name="Tip" xml:space="preserve"><value>Consejo:</value></data>
   <data name="Tip_Play" xml:space="preserve"><value>Toca un diagrama para escucharlo.</value></data>
+  <data name="Tip_Strum" xml:space="preserve"><value>Desliza de lado sobre un diagrama para rasguearlo cuerda a cuerda.</value></data>
+  <data name="Tip_StrumPick" xml:space="preserve"><value>Arrastra la púa bajo un diagrama para rasguearlo cuerda a cuerda.</value></data>
   <data name="Tip_Favorite" xml:space="preserve"><value>Mantén pulsado un diagrama para añadirlo a favoritos.</value></data>
   <data name="Favorites_Empty" xml:space="preserve"><value>No tienes posiciones de acordes favoritas.</value></data>
   <data name="Favorites_Hint" xml:space="preserve"><value>Mantén pulsada una posición para añadirla a favoritos.</value></data>
@@ -171,4 +173,22 @@
   <data name="Fretboard_WholeNeck" xml:space="preserve"><value>Todo el mástil</value></data>
   <data name="Fretboard_Position" xml:space="preserve"><value>Trastes {0}–{1}</value></data>
   <data name="Fretboard_ChordInScaleHint" xml:space="preserve"><value>Las notas del acorde {0} llevan nombre (1 es su raíz); los puntos son las demás notas de la escala {1}.</value></data>
+  <data name="Nav_About" xml:space="preserve"><value>Acerca de</value></data>
+  <data name="About_Version" xml:space="preserve"><value>Versión</value></data>
+  <data name="About_Rate" xml:space="preserve"><value>Valorar la aplicación</value></data>
+  <data name="About_SoundCredit" xml:space="preserve"><value>Sonidos de instrumentos</value></data>
+  <data name="About_SoundFont" xml:space="preserve"><value>banco de sonidos</value></data>
+  <data name="About_License" xml:space="preserve"><value>Licencia</value></data>
+  <data name="About_By" xml:space="preserve"><value>de {0}</value></data>
+  <data name="About_PublicDomain" xml:space="preserve"><value>Dominio público</value></data>
+  <data name="About_SoundChanges" xml:space="preserve"><value>Muestras adaptadas para esta aplicación.</value></data>
+  <data name="Nav_Metronome" xml:space="preserve"><value>Metrónomo</value></data>
+  <data name="Metronome_Start" xml:space="preserve"><value>Iniciar</value></data>
+  <data name="Metronome_Stop" xml:space="preserve"><value>Detener</value></data>
+  <data name="Metronome_Tap" xml:space="preserve"><value>Marcar tempo</value></data>
+  <data name="Metronome_Beats" xml:space="preserve"><value>Pulsos por compás</value></data>
+  <data name="Metronome_Subdivision" xml:space="preserve"><value>Subdivisión</value></data>
+  <data name="Metronome_Accent" xml:space="preserve"><value>Acentuar el primer pulso</value></data>
+  <data name="Metronome_Hint" xml:space="preserve"><value>Toca «Marcar tempo» al ritmo de la música para hallar su tempo. Las progresiones de acordes suenan a este tempo, un acorde por compás.</value></data>
+  <data name="Prog_Tempo" xml:space="preserve"><value>Tempo</value></data>
 </root>

@@ -11,14 +11,14 @@
 - **Přepínač nástrojů** – ✅ kytara, ukulele, mandolína, baskytara, pětistrunné banjo v Open G (krátká 5. struna od 5. pražce, barré i u ostatních nástrojů; oblíbené zvlášť pro každý nástroj). Zbývá: tenorové banjo, vlastní nahrávky zvuku pro jednotlivé nástroje. Housle záměrně ne – nemají pražce.
 - **Hledání akordu podle hmatu** – ✅ uživatel naklikne prsty na hmatníku zvoleného nástroje a aplikace určí název akordu (včetně obratů jako C/E a neúplných akordů).
 - **Hledač akordů do tóniny (Key & Scale Finder)** – ✅ pro zvolenou tóninu a stupnici (dur, mollové, církevní módy) zobrazí diatonické akordy I–vii° nebo septakordy s přehráním; naopak z několika zadaných akordů určí nejpravděpodobnější tóniny (v mollu i s harmonickými akordy, upřednostní začátek/konec na tónice). Sdílí tóninu s kvintovým kruhem (kruh ukazuje příbuznou durovou tóninu, posun v kruhu zachová stupnici) a obě stránky na sebe odkazují. Stupnice se zobrazuje i na hmatníku a stránka doporučí nejsnadnější pozice kapodastru.
-- **Generátor akordových progresí (Smart Progression Generator)** – ✅ typické progrese podle stylu (pop, rock, jazz, blues, klasika, flamenco) v libovolné tónině, volitelně se septakordy, náhodné generování podle funkční harmonie, přehrání celé progrese a výběr hmatu ke každému akordu. Plynulé přechody (voice leading) – viz níže. Zbývá: tempo/metronom, ukládání vlastních progresí.
+- **Generátor akordových progresí (Smart Progression Generator)** – ✅ typické progrese podle stylu (pop, rock, jazz, blues, klasika, flamenco) v libovolné tónině, volitelně se septakordy, náhodné generování podle funkční harmonie, přehrání celé progrese a výběr hmatu ke každému akordu. Plynulé přechody (voice leading) – viz níže. Progrese hraje dokola v tempu metronomu (akord na takt, úhoz na každou dobu, takt předtaktí, volitelné klikání). Zbývá: ukládání vlastních progresí.
 
 ## Další nápady
 
 ### Hraní a cvičení
 - **Kapodastr** – ✅ pozice kapodastru v nastavení (pro každý nástroj), diagramy kreslí kapodastr a počítají pražce od něj, u akordu a v progresích je vidět „tvar“ k hmatání; ladička ladí bez kapodastru.
 - **Ladička** – ✅ chromatická ladička přes mikrofon (detekce YIN v Chords.Core, ověřená na nahraných strunách): ručička ±50 centů, cílová struna zvoleného nástroje i vlastního ladění, automatický výběr nebo zamčení struny s přehráním referenčního tónu, kalibrace A4 430–450 Hz. Zbývá: ověřit na zařízeních (Android bez zpracování zvuku, přepínání audio session na iOS), případně režim pro neobvyklé ladění bez strun.
-- **Metronom** – jednoduchý metronom, případně propojený s přehráváním progresí.
+- **Metronom** – ✅ tempo 30–250 BPM (posuvník, ±1, tap tempo, italské označení tempa), doby v taktu 1–12, dělení doby (osminy, trioly, šestnáctiny), důraz na první dobu, blikající tečky dob; kliky syntetizované přes Web Audio s plánováním dopředu, takže drží přesný čas. Displej zůstává zapnutý, při přechodu na pozadí se zastaví. Stejné hodiny řídí přehrávání progresí. Zbývá: ověřit na zařízeních (odemčení zvuku ve WebView, souběh s hudbou jiných aplikací, zpoždění úhozu za klikem).
 - **Volba způsobu přehrání** – úder dolů/nahoru, arpeggio, tempo; kvalitnější vzorky zvuku.
 - **Trénink sluchu** – kvíz: poznej typ akordu (dur/moll/septakord…) nebo interval podle poslechu.
 - **Kvíz na hmatníku** – poznej akord z diagramu / najdi tón na hmatníku.

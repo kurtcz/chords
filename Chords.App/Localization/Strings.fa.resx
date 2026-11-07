@@ -26,6 +26,8 @@
   <data name="Chord_Invalid" xml:space="preserve"><value>{0} آکورد معتبری نیست</value></data>
   <data name="Tip" xml:space="preserve"><value>نکته:</value></data>
   <data name="Tip_Play" xml:space="preserve"><value>برای شنیدن، روی یک نمودار ضربه بزنید.</value></data>
+  <data name="Tip_Strum" xml:space="preserve"><value>برای نواختن سیم به سیم، انگشت خود را به پهلو روی نمودار بکشید.</value></data>
+  <data name="Tip_StrumPick" xml:space="preserve"><value>برای نواختن سیم به سیم، مضراب زیر نمودار را بکشید.</value></data>
   <data name="Tip_Favorite" xml:space="preserve"><value>برای افزودن به محبوب‌ها، یک نمودار را لمس کنید و نگه دارید.</value></data>
   <data name="Favorites_Empty" xml:space="preserve"><value>هیچ انگشت‌گذاری محبوبی ندارید.</value></data>
   <data name="Favorites_Hint" xml:space="preserve"><value>برای افزودن به محبوب‌ها، یک انگشت‌گذاری را لمس کنید و نگه دارید.</value></data>
@@ -171,4 +173,22 @@
   <data name="Fretboard_WholeNeck" xml:space="preserve"><value>کل دسته</value></data>
   <data name="Fretboard_Position" xml:space="preserve"><value>پرده‌های {0}–{1}</value></data>
   <data name="Fretboard_ChordInScaleHint" xml:space="preserve"><value>نت‌های آکورد {0} نام‌گذاری شده‌اند (۱ ریشهٔ آن است)؛ نقطه‌ها بقیهٔ نت‌های گام {1} هستند.</value></data>
+  <data name="Nav_About" xml:space="preserve"><value>درباره برنامه</value></data>
+  <data name="About_Version" xml:space="preserve"><value>نسخه</value></data>
+  <data name="About_Rate" xml:space="preserve"><value>به برنامه امتیاز دهید</value></data>
+  <data name="About_SoundCredit" xml:space="preserve"><value>صدای سازها</value></data>
+  <data name="About_SoundFont" xml:space="preserve"><value>بانک صدا</value></data>
+  <data name="About_License" xml:space="preserve"><value>مجوز</value></data>
+  <data name="About_By" xml:space="preserve"><value>اثر {0}</value></data>
+  <data name="About_PublicDomain" xml:space="preserve"><value>مالکیت عمومی</value></data>
+  <data name="About_SoundChanges" xml:space="preserve"><value>نمونه‌ها برای این برنامه تطبیق داده شده‌اند.</value></data>
+  <data name="Nav_Metronome" xml:space="preserve"><value>مترونوم</value></data>
+  <data name="Metronome_Start" xml:space="preserve"><value>شروع</value></data>
+  <data name="Metronome_Stop" xml:space="preserve"><value>توقف</value></data>
+  <data name="Metronome_Tap" xml:space="preserve"><value>ضرب تمپو</value></data>
+  <data name="Metronome_Beats" xml:space="preserve"><value>ضرب در میزان</value></data>
+  <data name="Metronome_Subdivision" xml:space="preserve"><value>تقسیم</value></data>
+  <data name="Metronome_Accent" xml:space="preserve"><value>تأکید بر ضرب اول</value></data>
+  <data name="Metronome_Hint" xml:space="preserve"><value>برای یافتن تمپوی موسیقی، هم‌زمان با ریتم آن روی «ضرب تمپو» بزنید. توالی آکوردها با همین تمپو، یک آکورد در هر میزان، نواخته می‌شوند.</value></data>
+  <data name="Prog_Tempo" xml:space="preserve"><value>تمپو</value></data>
 </root>

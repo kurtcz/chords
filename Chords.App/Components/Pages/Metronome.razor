@@ -1,0 +1,255 @@
+@page "/metronome"
+@using Microsoft.JSInterop
+@implements IAsyncDisposable
+@inject AppState State
+@inject IJSRuntime JS
+
+<TopNav Title="@L["Nav_Metronome"]" />
+
+<div class="metronome">
+    @* Lit by js/metronome.js as each beat sounds; the first beat of the bar is the bigger dot when it is accented. *@
+    <div class="metronome-dots" @ref="dots">
+        @for (var i = 0; i < settings.MetronomeBeats; i++)
+        {
+            <span class="metronome-dot @(i == 0 && settings.MetronomeAccent ? "accent" : null)"></span>
+        }
+    </div>
+
+    <div class="metronome-tempo">
+        <button type="button" class="metronome-step" aria-label="−1" @onclick="() => SetBpm(settings.MetronomeBpm - 1)" disabled="@(settings.MetronomeBpm <= MinBpm)">−</button>
+        <div class="metronome-bpm">
+            <span class="metronome-bpm-value">@settings.MetronomeBpm</span>
+            <span class="metronome-bpm-unit">BPM</span>
+            <span class="metronome-marking">@Marking(settings.MetronomeBpm)</span>
+        </div>
+        <button type="button" class="metronome-step" aria-label="+1" @onclick="() => SetBpm(settings.MetronomeBpm + 1)" disabled="@(settings.MetronomeBpm >= MaxBpm)">+</button>
+    </div>
+    <input type="range" class="metronome-slider" min="@MinBpm" max="@MaxBpm" step="1" value="@settings.MetronomeBpm"
+           aria-label="BPM" @oninput="e => SetBpm(int.TryParse((string)e.Value, out var v) ? v : settings.MetronomeBpm)" />
+
+    <div class="metronome-actions">
+        <button type="button" class="btn btn-lg metronome-start @(running ? "btn-danger" : "btn-primary")" data-audio-unlock data-autofit @onclick="Toggle">
+            <span>@(running ? "■ " + L["Metronome_Stop"] : "▶\uFE0E " + L["Metronome_Start"])</span>
+        </button>
+        <button type="button" class="btn btn-default btn-lg metronome-tap" data-autofit @onpointerdown="Tap"><span>@L["Metronome_Tap"]</span></button>
+    </div>
+</div>
+
+<div class="settings-card page-card">
+    <SettingRow Label="@L["Metronome_Beats"]">
+        <div class="tuner-stepper">
+            <button type="button" @onclick="() => SetBeats(settings.MetronomeBeats - 1)" disabled="@(settings.MetronomeBeats <= 1)">−</button>
+            <span>@settings.MetronomeBeats</span>
+            <button type="button" @onclick="() => SetBeats(settings.MetronomeBeats + 1)" disabled="@(settings.MetronomeBeats >= MaxBeats)">+</button>
+        </div>
+    </SettingRow>
+    <SettingRow Label="@L["Metronome_Subdivision"]">
+        <div class="metronome-subdivisions" role="group" aria-label="@L["Metronome_Subdivision"]">
+            @foreach (var (value, symbol) in Subdivisions)
+            {
+                var v = value;
+                <button type="button" class="@(settings.MetronomeSubdivision == v ? "active" : null)" aria-pressed="@(settings.MetronomeSubdivision == v)"
+                        @onclick="() => SetSubdivision(v)">@symbol</button>
+            }
+        </div>
+    </SettingRow>
+    <SettingRow Label="@L["Metronome_Accent"]">
+        <Toggle Value="settings.MetronomeAccent" ValueChanged="SetAccent" />
+    </SettingRow>
+</div>
+
+@if (settings.ShowTips && !tipClosed)
+{
+    <div class="alert alert-info">
+        <button type="button" class="close" @onclick="() => tipClosed = true">&times;</button>
+        @L["Metronome_Hint"]
+    </div>
+}
+
+<RelatedLinks Pages="[AppPages.Progressions, AppPages.Tuner]" />
+
+@code {
+    public const int MinBpm = 30;
+    public const int MaxBpm = 250;
+    private const int MaxBeats = 12;
+    /// <summary>Taps further apart than this start a new tempo.</summary>
+    private static readonly TimeSpan TapReset = TimeSpan.FromSeconds(2);
+    /// <summary>The tempo tapped is the average of this many last intervals.</summary>
+    private const int TapIntervals = 4;
+
+    /// <summary>Clicks per beat and the note value they sound.</summary>
+    private static readonly (int Value, string Symbol)[] Subdivisions = [(1, "♩"), (2, "♫"), (3, "³"), (4, "♬")];
+
+    private SettingsModel settings;
+    private ElementReference dots;
+    private DotNetObjectReference<Metronome> self;
+    private bool running;
+    private bool tipClosed;
+    private readonly List<DateTime> taps = [];
+
+    protected override void OnInitialized()
+    {
+        settings = State.Settings;
+        settings.MetronomeBpm = Math.Clamp(settings.MetronomeBpm, MinBpm, MaxBpm);
+        settings.MetronomeBeats = Math.Clamp(settings.MetronomeBeats, 1, MaxBeats);
+        self = DotNetObjectReference.Create(this);
+    }
+
+    /// <summary>Italian tempo marking of a tempo, the same in every language.</summary>
+    public static string Marking(int bpm) => bpm switch
+    {
+        < 40 => "Grave",
+        < 60 => "Largo",
+        < 66 => "Larghetto",
+        < 76 => "Adagio",
+        < 108 => "Andante",
+        < 120 => "Moderato",
+        < 168 => "Allegro",
+        < 200 => "Presto",
+        _ => "Prestissimo",
+    };
+
+    private object Options => new
+    {
+        bpm = settings.MetronomeBpm,
+        beats = settings.MetronomeBeats,
+        subdivision = settings.MetronomeSubdivision,
+        accent = settings.MetronomeAccent,
+        click = true,
+        countIn = 0,
+        notify = false,
+    };
+
+    private async Task Toggle()
+    {
+        if (running)
+        {
+            await Stop();
+            return;
+        }
+        running = true;
+        KeepAwake(true);
+        try
+        {
+            await JS.InvokeAsync<bool>("metronome.start", self, dots, Options);
+        }
+        catch (JSException)
+        {
+            running = false;
+            KeepAwake(false);
+        }
+    }
+
+    private async Task Stop()
+    {
+        running = false;
+        KeepAwake(false);
+        try
+        {
+            await JS.InvokeVoidAsync("metronome.stop");
+        }
+        catch (JSDisconnectedException)
+        {
+        }
+    }
+
+    /// <summary>The app went to the background, which stops the metronome (js/metronome.js).</summary>
+    [JSInvokable]
+    public void OnMetronomeStopped() => InvokeAsync(() =>
+    {
+        running = false;
+        KeepAwake(false);
+        StateHasChanged();
+    });
+
+    private async Task Changed()
+    {
+        settings.Save();
+        if (running)
+        {
+            await JS.InvokeVoidAsync("metronome.update", Options);
+        }
+    }
+
+    private Task SetBpm(int value)
+    {
+        value = Math.Clamp(value, MinBpm, MaxBpm);
+        if (value == settings.MetronomeBpm)
+        {
+            return Task.CompletedTask;
+        }
+        settings.MetronomeBpm = value;
+        return Changed();
+    }
+
+    private Task SetBeats(int value)
+    {
+        settings.MetronomeBeats = Math.Clamp(value, 1, MaxBeats);
+        return Changed();
+    }
+
+    private Task SetSubdivision(int value)
+    {
+        settings.MetronomeSubdivision = value;
+        return Changed();
+    }
+
+    private Task SetAccent(bool value)
+    {
+        settings.MetronomeAccent = value;
+        return Changed();
+    }
+
+    /// <summary>Sets the tempo to that of the last few taps.</summary>
+    private Task Tap()
+    {
+        var now = DateTime.UtcNow;
+
+        if (taps.Count > 0 && now - taps[^1] > TapReset)
+        {
+            taps.Clear();
+        }
+        taps.Add(now);
+        if (taps.Count > TapIntervals + 1)
+        {
+            taps.RemoveAt(0);
+        }
+        if (taps.Count < 2)
+        {
+            return Task.CompletedTask;
+        }
+        var average = (taps[^1] - taps[0]).TotalMinutes / (taps.Count - 1);
+
+        return SetBpm((int)Math.Round(1 / average));
+    }
+
+    /// <summary>Nobody touches the screen while playing to the metronome: keep it on while it runs.</summary>
+    private static void KeepAwake(bool value) => MainThread.BeginInvokeOnMainThread(() =>
+    {
+        try
+        {
+            DeviceDisplay.Current.KeepScreenOn = value;
+        }
+        catch (Exception)
+        {
+            // Not supported on this platform.
+        }
+    });
+
+    public async ValueTask DisposeAsync()
+    {
+        if (running)
+        {
+            running = false;
+            KeepAwake(false);
+            try
+            {
+                await JS.InvokeVoidAsync("metronome.stop");
+            }
+            catch (JSDisconnectedException)
+            {
+            }
+        }
+        self?.Dispose();
+    }
+}

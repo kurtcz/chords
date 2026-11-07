@@ -66,7 +66,8 @@ namespace Chords.App.Models
             if (horizontal)
             {
                 svgWidth = 20 + neck + 40 + tuningRoom;
-                svgHeight = 25 + span + 10;
+                //room for the pick under the lowest string
+                svgHeight = 25 + span + 28;
                 P = (a, f) => (leftHanded ? svgWidth - 20 - f : 20 + f, 25 + span - a);
             }
             else
@@ -81,7 +82,9 @@ namespace Chords.App.Models
             string Circle((int X, int Y) c, string fill)
                 => $"\t\t<circle cx=\"{c.X}\" cy=\"{c.Y}\" r=\"6\" fill=\"{fill}\" stroke=\"blue\" stroke-width=\"1\" />\n";
 
-            sb.AppendLine($"\t<svg viewBox=\"0 0 {svgWidth} {svgHeight}\" width=\"{svgWidth}\" style=\"display:block; margin-bottom:10px;\">");
+            //where each string lies across the diagram, for strumming it with a finger (wwwroot/js/strum.js)
+            var across = string.Join(",", Enumerable.Range(0, strings).Select(s => horizontal ? P(A(s), 0).Y : P(A(s), 0).X));
+            sb.AppendLine($"\t<svg viewBox=\"0 0 {svgWidth} {svgHeight}\" width=\"{svgWidth}\" style=\"display:block; margin-bottom:10px;\" data-strum-axis=\"{(horizontal ? "y" : "x")}\" data-strum-strings=\"{across}\">");
             //star next to the highest string, past the end of the neck when horizontal
             var star = horizontal ? P(span, neck + 25 + tuningRoom) : (X: 25 + span + 17, Y: 12);
             sb.Append($"\t\t<path class=\"star\" fill=\"#F8D64E\" d=\"M {star.X - 7} {star.Y + 11} l 7 -23 l 7 23 l -19 -14 h 24 Z\" />\n");
@@ -185,6 +188,16 @@ namespace Chords.App.Models
             {
                 var p = horizontal ? (P(span, 20 + i * 40).X, 12) : (15, 23 + i * 40);
                 sb.Append($"\t\t<text x=\"{p.Item1}\" y=\"{p.Item2}\" text-anchor=\"{(horizontal ? "middle" : "end")}\" fill=\"{color}\" stroke=\"none\" font-size=\"12\">{capo + RenderingFret + i}</text>\n");
+            }
+            //a sideways diagram is strummed by dragging the pick across the strings, from beyond the end of the neck
+            //(dragging the diagram itself scrolls the page); the pick points at the strings above it
+            if (horizontal)
+            {
+                var pick = P(-14, neck + 25 + tuningRoom);
+                sb.Append($"\t\t<g class=\"strum-pick\" transform=\"translate({pick.X} {pick.Y})\"><g class=\"strum-pick-body\">\n");
+                sb.Append("\t\t\t<circle r=\"22\" fill=\"transparent\" />\n");
+                sb.Append("\t\t\t<path d=\"M 0 -11 C -3 -9 -8 -4 -10 2 C -11 6 -8 10 0 10 C 8 10 11 6 10 2 C 8 -4 3 -9 0 -11 Z\" fill=\"#e8833a\" stroke=\"#a4521a\" stroke-width=\"1\" />\n");
+                sb.Append("\t\t</g></g>\n");
             }
             sb.AppendLine("\t</svg>");
 

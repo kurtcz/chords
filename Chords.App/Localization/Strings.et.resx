@@ -26,6 +26,8 @@
   <data name="Chord_Invalid" xml:space="preserve"><value>{0} ei ole kehtiv akord</value></data>
   <data name="Tip" xml:space="preserve"><value>Vihje:</value></data>
   <data name="Tip_Play" xml:space="preserve"><value>Puuduta skeemi, et seda kuulata.</value></data>
+  <data name="Tip_Strum" xml:space="preserve"><value>Libista sõrmega üle diagrammi, et seda keel-keelelt mängida.</value></data>
+  <data name="Tip_StrumPick" xml:space="preserve"><value>Lohista mediaatorit diagrammi all, et seda keel-keelelt mängida.</value></data>
   <data name="Tip_Favorite" xml:space="preserve"><value>Hoia skeemi all, et lisada see lemmikutesse.</value></data>
   <data name="Favorites_Empty" xml:space="preserve"><value>Sul pole lemmikhaardeid.</value></data>
   <data name="Favorites_Hint" xml:space="preserve"><value>Hoia haaret all, et lisada see lemmikutesse.</value></data>
@@ -171,4 +173,22 @@
   <data name="Fretboard_WholeNeck" xml:space="preserve"><value>Kogu kael</value></data>
   <data name="Fretboard_Position" xml:space="preserve"><value>Krihvid {0}–{1}</value></data>
   <data name="Fretboard_ChordInScaleHint" xml:space="preserve"><value>Akordi {0} helid on tähistatud (1 on selle põhitoon); täpid on helilaadi {1} ülejäänud helid.</value></data>
+  <data name="Nav_About" xml:space="preserve"><value>Rakendusest</value></data>
+  <data name="About_Version" xml:space="preserve"><value>Versioon</value></data>
+  <data name="About_Rate" xml:space="preserve"><value>Hinda rakendust</value></data>
+  <data name="About_SoundCredit" xml:space="preserve"><value>Pillide helid</value></data>
+  <data name="About_SoundFont" xml:space="preserve"><value>helifont</value></data>
+  <data name="About_License" xml:space="preserve"><value>Litsents</value></data>
+  <data name="About_By" xml:space="preserve"><value>autor {0}</value></data>
+  <data name="About_PublicDomain" xml:space="preserve"><value>Avalik omand</value></data>
+  <data name="About_SoundChanges" xml:space="preserve"><value>Helinäidiseid on selle rakenduse jaoks kohandatud.</value></data>
+  <data name="Nav_Metronome" xml:space="preserve"><value>Metronoom</value></data>
+  <data name="Metronome_Start" xml:space="preserve"><value>Käivita</value></data>
+  <data name="Metronome_Stop" xml:space="preserve"><value>Peata</value></data>
+  <data name="Metronome_Tap" xml:space="preserve"><value>Koputa tempo</value></data>
+  <data name="Metronome_Beats" xml:space="preserve"><value>Lööke taktis</value></data>
+  <data name="Metronome_Subdivision" xml:space="preserve"><value>Jaotus</value></data>
+  <data name="Metronome_Accent" xml:space="preserve"><value>Rõhuta esimest lööki</value></data>
+  <data name="Metronome_Hint" xml:space="preserve"><value>Koputa „Koputa tempo“ muusika rütmis, et leida selle tempo. Akordijärgnevused mängivad selles tempos, üks akord takti kohta.</value></data>
+  <data name="Prog_Tempo" xml:space="preserve"><value>Tempo</value></data>
 </root>

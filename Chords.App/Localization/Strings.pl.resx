@@ -27,6 +27,8 @@
   <data name="Chord_Invalid" xml:space="preserve"><value>{0} nie jest poprawnym akordem</value></data>
   <data name="Tip" xml:space="preserve"><value>Wskazówka:</value></data>
   <data name="Tip_Play" xml:space="preserve"><value>Dotknij diagramu, aby go odsłuchać.</value></data>
+  <data name="Tip_Strum" xml:space="preserve"><value>Przesuń palcem w poprzek diagramu, aby zagrać go struna po strunie.</value></data>
+  <data name="Tip_StrumPick" xml:space="preserve"><value>Przeciągnij kostkę pod diagramem, aby zagrać go struna po strunie.</value></data>
   <data name="Tip_Favorite" xml:space="preserve"><value>Przytrzymaj diagram, aby dodać go do ulubionych.</value></data>
   <data name="Favorites_Empty" xml:space="preserve"><value>Nie masz ulubionych chwytów.</value></data>
   <data name="Favorites_Hint" xml:space="preserve"><value>Przytrzymaj chwyt, aby dodać go do ulubionych.</value></data>
@@ -172,4 +174,22 @@
   <data name="Fretboard_WholeNeck" xml:space="preserve"><value>Cały gryf</value></data>
   <data name="Fretboard_Position" xml:space="preserve"><value>Progi {0}–{1}</value></data>
   <data name="Fretboard_ChordInScaleHint" xml:space="preserve"><value>Opisane są dźwięki akordu {0} (1 to jego pryma); kropki to pozostałe dźwięki skali {1}.</value></data>
+  <data name="Nav_About" xml:space="preserve"><value>O aplikacji</value></data>
+  <data name="About_Version" xml:space="preserve"><value>Wersja</value></data>
+  <data name="About_Rate" xml:space="preserve"><value>Oceń aplikację</value></data>
+  <data name="About_SoundCredit" xml:space="preserve"><value>Dźwięki instrumentów</value></data>
+  <data name="About_SoundFont" xml:space="preserve"><value>soundfont</value></data>
+  <data name="About_License" xml:space="preserve"><value>Licencja</value></data>
+  <data name="About_By" xml:space="preserve"><value>autor {0}</value></data>
+  <data name="About_PublicDomain" xml:space="preserve"><value>Domena publiczna</value></data>
+  <data name="About_SoundChanges" xml:space="preserve"><value>Próbki dostosowane do tej aplikacji.</value></data>
+  <data name="Nav_Metronome" xml:space="preserve"><value>Metronom</value></data>
+  <data name="Metronome_Start" xml:space="preserve"><value>Start</value></data>
+  <data name="Metronome_Stop" xml:space="preserve"><value>Stop</value></data>
+  <data name="Metronome_Tap" xml:space="preserve"><value>Wystukaj tempo</value></data>
+  <data name="Metronome_Beats" xml:space="preserve"><value>Uderzeń w takcie</value></data>
+  <data name="Metronome_Subdivision" xml:space="preserve"><value>Podział</value></data>
+  <data name="Metronome_Accent" xml:space="preserve"><value>Akcentuj pierwsze uderzenie</value></data>
+  <data name="Metronome_Hint" xml:space="preserve"><value>Stukaj w „Wystukaj tempo” w rytm muzyki, aby poznać jej tempo. Progresje akordów grają w tym tempie, jeden akord na takt.</value></data>
+  <data name="Prog_Tempo" xml:space="preserve"><value>Tempo</value></data>
 </root>

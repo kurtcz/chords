@@ -26,6 +26,8 @@
   <data name="Chord_Invalid" xml:space="preserve"><value>{0} मान्य कॉर्ड नहीं है</value></data>
   <data name="Tip" xml:space="preserve"><value>सुझाव:</value></data>
   <data name="Tip_Play" xml:space="preserve"><value>सुनने के लिए किसी डायग्राम पर टैप करें।</value></data>
+  <data name="Tip_Strum" xml:space="preserve"><value>डायग्राम पर बगल में स्वाइप करके उसे एक-एक तार बजाएँ।</value></data>
+  <data name="Tip_StrumPick" xml:space="preserve"><value>डायग्राम के नीचे पिक खींचकर उसे एक-एक तार बजाएँ।</value></data>
   <data name="Tip_Favorite" xml:space="preserve"><value>पसंदीदा में जोड़ने के लिए डायग्राम को दबाकर रखें।</value></data>
   <data name="Favorites_Empty" xml:space="preserve"><value>आपके कोई पसंदीदा कॉर्ड आकार नहीं हैं।</value></data>
   <data name="Favorites_Hint" xml:space="preserve"><value>पसंदीदा में जोड़ने के लिए कॉर्ड आकार को दबाकर रखें।</value></data>
@@ -171,4 +173,22 @@
   <data name="Fretboard_WholeNeck" xml:space="preserve"><value>पूरी गर्दन</value></data>
   <data name="Fretboard_Position" xml:space="preserve"><value>फ़्रेट {0}–{1}</value></data>
   <data name="Fretboard_ChordInScaleHint" xml:space="preserve"><value>कॉर्ड {0} के स्वर लेबल किए गए हैं (1 उसका मूल स्वर है); बिंदु {1} स्केल के बाकी स्वर हैं।</value></data>
+  <data name="Nav_About" xml:space="preserve"><value>ऐप के बारे में</value></data>
+  <data name="About_Version" xml:space="preserve"><value>संस्करण</value></data>
+  <data name="About_Rate" xml:space="preserve"><value>ऐप को रेट करें</value></data>
+  <data name="About_SoundCredit" xml:space="preserve"><value>वाद्य यंत्रों की ध्वनियाँ</value></data>
+  <data name="About_SoundFont" xml:space="preserve"><value>साउंडफ़ॉन्ट</value></data>
+  <data name="About_License" xml:space="preserve"><value>लाइसेंस</value></data>
+  <data name="About_By" xml:space="preserve"><value>{0} द्वारा</value></data>
+  <data name="About_PublicDomain" xml:space="preserve"><value>सार्वजनिक डोमेन</value></data>
+  <data name="About_SoundChanges" xml:space="preserve"><value>नमूने इस ऐप के लिए अनुकूलित किए गए हैं।</value></data>
+  <data name="Nav_Metronome" xml:space="preserve"><value>मेट्रोनोम</value></data>
+  <data name="Metronome_Start" xml:space="preserve"><value>शुरू करें</value></data>
+  <data name="Metronome_Stop" xml:space="preserve"><value>रोकें</value></data>
+  <data name="Metronome_Tap" xml:space="preserve"><value>टेम्पो टैप करें</value></data>
+  <data name="Metronome_Beats" xml:space="preserve"><value>प्रति माप बीट</value></data>
+  <data name="Metronome_Subdivision" xml:space="preserve"><value>उपविभाजन</value></data>
+  <data name="Metronome_Accent" xml:space="preserve"><value>पहली बीट पर ज़ोर</value></data>
+  <data name="Metronome_Hint" xml:space="preserve"><value>संगीत की लय के साथ «टेम्पो टैप करें» पर टैप करके उसका टेम्पो जानें। कॉर्ड प्रोग्रेशन इसी टेम्पो पर, हर माप में एक कॉर्ड, बजते हैं।</value></data>
+  <data name="Prog_Tempo" xml:space="preserve"><value>टेम्पो</value></data>
 </root>

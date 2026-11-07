@@ -27,6 +27,8 @@
   <data name="Chord_Invalid" xml:space="preserve"><value>{0} nav derīgs akords</value></data>
   <data name="Tip" xml:space="preserve"><value>Padoms:</value></data>
   <data name="Tip_Play" xml:space="preserve"><value>Pieskarieties shēmai, lai to noklausītos.</value></data>
+  <data name="Tip_Strum" xml:space="preserve"><value>Pārvelciet ar pirkstu šķērsām pār diagrammu, lai to nospēlētu stīgu pa stīgai.</value></data>
+  <data name="Tip_StrumPick" xml:space="preserve"><value>Velciet mediatoru zem diagrammas, lai to nospēlētu stīgu pa stīgai.</value></data>
   <data name="Tip_Favorite" xml:space="preserve"><value>Turiet nospiestu shēmu, lai pievienotu to izlasei.</value></data>
   <data name="Favorites_Empty" xml:space="preserve"><value>Jums nav iecienītu tvērienu.</value></data>
   <data name="Favorites_Hint" xml:space="preserve"><value>Turiet nospiestu tvērienu, lai pievienotu to izlasei.</value></data>
@@ -172,4 +174,22 @@
   <data name="Fretboard_WholeNeck" xml:space="preserve"><value>Viss kakls</value></data>
   <data name="Fretboard_Position" xml:space="preserve"><value>Sliekšņi {0}–{1}</value></data>
   <data name="Fretboard_ChordInScaleHint" xml:space="preserve"><value>Akorda {0} skaņas ir apzīmētas (1 ir tā pamattonis); punkti ir pārējās skalas {1} skaņas.</value></data>
+  <data name="Nav_About" xml:space="preserve"><value>Par lietotni</value></data>
+  <data name="About_Version" xml:space="preserve"><value>Versija</value></data>
+  <data name="About_Rate" xml:space="preserve"><value>Novērtēt lietotni</value></data>
+  <data name="About_SoundCredit" xml:space="preserve"><value>Instrumentu skaņas</value></data>
+  <data name="About_SoundFont" xml:space="preserve"><value>skaņu fonts</value></data>
+  <data name="About_License" xml:space="preserve"><value>Licence</value></data>
+  <data name="About_By" xml:space="preserve"><value>autors {0}</value></data>
+  <data name="About_PublicDomain" xml:space="preserve"><value>Publiskais īpašums</value></data>
+  <data name="About_SoundChanges" xml:space="preserve"><value>Paraugi pielāgoti šai lietotnei.</value></data>
+  <data name="Nav_Metronome" xml:space="preserve"><value>Metronoms</value></data>
+  <data name="Metronome_Start" xml:space="preserve"><value>Sākt</value></data>
+  <data name="Metronome_Stop" xml:space="preserve"><value>Apturēt</value></data>
+  <data name="Metronome_Tap" xml:space="preserve"><value>Piesist tempu</value></data>
+  <data name="Metronome_Beats" xml:space="preserve"><value>Sitieni taktī</value></data>
+  <data name="Metronome_Subdivision" xml:space="preserve"><value>Dalījums</value></data>
+  <data name="Metronome_Accent" xml:space="preserve"><value>Uzsvērt pirmo sitienu</value></data>
+  <data name="Metronome_Hint" xml:space="preserve"><value>Piesitiet “Piesist tempu” mūzikas ritmā, lai noteiktu tās tempu. Akordu secības skan šajā tempā, viens akords taktī.</value></data>
+  <data name="Prog_Tempo" xml:space="preserve"><value>Temps</value></data>
 </root>

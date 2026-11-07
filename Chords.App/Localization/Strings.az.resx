@@ -26,6 +26,8 @@
   <data name="Chord_Invalid" xml:space="preserve"><value>{0} düzgün akkord deyil</value></data>
   <data name="Tip" xml:space="preserve"><value>Məsləhət:</value></data>
   <data name="Tip_Play" xml:space="preserve"><value>Dinləmək üçün sxemə toxunun.</value></data>
+  <data name="Tip_Strum" xml:space="preserve"><value>Diaqramı sim-sim çalmaq üçün barmağınızı onun üzərində yana sürüşdürün.</value></data>
+  <data name="Tip_StrumPick" xml:space="preserve"><value>Diaqramı sim-sim çalmaq üçün altındakı mediatoru sürüşdürün.</value></data>
   <data name="Tip_Favorite" xml:space="preserve"><value>Sevimlilərə əlavə etmək üçün sxemi basıb saxlayın.</value></data>
   <data name="Favorites_Empty" xml:space="preserve"><value>Sevimli düzülüşünüz yoxdur.</value></data>
   <data name="Favorites_Hint" xml:space="preserve"><value>Sevimlilərə əlavə etmək üçün düzülüşü basıb saxlayın.</value></data>
@@ -171,4 +173,22 @@
   <data name="Fretboard_WholeNeck" xml:space="preserve"><value>Bütün qol</value></data>
   <data name="Fretboard_Position" xml:space="preserve"><value>{0}–{1} pərdələr</value></data>
   <data name="Fretboard_ChordInScaleHint" xml:space="preserve"><value>{0} akkordunun notları işarələnib (1 onun əsas tonudur); nöqtələr {1} qammasının digər notlarıdır.</value></data>
+  <data name="Nav_About" xml:space="preserve"><value>Tətbiq haqqında</value></data>
+  <data name="About_Version" xml:space="preserve"><value>Versiya</value></data>
+  <data name="About_Rate" xml:space="preserve"><value>Tətbiqi qiymətləndir</value></data>
+  <data name="About_SoundCredit" xml:space="preserve"><value>Alət səsləri</value></data>
+  <data name="About_SoundFont" xml:space="preserve"><value>səs bankı</value></data>
+  <data name="About_License" xml:space="preserve"><value>Lisenziya</value></data>
+  <data name="About_By" xml:space="preserve"><value>müəllif: {0}</value></data>
+  <data name="About_PublicDomain" xml:space="preserve"><value>İctimai mülkiyyət</value></data>
+  <data name="About_SoundChanges" xml:space="preserve"><value>Nümunələr bu tətbiq üçün uyğunlaşdırılıb.</value></data>
+  <data name="Nav_Metronome" xml:space="preserve"><value>Metronom</value></data>
+  <data name="Metronome_Start" xml:space="preserve"><value>Başla</value></data>
+  <data name="Metronome_Stop" xml:space="preserve"><value>Dayandır</value></data>
+  <data name="Metronome_Tap" xml:space="preserve"><value>Tempo vur</value></data>
+  <data name="Metronome_Beats" xml:space="preserve"><value>Taktda zərbə</value></data>
+  <data name="Metronome_Subdivision" xml:space="preserve"><value>Bölmə</value></data>
+  <data name="Metronome_Accent" xml:space="preserve"><value>Birinci zərbəni vurğula</value></data>
+  <data name="Metronome_Hint" xml:space="preserve"><value>Tempini tapmaq üçün musiqinin ritmində “Tempo vur” düyməsinə toxunun. Akkord ardıcıllıqları bu tempdə, hər takta bir akkord çalınır.</value></data>
+  <data name="Prog_Tempo" xml:space="preserve"><value>Temp</value></data>
 </root>

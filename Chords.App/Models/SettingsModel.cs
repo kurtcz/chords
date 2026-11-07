@@ -33,6 +33,16 @@ namespace Chords.App.Models
         public int TunerA4 { get; set; } = 440;
         /// <summary>The tuner shows the nearest semitone instead of the nearest string of the instrument.</summary>
         public bool TunerChromatic { get; set; }
+        /// <summary>Tempo of the metronome and of the chord progressions played to it (beats per minute).</summary>
+        public int MetronomeBpm { get; set; } = 100;
+        /// <summary>Beats in a bar; a progression plays one chord per bar.</summary>
+        public int MetronomeBeats { get; set; } = 4;
+        /// <summary>Clicks per beat: 1 quarter notes, 2 eighths, 3 triplets, 4 sixteenths.</summary>
+        public int MetronomeSubdivision { get; set; } = 1;
+        /// <summary>The first beat of a bar clicks higher.</summary>
+        public bool MetronomeAccent { get; set; } = true;
+        /// <summary>A progression plays with the metronome's clicks (after a bar counted in).</summary>
+        public bool ProgressionClick { get; set; } = true;
         /// <summary>UI language (a code from Localizer.Languages); null follows the device language.</summary>
         public string Language { get; set; }
         /// <summary>Light or dark colours, or those of the device.</summary>

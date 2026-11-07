@@ -29,6 +29,8 @@
   <data name="Chord_Invalid" xml:space="preserve"><value>Ní corda bailí é {0}</value></data>
   <data name="Tip" xml:space="preserve"><value>Leid:</value></data>
   <data name="Tip_Play" xml:space="preserve"><value>Tapáil léaráid chun éisteacht léi.</value></data>
+  <data name="Tip_Strum" xml:space="preserve"><value>Svaidhpeáil trasna léaráide chun í a sheinm téad ar théad.</value></data>
+  <data name="Tip_StrumPick" xml:space="preserve"><value>Tarraing an plectrum faoi léaráid chun í a sheinm téad ar théad.</value></data>
   <data name="Tip_Favorite" xml:space="preserve"><value>Coinnigh do mhéar ar léaráid chun í a chur le ceanáin.</value></data>
   <data name="Favorites_Empty" xml:space="preserve"><value>Níl aon ghreim ceanán agat.</value></data>
   <data name="Favorites_Hint" xml:space="preserve"><value>Coinnigh do mhéar ar ghreim chun é a chur le ceanáin.</value></data>
@@ -174,4 +176,22 @@
   <data name="Fretboard_WholeNeck" xml:space="preserve"><value>An muineál ar fad</value></data>
   <data name="Fretboard_Position" xml:space="preserve"><value>Fretanna {0}–{1}</value></data>
   <data name="Fretboard_ChordInScaleHint" xml:space="preserve"><value>Tá lipéad ar nótaí an chorda {0} (is é 1 a fhréamh); is iad na poncanna nótaí eile an scála {1}.</value></data>
+  <data name="Nav_About" xml:space="preserve"><value>Faoin aip</value></data>
+  <data name="About_Version" xml:space="preserve"><value>Leagan</value></data>
+  <data name="About_Rate" xml:space="preserve"><value>Rátáil an aip</value></data>
+  <data name="About_SoundCredit" xml:space="preserve"><value>Fuaimeanna na n-uirlisí</value></data>
+  <data name="About_SoundFont" xml:space="preserve"><value>cló fuaime</value></data>
+  <data name="About_License" xml:space="preserve"><value>Ceadúnas</value></data>
+  <data name="About_By" xml:space="preserve"><value>le {0}</value></data>
+  <data name="About_PublicDomain" xml:space="preserve"><value>Fearann poiblí</value></data>
+  <data name="About_SoundChanges" xml:space="preserve"><value>Samplaí curtha in oiriúint don aip seo.</value></data>
+  <data name="Nav_Metronome" xml:space="preserve"><value>Méadrónóm</value></data>
+  <data name="Metronome_Start" xml:space="preserve"><value>Tosaigh</value></data>
+  <data name="Metronome_Stop" xml:space="preserve"><value>Stop</value></data>
+  <data name="Metronome_Tap" xml:space="preserve"><value>Tapáil an luas</value></data>
+  <data name="Metronome_Beats" xml:space="preserve"><value>Buillí sa bharra</value></data>
+  <data name="Metronome_Subdivision" xml:space="preserve"><value>Foroinnt</value></data>
+  <data name="Metronome_Accent" xml:space="preserve"><value>Cuir béim ar an gcéad bhuille</value></data>
+  <data name="Metronome_Hint" xml:space="preserve"><value>Tapáil “Tapáil an luas” in am leis an gceol chun a luas a aimsiú. Seinntear seichimh chordaí ag an luas seo, corda amháin sa bharra.</value></data>
+  <data name="Prog_Tempo" xml:space="preserve"><value>Luas</value></data>
 </root>
