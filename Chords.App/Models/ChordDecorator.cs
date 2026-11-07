@@ -15,19 +15,23 @@ namespace Chords.App.Models
 		public string[] Intervals => _chord.Intervals
 										   .Select(i => i.ToDescription())
 										   .ToArray();
-		public string[] Notes => _chord.Notes
+		/// <summary>Notes from the lowest: a slash chord starts with its bass (E G C for C/E).</summary>
+		public string[] Notes => _chord.NotesFromBass
 									   .Select(i => i.ToString(_namingConvention))
 									   .ToArray();
+		/// <summary>Chord symbols, the usual one first; a slash chord ends with its bass (D/F♯).</summary>
 		public string[] Symbols
 		{
 			get
 			{
+				var root = _chord.Root.ToString(_namingConvention);
+				var bass = _chord.Bass == null ? null : "/" + _chord.Bass.ToString(_namingConvention);
 				var symbols = _chord.ChordType.GetDescriptions()
-									.Select(i => string.Format("{0}{1}", _chord.Notes[0].ToString(_namingConvention), i))
+									.Select(i => root + i + bass)
 									.ToArray();
 				if (symbols.Length == 0)
 				{
-					symbols = new[] { _chord.Notes[0].ToString(_namingConvention) };
+					symbols = new[] { root + bass };
 				}
 
 				return symbols;
@@ -40,11 +44,17 @@ namespace Chords.App.Models
 			_namingConvention = namingConvention;
 		}
 
-		/// <summary>Fingerings from the easiest, each difficulty level ordered up the neck.</summary>
+		/// <summary>Fingerings up the neck from the nut, at the same fret the easiest first.</summary>
 		/// <param name="easyOnly">Only easy fingerings; when the chord has none, the easiest level it has.</param>
-		public GuitarChordLayoutDecorator[] GenerateLayouts(InstrumentInfo instrument, bool allowBarre, bool allowSpecial, bool allowPartial, int maxFret, bool easyOnly)
+		/// <param name="rootBassOnly">Only fingerings with the root lowest, without inversions (C/E, C/G).</param>
+		public GuitarChordLayoutDecorator[] GenerateLayouts(InstrumentInfo instrument, bool allowBarre, bool allowSpecial, bool allowPartial, int maxFret, bool easyOnly, bool rootBassOnly = false)
 		{
 			var layouts = GuitarChordLayout.Generate(_chord, instrument, allowBarre, allowSpecial, allowPartial, maxFret).ToArray();
+
+			if (rootBassOnly)
+			{
+				layouts = layouts.Where(i => !i.OtherBass).ToArray();
+			}
 
 			if (easyOnly && layouts.Length > 0)
 			{
@@ -54,10 +64,9 @@ namespace Chords.App.Models
 
 			return layouts.OrderBy(i => i.GuitarChordType)
 						  .Select(i => new GuitarChordLayoutDecorator(i, _namingConvention))
-						  .OrderBy(i => i.Layout.DifficultyLevel)
-						  .ThenBy(i => i.RenderingFret)
+						  .OrderBy(i => i.RenderingFret)
+						  .ThenBy(i => i.Layout.DifficultyLevel)
 						  .ThenBy(i => i.Complete ? 0 : 1)
-						  .ThenBy(i => (i.Notes[0] == _chord.Root ? 0 : 1))
 						  .ToArray();
 		}
 	}

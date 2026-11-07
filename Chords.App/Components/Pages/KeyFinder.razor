@@ -270,7 +270,7 @@ else
 
     private string TypeName(ChordType type) => type == ChordType.Major ? L["ChordType_Major"] : type.ToDescription();
 
-    private static string ChordUrl(Chord chord) => ChordPage.Url(chord.Root, chord.ChordType.ToDescription(), true);
+    private static string ChordUrl(Chord chord) => ChordPage.Url(chord, true);
 
     private void Add()
     {

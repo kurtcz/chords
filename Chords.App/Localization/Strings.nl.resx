@@ -97,6 +97,10 @@
   <data name="Key_Sevenths" xml:space="preserve"><value>Septiemakkoorden</value></data>
   <data name="Pick_Root" xml:space="preserve"><value>Grondtoon</value></data>
   <data name="Pick_ChordType" xml:space="preserve"><value>Akkoordtype</value></data>
+  <data name="Pick_Bass" xml:space="preserve"><value>Bastoon</value></data>
+  <data name="Bass_Any" xml:space="preserve"><value>Willekeurig</value></data>
+  <data name="Bass_Root" xml:space="preserve"><value>Gelijk aan grondtoon</value></data>
+  <data name="Layout_Inversion" xml:space="preserve"><value>Omkering – de laagste toon is niet de grondtoon</value></data>
   <data name="Pick_Tonic" xml:space="preserve"><value>Tonica</value></data>
   <data name="Pick_Scale" xml:space="preserve"><value>Toonladder</value></data>
   <data name="Key_Add" xml:space="preserve"><value>Akkoord toevoegen</value></data>

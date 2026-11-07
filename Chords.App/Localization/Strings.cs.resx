@@ -98,6 +98,10 @@
   <data name="Key_Sevenths" xml:space="preserve"><value>Septakordy</value></data>
   <data name="Pick_Root" xml:space="preserve"><value>Základní tón</value></data>
   <data name="Pick_ChordType" xml:space="preserve"><value>Typ akordu</value></data>
+  <data name="Pick_Bass" xml:space="preserve"><value>Basový tón</value></data>
+  <data name="Bass_Any" xml:space="preserve"><value>Libovolný</value></data>
+  <data name="Bass_Root" xml:space="preserve"><value>Stejný jako základní</value></data>
+  <data name="Layout_Inversion" xml:space="preserve"><value>Obrat – nejnižší tón není základní</value></data>
   <data name="Pick_Tonic" xml:space="preserve"><value>Tónika</value></data>
   <data name="Pick_Scale" xml:space="preserve"><value>Stupnice</value></data>
   <data name="Key_Add" xml:space="preserve"><value>Přidat akord</value></data>

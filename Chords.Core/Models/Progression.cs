@@ -22,6 +22,9 @@ namespace Chords.Core.Models
     /// A numeral is the diatonic chord of its degree unless it says otherwise: a ♭/♯ prefix moves the root,
     /// upper/lower case asks for a major/minor chord and a suffix sets the type
     /// (7 = dominant or minor seventh, maj7, ø7 = half-diminished, ° = diminished).
+    /// A slash and an Arabic scale degree put another note in the bass, the way a walking bass line is written:
+    /// V/7 is the dominant over the seventh degree (G/B in C major), vi/5 the sixth chord over the fifth (Am/G).
+    /// The degree may be altered with ♭/♯ like the numeral.
     /// </remarks>
     public class Progression
     {
@@ -67,6 +70,8 @@ namespace Chords.Core.Models
             new Progression(ProgressionStyle.Pop, true, "I vi IV V"),
             new Progression(ProgressionStyle.Pop, true, "vi IV I V"),
             new Progression(ProgressionStyle.Pop, true, "IV V iii vi"),
+            new Progression(ProgressionStyle.Pop, true, "I V/7 vi IV"),
+            new Progression(ProgressionStyle.Pop, true, "I V/7 vi vi/5 IV I/3 ii V"),
             new Progression(ProgressionStyle.Rock, true, "I IV V IV"),
             new Progression(ProgressionStyle.Rock, true, "I bVII IV I"),
             new Progression(ProgressionStyle.Jazz, true, "ii7 V7 Imaj7"),
@@ -74,7 +79,9 @@ namespace Chords.Core.Models
             new Progression(ProgressionStyle.Blues, true, "I7 I7 I7 I7 IV7 IV7 I7 I7 V7 IV7 I7 V7"),
             new Progression(ProgressionStyle.Classical, true, "I V vi iii IV I IV V"),
             new Progression(ProgressionStyle.Classical, true, "I IV V I"),
+            new Progression(ProgressionStyle.Classical, true, "I V/7 vi iii/5 IV I/3 IV V"),
             new Progression(ProgressionStyle.Pop, false, "i VI III VII"),
+            new Progression(ProgressionStyle.Pop, false, "i i/7 VI V"),
             new Progression(ProgressionStyle.Rock, false, "i VII VI VII"),
             new Progression(ProgressionStyle.Classical, false, "i iv V i"),
             new Progression(ProgressionStyle.Flamenco, false, "i VII VI V"),
@@ -114,6 +121,15 @@ namespace Chords.Core.Models
         /// <summary>The chord a numeral stands for in a key.</summary>
         public static DegreeChord Resolve(Key key, string numeral, bool sevenths, ScaleType? reference = null)
         {
+            var slash = numeral.IndexOf('/');
+
+            if (slash > 0)
+            {
+                var upper = Resolve(key, numeral.Substring(0, slash), sevenths, reference);
+                var bass = numeral.Substring(slash + 1);
+
+                return new DegreeChord(upper.Degree, upper.Chord.WithBass(BassNote(key, bass, reference)), upper.Numeral + "/" + bass);
+            }
             var rest = numeral;
             var alteration = 0;
 
@@ -150,6 +166,25 @@ namespace Chords.Core.Models
             }
 
             return key.ChordOn(degree, alteration, type, sevenths, reference);
+        }
+
+        /// <summary>The note on a scale degree written with an Arabic numeral, optionally altered (♭7).</summary>
+        private static Note BassNote(Key key, string degree, ScaleType? reference)
+        {
+            var alteration = 0;
+            var rest = degree;
+
+            while (rest.Length > 0 && (rest[0] == 'b' || rest[0] == '♭' || rest[0] == '#' || rest[0] == '♯'))
+            {
+                alteration += rest[0] == 'b' || rest[0] == '♭' ? -1 : 1;
+                rest = rest.Substring(1);
+            }
+            var number = int.Parse(rest);
+            var note = reference != null ? new Scale(key.Tonic, reference.Value).Notes[(number - 1) % 7] : key.NoteOf(number);
+
+            return alteration == 0
+                ? note
+                : new Note(note.Tone, (Accidental)Math.Max(-2, Math.Min(2, (int)note.Accidental + alteration)));
         }
 
         /// <summary>Where each degree of a major key usually moves (functional harmony), with weights.</summary>

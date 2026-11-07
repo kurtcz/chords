@@ -96,6 +96,10 @@
   <data name="Key_Sevenths" xml:space="preserve"><value>セブンスコード</value></data>
   <data name="Pick_Root" xml:space="preserve"><value>ルート</value></data>
   <data name="Pick_ChordType" xml:space="preserve"><value>コードの種類</value></data>
+  <data name="Pick_Bass" xml:space="preserve"><value>ベース音</value></data>
+  <data name="Bass_Any" xml:space="preserve"><value>指定なし</value></data>
+  <data name="Bass_Root" xml:space="preserve"><value>ルートと同じ</value></data>
+  <data name="Layout_Inversion" xml:space="preserve"><value>転回形 – 最低音がルートではありません</value></data>
   <data name="Pick_Tonic" xml:space="preserve"><value>主音</value></data>
   <data name="Pick_Scale" xml:space="preserve"><value>スケール</value></data>
   <data name="Key_Add" xml:space="preserve"><value>コードを追加</value></data>

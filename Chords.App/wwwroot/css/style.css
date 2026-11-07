@@ -1628,6 +1628,19 @@ h1.navbar-brand {
     color: #c62828;
 }
 
+/* The slash chord a fingering sounds as when its lowest note is not the root (C/E among the fingerings of C) */
+.chord-layout .inversion {
+    margin-top: 2px;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    color: #5e35b1;
+}
+
+.theme-dark .chord-layout .inversion {
+    color: #b39ddb;
+}
+
 /* A line under a section heading saying what the section shows */
 .section-hint {
     margin: -4px 0 10px;

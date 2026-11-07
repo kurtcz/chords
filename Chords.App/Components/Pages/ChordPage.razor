@@ -11,9 +11,11 @@
         {
             var other = allRoots[i];
             var otherType = allTypes[i];
-            @if (Note.TryParse(other, NamingConvention.English, out var otherRoot))
+            Note otherBass = null;
+            @if (Note.TryParse(other, NamingConvention.English, out var otherRoot) &&
+                 (i >= allBasses.Length || allBasses[i].Length == 0 || Note.TryParse(allBasses[i], NamingConvention.English, out otherBass)))
             {
-                <a href="@Url(otherRoot, otherType, Partial, Roots, Types)">@otherRoot.ToString(conv)@otherType</a>
+                <a href="@Url(otherRoot, otherType, Partial, Roots, Types, otherBass, Basses)">@otherRoot.ToString(conv)@otherType@(otherBass == null ? null : "/" + otherBass.ToString(conv))</a>
                 @(" ")
             }
         }
@@ -88,6 +90,12 @@
     [SupplyParameterFromQuery(Name = "partial")] public bool Partial { get; set; }
     [SupplyParameterFromQuery(Name = "roots")] public string Roots { get; set; }
     [SupplyParameterFromQuery(Name = "types")] public string Types { get; set; }
+    /// <summary>Bass of a slash chord (D/F♯), empty for root position.</summary>
+    [SupplyParameterFromQuery(Name = "bass")] public string Bass { get; set; }
+    /// <summary>Only fingerings with the root lowest (no inversions); without it and without a bass any bass goes.</summary>
+    [SupplyParameterFromQuery(Name = "rootbass")] public bool RootBass { get; set; }
+    /// <summary>Basses of the chords listed in <see cref="Roots"/>, empty for root position.</summary>
+    [SupplyParameterFromQuery(Name = "basses")] public string Basses { get; set; }
 
     private NamingConvention conv;
     private Chord chord;
@@ -97,18 +105,47 @@
     private bool tipClosed;
     private string[] allRoots = [];
     private string[] allTypes = [];
+    private string[] allBasses = [];
 
-    /// <summary>Chord roots and types are passed in English naming convention.</summary>
-    public static string Url(Note root, string type, bool partial, string roots = null, string types = null)
+    /// <summary>Chord roots, types and basses are passed in English naming convention.</summary>
+    /// <param name="rootBass">Only fingerings with the root lowest (ignored for a slash chord).</param>
+    public static string Url(Note root, string type, bool partial, string roots = null, string types = null, Note bass = null, string basses = null, bool rootBass = false)
     {
         var url = $"chord?root={Uri.EscapeDataString(root.ToString())}&type={Uri.EscapeDataString(type ?? string.Empty)}&partial={partial}";
 
+        if (bass != null)
+        {
+            url += $"&bass={Uri.EscapeDataString(bass.ToString())}";
+        }
+        else if (rootBass)
+        {
+            url += "&rootbass=true";
+        }
         if (!string.IsNullOrEmpty(roots))
         {
             url += $"&roots={Uri.EscapeDataString(roots)}&types={Uri.EscapeDataString(types ?? string.Empty)}";
+            if (!string.IsNullOrEmpty(basses?.Replace(",", "")))
+            {
+                url += $"&basses={Uri.EscapeDataString(basses)}";
+            }
         }
 
         return url;
+    }
+
+    /// <summary>Page of a chord (with its bass when it is a slash chord), listing the other chords found with it.</summary>
+    public static string Url(Chord chord, bool partial, IReadOnlyList<Chord> found = null)
+    {
+        string roots = null, types = null, basses = null;
+
+        if (found != null && found.Count > 1)
+        {
+            roots = string.Join(",", found.Select(i => i.Root.ToString()));
+            types = string.Join(",", found.Select(i => i.ChordType.ToDescription()));
+            basses = string.Join(",", found.Select(i => i.Bass?.ToString() ?? string.Empty));
+        }
+
+        return Url(chord.Root, chord.ChordType.ToDescription(), partial, roots, types, chord.Bass, basses);
     }
 
     protected override async Task OnParametersSetAsync()
@@ -119,22 +156,29 @@
         conv = settings.conv;
         allRoots = Roots?.Split(',') ?? [];
         allTypes = Types?.Split(',') ?? [];
+        allBasses = Basses?.Split(',') ?? [];
         decorator = null;
         layouts = null;
         error = null;
 
-        if (!Chord.TryParse(id, NamingConvention.English, out chord))
+        Note bass = null;
+        if (!Chord.TryParse(id, NamingConvention.English, out chord) ||
+            (!string.IsNullOrEmpty(Bass) && !Note.TryParse(Bass, NamingConvention.English, out bass)))
         {
-            error = L["Chord_Invalid", id];
+            error = L["Chord_Invalid", string.IsNullOrEmpty(Bass) ? id : $"{id}/{Bass}"];
             return;
         }
+        chord = chord.WithBass(bass);
         State.CurrentRoot = chord.Root;
         State.CurrentChordType = chord.ChordType;
+        State.CurrentBass = chord.Bass;
+        State.CurrentRootBass = chord.Bass == null && RootBass;
         decorator = new ChordDecorator(chord, conv);
 
         var current = decorator;
         var result = await Task.Run(() => current
-            .GenerateLayouts(settings.InstrumentInfo, settings.AllowBarre, settings.AllowSpecial, Partial, settings.maxFret, settings.EasyOnly)
+            .GenerateLayouts(settings.InstrumentInfo, settings.AllowBarre, settings.AllowSpecial, Partial, settings.maxFret, settings.EasyOnly,
+                             chord.Bass == null && RootBass)
             .OrderBy(i => i.Favorite ? 0 : 1)
             .ToArray());
 

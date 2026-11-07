@@ -97,6 +97,10 @@
   <data name="Key_Sevenths" xml:space="preserve"><value>Սեպտակորդներ</value></data>
   <data name="Pick_Root" xml:space="preserve"><value>Հիմնական տոն</value></data>
   <data name="Pick_ChordType" xml:space="preserve"><value>Ակորդի տեսակ</value></data>
+  <data name="Pick_Bass" xml:space="preserve"><value>Բասի նոտա</value></data>
+  <data name="Bass_Any" xml:space="preserve"><value>Ցանկացած</value></data>
+  <data name="Bass_Root" xml:space="preserve"><value>Նույնը, ինչ հիմնական տոնը</value></data>
+  <data name="Layout_Inversion" xml:space="preserve"><value>Շրջում – ամենացածր նոտան հիմնական տոնը չէ</value></data>
   <data name="Pick_Tonic" xml:space="preserve"><value>Տոնիկա</value></data>
   <data name="Pick_Scale" xml:space="preserve"><value>Գամմա</value></data>
   <data name="Key_Add" xml:space="preserve"><value>Ավելացնել ակորդ</value></data>

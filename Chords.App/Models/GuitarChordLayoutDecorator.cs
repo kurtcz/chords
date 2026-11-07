@@ -23,6 +23,8 @@ namespace Chords.App.Models
 		public int RenderingFret { get; }
         public GuitarChordLayout Layout => _layout;
         public bool Favorite => Favorites.Contains(_layout.Chord, _layout);
+        /// <summary>The chord the fingering sounds as with its lowest note, e.g. C/E.</summary>
+        public string SlashSymbol => new ChordDecorator(_layout.Chord.WithBass(_layout.Bass), _namingConvention).Symbols[0];
 
 		public GuitarChordLayoutDecorator(GuitarChordLayout layout, NamingConvention namingConvention = NamingConvention.English)
 		{

@@ -98,6 +98,10 @@
   <data name="Key_Sevenths" xml:space="preserve"><value>אקורדי ספטים</value></data>
   <data name="Pick_Root" xml:space="preserve"><value>צליל יסוד</value></data>
   <data name="Pick_ChordType" xml:space="preserve"><value>סוג אקורד</value></data>
+  <data name="Pick_Bass" xml:space="preserve"><value>צליל הבס</value></data>
+  <data name="Bass_Any" xml:space="preserve"><value>כלשהו</value></data>
+  <data name="Bass_Root" xml:space="preserve"><value>כמו הצליל היסודי</value></data>
+  <data name="Layout_Inversion" xml:space="preserve"><value>היפוך – הצליל הנמוך ביותר אינו הצליל היסודי</value></data>
   <data name="Pick_Tonic" xml:space="preserve"><value>טוניקה</value></data>
   <data name="Pick_Scale" xml:space="preserve"><value>סולם</value></data>
   <data name="Key_Add" xml:space="preserve"><value>הוספת אקורד</value></data>

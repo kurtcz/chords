@@ -9,6 +9,11 @@
     @Layout.RenderSchema(State.Settings.Horizontal, State.Settings.Horizontal && State.Settings.LeftHanded)
     @{ var level = Layout.Layout.DifficultyLevel; }
     <div class="difficulty difficulty-@level.ToString().ToLowerInvariant()">@L[$"Difficulty_{level}"]</div>
+    @* A fingering whose lowest note is not the root sounds as an inversion: it is named as the slash chord it is. *@
+    @if (Layout.Layout.OtherBass)
+    {
+        <div class="inversion" title="@L["Layout_Inversion"]">@Layout.SlashSymbol</div>
+    }
 </div>
 
 @code {

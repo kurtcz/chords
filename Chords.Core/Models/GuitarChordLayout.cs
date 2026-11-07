@@ -34,6 +34,18 @@ namespace Chords.Core.Models
         public Note[] Notes { get; private set; }
         [JsonIgnore]
         public bool Complete { get; private set; }
+        /// <summary>
+        /// Note of the lowest sounding pitch – not always the lowest string: the ukulele is tuned re-entrant.
+        /// Null when no string sounds.
+        /// </summary>
+        [JsonIgnore]
+        public Note Bass { get; private set; }
+        /// <summary>
+        /// Whether the lowest note is not the one the chord asks for (its root, or the bass of a slash chord):
+        /// the fingering then sounds as an inversion, e.g. C/E among the fingerings of C.
+        /// </summary>
+        [JsonIgnore]
+        public bool OtherBass => Bass != null && Note.Normalize(Bass) != Note.Normalize(Chord.LowestNote);
         /// <summary>How hard the fingering is for the fretting hand: 0 for open strings, higher is harder.</summary>
         /// <remarks>See <see cref="ComputeDifficulty"/>; <see cref="DifficultyLevel"/> groups it for filtering and sorting.</remarks>
         [JsonIgnore]
@@ -114,7 +126,8 @@ namespace Chords.Core.Models
                     }
                 }
             }
-			Complete = Notes.Distinct().Count() == Chord.Notes.Count();
+			Bass = GetBass();
+			Complete = Chord.Notes.All(i => Notes.Contains(i));
 			Fret = Positions.Any(i => i > 0)
 					? Positions.Where(i => i > 0).Min()
 					: 0;
@@ -141,6 +154,10 @@ namespace Chords.Core.Models
             var stringNotes = StringNotes(info);
             var results = new ConcurrentBag<GuitarChordLayout>();
             var positionsPerString = new HashSet<int>[info.StringCount];
+            //a slash chord's bass outside the chord (D/C) may sound on any string, the lowest one is checked below
+            var allowed = chord.Bass == null || chord.BassInChord
+                ? chord.NormalizedNotes
+                : chord.NormalizedNotes.Concat(new[] { Note.Normalize(chord.Bass) }).ToArray();
 
             //for each string find all positions corresponding to notes from the given chord
             for (var s = 0; s < info.StringCount; s++)
@@ -148,7 +165,7 @@ namespace Chords.Core.Models
                 positionsPerString[s] = new HashSet<int>();
                 //a short string (banjo's drone) may be muted unless it can ring open
                 if (info.AllowMutedStrings ||
-                    (info.IsShortString(s) && !chord.Notes.Any(i => Note.Normalize(i) == stringNotes[s][0])))
+                    (info.IsShortString(s) && !allowed.Contains(stringNotes[s][0])))
                 {
                     positionsPerString[s].Add(X);
                 }
@@ -156,7 +173,7 @@ namespace Chords.Core.Models
                 for (var pos = 0; pos <= maxFret + info.MaxFretSpan - 1 && pos + info.Capo <= MaxPosition; pos++)
                 {
                     if (info.CanFret(s, pos) &&
-                        chord.Notes.Any(i => Note.Normalize(i) == stringNotes[s][pos]))
+                        allowed.Contains(stringNotes[s][pos]))
                     {
                         positionsPerString[s].Add(pos);
                     }
@@ -187,7 +204,8 @@ namespace Chords.Core.Models
                 {
                     var result = new GuitarChordLayout(chord, layout, guitarChordType, info);
                     var b = result.IsValid(allowPartial) &&
-                            result.Fret <= maxFret;
+                            result.Fret <= maxFret &&
+                            result.HasRequiredBass();
                     if (b)
                     {
                         results.Add(result);
@@ -240,10 +258,46 @@ namespace Chords.Core.Models
             }
 		}
 
+        /// <summary>
+        /// A slash chord sounds its bass lowest, and a bass outside the chord (the C of D/C) sounds only there;
+        /// any fingering suits a chord in root position.
+        /// </summary>
+        private bool HasRequiredBass()
+        {
+            if (Chord.Bass == null)
+            {
+                return true;
+            }
+            var bass = Note.Normalize(Chord.Bass);
+
+            return Bass != null && Note.Normalize(Bass) == bass &&
+                   (Chord.BassInChord || Notes.Count(i => Note.Normalize(i) == bass) == 1);
+        }
+
+        private Note GetBass()
+        {
+            var info = InstrumentInfo;
+            var lowest = Enumerable.Range(0, Positions.Length)
+                                   .Where(s => Positions[s] != X)
+                                   .OrderBy(s => info.Pitches[s] + info.Semitones(s, Positions[s]))
+                                   .Select(s => (int?)s)
+                                   .FirstOrDefault();
+            if (lowest == null)
+            {
+                return null;
+            }
+            var note = StringNotes(info)[lowest.Value][Positions[lowest.Value]];
+
+            //spelled the way the chord spells it
+            return Chord.Notes.Concat(Chord.Bass == null ? Enumerable.Empty<Note>() : new[] { Chord.Bass })
+                              .FirstOrDefault(i => Note.Normalize(i) == note) ?? note;
+        }
+
         private Note[] GetUsedNotes()
         {
             var stringNotes = StringNotes(InstrumentInfo);
             var notesUsed = new List<Note>(Positions.Length);
+            var bass = Chord.Bass != null && !Chord.BassInChord ? Note.Normalize(Chord.Bass) : null;
 
 			for (var s = 0; s < Positions.Length; s++)
 			{
@@ -257,6 +311,10 @@ namespace Chords.Core.Models
                 if (noteIndex >= 0)
 				{
 					notesUsed.Add(Chord.Notes[noteIndex]);
+				}
+				else if (note == bass)
+				{
+					notesUsed.Add(Chord.Bass);
 				}
 			}
 

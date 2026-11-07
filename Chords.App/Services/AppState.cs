@@ -69,6 +69,10 @@ public class AppState
     /// <summary>Chord last shown on the chord page; preselected when returning to "Show chord chart".</summary>
     public Note CurrentRoot { get; set; }
     public ChordType CurrentChordType { get; set; }
+    /// <summary>Bass of the slash chord last shown, null for root position.</summary>
+    public Note CurrentBass { get; set; }
+    /// <summary>Only fingerings with the root lowest; otherwise (and without <see cref="CurrentBass"/>) any bass.</summary>
+    public bool CurrentRootBass { get; set; }
 
     /// <summary>Strict mode on the "Find chord name" page.</summary>
     public bool StrictFind { get; set; }

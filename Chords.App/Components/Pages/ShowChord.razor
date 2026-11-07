@@ -23,6 +23,18 @@
             }
         </ChildContent>
     </SettingSelect>
+    @* Any bass shows inversions too (marked C/E, C/G); the root or another note (D/F♯, C/G) asks for fingerings with it lowest. *@
+    <SettingSelect Label="@L["Pick_Bass"]">
+        <Value>@BassName()</Value>
+        <ChildContent>
+            <li><a @onclick="() => { bass = null; rootBass = false; }">@L["Bass_Any"]</a></li>
+            <li><a @onclick="() => { bass = null; rootBass = true; }">@L["Bass_Root"]</a></li>
+            @foreach (var note in model.Notes)
+            {
+                <li><a @onclick="() => { bass = note; rootBass = false; }">@note.ToString(conv)</a></li>
+            }
+        </ChildContent>
+    </SettingSelect>
     <SettingRow Label="@L["ShowChord_Partial"]">
         <Toggle @bind-Value="partial" />
     </SettingRow>
@@ -36,6 +48,8 @@
     private NamingConvention conv;
     private Note root;
     private string typeValue;
+    private Note bass;
+    private bool rootBass;
     private bool partial = true;
 
     protected override void OnInitialized()
@@ -43,10 +57,20 @@
         conv = State.Settings.conv;
         root = State.CurrentRoot ?? model.Notes[0];
         typeValue = State.CurrentChordType.ToDescription() ?? string.Empty;
+        bass = State.CurrentBass;
+        rootBass = State.CurrentRootBass;
     }
 
     /// <summary>Major chords have an empty type symbol, so they are shown by name.</summary>
     private string TypeName(string value) => string.IsNullOrEmpty(value) ? L["ChordType_Major"] : value;
 
-    private void Find() => Nav.NavigateTo(ChordPage.Url(root, typeValue, partial));
+    /// <summary>The bass picked is the root itself (also when the root note is picked from the list).</summary>
+    private bool IsRootBass => rootBass || (bass != null && Note.Normalize(bass) == Note.Normalize(root));
+
+    /// <summary>Any bass, the root, or the bass of a slash chord.</summary>
+    private string BassName() =>
+        IsRootBass ? L["Bass_Root"] : bass == null ? L["Bass_Any"] : $"/{bass.ToString(conv)}";
+
+    private void Find() => Nav.NavigateTo(ChordPage.Url(root, typeValue, partial,
+        bass: IsRootBass ? null : bass, rootBass: IsRootBass));
 }

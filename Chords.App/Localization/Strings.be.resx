@@ -98,6 +98,10 @@
   <data name="Key_Sevenths" xml:space="preserve"><value>Септакорды</value></data>
   <data name="Pick_Root" xml:space="preserve"><value>Асноўны тон</value></data>
   <data name="Pick_ChordType" xml:space="preserve"><value>Тып акорда</value></data>
+  <data name="Pick_Bass" xml:space="preserve"><value>Басовы тон</value></data>
+  <data name="Bass_Any" xml:space="preserve"><value>Любы</value></data>
+  <data name="Bass_Root" xml:space="preserve"><value>Як асноўны тон</value></data>
+  <data name="Layout_Inversion" xml:space="preserve"><value>Абарачэнне – самы нізкі тон не асноўны</value></data>
   <data name="Pick_Tonic" xml:space="preserve"><value>Тоніка</value></data>
   <data name="Pick_Scale" xml:space="preserve"><value>Гама</value></data>
   <data name="Key_Add" xml:space="preserve"><value>Дадаць акорд</value></data>

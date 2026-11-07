@@ -30,7 +30,7 @@ namespace Chords.Core.Models
         private const double TopVoicePerSemitone = 0.15;
         /// <summary>A fingering that leaves out a tone of the chord.</summary>
         private const double Incomplete = 3;
-        /// <summary>A fingering whose bass is not the root.</summary>
+        /// <summary>A fingering whose lowest note is not the one the chord asks for (its root, or a slash chord's bass).</summary>
         private const double NotRootBass = 3;
         /// <summary>A silent string of a strummed chord (a thin chord sounds weaker than the full one).</summary>
         private const double SilentString = 0.5;
@@ -164,7 +164,7 @@ namespace Chords.Core.Models
             {
                 cost += Incomplete;
             }
-            if (layout.Notes.Length > 0 && Note.Normalize(layout.Notes[0]) != Note.Normalize(layout.Chord.Root))
+            if (layout.OtherBass)
             {
                 cost += NotRootBass;
             }

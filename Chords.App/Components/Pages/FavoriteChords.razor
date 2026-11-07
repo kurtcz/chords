@@ -50,6 +50,7 @@
             .OrderBy(i => i.Key.Root.Tone)
             .ThenBy(i => i.Key.Root.Accidental)
             .ThenBy(i => i.Key.ChordType)
+            .ThenBy(i => i.Key.Bass?.ToString())
             .ToArray();
     }
 }

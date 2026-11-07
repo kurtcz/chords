@@ -10,6 +10,15 @@ namespace Chords.Core.Models
     {
         public Note Root { get; private set; }
         public ChordType ChordType { get; private set; }
+        /// <summary>
+        /// Note to sound lowest when it is not the root – a slash chord such as C/E (an inversion) or D/C
+        /// (a bass outside the chord); null for a chord in root position.
+        /// </summary>
+        [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
+        public Note Bass { get; private set; }
+        /// <summary>Whether the bass is one of the chord's own notes (an inversion) rather than a note added below it.</summary>
+        [JsonIgnore]
+        public bool BassInChord => Bass != null && NormalizedNotes.Contains(Note.Normalize(Bass));
         [JsonIgnore]
         public Interval[] Intervals { get; private set; }
         [JsonIgnore]
@@ -23,11 +32,13 @@ namespace Chords.Core.Models
         {
         }
 
+        /// <param name="bass">Note to sound lowest; null or the root itself for a chord in root position.</param>
         [JsonConstructor]
-        public Chord(Note root, ChordType chordType)
+        public Chord(Note root, ChordType chordType, Note bass = null)
         {
             Root = root;
             ChordType = chordType;
+            Bass = bass == null || Note.Normalize(bass) == Note.Normalize(root) ? null : bass;
             Intervals = ChordType.ToIntervals();
             Notes = Intervals.Select(i => Root.NoteAtInterval(i))
                              .ToArray();
@@ -37,6 +48,35 @@ namespace Chords.Core.Models
                                          .Select(i => Root.NoteAtInterval(i))
                                          .ToArray();
         }
+
+        /// <summary>The note that should sound lowest: the bass of a slash chord, otherwise the root.</summary>
+        [JsonIgnore]
+        public Note LowestNote => Bass ?? Root;
+
+        /// <summary>
+        /// Notes from the lowest one: the bass first, then the chord's other notes in order
+        /// (E G C for C/E, C D F♯ A for D/C).
+        /// </summary>
+        [JsonIgnore]
+        public Note[] NotesFromBass
+        {
+            get
+            {
+                if (Bass == null)
+                {
+                    return Notes;
+                }
+                var bass = Note.Normalize(Bass);
+                var index = Array.IndexOf(NormalizedNotes, bass);
+
+                return index < 0
+                    ? new[] { Bass }.Concat(Notes).ToArray()
+                    : Notes.Skip(index).Concat(Notes.Take(index)).ToArray();
+            }
+        }
+
+        /// <summary>The same chord with another bass (null for root position).</summary>
+        public Chord WithBass(Note bass) => new Chord(Root, ChordType, bass);
 
         public static Chord[] Find(Note[] notes, bool strict)
         {
@@ -138,7 +178,28 @@ namespace Chords.Core.Models
             }
         }
 
+		/// <summary>Parses a chord symbol such as Cmaj7, F#m or a slash chord D/F# (a 6/9 chord is not taken for one).</summary>
 		public static bool TryParse(string str, NamingConvention conv, out Chord chord)
+		{
+            if (TryParseSymbol(str, conv, out chord))
+            {
+                return true;
+            }
+            var slash = str?.LastIndexOf('/') ?? -1;
+
+            if (slash > 0 &&
+                TryParseSymbol(str.Substring(0, slash), conv, out var upper) &&
+                Note.TryParse(str.Substring(slash + 1), conv, out var bass))
+            {
+                chord = upper.WithBass(bass);
+                return true;
+            }
+            chord = null;
+
+            return false;
+        }
+
+		private static bool TryParseSymbol(string str, NamingConvention conv, out Chord chord)
 		{
             chord = null;
             if (string.IsNullOrWhiteSpace(str) || !Enum.IsDefined(typeof(NamingConvention), conv))
@@ -190,14 +251,19 @@ namespace Chords.Core.Models
         /// </remarks>
         public Chord Transpose(int halftones)
         {
-            var root = Note.FromPitch(Note.AllNotesNormalized[0].ChromaticDistance(Root) + halftones);
+            return new Chord(TransposeNote(Root, halftones), ChordType, Bass == null ? null : TransposeNote(Bass, halftones));
+        }
 
-            if (root.Accidental == Accidental.Sharp && root.Tone != Tone.C && root.Tone != Tone.F)
+        private static Note TransposeNote(Note note, int halftones)
+        {
+            var result = Note.FromPitch(Note.AllNotesNormalized[0].ChromaticDistance(note) + halftones);
+
+            if (result.Accidental == Accidental.Sharp && result.Tone != Tone.C && result.Tone != Tone.F)
             {
-                root = Note.FromPitch(Note.AllNotesNormalized[0].ChromaticDistance(root), true);
+                result = Note.FromPitch(Note.AllNotesNormalized[0].ChromaticDistance(result), true);
             }
 
-            return new Chord(root, ChordType);
+            return result;
         }
 
         public override bool Equals(object obj)
@@ -209,7 +275,7 @@ namespace Chords.Core.Models
                 return false;
             }
 
-            return this.Root == other.Root && this.ChordType == other.ChordType;
+            return this.Root == other.Root && this.ChordType == other.ChordType && this.Bass == other.Bass;
         }
 
         public override int GetHashCode()
@@ -219,6 +285,7 @@ namespace Chords.Core.Models
                 var result = Root.GetHashCode();
 
                 result = (result * 397) ^ ChordType.GetHashCode();
+                result = (result * 397) ^ (Bass?.GetHashCode() ?? 0);
 
                 return result;
             }
@@ -226,7 +293,9 @@ namespace Chords.Core.Models
 
         public override string ToString()
         {
-            return string.Format("[Chord: Root={0}, ChordType={1}]", Root, ChordType);
+            return Bass == null
+                ? string.Format("[Chord: Root={0}, ChordType={1}]", Root, ChordType)
+                : string.Format("[Chord: Root={0}, ChordType={1}, Bass={2}]", Root, ChordType, Bass);
         }
     }
 }

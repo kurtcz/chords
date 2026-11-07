@@ -187,33 +187,17 @@
         }
         // The lowest pitch, not the lowest string – the ukulele is tuned re-entrant.
         bassNote = Sounding(sounding.OrderBy(s => instrument.Pitches[s] + instrument.Semitones(s, frets[s])).First());
-        chords = Chord.FindByNotes(notes, bassNote);
+        // A chord not rooted in the bass is the slash chord it sounds as (C/E), its bass spelled as in the chord.
+        chords = Chord.FindByNotes(notes, bassNote)
+            .Select(c => c.WithBass(c.Notes.FirstOrDefault(i => Note.Normalize(i) == Note.Normalize(bassNote)) ?? bassNote))
+            .ToArray();
     }
 
     /// <summary>Chord symbol, with the bass as a slash chord when the chord is inverted (C/E).</summary>
-    private string Name(Chord chord)
-    {
-        var symbol = new ChordDecorator(chord, conv).Symbols[0];
-
-        if (bassNote == null || Note.Normalize(chord.Root) == Note.Normalize(bassNote))
-        {
-            return symbol;
-        }
-        var bass = chord.Notes.FirstOrDefault(i => Note.Normalize(i) == Note.Normalize(bassNote)) ?? bassNote;
-
-        return $"{symbol}/{bass.ToString(conv)}";
-    }
+    private string Name(Chord chord) => new ChordDecorator(chord, conv).Symbols[0];
 
     private string Link(Chord chord)
     {
-        var shown = chords.Take(MaxAlternatives + 1).ToArray();
-        string roots = null, types = null;
-
-        if (shown.Length > 1)
-        {
-            roots = string.Join(",", shown.Select(i => i.Root.ToString()));
-            types = string.Join(",", shown.Select(i => i.ChordType.ToDescription()));
-        }
-        return ChordPage.Url(chord.Root, chord.ChordType.ToDescription(), true, roots, types);
+        return ChordPage.Url(chord, true, chords.Take(MaxAlternatives + 1).ToArray());
     }
 }
