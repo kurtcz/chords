@@ -32,19 +32,26 @@
   <data name="Find_Loose" xml:space="preserve"><value>โหมดยืดหยุ่น</value></data>
   <data name="Find_NoChord" xml:space="preserve"><value>ไม่พบคอร์ด</value></data>
   <data name="Settings_SystemLanguage" xml:space="preserve"><value>{0} (ระบบ)</value></data>
-  <data name="Notation_English" xml:space="preserve"><value>ระบบเรียกโน้ตแบบอังกฤษ</value></data>
-  <data name="Notation_German" xml:space="preserve"><value>ระบบเรียกโน้ตแบบเยอรมัน</value></data>
-  <data name="Notation_Latin" xml:space="preserve"><value>ระบบเรียกโน้ตแบบละติน</value></data>
-  <data name="Settings_BasicChords" xml:space="preserve"><value>คอร์ดพื้นฐาน</value></data>
-  <data name="Settings_AllChords" xml:space="preserve"><value>คอร์ดทั้งหมด</value></data>
+  <data name="Notation_English" xml:space="preserve"><value>แบบอังกฤษ</value></data>
+  <data name="Notation_German" xml:space="preserve"><value>แบบเยอรมัน</value></data>
+  <data name="Notation_Latin" xml:space="preserve"><value>แบบละติน</value></data>
+  <data name="Settings_BasicChords" xml:space="preserve"><value>พื้นฐาน</value></data>
+  <data name="Settings_AllChords" xml:space="preserve"><value>ทั้งหมด</value></data>
   <data name="Settings_MaxFret" xml:space="preserve"><value>เฟร็ตสูงสุด:</value></data>
   <data name="Settings_AllowBarre" xml:space="preserve"><value>อนุญาตคอร์ดทาบ</value></data>
   <data name="Settings_AllowSpecial" xml:space="preserve"><value>อนุญาตท่าจับที่บอดสายเสียงสูง</value></data>
   <data name="Settings_EasyOnly" xml:space="preserve"><value>เฉพาะท่าจับคอร์ดที่ง่าย</value></data>
-  <data name="Settings_Vertical" xml:space="preserve"><value>แผนภาพแนวตั้ง</value></data>
-  <data name="Settings_Horizontal" xml:space="preserve"><value>แผนภาพแนวนอน</value></data>
+  <data name="Settings_Vertical" xml:space="preserve"><value>แนวตั้ง</value></data>
+  <data name="Settings_Horizontal" xml:space="preserve"><value>แนวนอน</value></data>
   <data name="Settings_LeftHanded" xml:space="preserve"><value>ถนัดซ้าย (แผนภาพกลับด้าน)</value></data>
   <data name="Settings_ShowTips" xml:space="preserve"><value>แสดงเคล็ดลับ</value></data>
+  <data name="Settings_General" xml:space="preserve"><value>ทั่วไป</value></data>
+  <data name="Settings_Language" xml:space="preserve"><value>ภาษา</value></data>
+  <data name="Settings_Instrument" xml:space="preserve"><value>เครื่องดนตรี</value></data>
+  <data name="Settings_Tuning" xml:space="preserve"><value>การตั้งสาย</value></data>
+  <data name="Settings_Notation" xml:space="preserve"><value>ระบบเรียกโน้ต</value></data>
+  <data name="Settings_Diagrams" xml:space="preserve"><value>แผนภาพ</value></data>
+  <data name="Settings_Chords" xml:space="preserve"><value>คอร์ด</value></data>
   <data name="Instrument_Guitar" xml:space="preserve"><value>กีตาร์</value></data>
   <data name="Instrument_Ukulele" xml:space="preserve"><value>อูคูเลเล่</value></data>
   <data name="Instrument_Mandolin" xml:space="preserve"><value>แมนโดลิน</value></data>
@@ -115,7 +122,7 @@
   <data name="Tab_More" xml:space="preserve"><value>เพิ่มเติม</value></data>
   <data name="Group_Tools" xml:space="preserve"><value>เครื่องมือ</value></data>
   <data name="Related_Title" xml:space="preserve"><value>ดูเพิ่มเติม</value></data>
-  <data name="Tuning_Standard" xml:space="preserve"><value>การตั้งสายมาตรฐาน</value></data>
+  <data name="Tuning_Standard" xml:space="preserve"><value>มาตรฐาน</value></data>
   <data name="Tuning_HalfStepDown" xml:space="preserve"><value>ลดครึ่งเสียง</value></data>
   <data name="Tuning_WholeStepDown" xml:space="preserve"><value>ลดหนึ่งเสียงเต็ม</value></data>
   <data name="Tuning_LowG" xml:space="preserve"><value>G ต่ำ</value></data>

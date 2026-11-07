@@ -32,19 +32,26 @@
   <data name="Find_Loose" xml:space="preserve"><value>Mod longgar</value></data>
   <data name="Find_NoChord" xml:space="preserve"><value>Tiada kord ditemui</value></data>
   <data name="Settings_SystemLanguage" xml:space="preserve"><value>{0} (sistem)</value></data>
-  <data name="Notation_English" xml:space="preserve"><value>Notasi Inggeris</value></data>
-  <data name="Notation_German" xml:space="preserve"><value>Notasi Jerman</value></data>
-  <data name="Notation_Latin" xml:space="preserve"><value>Notasi Latin</value></data>
-  <data name="Settings_BasicChords" xml:space="preserve"><value>Kord asas</value></data>
-  <data name="Settings_AllChords" xml:space="preserve"><value>Semua kord</value></data>
+  <data name="Notation_English" xml:space="preserve"><value>Inggeris</value></data>
+  <data name="Notation_German" xml:space="preserve"><value>Jerman</value></data>
+  <data name="Notation_Latin" xml:space="preserve"><value>Latin</value></data>
+  <data name="Settings_BasicChords" xml:space="preserve"><value>Asas</value></data>
+  <data name="Settings_AllChords" xml:space="preserve"><value>Semua</value></data>
   <data name="Settings_MaxFret" xml:space="preserve"><value>Fret tertinggi:</value></data>
   <data name="Settings_AllowBarre" xml:space="preserve"><value>Benarkan kord barre</value></data>
   <data name="Settings_AllowSpecial" xml:space="preserve"><value>Benarkan kord dengan tali tinggi diredam</value></data>
   <data name="Settings_EasyOnly" xml:space="preserve"><value>Penjarian mudah sahaja</value></data>
-  <data name="Settings_Vertical" xml:space="preserve"><value>Rajah menegak</value></data>
-  <data name="Settings_Horizontal" xml:space="preserve"><value>Rajah mendatar</value></data>
+  <data name="Settings_Vertical" xml:space="preserve"><value>Menegak</value></data>
+  <data name="Settings_Horizontal" xml:space="preserve"><value>Mendatar</value></data>
   <data name="Settings_LeftHanded" xml:space="preserve"><value>Kidal (rajah dicerminkan)</value></data>
   <data name="Settings_ShowTips" xml:space="preserve"><value>Tunjukkan petua</value></data>
+  <data name="Settings_General" xml:space="preserve"><value>Umum</value></data>
+  <data name="Settings_Language" xml:space="preserve"><value>Bahasa</value></data>
+  <data name="Settings_Instrument" xml:space="preserve"><value>Alat muzik</value></data>
+  <data name="Settings_Tuning" xml:space="preserve"><value>Penalaan</value></data>
+  <data name="Settings_Notation" xml:space="preserve"><value>Notasi</value></data>
+  <data name="Settings_Diagrams" xml:space="preserve"><value>Rajah</value></data>
+  <data name="Settings_Chords" xml:space="preserve"><value>Kord</value></data>
   <data name="Instrument_Guitar" xml:space="preserve"><value>Gitar</value></data>
   <data name="Instrument_Ukulele" xml:space="preserve"><value>Ukulele</value></data>
   <data name="Instrument_Mandolin" xml:space="preserve"><value>Mandolin</value></data>
@@ -115,7 +122,7 @@
   <data name="Tab_More" xml:space="preserve"><value>Lagi</value></data>
   <data name="Group_Tools" xml:space="preserve"><value>Alatan</value></data>
   <data name="Related_Title" xml:space="preserve"><value>Lihat juga</value></data>
-  <data name="Tuning_Standard" xml:space="preserve"><value>Penalaan standard</value></data>
+  <data name="Tuning_Standard" xml:space="preserve"><value>Standard</value></data>
   <data name="Tuning_HalfStepDown" xml:space="preserve"><value>Turun separuh nada</value></data>
   <data name="Tuning_WholeStepDown" xml:space="preserve"><value>Turun satu nada</value></data>
   <data name="Tuning_LowG" xml:space="preserve"><value>G rendah</value></data>

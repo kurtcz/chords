@@ -32,19 +32,26 @@
   <data name="Find_Loose" xml:space="preserve"><value>ゆるやかモード</value></data>
   <data name="Find_NoChord" xml:space="preserve"><value>コードが見つかりません</value></data>
   <data name="Settings_SystemLanguage" xml:space="preserve"><value>{0} (システム)</value></data>
-  <data name="Notation_English" xml:space="preserve"><value>英語式表記</value></data>
-  <data name="Notation_German" xml:space="preserve"><value>ドイツ式表記</value></data>
-  <data name="Notation_Latin" xml:space="preserve"><value>ラテン式表記</value></data>
-  <data name="Settings_BasicChords" xml:space="preserve"><value>基本コード</value></data>
-  <data name="Settings_AllChords" xml:space="preserve"><value>すべてのコード</value></data>
+  <data name="Notation_English" xml:space="preserve"><value>英語式</value></data>
+  <data name="Notation_German" xml:space="preserve"><value>ドイツ式</value></data>
+  <data name="Notation_Latin" xml:space="preserve"><value>ラテン式</value></data>
+  <data name="Settings_BasicChords" xml:space="preserve"><value>基本</value></data>
+  <data name="Settings_AllChords" xml:space="preserve"><value>すべて</value></data>
   <data name="Settings_MaxFret" xml:space="preserve"><value>最高フレット:</value></data>
   <data name="Settings_AllowBarre" xml:space="preserve"><value>セーハを許可</value></data>
   <data name="Settings_AllowSpecial" xml:space="preserve"><value>高音弦をミュートした押さえ方を許可</value></data>
   <data name="Settings_EasyOnly" xml:space="preserve"><value>簡単な押さえ方のみ</value></data>
-  <data name="Settings_Vertical" xml:space="preserve"><value>縦向きダイアグラム</value></data>
-  <data name="Settings_Horizontal" xml:space="preserve"><value>横向きダイアグラム</value></data>
+  <data name="Settings_Vertical" xml:space="preserve"><value>縦向き</value></data>
+  <data name="Settings_Horizontal" xml:space="preserve"><value>横向き</value></data>
   <data name="Settings_LeftHanded" xml:space="preserve"><value>左利き (反転ダイアグラム)</value></data>
   <data name="Settings_ShowTips" xml:space="preserve"><value>ヒントを表示</value></data>
+  <data name="Settings_General" xml:space="preserve"><value>一般</value></data>
+  <data name="Settings_Language" xml:space="preserve"><value>言語</value></data>
+  <data name="Settings_Instrument" xml:space="preserve"><value>楽器</value></data>
+  <data name="Settings_Tuning" xml:space="preserve"><value>チューニング</value></data>
+  <data name="Settings_Notation" xml:space="preserve"><value>表記</value></data>
+  <data name="Settings_Diagrams" xml:space="preserve"><value>ダイアグラム</value></data>
+  <data name="Settings_Chords" xml:space="preserve"><value>コード</value></data>
   <data name="Instrument_Guitar" xml:space="preserve"><value>ギター</value></data>
   <data name="Instrument_Ukulele" xml:space="preserve"><value>ウクレレ</value></data>
   <data name="Instrument_Mandolin" xml:space="preserve"><value>マンドリン</value></data>
@@ -115,7 +122,7 @@
   <data name="Tab_More" xml:space="preserve"><value>その他</value></data>
   <data name="Group_Tools" xml:space="preserve"><value>ツール</value></data>
   <data name="Related_Title" xml:space="preserve"><value>関連項目</value></data>
-  <data name="Tuning_Standard" xml:space="preserve"><value>標準チューニング</value></data>
+  <data name="Tuning_Standard" xml:space="preserve"><value>標準</value></data>
   <data name="Tuning_HalfStepDown" xml:space="preserve"><value>半音下げ</value></data>
   <data name="Tuning_WholeStepDown" xml:space="preserve"><value>全音下げ</value></data>
   <data name="Tuning_LowG" xml:space="preserve"><value>Low-G</value></data>

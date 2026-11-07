@@ -34,19 +34,26 @@
   <data name="Find_Loose" xml:space="preserve"><value>Slobodni način</value></data>
   <data name="Find_NoChord" xml:space="preserve"><value>Akord nije pronađen</value></data>
   <data name="Settings_SystemLanguage" xml:space="preserve"><value>{0} (sustav)</value></data>
-  <data name="Notation_English" xml:space="preserve"><value>Engleska notacija</value></data>
-  <data name="Notation_German" xml:space="preserve"><value>Njemačka notacija</value></data>
-  <data name="Notation_Latin" xml:space="preserve"><value>Latinska notacija</value></data>
-  <data name="Settings_BasicChords" xml:space="preserve"><value>Osnovni akordi</value></data>
-  <data name="Settings_AllChords" xml:space="preserve"><value>Svi akordi</value></data>
+  <data name="Notation_English" xml:space="preserve"><value>Engleska</value></data>
+  <data name="Notation_German" xml:space="preserve"><value>Njemačka</value></data>
+  <data name="Notation_Latin" xml:space="preserve"><value>Latinska</value></data>
+  <data name="Settings_BasicChords" xml:space="preserve"><value>Osnovni</value></data>
+  <data name="Settings_AllChords" xml:space="preserve"><value>Svi</value></data>
   <data name="Settings_MaxFret" xml:space="preserve"><value>Najviši prag:</value></data>
   <data name="Settings_AllowBarre" xml:space="preserve"><value>Dopusti barré</value></data>
   <data name="Settings_AllowSpecial" xml:space="preserve"><value>Dopusti hvatove s prigušenim visokim žicama</value></data>
   <data name="Settings_EasyOnly" xml:space="preserve"><value>Samo laki hvatovi</value></data>
-  <data name="Settings_Vertical" xml:space="preserve"><value>Okomiti dijagrami</value></data>
-  <data name="Settings_Horizontal" xml:space="preserve"><value>Vodoravni dijagrami</value></data>
+  <data name="Settings_Vertical" xml:space="preserve"><value>Okomiti</value></data>
+  <data name="Settings_Horizontal" xml:space="preserve"><value>Vodoravni</value></data>
   <data name="Settings_LeftHanded" xml:space="preserve"><value>Ljevoruki (zrcaljeni dijagrami)</value></data>
   <data name="Settings_ShowTips" xml:space="preserve"><value>Prikaži savjete</value></data>
+  <data name="Settings_General" xml:space="preserve"><value>Općenito</value></data>
+  <data name="Settings_Language" xml:space="preserve"><value>Jezik</value></data>
+  <data name="Settings_Instrument" xml:space="preserve"><value>Instrument</value></data>
+  <data name="Settings_Tuning" xml:space="preserve"><value>Ugađanje</value></data>
+  <data name="Settings_Notation" xml:space="preserve"><value>Notacija</value></data>
+  <data name="Settings_Diagrams" xml:space="preserve"><value>Dijagrami</value></data>
+  <data name="Settings_Chords" xml:space="preserve"><value>Akordi</value></data>
   <data name="Instrument_Guitar" xml:space="preserve"><value>Gitara</value></data>
   <data name="Instrument_Ukulele" xml:space="preserve"><value>Ukulele</value></data>
   <data name="Instrument_Mandolin" xml:space="preserve"><value>Mandolina</value></data>
@@ -117,7 +124,7 @@
   <data name="Tab_More" xml:space="preserve"><value>Više</value></data>
   <data name="Group_Tools" xml:space="preserve"><value>Alati</value></data>
   <data name="Related_Title" xml:space="preserve"><value>Vidi također</value></data>
-  <data name="Tuning_Standard" xml:space="preserve"><value>Standardno ugađanje</value></data>
+  <data name="Tuning_Standard" xml:space="preserve"><value>Standardno</value></data>
   <data name="Tuning_HalfStepDown" xml:space="preserve"><value>Polustepen niže</value></data>
   <data name="Tuning_WholeStepDown" xml:space="preserve"><value>Cijeli stepen niže</value></data>
   <data name="Tuning_LowG" xml:space="preserve"><value>Nisko G</value></data>

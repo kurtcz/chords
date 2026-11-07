@@ -33,19 +33,26 @@
   <data name="Find_Loose" xml:space="preserve"><value>لچکدار موڈ</value></data>
   <data name="Find_NoChord" xml:space="preserve"><value>کوئی کورڈ نہیں ملا</value></data>
   <data name="Settings_SystemLanguage" xml:space="preserve"><value>{0} (سسٹم)</value></data>
-  <data name="Notation_English" xml:space="preserve"><value>انگریزی نام</value></data>
-  <data name="Notation_German" xml:space="preserve"><value>جرمن نام</value></data>
-  <data name="Notation_Latin" xml:space="preserve"><value>لاطینی نام</value></data>
-  <data name="Settings_BasicChords" xml:space="preserve"><value>بنیادی کورڈز</value></data>
-  <data name="Settings_AllChords" xml:space="preserve"><value>تمام کورڈز</value></data>
+  <data name="Notation_English" xml:space="preserve"><value>انگریزی</value></data>
+  <data name="Notation_German" xml:space="preserve"><value>جرمن</value></data>
+  <data name="Notation_Latin" xml:space="preserve"><value>لاطینی</value></data>
+  <data name="Settings_BasicChords" xml:space="preserve"><value>بنیادی</value></data>
+  <data name="Settings_AllChords" xml:space="preserve"><value>تمام</value></data>
   <data name="Settings_MaxFret" xml:space="preserve"><value>سب سے اونچا فریٹ:</value></data>
   <data name="Settings_AllowBarre" xml:space="preserve"><value>بیرے کورڈز کی اجازت دیں</value></data>
   <data name="Settings_AllowSpecial" xml:space="preserve"><value>اونچے تار خاموش والے کورڈز کی اجازت دیں</value></data>
   <data name="Settings_EasyOnly" xml:space="preserve"><value>صرف آسان انگلیوں کی پوزیشنیں</value></data>
-  <data name="Settings_Vertical" xml:space="preserve"><value>عمودی ڈایاگرام</value></data>
-  <data name="Settings_Horizontal" xml:space="preserve"><value>افقی ڈایاگرام</value></data>
+  <data name="Settings_Vertical" xml:space="preserve"><value>عمودی</value></data>
+  <data name="Settings_Horizontal" xml:space="preserve"><value>افقی</value></data>
   <data name="Settings_LeftHanded" xml:space="preserve"><value>بائیں ہاتھ والے (الٹے ڈایاگرام)</value></data>
   <data name="Settings_ShowTips" xml:space="preserve"><value>مشورے دکھائیں</value></data>
+  <data name="Settings_General" xml:space="preserve"><value>عمومی</value></data>
+  <data name="Settings_Language" xml:space="preserve"><value>زبان</value></data>
+  <data name="Settings_Instrument" xml:space="preserve"><value>ساز</value></data>
+  <data name="Settings_Tuning" xml:space="preserve"><value>ٹیوننگ</value></data>
+  <data name="Settings_Notation" xml:space="preserve"><value>نام</value></data>
+  <data name="Settings_Diagrams" xml:space="preserve"><value>ڈایاگرام</value></data>
+  <data name="Settings_Chords" xml:space="preserve"><value>کورڈز</value></data>
   <data name="Instrument_Guitar" xml:space="preserve"><value>گٹار</value></data>
   <data name="Instrument_Ukulele" xml:space="preserve"><value>یوکولیلی</value></data>
   <data name="Instrument_Mandolin" xml:space="preserve"><value>مینڈولن</value></data>
@@ -116,7 +123,7 @@
   <data name="Tab_More" xml:space="preserve"><value>مزید</value></data>
   <data name="Group_Tools" xml:space="preserve"><value>ٹولز</value></data>
   <data name="Related_Title" xml:space="preserve"><value>یہ بھی دیکھیں</value></data>
-  <data name="Tuning_Standard" xml:space="preserve"><value>معیاری سُر</value></data>
+  <data name="Tuning_Standard" xml:space="preserve"><value>معیاری</value></data>
   <data name="Tuning_HalfStepDown" xml:space="preserve"><value>آدھا سُر نیچے</value></data>
   <data name="Tuning_WholeStepDown" xml:space="preserve"><value>پورا سُر نیچے</value></data>
   <data name="Tuning_LowG" xml:space="preserve"><value>نچلا G</value></data>

@@ -33,19 +33,26 @@
   <data name="Find_Loose" xml:space="preserve"><value>Lockere Modus</value></data>
   <data name="Find_NoChord" xml:space="preserve"><value>Keen Akkord fonnt</value></data>
   <data name="Settings_SystemLanguage" xml:space="preserve"><value>{0} (System)</value></data>
-  <data name="Notation_English" xml:space="preserve"><value>Englesch Notatioun</value></data>
-  <data name="Notation_German" xml:space="preserve"><value>Däitsch Notatioun</value></data>
-  <data name="Notation_Latin" xml:space="preserve"><value>Laténgesch Notatioun</value></data>
-  <data name="Settings_BasicChords" xml:space="preserve"><value>Basisakkorden</value></data>
-  <data name="Settings_AllChords" xml:space="preserve"><value>All Akkorden</value></data>
+  <data name="Notation_English" xml:space="preserve"><value>Englesch</value></data>
+  <data name="Notation_German" xml:space="preserve"><value>Däitsch</value></data>
+  <data name="Notation_Latin" xml:space="preserve"><value>Laténgesch</value></data>
+  <data name="Settings_BasicChords" xml:space="preserve"><value>Basis</value></data>
+  <data name="Settings_AllChords" xml:space="preserve"><value>All</value></data>
   <data name="Settings_MaxFret" xml:space="preserve"><value>Héchste Bond:</value></data>
   <data name="Settings_AllowBarre" xml:space="preserve"><value>Barré-Grëffer erlaben</value></data>
   <data name="Settings_AllowSpecial" xml:space="preserve"><value>Grëffer mat gedämpften héije Saiten erlaben</value></data>
   <data name="Settings_EasyOnly" xml:space="preserve"><value>Nëmmen einfach Grëffer</value></data>
-  <data name="Settings_Vertical" xml:space="preserve"><value>Vertikal Grëffbiller</value></data>
-  <data name="Settings_Horizontal" xml:space="preserve"><value>Horizontal Grëffbiller</value></data>
+  <data name="Settings_Vertical" xml:space="preserve"><value>Vertikal</value></data>
+  <data name="Settings_Horizontal" xml:space="preserve"><value>Horizontal</value></data>
   <data name="Settings_LeftHanded" xml:space="preserve"><value>Lénkshänner (gespigelt Grëffbiller)</value></data>
   <data name="Settings_ShowTips" xml:space="preserve"><value>Tipps weisen</value></data>
+  <data name="Settings_General" xml:space="preserve"><value>Allgemeng</value></data>
+  <data name="Settings_Language" xml:space="preserve"><value>Sprooch</value></data>
+  <data name="Settings_Instrument" xml:space="preserve"><value>Instrument</value></data>
+  <data name="Settings_Tuning" xml:space="preserve"><value>Stëmmung</value></data>
+  <data name="Settings_Notation" xml:space="preserve"><value>Notatioun</value></data>
+  <data name="Settings_Diagrams" xml:space="preserve"><value>Grëffbiller</value></data>
+  <data name="Settings_Chords" xml:space="preserve"><value>Akkorden</value></data>
   <data name="Instrument_Guitar" xml:space="preserve"><value>Gittar</value></data>
   <data name="Instrument_Ukulele" xml:space="preserve"><value>Ukulele</value></data>
   <data name="Instrument_Mandolin" xml:space="preserve"><value>Mandolin</value></data>
@@ -116,7 +123,7 @@
   <data name="Tab_More" xml:space="preserve"><value>Méi</value></data>
   <data name="Group_Tools" xml:space="preserve"><value>Tools</value></data>
   <data name="Related_Title" xml:space="preserve"><value>Kuckt och</value></data>
-  <data name="Tuning_Standard" xml:space="preserve"><value>Standardstëmmung</value></data>
+  <data name="Tuning_Standard" xml:space="preserve"><value>Standard</value></data>
   <data name="Tuning_HalfStepDown" xml:space="preserve"><value>Hallwen Toun méi déif</value></data>
   <data name="Tuning_WholeStepDown" xml:space="preserve"><value>Ganzen Toun méi déif</value></data>
   <data name="Tuning_LowG" xml:space="preserve"><value>Déiwen G</value></data>

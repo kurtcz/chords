@@ -33,19 +33,26 @@
   <data name="Find_Loose" xml:space="preserve"><value>लचीला मोड</value></data>
   <data name="Find_NoChord" xml:space="preserve"><value>कोई कॉर्ड नहीं मिला</value></data>
   <data name="Settings_SystemLanguage" xml:space="preserve"><value>{0} (सिस्टम)</value></data>
-  <data name="Notation_English" xml:space="preserve"><value>अंग्रेज़ी नामकरण</value></data>
-  <data name="Notation_German" xml:space="preserve"><value>जर्मन नामकरण</value></data>
-  <data name="Notation_Latin" xml:space="preserve"><value>लैटिन नामकरण</value></data>
-  <data name="Settings_BasicChords" xml:space="preserve"><value>बुनियादी कॉर्ड</value></data>
-  <data name="Settings_AllChords" xml:space="preserve"><value>सभी कॉर्ड</value></data>
+  <data name="Notation_English" xml:space="preserve"><value>अंग्रेज़ी</value></data>
+  <data name="Notation_German" xml:space="preserve"><value>जर्मन</value></data>
+  <data name="Notation_Latin" xml:space="preserve"><value>लैटिन</value></data>
+  <data name="Settings_BasicChords" xml:space="preserve"><value>बुनियादी</value></data>
+  <data name="Settings_AllChords" xml:space="preserve"><value>सभी</value></data>
   <data name="Settings_MaxFret" xml:space="preserve"><value>सबसे ऊँचा फ्रेट:</value></data>
   <data name="Settings_AllowBarre" xml:space="preserve"><value>बैरे कॉर्ड की अनुमति दें</value></data>
   <data name="Settings_AllowSpecial" xml:space="preserve"><value>ऊँचे तार म्यूट वाले कॉर्ड की अनुमति दें</value></data>
   <data name="Settings_EasyOnly" xml:space="preserve"><value>केवल आसान फिंगरिंग</value></data>
-  <data name="Settings_Vertical" xml:space="preserve"><value>खड़े डायग्राम</value></data>
-  <data name="Settings_Horizontal" xml:space="preserve"><value>आड़े डायग्राम</value></data>
+  <data name="Settings_Vertical" xml:space="preserve"><value>खड़े</value></data>
+  <data name="Settings_Horizontal" xml:space="preserve"><value>आड़े</value></data>
   <data name="Settings_LeftHanded" xml:space="preserve"><value>बाएँ हाथ वाले (उलटे डायग्राम)</value></data>
   <data name="Settings_ShowTips" xml:space="preserve"><value>सुझाव दिखाएँ</value></data>
+  <data name="Settings_General" xml:space="preserve"><value>सामान्य</value></data>
+  <data name="Settings_Language" xml:space="preserve"><value>भाषा</value></data>
+  <data name="Settings_Instrument" xml:space="preserve"><value>वाद्य</value></data>
+  <data name="Settings_Tuning" xml:space="preserve"><value>ट्यूनिंग</value></data>
+  <data name="Settings_Notation" xml:space="preserve"><value>नामकरण</value></data>
+  <data name="Settings_Diagrams" xml:space="preserve"><value>डायग्राम</value></data>
+  <data name="Settings_Chords" xml:space="preserve"><value>कॉर्ड</value></data>
   <data name="Instrument_Guitar" xml:space="preserve"><value>गिटार</value></data>
   <data name="Instrument_Ukulele" xml:space="preserve"><value>यूकुलेले</value></data>
   <data name="Instrument_Mandolin" xml:space="preserve"><value>मैंडोलिन</value></data>
@@ -116,7 +123,7 @@
   <data name="Tab_More" xml:space="preserve"><value>और</value></data>
   <data name="Group_Tools" xml:space="preserve"><value>टूल</value></data>
   <data name="Related_Title" xml:space="preserve"><value>यह भी देखें</value></data>
-  <data name="Tuning_Standard" xml:space="preserve"><value>मानक ट्यूनिंग</value></data>
+  <data name="Tuning_Standard" xml:space="preserve"><value>मानक</value></data>
   <data name="Tuning_HalfStepDown" xml:space="preserve"><value>आधा सुर नीचे</value></data>
   <data name="Tuning_WholeStepDown" xml:space="preserve"><value>पूरा सुर नीचे</value></data>
   <data name="Tuning_LowG" xml:space="preserve"><value>निचला G</value></data>

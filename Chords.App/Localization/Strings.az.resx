@@ -33,19 +33,26 @@
   <data name="Find_Loose" xml:space="preserve"><value>Sərbəst rejim</value></data>
   <data name="Find_NoChord" xml:space="preserve"><value>Akkord tapılmadı</value></data>
   <data name="Settings_SystemLanguage" xml:space="preserve"><value>{0} (sistem)</value></data>
-  <data name="Notation_English" xml:space="preserve"><value>İngilis işarələnməsi</value></data>
-  <data name="Notation_German" xml:space="preserve"><value>Alman işarələnməsi</value></data>
-  <data name="Notation_Latin" xml:space="preserve"><value>Latın işarələnməsi</value></data>
-  <data name="Settings_BasicChords" xml:space="preserve"><value>Əsas akkordlar</value></data>
-  <data name="Settings_AllChords" xml:space="preserve"><value>Bütün akkordlar</value></data>
+  <data name="Notation_English" xml:space="preserve"><value>İngilis</value></data>
+  <data name="Notation_German" xml:space="preserve"><value>Alman</value></data>
+  <data name="Notation_Latin" xml:space="preserve"><value>Latın</value></data>
+  <data name="Settings_BasicChords" xml:space="preserve"><value>Əsas</value></data>
+  <data name="Settings_AllChords" xml:space="preserve"><value>Hamısı</value></data>
   <data name="Settings_MaxFret" xml:space="preserve"><value>Ən yüksək lad:</value></data>
   <data name="Settings_AllowBarre" xml:space="preserve"><value>Barreyə icazə ver</value></data>
   <data name="Settings_AllowSpecial" xml:space="preserve"><value>Yuxarı simləri boğulmuş düzülüşlərə icazə ver</value></data>
   <data name="Settings_EasyOnly" xml:space="preserve"><value>Yalnız asan barmaq düzülüşləri</value></data>
-  <data name="Settings_Vertical" xml:space="preserve"><value>Şaquli sxemlər</value></data>
-  <data name="Settings_Horizontal" xml:space="preserve"><value>Üfüqi sxemlər</value></data>
+  <data name="Settings_Vertical" xml:space="preserve"><value>Şaquli</value></data>
+  <data name="Settings_Horizontal" xml:space="preserve"><value>Üfüqi</value></data>
   <data name="Settings_LeftHanded" xml:space="preserve"><value>Solaxay (güzgü sxemlər)</value></data>
   <data name="Settings_ShowTips" xml:space="preserve"><value>Məsləhətləri göstər</value></data>
+  <data name="Settings_General" xml:space="preserve"><value>Ümumi</value></data>
+  <data name="Settings_Language" xml:space="preserve"><value>Dil</value></data>
+  <data name="Settings_Instrument" xml:space="preserve"><value>Alət</value></data>
+  <data name="Settings_Tuning" xml:space="preserve"><value>Kökləmə</value></data>
+  <data name="Settings_Notation" xml:space="preserve"><value>İşarələnmə</value></data>
+  <data name="Settings_Diagrams" xml:space="preserve"><value>Sxemlər</value></data>
+  <data name="Settings_Chords" xml:space="preserve"><value>Akkordlar</value></data>
   <data name="Instrument_Guitar" xml:space="preserve"><value>Gitara</value></data>
   <data name="Instrument_Ukulele" xml:space="preserve"><value>Ukulele</value></data>
   <data name="Instrument_Mandolin" xml:space="preserve"><value>Mandolina</value></data>
@@ -116,7 +123,7 @@
   <data name="Tab_More" xml:space="preserve"><value>Daha çox</value></data>
   <data name="Group_Tools" xml:space="preserve"><value>Alətlər</value></data>
   <data name="Related_Title" xml:space="preserve"><value>Həmçinin bax</value></data>
-  <data name="Tuning_Standard" xml:space="preserve"><value>Standart kökləmə</value></data>
+  <data name="Tuning_Standard" xml:space="preserve"><value>Standart</value></data>
   <data name="Tuning_HalfStepDown" xml:space="preserve"><value>Yarım ton aşağı</value></data>
   <data name="Tuning_WholeStepDown" xml:space="preserve"><value>Bir ton aşağı</value></data>
   <data name="Tuning_LowG" xml:space="preserve"><value>Aşağı Sol</value></data>

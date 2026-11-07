@@ -33,19 +33,26 @@
   <data name="Find_Loose" xml:space="preserve"><value>Laus hamur</value></data>
   <data name="Find_NoChord" xml:space="preserve"><value>Enginn hljómur fannst</value></data>
   <data name="Settings_SystemLanguage" xml:space="preserve"><value>{0} (kerfi)</value></data>
-  <data name="Notation_English" xml:space="preserve"><value>Ensk nótnaheiti</value></data>
-  <data name="Notation_German" xml:space="preserve"><value>Þýsk nótnaheiti</value></data>
-  <data name="Notation_Latin" xml:space="preserve"><value>Latnesk nótnaheiti</value></data>
-  <data name="Settings_BasicChords" xml:space="preserve"><value>Grunnhljómar</value></data>
-  <data name="Settings_AllChords" xml:space="preserve"><value>Allir hljómar</value></data>
+  <data name="Notation_English" xml:space="preserve"><value>Ensk</value></data>
+  <data name="Notation_German" xml:space="preserve"><value>Þýsk</value></data>
+  <data name="Notation_Latin" xml:space="preserve"><value>Latnesk</value></data>
+  <data name="Settings_BasicChords" xml:space="preserve"><value>Grunn</value></data>
+  <data name="Settings_AllChords" xml:space="preserve"><value>Allir</value></data>
   <data name="Settings_MaxFret" xml:space="preserve"><value>Hæsta band:</value></data>
   <data name="Settings_AllowBarre" xml:space="preserve"><value>Leyfa þvergrip</value></data>
   <data name="Settings_AllowSpecial" xml:space="preserve"><value>Leyfa grip með dempuðum efri strengjum</value></data>
   <data name="Settings_EasyOnly" xml:space="preserve"><value>Aðeins auðveld grip</value></data>
-  <data name="Settings_Vertical" xml:space="preserve"><value>Lóðréttar gripamyndir</value></data>
-  <data name="Settings_Horizontal" xml:space="preserve"><value>Láréttar gripamyndir</value></data>
+  <data name="Settings_Vertical" xml:space="preserve"><value>Lóðréttar</value></data>
+  <data name="Settings_Horizontal" xml:space="preserve"><value>Láréttar</value></data>
   <data name="Settings_LeftHanded" xml:space="preserve"><value>Örvhent (speglaðar myndir)</value></data>
   <data name="Settings_ShowTips" xml:space="preserve"><value>Sýna ábendingar</value></data>
+  <data name="Settings_General" xml:space="preserve"><value>Almennt</value></data>
+  <data name="Settings_Language" xml:space="preserve"><value>Tungumál</value></data>
+  <data name="Settings_Instrument" xml:space="preserve"><value>Hljóðfæri</value></data>
+  <data name="Settings_Tuning" xml:space="preserve"><value>Stilling</value></data>
+  <data name="Settings_Notation" xml:space="preserve"><value>Nótnaheiti</value></data>
+  <data name="Settings_Diagrams" xml:space="preserve"><value>Gripamyndir</value></data>
+  <data name="Settings_Chords" xml:space="preserve"><value>Hljómar</value></data>
   <data name="Instrument_Guitar" xml:space="preserve"><value>Gítar</value></data>
   <data name="Instrument_Ukulele" xml:space="preserve"><value>Ukulele</value></data>
   <data name="Instrument_Mandolin" xml:space="preserve"><value>Mandólín</value></data>
@@ -116,7 +123,7 @@
   <data name="Tab_More" xml:space="preserve"><value>Meira</value></data>
   <data name="Group_Tools" xml:space="preserve"><value>Verkfæri</value></data>
   <data name="Related_Title" xml:space="preserve"><value>Sjá einnig</value></data>
-  <data name="Tuning_Standard" xml:space="preserve"><value>Hefðbundin stilling</value></data>
+  <data name="Tuning_Standard" xml:space="preserve"><value>Hefðbundin</value></data>
   <data name="Tuning_HalfStepDown" xml:space="preserve"><value>Hálftóni neðar</value></data>
   <data name="Tuning_WholeStepDown" xml:space="preserve"><value>Heiltóni neðar</value></data>
   <data name="Tuning_LowG" xml:space="preserve"><value>Lágt G</value></data>

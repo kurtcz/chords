@@ -33,19 +33,26 @@
   <data name="Find_Loose" xml:space="preserve"><value>Χαλαρή λειτουργία</value></data>
   <data name="Find_NoChord" xml:space="preserve"><value>Δεν βρέθηκε συγχορδία</value></data>
   <data name="Settings_SystemLanguage" xml:space="preserve"><value>{0} (σύστημα)</value></data>
-  <data name="Notation_English" xml:space="preserve"><value>Αγγλική ονομασία</value></data>
-  <data name="Notation_German" xml:space="preserve"><value>Γερμανική ονομασία</value></data>
-  <data name="Notation_Latin" xml:space="preserve"><value>Λατινική ονομασία</value></data>
-  <data name="Settings_BasicChords" xml:space="preserve"><value>Βασικές συγχορδίες</value></data>
-  <data name="Settings_AllChords" xml:space="preserve"><value>Όλες οι συγχορδίες</value></data>
+  <data name="Notation_English" xml:space="preserve"><value>Αγγλική</value></data>
+  <data name="Notation_German" xml:space="preserve"><value>Γερμανική</value></data>
+  <data name="Notation_Latin" xml:space="preserve"><value>Λατινική</value></data>
+  <data name="Settings_BasicChords" xml:space="preserve"><value>Βασικές</value></data>
+  <data name="Settings_AllChords" xml:space="preserve"><value>Όλες</value></data>
   <data name="Settings_MaxFret" xml:space="preserve"><value>Υψηλότερο τάστο:</value></data>
   <data name="Settings_AllowBarre" xml:space="preserve"><value>Να επιτρέπεται το μπαρέ</value></data>
   <data name="Settings_AllowSpecial" xml:space="preserve"><value>Να επιτρέπονται θέσεις με σβησμένες ψηλές χορδές</value></data>
   <data name="Settings_EasyOnly" xml:space="preserve"><value>Μόνο εύκολοι δακτυλισμοί</value></data>
-  <data name="Settings_Vertical" xml:space="preserve"><value>Κάθετα διαγράμματα</value></data>
-  <data name="Settings_Horizontal" xml:space="preserve"><value>Οριζόντια διαγράμματα</value></data>
+  <data name="Settings_Vertical" xml:space="preserve"><value>Κάθετα</value></data>
+  <data name="Settings_Horizontal" xml:space="preserve"><value>Οριζόντια</value></data>
   <data name="Settings_LeftHanded" xml:space="preserve"><value>Αριστερόχειρας (κατοπτρικά διαγράμματα)</value></data>
   <data name="Settings_ShowTips" xml:space="preserve"><value>Εμφάνιση συμβουλών</value></data>
+  <data name="Settings_General" xml:space="preserve"><value>Γενικά</value></data>
+  <data name="Settings_Language" xml:space="preserve"><value>Γλώσσα</value></data>
+  <data name="Settings_Instrument" xml:space="preserve"><value>Όργανο</value></data>
+  <data name="Settings_Tuning" xml:space="preserve"><value>Κούρδισμα</value></data>
+  <data name="Settings_Notation" xml:space="preserve"><value>Ονομασία</value></data>
+  <data name="Settings_Diagrams" xml:space="preserve"><value>Διαγράμματα</value></data>
+  <data name="Settings_Chords" xml:space="preserve"><value>Συγχορδίες</value></data>
   <data name="Instrument_Guitar" xml:space="preserve"><value>Κιθάρα</value></data>
   <data name="Instrument_Ukulele" xml:space="preserve"><value>Γιουκαλίλι</value></data>
   <data name="Instrument_Mandolin" xml:space="preserve"><value>Μαντολίνο</value></data>
@@ -116,7 +123,7 @@
   <data name="Tab_More" xml:space="preserve"><value>Περισσότερα</value></data>
   <data name="Group_Tools" xml:space="preserve"><value>Εργαλεία</value></data>
   <data name="Related_Title" xml:space="preserve"><value>Δείτε επίσης</value></data>
-  <data name="Tuning_Standard" xml:space="preserve"><value>Κανονικό κούρδισμα</value></data>
+  <data name="Tuning_Standard" xml:space="preserve"><value>Κανονικό</value></data>
   <data name="Tuning_HalfStepDown" xml:space="preserve"><value>Μισό τόνο χαμηλότερα</value></data>
   <data name="Tuning_WholeStepDown" xml:space="preserve"><value>Έναν τόνο χαμηλότερα</value></data>
   <data name="Tuning_LowG" xml:space="preserve"><value>Χαμηλό Σολ</value></data>

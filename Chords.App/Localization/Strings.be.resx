@@ -34,19 +34,26 @@
   <data name="Find_Loose" xml:space="preserve"><value>Свабодны рэжым</value></data>
   <data name="Find_NoChord" xml:space="preserve"><value>Акорд не знойдзены</value></data>
   <data name="Settings_SystemLanguage" xml:space="preserve"><value>{0} (сістэма)</value></data>
-  <data name="Notation_English" xml:space="preserve"><value>Англійская натацыя</value></data>
-  <data name="Notation_German" xml:space="preserve"><value>Нямецкая натацыя</value></data>
-  <data name="Notation_Latin" xml:space="preserve"><value>Лацінская натацыя</value></data>
-  <data name="Settings_BasicChords" xml:space="preserve"><value>Асноўныя акорды</value></data>
-  <data name="Settings_AllChords" xml:space="preserve"><value>Усе акорды</value></data>
+  <data name="Notation_English" xml:space="preserve"><value>Англійская</value></data>
+  <data name="Notation_German" xml:space="preserve"><value>Нямецкая</value></data>
+  <data name="Notation_Latin" xml:space="preserve"><value>Лацінская</value></data>
+  <data name="Settings_BasicChords" xml:space="preserve"><value>Асноўныя</value></data>
+  <data name="Settings_AllChords" xml:space="preserve"><value>Усе</value></data>
   <data name="Settings_MaxFret" xml:space="preserve"><value>Найвышэйшы лад:</value></data>
   <data name="Settings_AllowBarre" xml:space="preserve"><value>Дазволіць барэ</value></data>
   <data name="Settings_AllowSpecial" xml:space="preserve"><value>Дазволіць акорды з заглушанымі высокімі струнамі</value></data>
   <data name="Settings_EasyOnly" xml:space="preserve"><value>Толькі простыя аплікатуры</value></data>
-  <data name="Settings_Vertical" xml:space="preserve"><value>Вертыкальныя аплікатуры</value></data>
-  <data name="Settings_Horizontal" xml:space="preserve"><value>Гарызантальныя аплікатуры</value></data>
+  <data name="Settings_Vertical" xml:space="preserve"><value>Вертыкальныя</value></data>
+  <data name="Settings_Horizontal" xml:space="preserve"><value>Гарызантальныя</value></data>
   <data name="Settings_LeftHanded" xml:space="preserve"><value>Для ляўшы (люстраныя аплікатуры)</value></data>
   <data name="Settings_ShowTips" xml:space="preserve"><value>Паказваць парады</value></data>
+  <data name="Settings_General" xml:space="preserve"><value>Агульныя</value></data>
+  <data name="Settings_Language" xml:space="preserve"><value>Мова</value></data>
+  <data name="Settings_Instrument" xml:space="preserve"><value>Інструмент</value></data>
+  <data name="Settings_Tuning" xml:space="preserve"><value>Строй</value></data>
+  <data name="Settings_Notation" xml:space="preserve"><value>Натацыя</value></data>
+  <data name="Settings_Diagrams" xml:space="preserve"><value>Аплікатуры</value></data>
+  <data name="Settings_Chords" xml:space="preserve"><value>Акорды</value></data>
   <data name="Instrument_Guitar" xml:space="preserve"><value>Гітара</value></data>
   <data name="Instrument_Ukulele" xml:space="preserve"><value>Укулеле</value></data>
   <data name="Instrument_Mandolin" xml:space="preserve"><value>Мандаліна</value></data>
@@ -117,7 +124,7 @@
   <data name="Tab_More" xml:space="preserve"><value>Яшчэ</value></data>
   <data name="Group_Tools" xml:space="preserve"><value>Інструменты</value></data>
   <data name="Related_Title" xml:space="preserve"><value>Глядзіце таксама</value></data>
-  <data name="Tuning_Standard" xml:space="preserve"><value>Стандартны строй</value></data>
+  <data name="Tuning_Standard" xml:space="preserve"><value>Стандартны</value></data>
   <data name="Tuning_HalfStepDown" xml:space="preserve"><value>На паўтона ніжэй</value></data>
   <data name="Tuning_WholeStepDown" xml:space="preserve"><value>На тон ніжэй</value></data>
   <data name="Tuning_LowG" xml:space="preserve"><value>Нізкая соль</value></data>

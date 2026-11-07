@@ -33,19 +33,26 @@
   <data name="Find_Loose" xml:space="preserve"><value>Mode flexible</value></data>
   <data name="Find_NoChord" xml:space="preserve"><value>No s'ha trobat cap acord</value></data>
   <data name="Settings_SystemLanguage" xml:space="preserve"><value>{0} (sistema)</value></data>
-  <data name="Notation_English" xml:space="preserve"><value>Notació anglesa</value></data>
-  <data name="Notation_German" xml:space="preserve"><value>Notació alemanya</value></data>
-  <data name="Notation_Latin" xml:space="preserve"><value>Notació llatina</value></data>
-  <data name="Settings_BasicChords" xml:space="preserve"><value>Acords bàsics</value></data>
-  <data name="Settings_AllChords" xml:space="preserve"><value>Tots els acords</value></data>
+  <data name="Notation_English" xml:space="preserve"><value>Anglesa</value></data>
+  <data name="Notation_German" xml:space="preserve"><value>Alemanya</value></data>
+  <data name="Notation_Latin" xml:space="preserve"><value>Llatina</value></data>
+  <data name="Settings_BasicChords" xml:space="preserve"><value>Bàsics</value></data>
+  <data name="Settings_AllChords" xml:space="preserve"><value>Tots</value></data>
   <data name="Settings_MaxFret" xml:space="preserve"><value>Trast més alt:</value></data>
   <data name="Settings_AllowBarre" xml:space="preserve"><value>Permet cejilles</value></data>
   <data name="Settings_AllowSpecial" xml:space="preserve"><value>Permet acords amb cordes agudes apagades</value></data>
   <data name="Settings_EasyOnly" xml:space="preserve"><value>Només digitacions fàcils</value></data>
-  <data name="Settings_Vertical" xml:space="preserve"><value>Diagrames verticals</value></data>
-  <data name="Settings_Horizontal" xml:space="preserve"><value>Diagrames horitzontals</value></data>
+  <data name="Settings_Vertical" xml:space="preserve"><value>Verticals</value></data>
+  <data name="Settings_Horizontal" xml:space="preserve"><value>Horitzontals</value></data>
   <data name="Settings_LeftHanded" xml:space="preserve"><value>Esquerrà (diagrames emmirallats)</value></data>
   <data name="Settings_ShowTips" xml:space="preserve"><value>Mostra els consells</value></data>
+  <data name="Settings_General" xml:space="preserve"><value>General</value></data>
+  <data name="Settings_Language" xml:space="preserve"><value>Idioma</value></data>
+  <data name="Settings_Instrument" xml:space="preserve"><value>Instrument</value></data>
+  <data name="Settings_Tuning" xml:space="preserve"><value>Afinació</value></data>
+  <data name="Settings_Notation" xml:space="preserve"><value>Notació</value></data>
+  <data name="Settings_Diagrams" xml:space="preserve"><value>Diagrames</value></data>
+  <data name="Settings_Chords" xml:space="preserve"><value>Acords</value></data>
   <data name="Instrument_Guitar" xml:space="preserve"><value>Guitarra</value></data>
   <data name="Instrument_Ukulele" xml:space="preserve"><value>Ukulele</value></data>
   <data name="Instrument_Mandolin" xml:space="preserve"><value>Mandolina</value></data>
@@ -116,7 +123,7 @@
   <data name="Tab_More" xml:space="preserve"><value>Més</value></data>
   <data name="Group_Tools" xml:space="preserve"><value>Eines</value></data>
   <data name="Related_Title" xml:space="preserve"><value>Vegeu també</value></data>
-  <data name="Tuning_Standard" xml:space="preserve"><value>Afinació estàndard</value></data>
+  <data name="Tuning_Standard" xml:space="preserve"><value>Estàndard</value></data>
   <data name="Tuning_HalfStepDown" xml:space="preserve"><value>Mig to avall</value></data>
   <data name="Tuning_WholeStepDown" xml:space="preserve"><value>Un to avall</value></data>
   <data name="Tuning_LowG" xml:space="preserve"><value>Sol greu</value></data>

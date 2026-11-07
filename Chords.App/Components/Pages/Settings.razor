@@ -3,125 +3,115 @@
 
 <TopNav Title="@L["Nav_Settings"]" />
 
-<DropdownBar>
-    <Brand>@LanguageName(settings.Language)</Brand>
-    <ChildContent>
-        <li><a @onclick="() => SetLanguage(null)">@LanguageName(null)</a></li>
-        @foreach (var (code, name, flag) in Localizer.Languages)
+<section class="settings-section">
+    <h2>@L["Settings_General"]</h2>
+    <div class="settings-card">
+        <SettingSelect Label="@L["Settings_Language"]">
+            <Value>@LanguageName(settings.Language)</Value>
+            <ChildContent>
+                <li><a @onclick="() => SetLanguage(null)">@LanguageName(null)</a></li>
+                @foreach (var (code, name, flag) in Localizer.Languages)
+                {
+                    <li><a @onclick="() => SetLanguage(code)">@flag @name</a></li>
+                }
+            </ChildContent>
+        </SettingSelect>
+        <SettingSelect Label="@L["Settings_Instrument"]">
+            <Value><Icon Name="@InstrumentIcon(settings.Instrument)" Size="22" Class="instrument-icon" />@L[$"Instrument_{settings.Instrument}"]</Value>
+            <ChildContent>
+                @foreach (var instrument in Enum.GetValues<Instrument>())
+                {
+                    <li><a @onclick="() => Update(() => { settings.Instrument = instrument; editing = null; })"><Icon Name="@InstrumentIcon(instrument)" Size="22" Class="instrument-icon" />@L[$"Instrument_{instrument}"] <sub>(@Localizer.TuningNotes(settings.TuningOf(instrument), settings.conv))</sub></a></li>
+                }
+            </ChildContent>
+        </SettingSelect>
+        @* Tuning of the chosen instrument: the usual ones, the player's own, or a new one. *@
+        <SettingSelect Label="@L["Settings_Tuning"]">
+            <Value>@L.TuningName(tuning) <sub>(@Localizer.TuningNotes(tuning, settings.conv))</sub></Value>
+            <ChildContent>
+                @foreach (var t in settings.TuningsFor(settings.Instrument))
+                {
+                    <li><a @onclick="() => Update(() => { settings.SelectTuning(settings.Instrument, t.Pitches); editing = null; })">@L.TuningName(t) <sub>(@Localizer.TuningNotes(t, settings.conv))</sub></a></li>
+                }
+                <li><a @onclick="() => editing = new InstrumentTuning(null, settings.Instrument, tuning.Pitches)">+ @L["Tuning_New"]</a></li>
+            </ChildContent>
+        </SettingSelect>
+        @if (editing != null)
         {
-            <li><a @onclick="() => SetLanguage(code)">@flag @name</a></li>
+            <div class="setting-row">
+                <TuningEditor @key="editing" Instrument="settings.Instrument" Initial="editing" Conv="settings.conv"
+                              OnSave="SaveTuning" OnCancel="() => editing = null" />
+            </div>
         }
-    </ChildContent>
-</DropdownBar>
-
-<DropdownBar>
-    <Brand>@L[$"Instrument_{settings.Instrument}"]</Brand>
-    <ChildContent>
-        @foreach (var instrument in Enum.GetValues<Instrument>())
+        else if (IsSaved(tuning))
         {
-            <li><a @onclick="() => Update(() => { settings.Instrument = instrument; editing = null; })">@L[$"Instrument_{instrument}"] <sub>(@Localizer.TuningNotes(settings.TuningOf(instrument), settings.conv))</sub></a></li>
+            <div class="setting-row tuning-actions">
+                <button type="button" class="btn btn-default" @onclick="() => editing = tuning">@L["Tuning_Edit"]</button>
+                <button type="button" class="btn btn-default tuning-delete" @onclick="() => DeleteTuning(tuning)">@L["Tuning_Delete"]</button>
+            </div>
         }
-    </ChildContent>
-</DropdownBar>
-
-@* Tuning of the chosen instrument: the usual ones, the player's own, or a new one. *@
-<DropdownBar>
-    <Brand>@L.TuningName(tuning) <sub>(@Localizer.TuningNotes(tuning, settings.conv))</sub></Brand>
-    <ChildContent>
-        @foreach (var t in settings.TuningsFor(settings.Instrument))
-        {
-            <li><a @onclick="() => Update(() => { settings.SelectTuning(settings.Instrument, t.Pitches); editing = null; })">@L.TuningName(t) <sub>(@Localizer.TuningNotes(t, settings.conv))</sub></a></li>
-        }
-        <li><a @onclick="() => editing = new InstrumentTuning(null, settings.Instrument, tuning.Pitches)">+ @L["Tuning_New"]</a></li>
-    </ChildContent>
-</DropdownBar>
-@if (editing != null)
-{
-    <TuningEditor @key="editing" Instrument="settings.Instrument" Initial="editing" Conv="settings.conv"
-                  OnSave="SaveTuning" OnCancel="() => editing = null" />
-}
-else if (IsSaved(tuning))
-{
-    <div class="tuning-actions">
-        <button type="button" class="btn btn-default" @onclick="() => editing = tuning">@L["Tuning_Edit"]</button>
-        <button type="button" class="btn btn-default" @onclick="() => DeleteTuning(tuning)">@L["Tuning_Delete"]</button>
+        <SettingSelect Label="@L["Settings_Notation"]">
+            <Value>@string.Join(" ", settings.Notes.Select(i => i.ToString(settings.conv)))</Value>
+            <ChildContent>
+                @foreach (var conv in settings.NamingConventions)
+                {
+                    <li><a @onclick="() => Update(() => settings.conv = conv)">@L[$"Notation_{conv}"] <sub>(@string.Join("-", settings.Notes.Select(i => i.ToString(conv))))</sub></a></li>
+                }
+            </ChildContent>
+        </SettingSelect>
+        <SettingRow Label="@L["Settings_ShowTips"]">
+            <Toggle Value="settings.ShowTips" ValueChanged="v => Update(() => settings.ShowTips = v)" />
+        </SettingRow>
     </div>
-}
+</section>
 
-<DropdownBar>
-    <Brand>@L[$"Notation_{settings.conv}"]</Brand>
-    <ChildContent>
-        @foreach (var conv in settings.NamingConventions)
+<section class="settings-section">
+    <h2>@L["Settings_Diagrams"]</h2>
+    <div class="settings-card">
+        <div class="setting-row">
+            <Segmented Value="settings.Horizontal" ValueChanged="v => Update(() => settings.Horizontal = v)"
+                       Off="@L["Settings_Vertical"]" On="@L["Settings_Horizontal"]" />
+        </div>
+        @* Mirroring only matters when the neck runs sideways. *@
+        @if (settings.Horizontal)
         {
-            <li><a @onclick="() => Update(() => settings.conv = conv)">@L[$"Notation_{conv}"] <sub>(@string.Join("-", settings.Notes.Select(i => i.ToString(conv))))</sub></a></li>
+            <SettingRow Label="@L["Settings_LeftHanded"]">
+                <Toggle Value="settings.LeftHanded" ValueChanged="v => Update(() => settings.LeftHanded = v)" />
+            </SettingRow>
         }
-    </ChildContent>
-</DropdownBar>
-<DropdownBar>
-    <Brand>@L[settings.Horizontal ? "Settings_Horizontal" : "Settings_Vertical"]</Brand>
-    <ChildContent>
-        <li><a @onclick="() => Update(() => settings.Horizontal = false)">@L["Settings_Vertical"]</a></li>
-        <li><a @onclick="() => Update(() => settings.Horizontal = true)">@L["Settings_Horizontal"]</a></li>
-    </ChildContent>
-</DropdownBar>
-<DropdownBar>
-    <Brand>@L[settings.ShowBasicChordTypes ? "Settings_BasicChords" : "Settings_AllChords"]</Brand>
-    <ChildContent>
-        <li><a @onclick="() => Update(() => settings.ShowBasicChordTypes = true)">@L["Settings_BasicChords"]</a></li>
-        <li><a @onclick="() => Update(() => settings.ShowBasicChordTypes = false)">@L["Settings_AllChords"]</a></li>
-    </ChildContent>
-</DropdownBar>
-<div class="row vertical-align">
-    <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">@L["Settings_MaxFret"]</div>
-    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 justify-right">
-        <div class="badge badge-inverse">@maxFret</div>
     </div>
-</div>
-<div class="row">
-    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-        <input type="range" min="1" max="15" step="1" value="@maxFret"
-               @oninput="e => maxFret = int.Parse((string)e.Value!)"
-               @onchange="e => Update(() => settings.maxFret = int.Parse((string)e.Value!))" />
+</section>
+
+<section class="settings-section">
+    <h2>@L["Settings_Chords"]</h2>
+    <div class="settings-card">
+        <div class="setting-row">
+            <Segmented Value="!settings.ShowBasicChordTypes" ValueChanged="v => Update(() => settings.ShowBasicChordTypes = !v)"
+                       Off="@L["Settings_BasicChords"]" On="@L["Settings_AllChords"]" />
+        </div>
+        <SettingRow Label="@(L["Settings_MaxFret"].TrimEnd(':', '：', ' '))">
+            <ChildContent><span class="setting-number">@maxFret</span></ChildContent>
+            <Below>
+                <input type="range" min="1" max="15" step="1" value="@maxFret"
+                       @oninput="e => maxFret = int.Parse((string)e.Value!)"
+                       @onchange="e => Update(() => settings.maxFret = int.Parse((string)e.Value!))" />
+            </Below>
+        </SettingRow>
+        <SettingRow Label="@L["Settings_EasyOnly"]">
+            <Toggle Value="settings.EasyOnly" ValueChanged="v => Update(() => settings.EasyOnly = v)" />
+        </SettingRow>
+        @* Barre and special shapes only exist in the guitar fingering rules. *@
+        @if (settings.Instrument == Instrument.Guitar)
+        {
+            <SettingRow Label="@L["Settings_AllowBarre"]">
+                <Toggle Value="settings.AllowBarre" ValueChanged="v => Update(() => settings.AllowBarre = v)" />
+            </SettingRow>
+            <SettingRow Label="@L["Settings_AllowSpecial"]">
+                <Toggle Value="settings.AllowSpecial" ValueChanged="v => Update(() => settings.AllowSpecial = v)" />
+            </SettingRow>
+        }
     </div>
-</div>
-@* Barre and special shapes only exist in the guitar fingering rules. *@
-@if (settings.Instrument == Instrument.Guitar)
-{
-<div class="row vertical-align" style="margin-bottom: 20px;">
-    <span class="col-xs-9 col-sm-9 col-md-9 col-lg-9">@L["Settings_AllowBarre"]</span>
-    <span class="col-xs-3 col-sm-3 col-md-3 col-lg-3 justify-right">
-        <Toggle Value="settings.AllowBarre" ValueChanged="v => Update(() => settings.AllowBarre = v)" />
-    </span>
-</div>
-<div class="row vertical-align" style="margin-bottom: 20px;">
-    <span class="col-xs-9 col-sm-9 col-md-9 col-lg-9">@L["Settings_AllowSpecial"]</span>
-    <span class="col-xs-3 col-sm-3 col-md-3 col-lg-3 justify-right">
-        <Toggle Value="settings.AllowSpecial" ValueChanged="v => Update(() => settings.AllowSpecial = v)" />
-    </span>
-</div>
-}
-<div class="row vertical-align" style="margin-bottom: 20px;">
-    <span class="col-xs-9 col-sm-9 col-md-9 col-lg-9">@L["Settings_EasyOnly"]</span>
-    <span class="col-xs-3 col-sm-3 col-md-3 col-lg-3 justify-right">
-        <Toggle Value="settings.EasyOnly" ValueChanged="v => Update(() => settings.EasyOnly = v)" />
-    </span>
-</div>
-@* Mirroring only matters when the neck runs sideways. *@
-@if (settings.Horizontal)
-{
-<div class="row vertical-align" style="margin-bottom: 20px;">
-    <span class="col-xs-9 col-sm-9 col-md-9 col-lg-9">@L["Settings_LeftHanded"]</span>
-    <span class="col-xs-3 col-sm-3 col-md-3 col-lg-3 justify-right">
-        <Toggle Value="settings.LeftHanded" ValueChanged="v => Update(() => settings.LeftHanded = v)" />
-    </span>
-</div>
-}
-<div class="row vertical-align" style="margin-bottom: 20px;">
-    <span class="col-xs-9 col-sm-9 col-md-9 col-lg-9">@L["Settings_ShowTips"]</span>
-    <span class="col-xs-3 col-sm-3 col-md-3 col-lg-3 justify-right">
-        <Toggle Value="settings.ShowTips" ValueChanged="v => Update(() => settings.ShowTips = v)" />
-    </span>
-</div>
+</section>
 
 @code {
     private SettingsModel settings;
@@ -144,6 +134,9 @@ else if (IsSaved(tuning))
 
         return language.Name == null ? code : $"{language.Flag} {language.Name}";
     }
+
+    /// <summary>Name of the instrument's drawing in <see cref="Icon"/>.</summary>
+    private static string InstrumentIcon(Instrument instrument) => instrument.ToString().ToLowerInvariant();
 
     private InstrumentTuning tuning => settings.TuningOf(settings.Instrument);
     /// <summary>Tuning open in the editor: a saved one being changed, or a new one; null when closed.</summary>

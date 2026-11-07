@@ -34,19 +34,26 @@
   <data name="Find_Loose" xml:space="preserve"><value>Laisvas režimas</value></data>
   <data name="Find_NoChord" xml:space="preserve"><value>Akordas nerastas</value></data>
   <data name="Settings_SystemLanguage" xml:space="preserve"><value>{0} (sistema)</value></data>
-  <data name="Notation_English" xml:space="preserve"><value>Angliška notacija</value></data>
-  <data name="Notation_German" xml:space="preserve"><value>Vokiška notacija</value></data>
-  <data name="Notation_Latin" xml:space="preserve"><value>Lotyniška notacija</value></data>
-  <data name="Settings_BasicChords" xml:space="preserve"><value>Pagrindiniai akordai</value></data>
-  <data name="Settings_AllChords" xml:space="preserve"><value>Visi akordai</value></data>
+  <data name="Notation_English" xml:space="preserve"><value>Angliška</value></data>
+  <data name="Notation_German" xml:space="preserve"><value>Vokiška</value></data>
+  <data name="Notation_Latin" xml:space="preserve"><value>Lotyniška</value></data>
+  <data name="Settings_BasicChords" xml:space="preserve"><value>Pagrindiniai</value></data>
+  <data name="Settings_AllChords" xml:space="preserve"><value>Visi</value></data>
   <data name="Settings_MaxFret" xml:space="preserve"><value>Aukščiausias laukelis:</value></data>
   <data name="Settings_AllowBarre" xml:space="preserve"><value>Leisti barė</value></data>
   <data name="Settings_AllowSpecial" xml:space="preserve"><value>Leisti pirštuotes su prislopintomis aukštomis stygomis</value></data>
   <data name="Settings_EasyOnly" xml:space="preserve"><value>Tik lengvi pirštuotės variantai</value></data>
-  <data name="Settings_Vertical" xml:space="preserve"><value>Vertikalios schemos</value></data>
-  <data name="Settings_Horizontal" xml:space="preserve"><value>Horizontalios schemos</value></data>
+  <data name="Settings_Vertical" xml:space="preserve"><value>Vertikalios</value></data>
+  <data name="Settings_Horizontal" xml:space="preserve"><value>Horizontalios</value></data>
   <data name="Settings_LeftHanded" xml:space="preserve"><value>Kairiarankiams (veidrodinės schemos)</value></data>
   <data name="Settings_ShowTips" xml:space="preserve"><value>Rodyti patarimus</value></data>
+  <data name="Settings_General" xml:space="preserve"><value>Bendra</value></data>
+  <data name="Settings_Language" xml:space="preserve"><value>Kalba</value></data>
+  <data name="Settings_Instrument" xml:space="preserve"><value>Instrumentas</value></data>
+  <data name="Settings_Tuning" xml:space="preserve"><value>Derinimas</value></data>
+  <data name="Settings_Notation" xml:space="preserve"><value>Notacija</value></data>
+  <data name="Settings_Diagrams" xml:space="preserve"><value>Schemos</value></data>
+  <data name="Settings_Chords" xml:space="preserve"><value>Akordai</value></data>
   <data name="Instrument_Guitar" xml:space="preserve"><value>Gitara</value></data>
   <data name="Instrument_Ukulele" xml:space="preserve"><value>Ukulelė</value></data>
   <data name="Instrument_Mandolin" xml:space="preserve"><value>Mandolina</value></data>
@@ -117,7 +124,7 @@
   <data name="Tab_More" xml:space="preserve"><value>Daugiau</value></data>
   <data name="Group_Tools" xml:space="preserve"><value>Įrankiai</value></data>
   <data name="Related_Title" xml:space="preserve"><value>Taip pat žiūrėkite</value></data>
-  <data name="Tuning_Standard" xml:space="preserve"><value>Standartinis derinimas</value></data>
+  <data name="Tuning_Standard" xml:space="preserve"><value>Standartinis</value></data>
   <data name="Tuning_HalfStepDown" xml:space="preserve"><value>Pustoniu žemiau</value></data>
   <data name="Tuning_WholeStepDown" xml:space="preserve"><value>Tonu žemiau</value></data>
   <data name="Tuning_LowG" xml:space="preserve"><value>Žemas G</value></data>

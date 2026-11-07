@@ -33,19 +33,26 @@
   <data name="Find_Loose" xml:space="preserve"><value>Voľný režim</value></data>
   <data name="Find_NoChord" xml:space="preserve"><value>Nenašiel sa žiadny akord</value></data>
   <data name="Settings_SystemLanguage" xml:space="preserve"><value>{0} (systém)</value></data>
-  <data name="Notation_English" xml:space="preserve"><value>Anglické názvoslovie</value></data>
-  <data name="Notation_German" xml:space="preserve"><value>Nemecké názvoslovie</value></data>
-  <data name="Notation_Latin" xml:space="preserve"><value>Latinské názvoslovie</value></data>
-  <data name="Settings_BasicChords" xml:space="preserve"><value>Základné akordy</value></data>
-  <data name="Settings_AllChords" xml:space="preserve"><value>Všetky akordy</value></data>
+  <data name="Notation_English" xml:space="preserve"><value>Anglické</value></data>
+  <data name="Notation_German" xml:space="preserve"><value>Nemecké</value></data>
+  <data name="Notation_Latin" xml:space="preserve"><value>Latinské</value></data>
+  <data name="Settings_BasicChords" xml:space="preserve"><value>Základné</value></data>
+  <data name="Settings_AllChords" xml:space="preserve"><value>Všetky</value></data>
   <data name="Settings_MaxFret" xml:space="preserve"><value>Najvyšší pražec:</value></data>
   <data name="Settings_AllowBarre" xml:space="preserve"><value>Povoliť barré akordy</value></data>
   <data name="Settings_AllowSpecial" xml:space="preserve"><value>Povoliť akordy s tlmenými vysokými strunami</value></data>
   <data name="Settings_EasyOnly" xml:space="preserve"><value>Len ľahké hmaty</value></data>
-  <data name="Settings_Vertical" xml:space="preserve"><value>Zvislé diagramy</value></data>
-  <data name="Settings_Horizontal" xml:space="preserve"><value>Vodorovné diagramy</value></data>
+  <data name="Settings_Vertical" xml:space="preserve"><value>Zvislé</value></data>
+  <data name="Settings_Horizontal" xml:space="preserve"><value>Vodorovné</value></data>
   <data name="Settings_LeftHanded" xml:space="preserve"><value>Pre ľavákov (zrkadlové diagramy)</value></data>
   <data name="Settings_ShowTips" xml:space="preserve"><value>Zobrazovať tipy</value></data>
+  <data name="Settings_General" xml:space="preserve"><value>Všeobecné</value></data>
+  <data name="Settings_Language" xml:space="preserve"><value>Jazyk</value></data>
+  <data name="Settings_Instrument" xml:space="preserve"><value>Nástroj</value></data>
+  <data name="Settings_Tuning" xml:space="preserve"><value>Ladenie</value></data>
+  <data name="Settings_Notation" xml:space="preserve"><value>Názvoslovie</value></data>
+  <data name="Settings_Diagrams" xml:space="preserve"><value>Diagramy</value></data>
+  <data name="Settings_Chords" xml:space="preserve"><value>Akordy</value></data>
   <data name="Instrument_Guitar" xml:space="preserve"><value>Gitara</value></data>
   <data name="Instrument_Ukulele" xml:space="preserve"><value>Ukulele</value></data>
   <data name="Instrument_Mandolin" xml:space="preserve"><value>Mandolína</value></data>
@@ -117,7 +124,7 @@
   <data name="Tab_More" xml:space="preserve"><value>Viac</value></data>
   <data name="Group_Tools" xml:space="preserve"><value>Nástroje</value></data>
   <data name="Related_Title" xml:space="preserve"><value>Pozri tiež</value></data>
-  <data name="Tuning_Standard" xml:space="preserve"><value>Štandardné ladenie</value></data>
+  <data name="Tuning_Standard" xml:space="preserve"><value>Štandardné</value></data>
   <data name="Tuning_HalfStepDown" xml:space="preserve"><value>O poltón nižšie</value></data>
   <data name="Tuning_WholeStepDown" xml:space="preserve"><value>O celý tón nižšie</value></data>
   <data name="Tuning_LowG" xml:space="preserve"><value>Spodné G</value></data>

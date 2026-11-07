@@ -33,19 +33,26 @@
   <data name="Find_Loose" xml:space="preserve"><value>Modalità flessibile</value></data>
   <data name="Find_NoChord" xml:space="preserve"><value>Nessun accordo trovato</value></data>
   <data name="Settings_SystemLanguage" xml:space="preserve"><value>{0} (sistema)</value></data>
-  <data name="Notation_English" xml:space="preserve"><value>Notazione inglese</value></data>
-  <data name="Notation_German" xml:space="preserve"><value>Notazione tedesca</value></data>
-  <data name="Notation_Latin" xml:space="preserve"><value>Notazione latina</value></data>
-  <data name="Settings_BasicChords" xml:space="preserve"><value>Accordi di base</value></data>
-  <data name="Settings_AllChords" xml:space="preserve"><value>Tutti gli accordi</value></data>
+  <data name="Notation_English" xml:space="preserve"><value>Inglese</value></data>
+  <data name="Notation_German" xml:space="preserve"><value>Tedesca</value></data>
+  <data name="Notation_Latin" xml:space="preserve"><value>Latina</value></data>
+  <data name="Settings_BasicChords" xml:space="preserve"><value>Di base</value></data>
+  <data name="Settings_AllChords" xml:space="preserve"><value>Tutti</value></data>
   <data name="Settings_MaxFret" xml:space="preserve"><value>Tasto più alto:</value></data>
   <data name="Settings_AllowBarre" xml:space="preserve"><value>Consenti barré</value></data>
   <data name="Settings_AllowSpecial" xml:space="preserve"><value>Consenti accordi con corde acute smorzate</value></data>
   <data name="Settings_EasyOnly" xml:space="preserve"><value>Solo diteggiature facili</value></data>
-  <data name="Settings_Vertical" xml:space="preserve"><value>Diagrammi verticali</value></data>
-  <data name="Settings_Horizontal" xml:space="preserve"><value>Diagrammi orizzontali</value></data>
+  <data name="Settings_Vertical" xml:space="preserve"><value>Verticali</value></data>
+  <data name="Settings_Horizontal" xml:space="preserve"><value>Orizzontali</value></data>
   <data name="Settings_LeftHanded" xml:space="preserve"><value>Mancino (diagrammi specchiati)</value></data>
   <data name="Settings_ShowTips" xml:space="preserve"><value>Mostra suggerimenti</value></data>
+  <data name="Settings_General" xml:space="preserve"><value>Generale</value></data>
+  <data name="Settings_Language" xml:space="preserve"><value>Lingua</value></data>
+  <data name="Settings_Instrument" xml:space="preserve"><value>Strumento</value></data>
+  <data name="Settings_Tuning" xml:space="preserve"><value>Accordatura</value></data>
+  <data name="Settings_Notation" xml:space="preserve"><value>Notazione</value></data>
+  <data name="Settings_Diagrams" xml:space="preserve"><value>Diagrammi</value></data>
+  <data name="Settings_Chords" xml:space="preserve"><value>Accordi</value></data>
   <data name="Instrument_Guitar" xml:space="preserve"><value>Chitarra</value></data>
   <data name="Instrument_Ukulele" xml:space="preserve"><value>Ukulele</value></data>
   <data name="Instrument_Mandolin" xml:space="preserve"><value>Mandolino</value></data>
@@ -116,7 +123,7 @@
   <data name="Tab_More" xml:space="preserve"><value>Altro</value></data>
   <data name="Group_Tools" xml:space="preserve"><value>Strumenti</value></data>
   <data name="Related_Title" xml:space="preserve"><value>Vedi anche</value></data>
-  <data name="Tuning_Standard" xml:space="preserve"><value>Accordatura standard</value></data>
+  <data name="Tuning_Standard" xml:space="preserve"><value>Standard</value></data>
   <data name="Tuning_HalfStepDown" xml:space="preserve"><value>Mezzo tono sotto</value></data>
   <data name="Tuning_WholeStepDown" xml:space="preserve"><value>Un tono sotto</value></data>
   <data name="Tuning_LowG" xml:space="preserve"><value>Sol basso</value></data>

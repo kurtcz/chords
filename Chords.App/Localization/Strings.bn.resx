@@ -33,19 +33,26 @@
   <data name="Find_Loose" xml:space="preserve"><value>নমনীয় মোড</value></data>
   <data name="Find_NoChord" xml:space="preserve"><value>কোনো কর্ড পাওয়া যায়নি</value></data>
   <data name="Settings_SystemLanguage" xml:space="preserve"><value>{0} (সিস্টেম)</value></data>
-  <data name="Notation_English" xml:space="preserve"><value>ইংরেজি নামকরণ</value></data>
-  <data name="Notation_German" xml:space="preserve"><value>জার্মান নামকরণ</value></data>
-  <data name="Notation_Latin" xml:space="preserve"><value>ল্যাটিন নামকরণ</value></data>
-  <data name="Settings_BasicChords" xml:space="preserve"><value>মৌলিক কর্ড</value></data>
-  <data name="Settings_AllChords" xml:space="preserve"><value>সব কর্ড</value></data>
+  <data name="Notation_English" xml:space="preserve"><value>ইংরেজি</value></data>
+  <data name="Notation_German" xml:space="preserve"><value>জার্মান</value></data>
+  <data name="Notation_Latin" xml:space="preserve"><value>ল্যাটিন</value></data>
+  <data name="Settings_BasicChords" xml:space="preserve"><value>মৌলিক</value></data>
+  <data name="Settings_AllChords" xml:space="preserve"><value>সব</value></data>
   <data name="Settings_MaxFret" xml:space="preserve"><value>সর্বোচ্চ ফ্রেট:</value></data>
   <data name="Settings_AllowBarre" xml:space="preserve"><value>ব্যারে কর্ডের অনুমতি দিন</value></data>
   <data name="Settings_AllowSpecial" xml:space="preserve"><value>উঁচু তার মিউট করা কর্ডের অনুমতি দিন</value></data>
   <data name="Settings_EasyOnly" xml:space="preserve"><value>শুধু সহজ আঙুলের অবস্থান</value></data>
-  <data name="Settings_Vertical" xml:space="preserve"><value>খাড়া ডায়াগ্রাম</value></data>
-  <data name="Settings_Horizontal" xml:space="preserve"><value>আড়াআড়ি ডায়াগ্রাম</value></data>
+  <data name="Settings_Vertical" xml:space="preserve"><value>খাড়া</value></data>
+  <data name="Settings_Horizontal" xml:space="preserve"><value>আড়াআড়ি</value></data>
   <data name="Settings_LeftHanded" xml:space="preserve"><value>বাঁহাতি (প্রতিফলিত ডায়াগ্রাম)</value></data>
   <data name="Settings_ShowTips" xml:space="preserve"><value>পরামর্শ দেখান</value></data>
+  <data name="Settings_General" xml:space="preserve"><value>সাধারণ</value></data>
+  <data name="Settings_Language" xml:space="preserve"><value>ভাষা</value></data>
+  <data name="Settings_Instrument" xml:space="preserve"><value>বাদ্যযন্ত্র</value></data>
+  <data name="Settings_Tuning" xml:space="preserve"><value>টিউনিং</value></data>
+  <data name="Settings_Notation" xml:space="preserve"><value>নামকরণ</value></data>
+  <data name="Settings_Diagrams" xml:space="preserve"><value>ডায়াগ্রাম</value></data>
+  <data name="Settings_Chords" xml:space="preserve"><value>কর্ড</value></data>
   <data name="Instrument_Guitar" xml:space="preserve"><value>গিটার</value></data>
   <data name="Instrument_Ukulele" xml:space="preserve"><value>ইউকুলেলে</value></data>
   <data name="Instrument_Mandolin" xml:space="preserve"><value>ম্যান্ডোলিন</value></data>
@@ -116,7 +123,7 @@
   <data name="Tab_More" xml:space="preserve"><value>আরও</value></data>
   <data name="Group_Tools" xml:space="preserve"><value>সরঞ্জাম</value></data>
   <data name="Related_Title" xml:space="preserve"><value>আরও দেখুন</value></data>
-  <data name="Tuning_Standard" xml:space="preserve"><value>স্ট্যান্ডার্ড টিউনিং</value></data>
+  <data name="Tuning_Standard" xml:space="preserve"><value>স্ট্যান্ডার্ড</value></data>
   <data name="Tuning_HalfStepDown" xml:space="preserve"><value>অর্ধ স্বর নিচে</value></data>
   <data name="Tuning_WholeStepDown" xml:space="preserve"><value>পূর্ণ স্বর নিচে</value></data>
   <data name="Tuning_LowG" xml:space="preserve"><value>নিচু G</value></data>

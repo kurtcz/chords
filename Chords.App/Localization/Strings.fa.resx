@@ -33,19 +33,26 @@
   <data name="Find_Loose" xml:space="preserve"><value>حالت آزاد</value></data>
   <data name="Find_NoChord" xml:space="preserve"><value>آکوردی یافت نشد</value></data>
   <data name="Settings_SystemLanguage" xml:space="preserve"><value>{0} (سیستم)</value></data>
-  <data name="Notation_English" xml:space="preserve"><value>نام‌گذاری انگلیسی</value></data>
-  <data name="Notation_German" xml:space="preserve"><value>نام‌گذاری آلمانی</value></data>
-  <data name="Notation_Latin" xml:space="preserve"><value>نام‌گذاری لاتین</value></data>
-  <data name="Settings_BasicChords" xml:space="preserve"><value>آکوردهای پایه</value></data>
-  <data name="Settings_AllChords" xml:space="preserve"><value>همه آکوردها</value></data>
+  <data name="Notation_English" xml:space="preserve"><value>انگلیسی</value></data>
+  <data name="Notation_German" xml:space="preserve"><value>آلمانی</value></data>
+  <data name="Notation_Latin" xml:space="preserve"><value>لاتین</value></data>
+  <data name="Settings_BasicChords" xml:space="preserve"><value>پایه</value></data>
+  <data name="Settings_AllChords" xml:space="preserve"><value>همه</value></data>
   <data name="Settings_MaxFret" xml:space="preserve"><value>بالاترین دستان:</value></data>
   <data name="Settings_AllowBarre" xml:space="preserve"><value>اجازه باره</value></data>
   <data name="Settings_AllowSpecial" xml:space="preserve"><value>اجازه آکورد با سیم‌های زیر خفه‌شده</value></data>
   <data name="Settings_EasyOnly" xml:space="preserve"><value>فقط انگشت‌گذاری‌های آسان</value></data>
-  <data name="Settings_Vertical" xml:space="preserve"><value>نمودارهای عمودی</value></data>
-  <data name="Settings_Horizontal" xml:space="preserve"><value>نمودارهای افقی</value></data>
+  <data name="Settings_Vertical" xml:space="preserve"><value>عمودی</value></data>
+  <data name="Settings_Horizontal" xml:space="preserve"><value>افقی</value></data>
   <data name="Settings_LeftHanded" xml:space="preserve"><value>چپ‌دست (نمودارهای قرینه)</value></data>
   <data name="Settings_ShowTips" xml:space="preserve"><value>نمایش نکته‌ها</value></data>
+  <data name="Settings_General" xml:space="preserve"><value>عمومی</value></data>
+  <data name="Settings_Language" xml:space="preserve"><value>زبان</value></data>
+  <data name="Settings_Instrument" xml:space="preserve"><value>ساز</value></data>
+  <data name="Settings_Tuning" xml:space="preserve"><value>کوک</value></data>
+  <data name="Settings_Notation" xml:space="preserve"><value>نام‌گذاری</value></data>
+  <data name="Settings_Diagrams" xml:space="preserve"><value>نمودارها</value></data>
+  <data name="Settings_Chords" xml:space="preserve"><value>آکوردها</value></data>
   <data name="Instrument_Guitar" xml:space="preserve"><value>گیتار</value></data>
   <data name="Instrument_Ukulele" xml:space="preserve"><value>یوکللی</value></data>
   <data name="Instrument_Mandolin" xml:space="preserve"><value>ماندولین</value></data>
@@ -116,7 +123,7 @@
   <data name="Tab_More" xml:space="preserve"><value>بیشتر</value></data>
   <data name="Group_Tools" xml:space="preserve"><value>ابزارها</value></data>
   <data name="Related_Title" xml:space="preserve"><value>همچنین ببینید</value></data>
-  <data name="Tuning_Standard" xml:space="preserve"><value>کوک استاندارد</value></data>
+  <data name="Tuning_Standard" xml:space="preserve"><value>استاندارد</value></data>
   <data name="Tuning_HalfStepDown" xml:space="preserve"><value>نیم‌پرده پایین‌تر</value></data>
   <data name="Tuning_WholeStepDown" xml:space="preserve"><value>یک پرده پایین‌تر</value></data>
   <data name="Tuning_LowG" xml:space="preserve"><value>سل بم</value></data>

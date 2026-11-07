@@ -33,19 +33,26 @@
   <data name="Find_Loose" xml:space="preserve"><value>Modalitet i lirë</value></data>
   <data name="Find_NoChord" xml:space="preserve"><value>Nuk u gjet asnjë akord</value></data>
   <data name="Settings_SystemLanguage" xml:space="preserve"><value>{0} (sistemi)</value></data>
-  <data name="Notation_English" xml:space="preserve"><value>Shënim anglez</value></data>
-  <data name="Notation_German" xml:space="preserve"><value>Shënim gjerman</value></data>
-  <data name="Notation_Latin" xml:space="preserve"><value>Shënim latin</value></data>
-  <data name="Settings_BasicChords" xml:space="preserve"><value>Akorde bazë</value></data>
-  <data name="Settings_AllChords" xml:space="preserve"><value>Të gjitha akordet</value></data>
+  <data name="Notation_English" xml:space="preserve"><value>Anglez</value></data>
+  <data name="Notation_German" xml:space="preserve"><value>Gjerman</value></data>
+  <data name="Notation_Latin" xml:space="preserve"><value>Latin</value></data>
+  <data name="Settings_BasicChords" xml:space="preserve"><value>Bazë</value></data>
+  <data name="Settings_AllChords" xml:space="preserve"><value>Të gjitha</value></data>
   <data name="Settings_MaxFret" xml:space="preserve"><value>Tasti më i lartë:</value></data>
   <data name="Settings_AllowBarre" xml:space="preserve"><value>Lejo barré</value></data>
   <data name="Settings_AllowSpecial" xml:space="preserve"><value>Lejo akorde me tela të lartë të shuar</value></data>
   <data name="Settings_EasyOnly" xml:space="preserve"><value>Vetëm pozicione të lehta gishtash</value></data>
-  <data name="Settings_Vertical" xml:space="preserve"><value>Diagrame vertikale</value></data>
-  <data name="Settings_Horizontal" xml:space="preserve"><value>Diagrame horizontale</value></data>
+  <data name="Settings_Vertical" xml:space="preserve"><value>Vertikale</value></data>
+  <data name="Settings_Horizontal" xml:space="preserve"><value>Horizontale</value></data>
   <data name="Settings_LeftHanded" xml:space="preserve"><value>Mëngjarash (diagrame të pasqyruara)</value></data>
   <data name="Settings_ShowTips" xml:space="preserve"><value>Shfaq këshillat</value></data>
+  <data name="Settings_General" xml:space="preserve"><value>Të përgjithshme</value></data>
+  <data name="Settings_Language" xml:space="preserve"><value>Gjuha</value></data>
+  <data name="Settings_Instrument" xml:space="preserve"><value>Instrumenti</value></data>
+  <data name="Settings_Tuning" xml:space="preserve"><value>Akordimi</value></data>
+  <data name="Settings_Notation" xml:space="preserve"><value>Shënimi</value></data>
+  <data name="Settings_Diagrams" xml:space="preserve"><value>Diagramet</value></data>
+  <data name="Settings_Chords" xml:space="preserve"><value>Akordet</value></data>
   <data name="Instrument_Guitar" xml:space="preserve"><value>Kitarë</value></data>
   <data name="Instrument_Ukulele" xml:space="preserve"><value>Ukulele</value></data>
   <data name="Instrument_Mandolin" xml:space="preserve"><value>Mandolinë</value></data>
@@ -116,7 +123,7 @@
   <data name="Tab_More" xml:space="preserve"><value>Më shumë</value></data>
   <data name="Group_Tools" xml:space="preserve"><value>Mjete</value></data>
   <data name="Related_Title" xml:space="preserve"><value>Shih gjithashtu</value></data>
-  <data name="Tuning_Standard" xml:space="preserve"><value>Akordim standard</value></data>
+  <data name="Tuning_Standard" xml:space="preserve"><value>Standard</value></data>
   <data name="Tuning_HalfStepDown" xml:space="preserve"><value>Gjysmë toni më poshtë</value></data>
   <data name="Tuning_WholeStepDown" xml:space="preserve"><value>Një ton më poshtë</value></data>
   <data name="Tuning_LowG" xml:space="preserve"><value>Sol i ulët</value></data>

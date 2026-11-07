@@ -33,19 +33,26 @@
   <data name="Find_Loose" xml:space="preserve"><value>Erkin rejim</value></data>
   <data name="Find_NoChord" xml:space="preserve"><value>Akkord topilmadi</value></data>
   <data name="Settings_SystemLanguage" xml:space="preserve"><value>{0} (tizim)</value></data>
-  <data name="Notation_English" xml:space="preserve"><value>Ingliz belgilanishi</value></data>
-  <data name="Notation_German" xml:space="preserve"><value>Nemis belgilanishi</value></data>
-  <data name="Notation_Latin" xml:space="preserve"><value>Lotin belgilanishi</value></data>
-  <data name="Settings_BasicChords" xml:space="preserve"><value>Asosiy akkordlar</value></data>
-  <data name="Settings_AllChords" xml:space="preserve"><value>Barcha akkordlar</value></data>
+  <data name="Notation_English" xml:space="preserve"><value>Ingliz</value></data>
+  <data name="Notation_German" xml:space="preserve"><value>Nemis</value></data>
+  <data name="Notation_Latin" xml:space="preserve"><value>Lotin</value></data>
+  <data name="Settings_BasicChords" xml:space="preserve"><value>Asosiy</value></data>
+  <data name="Settings_AllChords" xml:space="preserve"><value>Barchasi</value></data>
   <data name="Settings_MaxFret" xml:space="preserve"><value>Eng yuqori lad:</value></data>
   <data name="Settings_AllowBarre" xml:space="preserve"><value>Barrega ruxsat berish</value></data>
   <data name="Settings_AllowSpecial" xml:space="preserve"><value>Yuqori torlari boʻgʻilgan qoʻyilishlarga ruxsat berish</value></data>
   <data name="Settings_EasyOnly" xml:space="preserve"><value>Faqat oson barmoq qoʻyilishlari</value></data>
-  <data name="Settings_Vertical" xml:space="preserve"><value>Vertikal sxemalar</value></data>
-  <data name="Settings_Horizontal" xml:space="preserve"><value>Gorizontal sxemalar</value></data>
+  <data name="Settings_Vertical" xml:space="preserve"><value>Vertikal</value></data>
+  <data name="Settings_Horizontal" xml:space="preserve"><value>Gorizontal</value></data>
   <data name="Settings_LeftHanded" xml:space="preserve"><value>Chapaqay (koʻzgu sxemalar)</value></data>
   <data name="Settings_ShowTips" xml:space="preserve"><value>Maslahatlarni koʻrsatish</value></data>
+  <data name="Settings_General" xml:space="preserve"><value>Umumiy</value></data>
+  <data name="Settings_Language" xml:space="preserve"><value>Til</value></data>
+  <data name="Settings_Instrument" xml:space="preserve"><value>Cholgʻu</value></data>
+  <data name="Settings_Tuning" xml:space="preserve"><value>Sozlash</value></data>
+  <data name="Settings_Notation" xml:space="preserve"><value>Belgilanish</value></data>
+  <data name="Settings_Diagrams" xml:space="preserve"><value>Sxemalar</value></data>
+  <data name="Settings_Chords" xml:space="preserve"><value>Akkordlar</value></data>
   <data name="Instrument_Guitar" xml:space="preserve"><value>Gitara</value></data>
   <data name="Instrument_Ukulele" xml:space="preserve"><value>Ukulele</value></data>
   <data name="Instrument_Mandolin" xml:space="preserve"><value>Mandolina</value></data>
@@ -116,7 +123,7 @@
   <data name="Tab_More" xml:space="preserve"><value>Yana</value></data>
   <data name="Group_Tools" xml:space="preserve"><value>Vositalar</value></data>
   <data name="Related_Title" xml:space="preserve"><value>Shuningdek qarang</value></data>
-  <data name="Tuning_Standard" xml:space="preserve"><value>Standart sozlash</value></data>
+  <data name="Tuning_Standard" xml:space="preserve"><value>Standart</value></data>
   <data name="Tuning_HalfStepDown" xml:space="preserve"><value>Yarim ton past</value></data>
   <data name="Tuning_WholeStepDown" xml:space="preserve"><value>Bir ton past</value></data>
   <data name="Tuning_LowG" xml:space="preserve"><value>Past Sol</value></data>

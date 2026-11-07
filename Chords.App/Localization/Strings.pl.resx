@@ -34,19 +34,26 @@
   <data name="Find_Loose" xml:space="preserve"><value>Tryb swobodny</value></data>
   <data name="Find_NoChord" xml:space="preserve"><value>Nie znaleziono akordu</value></data>
   <data name="Settings_SystemLanguage" xml:space="preserve"><value>{0} (system)</value></data>
-  <data name="Notation_English" xml:space="preserve"><value>Notacja angielska</value></data>
-  <data name="Notation_German" xml:space="preserve"><value>Notacja niemiecka</value></data>
-  <data name="Notation_Latin" xml:space="preserve"><value>Notacja łacińska</value></data>
-  <data name="Settings_BasicChords" xml:space="preserve"><value>Podstawowe akordy</value></data>
-  <data name="Settings_AllChords" xml:space="preserve"><value>Wszystkie akordy</value></data>
+  <data name="Notation_English" xml:space="preserve"><value>Angielska</value></data>
+  <data name="Notation_German" xml:space="preserve"><value>Niemiecka</value></data>
+  <data name="Notation_Latin" xml:space="preserve"><value>Łacińska</value></data>
+  <data name="Settings_BasicChords" xml:space="preserve"><value>Podstawowe</value></data>
+  <data name="Settings_AllChords" xml:space="preserve"><value>Wszystkie</value></data>
   <data name="Settings_MaxFret" xml:space="preserve"><value>Najwyższy próg:</value></data>
   <data name="Settings_AllowBarre" xml:space="preserve"><value>Zezwalaj na barré</value></data>
   <data name="Settings_AllowSpecial" xml:space="preserve"><value>Zezwalaj na chwyty z wytłumionymi wysokimi strunami</value></data>
   <data name="Settings_EasyOnly" xml:space="preserve"><value>Tylko łatwe chwyty</value></data>
-  <data name="Settings_Vertical" xml:space="preserve"><value>Pionowe diagramy</value></data>
-  <data name="Settings_Horizontal" xml:space="preserve"><value>Poziome diagramy</value></data>
+  <data name="Settings_Vertical" xml:space="preserve"><value>Pionowe</value></data>
+  <data name="Settings_Horizontal" xml:space="preserve"><value>Poziome</value></data>
   <data name="Settings_LeftHanded" xml:space="preserve"><value>Leworęczny (odbite diagramy)</value></data>
   <data name="Settings_ShowTips" xml:space="preserve"><value>Pokazuj wskazówki</value></data>
+  <data name="Settings_General" xml:space="preserve"><value>Ogólne</value></data>
+  <data name="Settings_Language" xml:space="preserve"><value>Język</value></data>
+  <data name="Settings_Instrument" xml:space="preserve"><value>Instrument</value></data>
+  <data name="Settings_Tuning" xml:space="preserve"><value>Strój</value></data>
+  <data name="Settings_Notation" xml:space="preserve"><value>Notacja</value></data>
+  <data name="Settings_Diagrams" xml:space="preserve"><value>Diagramy</value></data>
+  <data name="Settings_Chords" xml:space="preserve"><value>Akordy</value></data>
   <data name="Instrument_Guitar" xml:space="preserve"><value>Gitara</value></data>
   <data name="Instrument_Ukulele" xml:space="preserve"><value>Ukulele</value></data>
   <data name="Instrument_Mandolin" xml:space="preserve"><value>Mandolina</value></data>
@@ -117,7 +124,7 @@
   <data name="Tab_More" xml:space="preserve"><value>Więcej</value></data>
   <data name="Group_Tools" xml:space="preserve"><value>Narzędzia</value></data>
   <data name="Related_Title" xml:space="preserve"><value>Zobacz też</value></data>
-  <data name="Tuning_Standard" xml:space="preserve"><value>Strój standardowy</value></data>
+  <data name="Tuning_Standard" xml:space="preserve"><value>Standardowy</value></data>
   <data name="Tuning_HalfStepDown" xml:space="preserve"><value>Pół tonu niżej</value></data>
   <data name="Tuning_WholeStepDown" xml:space="preserve"><value>Cały ton niżej</value></data>
   <data name="Tuning_LowG" xml:space="preserve"><value>Niskie G</value></data>

@@ -36,19 +36,26 @@
   <data name="Find_Loose" xml:space="preserve"><value>Mód scaoilte</value></data>
   <data name="Find_NoChord" xml:space="preserve"><value>Níor aimsíodh aon chorda</value></data>
   <data name="Settings_SystemLanguage" xml:space="preserve"><value>{0} (córas)</value></data>
-  <data name="Notation_English" xml:space="preserve"><value>Nodaireacht Bhéarla</value></data>
-  <data name="Notation_German" xml:space="preserve"><value>Nodaireacht Ghearmánach</value></data>
-  <data name="Notation_Latin" xml:space="preserve"><value>Nodaireacht Laidineach</value></data>
-  <data name="Settings_BasicChords" xml:space="preserve"><value>Cordaí bunúsacha</value></data>
-  <data name="Settings_AllChords" xml:space="preserve"><value>Gach corda</value></data>
+  <data name="Notation_English" xml:space="preserve"><value>Béarla</value></data>
+  <data name="Notation_German" xml:space="preserve"><value>Gearmáinis</value></data>
+  <data name="Notation_Latin" xml:space="preserve"><value>Laidin</value></data>
+  <data name="Settings_BasicChords" xml:space="preserve"><value>Bunúsach</value></data>
+  <data name="Settings_AllChords" xml:space="preserve"><value>Gach ceann</value></data>
   <data name="Settings_MaxFret" xml:space="preserve"><value>An fret is airde:</value></data>
   <data name="Settings_AllowBarre" xml:space="preserve"><value>Ceadaigh barré</value></data>
   <data name="Settings_AllowSpecial" xml:space="preserve"><value>Ceadaigh cordaí le téada arda balbhaithe</value></data>
   <data name="Settings_EasyOnly" xml:space="preserve"><value>Méarú éasca amháin</value></data>
-  <data name="Settings_Vertical" xml:space="preserve"><value>Léaráidí ingearacha</value></data>
-  <data name="Settings_Horizontal" xml:space="preserve"><value>Léaráidí cothrománacha</value></data>
+  <data name="Settings_Vertical" xml:space="preserve"><value>Ingearach</value></data>
+  <data name="Settings_Horizontal" xml:space="preserve"><value>Cothrománach</value></data>
   <data name="Settings_LeftHanded" xml:space="preserve"><value>Ciotógach (léaráidí scáthánaithe)</value></data>
   <data name="Settings_ShowTips" xml:space="preserve"><value>Taispeáin leideanna</value></data>
+  <data name="Settings_General" xml:space="preserve"><value>Ginearálta</value></data>
+  <data name="Settings_Language" xml:space="preserve"><value>Teanga</value></data>
+  <data name="Settings_Instrument" xml:space="preserve"><value>Uirlis</value></data>
+  <data name="Settings_Tuning" xml:space="preserve"><value>Tiúnadh</value></data>
+  <data name="Settings_Notation" xml:space="preserve"><value>Nodaireacht</value></data>
+  <data name="Settings_Diagrams" xml:space="preserve"><value>Léaráidí</value></data>
+  <data name="Settings_Chords" xml:space="preserve"><value>Cordaí</value></data>
   <data name="Instrument_Guitar" xml:space="preserve"><value>Giotár</value></data>
   <data name="Instrument_Ukulele" xml:space="preserve"><value>Ukulele</value></data>
   <data name="Instrument_Mandolin" xml:space="preserve"><value>Maindilín</value></data>
@@ -119,7 +126,7 @@
   <data name="Tab_More" xml:space="preserve"><value>Tuilleadh</value></data>
   <data name="Group_Tools" xml:space="preserve"><value>Uirlisí</value></data>
   <data name="Related_Title" xml:space="preserve"><value>Féach freisin</value></data>
-  <data name="Tuning_Standard" xml:space="preserve"><value>Tiúnadh caighdeánach</value></data>
+  <data name="Tuning_Standard" xml:space="preserve"><value>Caighdeánach</value></data>
   <data name="Tuning_HalfStepDown" xml:space="preserve"><value>Leathton síos</value></data>
   <data name="Tuning_WholeStepDown" xml:space="preserve"><value>Ton iomlán síos</value></data>
   <data name="Tuning_LowG" xml:space="preserve"><value>G íseal</value></data>

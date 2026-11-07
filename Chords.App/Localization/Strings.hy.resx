@@ -33,19 +33,26 @@
   <data name="Find_Loose" xml:space="preserve"><value>Ազատ ռեժիմ</value></data>
   <data name="Find_NoChord" xml:space="preserve"><value>Ակորդ չի գտնվել</value></data>
   <data name="Settings_SystemLanguage" xml:space="preserve"><value>{0} (համակարգ)</value></data>
-  <data name="Notation_English" xml:space="preserve"><value>Անգլիական նշագրում</value></data>
-  <data name="Notation_German" xml:space="preserve"><value>Գերմանական նշագրում</value></data>
-  <data name="Notation_Latin" xml:space="preserve"><value>Լատինական նշագրում</value></data>
-  <data name="Settings_BasicChords" xml:space="preserve"><value>Հիմնական ակորդներ</value></data>
-  <data name="Settings_AllChords" xml:space="preserve"><value>Բոլոր ակորդները</value></data>
+  <data name="Notation_English" xml:space="preserve"><value>Անգլիական</value></data>
+  <data name="Notation_German" xml:space="preserve"><value>Գերմանական</value></data>
+  <data name="Notation_Latin" xml:space="preserve"><value>Լատինական</value></data>
+  <data name="Settings_BasicChords" xml:space="preserve"><value>Հիմնական</value></data>
+  <data name="Settings_AllChords" xml:space="preserve"><value>Բոլորը</value></data>
   <data name="Settings_MaxFret" xml:space="preserve"><value>Ամենաբարձր լադը.</value></data>
   <data name="Settings_AllowBarre" xml:space="preserve"><value>Թույլատրել բարե</value></data>
   <data name="Settings_AllowSpecial" xml:space="preserve"><value>Թույլատրել խլացված բարձր լարերով դիրքեր</value></data>
   <data name="Settings_EasyOnly" xml:space="preserve"><value>Միայն հեշտ մատնադրություններ</value></data>
-  <data name="Settings_Vertical" xml:space="preserve"><value>Ուղղահայաց սխեմաներ</value></data>
-  <data name="Settings_Horizontal" xml:space="preserve"><value>Հորիզոնական սխեմաներ</value></data>
+  <data name="Settings_Vertical" xml:space="preserve"><value>Ուղղահայաց</value></data>
+  <data name="Settings_Horizontal" xml:space="preserve"><value>Հորիզոնական</value></data>
   <data name="Settings_LeftHanded" xml:space="preserve"><value>Ձախլիկ (հայելային սխեմաներ)</value></data>
   <data name="Settings_ShowTips" xml:space="preserve"><value>Ցույց տալ խորհուրդները</value></data>
+  <data name="Settings_General" xml:space="preserve"><value>Ընդհանուր</value></data>
+  <data name="Settings_Language" xml:space="preserve"><value>Լեզու</value></data>
+  <data name="Settings_Instrument" xml:space="preserve"><value>Գործիք</value></data>
+  <data name="Settings_Tuning" xml:space="preserve"><value>Լարվածք</value></data>
+  <data name="Settings_Notation" xml:space="preserve"><value>Նշագրում</value></data>
+  <data name="Settings_Diagrams" xml:space="preserve"><value>Սխեմաներ</value></data>
+  <data name="Settings_Chords" xml:space="preserve"><value>Ակորդներ</value></data>
   <data name="Instrument_Guitar" xml:space="preserve"><value>Կիթառ</value></data>
   <data name="Instrument_Ukulele" xml:space="preserve"><value>Ուկուլելե</value></data>
   <data name="Instrument_Mandolin" xml:space="preserve"><value>Մանդոլին</value></data>
@@ -116,7 +123,7 @@
   <data name="Tab_More" xml:space="preserve"><value>Ավելին</value></data>
   <data name="Group_Tools" xml:space="preserve"><value>Գործիքներ</value></data>
   <data name="Related_Title" xml:space="preserve"><value>Տես նաև</value></data>
-  <data name="Tuning_Standard" xml:space="preserve"><value>Ստանդարտ լարվածք</value></data>
+  <data name="Tuning_Standard" xml:space="preserve"><value>Ստանդարտ</value></data>
   <data name="Tuning_HalfStepDown" xml:space="preserve"><value>Կես տոն ցածր</value></data>
   <data name="Tuning_WholeStepDown" xml:space="preserve"><value>Մեկ տոն ցածր</value></data>
   <data name="Tuning_LowG" xml:space="preserve"><value>Ցածր Սոլ</value></data>

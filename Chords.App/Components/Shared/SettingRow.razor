@@ -1,0 +1,15 @@
+@* One line of the settings: what it sets on the left, its control (a toggle, a value) on the right, optionally more below. *@
+<div class="setting-row">
+    <div class="setting-row-main">
+        <span class="setting-label">@Label</span>
+        <span class="setting-control">@ChildContent</span>
+    </div>
+    @Below
+</div>
+
+@code {
+    [Parameter] public string Label { get; set; }
+    [Parameter] public RenderFragment ChildContent { get; set; }
+    /// <summary>Shown under the line across its whole width (a slider).</summary>
+    [Parameter] public RenderFragment Below { get; set; }
+}

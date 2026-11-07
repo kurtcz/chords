@@ -1,0 +1,24 @@
+@* A setting with a list of choices: the label and the current value on one line; tapping it opens the choices below. *@
+<div class="setting-row setting-select @(open ? "open" : null)">
+    <div class="setting-row-main" @onclick="() => open = !open">
+        <span class="setting-label">@Label</span>
+        <span class="setting-value">@Value</span>
+        <span class="setting-chevron" aria-hidden="true">›</span>
+    </div>
+    @if (open)
+    {
+        <ul class="setting-options" @onclick="() => open = false">
+            @ChildContent
+        </ul>
+    }
+</div>
+
+@code {
+    [Parameter] public string Label { get; set; }
+    /// <summary>The current choice.</summary>
+    [Parameter] public RenderFragment Value { get; set; }
+    /// <summary>The choices, each an &lt;li&gt; with an &lt;a @onclick&gt;; choosing one closes the list.</summary>
+    [Parameter] public RenderFragment ChildContent { get; set; }
+
+    private bool open;
+}

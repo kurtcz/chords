@@ -33,19 +33,26 @@
   <data name="Find_Loose" xml:space="preserve"><value>თავისუფალი რეჟიმი</value></data>
   <data name="Find_NoChord" xml:space="preserve"><value>აკორდი ვერ მოიძებნა</value></data>
   <data name="Settings_SystemLanguage" xml:space="preserve"><value>{0} (სისტემა)</value></data>
-  <data name="Notation_English" xml:space="preserve"><value>ინგლისური აღნიშვნა</value></data>
-  <data name="Notation_German" xml:space="preserve"><value>გერმანული აღნიშვნა</value></data>
-  <data name="Notation_Latin" xml:space="preserve"><value>ლათინური აღნიშვნა</value></data>
-  <data name="Settings_BasicChords" xml:space="preserve"><value>ძირითადი აკორდები</value></data>
-  <data name="Settings_AllChords" xml:space="preserve"><value>ყველა აკორდი</value></data>
+  <data name="Notation_English" xml:space="preserve"><value>ინგლისური</value></data>
+  <data name="Notation_German" xml:space="preserve"><value>გერმანული</value></data>
+  <data name="Notation_Latin" xml:space="preserve"><value>ლათინური</value></data>
+  <data name="Settings_BasicChords" xml:space="preserve"><value>ძირითადი</value></data>
+  <data name="Settings_AllChords" xml:space="preserve"><value>ყველა</value></data>
   <data name="Settings_MaxFret" xml:space="preserve"><value>უმაღლესი ლადი:</value></data>
   <data name="Settings_AllowBarre" xml:space="preserve"><value>ბარეს დაშვება</value></data>
   <data name="Settings_AllowSpecial" xml:space="preserve"><value>ჩახშობილი მაღალი სიმებით აკორდების დაშვება</value></data>
   <data name="Settings_EasyOnly" xml:space="preserve"><value>მხოლოდ მარტივი აპლიკატურა</value></data>
-  <data name="Settings_Vertical" xml:space="preserve"><value>ვერტიკალური სქემები</value></data>
-  <data name="Settings_Horizontal" xml:space="preserve"><value>ჰორიზონტალური სქემები</value></data>
+  <data name="Settings_Vertical" xml:space="preserve"><value>ვერტიკალური</value></data>
+  <data name="Settings_Horizontal" xml:space="preserve"><value>ჰორიზონტალური</value></data>
   <data name="Settings_LeftHanded" xml:space="preserve"><value>ცაცია (სარკისებური სქემები)</value></data>
   <data name="Settings_ShowTips" xml:space="preserve"><value>რჩევების ჩვენება</value></data>
+  <data name="Settings_General" xml:space="preserve"><value>ზოგადი</value></data>
+  <data name="Settings_Language" xml:space="preserve"><value>ენა</value></data>
+  <data name="Settings_Instrument" xml:space="preserve"><value>საკრავი</value></data>
+  <data name="Settings_Tuning" xml:space="preserve"><value>აწყობა</value></data>
+  <data name="Settings_Notation" xml:space="preserve"><value>აღნიშვნა</value></data>
+  <data name="Settings_Diagrams" xml:space="preserve"><value>სქემები</value></data>
+  <data name="Settings_Chords" xml:space="preserve"><value>აკორდები</value></data>
   <data name="Instrument_Guitar" xml:space="preserve"><value>გიტარა</value></data>
   <data name="Instrument_Ukulele" xml:space="preserve"><value>უკულელე</value></data>
   <data name="Instrument_Mandolin" xml:space="preserve"><value>მანდოლინა</value></data>
@@ -116,7 +123,7 @@
   <data name="Tab_More" xml:space="preserve"><value>მეტი</value></data>
   <data name="Group_Tools" xml:space="preserve"><value>ხელსაწყოები</value></data>
   <data name="Related_Title" xml:space="preserve"><value>ასევე იხილეთ</value></data>
-  <data name="Tuning_Standard" xml:space="preserve"><value>სტანდარტული აწყობა</value></data>
+  <data name="Tuning_Standard" xml:space="preserve"><value>სტანდარტული</value></data>
   <data name="Tuning_HalfStepDown" xml:space="preserve"><value>ნახევარი ტონით დაბლა</value></data>
   <data name="Tuning_WholeStepDown" xml:space="preserve"><value>ერთი ტონით დაბლა</value></data>
   <data name="Tuning_LowG" xml:space="preserve"><value>დაბალი სოლი</value></data>

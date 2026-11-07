@@ -36,19 +36,26 @@
   <data name="Find_Loose" xml:space="preserve"><value>Modalità flessibbli</value></data>
   <data name="Find_NoChord" xml:space="preserve"><value>Ebda kord ma nstab</value></data>
   <data name="Settings_SystemLanguage" xml:space="preserve"><value>{0} (sistema)</value></data>
-  <data name="Notation_English" xml:space="preserve"><value>Notazzjoni Ingliża</value></data>
-  <data name="Notation_German" xml:space="preserve"><value>Notazzjoni Ġermaniża</value></data>
-  <data name="Notation_Latin" xml:space="preserve"><value>Notazzjoni Latina</value></data>
-  <data name="Settings_BasicChords" xml:space="preserve"><value>Kordi bażiċi</value></data>
-  <data name="Settings_AllChords" xml:space="preserve"><value>Il-kordi kollha</value></data>
+  <data name="Notation_English" xml:space="preserve"><value>Ingliża</value></data>
+  <data name="Notation_German" xml:space="preserve"><value>Ġermaniża</value></data>
+  <data name="Notation_Latin" xml:space="preserve"><value>Latina</value></data>
+  <data name="Settings_BasicChords" xml:space="preserve"><value>Bażiċi</value></data>
+  <data name="Settings_AllChords" xml:space="preserve"><value>Kollha</value></data>
   <data name="Settings_MaxFret" xml:space="preserve"><value>L-ogħla tasta:</value></data>
   <data name="Settings_AllowBarre" xml:space="preserve"><value>Ippermetti l-barré</value></data>
   <data name="Settings_AllowSpecial" xml:space="preserve"><value>Ippermetti kordi b'kordi għoljin mitfija</value></data>
   <data name="Settings_EasyOnly" xml:space="preserve"><value>Pożizzjonijiet tas-swaba’ faċli biss</value></data>
-  <data name="Settings_Vertical" xml:space="preserve"><value>Dijagrammi vertikali</value></data>
-  <data name="Settings_Horizontal" xml:space="preserve"><value>Dijagrammi orizzontali</value></data>
+  <data name="Settings_Vertical" xml:space="preserve"><value>Vertikali</value></data>
+  <data name="Settings_Horizontal" xml:space="preserve"><value>Orizzontali</value></data>
   <data name="Settings_LeftHanded" xml:space="preserve"><value>Xellugi (dijagrammi mirja)</value></data>
   <data name="Settings_ShowTips" xml:space="preserve"><value>Uri l-ħjiel</value></data>
+  <data name="Settings_General" xml:space="preserve"><value>Ġenerali</value></data>
+  <data name="Settings_Language" xml:space="preserve"><value>Lingwa</value></data>
+  <data name="Settings_Instrument" xml:space="preserve"><value>Strument</value></data>
+  <data name="Settings_Tuning" xml:space="preserve"><value>Irfinar</value></data>
+  <data name="Settings_Notation" xml:space="preserve"><value>Notazzjoni</value></data>
+  <data name="Settings_Diagrams" xml:space="preserve"><value>Dijagrammi</value></data>
+  <data name="Settings_Chords" xml:space="preserve"><value>Kordi</value></data>
   <data name="Instrument_Guitar" xml:space="preserve"><value>Kitarra</value></data>
   <data name="Instrument_Ukulele" xml:space="preserve"><value>Ukulele</value></data>
   <data name="Instrument_Mandolin" xml:space="preserve"><value>Mandolina</value></data>
@@ -119,7 +126,7 @@
   <data name="Tab_More" xml:space="preserve"><value>Aktar</value></data>
   <data name="Group_Tools" xml:space="preserve"><value>Għodod</value></data>
   <data name="Related_Title" xml:space="preserve"><value>Ara wkoll</value></data>
-  <data name="Tuning_Standard" xml:space="preserve"><value>Irfinar standard</value></data>
+  <data name="Tuning_Standard" xml:space="preserve"><value>Standard</value></data>
   <data name="Tuning_HalfStepDown" xml:space="preserve"><value>Nofs ton aktar baxx</value></data>
   <data name="Tuning_WholeStepDown" xml:space="preserve"><value>Ton sħiħ aktar baxx</value></data>
   <data name="Tuning_LowG" xml:space="preserve"><value>G baxx</value></data>

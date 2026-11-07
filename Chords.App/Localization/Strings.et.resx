@@ -33,19 +33,26 @@
   <data name="Find_Loose" xml:space="preserve"><value>Vaba režiim</value></data>
   <data name="Find_NoChord" xml:space="preserve"><value>Akordi ei leitud</value></data>
   <data name="Settings_SystemLanguage" xml:space="preserve"><value>{0} (süsteem)</value></data>
-  <data name="Notation_English" xml:space="preserve"><value>Inglise noodinimed</value></data>
-  <data name="Notation_German" xml:space="preserve"><value>Saksa noodinimed</value></data>
-  <data name="Notation_Latin" xml:space="preserve"><value>Ladina noodinimed</value></data>
-  <data name="Settings_BasicChords" xml:space="preserve"><value>Põhiakordid</value></data>
-  <data name="Settings_AllChords" xml:space="preserve"><value>Kõik akordid</value></data>
+  <data name="Notation_English" xml:space="preserve"><value>Inglise</value></data>
+  <data name="Notation_German" xml:space="preserve"><value>Saksa</value></data>
+  <data name="Notation_Latin" xml:space="preserve"><value>Ladina</value></data>
+  <data name="Settings_BasicChords" xml:space="preserve"><value>Põhilised</value></data>
+  <data name="Settings_AllChords" xml:space="preserve"><value>Kõik</value></data>
   <data name="Settings_MaxFret" xml:space="preserve"><value>Kõrgeim pand:</value></data>
   <data name="Settings_AllowBarre" xml:space="preserve"><value>Luba barrée-haarded</value></data>
   <data name="Settings_AllowSpecial" xml:space="preserve"><value>Luba haarded summutatud kõrgete keeltega</value></data>
   <data name="Settings_EasyOnly" xml:space="preserve"><value>Ainult lihtsad sõrmestused</value></data>
-  <data name="Settings_Vertical" xml:space="preserve"><value>Püstised skeemid</value></data>
-  <data name="Settings_Horizontal" xml:space="preserve"><value>Rõhtsad skeemid</value></data>
+  <data name="Settings_Vertical" xml:space="preserve"><value>Püstised</value></data>
+  <data name="Settings_Horizontal" xml:space="preserve"><value>Rõhtsad</value></data>
   <data name="Settings_LeftHanded" xml:space="preserve"><value>Vasakukäeline (peegeldatud skeemid)</value></data>
   <data name="Settings_ShowTips" xml:space="preserve"><value>Näita vihjeid</value></data>
+  <data name="Settings_General" xml:space="preserve"><value>Üldine</value></data>
+  <data name="Settings_Language" xml:space="preserve"><value>Keel</value></data>
+  <data name="Settings_Instrument" xml:space="preserve"><value>Pill</value></data>
+  <data name="Settings_Tuning" xml:space="preserve"><value>Häälestus</value></data>
+  <data name="Settings_Notation" xml:space="preserve"><value>Noodinimed</value></data>
+  <data name="Settings_Diagrams" xml:space="preserve"><value>Skeemid</value></data>
+  <data name="Settings_Chords" xml:space="preserve"><value>Akordid</value></data>
   <data name="Instrument_Guitar" xml:space="preserve"><value>Kitarr</value></data>
   <data name="Instrument_Ukulele" xml:space="preserve"><value>Ukulele</value></data>
   <data name="Instrument_Mandolin" xml:space="preserve"><value>Mandoliin</value></data>
@@ -116,7 +123,7 @@
   <data name="Tab_More" xml:space="preserve"><value>Veel</value></data>
   <data name="Group_Tools" xml:space="preserve"><value>Tööriistad</value></data>
   <data name="Related_Title" xml:space="preserve"><value>Vaata ka</value></data>
-  <data name="Tuning_Standard" xml:space="preserve"><value>Standardhäälestus</value></data>
+  <data name="Tuning_Standard" xml:space="preserve"><value>Standardne</value></data>
   <data name="Tuning_HalfStepDown" xml:space="preserve"><value>Pooltooni madalam</value></data>
   <data name="Tuning_WholeStepDown" xml:space="preserve"><value>Terve tooni madalam</value></data>
   <data name="Tuning_LowG" xml:space="preserve"><value>Madal G</value></data>

@@ -37,19 +37,26 @@
   <data name="Find_Loose" xml:space="preserve"><value>Modd llac</value></data>
   <data name="Find_NoChord" xml:space="preserve"><value>Dim cord wedi'i ganfod</value></data>
   <data name="Settings_SystemLanguage" xml:space="preserve"><value>{0} (system)</value></data>
-  <data name="Notation_English" xml:space="preserve"><value>Nodiant Saesneg</value></data>
-  <data name="Notation_German" xml:space="preserve"><value>Nodiant Almaeneg</value></data>
-  <data name="Notation_Latin" xml:space="preserve"><value>Nodiant Lladin</value></data>
-  <data name="Settings_BasicChords" xml:space="preserve"><value>Cordiau sylfaenol</value></data>
-  <data name="Settings_AllChords" xml:space="preserve"><value>Pob cord</value></data>
+  <data name="Notation_English" xml:space="preserve"><value>Saesneg</value></data>
+  <data name="Notation_German" xml:space="preserve"><value>Almaeneg</value></data>
+  <data name="Notation_Latin" xml:space="preserve"><value>Lladin</value></data>
+  <data name="Settings_BasicChords" xml:space="preserve"><value>Sylfaenol</value></data>
+  <data name="Settings_AllChords" xml:space="preserve"><value>Pob un</value></data>
   <data name="Settings_MaxFret" xml:space="preserve"><value>Ffret uchaf:</value></data>
   <data name="Settings_AllowBarre" xml:space="preserve"><value>Caniatáu barré</value></data>
   <data name="Settings_AllowSpecial" xml:space="preserve"><value>Caniatáu cordiau â thannau uchel wedi'u tawelu</value></data>
   <data name="Settings_EasyOnly" xml:space="preserve"><value>Byseddu hawdd yn unig</value></data>
-  <data name="Settings_Vertical" xml:space="preserve"><value>Diagramau fertigol</value></data>
-  <data name="Settings_Horizontal" xml:space="preserve"><value>Diagramau llorweddol</value></data>
+  <data name="Settings_Vertical" xml:space="preserve"><value>Fertigol</value></data>
+  <data name="Settings_Horizontal" xml:space="preserve"><value>Llorweddol</value></data>
   <data name="Settings_LeftHanded" xml:space="preserve"><value>Llaw chwith (diagramau drych)</value></data>
   <data name="Settings_ShowTips" xml:space="preserve"><value>Dangos awgrymiadau</value></data>
+  <data name="Settings_General" xml:space="preserve"><value>Cyffredinol</value></data>
+  <data name="Settings_Language" xml:space="preserve"><value>Iaith</value></data>
+  <data name="Settings_Instrument" xml:space="preserve"><value>Offeryn</value></data>
+  <data name="Settings_Tuning" xml:space="preserve"><value>Tiwnio</value></data>
+  <data name="Settings_Notation" xml:space="preserve"><value>Nodiant</value></data>
+  <data name="Settings_Diagrams" xml:space="preserve"><value>Diagramau</value></data>
+  <data name="Settings_Chords" xml:space="preserve"><value>Cordiau</value></data>
   <data name="Instrument_Guitar" xml:space="preserve"><value>Gitâr</value></data>
   <data name="Instrument_Ukulele" xml:space="preserve"><value>Iwcalili</value></data>
   <data name="Instrument_Mandolin" xml:space="preserve"><value>Mandolin</value></data>
@@ -120,7 +127,7 @@
   <data name="Tab_More" xml:space="preserve"><value>Mwy</value></data>
   <data name="Group_Tools" xml:space="preserve"><value>Offer</value></data>
   <data name="Related_Title" xml:space="preserve"><value>Gweler hefyd</value></data>
-  <data name="Tuning_Standard" xml:space="preserve"><value>Tiwnio safonol</value></data>
+  <data name="Tuning_Standard" xml:space="preserve"><value>Safonol</value></data>
   <data name="Tuning_HalfStepDown" xml:space="preserve"><value>Hanner tôn i lawr</value></data>
   <data name="Tuning_WholeStepDown" xml:space="preserve"><value>Tôn cyfan i lawr</value></data>
   <data name="Tuning_LowG" xml:space="preserve"><value>G isel</value></data>

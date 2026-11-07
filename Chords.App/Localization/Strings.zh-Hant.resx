@@ -32,19 +32,26 @@
   <data name="Find_Loose" xml:space="preserve"><value>寬鬆模式</value></data>
   <data name="Find_NoChord" xml:space="preserve"><value>找不到和弦</value></data>
   <data name="Settings_SystemLanguage" xml:space="preserve"><value>{0} (系統)</value></data>
-  <data name="Notation_English" xml:space="preserve"><value>英式記譜</value></data>
-  <data name="Notation_German" xml:space="preserve"><value>德式記譜</value></data>
-  <data name="Notation_Latin" xml:space="preserve"><value>拉丁記譜</value></data>
-  <data name="Settings_BasicChords" xml:space="preserve"><value>基本和弦</value></data>
-  <data name="Settings_AllChords" xml:space="preserve"><value>所有和弦</value></data>
+  <data name="Notation_English" xml:space="preserve"><value>英式</value></data>
+  <data name="Notation_German" xml:space="preserve"><value>德式</value></data>
+  <data name="Notation_Latin" xml:space="preserve"><value>拉丁式</value></data>
+  <data name="Settings_BasicChords" xml:space="preserve"><value>基本</value></data>
+  <data name="Settings_AllChords" xml:space="preserve"><value>全部</value></data>
   <data name="Settings_MaxFret" xml:space="preserve"><value>最高琴格：</value></data>
   <data name="Settings_AllowBarre" xml:space="preserve"><value>允許封閉和弦</value></data>
   <data name="Settings_AllowSpecial" xml:space="preserve"><value>允許高音弦悶音的指法</value></data>
   <data name="Settings_EasyOnly" xml:space="preserve"><value>僅顯示簡單指法</value></data>
-  <data name="Settings_Vertical" xml:space="preserve"><value>直向和弦圖</value></data>
-  <data name="Settings_Horizontal" xml:space="preserve"><value>橫向和弦圖</value></data>
+  <data name="Settings_Vertical" xml:space="preserve"><value>直向</value></data>
+  <data name="Settings_Horizontal" xml:space="preserve"><value>橫向</value></data>
   <data name="Settings_LeftHanded" xml:space="preserve"><value>左手模式（鏡像和弦圖）</value></data>
   <data name="Settings_ShowTips" xml:space="preserve"><value>顯示提示</value></data>
+  <data name="Settings_General" xml:space="preserve"><value>一般</value></data>
+  <data name="Settings_Language" xml:space="preserve"><value>語言</value></data>
+  <data name="Settings_Instrument" xml:space="preserve"><value>樂器</value></data>
+  <data name="Settings_Tuning" xml:space="preserve"><value>調弦</value></data>
+  <data name="Settings_Notation" xml:space="preserve"><value>記譜法</value></data>
+  <data name="Settings_Diagrams" xml:space="preserve"><value>和弦圖</value></data>
+  <data name="Settings_Chords" xml:space="preserve"><value>和弦</value></data>
   <data name="Instrument_Guitar" xml:space="preserve"><value>吉他</value></data>
   <data name="Instrument_Ukulele" xml:space="preserve"><value>烏克麗麗</value></data>
   <data name="Instrument_Mandolin" xml:space="preserve"><value>曼陀林</value></data>
@@ -115,7 +122,7 @@
   <data name="Tab_More" xml:space="preserve"><value>更多</value></data>
   <data name="Group_Tools" xml:space="preserve"><value>工具</value></data>
   <data name="Related_Title" xml:space="preserve"><value>另請參閱</value></data>
-  <data name="Tuning_Standard" xml:space="preserve"><value>標準調弦</value></data>
+  <data name="Tuning_Standard" xml:space="preserve"><value>標準</value></data>
   <data name="Tuning_HalfStepDown" xml:space="preserve"><value>降半音</value></data>
   <data name="Tuning_WholeStepDown" xml:space="preserve"><value>降全音</value></data>
   <data name="Tuning_LowG" xml:space="preserve"><value>低音G</value></data>

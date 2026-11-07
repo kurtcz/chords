@@ -33,19 +33,26 @@
   <data name="Find_Loose" xml:space="preserve"><value>Laza mód</value></data>
   <data name="Find_NoChord" xml:space="preserve"><value>Nem található akkord</value></data>
   <data name="Settings_SystemLanguage" xml:space="preserve"><value>{0} (rendszer)</value></data>
-  <data name="Notation_English" xml:space="preserve"><value>Angol hangjelölés</value></data>
-  <data name="Notation_German" xml:space="preserve"><value>Német hangjelölés</value></data>
-  <data name="Notation_Latin" xml:space="preserve"><value>Latin hangjelölés</value></data>
-  <data name="Settings_BasicChords" xml:space="preserve"><value>Alapakkordok</value></data>
-  <data name="Settings_AllChords" xml:space="preserve"><value>Minden akkord</value></data>
+  <data name="Notation_English" xml:space="preserve"><value>Angol</value></data>
+  <data name="Notation_German" xml:space="preserve"><value>Német</value></data>
+  <data name="Notation_Latin" xml:space="preserve"><value>Latin</value></data>
+  <data name="Settings_BasicChords" xml:space="preserve"><value>Alap</value></data>
+  <data name="Settings_AllChords" xml:space="preserve"><value>Mind</value></data>
   <data name="Settings_MaxFret" xml:space="preserve"><value>Legmagasabb bund:</value></data>
   <data name="Settings_AllowBarre" xml:space="preserve"><value>Barré fogások engedélyezése</value></data>
   <data name="Settings_AllowSpecial" xml:space="preserve"><value>Tompított magas húros fogások engedélyezése</value></data>
   <data name="Settings_EasyOnly" xml:space="preserve"><value>Csak könnyű fogások</value></data>
-  <data name="Settings_Vertical" xml:space="preserve"><value>Függőleges ábrák</value></data>
-  <data name="Settings_Horizontal" xml:space="preserve"><value>Vízszintes ábrák</value></data>
+  <data name="Settings_Vertical" xml:space="preserve"><value>Függőleges</value></data>
+  <data name="Settings_Horizontal" xml:space="preserve"><value>Vízszintes</value></data>
   <data name="Settings_LeftHanded" xml:space="preserve"><value>Balkezes (tükrözött ábrák)</value></data>
   <data name="Settings_ShowTips" xml:space="preserve"><value>Tippek megjelenítése</value></data>
+  <data name="Settings_General" xml:space="preserve"><value>Általános</value></data>
+  <data name="Settings_Language" xml:space="preserve"><value>Nyelv</value></data>
+  <data name="Settings_Instrument" xml:space="preserve"><value>Hangszer</value></data>
+  <data name="Settings_Tuning" xml:space="preserve"><value>Hangolás</value></data>
+  <data name="Settings_Notation" xml:space="preserve"><value>Hangjelölés</value></data>
+  <data name="Settings_Diagrams" xml:space="preserve"><value>Ábrák</value></data>
+  <data name="Settings_Chords" xml:space="preserve"><value>Akkordok</value></data>
   <data name="Instrument_Guitar" xml:space="preserve"><value>Gitár</value></data>
   <data name="Instrument_Ukulele" xml:space="preserve"><value>Ukulele</value></data>
   <data name="Instrument_Mandolin" xml:space="preserve"><value>Mandolin</value></data>
@@ -116,7 +123,7 @@
   <data name="Tab_More" xml:space="preserve"><value>Továbbiak</value></data>
   <data name="Group_Tools" xml:space="preserve"><value>Eszközök</value></data>
   <data name="Related_Title" xml:space="preserve"><value>Lásd még</value></data>
-  <data name="Tuning_Standard" xml:space="preserve"><value>Normál hangolás</value></data>
+  <data name="Tuning_Standard" xml:space="preserve"><value>Normál</value></data>
   <data name="Tuning_HalfStepDown" xml:space="preserve"><value>Fél hanggal lejjebb</value></data>
   <data name="Tuning_WholeStepDown" xml:space="preserve"><value>Egész hanggal lejjebb</value></data>
   <data name="Tuning_LowG" xml:space="preserve"><value>Mély G</value></data>

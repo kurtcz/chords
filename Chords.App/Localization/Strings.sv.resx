@@ -33,19 +33,26 @@
   <data name="Find_Loose" xml:space="preserve"><value>Fritt läge</value></data>
   <data name="Find_NoChord" xml:space="preserve"><value>Inget ackord hittades</value></data>
   <data name="Settings_SystemLanguage" xml:space="preserve"><value>{0} (system)</value></data>
-  <data name="Notation_English" xml:space="preserve"><value>Engelsk notation</value></data>
-  <data name="Notation_German" xml:space="preserve"><value>Tysk notation</value></data>
-  <data name="Notation_Latin" xml:space="preserve"><value>Latinsk notation</value></data>
-  <data name="Settings_BasicChords" xml:space="preserve"><value>Grundackord</value></data>
-  <data name="Settings_AllChords" xml:space="preserve"><value>Alla ackord</value></data>
+  <data name="Notation_English" xml:space="preserve"><value>Engelsk</value></data>
+  <data name="Notation_German" xml:space="preserve"><value>Tysk</value></data>
+  <data name="Notation_Latin" xml:space="preserve"><value>Latinsk</value></data>
+  <data name="Settings_BasicChords" xml:space="preserve"><value>Grundläggande</value></data>
+  <data name="Settings_AllChords" xml:space="preserve"><value>Alla</value></data>
   <data name="Settings_MaxFret" xml:space="preserve"><value>Högsta band:</value></data>
   <data name="Settings_AllowBarre" xml:space="preserve"><value>Tillåt barréackord</value></data>
   <data name="Settings_AllowSpecial" xml:space="preserve"><value>Tillåt grepp med dämpade ljusa strängar</value></data>
   <data name="Settings_EasyOnly" xml:space="preserve"><value>Endast enkla grepp</value></data>
-  <data name="Settings_Vertical" xml:space="preserve"><value>Lodräta diagram</value></data>
-  <data name="Settings_Horizontal" xml:space="preserve"><value>Vågräta diagram</value></data>
+  <data name="Settings_Vertical" xml:space="preserve"><value>Lodräta</value></data>
+  <data name="Settings_Horizontal" xml:space="preserve"><value>Vågräta</value></data>
   <data name="Settings_LeftHanded" xml:space="preserve"><value>Vänsterhänt (spegelvända diagram)</value></data>
   <data name="Settings_ShowTips" xml:space="preserve"><value>Visa tips</value></data>
+  <data name="Settings_General" xml:space="preserve"><value>Allmänt</value></data>
+  <data name="Settings_Language" xml:space="preserve"><value>Språk</value></data>
+  <data name="Settings_Instrument" xml:space="preserve"><value>Instrument</value></data>
+  <data name="Settings_Tuning" xml:space="preserve"><value>Stämning</value></data>
+  <data name="Settings_Notation" xml:space="preserve"><value>Notation</value></data>
+  <data name="Settings_Diagrams" xml:space="preserve"><value>Diagram</value></data>
+  <data name="Settings_Chords" xml:space="preserve"><value>Ackord</value></data>
   <data name="Instrument_Guitar" xml:space="preserve"><value>Gitarr</value></data>
   <data name="Instrument_Ukulele" xml:space="preserve"><value>Ukulele</value></data>
   <data name="Instrument_Mandolin" xml:space="preserve"><value>Mandolin</value></data>
@@ -116,7 +123,7 @@
   <data name="Tab_More" xml:space="preserve"><value>Mer</value></data>
   <data name="Group_Tools" xml:space="preserve"><value>Verktyg</value></data>
   <data name="Related_Title" xml:space="preserve"><value>Se även</value></data>
-  <data name="Tuning_Standard" xml:space="preserve"><value>Standardstämning</value></data>
+  <data name="Tuning_Standard" xml:space="preserve"><value>Standard</value></data>
   <data name="Tuning_HalfStepDown" xml:space="preserve"><value>Halvton ner</value></data>
   <data name="Tuning_WholeStepDown" xml:space="preserve"><value>Helton ner</value></data>
   <data name="Tuning_LowG" xml:space="preserve"><value>Låg G</value></data>

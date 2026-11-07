@@ -33,19 +33,26 @@
   <data name="Find_Loose" xml:space="preserve"><value>Løs tilstand</value></data>
   <data name="Find_NoChord" xml:space="preserve"><value>Ingen akkord fundet</value></data>
   <data name="Settings_SystemLanguage" xml:space="preserve"><value>{0} (system)</value></data>
-  <data name="Notation_English" xml:space="preserve"><value>Engelsk notation</value></data>
-  <data name="Notation_German" xml:space="preserve"><value>Tysk notation</value></data>
-  <data name="Notation_Latin" xml:space="preserve"><value>Latinsk notation</value></data>
-  <data name="Settings_BasicChords" xml:space="preserve"><value>Grundakkorder</value></data>
-  <data name="Settings_AllChords" xml:space="preserve"><value>Alle akkorder</value></data>
+  <data name="Notation_English" xml:space="preserve"><value>Engelsk</value></data>
+  <data name="Notation_German" xml:space="preserve"><value>Tysk</value></data>
+  <data name="Notation_Latin" xml:space="preserve"><value>Latinsk</value></data>
+  <data name="Settings_BasicChords" xml:space="preserve"><value>Grundlæggende</value></data>
+  <data name="Settings_AllChords" xml:space="preserve"><value>Alle</value></data>
   <data name="Settings_MaxFret" xml:space="preserve"><value>Højeste bånd:</value></data>
   <data name="Settings_AllowBarre" xml:space="preserve"><value>Tillad barré-greb</value></data>
   <data name="Settings_AllowSpecial" xml:space="preserve"><value>Tillad greb med dæmpede høje strenge</value></data>
   <data name="Settings_EasyOnly" xml:space="preserve"><value>Kun lette greb</value></data>
-  <data name="Settings_Vertical" xml:space="preserve"><value>Lodrette diagrammer</value></data>
-  <data name="Settings_Horizontal" xml:space="preserve"><value>Vandrette diagrammer</value></data>
+  <data name="Settings_Vertical" xml:space="preserve"><value>Lodrette</value></data>
+  <data name="Settings_Horizontal" xml:space="preserve"><value>Vandrette</value></data>
   <data name="Settings_LeftHanded" xml:space="preserve"><value>Venstrehåndet (spejlvendte diagrammer)</value></data>
   <data name="Settings_ShowTips" xml:space="preserve"><value>Vis tips</value></data>
+  <data name="Settings_General" xml:space="preserve"><value>Generelt</value></data>
+  <data name="Settings_Language" xml:space="preserve"><value>Sprog</value></data>
+  <data name="Settings_Instrument" xml:space="preserve"><value>Instrument</value></data>
+  <data name="Settings_Tuning" xml:space="preserve"><value>Stemning</value></data>
+  <data name="Settings_Notation" xml:space="preserve"><value>Notation</value></data>
+  <data name="Settings_Diagrams" xml:space="preserve"><value>Diagrammer</value></data>
+  <data name="Settings_Chords" xml:space="preserve"><value>Akkorder</value></data>
   <data name="Instrument_Guitar" xml:space="preserve"><value>Guitar</value></data>
   <data name="Instrument_Ukulele" xml:space="preserve"><value>Ukulele</value></data>
   <data name="Instrument_Mandolin" xml:space="preserve"><value>Mandolin</value></data>
@@ -116,7 +123,7 @@
   <data name="Tab_More" xml:space="preserve"><value>Mere</value></data>
   <data name="Group_Tools" xml:space="preserve"><value>Værktøjer</value></data>
   <data name="Related_Title" xml:space="preserve"><value>Se også</value></data>
-  <data name="Tuning_Standard" xml:space="preserve"><value>Standardstemning</value></data>
+  <data name="Tuning_Standard" xml:space="preserve"><value>Standard</value></data>
   <data name="Tuning_HalfStepDown" xml:space="preserve"><value>Halv tone ned</value></data>
   <data name="Tuning_WholeStepDown" xml:space="preserve"><value>Hel tone ned</value></data>
   <data name="Tuning_LowG" xml:space="preserve"><value>Lav G</value></data>

@@ -33,19 +33,26 @@
   <data name="Find_Loose" xml:space="preserve"><value>Свободен режим</value></data>
   <data name="Find_NoChord" xml:space="preserve"><value>Не е намерен акорд</value></data>
   <data name="Settings_SystemLanguage" xml:space="preserve"><value>{0} (система)</value></data>
-  <data name="Notation_English" xml:space="preserve"><value>Английска нотация</value></data>
-  <data name="Notation_German" xml:space="preserve"><value>Немска нотация</value></data>
-  <data name="Notation_Latin" xml:space="preserve"><value>Латинска нотация</value></data>
-  <data name="Settings_BasicChords" xml:space="preserve"><value>Основни акорди</value></data>
-  <data name="Settings_AllChords" xml:space="preserve"><value>Всички акорди</value></data>
+  <data name="Notation_English" xml:space="preserve"><value>Английска</value></data>
+  <data name="Notation_German" xml:space="preserve"><value>Немска</value></data>
+  <data name="Notation_Latin" xml:space="preserve"><value>Латинска</value></data>
+  <data name="Settings_BasicChords" xml:space="preserve"><value>Основни</value></data>
+  <data name="Settings_AllChords" xml:space="preserve"><value>Всички</value></data>
   <data name="Settings_MaxFret" xml:space="preserve"><value>Най-висок праг:</value></data>
   <data name="Settings_AllowBarre" xml:space="preserve"><value>Разреши баре</value></data>
   <data name="Settings_AllowSpecial" xml:space="preserve"><value>Разреши акорди със заглушени високи струни</value></data>
   <data name="Settings_EasyOnly" xml:space="preserve"><value>Само лесни апликатури</value></data>
-  <data name="Settings_Vertical" xml:space="preserve"><value>Вертикални диаграми</value></data>
-  <data name="Settings_Horizontal" xml:space="preserve"><value>Хоризонтални диаграми</value></data>
+  <data name="Settings_Vertical" xml:space="preserve"><value>Вертикални</value></data>
+  <data name="Settings_Horizontal" xml:space="preserve"><value>Хоризонтални</value></data>
   <data name="Settings_LeftHanded" xml:space="preserve"><value>За левичари (огледални диаграми)</value></data>
   <data name="Settings_ShowTips" xml:space="preserve"><value>Показвай съвети</value></data>
+  <data name="Settings_General" xml:space="preserve"><value>Общи</value></data>
+  <data name="Settings_Language" xml:space="preserve"><value>Език</value></data>
+  <data name="Settings_Instrument" xml:space="preserve"><value>Инструмент</value></data>
+  <data name="Settings_Tuning" xml:space="preserve"><value>Строй</value></data>
+  <data name="Settings_Notation" xml:space="preserve"><value>Нотация</value></data>
+  <data name="Settings_Diagrams" xml:space="preserve"><value>Диаграми</value></data>
+  <data name="Settings_Chords" xml:space="preserve"><value>Акорди</value></data>
   <data name="Instrument_Guitar" xml:space="preserve"><value>Китара</value></data>
   <data name="Instrument_Ukulele" xml:space="preserve"><value>Укулеле</value></data>
   <data name="Instrument_Mandolin" xml:space="preserve"><value>Мандолина</value></data>
@@ -116,7 +123,7 @@
   <data name="Tab_More" xml:space="preserve"><value>Още</value></data>
   <data name="Group_Tools" xml:space="preserve"><value>Инструменти</value></data>
   <data name="Related_Title" xml:space="preserve"><value>Вижте също</value></data>
-  <data name="Tuning_Standard" xml:space="preserve"><value>Стандартен строй</value></data>
+  <data name="Tuning_Standard" xml:space="preserve"><value>Стандартен</value></data>
   <data name="Tuning_HalfStepDown" xml:space="preserve"><value>Половин тон по-ниско</value></data>
   <data name="Tuning_WholeStepDown" xml:space="preserve"><value>Цял тон по-ниско</value></data>
   <data name="Tuning_LowG" xml:space="preserve"><value>Ниско сол</value></data>

@@ -34,19 +34,26 @@
   <data name="Find_Loose" xml:space="preserve"><value>Mod flexibil</value></data>
   <data name="Find_NoChord" xml:space="preserve"><value>Niciun acord găsit</value></data>
   <data name="Settings_SystemLanguage" xml:space="preserve"><value>{0} (sistem)</value></data>
-  <data name="Notation_English" xml:space="preserve"><value>Notație engleză</value></data>
-  <data name="Notation_German" xml:space="preserve"><value>Notație germană</value></data>
-  <data name="Notation_Latin" xml:space="preserve"><value>Notație latină</value></data>
-  <data name="Settings_BasicChords" xml:space="preserve"><value>Acorduri de bază</value></data>
-  <data name="Settings_AllChords" xml:space="preserve"><value>Toate acordurile</value></data>
+  <data name="Notation_English" xml:space="preserve"><value>Engleză</value></data>
+  <data name="Notation_German" xml:space="preserve"><value>Germană</value></data>
+  <data name="Notation_Latin" xml:space="preserve"><value>Latină</value></data>
+  <data name="Settings_BasicChords" xml:space="preserve"><value>De bază</value></data>
+  <data name="Settings_AllChords" xml:space="preserve"><value>Toate</value></data>
   <data name="Settings_MaxFret" xml:space="preserve"><value>Tasta cea mai înaltă:</value></data>
   <data name="Settings_AllowBarre" xml:space="preserve"><value>Permite barré</value></data>
   <data name="Settings_AllowSpecial" xml:space="preserve"><value>Permite acorduri cu corzi înalte înăbușite</value></data>
   <data name="Settings_EasyOnly" xml:space="preserve"><value>Doar digitații ușoare</value></data>
-  <data name="Settings_Vertical" xml:space="preserve"><value>Diagrame verticale</value></data>
-  <data name="Settings_Horizontal" xml:space="preserve"><value>Diagrame orizontale</value></data>
+  <data name="Settings_Vertical" xml:space="preserve"><value>Verticale</value></data>
+  <data name="Settings_Horizontal" xml:space="preserve"><value>Orizontale</value></data>
   <data name="Settings_LeftHanded" xml:space="preserve"><value>Stângaci (diagrame în oglindă)</value></data>
   <data name="Settings_ShowTips" xml:space="preserve"><value>Afișează sfaturi</value></data>
+  <data name="Settings_General" xml:space="preserve"><value>General</value></data>
+  <data name="Settings_Language" xml:space="preserve"><value>Limbă</value></data>
+  <data name="Settings_Instrument" xml:space="preserve"><value>Instrument</value></data>
+  <data name="Settings_Tuning" xml:space="preserve"><value>Acordaj</value></data>
+  <data name="Settings_Notation" xml:space="preserve"><value>Notație</value></data>
+  <data name="Settings_Diagrams" xml:space="preserve"><value>Diagrame</value></data>
+  <data name="Settings_Chords" xml:space="preserve"><value>Acorduri</value></data>
   <data name="Instrument_Guitar" xml:space="preserve"><value>Chitară</value></data>
   <data name="Instrument_Ukulele" xml:space="preserve"><value>Ukulele</value></data>
   <data name="Instrument_Mandolin" xml:space="preserve"><value>Mandolină</value></data>
@@ -117,7 +124,7 @@
   <data name="Tab_More" xml:space="preserve"><value>Mai mult</value></data>
   <data name="Group_Tools" xml:space="preserve"><value>Instrumente</value></data>
   <data name="Related_Title" xml:space="preserve"><value>Vezi și</value></data>
-  <data name="Tuning_Standard" xml:space="preserve"><value>Acordaj standard</value></data>
+  <data name="Tuning_Standard" xml:space="preserve"><value>Standard</value></data>
   <data name="Tuning_HalfStepDown" xml:space="preserve"><value>Cu un semiton mai jos</value></data>
   <data name="Tuning_WholeStepDown" xml:space="preserve"><value>Cu un ton mai jos</value></data>
   <data name="Tuning_LowG" xml:space="preserve"><value>Sol grav</value></data>

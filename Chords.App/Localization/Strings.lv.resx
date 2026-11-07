@@ -34,19 +34,26 @@
   <data name="Find_Loose" xml:space="preserve"><value>Brīvais režīms</value></data>
   <data name="Find_NoChord" xml:space="preserve"><value>Akords nav atrasts</value></data>
   <data name="Settings_SystemLanguage" xml:space="preserve"><value>{0} (sistēma)</value></data>
-  <data name="Notation_English" xml:space="preserve"><value>Angļu notācija</value></data>
-  <data name="Notation_German" xml:space="preserve"><value>Vācu notācija</value></data>
-  <data name="Notation_Latin" xml:space="preserve"><value>Latīņu notācija</value></data>
-  <data name="Settings_BasicChords" xml:space="preserve"><value>Pamata akordi</value></data>
-  <data name="Settings_AllChords" xml:space="preserve"><value>Visi akordi</value></data>
+  <data name="Notation_English" xml:space="preserve"><value>Angļu</value></data>
+  <data name="Notation_German" xml:space="preserve"><value>Vācu</value></data>
+  <data name="Notation_Latin" xml:space="preserve"><value>Latīņu</value></data>
+  <data name="Settings_BasicChords" xml:space="preserve"><value>Pamata</value></data>
+  <data name="Settings_AllChords" xml:space="preserve"><value>Visi</value></data>
   <data name="Settings_MaxFret" xml:space="preserve"><value>Augstākais ladiņš:</value></data>
   <data name="Settings_AllowBarre" xml:space="preserve"><value>Atļaut barē</value></data>
   <data name="Settings_AllowSpecial" xml:space="preserve"><value>Atļaut tvērienus ar apslāpētām augstajām stīgām</value></data>
   <data name="Settings_EasyOnly" xml:space="preserve"><value>Tikai vieglie aplikatūras varianti</value></data>
-  <data name="Settings_Vertical" xml:space="preserve"><value>Vertikālas shēmas</value></data>
-  <data name="Settings_Horizontal" xml:space="preserve"><value>Horizontālas shēmas</value></data>
+  <data name="Settings_Vertical" xml:space="preserve"><value>Vertikālas</value></data>
+  <data name="Settings_Horizontal" xml:space="preserve"><value>Horizontālas</value></data>
   <data name="Settings_LeftHanded" xml:space="preserve"><value>Kreilim (spoguļotas shēmas)</value></data>
   <data name="Settings_ShowTips" xml:space="preserve"><value>Rādīt padomus</value></data>
+  <data name="Settings_General" xml:space="preserve"><value>Vispārīgi</value></data>
+  <data name="Settings_Language" xml:space="preserve"><value>Valoda</value></data>
+  <data name="Settings_Instrument" xml:space="preserve"><value>Instruments</value></data>
+  <data name="Settings_Tuning" xml:space="preserve"><value>Skaņojums</value></data>
+  <data name="Settings_Notation" xml:space="preserve"><value>Notācija</value></data>
+  <data name="Settings_Diagrams" xml:space="preserve"><value>Shēmas</value></data>
+  <data name="Settings_Chords" xml:space="preserve"><value>Akordi</value></data>
   <data name="Instrument_Guitar" xml:space="preserve"><value>Ģitāra</value></data>
   <data name="Instrument_Ukulele" xml:space="preserve"><value>Ukulele</value></data>
   <data name="Instrument_Mandolin" xml:space="preserve"><value>Mandolīna</value></data>
@@ -117,7 +124,7 @@
   <data name="Tab_More" xml:space="preserve"><value>Vairāk</value></data>
   <data name="Group_Tools" xml:space="preserve"><value>Rīki</value></data>
   <data name="Related_Title" xml:space="preserve"><value>Skatīt arī</value></data>
-  <data name="Tuning_Standard" xml:space="preserve"><value>Standarta skaņojums</value></data>
+  <data name="Tuning_Standard" xml:space="preserve"><value>Standarta</value></data>
   <data name="Tuning_HalfStepDown" xml:space="preserve"><value>Par pustoni zemāk</value></data>
   <data name="Tuning_WholeStepDown" xml:space="preserve"><value>Par toni zemāk</value></data>
   <data name="Tuning_LowG" xml:space="preserve"><value>Zemais G</value></data>

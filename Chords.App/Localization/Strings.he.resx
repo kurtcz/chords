@@ -34,19 +34,26 @@
   <data name="Find_Loose" xml:space="preserve"><value>מצב גמיש</value></data>
   <data name="Find_NoChord" xml:space="preserve"><value>לא נמצא אקורד</value></data>
   <data name="Settings_SystemLanguage" xml:space="preserve"><value>{0} (מערכת)</value></data>
-  <data name="Notation_English" xml:space="preserve"><value>סימון אנגלי</value></data>
-  <data name="Notation_German" xml:space="preserve"><value>סימון גרמני</value></data>
-  <data name="Notation_Latin" xml:space="preserve"><value>סימון לטיני</value></data>
-  <data name="Settings_BasicChords" xml:space="preserve"><value>אקורדים בסיסיים</value></data>
-  <data name="Settings_AllChords" xml:space="preserve"><value>כל האקורדים</value></data>
+  <data name="Notation_English" xml:space="preserve"><value>אנגלי</value></data>
+  <data name="Notation_German" xml:space="preserve"><value>גרמני</value></data>
+  <data name="Notation_Latin" xml:space="preserve"><value>לטיני</value></data>
+  <data name="Settings_BasicChords" xml:space="preserve"><value>בסיסיים</value></data>
+  <data name="Settings_AllChords" xml:space="preserve"><value>הכול</value></data>
   <data name="Settings_MaxFret" xml:space="preserve"><value>השריג הגבוה ביותר:</value></data>
   <data name="Settings_AllowBarre" xml:space="preserve"><value>לאפשר בארה</value></data>
   <data name="Settings_AllowSpecial" xml:space="preserve"><value>לאפשר תנוחות עם מיתרים גבוהים מושתקים</value></data>
   <data name="Settings_EasyOnly" xml:space="preserve"><value>רק אצבוע קל</value></data>
-  <data name="Settings_Vertical" xml:space="preserve"><value>דיאגרמות אנכיות</value></data>
-  <data name="Settings_Horizontal" xml:space="preserve"><value>דיאגרמות אופקיות</value></data>
+  <data name="Settings_Vertical" xml:space="preserve"><value>אנכיות</value></data>
+  <data name="Settings_Horizontal" xml:space="preserve"><value>אופקיות</value></data>
   <data name="Settings_LeftHanded" xml:space="preserve"><value>שמאלי (דיאגרמות משוקפות)</value></data>
   <data name="Settings_ShowTips" xml:space="preserve"><value>הצגת טיפים</value></data>
+  <data name="Settings_General" xml:space="preserve"><value>כללי</value></data>
+  <data name="Settings_Language" xml:space="preserve"><value>שפה</value></data>
+  <data name="Settings_Instrument" xml:space="preserve"><value>כלי נגינה</value></data>
+  <data name="Settings_Tuning" xml:space="preserve"><value>כיוון</value></data>
+  <data name="Settings_Notation" xml:space="preserve"><value>סימון</value></data>
+  <data name="Settings_Diagrams" xml:space="preserve"><value>דיאגרמות</value></data>
+  <data name="Settings_Chords" xml:space="preserve"><value>אקורדים</value></data>
   <data name="Instrument_Guitar" xml:space="preserve"><value>גיטרה</value></data>
   <data name="Instrument_Ukulele" xml:space="preserve"><value>יוקלילי</value></data>
   <data name="Instrument_Mandolin" xml:space="preserve"><value>מנדולינה</value></data>
@@ -117,7 +124,7 @@
   <data name="Tab_More" xml:space="preserve"><value>עוד</value></data>
   <data name="Group_Tools" xml:space="preserve"><value>כלים</value></data>
   <data name="Related_Title" xml:space="preserve"><value>ראו גם</value></data>
-  <data name="Tuning_Standard" xml:space="preserve"><value>כיוון סטנדרטי</value></data>
+  <data name="Tuning_Standard" xml:space="preserve"><value>סטנדרטי</value></data>
   <data name="Tuning_HalfStepDown" xml:space="preserve"><value>חצי טון למטה</value></data>
   <data name="Tuning_WholeStepDown" xml:space="preserve"><value>טון שלם למטה</value></data>
   <data name="Tuning_LowG" xml:space="preserve"><value>סול נמוך</value></data>

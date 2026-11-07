@@ -32,19 +32,26 @@
   <data name="Find_Loose" xml:space="preserve"><value>Chế độ linh hoạt</value></data>
   <data name="Find_NoChord" xml:space="preserve"><value>Không tìm thấy hợp âm</value></data>
   <data name="Settings_SystemLanguage" xml:space="preserve"><value>{0} (hệ thống)</value></data>
-  <data name="Notation_English" xml:space="preserve"><value>Ký âm kiểu Anh</value></data>
-  <data name="Notation_German" xml:space="preserve"><value>Ký âm kiểu Đức</value></data>
-  <data name="Notation_Latin" xml:space="preserve"><value>Ký âm kiểu La-tinh</value></data>
-  <data name="Settings_BasicChords" xml:space="preserve"><value>Hợp âm cơ bản</value></data>
-  <data name="Settings_AllChords" xml:space="preserve"><value>Tất cả hợp âm</value></data>
+  <data name="Notation_English" xml:space="preserve"><value>Kiểu Anh</value></data>
+  <data name="Notation_German" xml:space="preserve"><value>Kiểu Đức</value></data>
+  <data name="Notation_Latin" xml:space="preserve"><value>Kiểu La-tinh</value></data>
+  <data name="Settings_BasicChords" xml:space="preserve"><value>Cơ bản</value></data>
+  <data name="Settings_AllChords" xml:space="preserve"><value>Tất cả</value></data>
   <data name="Settings_MaxFret" xml:space="preserve"><value>Phím đàn cao nhất:</value></data>
   <data name="Settings_AllowBarre" xml:space="preserve"><value>Cho phép hợp âm chặn</value></data>
   <data name="Settings_AllowSpecial" xml:space="preserve"><value>Cho phép thế bấm có dây cao bị chặn tiếng</value></data>
   <data name="Settings_EasyOnly" xml:space="preserve"><value>Chỉ thế bấm dễ</value></data>
-  <data name="Settings_Vertical" xml:space="preserve"><value>Sơ đồ dọc</value></data>
-  <data name="Settings_Horizontal" xml:space="preserve"><value>Sơ đồ ngang</value></data>
+  <data name="Settings_Vertical" xml:space="preserve"><value>Dọc</value></data>
+  <data name="Settings_Horizontal" xml:space="preserve"><value>Ngang</value></data>
   <data name="Settings_LeftHanded" xml:space="preserve"><value>Người thuận tay trái (sơ đồ lật gương)</value></data>
   <data name="Settings_ShowTips" xml:space="preserve"><value>Hiện mẹo</value></data>
+  <data name="Settings_General" xml:space="preserve"><value>Chung</value></data>
+  <data name="Settings_Language" xml:space="preserve"><value>Ngôn ngữ</value></data>
+  <data name="Settings_Instrument" xml:space="preserve"><value>Nhạc cụ</value></data>
+  <data name="Settings_Tuning" xml:space="preserve"><value>Lên dây</value></data>
+  <data name="Settings_Notation" xml:space="preserve"><value>Ký âm</value></data>
+  <data name="Settings_Diagrams" xml:space="preserve"><value>Sơ đồ</value></data>
+  <data name="Settings_Chords" xml:space="preserve"><value>Hợp âm</value></data>
   <data name="Instrument_Guitar" xml:space="preserve"><value>Guitar</value></data>
   <data name="Instrument_Ukulele" xml:space="preserve"><value>Ukulele</value></data>
   <data name="Instrument_Mandolin" xml:space="preserve"><value>Mandolin</value></data>
@@ -115,7 +122,7 @@
   <data name="Tab_More" xml:space="preserve"><value>Thêm</value></data>
   <data name="Group_Tools" xml:space="preserve"><value>Công cụ</value></data>
   <data name="Related_Title" xml:space="preserve"><value>Xem thêm</value></data>
-  <data name="Tuning_Standard" xml:space="preserve"><value>Lên dây chuẩn</value></data>
+  <data name="Tuning_Standard" xml:space="preserve"><value>Chuẩn</value></data>
   <data name="Tuning_HalfStepDown" xml:space="preserve"><value>Hạ nửa cung</value></data>
   <data name="Tuning_WholeStepDown" xml:space="preserve"><value>Hạ một cung</value></data>
   <data name="Tuning_LowG" xml:space="preserve"><value>Sol trầm</value></data>

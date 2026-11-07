@@ -1,0 +1,23 @@
+@* A choice between two options side by side, the chosen one filled. *@
+<div class="segmented">
+    <button type="button" class="@(Value ? null : "active")" @onclick="() => Choose(false)">@Off</button>
+    <button type="button" class="@(Value ? "active" : null)" @onclick="() => Choose(true)">@On</button>
+</div>
+
+@code {
+    [Parameter] public bool Value { get; set; }
+    [Parameter] public EventCallback<bool> ValueChanged { get; set; }
+    /// <summary>Text of the option on the left, chosen when <see cref="Value"/> is false.</summary>
+    [Parameter] public string Off { get; set; }
+    /// <summary>Text of the option on the right, chosen when <see cref="Value"/> is true.</summary>
+    [Parameter] public string On { get; set; }
+
+    private async Task Choose(bool value)
+    {
+        if (value != Value)
+        {
+            Value = value;
+            await ValueChanged.InvokeAsync(value);
+        }
+    }
+}

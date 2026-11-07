@@ -33,19 +33,26 @@
   <data name="Find_Loose" xml:space="preserve"><value>Maluwag na mode</value></data>
   <data name="Find_NoChord" xml:space="preserve"><value>Walang nahanap na chord</value></data>
   <data name="Settings_SystemLanguage" xml:space="preserve"><value>{0} (system)</value></data>
-  <data name="Notation_English" xml:space="preserve"><value>English na notasyon</value></data>
-  <data name="Notation_German" xml:space="preserve"><value>German na notasyon</value></data>
-  <data name="Notation_Latin" xml:space="preserve"><value>Latin na notasyon</value></data>
-  <data name="Settings_BasicChords" xml:space="preserve"><value>Mga pangunahing chord</value></data>
-  <data name="Settings_AllChords" xml:space="preserve"><value>Lahat ng chord</value></data>
+  <data name="Notation_English" xml:space="preserve"><value>English</value></data>
+  <data name="Notation_German" xml:space="preserve"><value>German</value></data>
+  <data name="Notation_Latin" xml:space="preserve"><value>Latin</value></data>
+  <data name="Settings_BasicChords" xml:space="preserve"><value>Pangunahin</value></data>
+  <data name="Settings_AllChords" xml:space="preserve"><value>Lahat</value></data>
   <data name="Settings_MaxFret" xml:space="preserve"><value>Pinakamataas na fret:</value></data>
   <data name="Settings_AllowBarre" xml:space="preserve"><value>Payagan ang barre chord</value></data>
   <data name="Settings_AllowSpecial" xml:space="preserve"><value>Payagan ang mga chord na may naka-mute na matataas na kuwerdas</value></data>
   <data name="Settings_EasyOnly" xml:space="preserve"><value>Madadaling pagdiin lamang</value></data>
-  <data name="Settings_Vertical" xml:space="preserve"><value>Patayong diagram</value></data>
-  <data name="Settings_Horizontal" xml:space="preserve"><value>Pahigang diagram</value></data>
+  <data name="Settings_Vertical" xml:space="preserve"><value>Patayo</value></data>
+  <data name="Settings_Horizontal" xml:space="preserve"><value>Pahiga</value></data>
   <data name="Settings_LeftHanded" xml:space="preserve"><value>Kaliwete (naka-salamin na diagram)</value></data>
   <data name="Settings_ShowTips" xml:space="preserve"><value>Ipakita ang mga tip</value></data>
+  <data name="Settings_General" xml:space="preserve"><value>Pangkalahatan</value></data>
+  <data name="Settings_Language" xml:space="preserve"><value>Wika</value></data>
+  <data name="Settings_Instrument" xml:space="preserve"><value>Instrumento</value></data>
+  <data name="Settings_Tuning" xml:space="preserve"><value>Tono</value></data>
+  <data name="Settings_Notation" xml:space="preserve"><value>Notasyon</value></data>
+  <data name="Settings_Diagrams" xml:space="preserve"><value>Mga diagram</value></data>
+  <data name="Settings_Chords" xml:space="preserve"><value>Mga chord</value></data>
   <data name="Instrument_Guitar" xml:space="preserve"><value>Gitara</value></data>
   <data name="Instrument_Ukulele" xml:space="preserve"><value>Ukulele</value></data>
   <data name="Instrument_Mandolin" xml:space="preserve"><value>Mandolin</value></data>
@@ -116,7 +123,7 @@
   <data name="Tab_More" xml:space="preserve"><value>Iba pa</value></data>
   <data name="Group_Tools" xml:space="preserve"><value>Mga tool</value></data>
   <data name="Related_Title" xml:space="preserve"><value>Tingnan din</value></data>
-  <data name="Tuning_Standard" xml:space="preserve"><value>Karaniwang tono</value></data>
+  <data name="Tuning_Standard" xml:space="preserve"><value>Karaniwan</value></data>
   <data name="Tuning_HalfStepDown" xml:space="preserve"><value>Ibaba nang kalahating tono</value></data>
   <data name="Tuning_WholeStepDown" xml:space="preserve"><value>Ibaba nang isang tono</value></data>
   <data name="Tuning_LowG" xml:space="preserve"><value>Mababang G</value></data>
