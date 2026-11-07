@@ -126,7 +126,7 @@ public class PitchDetectorTests(ITestOutputHelper output)
 
         for (var end = detector.FrameSize + 4800; end <= samples.Length; end += 1024)
         {
-            reading = tracker.Add(detector.Detect(samples, end)) ?? reading;
+            reading = tracker.Add(detector.Detect(samples, end, tracker.MinRms)) ?? reading;
         }
 
         Assert.NotNull(reading);
@@ -152,7 +152,7 @@ public class PitchDetectorTests(ITestOutputHelper output)
 
         for (var end = detector.FrameSize; end <= samples.Length; end += 1024)
         {
-            Assert.Null(tracker.Add(detector.Detect(samples, end)));
+            Assert.Null(tracker.Add(detector.Detect(samples, end, tracker.MinRms)));
         }
     }
 
@@ -170,7 +170,7 @@ public class PitchDetectorTests(ITestOutputHelper output)
 
         for (var end = detector.FrameSize; end <= input.Length; end += 1024)
         {
-            var reading = tracker.Add(detector.Detect(input, end));
+            var reading = tracker.Add(detector.Detect(input, end, tracker.MinRms));
 
             if (reading != null)
             {
@@ -295,7 +295,7 @@ public class PitchDetectorTests(ITestOutputHelper output)
 
         for (var end = detector.FrameSize; end <= samples.Length; end += 960)
         {
-            reading = tracker.Add(detector.Detect(samples, end)) ?? reading;
+            reading = tracker.Add(detector.Detect(samples, end, tracker.MinRms)) ?? reading;
         }
 
         Assert.NotNull(reading);
@@ -315,7 +315,7 @@ public class PitchDetectorTests(ITestOutputHelper output)
 
         for (var end = detector.FrameSize; end <= noise.Length; end += 960)
         {
-            Assert.Null(tracker.Add(detector.Detect(noise, end)));
+            Assert.Null(tracker.Add(detector.Detect(noise, end, tracker.MinRms)));
         }
         Assert.InRange(20 * Math.Log10(tracker.Noise.Level), -43, -37);
     }

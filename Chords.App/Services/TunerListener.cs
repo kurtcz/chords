@@ -204,7 +204,7 @@ public sealed class TunerListener(IAudioInput input)
                     continue;
                 }
                 _sinceAnalysis = 0;
-                reading = _tracker.Add(_detector.Detect(_buffer));
+                reading = _tracker.Add(_detector.Detect(_buffer, _tracker.MinRms));
                 changed = !Same(reading, _last);
                 _last = reading;
             }

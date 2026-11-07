@@ -23,7 +23,13 @@ else if (status == TunerStatus.Failed)
 }
 
 <div class="tuner-display @StateClass">
-    <svg class="tuner-gauge" viewBox="0 22 300 152" xmlns="http://www.w3.org/2000/svg">
+    @*
+        Three layers of the same size: the scale, the needle and the hub. The needle has an <svg> of its own, which the
+        WebView rotates as a ready-made picture; turning it inside the scale's <svg> would repaint the whole scale on
+        every step, 30 times a second while a note sounds.
+    *@
+    <div class="tuner-dial">
+    <svg class="tuner-gauge" viewBox="@ViewBox" xmlns="http://www.w3.org/2000/svg">
         @* The scale never changes: its markup is formatted once (ScalePaths and the like), not with every redraw. *@
         @foreach (var (css, d) in ScalePaths)
         {
@@ -37,13 +43,16 @@ else if (status == TunerStatus.Failed)
         {
             <!text class="@css" x="@x" y="@y">@text</!text>
         }
-        @* Always there: js/tuner.js turns it with every reading and hides it in silence, between the redraws. *@
-        <g class="tuner-needle" @ref="needle">
-            <path d="@NeedlePath" />
-        </g>
+    </svg>
+    @* Always there: js/tuner.js turns it with every reading and hides it in silence, between the redraws. *@
+    <svg class="tuner-needle" viewBox="@ViewBox" xmlns="http://www.w3.org/2000/svg" @ref="needle">
+        <path d="@NeedlePath" />
+    </svg>
+    <svg class="tuner-pivot" viewBox="@ViewBox" xmlns="http://www.w3.org/2000/svg">
         <circle class="tuner-hub" cx="@HubX" cy="@HubY" r="10" />
         <circle cx="@HubX" cy="@HubY" r="3.5" fill="#fff" />
     </svg>
+    </div>
     @* Below the gauge: the target note in the middle, the cents on its left and the frequency on its right. *@
     <div class="tuner-readout">
         <div class="tuner-side tuner-side-left">
@@ -150,9 +159,16 @@ else if (status == TunerStatus.Failed)
     /// <summary>The string counts as tuned when it stays in the green zone for <see cref="SettleTime"/>.</summary>
     private const double TunedCents = InTuneCents;
     private static readonly TimeSpan SettleTime = TimeSpan.FromSeconds(0.8);
-    /// <summary>Redraws of the note, cents and colours per second at most; the needle moves at the display's rate.</summary>
+    /// <summary>
+    /// Redraws of the note, cents and colours, and needle targets sent to the page, per second at most;
+    /// the needle's spring smooths its motion in between.
+    /// </summary>
     private const int FrameRate = 30;
+    /// <summary>A change of the cents or hertz alone is redrawn at every this many redraws (10 a second).</summary>
+    private const int NumbersEvery = 3;
     private const double Cx = 150, Cy = 160;
+    /// <summary>The part of the drawing the gauge shows; the needle turns around (Cx, Cy), see .tuner-needle in style.css.</summary>
+    private const string ViewBox = "0 22 300 152";
     /// <summary>Radius of the coloured scale.</summary>
     private const double R = 130;
     /// <summary>Cents left blank between two zones of the scale.</summary>
@@ -209,6 +225,8 @@ else if (status == TunerStatus.Failed)
     private TunerReading reading;
     /// <summary>What the last redraw showed, see <see cref="Shown"/>.</summary>
     private (string, string, int, int, int, int, int, int) lastShown;
+    /// <summary>Redraws since the cents or hertz were last brought up to date, see <see cref="NumbersEvery"/>.</summary>
+    private int numbersSkipped;
     private volatile TunerReading latest;
     private volatile bool dirty;
     private DateTime? inTuneSince;
@@ -219,8 +237,10 @@ else if (status == TunerStatus.Failed)
     private Timer timer;
     private ElementReference needle;
     private bool rendered;
-    /// <summary>1 while a needle update waits for the renderer thread.</summary>
-    private int needleQueued;
+    /// <summary>The needle angle last sent to the page (null = hidden).</summary>
+    private double? needleShown;
+    /// <summary>Whether the page has been told anything about the needle yet.</summary>
+    private bool needleSent;
     private Window window;
     private bool disposed;
     /// <summary>UTC ticks of the last note heard (0 = none yet).</summary>
@@ -293,25 +313,31 @@ else if (status == TunerStatus.Failed)
         {
             Interlocked.Exchange(ref lastNoteTicks, DateTime.UtcNow.Ticks);
         }
-        // The needle follows every reading, not just the redraws; at most one update waits at a time.
-        if (Interlocked.Exchange(ref needleQueued, 1) == 0)
-        {
-            _ = InvokeAsync(MoveNeedle);
-        }
     }
 
-    private async Task MoveNeedle()
+    /// <summary>
+    /// Sends the needle's new angle to the page; a change too small to see is not sent, each call crosses the
+    /// WebView bridge.
+    /// </summary>
+    private async Task MoveNeedle(TunerReading value)
     {
-        Volatile.Write(ref needleQueued, 0);
         if (disposed || !rendered)
         {
             return;
         }
-        var value = latest;
+        var angle = value == null ? null : NeedleAngle(value);
 
+        if (needleSent && (angle == null
+                ? needleShown == null
+                : needleShown != null && Math.Abs(angle.Value - needleShown.Value) < 0.1))
+        {
+            return;
+        }
+        needleSent = true;
+        needleShown = angle;
         try
         {
-            await JS.InvokeVoidAsync("tunerNeedle.target", needle, value == null ? null : NeedleAngle(value));
+            await JS.InvokeVoidAsync("tunerNeedle.target", needle, angle);
         }
         catch (JSDisconnectedException)
         {
@@ -332,15 +358,27 @@ else if (status == TunerStatus.Failed)
         InvokeAsync(() =>
         {
             reading = latest;
+            _ = MoveNeedle(reading);
             UpdateTuned();
             // Readings differ in the tiniest fraction of a cent every time; redraw only when what is shown changes.
             var shown = Shown();
 
-            if (shown != lastShown)
+            if (shown == lastShown)
             {
-                lastShown = shown;
-                StateHasChanged();
+                return;
             }
+            // Cents and hertz alone change on every reading and could not be read at the full rate; they wait for
+            // every NumbersEvery-th redraw, anything else (note, string, colours) shows at once.
+            var numbersOnly = (shown with { Item5 = 0, Item6 = 0 }) == (lastShown with { Item5 = 0, Item6 = 0 });
+
+            if (numbersOnly && ++numbersSkipped < NumbersEvery)
+            {
+                dirty = true;
+                return;
+            }
+            numbersSkipped = 0;
+            lastShown = shown;
+            StateHasChanged();
         });
     }
 

@@ -86,8 +86,11 @@ namespace Chords.Core.Tuning
             _energy = new double[FrameSize + 1];
         }
 
-        /// <summary>Analyses the last <see cref="FrameSize"/> samples of <paramref name="samples"/> ending at <paramref name="end"/>.</summary>
-        public PitchEstimate Detect(float[] samples, int end)
+        /// <summary>
+        /// Analyses the last <see cref="FrameSize"/> samples of <paramref name="samples"/> ending at <paramref name="end"/>.
+        /// A frame quieter than <paramref name="minRms"/> gets its loudness only, without the pitch search.
+        /// </summary>
+        public PitchEstimate Detect(float[] samples, int end, float minRms = SilenceRms)
         {
             var start = end - FrameSize;
 
@@ -97,7 +100,7 @@ namespace Chords.Core.Tuning
             }
             var rms = Rms(samples, start, _window);
 
-            if (rms < SilenceRms)
+            if (rms < Math.Max(SilenceRms, minRms))
             {
                 return new PitchEstimate(0, 0, rms);
             }
@@ -116,7 +119,7 @@ namespace Chords.Core.Tuning
         }
 
         /// <summary>Analyses a whole buffer (its last <see cref="FrameSize"/> samples).</summary>
-        public PitchEstimate Detect(float[] samples) => Detect(samples, samples.Length);
+        public PitchEstimate Detect(float[] samples, float minRms = SilenceRms) => Detect(samples, samples.Length, minRms);
 
         private static float Rms(float[] x, int start, int count)
         {

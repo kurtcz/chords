@@ -666,11 +666,26 @@ h1.navbar-brand {
     color: var(--tuner-ok);
 }
 
+.tuner-dial {
+    position: relative;
+    /* The needle's box turns with it; its corners would stick out. */
+    overflow: hidden;
+    max-width: 340px;
+    margin: 0 auto;
+}
+
 .tuner-gauge {
     display: block;
     width: 100%;
-    max-width: 340px;
-    margin: 0 auto;
+}
+
+/* The needle and the hub lie over the scale, see Tuner.razor. */
+.tuner-needle,
+.tuner-pivot {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
 }
 
 .tuner-gauge .zone {
@@ -712,9 +727,12 @@ h1.navbar-brand {
 }
 
 .tuner-needle {
-    /* Turns around the hub of the gauge; js/tuner.js sets its angle and shows it while a note sounds. */
-    transform-box: view-box;
-    transform-origin: 150px 160px;
+    /*
+      Turns around the hub, at (150, 160) of the view box "0 22 300 152": 50 % across and (160 - 22) / 152 down.
+      js/tuner.js sets its angle and shows it while a note sounds; its own layer turns without a repaint.
+    */
+    transform-origin: 50% 90.789%;
+    will-change: transform;
     visibility: hidden;
     fill: #333;
 }
@@ -823,13 +841,8 @@ h1.navbar-brand {
     width: 8px;
     height: 8px;
     border-radius: 50%;
+    /* Steady, not pulsing: an endless animation redraws the whole WebView every frame (most of the tuner's CPU on Android). */
     background-color: #4d89d5;
-    animation: tuner-pulse 1.4s infinite;
-}
-
-@keyframes tuner-pulse {
-    0%, 100% { opacity: 0.25; }
-    50% { opacity: 1; }
 }
 
 /* Instrument / chromatic switch: a segmented control above the strings. */

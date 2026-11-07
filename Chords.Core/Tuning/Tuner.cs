@@ -170,6 +170,13 @@ namespace Chords.Core.Tuning
         /// <summary>Background noise of the room, which a note must stand out of.</summary>
         public NoiseFloor Noise => _noise;
 
+        /// <summary>
+        /// Frames quieter than this can never be a note (see <see cref="NoiseFloor.SustainThreshold"/>), so their pitch
+        /// need not be searched: <see cref="PitchDetector.Detect(float[], float)"/> can skip it, most of the work in
+        /// silence. Such a frame then counts as not tonal for the noise floor.
+        /// </summary>
+        public float MinRms => _noise.SustainThreshold;
+
         private int MaxGap => Math.Max(1, (int)Math.Round(MaxGapSeconds * FrameRate));
 
         public PitchTracker(InstrumentInfo instrument)

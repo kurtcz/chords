@@ -1,12 +1,23 @@
 // Tuner needle: the page sends the angle of every reading (50 a second); a critically damped spring turns the
-// needle towards it at the display's own frame rate, so it moves smoothly without lagging behind the string.
+// needle towards it, so it moves smoothly without lagging behind the string.
+// It steps 30 times a second on a timer rather than on every display frame: on a 120 Hz phone each frame redraws the
+// whole WebView, and the needle never comes to rest while a note sounds.
 window.tunerNeedle = (() => {
     // Angular frequency of the spring (1/s): the needle covers 60 % of a change in 50 ms, 90 % in 100 ms.
     const omega = 40;
+    const interval = 1000 / 30;
+    // Smaller moves (degrees) are not drawn: they are under a pixel at the needle's tip.
+    const minMove = 0.1;
     const states = new WeakMap();
 
-    function frame(element, state, time) {
-        const dt = Math.min(0.05, (time - state.time) / 1000);
+    function draw(element, state, angle) {
+        state.drawn = angle;
+        element.style.transform = `rotate(${angle}deg)`;
+    }
+
+    function frame(element, state) {
+        const time = performance.now();
+        const dt = Math.min(0.1, (time - state.time) / 1000);
 
         state.time = time;
         // Critically damped spring, integrated in small steps so it stays stable on slow frames.
@@ -22,9 +33,11 @@ window.tunerNeedle = (() => {
             state.velocity = 0;
             state.running = false;
         }
-        element.style.transform = `rotate(${state.angle}deg)`;
+        if (!state.running || Math.abs(state.angle - state.drawn) >= minMove) {
+            draw(element, state, state.angle);
+        }
         if (state.running) {
-            requestAnimationFrame(t => frame(element, state, t));
+            setTimeout(() => frame(element, state), interval);
         }
     }
 
@@ -44,21 +57,21 @@ window.tunerNeedle = (() => {
                 return;
             }
             if (!state) {
-                state = { angle, velocity: 0, target: angle, running: false, shown: false, time: 0 };
+                state = { angle, velocity: 0, target: angle, running: false, shown: false, time: 0, drawn: angle };
                 states.set(element, state);
             }
             if (!state.shown) {
                 state.angle = angle;
                 state.velocity = 0;
                 state.shown = true;
-                element.style.transform = `rotate(${angle}deg)`;
+                draw(element, state, angle);
                 element.style.visibility = "visible";
             }
             state.target = angle;
             if (!state.running) {
                 state.running = true;
                 state.time = performance.now();
-                requestAnimationFrame(t => frame(element, state, t));
+                setTimeout(() => frame(element, state), interval);
             }
         }
     };
