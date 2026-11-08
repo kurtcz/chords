@@ -55,6 +55,25 @@
     <PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
   </ItemGroup>
 
+  <!--
+    MAUI 10 pulls in Material Components 1.12, whose dialogs call Window.setStatusBarColor/setNavigationBarColor,
+    deprecated in Android 15 (Google Play warns about it). 1.14 only calls them below Android 15. MAUI 11 depends
+    on 1.14 itself: remove this group then. 1.14 raises some AndroidX libraries; their Kotlin extension (Ktx)
+    packages, which MAUI pins to the old versions, are raised to match.
+  -->
+  <ItemGroup Condition="$(TargetFramework.Contains('-android'))">
+    <PackageReference Include="Xamarin.Google.Android.Material" Version="1.14.0.6" />
+    <PackageReference Include="Xamarin.AndroidX.Activity.Ktx" Version="1.13.0.1" />
+    <PackageReference Include="Xamarin.AndroidX.Collection.Ktx" Version="1.6.0.1" />
+    <PackageReference Include="Xamarin.AndroidX.Fragment.Ktx" Version="1.8.9.3" />
+    <PackageReference Include="Xamarin.AndroidX.Lifecycle.LiveData" Version="2.11.0.1" />
+    <PackageReference Include="Xamarin.AndroidX.Lifecycle.LiveData.Core.Ktx" Version="2.11.0.1" />
+    <PackageReference Include="Xamarin.AndroidX.Lifecycle.Runtime.Ktx" Version="2.11.0.1" />
+    <PackageReference Include="Xamarin.AndroidX.Lifecycle.Runtime.Ktx.Android" Version="2.11.0.1" />
+    <PackageReference Include="Xamarin.AndroidX.Lifecycle.ViewModel.Ktx" Version="2.11.0.1" />
+    <PackageReference Include="Xamarin.AndroidX.SavedState.SavedState.Ktx" Version="1.5.0.1" />
+  </ItemGroup>
+
   <ItemGroup>
     <ProjectReference Include="..\Chords.Core\Chords.Core.csproj" />
   </ItemGroup>
