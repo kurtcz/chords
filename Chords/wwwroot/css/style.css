@@ -127,6 +127,18 @@ form select {
     padding: 10px;
 }
 
+/* A list of diagrams: rows as tall as their tallest diagram, so one with a label under it (difficulty, slash chord)
+   doesn't snag the next one and leave a hole as floats would. Flex rows also follow the page direction (RTL). */
+.chord-grid {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.chord-grid > .chord-layout {
+    float: none;
+}
+
 /* A sideways swipe strums a vertical diagram (js/strum.js); an up or down swipe still scrolls the page. */
 .chord-layout:not(.horizontal) {
     touch-action: pan-y;

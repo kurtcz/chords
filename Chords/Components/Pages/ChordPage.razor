@@ -72,10 +72,12 @@
                 @L["Tip_Favorite"]
             </div>
         }
-        @foreach (var layout in layouts)
-        {
-            <ChordLayoutView @key="layout" Layout="layout" Chord="chord" />
-        }
+        <div class="chord-grid">
+            @foreach (var layout in layouts)
+            {
+                <ChordLayoutView @key="layout" Layout="layout" Chord="chord" />
+            }
+        </div>
     </div>
 }
 

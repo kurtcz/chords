@@ -33,11 +33,19 @@
         <text x="160" y="170" fill="#4d89d5" stroke="none" font-size="32" text-anchor="middle">@model.Signature</text>
         @if (model.index > 6)
         {
-            <path fill="#4d89d5" stroke="none" d="M 0 300 l 40 -20 v 40 Z" @onclick="() => SetIndex(model.index - 1)" />
+            @* The arrows turn the circle towards the flat and the sharp keys. The signs are drawn rather than set in a font,
+               so both are as tall (286–314) and centred on the arrows' middle (300) whatever font the system has. *@
+            <g fill="#4d89d5" stroke="none" @onclick="() => SetIndex(model.index - 1)">
+                <path d="M 0 300 l 40 -20 v 40 Z" />
+                <path fill-rule="evenodd" d="M 51 286 h 2.6 v 17.2 C 57 299.6 64.5 299.8 64.5 304.6 C 64.5 308.6 58.5 311.6 51 314 Z M 53.6 306.2 v 5.2 C 58 309.6 61.4 307.8 61.4 305.4 C 61.4 302.8 57.2 302.6 53.6 306.2 Z" />
+            </g>
         }
         @if (model.index < 20)
         {
-            <path fill="#4d89d5" stroke="none" d="M 320 300 l -40 20 v -40 Z" @onclick="() => SetIndex(model.index + 1)" />
+            <g fill="#4d89d5" stroke="none" @onclick="() => SetIndex(model.index + 1)">
+                <path d="M 320 300 l -40 20 v -40 Z" />
+                <path d="M 259.2 288 h 2.2 v 26 h -2.2 Z M 266.6 286 h 2.2 v 26 h -2.2 Z M 256 294.4 L 272 290.4 v 3.6 L 256 298 Z M 256 304 L 272 300 v 3.6 L 256 307.6 Z" />
+            </g>
         }
     </svg>
 </div>

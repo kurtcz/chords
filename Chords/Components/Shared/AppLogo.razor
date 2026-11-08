@@ -1,15 +1,32 @@
-@* The app icon (Resources/AppIcon): the blue pick with a note cut out of it, optionally on the icon's black rounded square. *@
-<svg class="app-logo @Class" viewBox="@(Tile ? "-24 -24 138 138" : "0 0 90 90")" width="@Size" height="@Size" aria-hidden="true">
+@* The app icon (Resources/AppIcon): the blue pick with a note cut out of it, optionally on the icon's black rounded square.
+   The tile version also takes over the icon's light gradient (Resources/AppIcon/appiconfg.svg); the plain one stays flat. *@
+<svg class="app-logo @Class" viewBox="@(Tile ? "-35.36 -35.36 160.72 160.72" : "0 0 90 90")" width="@Size" height="@Size" aria-hidden="true">
     @if (Tile)
     {
-        <rect x="-24" y="-24" width="138" height="138" rx="31" fill="#000" />
+        <defs>
+            <linearGradient id="app-logo-pick" gradientUnits="userSpaceOnUse" x1="24" y1="2" x2="60" y2="89">
+                <stop offset="0" stop-color="#3C93EC" />
+                <stop offset="0.48" stop-color="#0A6AC6" />
+                <stop offset="1" stop-color="#033F80" />
+            </linearGradient>
+            <radialGradient id="app-logo-highlight" gradientUnits="userSpaceOnUse" cx="31" cy="14" r="40">
+                <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.30" />
+                <stop offset="1" stop-color="#FFFFFF" stop-opacity="0" />
+            </radialGradient>
+        </defs>
+        <rect x="-35.36" y="-35.36" width="160.72" height="160.72" rx="36" fill="#000" />
+        <path fill="url(#app-logo-pick)" fill-rule="evenodd" d="@(PickPath + NotePath)" />
+        <path fill="url(#app-logo-highlight)" fill-rule="evenodd" d="@(PickPath + NotePath)" />
     }
-    <path fill="#0365C0" fill-rule="evenodd" d="@(PickPath + NotePath)" />
+    else
+    {
+        <path fill="#0365C0" fill-rule="evenodd" d="@(PickPath + NotePath)" />
+    }
 </svg>
 
 @code {
     [Parameter] public int Size { get; set; } = 24;
-    /// <summary>Draws the black square behind the pick, as the launcher shows the icon (ForegroundScale 0.65).</summary>
+    /// <summary>Draws the black square behind the pick, as the launcher shows the icon (ForegroundScale 0.56 in Chords.csproj).</summary>
     [Parameter] public bool Tile { get; set; }
     [Parameter] public string Class { get; set; }
 
