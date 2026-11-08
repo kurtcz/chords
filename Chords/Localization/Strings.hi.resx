@@ -177,6 +177,8 @@
   <data name="Nav_About" xml:space="preserve"><value>ऐप के बारे में</value></data>
   <data name="About_Version" xml:space="preserve"><value>संस्करण</value></data>
   <data name="About_Rate" xml:space="preserve"><value>ऐप को रेट करें</value></data>
+  <data name="About_Forum" xml:space="preserve"><value>सहायता फ़ोरम</value></data>
+  <data name="About_Email" xml:space="preserve"><value>ईमेल से संपर्क करें</value></data>
   <data name="About_SoundCredit" xml:space="preserve"><value>वाद्य यंत्रों की ध्वनियाँ</value></data>
   <data name="About_SoundFont" xml:space="preserve"><value>साउंडफ़ॉन्ट</value></data>
   <data name="About_License" xml:space="preserve"><value>लाइसेंस</value></data>

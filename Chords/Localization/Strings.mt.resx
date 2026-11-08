@@ -180,6 +180,8 @@
   <data name="Nav_About" xml:space="preserve"><value>Dwar l-app</value></data>
   <data name="About_Version" xml:space="preserve"><value>Verżjoni</value></data>
   <data name="About_Rate" xml:space="preserve"><value>Ivvaluta l-app</value></data>
+  <data name="About_Forum" xml:space="preserve"><value>Forum tal-appoġġ</value></data>
+  <data name="About_Email" xml:space="preserve"><value>Ikkuntattjana bl-email</value></data>
   <data name="About_SoundCredit" xml:space="preserve"><value>Ħsejjes tal-istrumenti</value></data>
   <data name="About_SoundFont" xml:space="preserve"><value>soundfont</value></data>
   <data name="About_License" xml:space="preserve"><value>Liċenzja</value></data>

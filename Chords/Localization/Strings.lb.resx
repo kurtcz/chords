@@ -177,6 +177,8 @@
   <data name="Nav_About" xml:space="preserve"><value>Iwwer d’App</value></data>
   <data name="About_Version" xml:space="preserve"><value>Versioun</value></data>
   <data name="About_Rate" xml:space="preserve"><value>App bewäerten</value></data>
+  <data name="About_Forum" xml:space="preserve"><value>Support-Forum</value></data>
+  <data name="About_Email" xml:space="preserve"><value>Kontakt per E-Mail</value></data>
   <data name="About_SoundCredit" xml:space="preserve"><value>Instrumentekläng</value></data>
   <data name="About_SoundFont" xml:space="preserve"><value>Soundfont</value></data>
   <data name="About_License" xml:space="preserve"><value>Lizenz</value></data>

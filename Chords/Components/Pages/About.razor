@@ -13,6 +13,15 @@
             <Icon Name="star" />
             <span class="setting-label">@L["About_Rate"]</span>
         </a>
+        <a class="about-row" href="@ForumUrl">
+            <Icon Name="forum" />
+            <span class="setting-label">@L["About_Forum"]</span>
+        </a>
+        @* Opens the mail app with the address, and the version in the subject. *@
+        <a class="about-row" href="@MailUrl">
+            <Icon Name="mail" />
+            <span class="setting-label">@L["About_Email"]</span>
+        </a>
     </div>
 
     <div class="about-credits">
@@ -36,6 +45,13 @@
     private const string AppStoreUrl = "https://apps.apple.com/app/id6832216331?action=write-review";
     /// <summary>The store page of the current platform.</summary>
     private static string StoreUrl => OperatingSystem.IsIOS() ? AppStoreUrl : PlayStoreUrl;
+
+    /// <summary>The support forum, also the support URL in both stores.</summary>
+    private const string ForumUrl = "https://chordexpert.freeforums.net/";
+    /// <summary>The contact address, also listed in both stores and in PRIVACY.md.</summary>
+    private const string Email = "chordexpert.app@gmail.com";
+    private static string MailUrl => "mailto:" + Email + "?subject=" + Uri.EscapeDataString(
+        $"{Microsoft.Maui.ApplicationModel.AppInfo.Current.Name} {Microsoft.Maui.ApplicationModel.AppInfo.Current.VersionString}");
 
     /// <summary>The sound font the other instruments' samples (Platforms/*/Resources) were made from.</summary>
     private const string SoundFontUrl = "https://musical-artifacts.com/artifacts/738";

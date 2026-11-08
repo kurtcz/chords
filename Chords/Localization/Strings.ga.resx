@@ -180,6 +180,8 @@
   <data name="Nav_About" xml:space="preserve"><value>Faoin aip</value></data>
   <data name="About_Version" xml:space="preserve"><value>Leagan</value></data>
   <data name="About_Rate" xml:space="preserve"><value>Rátáil an aip</value></data>
+  <data name="About_Forum" xml:space="preserve"><value>Fóram tacaíochta</value></data>
+  <data name="About_Email" xml:space="preserve"><value>Déan teagmháil trí ríomhphost</value></data>
   <data name="About_SoundCredit" xml:space="preserve"><value>Fuaimeanna na n-uirlisí</value></data>
   <data name="About_SoundFont" xml:space="preserve"><value>cló fuaime</value></data>
   <data name="About_License" xml:space="preserve"><value>Ceadúnas</value></data>

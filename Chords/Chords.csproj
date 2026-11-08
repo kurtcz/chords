@@ -14,8 +14,8 @@
     <!-- The Android id must stay the same so Google Play treats this as an update of the existing app. -->
     <ApplicationId>com.tnemec.chords.android</ApplicationId>
     <ApplicationId Condition="$(TargetFramework.Contains('-ios'))">com.tnemec.chords.ios</ApplicationId>
-    <!-- Android versionCode: must be higher than any version uploaded to Play before (last one was 10). -->
-    <ApplicationVersion>20</ApplicationVersion>
+    <!-- Build number: Android versionCode and iOS CFBundleVersion. Must be higher than any build uploaded to the stores before. -->
+    <ApplicationVersion>200</ApplicationVersion>
     <ApplicationDisplayVersion>2.0</ApplicationDisplayVersion>
 
     <SupportedOSPlatformVersion Condition="$(TargetFramework.Contains('-android'))">24.0</SupportedOSPlatformVersion>

@@ -176,6 +176,8 @@
   <data name="Nav_About" xml:space="preserve"><value>앱 정보</value></data>
   <data name="About_Version" xml:space="preserve"><value>버전</value></data>
   <data name="About_Rate" xml:space="preserve"><value>앱 평가하기</value></data>
+  <data name="About_Forum" xml:space="preserve"><value>지원 포럼</value></data>
+  <data name="About_Email" xml:space="preserve"><value>이메일로 문의하기</value></data>
   <data name="About_SoundCredit" xml:space="preserve"><value>악기 소리</value></data>
   <data name="About_SoundFont" xml:space="preserve"><value>사운드폰트</value></data>
   <data name="About_License" xml:space="preserve"><value>라이선스</value></data>

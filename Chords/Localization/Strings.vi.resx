@@ -176,6 +176,8 @@
   <data name="Nav_About" xml:space="preserve"><value>Giới thiệu</value></data>
   <data name="About_Version" xml:space="preserve"><value>Phiên bản</value></data>
   <data name="About_Rate" xml:space="preserve"><value>Đánh giá ứng dụng</value></data>
+  <data name="About_Forum" xml:space="preserve"><value>Diễn đàn hỗ trợ</value></data>
+  <data name="About_Email" xml:space="preserve"><value>Liên hệ qua email</value></data>
   <data name="About_SoundCredit" xml:space="preserve"><value>Âm thanh nhạc cụ</value></data>
   <data name="About_SoundFont" xml:space="preserve"><value>soundfont</value></data>
   <data name="About_License" xml:space="preserve"><value>Giấy phép</value></data>

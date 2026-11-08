@@ -176,6 +176,8 @@
   <data name="Nav_About" xml:space="preserve"><value>關於</value></data>
   <data name="About_Version" xml:space="preserve"><value>版本</value></data>
   <data name="About_Rate" xml:space="preserve"><value>為 App 評分</value></data>
+  <data name="About_Forum" xml:space="preserve"><value>支援論壇</value></data>
+  <data name="About_Email" xml:space="preserve"><value>透過電子郵件聯絡</value></data>
   <data name="About_SoundCredit" xml:space="preserve"><value>樂器音色</value></data>
   <data name="About_SoundFont" xml:space="preserve"><value>音色庫</value></data>
   <data name="About_License" xml:space="preserve"><value>授權</value></data>

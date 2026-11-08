@@ -13,4 +13,4 @@ The app does not knowingly collect any information from children or anyone else.
 
 ## Contact
 
-Questions about this policy: chrodexpert.app@gmail.com or the [Chord Expert forum](https://chordexpert.freeforums.net/).
+Questions about this policy: chordexpert.app@gmail.com or the [Chord Expert forum](https://chordexpert.freeforums.net/).

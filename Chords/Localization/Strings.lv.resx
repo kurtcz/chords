@@ -178,6 +178,8 @@
   <data name="Nav_About" xml:space="preserve"><value>Par lietotni</value></data>
   <data name="About_Version" xml:space="preserve"><value>Versija</value></data>
   <data name="About_Rate" xml:space="preserve"><value>Novērtēt lietotni</value></data>
+  <data name="About_Forum" xml:space="preserve"><value>Atbalsta forums</value></data>
+  <data name="About_Email" xml:space="preserve"><value>Sazināties pa e-pastu</value></data>
   <data name="About_SoundCredit" xml:space="preserve"><value>Instrumentu skaņas</value></data>
   <data name="About_SoundFont" xml:space="preserve"><value>skaņu fonts</value></data>
   <data name="About_License" xml:space="preserve"><value>Licence</value></data>

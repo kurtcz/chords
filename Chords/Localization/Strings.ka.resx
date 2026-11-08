@@ -177,6 +177,8 @@
   <data name="Nav_About" xml:space="preserve"><value>აპის შესახებ</value></data>
   <data name="About_Version" xml:space="preserve"><value>ვერსია</value></data>
   <data name="About_Rate" xml:space="preserve"><value>შეაფასე აპი</value></data>
+  <data name="About_Forum" xml:space="preserve"><value>მხარდაჭერის ფორუმი</value></data>
+  <data name="About_Email" xml:space="preserve"><value>დაგვიკავშირდით ელფოსტით</value></data>
   <data name="About_SoundCredit" xml:space="preserve"><value>საკრავების ხმები</value></data>
   <data name="About_SoundFont" xml:space="preserve"><value>ხმების ბანკი</value></data>
   <data name="About_License" xml:space="preserve"><value>ლიცენზია</value></data>

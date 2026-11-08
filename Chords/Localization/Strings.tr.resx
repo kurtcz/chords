@@ -177,6 +177,8 @@
   <data name="Nav_About" xml:space="preserve"><value>Hakkında</value></data>
   <data name="About_Version" xml:space="preserve"><value>Sürüm</value></data>
   <data name="About_Rate" xml:space="preserve"><value>Uygulamayı değerlendir</value></data>
+  <data name="About_Forum" xml:space="preserve"><value>Destek forumu</value></data>
+  <data name="About_Email" xml:space="preserve"><value>E-postayla iletişim</value></data>
   <data name="About_SoundCredit" xml:space="preserve"><value>Enstrüman sesleri</value></data>
   <data name="About_SoundFont" xml:space="preserve"><value>ses bankası</value></data>
   <data name="About_License" xml:space="preserve"><value>Lisans</value></data>

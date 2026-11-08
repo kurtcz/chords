@@ -1192,6 +1192,10 @@ h1.navbar-brand {
     text-decoration: none;
 }
 
+.about-row + .about-row {
+    border-top: 1px solid #eee;
+}
+
 .about-row .icon {
     flex: none;
     color: #4d89d5;
@@ -2107,7 +2111,8 @@ html.theme-dark body {
     background-color: var(--surface);
 }
 
-.theme-dark .setting-row {
+.theme-dark .setting-row,
+.theme-dark .about-row + .about-row {
     border-top-color: var(--border-soft);
 }
 

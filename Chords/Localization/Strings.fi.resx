@@ -177,6 +177,8 @@
   <data name="Nav_About" xml:space="preserve"><value>Tietoja</value></data>
   <data name="About_Version" xml:space="preserve"><value>Versio</value></data>
   <data name="About_Rate" xml:space="preserve"><value>Arvioi sovellus</value></data>
+  <data name="About_Forum" xml:space="preserve"><value>Tukifoorumi</value></data>
+  <data name="About_Email" xml:space="preserve"><value>Ota yhteyttä sähköpostilla</value></data>
   <data name="About_SoundCredit" xml:space="preserve"><value>Soitinten äänet</value></data>
   <data name="About_SoundFont" xml:space="preserve"><value>soundfont</value></data>
   <data name="About_License" xml:space="preserve"><value>Lisenssi</value></data>

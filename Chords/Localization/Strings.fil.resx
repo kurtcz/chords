@@ -177,6 +177,8 @@
   <data name="Nav_About" xml:space="preserve"><value>Tungkol sa app</value></data>
   <data name="About_Version" xml:space="preserve"><value>Bersyon</value></data>
   <data name="About_Rate" xml:space="preserve"><value>I-rate ang app</value></data>
+  <data name="About_Forum" xml:space="preserve"><value>Support forum</value></data>
+  <data name="About_Email" xml:space="preserve"><value>Makipag-ugnayan sa email</value></data>
   <data name="About_SoundCredit" xml:space="preserve"><value>Mga tunog ng instrumento</value></data>
   <data name="About_SoundFont" xml:space="preserve"><value>soundfont</value></data>
   <data name="About_License" xml:space="preserve"><value>Lisensya</value></data>

@@ -177,6 +177,8 @@
   <data name="Nav_About" xml:space="preserve"><value>Rreth aplikacionit</value></data>
   <data name="About_Version" xml:space="preserve"><value>Versioni</value></data>
   <data name="About_Rate" xml:space="preserve"><value>Vlerëso aplikacionin</value></data>
+  <data name="About_Forum" xml:space="preserve"><value>Forumi i mbështetjes</value></data>
+  <data name="About_Email" xml:space="preserve"><value>Na kontaktoni me email</value></data>
   <data name="About_SoundCredit" xml:space="preserve"><value>Tingujt e instrumenteve</value></data>
   <data name="About_SoundFont" xml:space="preserve"><value>bankë tingujsh</value></data>
   <data name="About_License" xml:space="preserve"><value>Licenca</value></data>

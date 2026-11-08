@@ -177,6 +177,8 @@
   <data name="Nav_About" xml:space="preserve"><value>Ilova haqida</value></data>
   <data name="About_Version" xml:space="preserve"><value>Versiya</value></data>
   <data name="About_Rate" xml:space="preserve"><value>Ilovani baholash</value></data>
+  <data name="About_Forum" xml:space="preserve"><value>Yordam forumi</value></data>
+  <data name="About_Email" xml:space="preserve"><value>Elektron pochta orqali bogʻlanish</value></data>
   <data name="About_SoundCredit" xml:space="preserve"><value>Cholg‘u tovushlari</value></data>
   <data name="About_SoundFont" xml:space="preserve"><value>tovush to‘plami</value></data>
   <data name="About_License" xml:space="preserve"><value>Litsenziya</value></data>

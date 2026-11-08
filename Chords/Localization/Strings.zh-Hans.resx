@@ -176,6 +176,8 @@
   <data name="Nav_About" xml:space="preserve"><value>关于</value></data>
   <data name="About_Version" xml:space="preserve"><value>版本</value></data>
   <data name="About_Rate" xml:space="preserve"><value>为应用评分</value></data>
+  <data name="About_Forum" xml:space="preserve"><value>支持论坛</value></data>
+  <data name="About_Email" xml:space="preserve"><value>通过电子邮件联系</value></data>
   <data name="About_SoundCredit" xml:space="preserve"><value>乐器音色</value></data>
   <data name="About_SoundFont" xml:space="preserve"><value>音色库</value></data>
   <data name="About_License" xml:space="preserve"><value>许可</value></data>

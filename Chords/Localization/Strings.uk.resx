@@ -178,6 +178,8 @@
   <data name="Nav_About" xml:space="preserve"><value>Про застосунок</value></data>
   <data name="About_Version" xml:space="preserve"><value>Версія</value></data>
   <data name="About_Rate" xml:space="preserve"><value>Оцінити застосунок</value></data>
+  <data name="About_Forum" xml:space="preserve"><value>Форум підтримки</value></data>
+  <data name="About_Email" xml:space="preserve"><value>Написати на пошту</value></data>
   <data name="About_SoundCredit" xml:space="preserve"><value>Звуки інструментів</value></data>
   <data name="About_SoundFont" xml:space="preserve"><value>саундфонт</value></data>
   <data name="About_License" xml:space="preserve"><value>Ліцензія</value></data>

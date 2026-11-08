@@ -177,6 +177,8 @@
   <data name="Nav_About" xml:space="preserve"><value>Қолданба туралы</value></data>
   <data name="About_Version" xml:space="preserve"><value>Нұсқа</value></data>
   <data name="About_Rate" xml:space="preserve"><value>Қолданбаны бағалау</value></data>
+  <data name="About_Forum" xml:space="preserve"><value>Қолдау форумы</value></data>
+  <data name="About_Email" xml:space="preserve"><value>Электрондық пошта арқылы байланысу</value></data>
   <data name="About_SoundCredit" xml:space="preserve"><value>Аспаптардың дыбыстары</value></data>
   <data name="About_SoundFont" xml:space="preserve"><value>саундфонт</value></data>
   <data name="About_License" xml:space="preserve"><value>Лицензия</value></data>

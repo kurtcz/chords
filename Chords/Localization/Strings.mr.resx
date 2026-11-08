@@ -177,6 +177,8 @@
   <data name="Nav_About" xml:space="preserve"><value>ॲपबद्दल</value></data>
   <data name="About_Version" xml:space="preserve"><value>आवृत्ती</value></data>
   <data name="About_Rate" xml:space="preserve"><value>ॲपला रेटिंग द्या</value></data>
+  <data name="About_Forum" xml:space="preserve"><value>सहाय्य फोरम</value></data>
+  <data name="About_Email" xml:space="preserve"><value>ईमेलद्वारे संपर्क करा</value></data>
   <data name="About_SoundCredit" xml:space="preserve"><value>वाद्यांचे आवाज</value></data>
   <data name="About_SoundFont" xml:space="preserve"><value>साउंडफॉन्ट</value></data>
   <data name="About_License" xml:space="preserve"><value>परवाना</value></data>

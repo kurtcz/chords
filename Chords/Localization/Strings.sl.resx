@@ -179,6 +179,8 @@
   <data name="Nav_About" xml:space="preserve"><value>O aplikaciji</value></data>
   <data name="About_Version" xml:space="preserve"><value>Različica</value></data>
   <data name="About_Rate" xml:space="preserve"><value>Oceni aplikacijo</value></data>
+  <data name="About_Forum" xml:space="preserve"><value>Forum za podporo</value></data>
+  <data name="About_Email" xml:space="preserve"><value>Stik po e-pošti</value></data>
   <data name="About_SoundCredit" xml:space="preserve"><value>Zvoki glasbil</value></data>
   <data name="About_SoundFont" xml:space="preserve"><value>zvočna banka</value></data>
   <data name="About_License" xml:space="preserve"><value>Licenca</value></data>

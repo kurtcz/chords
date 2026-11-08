@@ -177,6 +177,8 @@
   <data name="Nav_About" xml:space="preserve"><value>За апликацијата</value></data>
   <data name="About_Version" xml:space="preserve"><value>Верзија</value></data>
   <data name="About_Rate" xml:space="preserve"><value>Оцени ја апликацијата</value></data>
+  <data name="About_Forum" xml:space="preserve"><value>Форум за поддршка</value></data>
+  <data name="About_Email" xml:space="preserve"><value>Контакт по е-пошта</value></data>
   <data name="About_SoundCredit" xml:space="preserve"><value>Звуци на инструментите</value></data>
   <data name="About_SoundFont" xml:space="preserve"><value>звучна банка</value></data>
   <data name="About_License" xml:space="preserve"><value>Лиценца</value></data>

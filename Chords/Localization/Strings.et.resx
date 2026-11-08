@@ -177,6 +177,8 @@
   <data name="Nav_About" xml:space="preserve"><value>Rakendusest</value></data>
   <data name="About_Version" xml:space="preserve"><value>Versioon</value></data>
   <data name="About_Rate" xml:space="preserve"><value>Hinda rakendust</value></data>
+  <data name="About_Forum" xml:space="preserve"><value>Tugifoorum</value></data>
+  <data name="About_Email" xml:space="preserve"><value>Kirjuta e-kirjaga</value></data>
   <data name="About_SoundCredit" xml:space="preserve"><value>Pillide helid</value></data>
   <data name="About_SoundFont" xml:space="preserve"><value>helifont</value></data>
   <data name="About_License" xml:space="preserve"><value>Litsents</value></data>

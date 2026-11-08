@@ -178,6 +178,8 @@
   <data name="Nav_About" xml:space="preserve"><value>אודות</value></data>
   <data name="About_Version" xml:space="preserve"><value>גרסה</value></data>
   <data name="About_Rate" xml:space="preserve"><value>דרג את האפליקציה</value></data>
+  <data name="About_Forum" xml:space="preserve"><value>פורום תמיכה</value></data>
+  <data name="About_Email" xml:space="preserve"><value>יצירת קשר בדוא״ל</value></data>
   <data name="About_SoundCredit" xml:space="preserve"><value>צלילי כלים</value></data>
   <data name="About_SoundFont" xml:space="preserve"><value>בנק צלילים</value></data>
   <data name="About_License" xml:space="preserve"><value>רישיון</value></data>

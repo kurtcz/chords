@@ -178,6 +178,8 @@
   <data name="Nav_About" xml:space="preserve"><value>Apie programėlę</value></data>
   <data name="About_Version" xml:space="preserve"><value>Versija</value></data>
   <data name="About_Rate" xml:space="preserve"><value>Įvertinti programėlę</value></data>
+  <data name="About_Forum" xml:space="preserve"><value>Pagalbos forumas</value></data>
+  <data name="About_Email" xml:space="preserve"><value>Susisiekti el. paštu</value></data>
   <data name="About_SoundCredit" xml:space="preserve"><value>Instrumentų garsai</value></data>
   <data name="About_SoundFont" xml:space="preserve"><value>garsų šriftas</value></data>
   <data name="About_License" xml:space="preserve"><value>Licencija</value></data>

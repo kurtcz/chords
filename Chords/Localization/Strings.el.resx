@@ -177,6 +177,8 @@
   <data name="Nav_About" xml:space="preserve"><value>Σχετικά</value></data>
   <data name="About_Version" xml:space="preserve"><value>Έκδοση</value></data>
   <data name="About_Rate" xml:space="preserve"><value>Βαθμολογήστε την εφαρμογή</value></data>
+  <data name="About_Forum" xml:space="preserve"><value>Φόρουμ υποστήριξης</value></data>
+  <data name="About_Email" xml:space="preserve"><value>Επικοινωνία μέσω email</value></data>
   <data name="About_SoundCredit" xml:space="preserve"><value>Ήχοι οργάνων</value></data>
   <data name="About_SoundFont" xml:space="preserve"><value>τράπεζα ήχων</value></data>
   <data name="About_License" xml:space="preserve"><value>Άδεια</value></data>

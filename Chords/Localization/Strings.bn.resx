@@ -177,6 +177,8 @@
   <data name="Nav_About" xml:space="preserve"><value>অ্যাপ সম্পর্কে</value></data>
   <data name="About_Version" xml:space="preserve"><value>সংস্করণ</value></data>
   <data name="About_Rate" xml:space="preserve"><value>অ্যাপটি রেট করুন</value></data>
+  <data name="About_Forum" xml:space="preserve"><value>সহায়তা ফোরাম</value></data>
+  <data name="About_Email" xml:space="preserve"><value>ইমেলে যোগাযোগ করুন</value></data>
   <data name="About_SoundCredit" xml:space="preserve"><value>বাদ্যযন্ত্রের শব্দ</value></data>
   <data name="About_SoundFont" xml:space="preserve"><value>সাউন্ডফন্ট</value></data>
   <data name="About_License" xml:space="preserve"><value>লাইসেন্স</value></data>

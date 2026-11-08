@@ -177,6 +177,8 @@
   <data name="Nav_About" xml:space="preserve"><value>Аппын тухай</value></data>
   <data name="About_Version" xml:space="preserve"><value>Хувилбар</value></data>
   <data name="About_Rate" xml:space="preserve"><value>Аппыг үнэлэх</value></data>
+  <data name="About_Forum" xml:space="preserve"><value>Тусламжийн форум</value></data>
+  <data name="About_Email" xml:space="preserve"><value>Имэйлээр холбогдох</value></data>
   <data name="About_SoundCredit" xml:space="preserve"><value>Хөгжмийн зэмсгийн дуу</value></data>
   <data name="About_SoundFont" xml:space="preserve"><value>дууны сан</value></data>
   <data name="About_License" xml:space="preserve"><value>Лиценз</value></data>

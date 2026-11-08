@@ -177,6 +177,8 @@
   <data name="Nav_About" xml:space="preserve"><value>செயலி பற்றி</value></data>
   <data name="About_Version" xml:space="preserve"><value>பதிப்பு</value></data>
   <data name="About_Rate" xml:space="preserve"><value>செயலியை மதிப்பிடுக</value></data>
+  <data name="About_Forum" xml:space="preserve"><value>ஆதரவு மன்றம்</value></data>
+  <data name="About_Email" xml:space="preserve"><value>மின்னஞ்சலில் தொடர்புகொள்ளவும்</value></data>
   <data name="About_SoundCredit" xml:space="preserve"><value>இசைக்கருவி ஒலிகள்</value></data>
   <data name="About_SoundFont" xml:space="preserve"><value>ஒலித்தொகுப்பு</value></data>
   <data name="About_License" xml:space="preserve"><value>உரிமம்</value></data>

@@ -177,6 +177,8 @@
   <data name="Nav_About" xml:space="preserve"><value>Quant a</value></data>
   <data name="About_Version" xml:space="preserve"><value>Versió</value></data>
   <data name="About_Rate" xml:space="preserve"><value>Valora l’aplicació</value></data>
+  <data name="About_Forum" xml:space="preserve"><value>Fòrum d’assistència</value></data>
+  <data name="About_Email" xml:space="preserve"><value>Contacte per correu electrònic</value></data>
   <data name="About_SoundCredit" xml:space="preserve"><value>Sons dels instruments</value></data>
   <data name="About_SoundFont" xml:space="preserve"><value>banc de sons</value></data>
   <data name="About_License" xml:space="preserve"><value>Llicència</value></data>

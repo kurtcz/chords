@@ -177,6 +177,8 @@
   <data name="Nav_About" xml:space="preserve"><value>Հավելվածի մասին</value></data>
   <data name="About_Version" xml:space="preserve"><value>Տարբերակ</value></data>
   <data name="About_Rate" xml:space="preserve"><value>Գնահատել հավելվածը</value></data>
+  <data name="About_Forum" xml:space="preserve"><value>Աջակցության ֆորում</value></data>
+  <data name="About_Email" xml:space="preserve"><value>Կապ էլ. փոստով</value></data>
   <data name="About_SoundCredit" xml:space="preserve"><value>Գործիքների ձայներ</value></data>
   <data name="About_SoundFont" xml:space="preserve"><value>ձայնային բանկ</value></data>
   <data name="About_License" xml:space="preserve"><value>Արտոնագիր</value></data>

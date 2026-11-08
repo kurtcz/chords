@@ -176,6 +176,8 @@
   <data name="Nav_About" xml:space="preserve"><value>このアプリについて</value></data>
   <data name="About_Version" xml:space="preserve"><value>バージョン</value></data>
   <data name="About_Rate" xml:space="preserve"><value>アプリを評価</value></data>
+  <data name="About_Forum" xml:space="preserve"><value>サポートフォーラム</value></data>
+  <data name="About_Email" xml:space="preserve"><value>メールで問い合わせる</value></data>
   <data name="About_SoundCredit" xml:space="preserve"><value>楽器の音</value></data>
   <data name="About_SoundFont" xml:space="preserve"><value>サウンドフォント</value></data>
   <data name="About_License" xml:space="preserve"><value>ライセンス</value></data>

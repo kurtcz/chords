@@ -178,6 +178,8 @@
   <data name="Nav_About" xml:space="preserve"><value>O aplikacji</value></data>
   <data name="About_Version" xml:space="preserve"><value>Wersja</value></data>
   <data name="About_Rate" xml:space="preserve"><value>Oceń aplikację</value></data>
+  <data name="About_Forum" xml:space="preserve"><value>Forum pomocy</value></data>
+  <data name="About_Email" xml:space="preserve"><value>Napisz e-mail</value></data>
   <data name="About_SoundCredit" xml:space="preserve"><value>Dźwięki instrumentów</value></data>
   <data name="About_SoundFont" xml:space="preserve"><value>soundfont</value></data>
   <data name="About_License" xml:space="preserve"><value>Licencja</value></data>

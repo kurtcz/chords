@@ -177,6 +177,8 @@
   <data name="Nav_About" xml:space="preserve"><value>Om appen</value></data>
   <data name="About_Version" xml:space="preserve"><value>Versjon</value></data>
   <data name="About_Rate" xml:space="preserve"><value>Vurder appen</value></data>
+  <data name="About_Forum" xml:space="preserve"><value>Støtteforum</value></data>
+  <data name="About_Email" xml:space="preserve"><value>Kontakt oss på e-post</value></data>
   <data name="About_SoundCredit" xml:space="preserve"><value>Instrumentlyder</value></data>
   <data name="About_SoundFont" xml:space="preserve"><value>soundfont</value></data>
   <data name="About_License" xml:space="preserve"><value>Lisens</value></data>

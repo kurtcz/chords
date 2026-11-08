@@ -177,6 +177,8 @@
   <data name="Nav_About" xml:space="preserve"><value>Um appið</value></data>
   <data name="About_Version" xml:space="preserve"><value>Útgáfa</value></data>
   <data name="About_Rate" xml:space="preserve"><value>Gefa appinu einkunn</value></data>
+  <data name="About_Forum" xml:space="preserve"><value>Hjálparspjallborð</value></data>
+  <data name="About_Email" xml:space="preserve"><value>Hafa samband með tölvupósti</value></data>
   <data name="About_SoundCredit" xml:space="preserve"><value>Hljóðfærahljóð</value></data>
   <data name="About_SoundFont" xml:space="preserve"><value>hljóðsafn</value></data>
   <data name="About_License" xml:space="preserve"><value>Leyfi</value></data>

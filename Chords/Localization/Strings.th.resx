@@ -176,6 +176,8 @@
   <data name="Nav_About" xml:space="preserve"><value>เกี่ยวกับแอป</value></data>
   <data name="About_Version" xml:space="preserve"><value>เวอร์ชัน</value></data>
   <data name="About_Rate" xml:space="preserve"><value>ให้คะแนนแอป</value></data>
+  <data name="About_Forum" xml:space="preserve"><value>ฟอรัมช่วยเหลือ</value></data>
+  <data name="About_Email" xml:space="preserve"><value>ติดต่อทางอีเมล</value></data>
   <data name="About_SoundCredit" xml:space="preserve"><value>เสียงเครื่องดนตรี</value></data>
   <data name="About_SoundFont" xml:space="preserve"><value>ซาวด์ฟอนต์</value></data>
   <data name="About_License" xml:space="preserve"><value>สัญญาอนุญาต</value></data>

@@ -177,6 +177,8 @@
   <data name="Nav_About" xml:space="preserve"><value>За приложението</value></data>
   <data name="About_Version" xml:space="preserve"><value>Версия</value></data>
   <data name="About_Rate" xml:space="preserve"><value>Оцени приложението</value></data>
+  <data name="About_Forum" xml:space="preserve"><value>Форум за поддръжка</value></data>
+  <data name="About_Email" xml:space="preserve"><value>Пишете ни по имейл</value></data>
   <data name="About_SoundCredit" xml:space="preserve"><value>Звуци на инструментите</value></data>
   <data name="About_SoundFont" xml:space="preserve"><value>звукова банка</value></data>
   <data name="About_License" xml:space="preserve"><value>Лиценз</value></data>

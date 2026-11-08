@@ -177,6 +177,8 @@
   <data name="Nav_About" xml:space="preserve"><value>Aplikazioari buruz</value></data>
   <data name="About_Version" xml:space="preserve"><value>Bertsioa</value></data>
   <data name="About_Rate" xml:space="preserve"><value>Baloratu aplikazioa</value></data>
+  <data name="About_Forum" xml:space="preserve"><value>Laguntza-foroa</value></data>
+  <data name="About_Email" xml:space="preserve"><value>Jarri harremanetan posta elektronikoz</value></data>
   <data name="About_SoundCredit" xml:space="preserve"><value>Musika-tresnen soinuak</value></data>
   <data name="About_SoundFont" xml:space="preserve"><value>soinu-bankua</value></data>
   <data name="About_License" xml:space="preserve"><value>Lizentzia</value></data>

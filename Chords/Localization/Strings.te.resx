@@ -177,6 +177,8 @@
   <data name="Nav_About" xml:space="preserve"><value>యాప్ గురించి</value></data>
   <data name="About_Version" xml:space="preserve"><value>వెర్షన్</value></data>
   <data name="About_Rate" xml:space="preserve"><value>యాప్‌కు రేటింగ్ ఇవ్వండి</value></data>
+  <data name="About_Forum" xml:space="preserve"><value>సహాయ ఫోరమ్</value></data>
+  <data name="About_Email" xml:space="preserve"><value>ఇమెయిల్ ద్వారా సంప్రదించండి</value></data>
   <data name="About_SoundCredit" xml:space="preserve"><value>వాద్యాల ధ్వనులు</value></data>
   <data name="About_SoundFont" xml:space="preserve"><value>సౌండ్‌ఫాంట్</value></data>
   <data name="About_License" xml:space="preserve"><value>లైసెన్స్</value></data>

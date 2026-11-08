@@ -178,6 +178,8 @@
   <data name="Nav_About" xml:space="preserve"><value>Пра праграму</value></data>
   <data name="About_Version" xml:space="preserve"><value>Версія</value></data>
   <data name="About_Rate" xml:space="preserve"><value>Ацаніць праграму</value></data>
+  <data name="About_Forum" xml:space="preserve"><value>Форум падтрымкі</value></data>
+  <data name="About_Email" xml:space="preserve"><value>Напісаць па электроннай пошце</value></data>
   <data name="About_SoundCredit" xml:space="preserve"><value>Гукі інструментаў</value></data>
   <data name="About_SoundFont" xml:space="preserve"><value>саўндфонт</value></data>
   <data name="About_License" xml:space="preserve"><value>Ліцэнзія</value></data>

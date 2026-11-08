@@ -177,6 +177,8 @@
   <data name="Nav_About" xml:space="preserve"><value>درباره برنامه</value></data>
   <data name="About_Version" xml:space="preserve"><value>نسخه</value></data>
   <data name="About_Rate" xml:space="preserve"><value>به برنامه امتیاز دهید</value></data>
+  <data name="About_Forum" xml:space="preserve"><value>انجمن پشتیبانی</value></data>
+  <data name="About_Email" xml:space="preserve"><value>تماس از طریق ایمیل</value></data>
   <data name="About_SoundCredit" xml:space="preserve"><value>صدای سازها</value></data>
   <data name="About_SoundFont" xml:space="preserve"><value>بانک صدا</value></data>
   <data name="About_License" xml:space="preserve"><value>مجوز</value></data>

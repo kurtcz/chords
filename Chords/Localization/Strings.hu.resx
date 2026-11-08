@@ -177,6 +177,8 @@
   <data name="Nav_About" xml:space="preserve"><value>Az alkalmazásról</value></data>
   <data name="About_Version" xml:space="preserve"><value>Verzió</value></data>
   <data name="About_Rate" xml:space="preserve"><value>Értékeld az alkalmazást</value></data>
+  <data name="About_Forum" xml:space="preserve"><value>Támogatási fórum</value></data>
+  <data name="About_Email" xml:space="preserve"><value>Kapcsolat e-mailben</value></data>
   <data name="About_SoundCredit" xml:space="preserve"><value>Hangszerhangok</value></data>
   <data name="About_SoundFont" xml:space="preserve"><value>hangkészlet</value></data>
   <data name="About_License" xml:space="preserve"><value>Licenc</value></data>
