@@ -5,6 +5,8 @@ Writes:
   fastlane/metadata/android/<play-locale>/{title,short_description,full_description}.txt
   fastlane/metadata/android/<play-locale>/images/{icon,featureGraphic}.png  (from icon512.png and
     branding/store/google-play-feature/<lang>.png, rendered by feature.py)
+  fastlane/metadata/android/<play-locale>/images/phoneScreenshots/*.png  (the same English
+    branding/store/google-play-phone/*.png in every locale; git-ignored copies)
   fastlane/metadata/ios/<asc-locale>/{name,subtitle,promotional_text,keywords,description}.txt
 
 Run from anywhere:  python3 tools/store_listing/generate.py
@@ -18,6 +20,7 @@ HERE = pathlib.Path(__file__).resolve().parent
 ROOT = HERE.parent.parent
 OUT = ROOT / "fastlane" / "metadata"
 FEATURE_DIR = ROOT / "branding" / "store" / "google-play-feature"
+PHONE_DIR = ROOT / "branding" / "store" / "google-play-phone"
 
 # language -> (Google Play locales, App Store Connect locales)
 LOCALES = {
@@ -143,6 +146,11 @@ def main():
             images.mkdir(parents=True, exist_ok=True)
             shutil.copyfile(ROOT / "icon512.png", images / "icon.png")
             shutil.copyfile(FEATURE_DIR / f"{lang}.png", images / "featureGraphic.png")
+            # A translated listing keeps its own screenshots, so every locale gets the new ones.
+            shots = images / "phoneScreenshots"
+            shots.mkdir(exist_ok=True)
+            for png in sorted(PHONE_DIR.glob("*.png")):
+                shutil.copyfile(png, shots / png.name)
         for loc in asc:
             base = OUT / "ios" / loc
             write(base / "name.txt", ASC_NAMES.get(loc, d["name"]))

@@ -182,3 +182,5 @@ FakesAssemblies/
 __pycache__/
 fastlane/Preview.html
 fastlane/report.xml
+# Copies of branding/store/google-play-phone made by tools/store_listing/generate.py
+fastlane/metadata/android/*/images/phoneScreenshots/
