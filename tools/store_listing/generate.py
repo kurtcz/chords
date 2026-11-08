@@ -60,6 +60,12 @@ LOCALES = {
     "zh-Hant": (["zh-TW", "zh-HK"], ["zh-Hant"]),
 }
 
+# App Store names are unique per locale; where "Chord Expert" is taken by another app,
+# that App Store locale gets a longer name (Google Play titles are not affected).
+ASC_NAMES = {
+    "en-US": "Chord Expert: Guitar & Ukulele",
+}
+
 LIMITS = {"name": 30, "subtitle": 30, "short": 80, "promo": 170, "keywords": 100, "desc": 4000}
 
 
@@ -97,6 +103,12 @@ def check(listings):
     unknown = set(listings) - set(LOCALES)
     errors += [f"{lang}: no text" for lang in sorted(missing)]
     errors += [f"{lang}: no locale mapping" for lang in sorted(unknown)]
+    asc_locales = {loc for _, asc in LOCALES.values() for loc in asc}
+    for loc, name in ASC_NAMES.items():
+        if loc not in asc_locales:
+            errors.append(f"ASC_NAMES: unknown App Store locale {loc}")
+        if len(name) > LIMITS["name"]:
+            errors.append(f"ASC_NAMES: {loc} name is {len(name)} > {LIMITS['name']}")
     return errors
 
 
@@ -122,7 +134,7 @@ def main():
             write(base / "full_description.txt", d["desc"])
         for loc in asc:
             base = OUT / "ios" / loc
-            write(base / "name.txt", d["name"])
+            write(base / "name.txt", ASC_NAMES.get(loc, d["name"]))
             write(base / "subtitle.txt", d["subtitle"])
             write(base / "promotional_text.txt", d["promo"])
             write(base / "keywords.txt", d["keywords"])

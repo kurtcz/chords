@@ -180,3 +180,5 @@ FakesAssemblies/
 .vs/
 .DS_Store
 __pycache__/
+fastlane/Preview.html
+fastlane/report.xml
