@@ -10,9 +10,6 @@
 # Build results
 [Bb]in/
 [Oo]bj/
-Chords/bin/
-Chords/obj/
-Chords/wwwroot/
 
 # Roslyn cache directories
 *.ide/

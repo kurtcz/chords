@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="Nav_ShowChord" xml:space="preserve"><value>কর্ড চার্ট দেখান</value></data>
+  <data name="Nav_FindChord" xml:space="preserve"><value>কর্ডের নাম খুঁজুন</value></data>
+  <data name="Nav_FindShape" xml:space="preserve"><value>আকার দেখে কর্ড খুঁজুন</value></data>
+  <data name="Nav_Favorites" xml:space="preserve"><value>প্রিয় কর্ড</value></data>
+  <data name="Nav_Circle" xml:space="preserve"><value>পঞ্চম বৃত্ত</value></data>
+  <data name="Nav_Settings" xml:space="preserve"><value>সেটিংস</value></data>
+  <data name="Nav_Toggle" xml:space="preserve"><value>মেনু দেখান</value></data>
+  <data name="Yes" xml:space="preserve"><value>হ্যাঁ</value></data>
+  <data name="No" xml:space="preserve"><value>না</value></data>
+  <data name="Find" xml:space="preserve"><value>খুঁজুন</value></data>
+  <data name="ChordType_Major" xml:space="preserve"><value>মেজর</value></data>
+  <data name="ShowChord_Partial" xml:space="preserve"><value>অসম্পূর্ণ কর্ডের অনুমতি দিন</value></data>
+  <data name="Chord_Found" xml:space="preserve"><value>পাওয়া কর্ড:</value></data>
+  <data name="Chord_OtherSymbols" xml:space="preserve"><value>অন্যান্য চিহ্ন:</value></data>
+  <data name="Chord_Intervals" xml:space="preserve"><value>কর্ডের ব্যবধান:</value></data>
+  <data name="Chord_Notes" xml:space="preserve"><value>কর্ডের স্বর:</value></data>
+  <data name="Chord_Diagrams" xml:space="preserve"><value>কর্ড ডায়াগ্রাম:</value></data>
+  <data name="Chord_Results_One" xml:space="preserve"><value>{0}টি ফলাফল</value></data>
+  <data name="Chord_Results_Many" xml:space="preserve"><value>{0}টি ফলাফল</value></data>
+  <data name="Chord_Invalid" xml:space="preserve"><value>{0} বৈধ কর্ড নয়</value></data>
+  <data name="Tip" xml:space="preserve"><value>পরামর্শ:</value></data>
+  <data name="Tip_Play" xml:space="preserve"><value>শুনতে একটি ডায়াগ্রামে ট্যাপ করুন।</value></data>
+  <data name="Tip_Strum" xml:space="preserve"><value>ডায়াগ্রামের উপর দিয়ে পাশে সোয়াইপ করে তার ধরে ধরে বাজান।</value></data>
+  <data name="Tip_StrumPick" xml:space="preserve"><value>ডায়াগ্রামের নিচের পিকটি টেনে তার ধরে ধরে বাজান।</value></data>
+  <data name="Tip_Favorite" xml:space="preserve"><value>প্রিয়তে যোগ করতে ডায়াগ্রাম চেপে ধরে রাখুন।</value></data>
+  <data name="Favorites_Empty" xml:space="preserve"><value>আপনার কোনো প্রিয় কর্ড আকার নেই।</value></data>
+  <data name="Favorites_Hint" xml:space="preserve"><value>প্রিয়তে যোগ করতে কর্ড আকার চেপে ধরে রাখুন।</value></data>
+  <data name="Find_Strict" xml:space="preserve"><value>কঠোর মোড</value></data>
+  <data name="Find_Loose" xml:space="preserve"><value>নমনীয় মোড</value></data>
+  <data name="Find_NoChord" xml:space="preserve"><value>কোনো কর্ড পাওয়া যায়নি</value></data>
+  <data name="Settings_SystemLanguage" xml:space="preserve"><value>{0} (সিস্টেম)</value></data>
+  <data name="Notation_English" xml:space="preserve"><value>ইংরেজি</value></data>
+  <data name="Notation_German" xml:space="preserve"><value>জার্মান</value></data>
+  <data name="Notation_Latin" xml:space="preserve"><value>ল্যাটিন</value></data>
+  <data name="Settings_BasicChords" xml:space="preserve"><value>মৌলিক</value></data>
+  <data name="Settings_AllChords" xml:space="preserve"><value>সব</value></data>
+  <data name="Settings_MaxFret" xml:space="preserve"><value>সর্বোচ্চ ফ্রেট:</value></data>
+  <data name="Settings_AllowBarre" xml:space="preserve"><value>ব্যারে কর্ডের অনুমতি দিন</value></data>
+  <data name="Settings_AllowSpecial" xml:space="preserve"><value>উঁচু তার মিউট করা কর্ডের অনুমতি দিন</value></data>
+  <data name="Settings_EasyOnly" xml:space="preserve"><value>শুধু সহজ আঙুলের অবস্থান</value></data>
+  <data name="Settings_Vertical" xml:space="preserve"><value>খাড়া</value></data>
+  <data name="Settings_Horizontal" xml:space="preserve"><value>আড়াআড়ি</value></data>
+  <data name="Settings_LeftHanded" xml:space="preserve"><value>বাঁহাতি (প্রতিফলিত ডায়াগ্রাম)</value></data>
+  <data name="Settings_ShowTips" xml:space="preserve"><value>পরামর্শ দেখান</value></data>
+  <data name="Settings_Theme" xml:space="preserve"><value>থিম</value></data>
+  <data name="Theme_System" xml:space="preserve"><value>ডিভাইস অনুযায়ী</value></data>
+  <data name="Theme_Light" xml:space="preserve"><value>হালকা</value></data>
+  <data name="Theme_Dark" xml:space="preserve"><value>গাঢ়</value></data>
+  <data name="Settings_General" xml:space="preserve"><value>সাধারণ</value></data>
+  <data name="Settings_Language" xml:space="preserve"><value>ভাষা</value></data>
+  <data name="Settings_Instrument" xml:space="preserve"><value>বাদ্যযন্ত্র</value></data>
+  <data name="Settings_Tuning" xml:space="preserve"><value>টিউনিং</value></data>
+  <data name="Settings_Notation" xml:space="preserve"><value>নামকরণ</value></data>
+  <data name="Settings_Diagrams" xml:space="preserve"><value>ডায়াগ্রাম</value></data>
+  <data name="Settings_Chords" xml:space="preserve"><value>কর্ড</value></data>
+  <data name="Instrument_Guitar" xml:space="preserve"><value>গিটার</value></data>
+  <data name="Instrument_Ukulele" xml:space="preserve"><value>ইউকুলেলে</value></data>
+  <data name="Instrument_Mandolin" xml:space="preserve"><value>ম্যান্ডোলিন</value></data>
+  <data name="Instrument_BassGuitar" xml:space="preserve"><value>বেস গিটার</value></data>
+  <data name="Instrument_Banjo" xml:space="preserve"><value>ব্যাঞ্জো</value></data>
+  <data name="Shape_Hint" xml:space="preserve"><value>যেখানে আপনার আঙুল তার চেপে ধরে সেই ফ্রেটগুলিতে ট্যাপ করুন। কোনো তার খোলা (○) ও মিউট (×) এর মধ্যে বদলাতে নাটের উপরে ট্যাপ করুন।</value></data>
+  <data name="Shape_Alternatives" xml:space="preserve"><value>আরও পরিচিত:</value></data>
+  <data name="Shape_TooFew" xml:space="preserve"><value>অন্তত দুটি আলাদা স্বর বাজান</value></data>
+  <data name="Shape_Play" xml:space="preserve"><value>বাজান</value></data>
+  <data name="Shape_Clear" xml:space="preserve"><value>মুছুন</value></data>
+  <data name="Nav_Key" xml:space="preserve"><value>স্কেলের কর্ড</value></data>
+  <data name="Nav_Progressions" xml:space="preserve"><value>কর্ড প্রগ্রেশন</value></data>
+  <data name="Scale_Major" xml:space="preserve"><value>মেজর</value></data>
+  <data name="Scale_Minor" xml:space="preserve"><value>ন্যাচারাল মাইনর</value></data>
+  <data name="Scale_HarmonicMinor" xml:space="preserve"><value>হারমোনিক মাইনর</value></data>
+  <data name="Scale_MelodicMinor" xml:space="preserve"><value>মেলোডিক মাইনর</value></data>
+  <data name="Scale_Dorian" xml:space="preserve"><value>ডোরিয়ান</value></data>
+  <data name="Scale_Phrygian" xml:space="preserve"><value>ফ্রিজিয়ান</value></data>
+  <data name="Scale_PhrygianDominant" xml:space="preserve"><value>ফ্রিজিয়ান ডমিন্যান্ট</value></data>
+  <data name="Scale_HungarianMinor" xml:space="preserve"><value>হাঙ্গেরিয়ান মাইনর</value></data>
+  <data name="Scale_DoubleHarmonicMajor" xml:space="preserve"><value>ডাবল হারমোনিক (জিপসি মেজর)</value></data>
+  <data name="Scale_LydianDominant" xml:space="preserve"><value>লিডিয়ান ডমিন্যান্ট</value></data>
+  <data name="Scale_UkrainianDorian" xml:space="preserve"><value>ইউক্রেনীয় ডোরিয়ান</value></data>
+  <data name="Scale_Altered" xml:space="preserve"><value>অল্টার্ড</value></data>
+  <data name="Scale_MajorPentatonic" xml:space="preserve"><value>মেজর পেন্টাটনিক</value></data>
+  <data name="Scale_MinorPentatonic" xml:space="preserve"><value>মাইনর পেন্টাটনিক</value></data>
+  <data name="Scale_Blues" xml:space="preserve"><value>ব্লুজ</value></data>
+  <data name="Scale_Hirajoshi" xml:space="preserve"><value>Hirajoshi</value></data>
+  <data name="Scale_In" xml:space="preserve"><value>In</value></data>
+  <data name="Scale_Yo" xml:space="preserve"><value>Yo</value></data>
+  <data name="Scale_Kumoi" xml:space="preserve"><value>Kumoi</value></data>
+  <data name="Scale_Egyptian" xml:space="preserve"><value>মিশরীয়</value></data>
+  <data name="Scale_Lydian" xml:space="preserve"><value>লিডিয়ান</value></data>
+  <data name="Scale_Mixolydian" xml:space="preserve"><value>মিক্সোলিডিয়ান</value></data>
+  <data name="Key_TabChords" xml:space="preserve"><value>স্কেলের কর্ড</value></data>
+  <data name="Key_TabDetect" xml:space="preserve"><value>স্কেল খুঁজুন</value></data>
+  <data name="Key_ScaleNotes" xml:space="preserve"><value>স্কেলের স্বর:</value></data>
+  <data name="Key_Sevenths" xml:space="preserve"><value>সেভেন্থ কর্ড</value></data>
+  <data name="Pick_Root" xml:space="preserve"><value>মূল সুর</value></data>
+  <data name="Pick_ChordType" xml:space="preserve"><value>কর্ডের ধরন</value></data>
+  <data name="Pick_Bass" xml:space="preserve"><value>বেস নোট</value></data>
+  <data name="Bass_Any" xml:space="preserve"><value>যেকোনো</value></data>
+  <data name="Bass_Root" xml:space="preserve"><value>রুটের মতোই</value></data>
+  <data name="Layout_Inversion" xml:space="preserve"><value>ইনভার্শন – সবচেয়ে নিচু নোটটি রুট নয়</value></data>
+  <data name="Pick_Tonic" xml:space="preserve"><value>টনিক</value></data>
+  <data name="Pick_Scale" xml:space="preserve"><value>স্কেল</value></data>
+  <data name="Key_Add" xml:space="preserve"><value>কর্ড যোগ করুন</value></data>
+  <data name="Key_DetectHint" xml:space="preserve"><value>একটি গানের কর্ড যোগ করুন, অ্যাপ সেগুলোর সাথে মেলে এমন স্কেল খুঁজে দেবে। কোনো স্কেলের কর্ড দেখতে সেটিতে ট্যাপ করুন।</value></data>
+  <data name="Key_NoChords" xml:space="preserve"><value>একটি গানের কর্ড যোগ করুন</value></data>
+  <data name="Key_NoKey" xml:space="preserve"><value>কোনো মানানসই স্কেল নেই</value></data>
+  <data name="Key_Progressions" xml:space="preserve"><value>এই স্কেলে প্রগ্রেশন</value></data>
+  <data name="Style_Pop" xml:space="preserve"><value>পপ</value></data>
+  <data name="Style_Rock" xml:space="preserve"><value>রক</value></data>
+  <data name="Style_Jazz" xml:space="preserve"><value>জ্যাজ</value></data>
+  <data name="Style_Blues" xml:space="preserve"><value>ব্লুজ</value></data>
+  <data name="Style_Classical" xml:space="preserve"><value>ক্লাসিক্যাল</value></data>
+  <data name="Style_Flamenco" xml:space="preserve"><value>ফ্লামেঙ্কো</value></data>
+  <data name="Style_Klezmer" xml:space="preserve"><value>ক্লেজমার</value></data>
+  <data name="Prog_Generate" xml:space="preserve"><value>প্রগ্রেশন তৈরি করুন</value></data>
+  <data name="Prog_Hint" xml:space="preserve"><value>ডায়াগ্রাম দেখতে একটি প্রগ্রেশনে ট্যাপ করুন; ‹ › ফিঙ্গারিং বদলায়। ▶ সেটি বাজায়, থামাতে আবার ট্যাপ করুন।</value></data>
+  <data name="Prog_Smooth" xml:space="preserve"><value>মসৃণ পরিবর্তন</value></data>
+  <data name="Nav_Tuner" xml:space="preserve"><value>টিউনার</value></data>
+  <data name="Tuner_Hint" xml:space="preserve"><value>কোনো তার শুনতে এবং শুধু সেটিই টিউন করতে তাতে ট্যাপ করুন; অটো সবচেয়ে কাছের তারটি বেছে নেয়।</value></data>
+  <data name="Tuner_Listening" xml:space="preserve"><value>একটি তার বাজান…</value></data>
+  <data name="Tuner_ListeningNote" xml:space="preserve"><value>একটি স্বর বাজান…</value></data>
+  <data name="Tuner_Chromatic" xml:space="preserve"><value>ক্রোম্যাটিক</value></data>
+  <data name="Tuner_InTune" xml:space="preserve"><value>টিউন হয়েছে</value></data>
+  <data name="Tuner_TuneUp" xml:space="preserve"><value>টাইট করুন</value></data>
+  <data name="Tuner_TuneDown" xml:space="preserve"><value>ঢিলা করুন</value></data>
+  <data name="Tuner_Auto" xml:space="preserve"><value>অটো</value></data>
+  <data name="Tuner_MicDenied" xml:space="preserve"><value>টিউনারের মাইক্রোফোন অ্যাক্সেস প্রয়োজন।</value></data>
+  <data name="Tuner_OpenSettings" xml:space="preserve"><value>সেটিংস খুলুন</value></data>
+  <data name="Tuner_MicError" xml:space="preserve"><value>মাইক্রোফোন চালু করা যাচ্ছে না।</value></data>
+  <data name="Tuner_MicUsage" xml:space="preserve"><value>আপনার বাদ্যযন্ত্রটি সুরে আছে কি না দেখাতে টিউনার সেটি শোনে।</value><comment>iOS microphone permission prompt (NSMicrophoneUsageDescription), built into the app bundle by PlatformLocales.targets</comment></data>
+  <data name="Tab_Chords" xml:space="preserve"><value>কর্ড</value></data>
+  <data name="Tab_Favorites" xml:space="preserve"><value>প্রিয়</value></data>
+  <data name="Tab_Theory" xml:space="preserve"><value>তত্ত্ব</value></data>
+  <data name="Tab_More" xml:space="preserve"><value>আরও</value></data>
+  <data name="Group_Tools" xml:space="preserve"><value>সরঞ্জাম</value></data>
+  <data name="Related_Title" xml:space="preserve"><value>আরও দেখুন</value></data>
+  <data name="Tuning_Standard" xml:space="preserve"><value>স্ট্যান্ডার্ড</value></data>
+  <data name="Tuning_HalfStepDown" xml:space="preserve"><value>অর্ধ স্বর নিচে</value></data>
+  <data name="Tuning_WholeStepDown" xml:space="preserve"><value>পূর্ণ স্বর নিচে</value></data>
+  <data name="Tuning_LowG" xml:space="preserve"><value>নিচু G</value></data>
+  <data name="Tuning_UkuleleD" xml:space="preserve"><value>D টিউনিং</value></data>
+  <data name="Tuning_Baritone" xml:space="preserve"><value>ব্যারিটোন</value></data>
+  <data name="Tuning_Tenor" xml:space="preserve"><value>টেনর</value></data>
+  <data name="Tuning_Custom" xml:space="preserve"><value>নিজস্ব টিউনিং</value></data>
+  <data name="Tuning_New" xml:space="preserve"><value>নিজস্ব টিউনিং…</value></data>
+  <data name="Tuning_Edit" xml:space="preserve"><value>সম্পাদনা</value></data>
+  <data name="Tuning_Delete" xml:space="preserve"><value>মুছুন</value></data>
+  <data name="Tuning_Save" xml:space="preserve"><value>সংরক্ষণ</value></data>
+  <data name="Tuning_Cancel" xml:space="preserve"><value>বাতিল</value></data>
+  <data name="Tuning_EditorHint" xml:space="preserve"><value>তার অর্ধ স্বর উপরে বা নিচে টিউন করতে ▲ ▼ ট্যাপ করুন; শুনতে কোনো স্বরে ট্যাপ করুন।</value></data>
+  <data name="Settings_Capo" xml:space="preserve"><value>ক্যাপো</value></data>
+  <data name="Capo_None" xml:space="preserve"><value>ক্যাপো ছাড়া</value></data>
+  <data name="Capo_Fret" xml:space="preserve"><value>ফ্রেট {0}</value></data>
+  <data name="Capo_Badge" xml:space="preserve"><value>ক্যাপো {0}</value></data>
+  <data name="Capo_Shape" xml:space="preserve"><value>ফ্রেট {0}-এ ক্যাপো: {1}-এর আকার ধরুন</value></data>
+  <data name="Capo_ShapeShort" xml:space="preserve"><value>{0}-এর আকার</value></data>
+  <data name="Key_CapoTitle" xml:space="preserve"><value>ক্যাপোর সবচেয়ে সহজ অবস্থান</value></data>
+  <data name="Key_CapoUse" xml:space="preserve"><value>ব্যবহার</value></data>
+  <data name="Fretboard_Title" xml:space="preserve"><value>ফিঙ্গারবোর্ডে</value></data>
+  <data name="Fretboard_Intervals" xml:space="preserve"><value>অন্তর</value></data>
+  <data name="Fretboard_Notes" xml:space="preserve"><value>স্বর</value></data>
+  <data name="Difficulty_Easy" xml:space="preserve"><value>সহজ</value></data>
+  <data name="Difficulty_Medium" xml:space="preserve"><value>মাঝারি</value></data>
+  <data name="Difficulty_Hard" xml:space="preserve"><value>কঠিন</value></data>
+  <data name="Key_CapoHint" xml:space="preserve"><value>দেখানো আকারগুলো ধরুন – ক্যাপো দিয়ে এগুলো {0} এর মতো বাজে।</value></data>
+  <data name="Fretboard_ScaleHint" xml:space="preserve"><value>{0} স্কেলের সুরগুলো ফিঙ্গারবোর্ডে কোথায়। 1 হলো টনিক।</value></data>
+  <data name="Fretboard_ChordHint" xml:space="preserve"><value>{0} কর্ডের সুরগুলো ফিঙ্গারবোর্ডে কোথায়। 1 হলো মূল সুর।</value></data>
+  <data name="Fretboard_ScaleOnly" xml:space="preserve"><value>স্কেল</value></data>
+  <data name="Fretboard_WholeNeck" xml:space="preserve"><value>পুরো নেক</value></data>
+  <data name="Fretboard_Position" xml:space="preserve"><value>ফ্রেট {0}–{1}</value></data>
+  <data name="Fretboard_ChordInScaleHint" xml:space="preserve"><value>কর্ড {0}-এর সুরগুলো চিহ্নিত (1 হল এর মূল সুর); বিন্দুগুলো {1} স্কেলের বাকি সুর।</value></data>
+  <data name="Nav_About" xml:space="preserve"><value>অ্যাপ সম্পর্কে</value></data>
+  <data name="About_Version" xml:space="preserve"><value>সংস্করণ</value></data>
+  <data name="About_Rate" xml:space="preserve"><value>অ্যাপটি রেট করুন</value></data>
+  <data name="About_SoundCredit" xml:space="preserve"><value>বাদ্যযন্ত্রের শব্দ</value></data>
+  <data name="About_SoundFont" xml:space="preserve"><value>সাউন্ডফন্ট</value></data>
+  <data name="About_License" xml:space="preserve"><value>লাইসেন্স</value></data>
+  <data name="About_By" xml:space="preserve"><value>নির্মাতা {0}</value></data>
+  <data name="About_PublicDomain" xml:space="preserve"><value>পাবলিক ডোমেইন</value></data>
+  <data name="About_SoundChanges" xml:space="preserve"><value>নমুনাগুলো এই অ্যাপের জন্য মানিয়ে নেওয়া হয়েছে।</value></data>
+  <data name="Nav_Metronome" xml:space="preserve"><value>মেট্রোনোম</value></data>
+  <data name="Metronome_Start" xml:space="preserve"><value>শুরু</value></data>
+  <data name="Metronome_Stop" xml:space="preserve"><value>থামান</value></data>
+  <data name="Metronome_Tap" xml:space="preserve"><value>টেম্পো ট্যাপ করুন</value></data>
+  <data name="Metronome_Beats" xml:space="preserve"><value>প্রতি মাপে বিট</value></data>
+  <data name="Metronome_Subdivision" xml:space="preserve"><value>উপবিভাগ</value></data>
+  <data name="Metronome_Accent" xml:space="preserve"><value>প্রথম বিটে জোর</value></data>
+  <data name="Metronome_Hint" xml:space="preserve"><value>সংগীতের তালে «টেম্পো ট্যাপ করুন» চেপে এর টেম্পো জানুন। কর্ড প্রগ্রেশন এই টেম্পোতে, প্রতি মাপে একটি কর্ড, বাজে।</value></data>
+  <data name="Prog_Tempo" xml:space="preserve"><value>টেম্পো</value></data>
+</root>

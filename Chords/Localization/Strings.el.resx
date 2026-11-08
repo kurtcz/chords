@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="Nav_ShowChord" xml:space="preserve"><value>Εμφάνιση διαγράμματος συγχορδίας</value></data>
+  <data name="Nav_FindChord" xml:space="preserve"><value>Εύρεση ονόματος συγχορδίας</value></data>
+  <data name="Nav_FindShape" xml:space="preserve"><value>Εύρεση συγχορδίας από θέση</value></data>
+  <data name="Nav_Favorites" xml:space="preserve"><value>Αγαπημένες συγχορδίες</value></data>
+  <data name="Nav_Circle" xml:space="preserve"><value>Κύκλος των πεμπτών</value></data>
+  <data name="Nav_Settings" xml:space="preserve"><value>Ρυθμίσεις</value></data>
+  <data name="Nav_Toggle" xml:space="preserve"><value>Εμφάνιση μενού</value></data>
+  <data name="Yes" xml:space="preserve"><value>Ναι</value></data>
+  <data name="No" xml:space="preserve"><value>Όχι</value></data>
+  <data name="Find" xml:space="preserve"><value>Αναζήτηση</value></data>
+  <data name="ChordType_Major" xml:space="preserve"><value>Μείζονα</value></data>
+  <data name="ShowChord_Partial" xml:space="preserve"><value>Να επιτρέπονται ελλιπείς συγχορδίες</value></data>
+  <data name="Chord_Found" xml:space="preserve"><value>Συγχορδίες που βρέθηκαν:</value></data>
+  <data name="Chord_OtherSymbols" xml:space="preserve"><value>Άλλα σύμβολα:</value></data>
+  <data name="Chord_Intervals" xml:space="preserve"><value>Διαστήματα συγχορδίας:</value></data>
+  <data name="Chord_Notes" xml:space="preserve"><value>Νότες συγχορδίας:</value></data>
+  <data name="Chord_Diagrams" xml:space="preserve"><value>Διαγράμματα συγχορδίας:</value></data>
+  <data name="Chord_Results_One" xml:space="preserve"><value>{0} αποτέλεσμα</value></data>
+  <data name="Chord_Results_Many" xml:space="preserve"><value>{0} αποτελέσματα</value></data>
+  <data name="Chord_Invalid" xml:space="preserve"><value>Το {0} δεν είναι έγκυρη συγχορδία</value></data>
+  <data name="Tip" xml:space="preserve"><value>Συμβουλή:</value></data>
+  <data name="Tip_Play" xml:space="preserve"><value>Πατήστε ένα διάγραμμα για να το ακούσετε.</value></data>
+  <data name="Tip_Strum" xml:space="preserve"><value>Σύρετε πλάγια πάνω από ένα διάγραμμα για να το παίξετε χορδή χορδή.</value></data>
+  <data name="Tip_StrumPick" xml:space="preserve"><value>Σύρετε την πένα κάτω από ένα διάγραμμα για να το παίξετε χορδή χορδή.</value></data>
+  <data name="Tip_Favorite" xml:space="preserve"><value>Πατήστε παρατεταμένα ένα διάγραμμα για να το προσθέσετε στα αγαπημένα.</value></data>
+  <data name="Favorites_Empty" xml:space="preserve"><value>Δεν έχετε αγαπημένες θέσεις συγχορδιών.</value></data>
+  <data name="Favorites_Hint" xml:space="preserve"><value>Πατήστε παρατεταμένα μια θέση για να την προσθέσετε στα αγαπημένα.</value></data>
+  <data name="Find_Strict" xml:space="preserve"><value>Αυστηρή λειτουργία</value></data>
+  <data name="Find_Loose" xml:space="preserve"><value>Χαλαρή λειτουργία</value></data>
+  <data name="Find_NoChord" xml:space="preserve"><value>Δεν βρέθηκε συγχορδία</value></data>
+  <data name="Settings_SystemLanguage" xml:space="preserve"><value>{0} (σύστημα)</value></data>
+  <data name="Notation_English" xml:space="preserve"><value>Αγγλική</value></data>
+  <data name="Notation_German" xml:space="preserve"><value>Γερμανική</value></data>
+  <data name="Notation_Latin" xml:space="preserve"><value>Λατινική</value></data>
+  <data name="Settings_BasicChords" xml:space="preserve"><value>Βασικές</value></data>
+  <data name="Settings_AllChords" xml:space="preserve"><value>Όλες</value></data>
+  <data name="Settings_MaxFret" xml:space="preserve"><value>Υψηλότερο τάστο:</value></data>
+  <data name="Settings_AllowBarre" xml:space="preserve"><value>Να επιτρέπεται το μπαρέ</value></data>
+  <data name="Settings_AllowSpecial" xml:space="preserve"><value>Να επιτρέπονται θέσεις με σβησμένες ψηλές χορδές</value></data>
+  <data name="Settings_EasyOnly" xml:space="preserve"><value>Μόνο εύκολοι δακτυλισμοί</value></data>
+  <data name="Settings_Vertical" xml:space="preserve"><value>Κάθετα</value></data>
+  <data name="Settings_Horizontal" xml:space="preserve"><value>Οριζόντια</value></data>
+  <data name="Settings_LeftHanded" xml:space="preserve"><value>Αριστερόχειρας (κατοπτρικά διαγράμματα)</value></data>
+  <data name="Settings_ShowTips" xml:space="preserve"><value>Εμφάνιση συμβουλών</value></data>
+  <data name="Settings_Theme" xml:space="preserve"><value>Θέμα</value></data>
+  <data name="Theme_System" xml:space="preserve"><value>Όπως η συσκευή</value></data>
+  <data name="Theme_Light" xml:space="preserve"><value>Φωτεινό</value></data>
+  <data name="Theme_Dark" xml:space="preserve"><value>Σκούρο</value></data>
+  <data name="Settings_General" xml:space="preserve"><value>Γενικά</value></data>
+  <data name="Settings_Language" xml:space="preserve"><value>Γλώσσα</value></data>
+  <data name="Settings_Instrument" xml:space="preserve"><value>Όργανο</value></data>
+  <data name="Settings_Tuning" xml:space="preserve"><value>Κούρδισμα</value></data>
+  <data name="Settings_Notation" xml:space="preserve"><value>Ονομασία</value></data>
+  <data name="Settings_Diagrams" xml:space="preserve"><value>Διαγράμματα</value></data>
+  <data name="Settings_Chords" xml:space="preserve"><value>Συγχορδίες</value></data>
+  <data name="Instrument_Guitar" xml:space="preserve"><value>Κιθάρα</value></data>
+  <data name="Instrument_Ukulele" xml:space="preserve"><value>Γιουκαλίλι</value></data>
+  <data name="Instrument_Mandolin" xml:space="preserve"><value>Μαντολίνο</value></data>
+  <data name="Instrument_BassGuitar" xml:space="preserve"><value>Μπάσο</value></data>
+  <data name="Instrument_Banjo" xml:space="preserve"><value>Μπάντζο</value></data>
+  <data name="Shape_Hint" xml:space="preserve"><value>Πατήστε τα τάστα όπου τα δάχτυλά σας πατούν τις χορδές. Πατήστε πάνω από το καβαλάρη για να αλλάξετε μια χορδή μεταξύ ανοιχτής (○) και σβησμένης (×).</value></data>
+  <data name="Shape_Alternatives" xml:space="preserve"><value>Γνωστή και ως:</value></data>
+  <data name="Shape_TooFew" xml:space="preserve"><value>Παίξτε τουλάχιστον δύο διαφορετικές νότες</value></data>
+  <data name="Shape_Play" xml:space="preserve"><value>Αναπαραγωγή</value></data>
+  <data name="Shape_Clear" xml:space="preserve"><value>Καθαρισμός</value></data>
+  <data name="Nav_Key" xml:space="preserve"><value>Συγχορδίες τονικότητας</value></data>
+  <data name="Nav_Progressions" xml:space="preserve"><value>Αλληλουχίες συγχορδιών</value></data>
+  <data name="Scale_Major" xml:space="preserve"><value>Ματζόρε</value></data>
+  <data name="Scale_Minor" xml:space="preserve"><value>Φυσική μινόρε</value></data>
+  <data name="Scale_HarmonicMinor" xml:space="preserve"><value>Αρμονική μινόρε</value></data>
+  <data name="Scale_MelodicMinor" xml:space="preserve"><value>Μελωδική μινόρε</value></data>
+  <data name="Scale_Dorian" xml:space="preserve"><value>Δώρια</value></data>
+  <data name="Scale_Phrygian" xml:space="preserve"><value>Φρύγια</value></data>
+  <data name="Scale_PhrygianDominant" xml:space="preserve"><value>Φρύγια δεσπόζουσα</value></data>
+  <data name="Scale_HungarianMinor" xml:space="preserve"><value>Ουγγρική ελάσσονα</value></data>
+  <data name="Scale_DoubleHarmonicMajor" xml:space="preserve"><value>Διπλή αρμονική (τσιγγάνικη μείζονα)</value></data>
+  <data name="Scale_LydianDominant" xml:space="preserve"><value>Λύδια δεσπόζουσα</value></data>
+  <data name="Scale_UkrainianDorian" xml:space="preserve"><value>Ουκρανική δώρια</value></data>
+  <data name="Scale_Altered" xml:space="preserve"><value>Αλλοιωμένη</value></data>
+  <data name="Scale_MajorPentatonic" xml:space="preserve"><value>Μείζονα πεντατονική</value></data>
+  <data name="Scale_MinorPentatonic" xml:space="preserve"><value>Ελάσσονα πεντατονική</value></data>
+  <data name="Scale_Blues" xml:space="preserve"><value>Μπλουζ</value></data>
+  <data name="Scale_Hirajoshi" xml:space="preserve"><value>Hirajoshi</value></data>
+  <data name="Scale_In" xml:space="preserve"><value>In</value></data>
+  <data name="Scale_Yo" xml:space="preserve"><value>Yo</value></data>
+  <data name="Scale_Kumoi" xml:space="preserve"><value>Kumoi</value></data>
+  <data name="Scale_Egyptian" xml:space="preserve"><value>Αιγυπτιακή</value></data>
+  <data name="Scale_Lydian" xml:space="preserve"><value>Λύδια</value></data>
+  <data name="Scale_Mixolydian" xml:space="preserve"><value>Μιξολύδια</value></data>
+  <data name="Key_TabChords" xml:space="preserve"><value>Συγχορδίες της τονικότητας</value></data>
+  <data name="Key_TabDetect" xml:space="preserve"><value>Εύρεση τονικότητας</value></data>
+  <data name="Key_ScaleNotes" xml:space="preserve"><value>Νότες της κλίμακας:</value></data>
+  <data name="Key_Sevenths" xml:space="preserve"><value>Συγχορδίες έβδομης</value></data>
+  <data name="Pick_Root" xml:space="preserve"><value>Θεμέλιος</value></data>
+  <data name="Pick_ChordType" xml:space="preserve"><value>Είδος συγχορδίας</value></data>
+  <data name="Pick_Bass" xml:space="preserve"><value>Νότα μπάσου</value></data>
+  <data name="Bass_Any" xml:space="preserve"><value>Οποιοσδήποτε</value></data>
+  <data name="Bass_Root" xml:space="preserve"><value>Ίδια με τη θεμελιώδη</value></data>
+  <data name="Layout_Inversion" xml:space="preserve"><value>Αναστροφή – η χαμηλότερη νότα δεν είναι η θεμελιώδης</value></data>
+  <data name="Pick_Tonic" xml:space="preserve"><value>Τονική</value></data>
+  <data name="Pick_Scale" xml:space="preserve"><value>Κλίμακα</value></data>
+  <data name="Key_Add" xml:space="preserve"><value>Προσθήκη συγχορδίας</value></data>
+  <data name="Key_DetectHint" xml:space="preserve"><value>Προσθέστε τις συγχορδίες ενός τραγουδιού και η εφαρμογή θα βρει τις τονικότητες στις οποίες ταιριάζουν. Πατήστε μια τονικότητα για να δείτε τις συγχορδίες της.</value></data>
+  <data name="Key_NoChords" xml:space="preserve"><value>Προσθέστε τις συγχορδίες ενός τραγουδιού</value></data>
+  <data name="Key_NoKey" xml:space="preserve"><value>Καμία κατάλληλη τονικότητα</value></data>
+  <data name="Key_Progressions" xml:space="preserve"><value>Αλληλουχίες σε αυτήν την τονικότητα</value></data>
+  <data name="Style_Pop" xml:space="preserve"><value>Ποπ</value></data>
+  <data name="Style_Rock" xml:space="preserve"><value>Ροκ</value></data>
+  <data name="Style_Jazz" xml:space="preserve"><value>Τζαζ</value></data>
+  <data name="Style_Blues" xml:space="preserve"><value>Μπλουζ</value></data>
+  <data name="Style_Classical" xml:space="preserve"><value>Κλασική</value></data>
+  <data name="Style_Flamenco" xml:space="preserve"><value>Φλαμένκο</value></data>
+  <data name="Style_Klezmer" xml:space="preserve"><value>Κλέζμερ</value></data>
+  <data name="Prog_Generate" xml:space="preserve"><value>Δημιουργία αλληλουχίας</value></data>
+  <data name="Prog_Hint" xml:space="preserve"><value>Πατήστε μια αλληλουχία για να δείτε τα διαγράμματα· τα ‹ › αλλάζουν το δάχτυλο. Το ▶ την παίζει, πατήστε ξανά για διακοπή.</value></data>
+  <data name="Prog_Smooth" xml:space="preserve"><value>Ομαλές μεταβάσεις</value></data>
+  <data name="Nav_Tuner" xml:space="preserve"><value>Κουρδιστήρι</value></data>
+  <data name="Tuner_Hint" xml:space="preserve"><value>Πατήστε μια χορδή για να την ακούσετε και να κουρδίσετε μόνο αυτήν· το Αυτόματο επιλέγει την πλησιέστερη χορδή.</value></data>
+  <data name="Tuner_Listening" xml:space="preserve"><value>Παίξτε μια χορδή…</value></data>
+  <data name="Tuner_ListeningNote" xml:space="preserve"><value>Παίξτε μια νότα…</value></data>
+  <data name="Tuner_Chromatic" xml:space="preserve"><value>Χρωματικό</value></data>
+  <data name="Tuner_InTune" xml:space="preserve"><value>Κουρδισμένο</value></data>
+  <data name="Tuner_TuneUp" xml:space="preserve"><value>Τεντώστε</value></data>
+  <data name="Tuner_TuneDown" xml:space="preserve"><value>Χαλαρώστε</value></data>
+  <data name="Tuner_Auto" xml:space="preserve"><value>Αυτόματο</value></data>
+  <data name="Tuner_MicDenied" xml:space="preserve"><value>Το κουρδιστήρι χρειάζεται πρόσβαση στο μικρόφωνο.</value></data>
+  <data name="Tuner_OpenSettings" xml:space="preserve"><value>Άνοιγμα ρυθμίσεων</value></data>
+  <data name="Tuner_MicError" xml:space="preserve"><value>Δεν είναι δυνατή η εκκίνηση του μικροφώνου.</value></data>
+  <data name="Tuner_MicUsage" xml:space="preserve"><value>Ο κουρδιστής ακούει το όργανό σας για να δείξει αν είναι κουρδισμένο.</value><comment>iOS microphone permission prompt (NSMicrophoneUsageDescription), built into the app bundle by PlatformLocales.targets</comment></data>
+  <data name="Tab_Chords" xml:space="preserve"><value>Συγχορδίες</value></data>
+  <data name="Tab_Favorites" xml:space="preserve"><value>Αγαπημένα</value></data>
+  <data name="Tab_Theory" xml:space="preserve"><value>Θεωρία</value></data>
+  <data name="Tab_More" xml:space="preserve"><value>Περισσότερα</value></data>
+  <data name="Group_Tools" xml:space="preserve"><value>Εργαλεία</value></data>
+  <data name="Related_Title" xml:space="preserve"><value>Δείτε επίσης</value></data>
+  <data name="Tuning_Standard" xml:space="preserve"><value>Κανονικό</value></data>
+  <data name="Tuning_HalfStepDown" xml:space="preserve"><value>Μισό τόνο χαμηλότερα</value></data>
+  <data name="Tuning_WholeStepDown" xml:space="preserve"><value>Έναν τόνο χαμηλότερα</value></data>
+  <data name="Tuning_LowG" xml:space="preserve"><value>Χαμηλό Σολ</value></data>
+  <data name="Tuning_UkuleleD" xml:space="preserve"><value>Κούρδισμα σε Ρε</value></data>
+  <data name="Tuning_Baritone" xml:space="preserve"><value>Βαρύτονο</value></data>
+  <data name="Tuning_Tenor" xml:space="preserve"><value>Τενόρο</value></data>
+  <data name="Tuning_Custom" xml:space="preserve"><value>Δικό σας κούρδισμα</value></data>
+  <data name="Tuning_New" xml:space="preserve"><value>Δικό σας κούρδισμα…</value></data>
+  <data name="Tuning_Edit" xml:space="preserve"><value>Επεξεργασία</value></data>
+  <data name="Tuning_Delete" xml:space="preserve"><value>Διαγραφή</value></data>
+  <data name="Tuning_Save" xml:space="preserve"><value>Αποθήκευση</value></data>
+  <data name="Tuning_Cancel" xml:space="preserve"><value>Ακύρωση</value></data>
+  <data name="Tuning_EditorHint" xml:space="preserve"><value>Πατήστε ▲ ▼ για να ανεβάσετε ή να κατεβάσετε μια χορδή κατά ημιτόνιο· πατήστε μια νότα για να την ακούσετε.</value></data>
+  <data name="Settings_Capo" xml:space="preserve"><value>Καποτάστο</value></data>
+  <data name="Capo_None" xml:space="preserve"><value>Χωρίς καποτάστο</value></data>
+  <data name="Capo_Fret" xml:space="preserve"><value>{0}ο τάστο</value></data>
+  <data name="Capo_Badge" xml:space="preserve"><value>Κάπο {0}</value></data>
+  <data name="Capo_Shape" xml:space="preserve"><value>Καποτάστο στο {0}ο τάστο: πιάσε το σχήμα {1}</value></data>
+  <data name="Capo_ShapeShort" xml:space="preserve"><value>σχήμα {0}</value></data>
+  <data name="Key_CapoTitle" xml:space="preserve"><value>Ευκολότερες θέσεις καποτάστο</value></data>
+  <data name="Key_CapoUse" xml:space="preserve"><value>Χρήση</value></data>
+  <data name="Fretboard_Title" xml:space="preserve"><value>Στην ταστιέρα</value></data>
+  <data name="Fretboard_Intervals" xml:space="preserve"><value>Διαστήματα</value></data>
+  <data name="Fretboard_Notes" xml:space="preserve"><value>Νότες</value></data>
+  <data name="Difficulty_Easy" xml:space="preserve"><value>Εύκολο</value></data>
+  <data name="Difficulty_Medium" xml:space="preserve"><value>Μέτριο</value></data>
+  <data name="Difficulty_Hard" xml:space="preserve"><value>Δύσκολο</value></data>
+  <data name="Key_CapoHint" xml:space="preserve"><value>Πιάσε τα σχήματα που φαίνονται – με το καποτάστο ακούγονται ως {0}.</value></data>
+  <data name="Fretboard_ScaleHint" xml:space="preserve"><value>Πού βρίσκονται οι νότες της κλίμακας {0} στην ταστιέρα. Το 1 είναι η τονική.</value></data>
+  <data name="Fretboard_ChordHint" xml:space="preserve"><value>Πού βρίσκονται οι νότες της συγχορδίας {0} στην ταστιέρα. Το 1 είναι η θεμέλιος.</value></data>
+  <data name="Fretboard_ScaleOnly" xml:space="preserve"><value>Κλίμακα</value></data>
+  <data name="Fretboard_WholeNeck" xml:space="preserve"><value>Όλη η ταστιέρα</value></data>
+  <data name="Fretboard_Position" xml:space="preserve"><value>Τάστα {0}–{1}</value></data>
+  <data name="Fretboard_ChordInScaleHint" xml:space="preserve"><value>Οι νότες της συγχορδίας {0} έχουν ετικέτα (1 είναι η θεμέλιός της)· οι τελείες είναι οι υπόλοιπες νότες της κλίμακας {1}.</value></data>
+  <data name="Nav_About" xml:space="preserve"><value>Σχετικά</value></data>
+  <data name="About_Version" xml:space="preserve"><value>Έκδοση</value></data>
+  <data name="About_Rate" xml:space="preserve"><value>Βαθμολογήστε την εφαρμογή</value></data>
+  <data name="About_SoundCredit" xml:space="preserve"><value>Ήχοι οργάνων</value></data>
+  <data name="About_SoundFont" xml:space="preserve"><value>τράπεζα ήχων</value></data>
+  <data name="About_License" xml:space="preserve"><value>Άδεια</value></data>
+  <data name="About_By" xml:space="preserve"><value>από {0}</value></data>
+  <data name="About_PublicDomain" xml:space="preserve"><value>Δημόσιος τομέας</value></data>
+  <data name="About_SoundChanges" xml:space="preserve"><value>Τα δείγματα προσαρμόστηκαν για την εφαρμογή.</value></data>
+  <data name="Nav_Metronome" xml:space="preserve"><value>Μετρονόμος</value></data>
+  <data name="Metronome_Start" xml:space="preserve"><value>Έναρξη</value></data>
+  <data name="Metronome_Stop" xml:space="preserve"><value>Διακοπή</value></data>
+  <data name="Metronome_Tap" xml:space="preserve"><value>Χτύπα τον ρυθμό</value></data>
+  <data name="Metronome_Beats" xml:space="preserve"><value>Χτύποι ανά μέτρο</value></data>
+  <data name="Metronome_Subdivision" xml:space="preserve"><value>Υποδιαίρεση</value></data>
+  <data name="Metronome_Accent" xml:space="preserve"><value>Τονισμός πρώτου χτύπου</value></data>
+  <data name="Metronome_Hint" xml:space="preserve"><value>Πάτα «Χτύπα τον ρυθμό» στον ρυθμό της μουσικής για να βρεις το τέμπο της. Οι αλληλουχίες συγχορδιών παίζουν σε αυτό το τέμπο, μία συγχορδία ανά μέτρο.</value></data>
+  <data name="Prog_Tempo" xml:space="preserve"><value>Τέμπο</value></data>
+</root>

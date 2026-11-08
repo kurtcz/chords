@@ -1,0 +1,112 @@
+<Project>
+
+  <!--
+    Declares the app's languages to iOS and Android, generated at build time from Localization/Strings*.resx:
+
+    iOS      {lang}.lproj/InfoPlist.strings with NSMicrophoneUsageDescription (resx key Tuner_MicUsage): iOS itself
+             shows the microphone permission prompt and reads its text from the bundle, not from .NET resources.
+             CFBundleLocalizations, CFBundleDevelopmentRegion and the English prompt are merged into Info.plist.
+    Android  Resources/xml/locales_config.xml, the languages offered in the Android 13+ per-app language setting.
+
+    Adding a language is just adding its Strings.{code}.resx. The files land in obj/, not in the source tree.
+  -->
+
+  <PropertyGroup>
+    <_PlatformLocalesTarget>$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)'))</_PlatformLocalesTarget>
+  </PropertyGroup>
+
+  <Target Name="GeneratePlatformLocales" BeforeTargets="PrepareForBuild"
+          Condition="'$(_PlatformLocalesTarget)' == 'ios' or '$(_PlatformLocalesTarget)' == 'android'">
+    <PropertyGroup>
+      <!-- Set here, not at the top: IntermediateOutputPath is defined only after the project file is evaluated. -->
+      <_PlatformLocalesDir>$(IntermediateOutputPath)PlatformLocales/</_PlatformLocalesDir>
+    </PropertyGroup>
+    <ItemGroup>
+      <_LocaleResx Include="Localization/Strings*.resx" />
+    </ItemGroup>
+
+    <GeneratePlatformLocaleFiles Resx="@(_LocaleResx)" OutputDirectory="$(_PlatformLocalesDir)" Platform="$(_PlatformLocalesTarget)">
+      <Output TaskParameter="LprojFiles" ItemName="_LocaleLproj" />
+    </GeneratePlatformLocaleFiles>
+
+    <ItemGroup Condition="'$(_PlatformLocalesTarget)' == 'ios'">
+      <BundleResource Include="@(_LocaleLproj)" />
+      <PartialAppManifest Include="$(_PlatformLocalesDir)Localizations.plist" />
+    </ItemGroup>
+    <ItemGroup Condition="'$(_PlatformLocalesTarget)' == 'android'">
+      <AndroidResource Include="$(_PlatformLocalesDir)locales_config.xml" Link="Platforms/Android/Resources/xml/locales_config.xml" />
+    </ItemGroup>
+  </Target>
+
+  <UsingTask TaskName="GeneratePlatformLocaleFiles" TaskFactory="RoslynCodeTaskFactory" AssemblyFile="$(MSBuildToolsPath)/Microsoft.Build.Tasks.Core.dll">
+    <ParameterGroup>
+      <Resx ParameterType="Microsoft.Build.Framework.ITaskItem[]" Required="true" />
+      <OutputDirectory ParameterType="System.String" Required="true" />
+      <Platform ParameterType="System.String" Required="true" />
+      <LprojFiles ParameterType="Microsoft.Build.Framework.ITaskItem[]" Output="true" />
+    </ParameterGroup>
+    <Task>
+      <Using Namespace="System.Linq" />
+      <Using Namespace="System.Xml.Linq" />
+      <Using Namespace="System.Security" />
+      <Code Type="Fragment" Language="cs"><![CDATA[
+        // Strings.resx is English; Strings.{code}.resx a translation. Apple and Android call European Portuguese pt-PT.
+        var langs = Resx
+            .Select(r =>
+            {
+                var name = Path.GetFileNameWithoutExtension(r.ItemSpec);
+                var code = name == "Strings" ? "en" : name.Substring("Strings.".Length);
+                var text = XDocument.Load(r.GetMetadata("FullPath")).Root.Elements("data")
+                    .FirstOrDefault(d => (string)d.Attribute("name") == "Tuner_MicUsage")?.Element("value")?.Value;
+                if (string.IsNullOrEmpty(text))
+                    Log.LogError("{0}: Tuner_MicUsage is missing.", r.ItemSpec);
+                return (Code: code == "pt" ? "pt-PT" : code, Text: text ?? "");
+            })
+            .OrderBy(l => l.Code == "en" ? "" : l.Code, StringComparer.Ordinal)
+            .ToList();
+
+        // Rewrites a file only when its content changes, so incremental builds stay incremental.
+        Action<string, string> write = (path, content) =>
+        {
+            Directory.CreateDirectory(Path.GetDirectoryName(path));
+            if (!File.Exists(path) || File.ReadAllText(path) != content)
+                File.WriteAllText(path, content, new UTF8Encoding(false));
+        };
+
+        var lproj = new List<ITaskItem>();
+        if (Platform == "ios")
+        {
+            foreach (var (code, text) in langs)
+            {
+                var path = Path.Combine(OutputDirectory, code + ".lproj", "InfoPlist.strings");
+                var literal = "\"" + text.Replace("\\", "\\\\").Replace("\"", "\\\"") + "\"";
+                write(path, "\"NSMicrophoneUsageDescription\" = " + literal + ";\n");
+                var item = new TaskItem(Path.GetFullPath(path));
+                item.SetMetadata("LogicalName", code + ".lproj/InfoPlist.strings");
+                lproj.Add(item);
+            }
+            var english = langs.First(l => l.Code == "en").Text;
+            write(Path.Combine(OutputDirectory, "Localizations.plist"),
+                "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
+                "<!DOCTYPE plist PUBLIC \"-//Apple//DTD PLIST 1.0//EN\" \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\">\n" +
+                "<plist version=\"1.0\">\n<dict>\n" +
+                "\t<key>CFBundleDevelopmentRegion</key>\n\t<string>en</string>\n" +
+                "\t<key>NSMicrophoneUsageDescription</key>\n\t<string>" + SecurityElement.Escape(english) + "</string>\n" +
+                "\t<key>CFBundleLocalizations</key>\n\t<array>\n" +
+                string.Concat(langs.Select(l => "\t\t<string>" + l.Code + "</string>\n")) +
+                "\t</array>\n</dict>\n</plist>\n");
+        }
+        else
+        {
+            write(Path.Combine(OutputDirectory, "locales_config.xml"),
+                "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
+                "<locale-config xmlns:android=\"http://schemas.android.com/apk/res/android\">\n" +
+                string.Concat(langs.Select(l => "\t<locale android:name=\"" + l.Code + "\" />\n")) +
+                "</locale-config>\n");
+        }
+        LprojFiles = lproj.ToArray();
+      ]]></Code>
+    </Task>
+  </UsingTask>
+
+</Project>

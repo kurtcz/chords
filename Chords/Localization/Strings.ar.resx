@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="Nav_ShowChord" xml:space="preserve"><value>عرض مخطط الكورد</value></data>
+  <data name="Nav_FindChord" xml:space="preserve"><value>البحث عن اسم الكورد</value></data>
+  <data name="Nav_FindShape" xml:space="preserve"><value>البحث عن الكورد حسب الوضعية</value></data>
+  <data name="Nav_Favorites" xml:space="preserve"><value>الكوردات المفضلة</value></data>
+  <data name="Nav_Circle" xml:space="preserve"><value>دائرة الخامسات</value></data>
+  <data name="Nav_Settings" xml:space="preserve"><value>الإعدادات</value></data>
+  <data name="Nav_Toggle" xml:space="preserve"><value>إظهار القائمة</value></data>
+  <data name="Yes" xml:space="preserve"><value>نعم</value></data>
+  <data name="No" xml:space="preserve"><value>لا</value></data>
+  <data name="Find" xml:space="preserve"><value>بحث</value></data>
+  <data name="ChordType_Major" xml:space="preserve"><value>ماجور</value></data>
+  <data name="ShowChord_Partial" xml:space="preserve"><value>السماح بالكوردات غير المكتملة</value></data>
+  <data name="Chord_Found" xml:space="preserve"><value>الكوردات التي تم العثور عليها:</value></data>
+  <data name="Chord_OtherSymbols" xml:space="preserve"><value>رموز أخرى:</value></data>
+  <data name="Chord_Intervals" xml:space="preserve"><value>فواصل الكورد:</value></data>
+  <data name="Chord_Notes" xml:space="preserve"><value>نغمات الكورد:</value></data>
+  <data name="Chord_Diagrams" xml:space="preserve"><value>مخططات الكورد:</value></data>
+  <data name="Chord_Results_Zero" xml:space="preserve"><value>{0} نتيجة</value></data>
+  <data name="Chord_Results_One" xml:space="preserve"><value>{0} نتيجة</value></data>
+  <data name="Chord_Results_Two" xml:space="preserve"><value>{0} نتيجتان</value></data>
+  <data name="Chord_Results_Few" xml:space="preserve"><value>{0} نتائج</value></data>
+  <data name="Chord_Results_Many" xml:space="preserve"><value>{0} نتيجة</value></data>
+  <data name="Chord_Results_Other" xml:space="preserve"><value>{0} نتيجة</value></data>
+  <data name="Chord_Invalid" xml:space="preserve"><value>{0} ليس كوردًا صالحًا</value></data>
+  <data name="Tip" xml:space="preserve"><value>نصيحة:</value></data>
+  <data name="Tip_Play" xml:space="preserve"><value>اضغط على مخطط للاستماع إليه.</value></data>
+  <data name="Tip_Strum" xml:space="preserve"><value>اسحب أفقيًا عبر المخطط للعزف عليه وترًا تلو الآخر.</value></data>
+  <data name="Tip_StrumPick" xml:space="preserve"><value>اسحب الريشة أسفل المخطط للعزف عليه وترًا تلو الآخر.</value></data>
+  <data name="Tip_Favorite" xml:space="preserve"><value>اضغط مطولًا على مخطط لإضافته إلى المفضلة.</value></data>
+  <data name="Favorites_Empty" xml:space="preserve"><value>ليس لديك وضعيات كوردات مفضلة.</value></data>
+  <data name="Favorites_Hint" xml:space="preserve"><value>اضغط مطولًا على وضعية لإضافتها إلى المفضلة.</value></data>
+  <data name="Find_Strict" xml:space="preserve"><value>الوضع الصارم</value></data>
+  <data name="Find_Loose" xml:space="preserve"><value>الوضع المرن</value></data>
+  <data name="Find_NoChord" xml:space="preserve"><value>لم يتم العثور على كورد</value></data>
+  <data name="Settings_SystemLanguage" xml:space="preserve"><value>{0} (النظام)</value></data>
+  <data name="Notation_English" xml:space="preserve"><value>إنجليزية</value></data>
+  <data name="Notation_German" xml:space="preserve"><value>ألمانية</value></data>
+  <data name="Notation_Latin" xml:space="preserve"><value>لاتينية</value></data>
+  <data name="Settings_BasicChords" xml:space="preserve"><value>أساسية</value></data>
+  <data name="Settings_AllChords" xml:space="preserve"><value>الكل</value></data>
+  <data name="Settings_MaxFret" xml:space="preserve"><value>أعلى دستان:</value></data>
+  <data name="Settings_AllowBarre" xml:space="preserve"><value>السماح بالباريه</value></data>
+  <data name="Settings_AllowSpecial" xml:space="preserve"><value>السماح بالكوردات ذات الأوتار الحادة المكتومة</value></data>
+  <data name="Settings_EasyOnly" xml:space="preserve"><value>الأوضاع السهلة فقط</value></data>
+  <data name="Settings_Vertical" xml:space="preserve"><value>عمودية</value></data>
+  <data name="Settings_Horizontal" xml:space="preserve"><value>أفقية</value></data>
+  <data name="Settings_LeftHanded" xml:space="preserve"><value>أعسر (مخططات معكوسة)</value></data>
+  <data name="Settings_ShowTips" xml:space="preserve"><value>إظهار النصائح</value></data>
+  <data name="Settings_Theme" xml:space="preserve"><value>المظهر</value></data>
+  <data name="Theme_System" xml:space="preserve"><value>حسب الجهاز</value></data>
+  <data name="Theme_Light" xml:space="preserve"><value>فاتح</value></data>
+  <data name="Theme_Dark" xml:space="preserve"><value>داكن</value></data>
+  <data name="Settings_General" xml:space="preserve"><value>عام</value></data>
+  <data name="Settings_Language" xml:space="preserve"><value>اللغة</value></data>
+  <data name="Settings_Instrument" xml:space="preserve"><value>الآلة</value></data>
+  <data name="Settings_Tuning" xml:space="preserve"><value>الدوزان</value></data>
+  <data name="Settings_Notation" xml:space="preserve"><value>التسمية</value></data>
+  <data name="Settings_Diagrams" xml:space="preserve"><value>المخططات</value></data>
+  <data name="Settings_Chords" xml:space="preserve"><value>الكوردات</value></data>
+  <data name="Instrument_Guitar" xml:space="preserve"><value>جيتار</value></data>
+  <data name="Instrument_Ukulele" xml:space="preserve"><value>يوكوليلي</value></data>
+  <data name="Instrument_Mandolin" xml:space="preserve"><value>ماندولين</value></data>
+  <data name="Instrument_BassGuitar" xml:space="preserve"><value>جيتار باص</value></data>
+  <data name="Instrument_Banjo" xml:space="preserve"><value>بانجو</value></data>
+  <data name="Shape_Hint" xml:space="preserve"><value>اضغط على الدساتين التي تضغط فيها أصابعك على الأوتار. اضغط فوق الأنف لتبديل الوتر بين مفتوح (○) ومكتوم (×).</value></data>
+  <data name="Shape_Alternatives" xml:space="preserve"><value>يُعرف أيضًا باسم:</value></data>
+  <data name="Shape_TooFew" xml:space="preserve"><value>اعزف نغمتين مختلفتين على الأقل</value></data>
+  <data name="Shape_Play" xml:space="preserve"><value>تشغيل</value></data>
+  <data name="Shape_Clear" xml:space="preserve"><value>مسح</value></data>
+  <data name="Nav_Key" xml:space="preserve"><value>أوتار مقام</value></data>
+  <data name="Nav_Progressions" xml:space="preserve"><value>تتابعات الأوتار</value></data>
+  <data name="Scale_Major" xml:space="preserve"><value>ماجور</value></data>
+  <data name="Scale_Minor" xml:space="preserve"><value>مينور طبيعي</value></data>
+  <data name="Scale_HarmonicMinor" xml:space="preserve"><value>مينور هارموني</value></data>
+  <data name="Scale_MelodicMinor" xml:space="preserve"><value>مينور لحني</value></data>
+  <data name="Scale_Dorian" xml:space="preserve"><value>دوري</value></data>
+  <data name="Scale_Phrygian" xml:space="preserve"><value>فريجي</value></data>
+  <data name="Scale_PhrygianDominant" xml:space="preserve"><value>فريجي مهيمن</value></data>
+  <data name="Scale_HungarianMinor" xml:space="preserve"><value>الصغير المجري</value></data>
+  <data name="Scale_DoubleHarmonicMajor" xml:space="preserve"><value>التوافقي المزدوج (الكبير الغجري)</value></data>
+  <data name="Scale_LydianDominant" xml:space="preserve"><value>الليدي المسيطر</value></data>
+  <data name="Scale_UkrainianDorian" xml:space="preserve"><value>الدوري الأوكراني</value></data>
+  <data name="Scale_Altered" xml:space="preserve"><value>المعدَّل</value></data>
+  <data name="Scale_MajorPentatonic" xml:space="preserve"><value>الخماسي الكبير</value></data>
+  <data name="Scale_MinorPentatonic" xml:space="preserve"><value>الخماسي الصغير</value></data>
+  <data name="Scale_Blues" xml:space="preserve"><value>البلوز</value></data>
+  <data name="Scale_Hirajoshi" xml:space="preserve"><value>Hirajoshi</value></data>
+  <data name="Scale_In" xml:space="preserve"><value>In</value></data>
+  <data name="Scale_Yo" xml:space="preserve"><value>Yo</value></data>
+  <data name="Scale_Kumoi" xml:space="preserve"><value>Kumoi</value></data>
+  <data name="Scale_Egyptian" xml:space="preserve"><value>المصري</value></data>
+  <data name="Scale_Lydian" xml:space="preserve"><value>ليدي</value></data>
+  <data name="Scale_Mixolydian" xml:space="preserve"><value>ميكسوليدي</value></data>
+  <data name="Key_TabChords" xml:space="preserve"><value>أوتار المقام</value></data>
+  <data name="Key_TabDetect" xml:space="preserve"><value>إيجاد المقام</value></data>
+  <data name="Key_ScaleNotes" xml:space="preserve"><value>نغمات السلم:</value></data>
+  <data name="Key_Sevenths" xml:space="preserve"><value>أوتار السابعة</value></data>
+  <data name="Pick_Root" xml:space="preserve"><value>الجذر</value></data>
+  <data name="Pick_ChordType" xml:space="preserve"><value>نوع الكورد</value></data>
+  <data name="Pick_Bass" xml:space="preserve"><value>نغمة الباص</value></data>
+  <data name="Bass_Any" xml:space="preserve"><value>أي نغمة</value></data>
+  <data name="Bass_Root" xml:space="preserve"><value>مثل الجذر</value></data>
+  <data name="Layout_Inversion" xml:space="preserve"><value>قلب – أخفض نغمة ليست الجذر</value></data>
+  <data name="Pick_Tonic" xml:space="preserve"><value>القرار</value></data>
+  <data name="Pick_Scale" xml:space="preserve"><value>السلم</value></data>
+  <data name="Key_Add" xml:space="preserve"><value>إضافة وتر</value></data>
+  <data name="Key_DetectHint" xml:space="preserve"><value>أضف أوتار أغنية وسيجد التطبيق المقامات التي تناسبها. انقر على مقام لرؤية أوتاره.</value></data>
+  <data name="Key_NoChords" xml:space="preserve"><value>أضف أوتار أغنية</value></data>
+  <data name="Key_NoKey" xml:space="preserve"><value>لا يوجد مقام مناسب</value></data>
+  <data name="Key_Progressions" xml:space="preserve"><value>تتابعات في هذا المقام</value></data>
+  <data name="Style_Pop" xml:space="preserve"><value>بوب</value></data>
+  <data name="Style_Rock" xml:space="preserve"><value>روك</value></data>
+  <data name="Style_Jazz" xml:space="preserve"><value>جاز</value></data>
+  <data name="Style_Blues" xml:space="preserve"><value>بلوز</value></data>
+  <data name="Style_Classical" xml:space="preserve"><value>كلاسيكي</value></data>
+  <data name="Style_Flamenco" xml:space="preserve"><value>فلامنكو</value></data>
+  <data name="Style_Klezmer" xml:space="preserve"><value>كليزمر</value></data>
+  <data name="Prog_Generate" xml:space="preserve"><value>إنشاء تتابع</value></data>
+  <data name="Prog_Hint" xml:space="preserve"><value>انقر على تتابع لرؤية مخططاته؛ ‹ › يغيّر وضعية الأصابع. ▶ يشغّله، انقر مرة أخرى للإيقاف.</value></data>
+  <data name="Prog_Smooth" xml:space="preserve"><value>انتقالات سلسة</value></data>
+  <data name="Nav_Tuner" xml:space="preserve"><value>الموالف</value></data>
+  <data name="Tuner_Hint" xml:space="preserve"><value>اضغط على وتر لتسمعه وتضبط هذا الوتر فقط؛ يختار تلقائي أقرب وتر.</value></data>
+  <data name="Tuner_Listening" xml:space="preserve"><value>اعزف على وتر…</value></data>
+  <data name="Tuner_ListeningNote" xml:space="preserve"><value>اعزف نغمة…</value></data>
+  <data name="Tuner_Chromatic" xml:space="preserve"><value>لوني</value></data>
+  <data name="Tuner_InTune" xml:space="preserve"><value>مضبوط</value></data>
+  <data name="Tuner_TuneUp" xml:space="preserve"><value>شُدّ</value></data>
+  <data name="Tuner_TuneDown" xml:space="preserve"><value>أرخِ</value></data>
+  <data name="Tuner_Auto" xml:space="preserve"><value>تلقائي</value></data>
+  <data name="Tuner_MicDenied" xml:space="preserve"><value>يحتاج الموالف إلى الوصول إلى الميكروفون.</value></data>
+  <data name="Tuner_OpenSettings" xml:space="preserve"><value>فتح الإعدادات</value></data>
+  <data name="Tuner_MicError" xml:space="preserve"><value>تعذّر تشغيل الميكروفون.</value></data>
+  <data name="Tuner_MicUsage" xml:space="preserve"><value>يستمع المُوالِف إلى آلتك ليُظهر ما إذا كانت مضبوطة.</value><comment>iOS microphone permission prompt (NSMicrophoneUsageDescription), built into the app bundle by PlatformLocales.targets</comment></data>
+  <data name="Tab_Chords" xml:space="preserve"><value>الأكوردات</value></data>
+  <data name="Tab_Favorites" xml:space="preserve"><value>المفضلة</value></data>
+  <data name="Tab_Theory" xml:space="preserve"><value>النظرية</value></data>
+  <data name="Tab_More" xml:space="preserve"><value>المزيد</value></data>
+  <data name="Group_Tools" xml:space="preserve"><value>أدوات</value></data>
+  <data name="Related_Title" xml:space="preserve"><value>انظر أيضًا</value></data>
+  <data name="Tuning_Standard" xml:space="preserve"><value>قياسي</value></data>
+  <data name="Tuning_HalfStepDown" xml:space="preserve"><value>نصف درجة أخفض</value></data>
+  <data name="Tuning_WholeStepDown" xml:space="preserve"><value>درجة كاملة أخفض</value></data>
+  <data name="Tuning_LowG" xml:space="preserve"><value>صول منخفض</value></data>
+  <data name="Tuning_UkuleleD" xml:space="preserve"><value>دوزان ري</value></data>
+  <data name="Tuning_Baritone" xml:space="preserve"><value>باريتون</value></data>
+  <data name="Tuning_Tenor" xml:space="preserve"><value>تينور</value></data>
+  <data name="Tuning_Custom" xml:space="preserve"><value>دوزان مخصص</value></data>
+  <data name="Tuning_New" xml:space="preserve"><value>دوزان مخصص…</value></data>
+  <data name="Tuning_Edit" xml:space="preserve"><value>تعديل</value></data>
+  <data name="Tuning_Delete" xml:space="preserve"><value>حذف</value></data>
+  <data name="Tuning_Save" xml:space="preserve"><value>حفظ</value></data>
+  <data name="Tuning_Cancel" xml:space="preserve"><value>إلغاء</value></data>
+  <data name="Tuning_EditorHint" xml:space="preserve"><value>اضغط ▲ ▼ لرفع الوتر أو خفضه نصف درجة، واضغط على النغمة لسماعها.</value></data>
+  <data name="Settings_Capo" xml:space="preserve"><value>الكابو</value></data>
+  <data name="Capo_None" xml:space="preserve"><value>بدون كابو</value></data>
+  <data name="Capo_Fret" xml:space="preserve"><value>الدستان {0}</value></data>
+  <data name="Capo_Badge" xml:space="preserve"><value>كابو {0}</value></data>
+  <data name="Capo_Shape" xml:space="preserve"><value>الكابو على الدستان {0}: اعزف شكل {1}</value></data>
+  <data name="Capo_ShapeShort" xml:space="preserve"><value>شكل {0}</value></data>
+  <data name="Key_CapoTitle" xml:space="preserve"><value>أسهل مواضع الكابو</value></data>
+  <data name="Key_CapoUse" xml:space="preserve"><value>استخدم</value></data>
+  <data name="Fretboard_Title" xml:space="preserve"><value>على زند الآلة</value></data>
+  <data name="Fretboard_Intervals" xml:space="preserve"><value>المسافات</value></data>
+  <data name="Fretboard_Notes" xml:space="preserve"><value>النغمات</value></data>
+  <data name="Difficulty_Easy" xml:space="preserve"><value>سهل</value></data>
+  <data name="Difficulty_Medium" xml:space="preserve"><value>متوسط</value></data>
+  <data name="Difficulty_Hard" xml:space="preserve"><value>صعب</value></data>
+  <data name="Key_CapoHint" xml:space="preserve"><value>اعزف الأشكال المعروضة – مع الكابو تبدو مثل {0}.</value></data>
+  <data name="Fretboard_ScaleHint" xml:space="preserve"><value>مواقع نغمات سلم {0} على زند الآلة. 1 هي القرار.</value></data>
+  <data name="Fretboard_ChordHint" xml:space="preserve"><value>مواقع نغمات كورد {0} على زند الآلة. 1 هي الجذر.</value></data>
+  <data name="Fretboard_ScaleOnly" xml:space="preserve"><value>السلم</value></data>
+  <data name="Fretboard_WholeNeck" xml:space="preserve"><value>الزند كله</value></data>
+  <data name="Fretboard_Position" xml:space="preserve"><value>الدساتين {0}–{1}</value></data>
+  <data name="Fretboard_ChordInScaleHint" xml:space="preserve"><value>نغمات الكورد {0} مُعلَّمة (1 هي جذره)، والنقاط هي باقي نغمات سلم {1}.</value></data>
+  <data name="Nav_About" xml:space="preserve"><value>حول التطبيق</value></data>
+  <data name="About_Version" xml:space="preserve"><value>الإصدار</value></data>
+  <data name="About_Rate" xml:space="preserve"><value>قيّم التطبيق</value></data>
+  <data name="About_SoundCredit" xml:space="preserve"><value>أصوات الآلات</value></data>
+  <data name="About_SoundFont" xml:space="preserve"><value>بنك أصوات</value></data>
+  <data name="About_License" xml:space="preserve"><value>الترخيص</value></data>
+  <data name="About_By" xml:space="preserve"><value>بواسطة {0}</value></data>
+  <data name="About_PublicDomain" xml:space="preserve"><value>ملكية عامة</value></data>
+  <data name="About_SoundChanges" xml:space="preserve"><value>تم تكييف العينات لهذا التطبيق.</value></data>
+  <data name="Nav_Metronome" xml:space="preserve"><value>المترونوم</value></data>
+  <data name="Metronome_Start" xml:space="preserve"><value>ابدأ</value></data>
+  <data name="Metronome_Stop" xml:space="preserve"><value>أوقف</value></data>
+  <data name="Metronome_Tap" xml:space="preserve"><value>انقر الإيقاع</value></data>
+  <data name="Metronome_Beats" xml:space="preserve"><value>نبضات في المازورة</value></data>
+  <data name="Metronome_Subdivision" xml:space="preserve"><value>التقسيم</value></data>
+  <data name="Metronome_Accent" xml:space="preserve"><value>إبراز النبضة الأولى</value></data>
+  <data name="Metronome_Hint" xml:space="preserve"><value>انقر على «انقر الإيقاع» مع إيقاع الموسيقى لمعرفة سرعتها. تُعزف تتابعات الكوردات بهذه السرعة، كورد واحد في كل مازورة.</value></data>
+  <data name="Prog_Tempo" xml:space="preserve"><value>السرعة</value></data>
+</root>

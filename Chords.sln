@@ -1,11 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chords", "Chords\Chords.csproj", "{64352EA2-62A6-437F-8B7D-DCA0BE8A8184}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chords.Core", "Chords.Core\Chords.Core.csproj", "{E0ACB662-E9E3-4BA6-A258-F669D33EB99A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chords.App", "Chords.App\Chords.App.csproj", "{721B8C93-2531-4F72-A0C1-4FD1D5599A79}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chords", "Chords\Chords.csproj", "{721B8C93-2531-4F72-A0C1-4FD1D5599A79}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chords.Core.Tests", "Chords.Core.Tests\Chords.Core.Tests.csproj", "{60B7E9FE-15AD-4FBC-B75A-2CF39CBF3695}"
 EndProject
@@ -19,18 +17,6 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{64352EA2-62A6-437F-8B7D-DCA0BE8A8184}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{64352EA2-62A6-437F-8B7D-DCA0BE8A8184}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{64352EA2-62A6-437F-8B7D-DCA0BE8A8184}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{64352EA2-62A6-437F-8B7D-DCA0BE8A8184}.Debug|x64.Build.0 = Debug|Any CPU
-		{64352EA2-62A6-437F-8B7D-DCA0BE8A8184}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{64352EA2-62A6-437F-8B7D-DCA0BE8A8184}.Debug|x86.Build.0 = Debug|Any CPU
-		{64352EA2-62A6-437F-8B7D-DCA0BE8A8184}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{64352EA2-62A6-437F-8B7D-DCA0BE8A8184}.Release|Any CPU.Build.0 = Release|Any CPU
-		{64352EA2-62A6-437F-8B7D-DCA0BE8A8184}.Release|x64.ActiveCfg = Release|Any CPU
-		{64352EA2-62A6-437F-8B7D-DCA0BE8A8184}.Release|x64.Build.0 = Release|Any CPU
-		{64352EA2-62A6-437F-8B7D-DCA0BE8A8184}.Release|x86.ActiveCfg = Release|Any CPU
-		{64352EA2-62A6-437F-8B7D-DCA0BE8A8184}.Release|x86.Build.0 = Release|Any CPU
 		{E0ACB662-E9E3-4BA6-A258-F669D33EB99A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E0ACB662-E9E3-4BA6-A258-F669D33EB99A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E0ACB662-E9E3-4BA6-A258-F669D33EB99A}.Debug|x64.ActiveCfg = Debug|Any CPU

@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="Nav_ShowChord" xml:space="preserve"><value>Паказаць аплікатуру акорда</value></data>
+  <data name="Nav_FindChord" xml:space="preserve"><value>Знайсці назву акорда</value></data>
+  <data name="Nav_FindShape" xml:space="preserve"><value>Знайсці акорд па аплікатуры</value></data>
+  <data name="Nav_Favorites" xml:space="preserve"><value>Абраныя акорды</value></data>
+  <data name="Nav_Circle" xml:space="preserve"><value>Квінтавы круг</value></data>
+  <data name="Nav_Settings" xml:space="preserve"><value>Налады</value></data>
+  <data name="Nav_Toggle" xml:space="preserve"><value>Паказаць меню</value></data>
+  <data name="Yes" xml:space="preserve"><value>Так</value></data>
+  <data name="No" xml:space="preserve"><value>Не</value></data>
+  <data name="Find" xml:space="preserve"><value>Знайсці</value></data>
+  <data name="ChordType_Major" xml:space="preserve"><value>Мажор</value></data>
+  <data name="ShowChord_Partial" xml:space="preserve"><value>Дазволіць няпоўныя акорды</value></data>
+  <data name="Chord_Found" xml:space="preserve"><value>Знойдзеныя акорды:</value></data>
+  <data name="Chord_OtherSymbols" xml:space="preserve"><value>Іншыя абазначэнні:</value></data>
+  <data name="Chord_Intervals" xml:space="preserve"><value>Інтэрвалы акорда:</value></data>
+  <data name="Chord_Notes" xml:space="preserve"><value>Ноты акорда:</value></data>
+  <data name="Chord_Diagrams" xml:space="preserve"><value>Аплікатуры акорда:</value></data>
+  <data name="Chord_Results_One" xml:space="preserve"><value>{0} вынік</value></data>
+  <data name="Chord_Results_Few" xml:space="preserve"><value>{0} вынікі</value></data>
+  <data name="Chord_Results_Many" xml:space="preserve"><value>{0} вынікаў</value></data>
+  <data name="Chord_Invalid" xml:space="preserve"><value>{0} — няправільны акорд</value></data>
+  <data name="Tip" xml:space="preserve"><value>Парада:</value></data>
+  <data name="Tip_Play" xml:space="preserve"><value>Націсніце на аплікатуру, каб яе праслухаць.</value></data>
+  <data name="Tip_Strum" xml:space="preserve"><value>Правядзіце пальцам упоперак дыяграмы, каб сыграць яе струна за струной.</value></data>
+  <data name="Tip_StrumPick" xml:space="preserve"><value>Пацягніце медыятар пад дыяграмай, каб сыграць яе струна за струной.</value></data>
+  <data name="Tip_Favorite" xml:space="preserve"><value>Утрымлівайце аплікатуру, каб дадаць яе ў абранае.</value></data>
+  <data name="Favorites_Empty" xml:space="preserve"><value>У вас няма абраных аплікатур.</value></data>
+  <data name="Favorites_Hint" xml:space="preserve"><value>Утрымлівайце аплікатуру, каб дадаць яе ў абранае.</value></data>
+  <data name="Find_Strict" xml:space="preserve"><value>Строгі рэжым</value></data>
+  <data name="Find_Loose" xml:space="preserve"><value>Свабодны рэжым</value></data>
+  <data name="Find_NoChord" xml:space="preserve"><value>Акорд не знойдзены</value></data>
+  <data name="Settings_SystemLanguage" xml:space="preserve"><value>{0} (сістэма)</value></data>
+  <data name="Notation_English" xml:space="preserve"><value>Англійская</value></data>
+  <data name="Notation_German" xml:space="preserve"><value>Нямецкая</value></data>
+  <data name="Notation_Latin" xml:space="preserve"><value>Лацінская</value></data>
+  <data name="Settings_BasicChords" xml:space="preserve"><value>Асноўныя</value></data>
+  <data name="Settings_AllChords" xml:space="preserve"><value>Усе</value></data>
+  <data name="Settings_MaxFret" xml:space="preserve"><value>Найвышэйшы лад:</value></data>
+  <data name="Settings_AllowBarre" xml:space="preserve"><value>Дазволіць барэ</value></data>
+  <data name="Settings_AllowSpecial" xml:space="preserve"><value>Дазволіць акорды з заглушанымі высокімі струнамі</value></data>
+  <data name="Settings_EasyOnly" xml:space="preserve"><value>Толькі простыя аплікатуры</value></data>
+  <data name="Settings_Vertical" xml:space="preserve"><value>Вертыкальныя</value></data>
+  <data name="Settings_Horizontal" xml:space="preserve"><value>Гарызантальныя</value></data>
+  <data name="Settings_LeftHanded" xml:space="preserve"><value>Для ляўшы (люстраныя аплікатуры)</value></data>
+  <data name="Settings_ShowTips" xml:space="preserve"><value>Паказваць парады</value></data>
+  <data name="Settings_Theme" xml:space="preserve"><value>Тэма</value></data>
+  <data name="Theme_System" xml:space="preserve"><value>Як на прыладзе</value></data>
+  <data name="Theme_Light" xml:space="preserve"><value>Светлая</value></data>
+  <data name="Theme_Dark" xml:space="preserve"><value>Цёмная</value></data>
+  <data name="Settings_General" xml:space="preserve"><value>Агульныя</value></data>
+  <data name="Settings_Language" xml:space="preserve"><value>Мова</value></data>
+  <data name="Settings_Instrument" xml:space="preserve"><value>Інструмент</value></data>
+  <data name="Settings_Tuning" xml:space="preserve"><value>Строй</value></data>
+  <data name="Settings_Notation" xml:space="preserve"><value>Натацыя</value></data>
+  <data name="Settings_Diagrams" xml:space="preserve"><value>Аплікатуры</value></data>
+  <data name="Settings_Chords" xml:space="preserve"><value>Акорды</value></data>
+  <data name="Instrument_Guitar" xml:space="preserve"><value>Гітара</value></data>
+  <data name="Instrument_Ukulele" xml:space="preserve"><value>Укулеле</value></data>
+  <data name="Instrument_Mandolin" xml:space="preserve"><value>Мандаліна</value></data>
+  <data name="Instrument_BassGuitar" xml:space="preserve"><value>Бас-гітара</value></data>
+  <data name="Instrument_Banjo" xml:space="preserve"><value>Банджа</value></data>
+  <data name="Shape_Hint" xml:space="preserve"><value>Націсніце на лады, дзе пальцы прыціскаюць струны. Націсніце над парожкам, каб пераключыць струну паміж адкрытай (○) і заглушанай (×).</value></data>
+  <data name="Shape_Alternatives" xml:space="preserve"><value>Таксама вядомы як:</value></data>
+  <data name="Shape_TooFew" xml:space="preserve"><value>Сыграйце хаця б дзве розныя ноты</value></data>
+  <data name="Shape_Play" xml:space="preserve"><value>Іграць</value></data>
+  <data name="Shape_Clear" xml:space="preserve"><value>Ачысціць</value></data>
+  <data name="Nav_Key" xml:space="preserve"><value>Акорды танальнасці</value></data>
+  <data name="Nav_Progressions" xml:space="preserve"><value>Акордавыя паслядоўнасці</value></data>
+  <data name="Scale_Major" xml:space="preserve"><value>Мажор</value></data>
+  <data name="Scale_Minor" xml:space="preserve"><value>Натуральны мінор</value></data>
+  <data name="Scale_HarmonicMinor" xml:space="preserve"><value>Гарманічны мінор</value></data>
+  <data name="Scale_MelodicMinor" xml:space="preserve"><value>Меладычны мінор</value></data>
+  <data name="Scale_Dorian" xml:space="preserve"><value>Дарыйскі</value></data>
+  <data name="Scale_Phrygian" xml:space="preserve"><value>Фрыгійскі</value></data>
+  <data name="Scale_PhrygianDominant" xml:space="preserve"><value>Фрыгійскі дамінантавы</value></data>
+  <data name="Scale_HungarianMinor" xml:space="preserve"><value>Венгерскі мінор</value></data>
+  <data name="Scale_DoubleHarmonicMajor" xml:space="preserve"><value>Двайная гарманічная (цыганскі мажор)</value></data>
+  <data name="Scale_LydianDominant" xml:space="preserve"><value>Лідыйская дамінанта</value></data>
+  <data name="Scale_UkrainianDorian" xml:space="preserve"><value>Украінская дарыйская</value></data>
+  <data name="Scale_Altered" xml:space="preserve"><value>Альтэраваная</value></data>
+  <data name="Scale_MajorPentatonic" xml:space="preserve"><value>Мажорная пентатоніка</value></data>
+  <data name="Scale_MinorPentatonic" xml:space="preserve"><value>Мінорная пентатоніка</value></data>
+  <data name="Scale_Blues" xml:space="preserve"><value>Блюзавая</value></data>
+  <data name="Scale_Hirajoshi" xml:space="preserve"><value>Хирадзёси</value></data>
+  <data name="Scale_In" xml:space="preserve"><value>Ин</value></data>
+  <data name="Scale_Yo" xml:space="preserve"><value>Ё</value></data>
+  <data name="Scale_Kumoi" xml:space="preserve"><value>Кумои</value></data>
+  <data name="Scale_Egyptian" xml:space="preserve"><value>Егіпецкая</value></data>
+  <data name="Scale_Lydian" xml:space="preserve"><value>Лідыйскі</value></data>
+  <data name="Scale_Mixolydian" xml:space="preserve"><value>Міксалідыйскі</value></data>
+  <data name="Key_TabChords" xml:space="preserve"><value>Акорды танальнасці</value></data>
+  <data name="Key_TabDetect" xml:space="preserve"><value>Знайсці танальнасць</value></data>
+  <data name="Key_ScaleNotes" xml:space="preserve"><value>Ноты гамы:</value></data>
+  <data name="Key_Sevenths" xml:space="preserve"><value>Септакорды</value></data>
+  <data name="Pick_Root" xml:space="preserve"><value>Асноўны тон</value></data>
+  <data name="Pick_ChordType" xml:space="preserve"><value>Тып акорда</value></data>
+  <data name="Pick_Bass" xml:space="preserve"><value>Басовы тон</value></data>
+  <data name="Bass_Any" xml:space="preserve"><value>Любы</value></data>
+  <data name="Bass_Root" xml:space="preserve"><value>Як асноўны тон</value></data>
+  <data name="Layout_Inversion" xml:space="preserve"><value>Абарачэнне – самы нізкі тон не асноўны</value></data>
+  <data name="Pick_Tonic" xml:space="preserve"><value>Тоніка</value></data>
+  <data name="Pick_Scale" xml:space="preserve"><value>Гама</value></data>
+  <data name="Key_Add" xml:space="preserve"><value>Дадаць акорд</value></data>
+  <data name="Key_DetectHint" xml:space="preserve"><value>Дадайце акорды песні, і праграма знойдзе адпаведныя танальнасці. Націсніце на танальнасць, каб убачыць яе акорды.</value></data>
+  <data name="Key_NoChords" xml:space="preserve"><value>Дадайце акорды песні</value></data>
+  <data name="Key_NoKey" xml:space="preserve"><value>Няма адпаведнай танальнасці</value></data>
+  <data name="Key_Progressions" xml:space="preserve"><value>Паслядоўнасці ў гэтай танальнасці</value></data>
+  <data name="Style_Pop" xml:space="preserve"><value>Поп</value></data>
+  <data name="Style_Rock" xml:space="preserve"><value>Рок</value></data>
+  <data name="Style_Jazz" xml:space="preserve"><value>Джаз</value></data>
+  <data name="Style_Blues" xml:space="preserve"><value>Блюз</value></data>
+  <data name="Style_Classical" xml:space="preserve"><value>Класіка</value></data>
+  <data name="Style_Flamenco" xml:space="preserve"><value>Фламенка</value></data>
+  <data name="Style_Klezmer" xml:space="preserve"><value>Клезмер</value></data>
+  <data name="Prog_Generate" xml:space="preserve"><value>Стварыць паслядоўнасць</value></data>
+  <data name="Prog_Hint" xml:space="preserve"><value>Націсніце на паслядоўнасць, каб убачыць дыяграмы; ‹ › змяняе аплікатуру. ▶ прайграе яе, паўторнае націсканне спыняе.</value></data>
+  <data name="Prog_Smooth" xml:space="preserve"><value>Плаўныя пераходы</value></data>
+  <data name="Nav_Tuner" xml:space="preserve"><value>Цюнер</value></data>
+  <data name="Tuner_Hint" xml:space="preserve"><value>Націсніце на струну, каб пачуць яе і наладжваць толькі яе; Аўта выбірае бліжэйшую струну.</value></data>
+  <data name="Tuner_Listening" xml:space="preserve"><value>Сыграйце на струне…</value></data>
+  <data name="Tuner_ListeningNote" xml:space="preserve"><value>Сыграйце ноту…</value></data>
+  <data name="Tuner_Chromatic" xml:space="preserve"><value>Храматычны</value></data>
+  <data name="Tuner_InTune" xml:space="preserve"><value>Наладжана</value></data>
+  <data name="Tuner_TuneUp" xml:space="preserve"><value>Падцягніце</value></data>
+  <data name="Tuner_TuneDown" xml:space="preserve"><value>Аслабце</value></data>
+  <data name="Tuner_Auto" xml:space="preserve"><value>Аўта</value></data>
+  <data name="Tuner_MicDenied" xml:space="preserve"><value>Цюнеру патрэбны доступ да мікрафона.</value></data>
+  <data name="Tuner_OpenSettings" xml:space="preserve"><value>Адкрыць налады</value></data>
+  <data name="Tuner_MicError" xml:space="preserve"><value>Не ўдаецца ўключыць мікрафон.</value></data>
+  <data name="Tuner_MicUsage" xml:space="preserve"><value>Цюнер слухае ваш інструмент, каб паказаць, ці ён настроены.</value><comment>iOS microphone permission prompt (NSMicrophoneUsageDescription), built into the app bundle by PlatformLocales.targets</comment></data>
+  <data name="Tab_Chords" xml:space="preserve"><value>Акорды</value></data>
+  <data name="Tab_Favorites" xml:space="preserve"><value>Абранае</value></data>
+  <data name="Tab_Theory" xml:space="preserve"><value>Тэорыя</value></data>
+  <data name="Tab_More" xml:space="preserve"><value>Яшчэ</value></data>
+  <data name="Group_Tools" xml:space="preserve"><value>Інструменты</value></data>
+  <data name="Related_Title" xml:space="preserve"><value>Глядзіце таксама</value></data>
+  <data name="Tuning_Standard" xml:space="preserve"><value>Стандартны</value></data>
+  <data name="Tuning_HalfStepDown" xml:space="preserve"><value>На паўтона ніжэй</value></data>
+  <data name="Tuning_WholeStepDown" xml:space="preserve"><value>На тон ніжэй</value></data>
+  <data name="Tuning_LowG" xml:space="preserve"><value>Нізкая соль</value></data>
+  <data name="Tuning_UkuleleD" xml:space="preserve"><value>Строй рэ</value></data>
+  <data name="Tuning_Baritone" xml:space="preserve"><value>Барытон</value></data>
+  <data name="Tuning_Tenor" xml:space="preserve"><value>Тэнар</value></data>
+  <data name="Tuning_Custom" xml:space="preserve"><value>Свой строй</value></data>
+  <data name="Tuning_New" xml:space="preserve"><value>Свой строй…</value></data>
+  <data name="Tuning_Edit" xml:space="preserve"><value>Змяніць</value></data>
+  <data name="Tuning_Delete" xml:space="preserve"><value>Выдаліць</value></data>
+  <data name="Tuning_Save" xml:space="preserve"><value>Захаваць</value></data>
+  <data name="Tuning_Cancel" xml:space="preserve"><value>Скасаваць</value></data>
+  <data name="Tuning_EditorHint" xml:space="preserve"><value>Націскайце ▲ ▼, каб падняць ці апусціць струну на паўтона; націсніце на ноту, каб яе пачуць.</value></data>
+  <data name="Settings_Capo" xml:space="preserve"><value>Каподастр</value></data>
+  <data name="Capo_None" xml:space="preserve"><value>Без каподастра</value></data>
+  <data name="Capo_Fret" xml:space="preserve"><value>{0}-ы лад</value></data>
+  <data name="Capo_Badge" xml:space="preserve"><value>Капо {0}</value></data>
+  <data name="Capo_Shape" xml:space="preserve"><value>Каподастр на {0}-м ладзе: заціскай форму {1}</value></data>
+  <data name="Capo_ShapeShort" xml:space="preserve"><value>форма {0}</value></data>
+  <data name="Key_CapoTitle" xml:space="preserve"><value>Самыя зручныя пазіцыі каподастра</value></data>
+  <data name="Key_CapoUse" xml:space="preserve"><value>Выбраць</value></data>
+  <data name="Fretboard_Title" xml:space="preserve"><value>На грыфе</value></data>
+  <data name="Fretboard_Intervals" xml:space="preserve"><value>Інтэрвалы</value></data>
+  <data name="Fretboard_Notes" xml:space="preserve"><value>Ноты</value></data>
+  <data name="Difficulty_Easy" xml:space="preserve"><value>Лёгка</value></data>
+  <data name="Difficulty_Medium" xml:space="preserve"><value>Сярэдне</value></data>
+  <data name="Difficulty_Hard" xml:space="preserve"><value>Складана</value></data>
+  <data name="Key_CapoHint" xml:space="preserve"><value>Заціскай паказаныя формы – з каподастрам яны гучаць як {0}.</value></data>
+  <data name="Fretboard_ScaleHint" xml:space="preserve"><value>Дзе на грыфе знаходзяцца ноты гамы {0}. 1 – тоніка.</value></data>
+  <data name="Fretboard_ChordHint" xml:space="preserve"><value>Дзе на грыфе знаходзяцца ноты акорда {0}. 1 – асноўны тон.</value></data>
+  <data name="Fretboard_ScaleOnly" xml:space="preserve"><value>Гама</value></data>
+  <data name="Fretboard_WholeNeck" xml:space="preserve"><value>Увесь грыф</value></data>
+  <data name="Fretboard_Position" xml:space="preserve"><value>Лады {0}–{1}</value></data>
+  <data name="Fretboard_ChordInScaleHint" xml:space="preserve"><value>Падпісаны гукі акорда {0} (1 — яго асноўны тон); кропкі — астатнія гукі гамы {1}.</value></data>
+  <data name="Nav_About" xml:space="preserve"><value>Пра праграму</value></data>
+  <data name="About_Version" xml:space="preserve"><value>Версія</value></data>
+  <data name="About_Rate" xml:space="preserve"><value>Ацаніць праграму</value></data>
+  <data name="About_SoundCredit" xml:space="preserve"><value>Гукі інструментаў</value></data>
+  <data name="About_SoundFont" xml:space="preserve"><value>саўндфонт</value></data>
+  <data name="About_License" xml:space="preserve"><value>Ліцэнзія</value></data>
+  <data name="About_By" xml:space="preserve"><value>аўтар {0}</value></data>
+  <data name="About_PublicDomain" xml:space="preserve"><value>Грамадскі набытак</value></data>
+  <data name="About_SoundChanges" xml:space="preserve"><value>Сэмплы адаптаваныя для гэтай праграмы.</value></data>
+  <data name="Nav_Metronome" xml:space="preserve"><value>Метраном</value></data>
+  <data name="Metronome_Start" xml:space="preserve"><value>Старт</value></data>
+  <data name="Metronome_Stop" xml:space="preserve"><value>Стоп</value></data>
+  <data name="Metronome_Tap" xml:space="preserve"><value>Прастукаць тэмп</value></data>
+  <data name="Metronome_Beats" xml:space="preserve"><value>Доляў у такце</value></data>
+  <data name="Metronome_Subdivision" xml:space="preserve"><value>Дзяленне долі</value></data>
+  <data name="Metronome_Accent" xml:space="preserve"><value>Вылучаць першую долю</value></data>
+  <data name="Metronome_Hint" xml:space="preserve"><value>Націскайце «Прастукаць тэмп» у рытм музыкі, каб даведацца яе тэмп. Акордавыя паслядоўнасці граюць у гэтым тэмпе, адзін акорд на такт.</value></data>
+  <data name="Prog_Tempo" xml:space="preserve"><value>Тэмп</value></data>
+</root>

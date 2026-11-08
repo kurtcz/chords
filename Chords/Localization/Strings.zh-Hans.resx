@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="Nav_ShowChord" xml:space="preserve"><value>显示和弦图</value></data>
+  <data name="Nav_FindChord" xml:space="preserve"><value>查找和弦名称</value></data>
+  <data name="Nav_FindShape" xml:space="preserve"><value>按指法查找和弦</value></data>
+  <data name="Nav_Favorites" xml:space="preserve"><value>收藏的和弦</value></data>
+  <data name="Nav_Circle" xml:space="preserve"><value>五度圈</value></data>
+  <data name="Nav_Settings" xml:space="preserve"><value>设置</value></data>
+  <data name="Nav_Toggle" xml:space="preserve"><value>显示菜单</value></data>
+  <data name="Yes" xml:space="preserve"><value>是</value></data>
+  <data name="No" xml:space="preserve"><value>否</value></data>
+  <data name="Find" xml:space="preserve"><value>查找</value></data>
+  <data name="ChordType_Major" xml:space="preserve"><value>大三</value></data>
+  <data name="ShowChord_Partial" xml:space="preserve"><value>允许不完整和弦</value></data>
+  <data name="Chord_Found" xml:space="preserve"><value>找到的和弦：</value></data>
+  <data name="Chord_OtherSymbols" xml:space="preserve"><value>其他记号：</value></data>
+  <data name="Chord_Intervals" xml:space="preserve"><value>和弦音程：</value></data>
+  <data name="Chord_Notes" xml:space="preserve"><value>和弦音：</value></data>
+  <data name="Chord_Diagrams" xml:space="preserve"><value>和弦图：</value></data>
+  <data name="Chord_Results_Many" xml:space="preserve"><value>{0} 个结果</value></data>
+  <data name="Chord_Invalid" xml:space="preserve"><value>{0} 不是有效的和弦</value></data>
+  <data name="Tip" xml:space="preserve"><value>提示：</value></data>
+  <data name="Tip_Play" xml:space="preserve"><value>点按和弦图即可试听。</value></data>
+  <data name="Tip_Strum" xml:space="preserve"><value>在和弦图上横向滑动，即可逐弦扫弦。</value></data>
+  <data name="Tip_StrumPick" xml:space="preserve"><value>拖动和弦图下方的拨片，即可逐弦扫弦。</value></data>
+  <data name="Tip_Favorite" xml:space="preserve"><value>长按和弦图可添加到收藏。</value></data>
+  <data name="Favorites_Empty" xml:space="preserve"><value>你还没有收藏的指法。</value></data>
+  <data name="Favorites_Hint" xml:space="preserve"><value>长按指法可将其添加到收藏。</value></data>
+  <data name="Find_Strict" xml:space="preserve"><value>严格模式</value></data>
+  <data name="Find_Loose" xml:space="preserve"><value>宽松模式</value></data>
+  <data name="Find_NoChord" xml:space="preserve"><value>未找到和弦</value></data>
+  <data name="Settings_SystemLanguage" xml:space="preserve"><value>{0} (系统)</value></data>
+  <data name="Notation_English" xml:space="preserve"><value>英式</value></data>
+  <data name="Notation_German" xml:space="preserve"><value>德式</value></data>
+  <data name="Notation_Latin" xml:space="preserve"><value>拉丁式</value></data>
+  <data name="Settings_BasicChords" xml:space="preserve"><value>基本</value></data>
+  <data name="Settings_AllChords" xml:space="preserve"><value>全部</value></data>
+  <data name="Settings_MaxFret" xml:space="preserve"><value>最高品位：</value></data>
+  <data name="Settings_AllowBarre" xml:space="preserve"><value>允许横按</value></data>
+  <data name="Settings_AllowSpecial" xml:space="preserve"><value>允许高音弦闷音的指法</value></data>
+  <data name="Settings_EasyOnly" xml:space="preserve"><value>仅显示简单指法</value></data>
+  <data name="Settings_Vertical" xml:space="preserve"><value>竖向</value></data>
+  <data name="Settings_Horizontal" xml:space="preserve"><value>横向</value></data>
+  <data name="Settings_LeftHanded" xml:space="preserve"><value>左手模式（镜像和弦图）</value></data>
+  <data name="Settings_ShowTips" xml:space="preserve"><value>显示提示</value></data>
+  <data name="Settings_Theme" xml:space="preserve"><value>主题</value></data>
+  <data name="Theme_System" xml:space="preserve"><value>跟随设备</value></data>
+  <data name="Theme_Light" xml:space="preserve"><value>浅色</value></data>
+  <data name="Theme_Dark" xml:space="preserve"><value>深色</value></data>
+  <data name="Settings_General" xml:space="preserve"><value>通用</value></data>
+  <data name="Settings_Language" xml:space="preserve"><value>语言</value></data>
+  <data name="Settings_Instrument" xml:space="preserve"><value>乐器</value></data>
+  <data name="Settings_Tuning" xml:space="preserve"><value>调弦</value></data>
+  <data name="Settings_Notation" xml:space="preserve"><value>记谱法</value></data>
+  <data name="Settings_Diagrams" xml:space="preserve"><value>和弦图</value></data>
+  <data name="Settings_Chords" xml:space="preserve"><value>和弦</value></data>
+  <data name="Instrument_Guitar" xml:space="preserve"><value>吉他</value></data>
+  <data name="Instrument_Ukulele" xml:space="preserve"><value>尤克里里</value></data>
+  <data name="Instrument_Mandolin" xml:space="preserve"><value>曼陀林</value></data>
+  <data name="Instrument_BassGuitar" xml:space="preserve"><value>贝斯</value></data>
+  <data name="Instrument_Banjo" xml:space="preserve"><value>班卓琴</value></data>
+  <data name="Shape_Hint" xml:space="preserve"><value>点按手指按住琴弦的品位。点按琴枕上方可在空弦 (○) 和闷音 (×) 之间切换。</value></data>
+  <data name="Shape_Alternatives" xml:space="preserve"><value>又称：</value></data>
+  <data name="Shape_TooFew" xml:space="preserve"><value>请至少弹奏两个不同的音</value></data>
+  <data name="Shape_Play" xml:space="preserve"><value>播放</value></data>
+  <data name="Shape_Clear" xml:space="preserve"><value>清除</value></data>
+  <data name="Nav_Key" xml:space="preserve"><value>调内和弦</value></data>
+  <data name="Nav_Progressions" xml:space="preserve"><value>和弦进行</value></data>
+  <data name="Scale_Major" xml:space="preserve"><value>大调</value></data>
+  <data name="Scale_Minor" xml:space="preserve"><value>自然小调</value></data>
+  <data name="Scale_HarmonicMinor" xml:space="preserve"><value>和声小调</value></data>
+  <data name="Scale_MelodicMinor" xml:space="preserve"><value>旋律小调</value></data>
+  <data name="Scale_Dorian" xml:space="preserve"><value>多利亚</value></data>
+  <data name="Scale_Phrygian" xml:space="preserve"><value>弗里几亚</value></data>
+  <data name="Scale_PhrygianDominant" xml:space="preserve"><value>弗里几亚属音</value></data>
+  <data name="Scale_HungarianMinor" xml:space="preserve"><value>匈牙利小调</value></data>
+  <data name="Scale_DoubleHarmonicMajor" xml:space="preserve"><value>双和声（吉普赛大调）</value></data>
+  <data name="Scale_LydianDominant" xml:space="preserve"><value>利底亚属调</value></data>
+  <data name="Scale_UkrainianDorian" xml:space="preserve"><value>乌克兰多利亚</value></data>
+  <data name="Scale_Altered" xml:space="preserve"><value>变化音阶</value></data>
+  <data name="Scale_MajorPentatonic" xml:space="preserve"><value>大调五声音阶</value></data>
+  <data name="Scale_MinorPentatonic" xml:space="preserve"><value>小调五声音阶</value></data>
+  <data name="Scale_Blues" xml:space="preserve"><value>布鲁斯</value></data>
+  <data name="Scale_Hirajoshi" xml:space="preserve"><value>平调子</value></data>
+  <data name="Scale_In" xml:space="preserve"><value>阴音阶</value></data>
+  <data name="Scale_Yo" xml:space="preserve"><value>阳音阶</value></data>
+  <data name="Scale_Kumoi" xml:space="preserve"><value>云井调子</value></data>
+  <data name="Scale_Egyptian" xml:space="preserve"><value>埃及音阶</value></data>
+  <data name="Scale_Lydian" xml:space="preserve"><value>利底亚</value></data>
+  <data name="Scale_Mixolydian" xml:space="preserve"><value>混合利底亚</value></data>
+  <data name="Key_TabChords" xml:space="preserve"><value>调内和弦</value></data>
+  <data name="Key_TabDetect" xml:space="preserve"><value>查找调性</value></data>
+  <data name="Key_ScaleNotes" xml:space="preserve"><value>音阶音符：</value></data>
+  <data name="Key_Sevenths" xml:space="preserve"><value>七和弦</value></data>
+  <data name="Pick_Root" xml:space="preserve"><value>根音</value></data>
+  <data name="Pick_ChordType" xml:space="preserve"><value>和弦类型</value></data>
+  <data name="Pick_Bass" xml:space="preserve"><value>低音</value></data>
+  <data name="Bass_Any" xml:space="preserve"><value>任意</value></data>
+  <data name="Bass_Root" xml:space="preserve"><value>与根音相同</value></data>
+  <data name="Layout_Inversion" xml:space="preserve"><value>转位 – 最低音不是根音</value></data>
+  <data name="Pick_Tonic" xml:space="preserve"><value>主音</value></data>
+  <data name="Pick_Scale" xml:space="preserve"><value>音阶</value></data>
+  <data name="Key_Add" xml:space="preserve"><value>添加和弦</value></data>
+  <data name="Key_DetectHint" xml:space="preserve"><value>添加一首歌的和弦，应用会找出与之匹配的调。点按某个调查看其和弦。</value></data>
+  <data name="Key_NoChords" xml:space="preserve"><value>请添加一首歌的和弦</value></data>
+  <data name="Key_NoKey" xml:space="preserve"><value>没有匹配的调</value></data>
+  <data name="Key_Progressions" xml:space="preserve"><value>此调中的和弦进行</value></data>
+  <data name="Style_Pop" xml:space="preserve"><value>流行</value></data>
+  <data name="Style_Rock" xml:space="preserve"><value>摇滚</value></data>
+  <data name="Style_Jazz" xml:space="preserve"><value>爵士</value></data>
+  <data name="Style_Blues" xml:space="preserve"><value>布鲁斯</value></data>
+  <data name="Style_Classical" xml:space="preserve"><value>古典</value></data>
+  <data name="Style_Flamenco" xml:space="preserve"><value>弗拉门戈</value></data>
+  <data name="Style_Klezmer" xml:space="preserve"><value>克莱兹默</value></data>
+  <data name="Prog_Generate" xml:space="preserve"><value>生成和弦进行</value></data>
+  <data name="Prog_Hint" xml:space="preserve"><value>点按和弦进行查看指法图；‹ › 切换指法。▶ 播放，再次点按停止。</value></data>
+  <data name="Prog_Smooth" xml:space="preserve"><value>平滑过渡</value></data>
+  <data name="Nav_Tuner" xml:space="preserve"><value>调音器</value></data>
+  <data name="Tuner_Hint" xml:space="preserve"><value>点按一根弦可听到它并只调这根弦；自动会选择最接近的弦。</value></data>
+  <data name="Tuner_Listening" xml:space="preserve"><value>请拨一根弦…</value></data>
+  <data name="Tuner_ListeningNote" xml:space="preserve"><value>请弹奏一个音…</value></data>
+  <data name="Tuner_Chromatic" xml:space="preserve"><value>半音阶</value></data>
+  <data name="Tuner_InTune" xml:space="preserve"><value>已调准</value></data>
+  <data name="Tuner_TuneUp" xml:space="preserve"><value>调高</value></data>
+  <data name="Tuner_TuneDown" xml:space="preserve"><value>调低</value></data>
+  <data name="Tuner_Auto" xml:space="preserve"><value>自动</value></data>
+  <data name="Tuner_MicDenied" xml:space="preserve"><value>调音器需要访问麦克风。</value></data>
+  <data name="Tuner_OpenSettings" xml:space="preserve"><value>打开设置</value></data>
+  <data name="Tuner_MicError" xml:space="preserve"><value>无法启动麦克风。</value></data>
+  <data name="Tuner_MicUsage" xml:space="preserve"><value>调音器会聆听您的乐器，以显示其音准是否准确。</value><comment>iOS microphone permission prompt (NSMicrophoneUsageDescription), built into the app bundle by PlatformLocales.targets</comment></data>
+  <data name="Tab_Chords" xml:space="preserve"><value>和弦</value></data>
+  <data name="Tab_Favorites" xml:space="preserve"><value>收藏</value></data>
+  <data name="Tab_Theory" xml:space="preserve"><value>乐理</value></data>
+  <data name="Tab_More" xml:space="preserve"><value>更多</value></data>
+  <data name="Group_Tools" xml:space="preserve"><value>工具</value></data>
+  <data name="Related_Title" xml:space="preserve"><value>另请参阅</value></data>
+  <data name="Tuning_Standard" xml:space="preserve"><value>标准</value></data>
+  <data name="Tuning_HalfStepDown" xml:space="preserve"><value>降半音</value></data>
+  <data name="Tuning_WholeStepDown" xml:space="preserve"><value>降全音</value></data>
+  <data name="Tuning_LowG" xml:space="preserve"><value>低音G</value></data>
+  <data name="Tuning_UkuleleD" xml:space="preserve"><value>D调弦</value></data>
+  <data name="Tuning_Baritone" xml:space="preserve"><value>上低音</value></data>
+  <data name="Tuning_Tenor" xml:space="preserve"><value>次中音</value></data>
+  <data name="Tuning_Custom" xml:space="preserve"><value>自定义调弦</value></data>
+  <data name="Tuning_New" xml:space="preserve"><value>自定义调弦…</value></data>
+  <data name="Tuning_Edit" xml:space="preserve"><value>编辑</value></data>
+  <data name="Tuning_Delete" xml:space="preserve"><value>删除</value></data>
+  <data name="Tuning_Save" xml:space="preserve"><value>保存</value></data>
+  <data name="Tuning_Cancel" xml:space="preserve"><value>取消</value></data>
+  <data name="Tuning_EditorHint" xml:space="preserve"><value>点按 ▲ ▼ 将琴弦升高或降低半音；点按音名可试听。</value></data>
+  <data name="Settings_Capo" xml:space="preserve"><value>变调夹</value></data>
+  <data name="Capo_None" xml:space="preserve"><value>不用变调夹</value></data>
+  <data name="Capo_Fret" xml:space="preserve"><value>第{0}品</value></data>
+  <data name="Capo_Badge" xml:space="preserve"><value>变调夹 {0}</value></data>
+  <data name="Capo_Shape" xml:space="preserve"><value>变调夹夹在第{0}品：按{1}的指法</value></data>
+  <data name="Capo_ShapeShort" xml:space="preserve"><value>{0}指法</value></data>
+  <data name="Key_CapoTitle" xml:space="preserve"><value>最简单的变调夹位置</value></data>
+  <data name="Key_CapoUse" xml:space="preserve"><value>使用</value></data>
+  <data name="Fretboard_Title" xml:space="preserve"><value>在指板上</value></data>
+  <data name="Fretboard_Intervals" xml:space="preserve"><value>音程</value></data>
+  <data name="Fretboard_Notes" xml:space="preserve"><value>音名</value></data>
+  <data name="Difficulty_Easy" xml:space="preserve"><value>简单</value></data>
+  <data name="Difficulty_Medium" xml:space="preserve"><value>中等</value></data>
+  <data name="Difficulty_Hard" xml:space="preserve"><value>困难</value></data>
+  <data name="Key_CapoHint" xml:space="preserve"><value>按显示的指型弹奏——夹上变调夹后听起来是 {0}。</value></data>
+  <data name="Fretboard_ScaleHint" xml:space="preserve"><value>{0} 音阶的音在指板上的位置。1 是主音。</value></data>
+  <data name="Fretboard_ChordHint" xml:space="preserve"><value>{0} 和弦的音在指板上的位置。1 是根音。</value></data>
+  <data name="Fretboard_ScaleOnly" xml:space="preserve"><value>音阶</value></data>
+  <data name="Fretboard_WholeNeck" xml:space="preserve"><value>整个琴颈</value></data>
+  <data name="Fretboard_Position" xml:space="preserve"><value>{0}–{1} 品</value></data>
+  <data name="Fretboard_ChordInScaleHint" xml:space="preserve"><value>{0} 和弦的音有标注（1 是根音），圆点是 {1} 音阶的其他音。</value></data>
+  <data name="Nav_About" xml:space="preserve"><value>关于</value></data>
+  <data name="About_Version" xml:space="preserve"><value>版本</value></data>
+  <data name="About_Rate" xml:space="preserve"><value>为应用评分</value></data>
+  <data name="About_SoundCredit" xml:space="preserve"><value>乐器音色</value></data>
+  <data name="About_SoundFont" xml:space="preserve"><value>音色库</value></data>
+  <data name="About_License" xml:space="preserve"><value>许可</value></data>
+  <data name="About_By" xml:space="preserve"><value>作者：{0}</value></data>
+  <data name="About_PublicDomain" xml:space="preserve"><value>公有领域</value></data>
+  <data name="About_SoundChanges" xml:space="preserve"><value>采样已为本应用改编。</value></data>
+  <data name="Nav_Metronome" xml:space="preserve"><value>节拍器</value></data>
+  <data name="Metronome_Start" xml:space="preserve"><value>开始</value></data>
+  <data name="Metronome_Stop" xml:space="preserve"><value>停止</value></data>
+  <data name="Metronome_Tap" xml:space="preserve"><value>敲击测速</value></data>
+  <data name="Metronome_Beats" xml:space="preserve"><value>每小节拍数</value></data>
+  <data name="Metronome_Subdivision" xml:space="preserve"><value>细分</value></data>
+  <data name="Metronome_Accent" xml:space="preserve"><value>强调第一拍</value></data>
+  <data name="Metronome_Hint" xml:space="preserve"><value>跟着音乐节奏点按“敲击测速”即可得出速度。和弦进行按此速度演奏，每小节一个和弦。</value></data>
+  <data name="Prog_Tempo" xml:space="preserve"><value>速度</value></data>
+</root>

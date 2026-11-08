@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="Nav_ShowChord" xml:space="preserve"><value>Аккорд сызбасын көрсету</value></data>
+  <data name="Nav_FindChord" xml:space="preserve"><value>Аккорд атауын табу</value></data>
+  <data name="Nav_FindShape" xml:space="preserve"><value>Аккордты саусақ қойылымы бойынша табу</value></data>
+  <data name="Nav_Favorites" xml:space="preserve"><value>Таңдаулы аккордтар</value></data>
+  <data name="Nav_Circle" xml:space="preserve"><value>Квинталық шеңбер</value></data>
+  <data name="Nav_Settings" xml:space="preserve"><value>Баптаулар</value></data>
+  <data name="Nav_Toggle" xml:space="preserve"><value>Мәзірді көрсету</value></data>
+  <data name="Yes" xml:space="preserve"><value>Иә</value></data>
+  <data name="No" xml:space="preserve"><value>Жоқ</value></data>
+  <data name="Find" xml:space="preserve"><value>Іздеу</value></data>
+  <data name="ChordType_Major" xml:space="preserve"><value>Мажор</value></data>
+  <data name="ShowChord_Partial" xml:space="preserve"><value>Толық емес аккордтарға рұқсат беру</value></data>
+  <data name="Chord_Found" xml:space="preserve"><value>Табылған аккордтар:</value></data>
+  <data name="Chord_OtherSymbols" xml:space="preserve"><value>Басқа белгілер:</value></data>
+  <data name="Chord_Intervals" xml:space="preserve"><value>Аккорд интервалдары:</value></data>
+  <data name="Chord_Notes" xml:space="preserve"><value>Аккорд дыбыстары:</value></data>
+  <data name="Chord_Diagrams" xml:space="preserve"><value>Аккорд сызбалары:</value></data>
+  <data name="Chord_Results_One" xml:space="preserve"><value>{0} нәтиже</value></data>
+  <data name="Chord_Results_Many" xml:space="preserve"><value>{0} нәтиже</value></data>
+  <data name="Chord_Invalid" xml:space="preserve"><value>{0} жарамды аккорд емес</value></data>
+  <data name="Tip" xml:space="preserve"><value>Кеңес:</value></data>
+  <data name="Tip_Play" xml:space="preserve"><value>Тыңдау үшін сызбаны түртіңіз.</value></data>
+  <data name="Tip_Strum" xml:space="preserve"><value>Диаграмманы ішек-ішегімен ойнау үшін саусақты көлденең сырғытыңыз.</value></data>
+  <data name="Tip_StrumPick" xml:space="preserve"><value>Диаграмманы ішек-ішегімен ойнау үшін астындағы медиаторды сүйреңіз.</value></data>
+  <data name="Tip_Favorite" xml:space="preserve"><value>Таңдаулыларға қосу үшін сызбаны басып тұрыңыз.</value></data>
+  <data name="Favorites_Empty" xml:space="preserve"><value>Сізде таңдаулы қойылымдар жоқ.</value></data>
+  <data name="Favorites_Hint" xml:space="preserve"><value>Таңдаулыларға қосу үшін қойылымды басып тұрыңыз.</value></data>
+  <data name="Find_Strict" xml:space="preserve"><value>Қатаң режим</value></data>
+  <data name="Find_Loose" xml:space="preserve"><value>Еркін режим</value></data>
+  <data name="Find_NoChord" xml:space="preserve"><value>Аккорд табылмады</value></data>
+  <data name="Settings_SystemLanguage" xml:space="preserve"><value>{0} (жүйе)</value></data>
+  <data name="Notation_English" xml:space="preserve"><value>Ағылшын</value></data>
+  <data name="Notation_German" xml:space="preserve"><value>Неміс</value></data>
+  <data name="Notation_Latin" xml:space="preserve"><value>Латын</value></data>
+  <data name="Settings_BasicChords" xml:space="preserve"><value>Негізгі</value></data>
+  <data name="Settings_AllChords" xml:space="preserve"><value>Барлығы</value></data>
+  <data name="Settings_MaxFret" xml:space="preserve"><value>Ең жоғары лад:</value></data>
+  <data name="Settings_AllowBarre" xml:space="preserve"><value>Барреге рұқсат беру</value></data>
+  <data name="Settings_AllowSpecial" xml:space="preserve"><value>Жоғары ішектері басылған қойылымдарға рұқсат беру</value></data>
+  <data name="Settings_EasyOnly" xml:space="preserve"><value>Тек оңай аппликатуралар</value></data>
+  <data name="Settings_Vertical" xml:space="preserve"><value>Тік</value></data>
+  <data name="Settings_Horizontal" xml:space="preserve"><value>Көлденең</value></data>
+  <data name="Settings_LeftHanded" xml:space="preserve"><value>Солақай (айналы сызбалар)</value></data>
+  <data name="Settings_ShowTips" xml:space="preserve"><value>Кеңестерді көрсету</value></data>
+  <data name="Settings_Theme" xml:space="preserve"><value>Тақырып</value></data>
+  <data name="Theme_System" xml:space="preserve"><value>Құрылғы бойынша</value></data>
+  <data name="Theme_Light" xml:space="preserve"><value>Ашық</value></data>
+  <data name="Theme_Dark" xml:space="preserve"><value>Қараңғы</value></data>
+  <data name="Settings_General" xml:space="preserve"><value>Жалпы</value></data>
+  <data name="Settings_Language" xml:space="preserve"><value>Тіл</value></data>
+  <data name="Settings_Instrument" xml:space="preserve"><value>Аспап</value></data>
+  <data name="Settings_Tuning" xml:space="preserve"><value>Құрылым</value></data>
+  <data name="Settings_Notation" xml:space="preserve"><value>Белгілеу</value></data>
+  <data name="Settings_Diagrams" xml:space="preserve"><value>Сызбалар</value></data>
+  <data name="Settings_Chords" xml:space="preserve"><value>Аккордтар</value></data>
+  <data name="Instrument_Guitar" xml:space="preserve"><value>Гитара</value></data>
+  <data name="Instrument_Ukulele" xml:space="preserve"><value>Укулеле</value></data>
+  <data name="Instrument_Mandolin" xml:space="preserve"><value>Мандолина</value></data>
+  <data name="Instrument_BassGuitar" xml:space="preserve"><value>Бас-гитара</value></data>
+  <data name="Instrument_Banjo" xml:space="preserve"><value>Банджо</value></data>
+  <data name="Shape_Hint" xml:space="preserve"><value>Саусақтарыңыз ішектерді басқан ладтарды түртіңіз. Ішекті ашық (○) және басылған (×) күйлер арасында ауыстыру үшін қарақшаның үстін түртіңіз.</value></data>
+  <data name="Shape_Alternatives" xml:space="preserve"><value>Басқаша аталуы:</value></data>
+  <data name="Shape_TooFew" xml:space="preserve"><value>Кемінде екі түрлі дыбыс ойнаңыз</value></data>
+  <data name="Shape_Play" xml:space="preserve"><value>Ойнату</value></data>
+  <data name="Shape_Clear" xml:space="preserve"><value>Тазалау</value></data>
+  <data name="Nav_Key" xml:space="preserve"><value>Тональдық аккордтары</value></data>
+  <data name="Nav_Progressions" xml:space="preserve"><value>Аккорд тізбектері</value></data>
+  <data name="Scale_Major" xml:space="preserve"><value>Мажор</value></data>
+  <data name="Scale_Minor" xml:space="preserve"><value>Табиғи минор</value></data>
+  <data name="Scale_HarmonicMinor" xml:space="preserve"><value>Гармониялық минор</value></data>
+  <data name="Scale_MelodicMinor" xml:space="preserve"><value>Мелодиялық минор</value></data>
+  <data name="Scale_Dorian" xml:space="preserve"><value>Дориялық</value></data>
+  <data name="Scale_Phrygian" xml:space="preserve"><value>Фригиялық</value></data>
+  <data name="Scale_PhrygianDominant" xml:space="preserve"><value>Фригиялық доминант</value></data>
+  <data name="Scale_HungarianMinor" xml:space="preserve"><value>Венгр миноры</value></data>
+  <data name="Scale_DoubleHarmonicMajor" xml:space="preserve"><value>Қос гармониялық (сыған мажоры)</value></data>
+  <data name="Scale_LydianDominant" xml:space="preserve"><value>Лидиялық доминанта</value></data>
+  <data name="Scale_UkrainianDorian" xml:space="preserve"><value>Украин дориялық</value></data>
+  <data name="Scale_Altered" xml:space="preserve"><value>Альтерацияланған</value></data>
+  <data name="Scale_MajorPentatonic" xml:space="preserve"><value>Мажор пентатоникасы</value></data>
+  <data name="Scale_MinorPentatonic" xml:space="preserve"><value>Минор пентатоникасы</value></data>
+  <data name="Scale_Blues" xml:space="preserve"><value>Блюз</value></data>
+  <data name="Scale_Hirajoshi" xml:space="preserve"><value>Хирадзёси</value></data>
+  <data name="Scale_In" xml:space="preserve"><value>Ин</value></data>
+  <data name="Scale_Yo" xml:space="preserve"><value>Ё</value></data>
+  <data name="Scale_Kumoi" xml:space="preserve"><value>Кумои</value></data>
+  <data name="Scale_Egyptian" xml:space="preserve"><value>Мысыр</value></data>
+  <data name="Scale_Lydian" xml:space="preserve"><value>Лидиялық</value></data>
+  <data name="Scale_Mixolydian" xml:space="preserve"><value>Миксолидиялық</value></data>
+  <data name="Key_TabChords" xml:space="preserve"><value>Тональдық аккордтары</value></data>
+  <data name="Key_TabDetect" xml:space="preserve"><value>Тональдықты табу</value></data>
+  <data name="Key_ScaleNotes" xml:space="preserve"><value>Гамма ноталары:</value></data>
+  <data name="Key_Sevenths" xml:space="preserve"><value>Септаккордтар</value></data>
+  <data name="Pick_Root" xml:space="preserve"><value>Негізгі тон</value></data>
+  <data name="Pick_ChordType" xml:space="preserve"><value>Аккорд түрі</value></data>
+  <data name="Pick_Bass" xml:space="preserve"><value>Бас нотасы</value></data>
+  <data name="Bass_Any" xml:space="preserve"><value>Кез келген</value></data>
+  <data name="Bass_Root" xml:space="preserve"><value>Негізгі тонмен бірдей</value></data>
+  <data name="Layout_Inversion" xml:space="preserve"><value>Айналым – ең төменгі нота негізгі тон емес</value></data>
+  <data name="Pick_Tonic" xml:space="preserve"><value>Тоника</value></data>
+  <data name="Pick_Scale" xml:space="preserve"><value>Гамма</value></data>
+  <data name="Key_Add" xml:space="preserve"><value>Аккорд қосу</value></data>
+  <data name="Key_DetectHint" xml:space="preserve"><value>Әннің аккордтарын қосыңыз, қолданба оларға сәйкес тональдықтарды табады. Аккордтарын көру үшін тональдықты түртіңіз.</value></data>
+  <data name="Key_NoChords" xml:space="preserve"><value>Әннің аккордтарын қосыңыз</value></data>
+  <data name="Key_NoKey" xml:space="preserve"><value>Сәйкес тональдық жоқ</value></data>
+  <data name="Key_Progressions" xml:space="preserve"><value>Осы тональдықтағы тізбектер</value></data>
+  <data name="Style_Pop" xml:space="preserve"><value>Поп</value></data>
+  <data name="Style_Rock" xml:space="preserve"><value>Рок</value></data>
+  <data name="Style_Jazz" xml:space="preserve"><value>Джаз</value></data>
+  <data name="Style_Blues" xml:space="preserve"><value>Блюз</value></data>
+  <data name="Style_Classical" xml:space="preserve"><value>Классика</value></data>
+  <data name="Style_Flamenco" xml:space="preserve"><value>Фламенко</value></data>
+  <data name="Style_Klezmer" xml:space="preserve"><value>Клезмер</value></data>
+  <data name="Prog_Generate" xml:space="preserve"><value>Тізбек жасау</value></data>
+  <data name="Prog_Hint" xml:space="preserve"><value>Диаграммаларды көру үшін тізбекті түртіңіз; ‹ › аппликатураны ауыстырады. ▶ ойнатады, тоқтату үшін қайта түртіңіз.</value></data>
+  <data name="Prog_Smooth" xml:space="preserve"><value>Біркелкі ауысулар</value></data>
+  <data name="Nav_Tuner" xml:space="preserve"><value>Тюнер</value></data>
+  <data name="Tuner_Hint" xml:space="preserve"><value>Ішекті естіп, тек соны күйге келтіру үшін оны түртіңіз; Авто ең жақын ішекті таңдайды.</value></data>
+  <data name="Tuner_Listening" xml:space="preserve"><value>Ішекті шертіңіз…</value></data>
+  <data name="Tuner_ListeningNote" xml:space="preserve"><value>Нота ойнаңыз…</value></data>
+  <data name="Tuner_Chromatic" xml:space="preserve"><value>Хроматикалық</value></data>
+  <data name="Tuner_InTune" xml:space="preserve"><value>Күйге келтірілді</value></data>
+  <data name="Tuner_TuneUp" xml:space="preserve"><value>Тартыңыз</value></data>
+  <data name="Tuner_TuneDown" xml:space="preserve"><value>Босатыңыз</value></data>
+  <data name="Tuner_Auto" xml:space="preserve"><value>Авто</value></data>
+  <data name="Tuner_MicDenied" xml:space="preserve"><value>Тюнерге микрофонға рұқсат қажет.</value></data>
+  <data name="Tuner_OpenSettings" xml:space="preserve"><value>Параметрлерді ашу</value></data>
+  <data name="Tuner_MicError" xml:space="preserve"><value>Микрофонды іске қосу мүмкін емес.</value></data>
+  <data name="Tuner_MicUsage" xml:space="preserve"><value>Тюнер аспабыңыздың күйге келтірілгенін көрсету үшін оны тыңдайды.</value><comment>iOS microphone permission prompt (NSMicrophoneUsageDescription), built into the app bundle by PlatformLocales.targets</comment></data>
+  <data name="Tab_Chords" xml:space="preserve"><value>Аккордтар</value></data>
+  <data name="Tab_Favorites" xml:space="preserve"><value>Таңдаулылар</value></data>
+  <data name="Tab_Theory" xml:space="preserve"><value>Теория</value></data>
+  <data name="Tab_More" xml:space="preserve"><value>Тағы</value></data>
+  <data name="Group_Tools" xml:space="preserve"><value>Құралдар</value></data>
+  <data name="Related_Title" xml:space="preserve"><value>Сондай-ақ қараңыз</value></data>
+  <data name="Tuning_Standard" xml:space="preserve"><value>Стандартты</value></data>
+  <data name="Tuning_HalfStepDown" xml:space="preserve"><value>Жарты тон төмен</value></data>
+  <data name="Tuning_WholeStepDown" xml:space="preserve"><value>Бір тон төмен</value></data>
+  <data name="Tuning_LowG" xml:space="preserve"><value>Төмен соль</value></data>
+  <data name="Tuning_UkuleleD" xml:space="preserve"><value>Ре құрылымы</value></data>
+  <data name="Tuning_Baritone" xml:space="preserve"><value>Баритон</value></data>
+  <data name="Tuning_Tenor" xml:space="preserve"><value>Тенор</value></data>
+  <data name="Tuning_Custom" xml:space="preserve"><value>Өз құрылымым</value></data>
+  <data name="Tuning_New" xml:space="preserve"><value>Өз құрылымым…</value></data>
+  <data name="Tuning_Edit" xml:space="preserve"><value>Өңдеу</value></data>
+  <data name="Tuning_Delete" xml:space="preserve"><value>Жою</value></data>
+  <data name="Tuning_Save" xml:space="preserve"><value>Сақтау</value></data>
+  <data name="Tuning_Cancel" xml:space="preserve"><value>Бас тарту</value></data>
+  <data name="Tuning_EditorHint" xml:space="preserve"><value>Ішекті жарты тонға көтеру не түсіру үшін ▲ ▼ басыңыз; естү үшін нотаны түртіңіз.</value></data>
+  <data name="Settings_Capo" xml:space="preserve"><value>Каподастр</value></data>
+  <data name="Capo_None" xml:space="preserve"><value>Каподастрсыз</value></data>
+  <data name="Capo_Fret" xml:space="preserve"><value>{0}-перне</value></data>
+  <data name="Capo_Badge" xml:space="preserve"><value>Капо {0}</value></data>
+  <data name="Capo_Shape" xml:space="preserve"><value>Каподастр {0}-пернеде: {1} пішінін бас</value></data>
+  <data name="Capo_ShapeShort" xml:space="preserve"><value>{0} пішіні</value></data>
+  <data name="Key_CapoTitle" xml:space="preserve"><value>Ең оңай каподастр орындары</value></data>
+  <data name="Key_CapoUse" xml:space="preserve"><value>Таңдау</value></data>
+  <data name="Fretboard_Title" xml:space="preserve"><value>Грифте</value></data>
+  <data name="Fretboard_Intervals" xml:space="preserve"><value>Интервалдар</value></data>
+  <data name="Fretboard_Notes" xml:space="preserve"><value>Ноталар</value></data>
+  <data name="Difficulty_Easy" xml:space="preserve"><value>Оңай</value></data>
+  <data name="Difficulty_Medium" xml:space="preserve"><value>Орташа</value></data>
+  <data name="Difficulty_Hard" xml:space="preserve"><value>Қиын</value></data>
+  <data name="Key_CapoHint" xml:space="preserve"><value>Көрсетілген пішіндерді бас – каподастрмен олар {0} болып естіледі.</value></data>
+  <data name="Fretboard_ScaleHint" xml:space="preserve"><value>{0} гаммасының ноталары грифте қай жерде. 1 – тоника.</value></data>
+  <data name="Fretboard_ChordHint" xml:space="preserve"><value>{0} аккордының ноталары грифте қай жерде. 1 – негізгі тон.</value></data>
+  <data name="Fretboard_ScaleOnly" xml:space="preserve"><value>Гамма</value></data>
+  <data name="Fretboard_WholeNeck" xml:space="preserve"><value>Бүкіл гриф</value></data>
+  <data name="Fretboard_Position" xml:space="preserve"><value>{0}–{1} ладтар</value></data>
+  <data name="Fretboard_ChordInScaleHint" xml:space="preserve"><value>{0} аккордының дыбыстары белгіленген (1 — оның негізгі тоны); нүктелер — {1} гаммасының қалған дыбыстары.</value></data>
+  <data name="Nav_About" xml:space="preserve"><value>Қолданба туралы</value></data>
+  <data name="About_Version" xml:space="preserve"><value>Нұсқа</value></data>
+  <data name="About_Rate" xml:space="preserve"><value>Қолданбаны бағалау</value></data>
+  <data name="About_SoundCredit" xml:space="preserve"><value>Аспаптардың дыбыстары</value></data>
+  <data name="About_SoundFont" xml:space="preserve"><value>саундфонт</value></data>
+  <data name="About_License" xml:space="preserve"><value>Лицензия</value></data>
+  <data name="About_By" xml:space="preserve"><value>авторы: {0}</value></data>
+  <data name="About_PublicDomain" xml:space="preserve"><value>Қоғамдық игілік</value></data>
+  <data name="About_SoundChanges" xml:space="preserve"><value>Сэмплдер осы қолданбаға бейімделген.</value></data>
+  <data name="Nav_Metronome" xml:space="preserve"><value>Метроном</value></data>
+  <data name="Metronome_Start" xml:space="preserve"><value>Бастау</value></data>
+  <data name="Metronome_Stop" xml:space="preserve"><value>Тоқтату</value></data>
+  <data name="Metronome_Tap" xml:space="preserve"><value>Темпті соғу</value></data>
+  <data name="Metronome_Beats" xml:space="preserve"><value>Тактідегі үлес</value></data>
+  <data name="Metronome_Subdivision" xml:space="preserve"><value>Бөлу</value></data>
+  <data name="Metronome_Accent" xml:space="preserve"><value>Бірінші үлесті ерекшелеу</value></data>
+  <data name="Metronome_Hint" xml:space="preserve"><value>Музыканың темпін білу үшін оның ырғағымен «Темпті соғу» түймесін басыңыз. Аккорд тізбектері осы темпте, әр тактіге бір аккордпен ойналады.</value></data>
+  <data name="Prog_Tempo" xml:space="preserve"><value>Темп</value></data>
+</root>

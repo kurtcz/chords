@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="Nav_ShowChord" xml:space="preserve"><value>Rādīt akorda shēmu</value></data>
+  <data name="Nav_FindChord" xml:space="preserve"><value>Atrast akorda nosaukumu</value></data>
+  <data name="Nav_FindShape" xml:space="preserve"><value>Atrast akordu pēc tvēriena</value></data>
+  <data name="Nav_Favorites" xml:space="preserve"><value>Iecienītie akordi</value></data>
+  <data name="Nav_Circle" xml:space="preserve"><value>Kvintu aplis</value></data>
+  <data name="Nav_Settings" xml:space="preserve"><value>Iestatījumi</value></data>
+  <data name="Nav_Toggle" xml:space="preserve"><value>Rādīt izvēlni</value></data>
+  <data name="Yes" xml:space="preserve"><value>Jā</value></data>
+  <data name="No" xml:space="preserve"><value>Nē</value></data>
+  <data name="Find" xml:space="preserve"><value>Meklēt</value></data>
+  <data name="ChordType_Major" xml:space="preserve"><value>Mažors</value></data>
+  <data name="ShowChord_Partial" xml:space="preserve"><value>Atļaut nepilnus akordus</value></data>
+  <data name="Chord_Found" xml:space="preserve"><value>Atrastie akordi:</value></data>
+  <data name="Chord_OtherSymbols" xml:space="preserve"><value>Citi apzīmējumi:</value></data>
+  <data name="Chord_Intervals" xml:space="preserve"><value>Akorda intervāli:</value></data>
+  <data name="Chord_Notes" xml:space="preserve"><value>Akorda skaņas:</value></data>
+  <data name="Chord_Diagrams" xml:space="preserve"><value>Akorda shēmas:</value></data>
+  <data name="Chord_Results_Zero" xml:space="preserve"><value>{0} rezultātu</value></data>
+  <data name="Chord_Results_One" xml:space="preserve"><value>{0} rezultāts</value></data>
+  <data name="Chord_Results_Many" xml:space="preserve"><value>{0} rezultāti</value></data>
+  <data name="Chord_Invalid" xml:space="preserve"><value>{0} nav derīgs akords</value></data>
+  <data name="Tip" xml:space="preserve"><value>Padoms:</value></data>
+  <data name="Tip_Play" xml:space="preserve"><value>Pieskarieties shēmai, lai to noklausītos.</value></data>
+  <data name="Tip_Strum" xml:space="preserve"><value>Pārvelciet ar pirkstu šķērsām pār diagrammu, lai to nospēlētu stīgu pa stīgai.</value></data>
+  <data name="Tip_StrumPick" xml:space="preserve"><value>Velciet mediatoru zem diagrammas, lai to nospēlētu stīgu pa stīgai.</value></data>
+  <data name="Tip_Favorite" xml:space="preserve"><value>Turiet nospiestu shēmu, lai pievienotu to izlasei.</value></data>
+  <data name="Favorites_Empty" xml:space="preserve"><value>Jums nav iecienītu tvērienu.</value></data>
+  <data name="Favorites_Hint" xml:space="preserve"><value>Turiet nospiestu tvērienu, lai pievienotu to izlasei.</value></data>
+  <data name="Find_Strict" xml:space="preserve"><value>Stingrais režīms</value></data>
+  <data name="Find_Loose" xml:space="preserve"><value>Brīvais režīms</value></data>
+  <data name="Find_NoChord" xml:space="preserve"><value>Akords nav atrasts</value></data>
+  <data name="Settings_SystemLanguage" xml:space="preserve"><value>{0} (sistēma)</value></data>
+  <data name="Notation_English" xml:space="preserve"><value>Angļu</value></data>
+  <data name="Notation_German" xml:space="preserve"><value>Vācu</value></data>
+  <data name="Notation_Latin" xml:space="preserve"><value>Latīņu</value></data>
+  <data name="Settings_BasicChords" xml:space="preserve"><value>Pamata</value></data>
+  <data name="Settings_AllChords" xml:space="preserve"><value>Visi</value></data>
+  <data name="Settings_MaxFret" xml:space="preserve"><value>Augstākais ladiņš:</value></data>
+  <data name="Settings_AllowBarre" xml:space="preserve"><value>Atļaut barē</value></data>
+  <data name="Settings_AllowSpecial" xml:space="preserve"><value>Atļaut tvērienus ar apslāpētām augstajām stīgām</value></data>
+  <data name="Settings_EasyOnly" xml:space="preserve"><value>Tikai vieglie aplikatūras varianti</value></data>
+  <data name="Settings_Vertical" xml:space="preserve"><value>Vertikālas</value></data>
+  <data name="Settings_Horizontal" xml:space="preserve"><value>Horizontālas</value></data>
+  <data name="Settings_LeftHanded" xml:space="preserve"><value>Kreilim (spoguļotas shēmas)</value></data>
+  <data name="Settings_ShowTips" xml:space="preserve"><value>Rādīt padomus</value></data>
+  <data name="Settings_Theme" xml:space="preserve"><value>Motīvs</value></data>
+  <data name="Theme_System" xml:space="preserve"><value>Kā ierīcē</value></data>
+  <data name="Theme_Light" xml:space="preserve"><value>Gaišs</value></data>
+  <data name="Theme_Dark" xml:space="preserve"><value>Tumšs</value></data>
+  <data name="Settings_General" xml:space="preserve"><value>Vispārīgi</value></data>
+  <data name="Settings_Language" xml:space="preserve"><value>Valoda</value></data>
+  <data name="Settings_Instrument" xml:space="preserve"><value>Instruments</value></data>
+  <data name="Settings_Tuning" xml:space="preserve"><value>Skaņojums</value></data>
+  <data name="Settings_Notation" xml:space="preserve"><value>Notācija</value></data>
+  <data name="Settings_Diagrams" xml:space="preserve"><value>Shēmas</value></data>
+  <data name="Settings_Chords" xml:space="preserve"><value>Akordi</value></data>
+  <data name="Instrument_Guitar" xml:space="preserve"><value>Ģitāra</value></data>
+  <data name="Instrument_Ukulele" xml:space="preserve"><value>Ukulele</value></data>
+  <data name="Instrument_Mandolin" xml:space="preserve"><value>Mandolīna</value></data>
+  <data name="Instrument_BassGuitar" xml:space="preserve"><value>Basģitāra</value></data>
+  <data name="Instrument_Banjo" xml:space="preserve"><value>Bandžo</value></data>
+  <data name="Shape_Hint" xml:space="preserve"><value>Pieskarieties ladiņiem, kur pirksti piespiež stīgas. Pieskarieties virs augšējā sliekšņa, lai pārslēgtu stīgu starp brīvu (○) un apslāpētu (×).</value></data>
+  <data name="Shape_Alternatives" xml:space="preserve"><value>Zināms arī kā:</value></data>
+  <data name="Shape_TooFew" xml:space="preserve"><value>Nospēlējiet vismaz divas dažādas skaņas</value></data>
+  <data name="Shape_Play" xml:space="preserve"><value>Atskaņot</value></data>
+  <data name="Shape_Clear" xml:space="preserve"><value>Notīrīt</value></data>
+  <data name="Nav_Key" xml:space="preserve"><value>Tonalitātes akordi</value></data>
+  <data name="Nav_Progressions" xml:space="preserve"><value>Akordu progresijas</value></data>
+  <data name="Scale_Major" xml:space="preserve"><value>Mažors</value></data>
+  <data name="Scale_Minor" xml:space="preserve"><value>Dabiskais minors</value></data>
+  <data name="Scale_HarmonicMinor" xml:space="preserve"><value>Harmoniskais minors</value></data>
+  <data name="Scale_MelodicMinor" xml:space="preserve"><value>Melodiskais minors</value></data>
+  <data name="Scale_Dorian" xml:space="preserve"><value>Doriskais</value></data>
+  <data name="Scale_Phrygian" xml:space="preserve"><value>Frīģiskais</value></data>
+  <data name="Scale_PhrygianDominant" xml:space="preserve"><value>Frīģiskais dominantes</value></data>
+  <data name="Scale_HungarianMinor" xml:space="preserve"><value>Ungāru minors</value></data>
+  <data name="Scale_DoubleHarmonicMajor" xml:space="preserve"><value>Dubultharmoniskā (čigānu mažors)</value></data>
+  <data name="Scale_LydianDominant" xml:space="preserve"><value>Līdiskā dominante</value></data>
+  <data name="Scale_UkrainianDorian" xml:space="preserve"><value>Ukraiņu doriskā</value></data>
+  <data name="Scale_Altered" xml:space="preserve"><value>Alterētā</value></data>
+  <data name="Scale_MajorPentatonic" xml:space="preserve"><value>Mažora pentatonika</value></data>
+  <data name="Scale_MinorPentatonic" xml:space="preserve"><value>Minora pentatonika</value></data>
+  <data name="Scale_Blues" xml:space="preserve"><value>Blūzs</value></data>
+  <data name="Scale_Hirajoshi" xml:space="preserve"><value>Hirajoshi</value></data>
+  <data name="Scale_In" xml:space="preserve"><value>In</value></data>
+  <data name="Scale_Yo" xml:space="preserve"><value>Yo</value></data>
+  <data name="Scale_Kumoi" xml:space="preserve"><value>Kumoi</value></data>
+  <data name="Scale_Egyptian" xml:space="preserve"><value>Ēģiptiešu</value></data>
+  <data name="Scale_Lydian" xml:space="preserve"><value>Līdiskais</value></data>
+  <data name="Scale_Mixolydian" xml:space="preserve"><value>Miksolīdiskais</value></data>
+  <data name="Key_TabChords" xml:space="preserve"><value>Tonalitātes akordi</value></data>
+  <data name="Key_TabDetect" xml:space="preserve"><value>Atrast tonalitāti</value></data>
+  <data name="Key_ScaleNotes" xml:space="preserve"><value>Skaņkārtas notis:</value></data>
+  <data name="Key_Sevenths" xml:space="preserve"><value>Septakordi</value></data>
+  <data name="Pick_Root" xml:space="preserve"><value>Pamattonis</value></data>
+  <data name="Pick_ChordType" xml:space="preserve"><value>Akorda veids</value></data>
+  <data name="Pick_Bass" xml:space="preserve"><value>Basa nots</value></data>
+  <data name="Bass_Any" xml:space="preserve"><value>Jebkurš</value></data>
+  <data name="Bass_Root" xml:space="preserve"><value>Tāda pati kā pamattonis</value></data>
+  <data name="Layout_Inversion" xml:space="preserve"><value>Apvērsums – zemākā nots nav pamattonis</value></data>
+  <data name="Pick_Tonic" xml:space="preserve"><value>Tonika</value></data>
+  <data name="Pick_Scale" xml:space="preserve"><value>Gamma</value></data>
+  <data name="Key_Add" xml:space="preserve"><value>Pievienot akordu</value></data>
+  <data name="Key_DetectHint" xml:space="preserve"><value>Pievieno dziesmas akordus, un lietotne atradīs tonalitātes, kurām tie atbilst. Pieskaries tonalitātei, lai redzētu tās akordus.</value></data>
+  <data name="Key_NoChords" xml:space="preserve"><value>Pievieno dziesmas akordus</value></data>
+  <data name="Key_NoKey" xml:space="preserve"><value>Nav atbilstošas tonalitātes</value></data>
+  <data name="Key_Progressions" xml:space="preserve"><value>Progresijas šajā tonalitātē</value></data>
+  <data name="Style_Pop" xml:space="preserve"><value>Pops</value></data>
+  <data name="Style_Rock" xml:space="preserve"><value>Roks</value></data>
+  <data name="Style_Jazz" xml:space="preserve"><value>Džezs</value></data>
+  <data name="Style_Blues" xml:space="preserve"><value>Blūzs</value></data>
+  <data name="Style_Classical" xml:space="preserve"><value>Klasika</value></data>
+  <data name="Style_Flamenco" xml:space="preserve"><value>Flamenko</value></data>
+  <data name="Style_Klezmer" xml:space="preserve"><value>Klezmers</value></data>
+  <data name="Prog_Generate" xml:space="preserve"><value>Ģenerēt progresiju</value></data>
+  <data name="Prog_Hint" xml:space="preserve"><value>Pieskaries progresijai, lai redzētu diagrammas; ‹ › maina pirkstojumu. ▶ to atskaņo, pieskaries vēlreiz, lai apturētu.</value></data>
+  <data name="Prog_Smooth" xml:space="preserve"><value>Plūstošas pārejas</value></data>
+  <data name="Nav_Tuner" xml:space="preserve"><value>Skaņotājs</value></data>
+  <data name="Tuner_Hint" xml:space="preserve"><value>Pieskarieties stīgai, lai to dzirdētu un skaņotu tikai to; Auto izvēlas tuvāko stīgu.</value></data>
+  <data name="Tuner_Listening" xml:space="preserve"><value>Uzspēlējiet stīgu…</value></data>
+  <data name="Tuner_ListeningNote" xml:space="preserve"><value>Nospēlējiet noti…</value></data>
+  <data name="Tuner_Chromatic" xml:space="preserve"><value>Hromatisks</value></data>
+  <data name="Tuner_InTune" xml:space="preserve"><value>Noskaņots</value></data>
+  <data name="Tuner_TuneUp" xml:space="preserve"><value>Savelciet</value></data>
+  <data name="Tuner_TuneDown" xml:space="preserve"><value>Atlaidiet</value></data>
+  <data name="Tuner_Auto" xml:space="preserve"><value>Auto</value></data>
+  <data name="Tuner_MicDenied" xml:space="preserve"><value>Skaņotājam nepieciešama piekļuve mikrofonam.</value></data>
+  <data name="Tuner_OpenSettings" xml:space="preserve"><value>Atvērt iestatījumus</value></data>
+  <data name="Tuner_MicError" xml:space="preserve"><value>Mikrofonu nevar ieslēgt.</value></data>
+  <data name="Tuner_MicUsage" xml:space="preserve"><value>Skaņotājs klausās jūsu instrumentu, lai parādītu, vai tas ir noskaņots.</value><comment>iOS microphone permission prompt (NSMicrophoneUsageDescription), built into the app bundle by PlatformLocales.targets</comment></data>
+  <data name="Tab_Chords" xml:space="preserve"><value>Akordi</value></data>
+  <data name="Tab_Favorites" xml:space="preserve"><value>Izlase</value></data>
+  <data name="Tab_Theory" xml:space="preserve"><value>Teorija</value></data>
+  <data name="Tab_More" xml:space="preserve"><value>Vairāk</value></data>
+  <data name="Group_Tools" xml:space="preserve"><value>Rīki</value></data>
+  <data name="Related_Title" xml:space="preserve"><value>Skatīt arī</value></data>
+  <data name="Tuning_Standard" xml:space="preserve"><value>Standarta</value></data>
+  <data name="Tuning_HalfStepDown" xml:space="preserve"><value>Par pustoni zemāk</value></data>
+  <data name="Tuning_WholeStepDown" xml:space="preserve"><value>Par toni zemāk</value></data>
+  <data name="Tuning_LowG" xml:space="preserve"><value>Zemais G</value></data>
+  <data name="Tuning_UkuleleD" xml:space="preserve"><value>D skaņojums</value></data>
+  <data name="Tuning_Baritone" xml:space="preserve"><value>Baritons</value></data>
+  <data name="Tuning_Tenor" xml:space="preserve"><value>Tenors</value></data>
+  <data name="Tuning_Custom" xml:space="preserve"><value>Savs skaņojums</value></data>
+  <data name="Tuning_New" xml:space="preserve"><value>Savs skaņojums…</value></data>
+  <data name="Tuning_Edit" xml:space="preserve"><value>Rediģēt</value></data>
+  <data name="Tuning_Delete" xml:space="preserve"><value>Dzēst</value></data>
+  <data name="Tuning_Save" xml:space="preserve"><value>Saglabāt</value></data>
+  <data name="Tuning_Cancel" xml:space="preserve"><value>Atcelt</value></data>
+  <data name="Tuning_EditorHint" xml:space="preserve"><value>Pieskarieties ▲ ▼, lai paaugstinātu vai pazeminātu stīgu par pustoni; pieskarieties notij, lai to dzirdētu.</value></data>
+  <data name="Settings_Capo" xml:space="preserve"><value>Kapodastrs</value></data>
+  <data name="Capo_None" xml:space="preserve"><value>Bez kapodastra</value></data>
+  <data name="Capo_Fret" xml:space="preserve"><value>{0}. lads</value></data>
+  <data name="Capo_Badge" xml:space="preserve"><value>Kapo {0}</value></data>
+  <data name="Capo_Shape" xml:space="preserve"><value>Kapodastrs uz {0}. lada: ņem {1} formu</value></data>
+  <data name="Capo_ShapeShort" xml:space="preserve"><value>{0} forma</value></data>
+  <data name="Key_CapoTitle" xml:space="preserve"><value>Vieglākās kapodastra pozīcijas</value></data>
+  <data name="Key_CapoUse" xml:space="preserve"><value>Lietot</value></data>
+  <data name="Fretboard_Title" xml:space="preserve"><value>Uz grifa</value></data>
+  <data name="Fretboard_Intervals" xml:space="preserve"><value>Intervāli</value></data>
+  <data name="Fretboard_Notes" xml:space="preserve"><value>Notis</value></data>
+  <data name="Difficulty_Easy" xml:space="preserve"><value>Viegls</value></data>
+  <data name="Difficulty_Medium" xml:space="preserve"><value>Vidējs</value></data>
+  <data name="Difficulty_Hard" xml:space="preserve"><value>Grūts</value></data>
+  <data name="Key_CapoHint" xml:space="preserve"><value>Spēlē parādītos tvērienus – ar kapo tie skan kā {0}.</value></data>
+  <data name="Fretboard_ScaleHint" xml:space="preserve"><value>Kur uz grifa atrodas skaņkārtas {0} skaņas. 1 ir tonika.</value></data>
+  <data name="Fretboard_ChordHint" xml:space="preserve"><value>Kur uz grifa atrodas akorda {0} skaņas. 1 ir pamattonis.</value></data>
+  <data name="Fretboard_ScaleOnly" xml:space="preserve"><value>Skala</value></data>
+  <data name="Fretboard_WholeNeck" xml:space="preserve"><value>Viss kakls</value></data>
+  <data name="Fretboard_Position" xml:space="preserve"><value>Sliekšņi {0}–{1}</value></data>
+  <data name="Fretboard_ChordInScaleHint" xml:space="preserve"><value>Akorda {0} skaņas ir apzīmētas (1 ir tā pamattonis); punkti ir pārējās skalas {1} skaņas.</value></data>
+  <data name="Nav_About" xml:space="preserve"><value>Par lietotni</value></data>
+  <data name="About_Version" xml:space="preserve"><value>Versija</value></data>
+  <data name="About_Rate" xml:space="preserve"><value>Novērtēt lietotni</value></data>
+  <data name="About_SoundCredit" xml:space="preserve"><value>Instrumentu skaņas</value></data>
+  <data name="About_SoundFont" xml:space="preserve"><value>skaņu fonts</value></data>
+  <data name="About_License" xml:space="preserve"><value>Licence</value></data>
+  <data name="About_By" xml:space="preserve"><value>autors {0}</value></data>
+  <data name="About_PublicDomain" xml:space="preserve"><value>Publiskais īpašums</value></data>
+  <data name="About_SoundChanges" xml:space="preserve"><value>Paraugi pielāgoti šai lietotnei.</value></data>
+  <data name="Nav_Metronome" xml:space="preserve"><value>Metronoms</value></data>
+  <data name="Metronome_Start" xml:space="preserve"><value>Sākt</value></data>
+  <data name="Metronome_Stop" xml:space="preserve"><value>Apturēt</value></data>
+  <data name="Metronome_Tap" xml:space="preserve"><value>Piesist tempu</value></data>
+  <data name="Metronome_Beats" xml:space="preserve"><value>Sitieni taktī</value></data>
+  <data name="Metronome_Subdivision" xml:space="preserve"><value>Dalījums</value></data>
+  <data name="Metronome_Accent" xml:space="preserve"><value>Uzsvērt pirmo sitienu</value></data>
+  <data name="Metronome_Hint" xml:space="preserve"><value>Piesitiet “Piesist tempu” mūzikas ritmā, lai noteiktu tās tempu. Akordu secības skan šajā tempā, viens akords taktī.</value></data>
+  <data name="Prog_Tempo" xml:space="preserve"><value>Temps</value></data>
+</root>

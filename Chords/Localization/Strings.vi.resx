@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="Nav_ShowChord" xml:space="preserve"><value>Hiển thị sơ đồ hợp âm</value></data>
+  <data name="Nav_FindChord" xml:space="preserve"><value>Tìm tên hợp âm</value></data>
+  <data name="Nav_FindShape" xml:space="preserve"><value>Tìm hợp âm theo thế bấm</value></data>
+  <data name="Nav_Favorites" xml:space="preserve"><value>Hợp âm yêu thích</value></data>
+  <data name="Nav_Circle" xml:space="preserve"><value>Vòng quãng năm</value></data>
+  <data name="Nav_Settings" xml:space="preserve"><value>Cài đặt</value></data>
+  <data name="Nav_Toggle" xml:space="preserve"><value>Hiện menu</value></data>
+  <data name="Yes" xml:space="preserve"><value>Có</value></data>
+  <data name="No" xml:space="preserve"><value>Không</value></data>
+  <data name="Find" xml:space="preserve"><value>Tìm</value></data>
+  <data name="ChordType_Major" xml:space="preserve"><value>Trưởng</value></data>
+  <data name="ShowChord_Partial" xml:space="preserve"><value>Cho phép hợp âm không đầy đủ</value></data>
+  <data name="Chord_Found" xml:space="preserve"><value>Hợp âm tìm được:</value></data>
+  <data name="Chord_OtherSymbols" xml:space="preserve"><value>Ký hiệu khác:</value></data>
+  <data name="Chord_Intervals" xml:space="preserve"><value>Quãng của hợp âm:</value></data>
+  <data name="Chord_Notes" xml:space="preserve"><value>Nốt của hợp âm:</value></data>
+  <data name="Chord_Diagrams" xml:space="preserve"><value>Sơ đồ hợp âm:</value></data>
+  <data name="Chord_Results_Many" xml:space="preserve"><value>{0} kết quả</value></data>
+  <data name="Chord_Invalid" xml:space="preserve"><value>{0} không phải là hợp âm hợp lệ</value></data>
+  <data name="Tip" xml:space="preserve"><value>Mẹo:</value></data>
+  <data name="Tip_Play" xml:space="preserve"><value>Chạm vào sơ đồ để nghe.</value></data>
+  <data name="Tip_Strum" xml:space="preserve"><value>Vuốt ngang qua sơ đồ để gảy từng dây một.</value></data>
+  <data name="Tip_StrumPick" xml:space="preserve"><value>Kéo phím gảy bên dưới sơ đồ để gảy từng dây một.</value></data>
+  <data name="Tip_Favorite" xml:space="preserve"><value>Chạm và giữ sơ đồ để thêm vào mục yêu thích.</value></data>
+  <data name="Favorites_Empty" xml:space="preserve"><value>Bạn chưa có thế bấm yêu thích nào.</value></data>
+  <data name="Favorites_Hint" xml:space="preserve"><value>Chạm và giữ một thế bấm để thêm vào mục yêu thích.</value></data>
+  <data name="Find_Strict" xml:space="preserve"><value>Chế độ nghiêm ngặt</value></data>
+  <data name="Find_Loose" xml:space="preserve"><value>Chế độ linh hoạt</value></data>
+  <data name="Find_NoChord" xml:space="preserve"><value>Không tìm thấy hợp âm</value></data>
+  <data name="Settings_SystemLanguage" xml:space="preserve"><value>{0} (hệ thống)</value></data>
+  <data name="Notation_English" xml:space="preserve"><value>Kiểu Anh</value></data>
+  <data name="Notation_German" xml:space="preserve"><value>Kiểu Đức</value></data>
+  <data name="Notation_Latin" xml:space="preserve"><value>Kiểu La-tinh</value></data>
+  <data name="Settings_BasicChords" xml:space="preserve"><value>Cơ bản</value></data>
+  <data name="Settings_AllChords" xml:space="preserve"><value>Tất cả</value></data>
+  <data name="Settings_MaxFret" xml:space="preserve"><value>Phím đàn cao nhất:</value></data>
+  <data name="Settings_AllowBarre" xml:space="preserve"><value>Cho phép hợp âm chặn</value></data>
+  <data name="Settings_AllowSpecial" xml:space="preserve"><value>Cho phép thế bấm có dây cao bị chặn tiếng</value></data>
+  <data name="Settings_EasyOnly" xml:space="preserve"><value>Chỉ thế bấm dễ</value></data>
+  <data name="Settings_Vertical" xml:space="preserve"><value>Dọc</value></data>
+  <data name="Settings_Horizontal" xml:space="preserve"><value>Ngang</value></data>
+  <data name="Settings_LeftHanded" xml:space="preserve"><value>Người thuận tay trái (sơ đồ lật gương)</value></data>
+  <data name="Settings_ShowTips" xml:space="preserve"><value>Hiện mẹo</value></data>
+  <data name="Settings_Theme" xml:space="preserve"><value>Giao diện</value></data>
+  <data name="Theme_System" xml:space="preserve"><value>Theo thiết bị</value></data>
+  <data name="Theme_Light" xml:space="preserve"><value>Sáng</value></data>
+  <data name="Theme_Dark" xml:space="preserve"><value>Tối</value></data>
+  <data name="Settings_General" xml:space="preserve"><value>Chung</value></data>
+  <data name="Settings_Language" xml:space="preserve"><value>Ngôn ngữ</value></data>
+  <data name="Settings_Instrument" xml:space="preserve"><value>Nhạc cụ</value></data>
+  <data name="Settings_Tuning" xml:space="preserve"><value>Lên dây</value></data>
+  <data name="Settings_Notation" xml:space="preserve"><value>Ký âm</value></data>
+  <data name="Settings_Diagrams" xml:space="preserve"><value>Sơ đồ</value></data>
+  <data name="Settings_Chords" xml:space="preserve"><value>Hợp âm</value></data>
+  <data name="Instrument_Guitar" xml:space="preserve"><value>Guitar</value></data>
+  <data name="Instrument_Ukulele" xml:space="preserve"><value>Ukulele</value></data>
+  <data name="Instrument_Mandolin" xml:space="preserve"><value>Mandolin</value></data>
+  <data name="Instrument_BassGuitar" xml:space="preserve"><value>Guitar bass</value></data>
+  <data name="Instrument_Banjo" xml:space="preserve"><value>Đàn banjo</value></data>
+  <data name="Shape_Hint" xml:space="preserve"><value>Chạm vào các phím đàn nơi ngón tay bấm dây. Chạm phía trên lược đàn để chuyển một dây giữa dây buông (○) và chặn tiếng (×).</value></data>
+  <data name="Shape_Alternatives" xml:space="preserve"><value>Còn gọi là:</value></data>
+  <data name="Shape_TooFew" xml:space="preserve"><value>Hãy chơi ít nhất hai nốt khác nhau</value></data>
+  <data name="Shape_Play" xml:space="preserve"><value>Phát</value></data>
+  <data name="Shape_Clear" xml:space="preserve"><value>Xóa</value></data>
+  <data name="Nav_Key" xml:space="preserve"><value>Hợp âm trong giọng</value></data>
+  <data name="Nav_Progressions" xml:space="preserve"><value>Vòng hợp âm</value></data>
+  <data name="Scale_Major" xml:space="preserve"><value>Trưởng</value></data>
+  <data name="Scale_Minor" xml:space="preserve"><value>Thứ tự nhiên</value></data>
+  <data name="Scale_HarmonicMinor" xml:space="preserve"><value>Thứ hòa âm</value></data>
+  <data name="Scale_MelodicMinor" xml:space="preserve"><value>Thứ giai điệu</value></data>
+  <data name="Scale_Dorian" xml:space="preserve"><value>Dorian</value></data>
+  <data name="Scale_Phrygian" xml:space="preserve"><value>Phrygian</value></data>
+  <data name="Scale_PhrygianDominant" xml:space="preserve"><value>Phrygian át</value></data>
+  <data name="Scale_HungarianMinor" xml:space="preserve"><value>Thứ Hungary</value></data>
+  <data name="Scale_DoubleHarmonicMajor" xml:space="preserve"><value>Hòa âm kép (trưởng Di-gan)</value></data>
+  <data name="Scale_LydianDominant" xml:space="preserve"><value>Lydian át</value></data>
+  <data name="Scale_UkrainianDorian" xml:space="preserve"><value>Dorian Ukraina</value></data>
+  <data name="Scale_Altered" xml:space="preserve"><value>Biến hóa (Altered)</value></data>
+  <data name="Scale_MajorPentatonic" xml:space="preserve"><value>Ngũ cung trưởng</value></data>
+  <data name="Scale_MinorPentatonic" xml:space="preserve"><value>Ngũ cung thứ</value></data>
+  <data name="Scale_Blues" xml:space="preserve"><value>Blues</value></data>
+  <data name="Scale_Hirajoshi" xml:space="preserve"><value>Hirajoshi</value></data>
+  <data name="Scale_In" xml:space="preserve"><value>In</value></data>
+  <data name="Scale_Yo" xml:space="preserve"><value>Yo</value></data>
+  <data name="Scale_Kumoi" xml:space="preserve"><value>Kumoi</value></data>
+  <data name="Scale_Egyptian" xml:space="preserve"><value>Ai Cập</value></data>
+  <data name="Scale_Lydian" xml:space="preserve"><value>Lydian</value></data>
+  <data name="Scale_Mixolydian" xml:space="preserve"><value>Mixolydian</value></data>
+  <data name="Key_TabChords" xml:space="preserve"><value>Hợp âm của giọng</value></data>
+  <data name="Key_TabDetect" xml:space="preserve"><value>Tìm giọng</value></data>
+  <data name="Key_ScaleNotes" xml:space="preserve"><value>Các nốt của âm giai:</value></data>
+  <data name="Key_Sevenths" xml:space="preserve"><value>Hợp âm bảy</value></data>
+  <data name="Pick_Root" xml:space="preserve"><value>Nốt gốc</value></data>
+  <data name="Pick_ChordType" xml:space="preserve"><value>Loại hợp âm</value></data>
+  <data name="Pick_Bass" xml:space="preserve"><value>Nốt bass</value></data>
+  <data name="Bass_Any" xml:space="preserve"><value>Bất kỳ</value></data>
+  <data name="Bass_Root" xml:space="preserve"><value>Giống nốt gốc</value></data>
+  <data name="Layout_Inversion" xml:space="preserve"><value>Đảo – nốt thấp nhất không phải nốt gốc</value></data>
+  <data name="Pick_Tonic" xml:space="preserve"><value>Chủ âm</value></data>
+  <data name="Pick_Scale" xml:space="preserve"><value>Âm giai</value></data>
+  <data name="Key_Add" xml:space="preserve"><value>Thêm hợp âm</value></data>
+  <data name="Key_DetectHint" xml:space="preserve"><value>Thêm các hợp âm của bài hát và ứng dụng sẽ tìm các giọng phù hợp. Chạm vào một giọng để xem các hợp âm của nó.</value></data>
+  <data name="Key_NoChords" xml:space="preserve"><value>Thêm các hợp âm của bài hát</value></data>
+  <data name="Key_NoKey" xml:space="preserve"><value>Không có giọng phù hợp</value></data>
+  <data name="Key_Progressions" xml:space="preserve"><value>Vòng hợp âm ở giọng này</value></data>
+  <data name="Style_Pop" xml:space="preserve"><value>Pop</value></data>
+  <data name="Style_Rock" xml:space="preserve"><value>Rock</value></data>
+  <data name="Style_Jazz" xml:space="preserve"><value>Jazz</value></data>
+  <data name="Style_Blues" xml:space="preserve"><value>Blues</value></data>
+  <data name="Style_Classical" xml:space="preserve"><value>Cổ điển</value></data>
+  <data name="Style_Flamenco" xml:space="preserve"><value>Flamenco</value></data>
+  <data name="Style_Klezmer" xml:space="preserve"><value>Klezmer</value></data>
+  <data name="Prog_Generate" xml:space="preserve"><value>Tạo vòng hợp âm</value></data>
+  <data name="Prog_Hint" xml:space="preserve"><value>Chạm vào một vòng hợp âm để xem sơ đồ; ‹ › đổi thế bấm. ▶ phát, chạm lại để dừng.</value></data>
+  <data name="Prog_Smooth" xml:space="preserve"><value>Chuyển hợp âm mượt</value></data>
+  <data name="Nav_Tuner" xml:space="preserve"><value>Bộ chỉnh dây</value></data>
+  <data name="Tuner_Hint" xml:space="preserve"><value>Chạm vào một dây để nghe và chỉ chỉnh dây đó; Tự động chọn dây gần nhất.</value></data>
+  <data name="Tuner_Listening" xml:space="preserve"><value>Hãy gảy một dây…</value></data>
+  <data name="Tuner_ListeningNote" xml:space="preserve"><value>Hãy chơi một nốt…</value></data>
+  <data name="Tuner_Chromatic" xml:space="preserve"><value>Chromatic</value></data>
+  <data name="Tuner_InTune" xml:space="preserve"><value>Đã chuẩn</value></data>
+  <data name="Tuner_TuneUp" xml:space="preserve"><value>Lên dây</value></data>
+  <data name="Tuner_TuneDown" xml:space="preserve"><value>Hạ dây</value></data>
+  <data name="Tuner_Auto" xml:space="preserve"><value>Tự động</value></data>
+  <data name="Tuner_MicDenied" xml:space="preserve"><value>Bộ chỉnh dây cần quyền truy cập micrô.</value></data>
+  <data name="Tuner_OpenSettings" xml:space="preserve"><value>Mở cài đặt</value></data>
+  <data name="Tuner_MicError" xml:space="preserve"><value>Không thể bật micrô.</value></data>
+  <data name="Tuner_MicUsage" xml:space="preserve"><value>Bộ chỉnh âm lắng nghe nhạc cụ của bạn để cho biết nó đã đúng tông chưa.</value><comment>iOS microphone permission prompt (NSMicrophoneUsageDescription), built into the app bundle by PlatformLocales.targets</comment></data>
+  <data name="Tab_Chords" xml:space="preserve"><value>Hợp âm</value></data>
+  <data name="Tab_Favorites" xml:space="preserve"><value>Yêu thích</value></data>
+  <data name="Tab_Theory" xml:space="preserve"><value>Lý thuyết</value></data>
+  <data name="Tab_More" xml:space="preserve"><value>Thêm</value></data>
+  <data name="Group_Tools" xml:space="preserve"><value>Công cụ</value></data>
+  <data name="Related_Title" xml:space="preserve"><value>Xem thêm</value></data>
+  <data name="Tuning_Standard" xml:space="preserve"><value>Chuẩn</value></data>
+  <data name="Tuning_HalfStepDown" xml:space="preserve"><value>Hạ nửa cung</value></data>
+  <data name="Tuning_WholeStepDown" xml:space="preserve"><value>Hạ một cung</value></data>
+  <data name="Tuning_LowG" xml:space="preserve"><value>Sol trầm</value></data>
+  <data name="Tuning_UkuleleD" xml:space="preserve"><value>Lên dây Rê</value></data>
+  <data name="Tuning_Baritone" xml:space="preserve"><value>Baritone</value></data>
+  <data name="Tuning_Tenor" xml:space="preserve"><value>Tenor</value></data>
+  <data name="Tuning_Custom" xml:space="preserve"><value>Lên dây tùy chỉnh</value></data>
+  <data name="Tuning_New" xml:space="preserve"><value>Lên dây tùy chỉnh…</value></data>
+  <data name="Tuning_Edit" xml:space="preserve"><value>Sửa</value></data>
+  <data name="Tuning_Delete" xml:space="preserve"><value>Xóa</value></data>
+  <data name="Tuning_Save" xml:space="preserve"><value>Lưu</value></data>
+  <data name="Tuning_Cancel" xml:space="preserve"><value>Hủy</value></data>
+  <data name="Tuning_EditorHint" xml:space="preserve"><value>Chạm ▲ ▼ để nâng hoặc hạ một dây nửa cung; chạm vào nốt để nghe.</value></data>
+  <data name="Settings_Capo" xml:space="preserve"><value>Capo</value></data>
+  <data name="Capo_None" xml:space="preserve"><value>Không capo</value></data>
+  <data name="Capo_Fret" xml:space="preserve"><value>Phím {0}</value></data>
+  <data name="Capo_Badge" xml:space="preserve"><value>Capo {0}</value></data>
+  <data name="Capo_Shape" xml:space="preserve"><value>Capo ở phím {0}: bấm thế {1}</value></data>
+  <data name="Capo_ShapeShort" xml:space="preserve"><value>thế {0}</value></data>
+  <data name="Key_CapoTitle" xml:space="preserve"><value>Vị trí capo dễ nhất</value></data>
+  <data name="Key_CapoUse" xml:space="preserve"><value>Dùng</value></data>
+  <data name="Fretboard_Title" xml:space="preserve"><value>Trên cần đàn</value></data>
+  <data name="Fretboard_Intervals" xml:space="preserve"><value>Quãng</value></data>
+  <data name="Fretboard_Notes" xml:space="preserve"><value>Nốt</value></data>
+  <data name="Difficulty_Easy" xml:space="preserve"><value>Dễ</value></data>
+  <data name="Difficulty_Medium" xml:space="preserve"><value>Vừa</value></data>
+  <data name="Difficulty_Hard" xml:space="preserve"><value>Khó</value></data>
+  <data name="Key_CapoHint" xml:space="preserve"><value>Bấm các thế được hiển thị – với capo chúng vang lên như {0}.</value></data>
+  <data name="Fretboard_ScaleHint" xml:space="preserve"><value>Vị trí các nốt của âm giai {0} trên cần đàn. 1 là chủ âm.</value></data>
+  <data name="Fretboard_ChordHint" xml:space="preserve"><value>Vị trí các nốt của hợp âm {0} trên cần đàn. 1 là nốt gốc.</value></data>
+  <data name="Fretboard_ScaleOnly" xml:space="preserve"><value>Âm giai</value></data>
+  <data name="Fretboard_WholeNeck" xml:space="preserve"><value>Cả cần đàn</value></data>
+  <data name="Fretboard_Position" xml:space="preserve"><value>Phím {0}–{1}</value></data>
+  <data name="Fretboard_ChordInScaleHint" xml:space="preserve"><value>Các nốt của hợp âm {0} có ghi nhãn (1 là nốt gốc); các chấm là những nốt còn lại của âm giai {1}.</value></data>
+  <data name="Nav_About" xml:space="preserve"><value>Giới thiệu</value></data>
+  <data name="About_Version" xml:space="preserve"><value>Phiên bản</value></data>
+  <data name="About_Rate" xml:space="preserve"><value>Đánh giá ứng dụng</value></data>
+  <data name="About_SoundCredit" xml:space="preserve"><value>Âm thanh nhạc cụ</value></data>
+  <data name="About_SoundFont" xml:space="preserve"><value>soundfont</value></data>
+  <data name="About_License" xml:space="preserve"><value>Giấy phép</value></data>
+  <data name="About_By" xml:space="preserve"><value>của {0}</value></data>
+  <data name="About_PublicDomain" xml:space="preserve"><value>Phạm vi công cộng</value></data>
+  <data name="About_SoundChanges" xml:space="preserve"><value>Các mẫu âm đã được điều chỉnh cho ứng dụng này.</value></data>
+  <data name="Nav_Metronome" xml:space="preserve"><value>Máy đếm nhịp</value></data>
+  <data name="Metronome_Start" xml:space="preserve"><value>Bắt đầu</value></data>
+  <data name="Metronome_Stop" xml:space="preserve"><value>Dừng</value></data>
+  <data name="Metronome_Tap" xml:space="preserve"><value>Gõ nhịp</value></data>
+  <data name="Metronome_Beats" xml:space="preserve"><value>Phách mỗi ô nhịp</value></data>
+  <data name="Metronome_Subdivision" xml:space="preserve"><value>Chia phách</value></data>
+  <data name="Metronome_Accent" xml:space="preserve"><value>Nhấn phách đầu</value></data>
+  <data name="Metronome_Hint" xml:space="preserve"><value>Chạm “Gõ nhịp” theo nhịp nhạc để tìm tốc độ của bài. Vòng hợp âm sẽ chơi ở tốc độ này, mỗi ô nhịp một hợp âm.</value></data>
+  <data name="Prog_Tempo" xml:space="preserve"><value>Tốc độ</value></data>
+</root>

@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="Nav_ShowChord" xml:space="preserve"><value>Uri d-dijagramma tal-kord</value></data>
+  <data name="Nav_FindChord" xml:space="preserve"><value>Sib l-isem tal-kord</value></data>
+  <data name="Nav_FindShape" xml:space="preserve"><value>Sib kord skont il-pożizzjoni</value></data>
+  <data name="Nav_Favorites" xml:space="preserve"><value>Kordi favoriti</value></data>
+  <data name="Nav_Circle" xml:space="preserve"><value>Ċirku tal-ħamsiet</value></data>
+  <data name="Nav_Settings" xml:space="preserve"><value>Settings</value></data>
+  <data name="Nav_Toggle" xml:space="preserve"><value>Uri l-menu</value></data>
+  <data name="Yes" xml:space="preserve"><value>Iva</value></data>
+  <data name="No" xml:space="preserve"><value>Le</value></data>
+  <data name="Find" xml:space="preserve"><value>Fittex</value></data>
+  <data name="ChordType_Major" xml:space="preserve"><value>Maġġuri</value></data>
+  <data name="ShowChord_Partial" xml:space="preserve"><value>Ippermetti kordi mhux kompluti</value></data>
+  <data name="Chord_Found" xml:space="preserve"><value>Kordi misjuba:</value></data>
+  <data name="Chord_OtherSymbols" xml:space="preserve"><value>Simboli oħra:</value></data>
+  <data name="Chord_Intervals" xml:space="preserve"><value>Intervalli tal-kord:</value></data>
+  <data name="Chord_Notes" xml:space="preserve"><value>Noti tal-kord:</value></data>
+  <data name="Chord_Diagrams" xml:space="preserve"><value>Dijagrammi tal-kord:</value></data>
+  <data name="Chord_Results_One" xml:space="preserve"><value>{0} riżultat</value></data>
+  <data name="Chord_Results_Two" xml:space="preserve"><value>{0} riżultati</value></data>
+  <data name="Chord_Results_Few" xml:space="preserve"><value>{0} riżultati</value></data>
+  <data name="Chord_Results_Many" xml:space="preserve"><value>{0} riżultat</value></data>
+  <data name="Chord_Results_Other" xml:space="preserve"><value>{0} riżultat</value></data>
+  <data name="Chord_Invalid" xml:space="preserve"><value>{0} mhuwiex kord validu</value></data>
+  <data name="Tip" xml:space="preserve"><value>Ħjiel:</value></data>
+  <data name="Tip_Play" xml:space="preserve"><value>Agħfas fuq dijagramma biex tisimgħu.</value></data>
+  <data name="Tip_Strum" xml:space="preserve"><value>Iżlaq lejn il-ġenb fuq dijagramma biex iddoqqha korda b'korda.</value></data>
+  <data name="Tip_StrumPick" xml:space="preserve"><value>Ikkaxkar il-pick taħt dijagramma biex iddoqqha korda b'korda.</value></data>
+  <data name="Tip_Favorite" xml:space="preserve"><value>Żomm magħfus fuq dijagramma biex iżżidha mal-favoriti.</value></data>
+  <data name="Favorites_Empty" xml:space="preserve"><value>M'għandek l-ebda pożizzjoni favorita.</value></data>
+  <data name="Favorites_Hint" xml:space="preserve"><value>Żomm magħfus fuq pożizzjoni biex iżżidha mal-favoriti.</value></data>
+  <data name="Find_Strict" xml:space="preserve"><value>Modalità stretta</value></data>
+  <data name="Find_Loose" xml:space="preserve"><value>Modalità flessibbli</value></data>
+  <data name="Find_NoChord" xml:space="preserve"><value>Ebda kord ma nstab</value></data>
+  <data name="Settings_SystemLanguage" xml:space="preserve"><value>{0} (sistema)</value></data>
+  <data name="Notation_English" xml:space="preserve"><value>Ingliża</value></data>
+  <data name="Notation_German" xml:space="preserve"><value>Ġermaniża</value></data>
+  <data name="Notation_Latin" xml:space="preserve"><value>Latina</value></data>
+  <data name="Settings_BasicChords" xml:space="preserve"><value>Bażiċi</value></data>
+  <data name="Settings_AllChords" xml:space="preserve"><value>Kollha</value></data>
+  <data name="Settings_MaxFret" xml:space="preserve"><value>L-ogħla tasta:</value></data>
+  <data name="Settings_AllowBarre" xml:space="preserve"><value>Ippermetti l-barré</value></data>
+  <data name="Settings_AllowSpecial" xml:space="preserve"><value>Ippermetti kordi b'kordi għoljin mitfija</value></data>
+  <data name="Settings_EasyOnly" xml:space="preserve"><value>Pożizzjonijiet tas-swaba’ faċli biss</value></data>
+  <data name="Settings_Vertical" xml:space="preserve"><value>Vertikali</value></data>
+  <data name="Settings_Horizontal" xml:space="preserve"><value>Orizzontali</value></data>
+  <data name="Settings_LeftHanded" xml:space="preserve"><value>Xellugi (dijagrammi mirja)</value></data>
+  <data name="Settings_ShowTips" xml:space="preserve"><value>Uri l-ħjiel</value></data>
+  <data name="Settings_Theme" xml:space="preserve"><value>Tema</value></data>
+  <data name="Theme_System" xml:space="preserve"><value>Bħall-apparat</value></data>
+  <data name="Theme_Light" xml:space="preserve"><value>Ċar</value></data>
+  <data name="Theme_Dark" xml:space="preserve"><value>Skur</value></data>
+  <data name="Settings_General" xml:space="preserve"><value>Ġenerali</value></data>
+  <data name="Settings_Language" xml:space="preserve"><value>Lingwa</value></data>
+  <data name="Settings_Instrument" xml:space="preserve"><value>Strument</value></data>
+  <data name="Settings_Tuning" xml:space="preserve"><value>Irfinar</value></data>
+  <data name="Settings_Notation" xml:space="preserve"><value>Notazzjoni</value></data>
+  <data name="Settings_Diagrams" xml:space="preserve"><value>Dijagrammi</value></data>
+  <data name="Settings_Chords" xml:space="preserve"><value>Kordi</value></data>
+  <data name="Instrument_Guitar" xml:space="preserve"><value>Kitarra</value></data>
+  <data name="Instrument_Ukulele" xml:space="preserve"><value>Ukulele</value></data>
+  <data name="Instrument_Mandolin" xml:space="preserve"><value>Mandolina</value></data>
+  <data name="Instrument_BassGuitar" xml:space="preserve"><value>Kitarra bass</value></data>
+  <data name="Instrument_Banjo" xml:space="preserve"><value>Banjo</value></data>
+  <data name="Shape_Hint" xml:space="preserve"><value>Agħfas fuq it-tasti fejn subgħajk iżommu l-kordi. Agħfas fuq is-sella biex taqleb korda bejn miftuħa (○) u mitfija (×).</value></data>
+  <data name="Shape_Alternatives" xml:space="preserve"><value>Magħruf ukoll bħala:</value></data>
+  <data name="Shape_TooFew" xml:space="preserve"><value>Daqq mill-inqas żewġ noti differenti</value></data>
+  <data name="Shape_Play" xml:space="preserve"><value>Daqq</value></data>
+  <data name="Shape_Clear" xml:space="preserve"><value>Ħassar</value></data>
+  <data name="Nav_Key" xml:space="preserve"><value>Akkordi ta' ton</value></data>
+  <data name="Nav_Progressions" xml:space="preserve"><value>Progressjonijiet ta' akkordi</value></data>
+  <data name="Scale_Major" xml:space="preserve"><value>Maġġuri</value></data>
+  <data name="Scale_Minor" xml:space="preserve"><value>Minuri naturali</value></data>
+  <data name="Scale_HarmonicMinor" xml:space="preserve"><value>Minuri armoniku</value></data>
+  <data name="Scale_MelodicMinor" xml:space="preserve"><value>Minuri melodiku</value></data>
+  <data name="Scale_Dorian" xml:space="preserve"><value>Dorjan</value></data>
+  <data name="Scale_Phrygian" xml:space="preserve"><value>Friġjan</value></data>
+  <data name="Scale_PhrygianDominant" xml:space="preserve"><value>Friġjan dominanti</value></data>
+  <data name="Scale_HungarianMinor" xml:space="preserve"><value>Minuri Ungeriż</value></data>
+  <data name="Scale_DoubleHarmonicMajor" xml:space="preserve"><value>Armonika doppja</value></data>
+  <data name="Scale_LydianDominant" xml:space="preserve"><value>Lidjan dominanti</value></data>
+  <data name="Scale_UkrainianDorian" xml:space="preserve"><value>Dorjan Ukren</value></data>
+  <data name="Scale_Altered" xml:space="preserve"><value>Alterata</value></data>
+  <data name="Scale_MajorPentatonic" xml:space="preserve"><value>Pentatonika maġġuri</value></data>
+  <data name="Scale_MinorPentatonic" xml:space="preserve"><value>Pentatonika minuri</value></data>
+  <data name="Scale_Blues" xml:space="preserve"><value>Blues</value></data>
+  <data name="Scale_Hirajoshi" xml:space="preserve"><value>Hirajoshi</value></data>
+  <data name="Scale_In" xml:space="preserve"><value>In</value></data>
+  <data name="Scale_Yo" xml:space="preserve"><value>Yo</value></data>
+  <data name="Scale_Kumoi" xml:space="preserve"><value>Kumoi</value></data>
+  <data name="Scale_Egyptian" xml:space="preserve"><value>Eġizzjana</value></data>
+  <data name="Scale_Lydian" xml:space="preserve"><value>Lidjan</value></data>
+  <data name="Scale_Mixolydian" xml:space="preserve"><value>Missolidjan</value></data>
+  <data name="Key_TabChords" xml:space="preserve"><value>Akkordi tat-ton</value></data>
+  <data name="Key_TabDetect" xml:space="preserve"><value>Sib it-ton</value></data>
+  <data name="Key_ScaleNotes" xml:space="preserve"><value>Noti tal-iskala:</value></data>
+  <data name="Key_Sevenths" xml:space="preserve"><value>Akkordi tas-seba'</value></data>
+  <data name="Pick_Root" xml:space="preserve"><value>Għerq</value></data>
+  <data name="Pick_ChordType" xml:space="preserve"><value>Tip ta' korda</value></data>
+  <data name="Pick_Bass" xml:space="preserve"><value>Nota tal-bass</value></data>
+  <data name="Bass_Any" xml:space="preserve"><value>Kwalunkwe</value></data>
+  <data name="Bass_Root" xml:space="preserve"><value>Bħall-għerq</value></data>
+  <data name="Layout_Inversion" xml:space="preserve"><value>Inverżjoni – l-iktar nota baxxa mhix l-għerq</value></data>
+  <data name="Pick_Tonic" xml:space="preserve"><value>Tonika</value></data>
+  <data name="Pick_Scale" xml:space="preserve"><value>Skala</value></data>
+  <data name="Key_Add" xml:space="preserve"><value>Żid akkord</value></data>
+  <data name="Key_DetectHint" xml:space="preserve"><value>Żid l-akkordi ta' kanzunetta u l-app issib it-toni li jaqblu magħhom. Agħfas fuq ton biex tara l-akkordi tiegħu.</value></data>
+  <data name="Key_NoChords" xml:space="preserve"><value>Żid l-akkordi ta' kanzunetta</value></data>
+  <data name="Key_NoKey" xml:space="preserve"><value>L-ebda ton ma jaqbel</value></data>
+  <data name="Key_Progressions" xml:space="preserve"><value>Progressjonijiet f'dan it-ton</value></data>
+  <data name="Style_Pop" xml:space="preserve"><value>Pop</value></data>
+  <data name="Style_Rock" xml:space="preserve"><value>Rock</value></data>
+  <data name="Style_Jazz" xml:space="preserve"><value>Jazz</value></data>
+  <data name="Style_Blues" xml:space="preserve"><value>Blues</value></data>
+  <data name="Style_Classical" xml:space="preserve"><value>Klassika</value></data>
+  <data name="Style_Flamenco" xml:space="preserve"><value>Flamenco</value></data>
+  <data name="Style_Klezmer" xml:space="preserve"><value>Klezmer</value></data>
+  <data name="Prog_Generate" xml:space="preserve"><value>Iġġenera progressjoni</value></data>
+  <data name="Prog_Hint" xml:space="preserve"><value>Agħfas fuq progressjoni biex tara d-dijagrammi; ‹ › ibiddel il-pożizzjoni. ▶ idoqqha, agħfas mill-ġdid biex twaqqafha.</value></data>
+  <data name="Prog_Smooth" xml:space="preserve"><value>Tranżizzjonijiet bla xkiel</value></data>
+  <data name="Nav_Tuner" xml:space="preserve"><value>Tuner</value></data>
+  <data name="Tuner_Hint" xml:space="preserve"><value>Agħfas korda biex tismagħha u tkanta biss dik; Awto jagħżel l-eqreb korda.</value></data>
+  <data name="Tuner_Listening" xml:space="preserve"><value>Daqq korda…</value></data>
+  <data name="Tuner_ListeningNote" xml:space="preserve"><value>Indoqq nota…</value></data>
+  <data name="Tuner_Chromatic" xml:space="preserve"><value>Kromatiku</value></data>
+  <data name="Tuner_InTune" xml:space="preserve"><value>Fit-ton</value></data>
+  <data name="Tuner_TuneUp" xml:space="preserve"><value>Issikka</value></data>
+  <data name="Tuner_TuneDown" xml:space="preserve"><value>Erħi</value></data>
+  <data name="Tuner_Auto" xml:space="preserve"><value>Awto</value></data>
+  <data name="Tuner_MicDenied" xml:space="preserve"><value>It-tuner jeħtieġ aċċess għall-mikrofonu.</value></data>
+  <data name="Tuner_OpenSettings" xml:space="preserve"><value>Iftaħ is-settings</value></data>
+  <data name="Tuner_MicError" xml:space="preserve"><value>Il-mikrofonu ma jistax jinbeda.</value></data>
+  <data name="Tuner_MicUsage" xml:space="preserve"><value>It-tuner jisma' l-istrument tiegħek biex juri jekk huwiex intunat.</value><comment>iOS microphone permission prompt (NSMicrophoneUsageDescription), built into the app bundle by PlatformLocales.targets</comment></data>
+  <data name="Tab_Chords" xml:space="preserve"><value>Akkordi</value></data>
+  <data name="Tab_Favorites" xml:space="preserve"><value>Favoriti</value></data>
+  <data name="Tab_Theory" xml:space="preserve"><value>Teorija</value></data>
+  <data name="Tab_More" xml:space="preserve"><value>Aktar</value></data>
+  <data name="Group_Tools" xml:space="preserve"><value>Għodod</value></data>
+  <data name="Related_Title" xml:space="preserve"><value>Ara wkoll</value></data>
+  <data name="Tuning_Standard" xml:space="preserve"><value>Standard</value></data>
+  <data name="Tuning_HalfStepDown" xml:space="preserve"><value>Nofs ton aktar baxx</value></data>
+  <data name="Tuning_WholeStepDown" xml:space="preserve"><value>Ton sħiħ aktar baxx</value></data>
+  <data name="Tuning_LowG" xml:space="preserve"><value>G baxx</value></data>
+  <data name="Tuning_UkuleleD" xml:space="preserve"><value>Irfinar f’D</value></data>
+  <data name="Tuning_Baritone" xml:space="preserve"><value>Baritonu</value></data>
+  <data name="Tuning_Tenor" xml:space="preserve"><value>Tenur</value></data>
+  <data name="Tuning_Custom" xml:space="preserve"><value>Irfinar personalizzat</value></data>
+  <data name="Tuning_New" xml:space="preserve"><value>Irfinar personalizzat…</value></data>
+  <data name="Tuning_Edit" xml:space="preserve"><value>Editja</value></data>
+  <data name="Tuning_Delete" xml:space="preserve"><value>Ħassar</value></data>
+  <data name="Tuning_Save" xml:space="preserve"><value>Issejvja</value></data>
+  <data name="Tuning_Cancel" xml:space="preserve"><value>Ikkanċella</value></data>
+  <data name="Tuning_EditorHint" xml:space="preserve"><value>Agħfas ▲ ▼ biex togħla jew tbaxxi korda b’nofs ton; agħfas nota biex tismagħha.</value></data>
+  <data name="Settings_Capo" xml:space="preserve"><value>Capo</value></data>
+  <data name="Capo_None" xml:space="preserve"><value>Bla capo</value></data>
+  <data name="Capo_Fret" xml:space="preserve"><value>Fret {0}</value></data>
+  <data name="Capo_Badge" xml:space="preserve"><value>Capo {0}</value></data>
+  <data name="Capo_Shape" xml:space="preserve"><value>Capo fuq il-fret {0}: żomm il-forma ta’ {1}</value></data>
+  <data name="Capo_ShapeShort" xml:space="preserve"><value>forma ta’ {0}</value></data>
+  <data name="Key_CapoTitle" xml:space="preserve"><value>L-eħfef pożizzjonijiet tal-capo</value></data>
+  <data name="Key_CapoUse" xml:space="preserve"><value>Uża</value></data>
+  <data name="Fretboard_Title" xml:space="preserve"><value>Fuq il-fretboard</value></data>
+  <data name="Fretboard_Intervals" xml:space="preserve"><value>Intervalli</value></data>
+  <data name="Fretboard_Notes" xml:space="preserve"><value>Noti</value></data>
+  <data name="Difficulty_Easy" xml:space="preserve"><value>Faċli</value></data>
+  <data name="Difficulty_Medium" xml:space="preserve"><value>Medju</value></data>
+  <data name="Difficulty_Hard" xml:space="preserve"><value>Diffiċli</value></data>
+  <data name="Key_CapoHint" xml:space="preserve"><value>Żomm il-forom murija – bil-capo jinstemgħu bħal {0}.</value></data>
+  <data name="Fretboard_ScaleHint" xml:space="preserve"><value>Fejn jinsabu n-noti tal-iskala {0} fuq l-għonq. 1 hija t-tonika.</value></data>
+  <data name="Fretboard_ChordHint" xml:space="preserve"><value>Fejn jinsabu n-noti tal-akkordju {0} fuq l-għonq. 1 hija l-għerq.</value></data>
+  <data name="Fretboard_ScaleOnly" xml:space="preserve"><value>Skala</value></data>
+  <data name="Fretboard_WholeNeck" xml:space="preserve"><value>L-għonq kollu</value></data>
+  <data name="Fretboard_Position" xml:space="preserve"><value>Frets {0}–{1}</value></data>
+  <data name="Fretboard_ChordInScaleHint" xml:space="preserve"><value>In-noti tal-korda {0} huma mmarkati (1 hija l-għerq tagħha); it-tikek huma n-noti l-oħra tal-iskala {1}.</value></data>
+  <data name="Nav_About" xml:space="preserve"><value>Dwar l-app</value></data>
+  <data name="About_Version" xml:space="preserve"><value>Verżjoni</value></data>
+  <data name="About_Rate" xml:space="preserve"><value>Ivvaluta l-app</value></data>
+  <data name="About_SoundCredit" xml:space="preserve"><value>Ħsejjes tal-istrumenti</value></data>
+  <data name="About_SoundFont" xml:space="preserve"><value>soundfont</value></data>
+  <data name="About_License" xml:space="preserve"><value>Liċenzja</value></data>
+  <data name="About_By" xml:space="preserve"><value>minn {0}</value></data>
+  <data name="About_PublicDomain" xml:space="preserve"><value>Dominju pubbliku</value></data>
+  <data name="About_SoundChanges" xml:space="preserve"><value>Il-kampjuni ġew adattati għal din l-app.</value></data>
+  <data name="Nav_Metronome" xml:space="preserve"><value>Metronomu</value></data>
+  <data name="Metronome_Start" xml:space="preserve"><value>Ibda</value></data>
+  <data name="Metronome_Stop" xml:space="preserve"><value>Waqqaf</value></data>
+  <data name="Metronome_Tap" xml:space="preserve"><value>Taptap it-tempo</value></data>
+  <data name="Metronome_Beats" xml:space="preserve"><value>Taħbitiet f’kull miżura</value></data>
+  <data name="Metronome_Subdivision" xml:space="preserve"><value>Suddiviżjoni</value></data>
+  <data name="Metronome_Accent" xml:space="preserve"><value>Enfasizza l-ewwel taħbita</value></data>
+  <data name="Metronome_Hint" xml:space="preserve"><value>Taptap “Taptap it-tempo” fil-ħin mal-mużika biex issib it-tempo tagħha. Is-sekwenzi tal-kordi jindaqqu b’dan it-tempo, korda waħda f’kull miżura.</value></data>
+  <data name="Prog_Tempo" xml:space="preserve"><value>Tempo</value></data>
+</root>

@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="Nav_ShowChord" xml:space="preserve"><value>แสดงแผนภาพคอร์ด</value></data>
+  <data name="Nav_FindChord" xml:space="preserve"><value>ค้นหาชื่อคอร์ด</value></data>
+  <data name="Nav_FindShape" xml:space="preserve"><value>ค้นหาคอร์ดจากท่าจับ</value></data>
+  <data name="Nav_Favorites" xml:space="preserve"><value>คอร์ดโปรด</value></data>
+  <data name="Nav_Circle" xml:space="preserve"><value>วงกลมคู่ห้า</value></data>
+  <data name="Nav_Settings" xml:space="preserve"><value>การตั้งค่า</value></data>
+  <data name="Nav_Toggle" xml:space="preserve"><value>แสดงเมนู</value></data>
+  <data name="Yes" xml:space="preserve"><value>ใช่</value></data>
+  <data name="No" xml:space="preserve"><value>ไม่</value></data>
+  <data name="Find" xml:space="preserve"><value>ค้นหา</value></data>
+  <data name="ChordType_Major" xml:space="preserve"><value>เมเจอร์</value></data>
+  <data name="ShowChord_Partial" xml:space="preserve"><value>อนุญาตคอร์ดที่ไม่ครบ</value></data>
+  <data name="Chord_Found" xml:space="preserve"><value>คอร์ดที่พบ:</value></data>
+  <data name="Chord_OtherSymbols" xml:space="preserve"><value>สัญลักษณ์อื่น:</value></data>
+  <data name="Chord_Intervals" xml:space="preserve"><value>ขั้นคู่ของคอร์ด:</value></data>
+  <data name="Chord_Notes" xml:space="preserve"><value>โน้ตในคอร์ด:</value></data>
+  <data name="Chord_Diagrams" xml:space="preserve"><value>แผนภาพคอร์ด:</value></data>
+  <data name="Chord_Results_Many" xml:space="preserve"><value>{0} ผลลัพธ์</value></data>
+  <data name="Chord_Invalid" xml:space="preserve"><value>{0} ไม่ใช่คอร์ดที่ถูกต้อง</value></data>
+  <data name="Tip" xml:space="preserve"><value>เคล็ดลับ:</value></data>
+  <data name="Tip_Play" xml:space="preserve"><value>แตะแผนภาพเพื่อฟังเสียง</value></data>
+  <data name="Tip_Strum" xml:space="preserve"><value>ปัดไปด้านข้างบนแผนภาพเพื่อดีดทีละสาย</value></data>
+  <data name="Tip_StrumPick" xml:space="preserve"><value>ลากปิ๊กใต้แผนภาพเพื่อดีดทีละสาย</value></data>
+  <data name="Tip_Favorite" xml:space="preserve"><value>แตะค้างที่แผนภาพเพื่อเพิ่มในรายการโปรด</value></data>
+  <data name="Favorites_Empty" xml:space="preserve"><value>คุณยังไม่มีท่าจับคอร์ดโปรด</value></data>
+  <data name="Favorites_Hint" xml:space="preserve"><value>แตะค้างที่ท่าจับเพื่อเพิ่มในรายการโปรด</value></data>
+  <data name="Find_Strict" xml:space="preserve"><value>โหมดเข้มงวด</value></data>
+  <data name="Find_Loose" xml:space="preserve"><value>โหมดยืดหยุ่น</value></data>
+  <data name="Find_NoChord" xml:space="preserve"><value>ไม่พบคอร์ด</value></data>
+  <data name="Settings_SystemLanguage" xml:space="preserve"><value>{0} (ระบบ)</value></data>
+  <data name="Notation_English" xml:space="preserve"><value>แบบอังกฤษ</value></data>
+  <data name="Notation_German" xml:space="preserve"><value>แบบเยอรมัน</value></data>
+  <data name="Notation_Latin" xml:space="preserve"><value>แบบละติน</value></data>
+  <data name="Settings_BasicChords" xml:space="preserve"><value>พื้นฐาน</value></data>
+  <data name="Settings_AllChords" xml:space="preserve"><value>ทั้งหมด</value></data>
+  <data name="Settings_MaxFret" xml:space="preserve"><value>เฟร็ตสูงสุด:</value></data>
+  <data name="Settings_AllowBarre" xml:space="preserve"><value>อนุญาตคอร์ดทาบ</value></data>
+  <data name="Settings_AllowSpecial" xml:space="preserve"><value>อนุญาตท่าจับที่บอดสายเสียงสูง</value></data>
+  <data name="Settings_EasyOnly" xml:space="preserve"><value>เฉพาะท่าจับคอร์ดที่ง่าย</value></data>
+  <data name="Settings_Vertical" xml:space="preserve"><value>แนวตั้ง</value></data>
+  <data name="Settings_Horizontal" xml:space="preserve"><value>แนวนอน</value></data>
+  <data name="Settings_LeftHanded" xml:space="preserve"><value>ถนัดซ้าย (แผนภาพกลับด้าน)</value></data>
+  <data name="Settings_ShowTips" xml:space="preserve"><value>แสดงเคล็ดลับ</value></data>
+  <data name="Settings_Theme" xml:space="preserve"><value>ธีม</value></data>
+  <data name="Theme_System" xml:space="preserve"><value>ตามอุปกรณ์</value></data>
+  <data name="Theme_Light" xml:space="preserve"><value>สว่าง</value></data>
+  <data name="Theme_Dark" xml:space="preserve"><value>มืด</value></data>
+  <data name="Settings_General" xml:space="preserve"><value>ทั่วไป</value></data>
+  <data name="Settings_Language" xml:space="preserve"><value>ภาษา</value></data>
+  <data name="Settings_Instrument" xml:space="preserve"><value>เครื่องดนตรี</value></data>
+  <data name="Settings_Tuning" xml:space="preserve"><value>การตั้งสาย</value></data>
+  <data name="Settings_Notation" xml:space="preserve"><value>ระบบเรียกโน้ต</value></data>
+  <data name="Settings_Diagrams" xml:space="preserve"><value>แผนภาพ</value></data>
+  <data name="Settings_Chords" xml:space="preserve"><value>คอร์ด</value></data>
+  <data name="Instrument_Guitar" xml:space="preserve"><value>กีตาร์</value></data>
+  <data name="Instrument_Ukulele" xml:space="preserve"><value>อูคูเลเล่</value></data>
+  <data name="Instrument_Mandolin" xml:space="preserve"><value>แมนโดลิน</value></data>
+  <data name="Instrument_BassGuitar" xml:space="preserve"><value>กีตาร์เบส</value></data>
+  <data name="Instrument_Banjo" xml:space="preserve"><value>แบนโจ</value></data>
+  <data name="Shape_Hint" xml:space="preserve"><value>แตะเฟร็ตที่นิ้วของคุณกดสายไว้ แตะเหนือนัตเพื่อสลับสายระหว่างสายเปล่า (○) และบอดเสียง (×)</value></data>
+  <data name="Shape_Alternatives" xml:space="preserve"><value>หรือเรียกว่า:</value></data>
+  <data name="Shape_TooFew" xml:space="preserve"><value>เล่นโน้ตที่ต่างกันอย่างน้อยสองตัว</value></data>
+  <data name="Shape_Play" xml:space="preserve"><value>เล่น</value></data>
+  <data name="Shape_Clear" xml:space="preserve"><value>ล้าง</value></data>
+  <data name="Nav_Key" xml:space="preserve"><value>คอร์ดในคีย์</value></data>
+  <data name="Nav_Progressions" xml:space="preserve"><value>ทางเดินคอร์ด</value></data>
+  <data name="Scale_Major" xml:space="preserve"><value>เมเจอร์</value></data>
+  <data name="Scale_Minor" xml:space="preserve"><value>ไมเนอร์ธรรมชาติ</value></data>
+  <data name="Scale_HarmonicMinor" xml:space="preserve"><value>ฮาร์มอนิกไมเนอร์</value></data>
+  <data name="Scale_MelodicMinor" xml:space="preserve"><value>เมโลดิกไมเนอร์</value></data>
+  <data name="Scale_Dorian" xml:space="preserve"><value>โดเรียน</value></data>
+  <data name="Scale_Phrygian" xml:space="preserve"><value>ฟรีเจียน</value></data>
+  <data name="Scale_PhrygianDominant" xml:space="preserve"><value>ฟรีเจียนโดมิแนนต์</value></data>
+  <data name="Scale_HungarianMinor" xml:space="preserve"><value>ฮังกาเรียนไมเนอร์</value></data>
+  <data name="Scale_DoubleHarmonicMajor" xml:space="preserve"><value>ดับเบิลฮาร์มอนิก (ยิปซีเมเจอร์)</value></data>
+  <data name="Scale_LydianDominant" xml:space="preserve"><value>ลิเดียนโดมิแนนต์</value></data>
+  <data name="Scale_UkrainianDorian" xml:space="preserve"><value>ยูเครเนียนโดเรียน</value></data>
+  <data name="Scale_Altered" xml:space="preserve"><value>อัลเทอร์ด</value></data>
+  <data name="Scale_MajorPentatonic" xml:space="preserve"><value>เมเจอร์เพนทาโทนิก</value></data>
+  <data name="Scale_MinorPentatonic" xml:space="preserve"><value>ไมเนอร์เพนทาโทนิก</value></data>
+  <data name="Scale_Blues" xml:space="preserve"><value>บลูส์</value></data>
+  <data name="Scale_Hirajoshi" xml:space="preserve"><value>Hirajoshi</value></data>
+  <data name="Scale_In" xml:space="preserve"><value>In</value></data>
+  <data name="Scale_Yo" xml:space="preserve"><value>Yo</value></data>
+  <data name="Scale_Kumoi" xml:space="preserve"><value>Kumoi</value></data>
+  <data name="Scale_Egyptian" xml:space="preserve"><value>อียิปต์</value></data>
+  <data name="Scale_Lydian" xml:space="preserve"><value>ลิเดียน</value></data>
+  <data name="Scale_Mixolydian" xml:space="preserve"><value>มิกโซลิเดียน</value></data>
+  <data name="Key_TabChords" xml:space="preserve"><value>คอร์ดของคีย์</value></data>
+  <data name="Key_TabDetect" xml:space="preserve"><value>ค้นหาคีย์</value></data>
+  <data name="Key_ScaleNotes" xml:space="preserve"><value>โน้ตในสเกล:</value></data>
+  <data name="Key_Sevenths" xml:space="preserve"><value>คอร์ดเซเวนท์</value></data>
+  <data name="Pick_Root" xml:space="preserve"><value>โน้ตราก</value></data>
+  <data name="Pick_ChordType" xml:space="preserve"><value>ชนิดคอร์ด</value></data>
+  <data name="Pick_Bass" xml:space="preserve"><value>โน้ตเบส</value></data>
+  <data name="Bass_Any" xml:space="preserve"><value>ใดก็ได้</value></data>
+  <data name="Bass_Root" xml:space="preserve"><value>เหมือนโน้ตราก</value></data>
+  <data name="Layout_Inversion" xml:space="preserve"><value>การพลิกกลับ – โน้ตต่ำสุดไม่ใช่โน้ตราก</value></data>
+  <data name="Pick_Tonic" xml:space="preserve"><value>โทนิก</value></data>
+  <data name="Pick_Scale" xml:space="preserve"><value>บันไดเสียง</value></data>
+  <data name="Key_Add" xml:space="preserve"><value>เพิ่มคอร์ด</value></data>
+  <data name="Key_DetectHint" xml:space="preserve"><value>เพิ่มคอร์ดของเพลง แล้วแอปจะค้นหาคีย์ที่เข้ากัน แตะคีย์เพื่อดูคอร์ดของคีย์นั้น</value></data>
+  <data name="Key_NoChords" xml:space="preserve"><value>เพิ่มคอร์ดของเพลง</value></data>
+  <data name="Key_NoKey" xml:space="preserve"><value>ไม่มีคีย์ที่ตรงกัน</value></data>
+  <data name="Key_Progressions" xml:space="preserve"><value>ทางเดินคอร์ดในคีย์นี้</value></data>
+  <data name="Style_Pop" xml:space="preserve"><value>ป๊อป</value></data>
+  <data name="Style_Rock" xml:space="preserve"><value>ร็อก</value></data>
+  <data name="Style_Jazz" xml:space="preserve"><value>แจ๊ส</value></data>
+  <data name="Style_Blues" xml:space="preserve"><value>บลูส์</value></data>
+  <data name="Style_Classical" xml:space="preserve"><value>คลาสสิก</value></data>
+  <data name="Style_Flamenco" xml:space="preserve"><value>ฟลาเมงโก</value></data>
+  <data name="Style_Klezmer" xml:space="preserve"><value>เคลซเมอร์</value></data>
+  <data name="Prog_Generate" xml:space="preserve"><value>สร้างทางเดินคอร์ด</value></data>
+  <data name="Prog_Hint" xml:space="preserve"><value>แตะทางเดินคอร์ดเพื่อดูไดอะแกรม ‹ › เปลี่ยนท่าจับ ▶ เล่น แตะอีกครั้งเพื่อหยุด</value></data>
+  <data name="Prog_Smooth" xml:space="preserve"><value>เปลี่ยนคอร์ดอย่างราบรื่น</value></data>
+  <data name="Nav_Tuner" xml:space="preserve"><value>จูนเนอร์</value></data>
+  <data name="Tuner_Hint" xml:space="preserve"><value>แตะสายเพื่อฟังเสียงและตั้งเฉพาะสายนั้น อัตโนมัติจะเลือกสายที่ใกล้ที่สุด</value></data>
+  <data name="Tuner_Listening" xml:space="preserve"><value>ดีดสาย…</value></data>
+  <data name="Tuner_ListeningNote" xml:space="preserve"><value>เล่นโน้ตหนึ่งตัว…</value></data>
+  <data name="Tuner_Chromatic" xml:space="preserve"><value>โครมาติก</value></data>
+  <data name="Tuner_InTune" xml:space="preserve"><value>ตรงเสียงแล้ว</value></data>
+  <data name="Tuner_TuneUp" xml:space="preserve"><value>ขันขึ้น</value></data>
+  <data name="Tuner_TuneDown" xml:space="preserve"><value>คลายลง</value></data>
+  <data name="Tuner_Auto" xml:space="preserve"><value>อัตโนมัติ</value></data>
+  <data name="Tuner_MicDenied" xml:space="preserve"><value>จูนเนอร์ต้องเข้าถึงไมโครโฟน</value></data>
+  <data name="Tuner_OpenSettings" xml:space="preserve"><value>เปิดการตั้งค่า</value></data>
+  <data name="Tuner_MicError" xml:space="preserve"><value>ไม่สามารถเปิดไมโครโฟนได้</value></data>
+  <data name="Tuner_MicUsage" xml:space="preserve"><value>เครื่องตั้งสายจะฟังเครื่องดนตรีของคุณเพื่อแสดงว่าเสียงตรงหรือไม่</value><comment>iOS microphone permission prompt (NSMicrophoneUsageDescription), built into the app bundle by PlatformLocales.targets</comment></data>
+  <data name="Tab_Chords" xml:space="preserve"><value>คอร์ด</value></data>
+  <data name="Tab_Favorites" xml:space="preserve"><value>รายการโปรด</value></data>
+  <data name="Tab_Theory" xml:space="preserve"><value>ทฤษฎี</value></data>
+  <data name="Tab_More" xml:space="preserve"><value>เพิ่มเติม</value></data>
+  <data name="Group_Tools" xml:space="preserve"><value>เครื่องมือ</value></data>
+  <data name="Related_Title" xml:space="preserve"><value>ดูเพิ่มเติม</value></data>
+  <data name="Tuning_Standard" xml:space="preserve"><value>มาตรฐาน</value></data>
+  <data name="Tuning_HalfStepDown" xml:space="preserve"><value>ลดครึ่งเสียง</value></data>
+  <data name="Tuning_WholeStepDown" xml:space="preserve"><value>ลดหนึ่งเสียงเต็ม</value></data>
+  <data name="Tuning_LowG" xml:space="preserve"><value>G ต่ำ</value></data>
+  <data name="Tuning_UkuleleD" xml:space="preserve"><value>ตั้งสาย D</value></data>
+  <data name="Tuning_Baritone" xml:space="preserve"><value>บาริโทน</value></data>
+  <data name="Tuning_Tenor" xml:space="preserve"><value>เทเนอร์</value></data>
+  <data name="Tuning_Custom" xml:space="preserve"><value>การตั้งสายแบบกำหนดเอง</value></data>
+  <data name="Tuning_New" xml:space="preserve"><value>การตั้งสายแบบกำหนดเอง…</value></data>
+  <data name="Tuning_Edit" xml:space="preserve"><value>แก้ไข</value></data>
+  <data name="Tuning_Delete" xml:space="preserve"><value>ลบ</value></data>
+  <data name="Tuning_Save" xml:space="preserve"><value>บันทึก</value></data>
+  <data name="Tuning_Cancel" xml:space="preserve"><value>ยกเลิก</value></data>
+  <data name="Tuning_EditorHint" xml:space="preserve"><value>แตะ ▲ ▼ เพื่อปรับสายขึ้นหรือลงครึ่งเสียง แตะโน้ตเพื่อฟังเสียง</value></data>
+  <data name="Settings_Capo" xml:space="preserve"><value>คาโป้</value></data>
+  <data name="Capo_None" xml:space="preserve"><value>ไม่ใช้คาโป้</value></data>
+  <data name="Capo_Fret" xml:space="preserve"><value>เฟร็ต {0}</value></data>
+  <data name="Capo_Badge" xml:space="preserve"><value>คาโป้ {0}</value></data>
+  <data name="Capo_Shape" xml:space="preserve"><value>คาโป้ที่เฟร็ต {0}: จับฟอร์ม {1}</value></data>
+  <data name="Capo_ShapeShort" xml:space="preserve"><value>ฟอร์ม {0}</value></data>
+  <data name="Key_CapoTitle" xml:space="preserve"><value>ตำแหน่งคาโป้ที่ง่ายที่สุด</value></data>
+  <data name="Key_CapoUse" xml:space="preserve"><value>ใช้</value></data>
+  <data name="Fretboard_Title" xml:space="preserve"><value>บนคอกีตาร์</value></data>
+  <data name="Fretboard_Intervals" xml:space="preserve"><value>ขั้นคู่</value></data>
+  <data name="Fretboard_Notes" xml:space="preserve"><value>โน้ต</value></data>
+  <data name="Difficulty_Easy" xml:space="preserve"><value>ง่าย</value></data>
+  <data name="Difficulty_Medium" xml:space="preserve"><value>ปานกลาง</value></data>
+  <data name="Difficulty_Hard" xml:space="preserve"><value>ยาก</value></data>
+  <data name="Key_CapoHint" xml:space="preserve"><value>จับคอร์ดตามรูปที่แสดง – เมื่อใส่คาโป้จะเป็นเสียง {0}</value></data>
+  <data name="Fretboard_ScaleHint" xml:space="preserve"><value>ตำแหน่งโน้ตของสเกล {0} บนคอกีตาร์ 1 คือโทนิก</value></data>
+  <data name="Fretboard_ChordHint" xml:space="preserve"><value>ตำแหน่งโน้ตของคอร์ด {0} บนคอกีตาร์ 1 คือรูทโน้ต</value></data>
+  <data name="Fretboard_ScaleOnly" xml:space="preserve"><value>สเกล</value></data>
+  <data name="Fretboard_WholeNeck" xml:space="preserve"><value>ทั้งคอ</value></data>
+  <data name="Fretboard_Position" xml:space="preserve"><value>เฟรต {0}–{1}</value></data>
+  <data name="Fretboard_ChordInScaleHint" xml:space="preserve"><value>โน้ตของคอร์ด {0} มีป้ายกำกับ (1 คือโน้ตราก) ส่วนจุดคือโน้ตอื่นในสเกล {1}</value></data>
+  <data name="Nav_About" xml:space="preserve"><value>เกี่ยวกับแอป</value></data>
+  <data name="About_Version" xml:space="preserve"><value>เวอร์ชัน</value></data>
+  <data name="About_Rate" xml:space="preserve"><value>ให้คะแนนแอป</value></data>
+  <data name="About_SoundCredit" xml:space="preserve"><value>เสียงเครื่องดนตรี</value></data>
+  <data name="About_SoundFont" xml:space="preserve"><value>ซาวด์ฟอนต์</value></data>
+  <data name="About_License" xml:space="preserve"><value>สัญญาอนุญาต</value></data>
+  <data name="About_By" xml:space="preserve"><value>โดย {0}</value></data>
+  <data name="About_PublicDomain" xml:space="preserve"><value>สาธารณสมบัติ</value></data>
+  <data name="About_SoundChanges" xml:space="preserve"><value>ตัวอย่างเสียงได้รับการปรับให้เหมาะกับแอปนี้</value></data>
+  <data name="Nav_Metronome" xml:space="preserve"><value>เมโทรนอม</value></data>
+  <data name="Metronome_Start" xml:space="preserve"><value>เริ่ม</value></data>
+  <data name="Metronome_Stop" xml:space="preserve"><value>หยุด</value></data>
+  <data name="Metronome_Tap" xml:space="preserve"><value>แตะจังหวะ</value></data>
+  <data name="Metronome_Beats" xml:space="preserve"><value>จังหวะต่อห้อง</value></data>
+  <data name="Metronome_Subdivision" xml:space="preserve"><value>การแบ่งจังหวะ</value></data>
+  <data name="Metronome_Accent" xml:space="preserve"><value>เน้นจังหวะแรก</value></data>
+  <data name="Metronome_Hint" xml:space="preserve"><value>แตะ “แตะจังหวะ” ตามจังหวะเพลงเพื่อหาความเร็วของเพลง ทางเดินคอร์ดจะเล่นที่ความเร็วนี้ ห้องละหนึ่งคอร์ด</value></data>
+  <data name="Prog_Tempo" xml:space="preserve"><value>ความเร็ว</value></data>
+</root>

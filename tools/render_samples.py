@@ -11,7 +11,7 @@ Needs fluidsynth, ffmpeg and afconvert (macOS). Writes one note every STEP semit
 instrument's range, so the app never shifts a note by more than a semitone:
   Android: Platforms/Android/Resources/raw/<instrument>_<pitch>.ogg (Vorbis)
   iOS:     Platforms/iOS/Resources/<instrument>_<pitch>.m4a (AAC, Apple's encoder keeps the start sample-exact)
-The ranges must match SampleSet in Chords.App/Services/SampleSet.cs.
+The ranges must match SampleSet in Chords/Services/SampleSet.cs.
 """
 import os, struct, subprocess, sys, tempfile, wave
 import numpy as np
@@ -32,7 +32,7 @@ INSTRUMENTS = {
 ATTACK = 0.1
 # Loudest peak of each instrument's set, as loud as the original guitar recordings.
 PEAK = 0.9
-ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'Chords.App', 'Platforms')
+ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'Chords', 'Platforms')
 
 
 def midi(bank, program, pitch, seconds):

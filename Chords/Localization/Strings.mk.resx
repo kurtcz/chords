@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="Nav_ShowChord" xml:space="preserve"><value>Прикажи дијаграм на акорд</value></data>
+  <data name="Nav_FindChord" xml:space="preserve"><value>Најди име на акорд</value></data>
+  <data name="Nav_FindShape" xml:space="preserve"><value>Најди акорд според зафат</value></data>
+  <data name="Nav_Favorites" xml:space="preserve"><value>Омилени акорди</value></data>
+  <data name="Nav_Circle" xml:space="preserve"><value>Квинтен круг</value></data>
+  <data name="Nav_Settings" xml:space="preserve"><value>Поставки</value></data>
+  <data name="Nav_Toggle" xml:space="preserve"><value>Прикажи мени</value></data>
+  <data name="Yes" xml:space="preserve"><value>Да</value></data>
+  <data name="No" xml:space="preserve"><value>Не</value></data>
+  <data name="Find" xml:space="preserve"><value>Барај</value></data>
+  <data name="ChordType_Major" xml:space="preserve"><value>Дур</value></data>
+  <data name="ShowChord_Partial" xml:space="preserve"><value>Дозволи нецелосни акорди</value></data>
+  <data name="Chord_Found" xml:space="preserve"><value>Пронајдени акорди:</value></data>
+  <data name="Chord_OtherSymbols" xml:space="preserve"><value>Други ознаки:</value></data>
+  <data name="Chord_Intervals" xml:space="preserve"><value>Интервали на акордот:</value></data>
+  <data name="Chord_Notes" xml:space="preserve"><value>Тонови на акордот:</value></data>
+  <data name="Chord_Diagrams" xml:space="preserve"><value>Дијаграми на акордот:</value></data>
+  <data name="Chord_Results_One" xml:space="preserve"><value>{0} резултат</value></data>
+  <data name="Chord_Results_Many" xml:space="preserve"><value>{0} резултати</value></data>
+  <data name="Chord_Invalid" xml:space="preserve"><value>{0} не е валиден акорд</value></data>
+  <data name="Tip" xml:space="preserve"><value>Совет:</value></data>
+  <data name="Tip_Play" xml:space="preserve"><value>Допрете дијаграм за да го слушнете.</value></data>
+  <data name="Tip_Strum" xml:space="preserve"><value>Повлечете странично преку дијаграмот за да го одсвирите жица по жица.</value></data>
+  <data name="Tip_StrumPick" xml:space="preserve"><value>Повлечете го трзалото под дијаграмот за да го одсвирите жица по жица.</value></data>
+  <data name="Tip_Favorite" xml:space="preserve"><value>Задржете дијаграм за да го додадете во омилени.</value></data>
+  <data name="Favorites_Empty" xml:space="preserve"><value>Немате омилени зафати.</value></data>
+  <data name="Favorites_Hint" xml:space="preserve"><value>Задржете зафат за да го додадете во омилени.</value></data>
+  <data name="Find_Strict" xml:space="preserve"><value>Строг режим</value></data>
+  <data name="Find_Loose" xml:space="preserve"><value>Слободен режим</value></data>
+  <data name="Find_NoChord" xml:space="preserve"><value>Не е пронајден акорд</value></data>
+  <data name="Settings_SystemLanguage" xml:space="preserve"><value>{0} (систем)</value></data>
+  <data name="Notation_English" xml:space="preserve"><value>Англиска</value></data>
+  <data name="Notation_German" xml:space="preserve"><value>Германска</value></data>
+  <data name="Notation_Latin" xml:space="preserve"><value>Латинска</value></data>
+  <data name="Settings_BasicChords" xml:space="preserve"><value>Основни</value></data>
+  <data name="Settings_AllChords" xml:space="preserve"><value>Сите</value></data>
+  <data name="Settings_MaxFret" xml:space="preserve"><value>Највисок праг:</value></data>
+  <data name="Settings_AllowBarre" xml:space="preserve"><value>Дозволи баре</value></data>
+  <data name="Settings_AllowSpecial" xml:space="preserve"><value>Дозволи акорди со пригушени високи жици</value></data>
+  <data name="Settings_EasyOnly" xml:space="preserve"><value>Само лесни апликатури</value></data>
+  <data name="Settings_Vertical" xml:space="preserve"><value>Вертикални</value></data>
+  <data name="Settings_Horizontal" xml:space="preserve"><value>Хоризонтални</value></data>
+  <data name="Settings_LeftHanded" xml:space="preserve"><value>За левораки (огледални дијаграми)</value></data>
+  <data name="Settings_ShowTips" xml:space="preserve"><value>Прикажувај совети</value></data>
+  <data name="Settings_Theme" xml:space="preserve"><value>Тема</value></data>
+  <data name="Theme_System" xml:space="preserve"><value>Како уредот</value></data>
+  <data name="Theme_Light" xml:space="preserve"><value>Светла</value></data>
+  <data name="Theme_Dark" xml:space="preserve"><value>Темна</value></data>
+  <data name="Settings_General" xml:space="preserve"><value>Општо</value></data>
+  <data name="Settings_Language" xml:space="preserve"><value>Јазик</value></data>
+  <data name="Settings_Instrument" xml:space="preserve"><value>Инструмент</value></data>
+  <data name="Settings_Tuning" xml:space="preserve"><value>Штим</value></data>
+  <data name="Settings_Notation" xml:space="preserve"><value>Нотација</value></data>
+  <data name="Settings_Diagrams" xml:space="preserve"><value>Дијаграми</value></data>
+  <data name="Settings_Chords" xml:space="preserve"><value>Акорди</value></data>
+  <data name="Instrument_Guitar" xml:space="preserve"><value>Гитара</value></data>
+  <data name="Instrument_Ukulele" xml:space="preserve"><value>Укулеле</value></data>
+  <data name="Instrument_Mandolin" xml:space="preserve"><value>Мандолина</value></data>
+  <data name="Instrument_BassGuitar" xml:space="preserve"><value>Бас-гитара</value></data>
+  <data name="Instrument_Banjo" xml:space="preserve"><value>Бенџо</value></data>
+  <data name="Shape_Hint" xml:space="preserve"><value>Допрете ги прагчињата каде прстите ги притискаат жиците. Допрете над прагот за да префрлите жица меѓу отворена (○) и пригушена (×).</value></data>
+  <data name="Shape_Alternatives" xml:space="preserve"><value>Познат и како:</value></data>
+  <data name="Shape_TooFew" xml:space="preserve"><value>Свирете најмалку два различни тона</value></data>
+  <data name="Shape_Play" xml:space="preserve"><value>Свири</value></data>
+  <data name="Shape_Clear" xml:space="preserve"><value>Исчисти</value></data>
+  <data name="Nav_Key" xml:space="preserve"><value>Акорди во тоналитет</value></data>
+  <data name="Nav_Progressions" xml:space="preserve"><value>Акордски прогресии</value></data>
+  <data name="Scale_Major" xml:space="preserve"><value>Дурска</value></data>
+  <data name="Scale_Minor" xml:space="preserve"><value>Природна молска</value></data>
+  <data name="Scale_HarmonicMinor" xml:space="preserve"><value>Хармониска молска</value></data>
+  <data name="Scale_MelodicMinor" xml:space="preserve"><value>Мелодиска молска</value></data>
+  <data name="Scale_Dorian" xml:space="preserve"><value>Дорска</value></data>
+  <data name="Scale_Phrygian" xml:space="preserve"><value>Фригиска</value></data>
+  <data name="Scale_PhrygianDominant" xml:space="preserve"><value>Фригиска доминантна</value></data>
+  <data name="Scale_HungarianMinor" xml:space="preserve"><value>Унгарски мол</value></data>
+  <data name="Scale_DoubleHarmonicMajor" xml:space="preserve"><value>Двојно хармониска (цигански дур)</value></data>
+  <data name="Scale_LydianDominant" xml:space="preserve"><value>Лидиска доминантна</value></data>
+  <data name="Scale_UkrainianDorian" xml:space="preserve"><value>Украинска дорска</value></data>
+  <data name="Scale_Altered" xml:space="preserve"><value>Алтерирана</value></data>
+  <data name="Scale_MajorPentatonic" xml:space="preserve"><value>Дурска пентатоника</value></data>
+  <data name="Scale_MinorPentatonic" xml:space="preserve"><value>Молска пентатоника</value></data>
+  <data name="Scale_Blues" xml:space="preserve"><value>Блуз</value></data>
+  <data name="Scale_Hirajoshi" xml:space="preserve"><value>Хирадзёси</value></data>
+  <data name="Scale_In" xml:space="preserve"><value>Ин</value></data>
+  <data name="Scale_Yo" xml:space="preserve"><value>Ё</value></data>
+  <data name="Scale_Kumoi" xml:space="preserve"><value>Кумои</value></data>
+  <data name="Scale_Egyptian" xml:space="preserve"><value>Египетска</value></data>
+  <data name="Scale_Lydian" xml:space="preserve"><value>Лидиска</value></data>
+  <data name="Scale_Mixolydian" xml:space="preserve"><value>Миксолидиска</value></data>
+  <data name="Key_TabChords" xml:space="preserve"><value>Акорди на тоналитетот</value></data>
+  <data name="Key_TabDetect" xml:space="preserve"><value>Најди тоналитет</value></data>
+  <data name="Key_ScaleNotes" xml:space="preserve"><value>Тонови на скалата:</value></data>
+  <data name="Key_Sevenths" xml:space="preserve"><value>Септакорди</value></data>
+  <data name="Pick_Root" xml:space="preserve"><value>Основен тон</value></data>
+  <data name="Pick_ChordType" xml:space="preserve"><value>Вид акорд</value></data>
+  <data name="Pick_Bass" xml:space="preserve"><value>Басов тон</value></data>
+  <data name="Bass_Any" xml:space="preserve"><value>Било кој</value></data>
+  <data name="Bass_Root" xml:space="preserve"><value>Ист како основниот</value></data>
+  <data name="Layout_Inversion" xml:space="preserve"><value>Обрат – најнискиот тон не е основниот</value></data>
+  <data name="Pick_Tonic" xml:space="preserve"><value>Тоника</value></data>
+  <data name="Pick_Scale" xml:space="preserve"><value>Скала</value></data>
+  <data name="Key_Add" xml:space="preserve"><value>Додај акорд</value></data>
+  <data name="Key_DetectHint" xml:space="preserve"><value>Додајте ги акордите на песна и апликацијата ќе ги најде соодветните тоналитети. Допрете тоналитет за да ги видите неговите акорди.</value></data>
+  <data name="Key_NoChords" xml:space="preserve"><value>Додајте ги акордите на песна</value></data>
+  <data name="Key_NoKey" xml:space="preserve"><value>Нема соодветен тоналитет</value></data>
+  <data name="Key_Progressions" xml:space="preserve"><value>Прогресии во овој тоналитет</value></data>
+  <data name="Style_Pop" xml:space="preserve"><value>Поп</value></data>
+  <data name="Style_Rock" xml:space="preserve"><value>Рок</value></data>
+  <data name="Style_Jazz" xml:space="preserve"><value>Џез</value></data>
+  <data name="Style_Blues" xml:space="preserve"><value>Блуз</value></data>
+  <data name="Style_Classical" xml:space="preserve"><value>Класика</value></data>
+  <data name="Style_Flamenco" xml:space="preserve"><value>Фламенко</value></data>
+  <data name="Style_Klezmer" xml:space="preserve"><value>Клезмер</value></data>
+  <data name="Prog_Generate" xml:space="preserve"><value>Генерирај прогресија</value></data>
+  <data name="Prog_Hint" xml:space="preserve"><value>Допрете прогресија за да ги видите дијаграмите; ‹ › го менува зафатот. ▶ ја пушта, повторен допир ја запира.</value></data>
+  <data name="Prog_Smooth" xml:space="preserve"><value>Мазни премини</value></data>
+  <data name="Nav_Tuner" xml:space="preserve"><value>Штимер</value></data>
+  <data name="Tuner_Hint" xml:space="preserve"><value>Допрете жица за да ја слушнете и да ја штимате само неа; Авто ја избира најблиската жица.</value></data>
+  <data name="Tuner_Listening" xml:space="preserve"><value>Свирете жица…</value></data>
+  <data name="Tuner_ListeningNote" xml:space="preserve"><value>Отсвирете тон…</value></data>
+  <data name="Tuner_Chromatic" xml:space="preserve"><value>Хроматски</value></data>
+  <data name="Tuner_InTune" xml:space="preserve"><value>Наштимано</value></data>
+  <data name="Tuner_TuneUp" xml:space="preserve"><value>Затегнете</value></data>
+  <data name="Tuner_TuneDown" xml:space="preserve"><value>Олабавете</value></data>
+  <data name="Tuner_Auto" xml:space="preserve"><value>Авто</value></data>
+  <data name="Tuner_MicDenied" xml:space="preserve"><value>На штимерот му треба пристап до микрофонот.</value></data>
+  <data name="Tuner_OpenSettings" xml:space="preserve"><value>Отвори поставки</value></data>
+  <data name="Tuner_MicError" xml:space="preserve"><value>Микрофонот не може да се вклучи.</value></data>
+  <data name="Tuner_MicUsage" xml:space="preserve"><value>Штимерот го слуша вашиот инструмент за да покаже дали е наштимуван.</value><comment>iOS microphone permission prompt (NSMicrophoneUsageDescription), built into the app bundle by PlatformLocales.targets</comment></data>
+  <data name="Tab_Chords" xml:space="preserve"><value>Акорди</value></data>
+  <data name="Tab_Favorites" xml:space="preserve"><value>Омилени</value></data>
+  <data name="Tab_Theory" xml:space="preserve"><value>Теорија</value></data>
+  <data name="Tab_More" xml:space="preserve"><value>Повеќе</value></data>
+  <data name="Group_Tools" xml:space="preserve"><value>Алатки</value></data>
+  <data name="Related_Title" xml:space="preserve"><value>Види исто така</value></data>
+  <data name="Tuning_Standard" xml:space="preserve"><value>Стандарден</value></data>
+  <data name="Tuning_HalfStepDown" xml:space="preserve"><value>Половина тон пониско</value></data>
+  <data name="Tuning_WholeStepDown" xml:space="preserve"><value>Цел тон пониско</value></data>
+  <data name="Tuning_LowG" xml:space="preserve"><value>Ниско сол</value></data>
+  <data name="Tuning_UkuleleD" xml:space="preserve"><value>Штим ре</value></data>
+  <data name="Tuning_Baritone" xml:space="preserve"><value>Баритон</value></data>
+  <data name="Tuning_Tenor" xml:space="preserve"><value>Тенор</value></data>
+  <data name="Tuning_Custom" xml:space="preserve"><value>Сопствен штим</value></data>
+  <data name="Tuning_New" xml:space="preserve"><value>Сопствен штим…</value></data>
+  <data name="Tuning_Edit" xml:space="preserve"><value>Уреди</value></data>
+  <data name="Tuning_Delete" xml:space="preserve"><value>Избриши</value></data>
+  <data name="Tuning_Save" xml:space="preserve"><value>Зачувај</value></data>
+  <data name="Tuning_Cancel" xml:space="preserve"><value>Откажи</value></data>
+  <data name="Tuning_EditorHint" xml:space="preserve"><value>Допрете ▲ ▼ за да ја качите или спуштите жицата за половина тон; допрете тон за да го слушнете.</value></data>
+  <data name="Settings_Capo" xml:space="preserve"><value>Каподастер</value></data>
+  <data name="Capo_None" xml:space="preserve"><value>Без каподастер</value></data>
+  <data name="Capo_Fret" xml:space="preserve"><value>{0}. праг</value></data>
+  <data name="Capo_Badge" xml:space="preserve"><value>Капо {0}</value></data>
+  <data name="Capo_Shape" xml:space="preserve"><value>Каподастер на {0}. праг: фати форма {1}</value></data>
+  <data name="Capo_ShapeShort" xml:space="preserve"><value>форма {0}</value></data>
+  <data name="Key_CapoTitle" xml:space="preserve"><value>Најлесни позиции на каподастерот</value></data>
+  <data name="Key_CapoUse" xml:space="preserve"><value>Користи</value></data>
+  <data name="Fretboard_Title" xml:space="preserve"><value>На вратот</value></data>
+  <data name="Fretboard_Intervals" xml:space="preserve"><value>Интервали</value></data>
+  <data name="Fretboard_Notes" xml:space="preserve"><value>Тонови</value></data>
+  <data name="Difficulty_Easy" xml:space="preserve"><value>Лесно</value></data>
+  <data name="Difficulty_Medium" xml:space="preserve"><value>Средно</value></data>
+  <data name="Difficulty_Hard" xml:space="preserve"><value>Тешко</value></data>
+  <data name="Key_CapoHint" xml:space="preserve"><value>Фаќај ги прикажаните форми – со каподастер звучат како {0}.</value></data>
+  <data name="Fretboard_ScaleHint" xml:space="preserve"><value>Каде на вратот се тоновите на скалата {0}. 1 е тониката.</value></data>
+  <data name="Fretboard_ChordHint" xml:space="preserve"><value>Каде на вратот се тоновите на акордот {0}. 1 е основниот тон.</value></data>
+  <data name="Fretboard_ScaleOnly" xml:space="preserve"><value>Скала</value></data>
+  <data name="Fretboard_WholeNeck" xml:space="preserve"><value>Цел врат</value></data>
+  <data name="Fretboard_Position" xml:space="preserve"><value>Прагови {0}–{1}</value></data>
+  <data name="Fretboard_ChordInScaleHint" xml:space="preserve"><value>Тоновите на акордот {0} се означени (1 е неговиот основен тон); точките се другите тонови на скалата {1}.</value></data>
+  <data name="Nav_About" xml:space="preserve"><value>За апликацијата</value></data>
+  <data name="About_Version" xml:space="preserve"><value>Верзија</value></data>
+  <data name="About_Rate" xml:space="preserve"><value>Оцени ја апликацијата</value></data>
+  <data name="About_SoundCredit" xml:space="preserve"><value>Звуци на инструментите</value></data>
+  <data name="About_SoundFont" xml:space="preserve"><value>звучна банка</value></data>
+  <data name="About_License" xml:space="preserve"><value>Лиценца</value></data>
+  <data name="About_By" xml:space="preserve"><value>автор {0}</value></data>
+  <data name="About_PublicDomain" xml:space="preserve"><value>Јавна сопственост</value></data>
+  <data name="About_SoundChanges" xml:space="preserve"><value>Примероците се прилагодени за оваа апликација.</value></data>
+  <data name="Nav_Metronome" xml:space="preserve"><value>Метроном</value></data>
+  <data name="Metronome_Start" xml:space="preserve"><value>Почни</value></data>
+  <data name="Metronome_Stop" xml:space="preserve"><value>Запри</value></data>
+  <data name="Metronome_Tap" xml:space="preserve"><value>Отчукај темпо</value></data>
+  <data name="Metronome_Beats" xml:space="preserve"><value>Удари во тактот</value></data>
+  <data name="Metronome_Subdivision" xml:space="preserve"><value>Поделба</value></data>
+  <data name="Metronome_Accent" xml:space="preserve"><value>Нагласи го првиот удар</value></data>
+  <data name="Metronome_Hint" xml:space="preserve"><value>Допирајте „Отчукај темпо“ во ритамот на музиката за да го дознаете темпото. Акордските прогресии свират во ова темпо, по еден акорд во такт.</value></data>
+  <data name="Prog_Tempo" xml:space="preserve"><value>Темпо</value></data>
+</root>

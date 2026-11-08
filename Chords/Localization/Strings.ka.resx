@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="Nav_ShowChord" xml:space="preserve"><value>აკორდის სქემის ჩვენება</value></data>
+  <data name="Nav_FindChord" xml:space="preserve"><value>აკორდის სახელის პოვნა</value></data>
+  <data name="Nav_FindShape" xml:space="preserve"><value>აკორდის პოვნა თითების განლაგებით</value></data>
+  <data name="Nav_Favorites" xml:space="preserve"><value>რჩეული აკორდები</value></data>
+  <data name="Nav_Circle" xml:space="preserve"><value>კვინტების წრე</value></data>
+  <data name="Nav_Settings" xml:space="preserve"><value>პარამეტრები</value></data>
+  <data name="Nav_Toggle" xml:space="preserve"><value>მენიუს ჩვენება</value></data>
+  <data name="Yes" xml:space="preserve"><value>კი</value></data>
+  <data name="No" xml:space="preserve"><value>არა</value></data>
+  <data name="Find" xml:space="preserve"><value>ძებნა</value></data>
+  <data name="ChordType_Major" xml:space="preserve"><value>მაჟორი</value></data>
+  <data name="ShowChord_Partial" xml:space="preserve"><value>არასრული აკორდების დაშვება</value></data>
+  <data name="Chord_Found" xml:space="preserve"><value>ნაპოვნი აკორდები:</value></data>
+  <data name="Chord_OtherSymbols" xml:space="preserve"><value>სხვა აღნიშვნები:</value></data>
+  <data name="Chord_Intervals" xml:space="preserve"><value>აკორდის ინტერვალები:</value></data>
+  <data name="Chord_Notes" xml:space="preserve"><value>აკორდის ბგერები:</value></data>
+  <data name="Chord_Diagrams" xml:space="preserve"><value>აკორდის სქემები:</value></data>
+  <data name="Chord_Results_One" xml:space="preserve"><value>{0} შედეგი</value></data>
+  <data name="Chord_Results_Many" xml:space="preserve"><value>{0} შედეგი</value></data>
+  <data name="Chord_Invalid" xml:space="preserve"><value>{0} არ არის სწორი აკორდი</value></data>
+  <data name="Tip" xml:space="preserve"><value>რჩევა:</value></data>
+  <data name="Tip_Play" xml:space="preserve"><value>მოსასმენად შეეხეთ სქემას.</value></data>
+  <data name="Tip_Strum" xml:space="preserve"><value>გადაუსვით თითი დიაგრამას გვერდულად, რომ დაუკრათ სიმ-სიმ.</value></data>
+  <data name="Tip_StrumPick" xml:space="preserve"><value>გადაათრიეთ მედიატორი დიაგრამის ქვეშ, რომ დაუკრათ სიმ-სიმ.</value></data>
+  <data name="Tip_Favorite" xml:space="preserve"><value>რჩეულებში დასამატებლად ხანგრძლივად შეეხეთ სქემას.</value></data>
+  <data name="Favorites_Empty" xml:space="preserve"><value>რჩეული განლაგებები არ გაქვთ.</value></data>
+  <data name="Favorites_Hint" xml:space="preserve"><value>რჩეულებში დასამატებლად ხანგრძლივად შეეხეთ განლაგებას.</value></data>
+  <data name="Find_Strict" xml:space="preserve"><value>მკაცრი რეჟიმი</value></data>
+  <data name="Find_Loose" xml:space="preserve"><value>თავისუფალი რეჟიმი</value></data>
+  <data name="Find_NoChord" xml:space="preserve"><value>აკორდი ვერ მოიძებნა</value></data>
+  <data name="Settings_SystemLanguage" xml:space="preserve"><value>{0} (სისტემა)</value></data>
+  <data name="Notation_English" xml:space="preserve"><value>ინგლისური</value></data>
+  <data name="Notation_German" xml:space="preserve"><value>გერმანული</value></data>
+  <data name="Notation_Latin" xml:space="preserve"><value>ლათინური</value></data>
+  <data name="Settings_BasicChords" xml:space="preserve"><value>ძირითადი</value></data>
+  <data name="Settings_AllChords" xml:space="preserve"><value>ყველა</value></data>
+  <data name="Settings_MaxFret" xml:space="preserve"><value>უმაღლესი ლადი:</value></data>
+  <data name="Settings_AllowBarre" xml:space="preserve"><value>ბარეს დაშვება</value></data>
+  <data name="Settings_AllowSpecial" xml:space="preserve"><value>ჩახშობილი მაღალი სიმებით აკორდების დაშვება</value></data>
+  <data name="Settings_EasyOnly" xml:space="preserve"><value>მხოლოდ მარტივი აპლიკატურა</value></data>
+  <data name="Settings_Vertical" xml:space="preserve"><value>ვერტიკალური</value></data>
+  <data name="Settings_Horizontal" xml:space="preserve"><value>ჰორიზონტალური</value></data>
+  <data name="Settings_LeftHanded" xml:space="preserve"><value>ცაცია (სარკისებური სქემები)</value></data>
+  <data name="Settings_ShowTips" xml:space="preserve"><value>რჩევების ჩვენება</value></data>
+  <data name="Settings_Theme" xml:space="preserve"><value>თემა</value></data>
+  <data name="Theme_System" xml:space="preserve"><value>მოწყობილობის მიხედვით</value></data>
+  <data name="Theme_Light" xml:space="preserve"><value>ღია</value></data>
+  <data name="Theme_Dark" xml:space="preserve"><value>მუქი</value></data>
+  <data name="Settings_General" xml:space="preserve"><value>ზოგადი</value></data>
+  <data name="Settings_Language" xml:space="preserve"><value>ენა</value></data>
+  <data name="Settings_Instrument" xml:space="preserve"><value>საკრავი</value></data>
+  <data name="Settings_Tuning" xml:space="preserve"><value>აწყობა</value></data>
+  <data name="Settings_Notation" xml:space="preserve"><value>აღნიშვნა</value></data>
+  <data name="Settings_Diagrams" xml:space="preserve"><value>სქემები</value></data>
+  <data name="Settings_Chords" xml:space="preserve"><value>აკორდები</value></data>
+  <data name="Instrument_Guitar" xml:space="preserve"><value>გიტარა</value></data>
+  <data name="Instrument_Ukulele" xml:space="preserve"><value>უკულელე</value></data>
+  <data name="Instrument_Mandolin" xml:space="preserve"><value>მანდოლინა</value></data>
+  <data name="Instrument_BassGuitar" xml:space="preserve"><value>ბას-გიტარა</value></data>
+  <data name="Instrument_Banjo" xml:space="preserve"><value>ბანჯო</value></data>
+  <data name="Shape_Hint" xml:space="preserve"><value>შეეხეთ ლადებს, სადაც თითები სიმებს აჭერენ. სიმის ღია (○) და ჩახშობილ (×) მდგომარეობებს შორის გადასართავად შეეხეთ ზღურბლის ზემოთ.</value></data>
+  <data name="Shape_Alternatives" xml:space="preserve"><value>ასევე ცნობილია როგორც:</value></data>
+  <data name="Shape_TooFew" xml:space="preserve"><value>დაუკარით მინიმუმ ორი განსხვავებული ბგერა</value></data>
+  <data name="Shape_Play" xml:space="preserve"><value>დაკვრა</value></data>
+  <data name="Shape_Clear" xml:space="preserve"><value>გასუფთავება</value></data>
+  <data name="Nav_Key" xml:space="preserve"><value>ტონალობის აკორდები</value></data>
+  <data name="Nav_Progressions" xml:space="preserve"><value>აკორდების მიმდევრობები</value></data>
+  <data name="Scale_Major" xml:space="preserve"><value>მაჟორი</value></data>
+  <data name="Scale_Minor" xml:space="preserve"><value>ნატურალური მინორი</value></data>
+  <data name="Scale_HarmonicMinor" xml:space="preserve"><value>ჰარმონიული მინორი</value></data>
+  <data name="Scale_MelodicMinor" xml:space="preserve"><value>მელოდიური მინორი</value></data>
+  <data name="Scale_Dorian" xml:space="preserve"><value>დორიული</value></data>
+  <data name="Scale_Phrygian" xml:space="preserve"><value>ფრიგიული</value></data>
+  <data name="Scale_PhrygianDominant" xml:space="preserve"><value>ფრიგიული დომინანტური</value></data>
+  <data name="Scale_HungarianMinor" xml:space="preserve"><value>უნგრული მინორი</value></data>
+  <data name="Scale_DoubleHarmonicMajor" xml:space="preserve"><value>ორმაგი ჰარმონიული (ბოშური მაჟორი)</value></data>
+  <data name="Scale_LydianDominant" xml:space="preserve"><value>ლიდიური დომინანტა</value></data>
+  <data name="Scale_UkrainianDorian" xml:space="preserve"><value>უკრაინული დორიული</value></data>
+  <data name="Scale_Altered" xml:space="preserve"><value>ალტერირებული</value></data>
+  <data name="Scale_MajorPentatonic" xml:space="preserve"><value>მაჟორული პენტატონიკა</value></data>
+  <data name="Scale_MinorPentatonic" xml:space="preserve"><value>მინორული პენტატონიკა</value></data>
+  <data name="Scale_Blues" xml:space="preserve"><value>ბლუზი</value></data>
+  <data name="Scale_Hirajoshi" xml:space="preserve"><value>Hirajoshi</value></data>
+  <data name="Scale_In" xml:space="preserve"><value>In</value></data>
+  <data name="Scale_Yo" xml:space="preserve"><value>Yo</value></data>
+  <data name="Scale_Kumoi" xml:space="preserve"><value>Kumoi</value></data>
+  <data name="Scale_Egyptian" xml:space="preserve"><value>ეგვიპტური</value></data>
+  <data name="Scale_Lydian" xml:space="preserve"><value>ლიდიური</value></data>
+  <data name="Scale_Mixolydian" xml:space="preserve"><value>მიქსოლიდიური</value></data>
+  <data name="Key_TabChords" xml:space="preserve"><value>ტონალობის აკორდები</value></data>
+  <data name="Key_TabDetect" xml:space="preserve"><value>ტონალობის პოვნა</value></data>
+  <data name="Key_ScaleNotes" xml:space="preserve"><value>გამის ნოტები:</value></data>
+  <data name="Key_Sevenths" xml:space="preserve"><value>სეპტაკორდები</value></data>
+  <data name="Pick_Root" xml:space="preserve"><value>ძირითადი ტონი</value></data>
+  <data name="Pick_ChordType" xml:space="preserve"><value>აკორდის ტიპი</value></data>
+  <data name="Pick_Bass" xml:space="preserve"><value>ბასის ნოტა</value></data>
+  <data name="Bass_Any" xml:space="preserve"><value>ნებისმიერი</value></data>
+  <data name="Bass_Root" xml:space="preserve"><value>ძირითადი ტონის იგივე</value></data>
+  <data name="Layout_Inversion" xml:space="preserve"><value>მიმოქცევა – ყველაზე დაბალი ნოტა ძირითადი ტონი არ არის</value></data>
+  <data name="Pick_Tonic" xml:space="preserve"><value>ტონიკა</value></data>
+  <data name="Pick_Scale" xml:space="preserve"><value>გამა</value></data>
+  <data name="Key_Add" xml:space="preserve"><value>აკორდის დამატება</value></data>
+  <data name="Key_DetectHint" xml:space="preserve"><value>დაამატეთ სიმღერის აკორდები და აპი იპოვის შესაბამის ტონალობებს. შეეხეთ ტონალობას მისი აკორდების სანახავად.</value></data>
+  <data name="Key_NoChords" xml:space="preserve"><value>დაამატეთ სიმღერის აკორდები</value></data>
+  <data name="Key_NoKey" xml:space="preserve"><value>შესაფერისი ტონალობა არ არის</value></data>
+  <data name="Key_Progressions" xml:space="preserve"><value>მიმდევრობები ამ ტონალობაში</value></data>
+  <data name="Style_Pop" xml:space="preserve"><value>პოპი</value></data>
+  <data name="Style_Rock" xml:space="preserve"><value>როკი</value></data>
+  <data name="Style_Jazz" xml:space="preserve"><value>ჯაზი</value></data>
+  <data name="Style_Blues" xml:space="preserve"><value>ბლუზი</value></data>
+  <data name="Style_Classical" xml:space="preserve"><value>კლასიკა</value></data>
+  <data name="Style_Flamenco" xml:space="preserve"><value>ფლამენკო</value></data>
+  <data name="Style_Klezmer" xml:space="preserve"><value>კლეზმერი</value></data>
+  <data name="Prog_Generate" xml:space="preserve"><value>მიმდევრობის შექმნა</value></data>
+  <data name="Prog_Hint" xml:space="preserve"><value>შეეხეთ მიმდევრობას დიაგრამების სანახავად; ‹ › ცვლის აპლიკატურას. ▶ უკრავს მას, შესაჩერებლად კვლავ შეეხეთ.</value></data>
+  <data name="Prog_Smooth" xml:space="preserve"><value>გლუვი გადასვლები</value></data>
+  <data name="Nav_Tuner" xml:space="preserve"><value>ტიუნერი</value></data>
+  <data name="Tuner_Hint" xml:space="preserve"><value>შეეხეთ სიმს, რომ მოისმინოთ და მხოლოდ ის ააწყოთ; ავტო ირჩევს უახლოეს სიმს.</value></data>
+  <data name="Tuner_Listening" xml:space="preserve"><value>დაუკარით სიმს…</value></data>
+  <data name="Tuner_ListeningNote" xml:space="preserve"><value>დაუკარით ნოტა…</value></data>
+  <data name="Tuner_Chromatic" xml:space="preserve"><value>ქრომატიკული</value></data>
+  <data name="Tuner_InTune" xml:space="preserve"><value>აწყობილია</value></data>
+  <data name="Tuner_TuneUp" xml:space="preserve"><value>დაჭიმეთ</value></data>
+  <data name="Tuner_TuneDown" xml:space="preserve"><value>მოუშვით</value></data>
+  <data name="Tuner_Auto" xml:space="preserve"><value>ავტო</value></data>
+  <data name="Tuner_MicDenied" xml:space="preserve"><value>ტიუნერს მიკროფონზე წვდომა სჭირდება.</value></data>
+  <data name="Tuner_OpenSettings" xml:space="preserve"><value>პარამეტრების გახსნა</value></data>
+  <data name="Tuner_MicError" xml:space="preserve"><value>მიკროფონის ჩართვა ვერ ხერხდება.</value></data>
+  <data name="Tuner_MicUsage" xml:space="preserve"><value>ტიუნერი უსმენს თქვენს ინსტრუმენტს, რათა აჩვენოს, აწყობილია თუ არა ის.</value><comment>iOS microphone permission prompt (NSMicrophoneUsageDescription), built into the app bundle by PlatformLocales.targets</comment></data>
+  <data name="Tab_Chords" xml:space="preserve"><value>აკორდები</value></data>
+  <data name="Tab_Favorites" xml:space="preserve"><value>რჩეულები</value></data>
+  <data name="Tab_Theory" xml:space="preserve"><value>თეორია</value></data>
+  <data name="Tab_More" xml:space="preserve"><value>მეტი</value></data>
+  <data name="Group_Tools" xml:space="preserve"><value>ხელსაწყოები</value></data>
+  <data name="Related_Title" xml:space="preserve"><value>ასევე იხილეთ</value></data>
+  <data name="Tuning_Standard" xml:space="preserve"><value>სტანდარტული</value></data>
+  <data name="Tuning_HalfStepDown" xml:space="preserve"><value>ნახევარი ტონით დაბლა</value></data>
+  <data name="Tuning_WholeStepDown" xml:space="preserve"><value>ერთი ტონით დაბლა</value></data>
+  <data name="Tuning_LowG" xml:space="preserve"><value>დაბალი სოლი</value></data>
+  <data name="Tuning_UkuleleD" xml:space="preserve"><value>რე აწყობა</value></data>
+  <data name="Tuning_Baritone" xml:space="preserve"><value>ბარიტონი</value></data>
+  <data name="Tuning_Tenor" xml:space="preserve"><value>ტენორი</value></data>
+  <data name="Tuning_Custom" xml:space="preserve"><value>საკუთარი აწყობა</value></data>
+  <data name="Tuning_New" xml:space="preserve"><value>საკუთარი აწყობა…</value></data>
+  <data name="Tuning_Edit" xml:space="preserve"><value>რედაქტირება</value></data>
+  <data name="Tuning_Delete" xml:space="preserve"><value>წაშლა</value></data>
+  <data name="Tuning_Save" xml:space="preserve"><value>შენახვა</value></data>
+  <data name="Tuning_Cancel" xml:space="preserve"><value>გაუქმება</value></data>
+  <data name="Tuning_EditorHint" xml:space="preserve"><value>შეეხეთ ▲ ▼ სიმის ნახევარი ტონით ასაწევად ან დასაწევად; შეეხეთ ნოტს მის მოსასმენად.</value></data>
+  <data name="Settings_Capo" xml:space="preserve"><value>კაპო</value></data>
+  <data name="Capo_None" xml:space="preserve"><value>კაპოს გარეშე</value></data>
+  <data name="Capo_Fret" xml:space="preserve"><value>{0}-ე ლადი</value></data>
+  <data name="Capo_Badge" xml:space="preserve"><value>კაპო {0}</value></data>
+  <data name="Capo_Shape" xml:space="preserve"><value>კაპო {0}-ე ლადზე: დააჭირეთ {1} ფორმას</value></data>
+  <data name="Capo_ShapeShort" xml:space="preserve"><value>{0} ფორმა</value></data>
+  <data name="Key_CapoTitle" xml:space="preserve"><value>კაპოს ყველაზე მარტივი პოზიციები</value></data>
+  <data name="Key_CapoUse" xml:space="preserve"><value>გამოყენება</value></data>
+  <data name="Fretboard_Title" xml:space="preserve"><value>გრიფზე</value></data>
+  <data name="Fretboard_Intervals" xml:space="preserve"><value>ინტერვალები</value></data>
+  <data name="Fretboard_Notes" xml:space="preserve"><value>ნოტები</value></data>
+  <data name="Difficulty_Easy" xml:space="preserve"><value>მარტივი</value></data>
+  <data name="Difficulty_Medium" xml:space="preserve"><value>საშუალო</value></data>
+  <data name="Difficulty_Hard" xml:space="preserve"><value>რთული</value></data>
+  <data name="Key_CapoHint" xml:space="preserve"><value>დაიჭირეთ ნაჩვენები ფორმები – კაპოთი ისინი ჟღერს როგორც {0}.</value></data>
+  <data name="Fretboard_ScaleHint" xml:space="preserve"><value>სად არის {0} გამის ნოტები გრიფზე. 1 ტონიკაა.</value></data>
+  <data name="Fretboard_ChordHint" xml:space="preserve"><value>სად არის {0} აკორდის ნოტები გრიფზე. 1 ძირითადი ტონია.</value></data>
+  <data name="Fretboard_ScaleOnly" xml:space="preserve"><value>გამა</value></data>
+  <data name="Fretboard_WholeNeck" xml:space="preserve"><value>მთელი გრიფი</value></data>
+  <data name="Fretboard_Position" xml:space="preserve"><value>ლადები {0}–{1}</value></data>
+  <data name="Fretboard_ChordInScaleHint" xml:space="preserve"><value>{0} აკორდის ბგერები აღნიშნულია (1 მისი ძირითადი ტონია); წერტილები {1} გამის დანარჩენი ბგერებია.</value></data>
+  <data name="Nav_About" xml:space="preserve"><value>აპის შესახებ</value></data>
+  <data name="About_Version" xml:space="preserve"><value>ვერსია</value></data>
+  <data name="About_Rate" xml:space="preserve"><value>შეაფასე აპი</value></data>
+  <data name="About_SoundCredit" xml:space="preserve"><value>საკრავების ხმები</value></data>
+  <data name="About_SoundFont" xml:space="preserve"><value>ხმების ბანკი</value></data>
+  <data name="About_License" xml:space="preserve"><value>ლიცენზია</value></data>
+  <data name="About_By" xml:space="preserve"><value>ავტორი: {0}</value></data>
+  <data name="About_PublicDomain" xml:space="preserve"><value>საჯარო საკუთრება</value></data>
+  <data name="About_SoundChanges" xml:space="preserve"><value>ნიმუშები მორგებულია ამ აპისთვის.</value></data>
+  <data name="Nav_Metronome" xml:space="preserve"><value>მეტრონომი</value></data>
+  <data name="Metronome_Start" xml:space="preserve"><value>დაწყება</value></data>
+  <data name="Metronome_Stop" xml:space="preserve"><value>გაჩერება</value></data>
+  <data name="Metronome_Tap" xml:space="preserve"><value>ტემპის დაკვრა</value></data>
+  <data name="Metronome_Beats" xml:space="preserve"><value>დარტყმა ტაქტში</value></data>
+  <data name="Metronome_Subdivision" xml:space="preserve"><value>დაყოფა</value></data>
+  <data name="Metronome_Accent" xml:space="preserve"><value>პირველი დარტყმის ხაზგასმა</value></data>
+  <data name="Metronome_Hint" xml:space="preserve"><value>შეეხეთ „ტემპის დაკვრას“ მუსიკის რიტმში, რომ გაიგოთ მისი ტემპი. აკორდების თანმიმდევრობები ამ ტემპში ჟღერს, თითო აკორდი ტაქტზე.</value></data>
+  <data name="Prog_Tempo" xml:space="preserve"><value>ტემპი</value></data>
+</root>
