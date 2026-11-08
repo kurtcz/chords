@@ -1,0 +1,192 @@
+<en-GB>
+Chord Expert 2.0 – the first update in almost 10 years, completely rebuilt.
+New: ukulele, mandolin, bass and banjo, tuner, metronome, music theory and chord progressions. In more than 60 languages.
+</en-GB>
+<ar>
+Chord Expert 2.0 – أول تحديث منذ ما يقرب من 10 سنوات، أعيد بناؤه بالكامل.
+جديد: يوكوليلي وماندولين وباص وبانجو، وموالف، ومترونوم، ونظرية موسيقية وتتابعات الأكورد. بأكثر من 60 لغة.
+</ar>
+<bg>
+Chord Expert 2.0 – първото обновление от почти 10 години, изцяло преработено.
+Ново: укулеле, мандолина, бас и банджо, тунер, метроном, музикална теория и акордови прогресии. На повече от 60 езика.
+</bg>
+<ca>
+Chord Expert 2.0 – la primera actualització en gairebé 10 anys, totalment refeta.
+Novetats: ukulele, mandolina, baix i banjo, afinador, metrònom, teoria musical i progressions d'acords. En més de 60 idiomes.
+</ca>
+<cs-CZ>
+Chord Expert 2.0 – první aktualizace po téměř 10 letech, zcela přepracovaná.
+Novinky: ukulele, mandolína, baskytara a banjo, ladička, metronom, hudební teorie a akordové postupy. Ve více než 60 jazycích.
+</cs-CZ>
+<da-DK>
+Chord Expert 2.0 – den første opdatering i næsten 10 år, helt genopbygget.
+Nyt: ukulele, mandolin, bas og banjo, stemmeapparat, metronom, musikteori og akkordforløb. På mere end 60 sprog.
+</da-DK>
+<de-DE>
+Chord Expert 2.0 – das erste Update seit fast 10 Jahren, komplett neu entwickelt.
+Neu: Ukulele, Mandoline, Bass und Banjo, Stimmgerät, Metronom, Musiktheorie und Akkordfolgen. In mehr als 60 Sprachen.
+</de-DE>
+<el-GR>
+Chord Expert 2.0 – η πρώτη ενημέρωση μετά από σχεδόν 10 χρόνια, εντελώς ανανεωμένη.
+Νέα: ουκουλέλε, μαντολίνο, μπάσο και μπάντζο, κουρδιστήρι, μετρονόμος, θεωρία της μουσικής και αλληλουχίες συγχορδιών. Σε περισσότερες από 60 γλώσσες.
+</el-GR>
+<en-AU>
+Chord Expert 2.0 – the first update in almost 10 years, completely rebuilt.
+New: ukulele, mandolin, bass and banjo, tuner, metronome, music theory and chord progressions. In more than 60 languages.
+</en-AU>
+<en-CA>
+Chord Expert 2.0 – the first update in almost 10 years, completely rebuilt.
+New: ukulele, mandolin, bass and banjo, tuner, metronome, music theory and chord progressions. In more than 60 languages.
+</en-CA>
+<en-IN>
+Chord Expert 2.0 – the first update in almost 10 years, completely rebuilt.
+New: ukulele, mandolin, bass and banjo, tuner, metronome, music theory and chord progressions. In more than 60 languages.
+</en-IN>
+<en-US>
+Chord Expert 2.0 – the first update in almost 10 years, completely rebuilt.
+New: ukulele, mandolin, bass and banjo, tuner, metronome, music theory and chord progressions. In more than 60 languages.
+</en-US>
+<es-419>
+Chord Expert 2.0 – la primera actualización en casi 10 años, rehecha por completo.
+Novedades: ukelele, mandolina, bajo y banjo, afinador, metrónomo, teoría musical y progresiones de acordes. En más de 60 idiomas.
+</es-419>
+<es-ES>
+Chord Expert 2.0 – la primera actualización en casi 10 años, rehecha por completo.
+Novedades: ukelele, mandolina, bajo y banjo, afinador, metrónomo, teoría musical y progresiones de acordes. En más de 60 idiomas.
+</es-ES>
+<es-US>
+Chord Expert 2.0 – la primera actualización en casi 10 años, rehecha por completo.
+Novedades: ukelele, mandolina, bajo y banjo, afinador, metrónomo, teoría musical y progresiones de acordes. En más de 60 idiomas.
+</es-US>
+<et>
+Chord Expert 2.0 – esimene uuendus peaaegu 10 aasta jooksul, täielikult uuesti ehitatud.
+Uus: ukulele, mandoliin, bass ja bandžo, häälestaja, metronoom, muusikateooria ja akordijärgnevused. Enam kui 60 keeles.
+</et>
+<fi-FI>
+Chord Expert 2.0 – ensimmäinen päivitys lähes 10 vuoteen, täysin uudistettu.
+Uutta: ukulele, mandoliini, basso ja banjo, viritin, metronomi, musiikin teoria ja sointukulut. Yli 60 kielellä.
+</fi-FI>
+<fr-CA>
+Chord Expert 2.0 – la première mise à jour depuis près de 10 ans, entièrement repensée.
+Nouveau : ukulélé, mandoline, basse et banjo, accordeur, métronome, théorie musicale et progressions d'accords. En plus de 60 langues.
+</fr-CA>
+<fr-FR>
+Chord Expert 2.0 – la première mise à jour depuis près de 10 ans, entièrement repensée.
+Nouveau : ukulélé, mandoline, basse et banjo, accordeur, métronome, théorie musicale et progressions d'accords. En plus de 60 langues.
+</fr-FR>
+<hi-IN>
+Chord Expert 2.0 – लगभग 10 वर्षों में पहला अपडेट, पूरी तरह नए सिरे से बना।
+नया: यूकुलेले, मैंडोलिन, बेस और बैंजो, ट्यूनर, मेट्रोनोम, संगीत सिद्धांत और कॉर्ड प्रोग्रेशन। 60 से अधिक भाषाओं में।
+</hi-IN>
+<hr>
+Chord Expert 2.0 – prvo ažuriranje nakon gotovo 10 godina, potpuno preuređeno.
+Novo: ukulele, mandolina, bas i bendžo, štimer, metronom, glazbena teorija i akordske progresije. Na više od 60 jezika.
+</hr>
+<hu-HU>
+Chord Expert 2.0 – az első frissítés közel 10 év után, teljesen megújítva.
+Új: ukulele, mandolin, basszusgitár és bendzsó, hangoló, metronóm, zeneelmélet és akkordmenetek. Több mint 60 nyelven.
+</hu-HU>
+<id>
+Chord Expert 2.0 – pembaruan pertama dalam hampir 10 tahun, dibangun ulang sepenuhnya.
+Baru: ukulele, mandolin, bas dan banjo, tuner, metronom, teori musik, dan progresi kord. Dalam lebih dari 60 bahasa.
+</id>
+<it-IT>
+Chord Expert 2.0 – completamente rifatta, il primo aggiornamento in quasi 10 anni.
+Novità: ukulele, mandolino, basso e banjo, accordatore, metronomo, teoria musicale e progressioni di accordi. In più di 60 lingue.
+</it-IT>
+<iw-IL>
+Chord Expert 2.0 – העדכון הראשון מזה כמעט 10 שנים, נבנה מחדש לגמרי.
+חדש: יוקלילי, מנדולינה, בס ובנג'ו, טיונר, מטרונום, תאוריה מוזיקלית ומהלכי אקורדים. ביותר מ-60 שפות.
+</iw-IL>
+<ja-JP>
+Chord Expert 2.0 – 約10年ぶりのアップデート。全面的に作り直しました。
+新機能：ウクレレ、マンドリン、ベース、バンジョー、チューナー、メトロノーム、音楽理論、コード進行。60以上の言語に対応。
+</ja-JP>
+<ko-KR>
+Chord Expert 2.0 – 약 10년 만의 첫 업데이트, 완전히 새로 만들었습니다.
+새 기능: 우쿨렐레, 만돌린, 베이스, 밴조, 튜너, 메트로놈, 음악 이론, 코드 진행. 60개 이상의 언어 지원.
+</ko-KR>
+<lt>
+Chord Expert 2.0 – pirmas atnaujinimas per beveik 10 metų. Programėlė visiškai perkurta.
+Nauja: ukulelė, mandolina, bosinė gitara ir bandža, derintuvas, metronomas, muzikos teorija ir akordų progresijos. Daugiau nei 60 kalbų.
+</lt>
+<lv>
+Chord Expert 2.0 – pirmais atjauninājums gandrīz 10 gadu laikā. Lietotne pilnībā pārveidota.
+Jaunums: ukulele, mandolīna, basģitāra un bandžo, skaņotājs, metronoms, mūzikas teorija un akordu progresijas. Vairāk nekā 60 valodās.
+</lv>
+<ms>
+Chord Expert 2.0 – kemas kini pertama dalam hampir 10 tahun, dibina semula sepenuhnya.
+Baharu: ukulele, mandolin, bes dan banjo, penala, metronom, teori muzik dan progresi kord. Dalam lebih 60 bahasa.
+</ms>
+<nl-NL>
+Chord Expert 2.0 – de eerste update in bijna 10 jaar, volledig vernieuwd.
+Nieuw: ukelele, mandoline, basgitaar en banjo, stemapparaat, metronoom, muziektheorie en akkoordprogressies. In meer dan 60 talen.
+</nl-NL>
+<no-NO>
+Chord Expert 2.0 – den første oppdateringen på nesten 10 år, helt nyutviklet.
+Nytt: ukulele, mandolin, bass og banjo, stemmeapparat, metronom, musikkteori og akkordprogresjoner. På mer enn 60 språk.
+</no-NO>
+<pl-PL>
+Chord Expert 2.0 – pierwsza aktualizacja od prawie 10 lat, całkowicie przebudowana.
+Nowości: ukulele, mandolina, gitara basowa i banjo, tuner, metronom, teoria muzyki i progresje akordów. W ponad 60 językach.
+</pl-PL>
+<pt-BR>
+Chord Expert 2.0 – a primeira atualização em quase 10 anos, totalmente reconstruída.
+Novidades: ukulele, bandolim, baixo e banjo, afinador, metrônomo, teoria musical e progressões de acordes. Em mais de 60 idiomas.
+</pt-BR>
+<pt-PT>
+Chord Expert 2.0 – a primeira atualização em quase 10 anos, totalmente reconstruída.
+Novidades: ukulele, bandolim, baixo e banjo, afinador, metrónomo, teoria musical e progressões de acordes. Em mais de 60 idiomas.
+</pt-PT>
+<ro>
+Chord Expert 2.0 – prima actualizare după aproape 10 ani, reconstruită complet.
+Nou: ukulele, mandolină, bas și banjo, acordor, metronom, teorie muzicală și progresii de acorduri. În peste 60 de limbi.
+</ro>
+<ru-RU>
+Chord Expert 2.0 – первое обновление почти за 10 лет, полностью переработанное.
+Новое: укулеле, мандолина, бас и банджо, тюнер, метроном, теория музыки и аккордовые последовательности. Более чем на 60 языках.
+</ru-RU>
+<sk>
+Chord Expert 2.0 – prvá aktualizácia po takmer 10 rokoch, úplne prepracovaná.
+Novinky: ukulele, mandolína, basgitara a banjo, ladička, metronóm, hudobná teória a akordové postupy. Vo viac ako 60 jazykoch.
+</sk>
+<sl>
+Chord Expert 2.0 – prva posodobitev po skoraj 10 letih, popolnoma prenovljena.
+Novo: ukulele, mandolina, bas in banjo, uglaševalec, metronom, glasbena teorija in akordna zaporedja. V več kot 60 jezikih.
+</sl>
+<sr>
+Chord Expert 2.0 – прво ажурирање после скоро 10 година, потпуно преуређено.
+Ново: укулеле, мандолина, бас и бенџо, штимер, метроном, музичка теорија и акордске прогресије. На више од 60 језика.
+</sr>
+<sv-SE>
+Chord Expert 2.0 – den första uppdateringen på nästan 10 år, helt nybyggd.
+Nytt: ukulele, mandolin, bas och banjo, stämapparat, metronom, musikteori och ackordföljder. På fler än 60 språk.
+</sv-SE>
+<th>
+Chord Expert 2.0 – อัปเดตครั้งแรกในรอบเกือบ 10 ปี สร้างใหม่ทั้งหมด
+ใหม่: อูคูเลเล่ แมนโดลิน เบส และแบนโจ จูนเนอร์ เมโทรนอม ทฤษฎีดนตรี และทางเดินคอร์ด รองรับมากกว่า 60 ภาษา
+</th>
+<tr-TR>
+Chord Expert 2.0 – yaklaşık 10 yıl sonra ilk güncelleme, baştan yeniden yapıldı.
+Yeni: ukulele, mandolin, bas ve banjo, akort aleti, metronom, müzik teorisi ve akor dizileri. 60'tan fazla dilde.
+</tr-TR>
+<uk>
+Chord Expert 2.0 – перше оновлення майже за 10 років, повністю перероблене.
+Нове: укулеле, мандоліна, бас і банджо, тюнер, метроном, теорія музики та акордові послідовності. Понад 60 мовами.
+</uk>
+<vi>
+Chord Expert 2.0 – bản cập nhật đầu tiên sau gần 10 năm, được làm lại hoàn toàn.
+Mới: ukulele, mandolin, bass và banjo, máy lên dây, máy đếm nhịp, nhạc lý và vòng hợp âm. Hỗ trợ hơn 60 ngôn ngữ.
+</vi>
+<zh-CN>
+Chord Expert 2.0 – 近 10 年来的首次更新，全面重新打造。
+新增：尤克里里、曼陀林、贝斯和班卓琴，调音器、节拍器、乐理和和弦进行。支持 60 多种语言。
+</zh-CN>
+<zh-HK>
+Chord Expert 2.0 – 近 10 年來的首次更新，全面重新打造。
+新增：烏克麗麗、曼陀林、貝斯與班鳩琴，調音器、節拍器、樂理與和弦進行。支援 60 多種語言。
+</zh-HK>
+<zh-TW>
+Chord Expert 2.0 – 近 10 年來的首次更新，全面重新打造。
+新增：烏克麗麗、曼陀林、貝斯與班鳩琴，調音器、節拍器、樂理與和弦進行。支援 60 多種語言。
+</zh-TW>
