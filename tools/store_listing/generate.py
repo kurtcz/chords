@@ -3,6 +3,8 @@
 
 Writes:
   fastlane/metadata/android/<play-locale>/{title,short_description,full_description}.txt
+  fastlane/metadata/android/<play-locale>/images/{icon,featureGraphic}.png  (from icon512.png and
+    branding/store/google-play-feature/<lang>.png, rendered by feature.py)
   fastlane/metadata/ios/<asc-locale>/{name,subtitle,promotional_text,keywords,description}.txt
 
 Run from anywhere:  python3 tools/store_listing/generate.py
@@ -15,6 +17,7 @@ import sys
 HERE = pathlib.Path(__file__).resolve().parent
 ROOT = HERE.parent.parent
 OUT = ROOT / "fastlane" / "metadata"
+FEATURE_DIR = ROOT / "branding" / "store" / "google-play-feature"
 
 # language -> (Google Play locales, App Store Connect locales)
 LOCALES = {
@@ -65,6 +68,10 @@ LOCALES = {
 ASC_NAMES = {
     "en-US": "Chord Expert: Guitar & Ukulele",
 }
+
+# App Store Connect wants these for every localization, not just the primary one.
+PRIVACY_URL = "https://github.com/kurtcz/chords/blob/master/PRIVACY.md"
+SUPPORT_URL = "https://chordexpert.freeforums.net/"
 
 LIMITS = {"name": 30, "subtitle": 30, "short": 80, "promo": 170, "keywords": 100, "desc": 4000}
 
@@ -132,6 +139,10 @@ def main():
             write(base / "title.txt", d["name"])
             write(base / "short_description.txt", d["short"])
             write(base / "full_description.txt", d["desc"])
+            images = base / "images"
+            images.mkdir(parents=True, exist_ok=True)
+            shutil.copyfile(ROOT / "icon512.png", images / "icon.png")
+            shutil.copyfile(FEATURE_DIR / f"{lang}.png", images / "featureGraphic.png")
         for loc in asc:
             base = OUT / "ios" / loc
             write(base / "name.txt", ASC_NAMES.get(loc, d["name"]))
@@ -139,6 +150,8 @@ def main():
             write(base / "promotional_text.txt", d["promo"])
             write(base / "keywords.txt", d["keywords"])
             write(base / "description.txt", d["desc"])
+            write(base / "privacy_url.txt", PRIVACY_URL)
+            write(base / "support_url.txt", SUPPORT_URL)
     plays = sum(len(p) for p, _ in LOCALES.values())
     ascs = sum(len(a) for _, a in LOCALES.values())
     print(f"{len(listings)} languages -> {plays} Google Play and {ascs} App Store locales in {OUT}")
