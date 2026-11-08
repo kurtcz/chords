@@ -76,7 +76,9 @@
         }
         else if (frets[s] == 0)
         {
-            <circle cx="@X(s)" cy="@(Top - 19)" r="9" fill="none" stroke="#000" stroke-width="1.5" />
+            @* An open string sounds a note just like a pressed one *@
+            <circle cx="@X(s)" cy="@(Top - 19)" r="14" fill="#fff" stroke="blue" stroke-width="2" />
+            <g><text x="@X(s)" y="@(Top - 14)" text-anchor="middle" font-size="13" fill="blue">@NoteName(s)</text></g>
         }
         <rect x="@(X(s) - Gap / 2.0)" y="0" width="@Gap" height="@Top" fill="transparent"
               @onclick="() => ToggleOpen(str)" />
@@ -115,6 +117,7 @@
     private const int Left = 34;
     private const int Top = 44;
     private const int MaxAlternatives = 8;
+    private const int MaxFingers = 4;
 
     private InstrumentInfo instrument;
     private NamingConvention conv;
@@ -151,16 +154,43 @@
 
     private string NoteName(int s) => Sounding(s).ToString(conv);
 
-    private void SetFret(int s, int fret)
+    private void SetFret(int s, int fret) => Change(s, frets[s] == fret ? 0 : fret);
+
+    private void ToggleOpen(int s) => Change(s, frets[s] == 0 ? -1 : 0);
+
+    /// <summary>Sets a string's fret, unless the shape it makes cannot be held by one hand.</summary>
+    private void Change(int s, int fret)
     {
-        frets[s] = frets[s] == fret ? 0 : fret;
+        var old = frets[s];
+        var before = FingersNeeded(frets);
+        frets[s] = fret;
+        var after = FingersNeeded(frets);
+        // A shape that already needed too many fingers (kept from before) may still be eased.
+        if (after > MaxFingers && after >= before)
+        {
+            frets[s] = old;
+            return;
+        }
         Recognize();
     }
 
-    private void ToggleOpen(int s)
+    /// <summary>
+    /// Fingers it takes to hold the shape: one per pressed string, except that the strings at the lowest fret
+    /// take a single finger when it can lay across them as a barre – no open or muted string between them.
+    /// </summary>
+    private static int FingersNeeded(int[] shape)
     {
-        frets[s] = frets[s] == 0 ? -1 : 0;
-        Recognize();
+        var pressed = Enumerable.Range(0, shape.Length).Where(s => shape[s] > 0).ToArray();
+        if (pressed.Length == 0)
+        {
+            return 0;
+        }
+        var lowest = pressed.Min(s => shape[s]);
+        var barred = pressed.Where(s => shape[s] == lowest).ToArray();
+        var first = barred.First();
+        var last = barred.Last();
+        var isBarre = barred.Length > 1 && Enumerable.Range(first, last - first + 1).All(s => shape[s] >= lowest);
+        return isBarre ? pressed.Length - barred.Length + 1 : pressed.Length;
     }
 
     private void Clear()
