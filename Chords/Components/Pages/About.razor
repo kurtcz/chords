@@ -8,11 +8,11 @@
     <div class="about-version">@L["About_Version"] @Microsoft.Maui.ApplicationModel.AppInfo.Current.VersionString</div>
 
     <div class="settings-card about-card">
-        @* TODO: open the app's page in the store (Google Play / App Store). *@
-        <button type="button" class="about-row">
+        @* Opens the app's store page, where the user can rate it (external links open outside the app). *@
+        <a class="about-row" href="@StoreUrl">
             <Icon Name="star" />
             <span class="setting-label">@L["About_Rate"]</span>
-        </button>
+        </a>
     </div>
 
     <div class="about-credits">
@@ -30,6 +30,13 @@
 </div>
 
 @code {
+    /// <summary>The app's page in Google Play.</summary>
+    private const string PlayStoreUrl = "https://play.google.com/store/apps/details?id=com.tnemec.chords.android";
+    /// <summary>The app's page in the App Store (app id 6832216331), opening the review sheet.</summary>
+    private const string AppStoreUrl = "https://apps.apple.com/app/id6832216331?action=write-review";
+    /// <summary>The store page of the current platform.</summary>
+    private static string StoreUrl => OperatingSystem.IsIOS() ? AppStoreUrl : PlayStoreUrl;
+
     /// <summary>The sound font the other instruments' samples (Platforms/*/Resources) were made from.</summary>
     private const string SoundFontUrl = "https://musical-artifacts.com/artifacts/738";
     private const string SoundFontAuthor = "Frank\u00a0Wen";
