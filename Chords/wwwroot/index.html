@@ -17,6 +17,14 @@
         window.chordsTheme = {
             set: dark => document.documentElement.classList.toggle("theme-dark", dark)
         };
+        // Android: the system bars and cutouts at the sides (Services/SideInsets.cs).
+        window.chordsSideInsets = {
+            set: (left, right) => {
+                const style = document.documentElement.style;
+                style.setProperty("--side-inset-left", left + "px");
+                style.setProperty("--side-inset-right", right + "px");
+            }
+        };
     </script>
 </head>
 <body>

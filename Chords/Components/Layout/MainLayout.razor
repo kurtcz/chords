@@ -21,6 +21,8 @@
 
     private bool? renderedDark;
 
+    private (double Left, double Right)? renderedSideInsets;
+
     /// <summary>Pages that are mostly a grid of chord diagrams (the layout renders again with each new page).</summary>
     private bool WidePage => AppPages.FromRelativeUri(Nav.ToBaseRelativePath(Nav.Uri)) is var page
                              && (page == AppPages.ChordDetail || page == AppPages.Favorites);
@@ -29,6 +31,7 @@
     {
         L.LanguageChanged += OnLanguageChanged;
         State.ThemeChanged += OnThemeChanged;
+        SideInsets.Changed += OnSideInsetsChanged;
     }
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
@@ -38,9 +41,16 @@
             renderedDark = State.IsDark;
             await JS.InvokeVoidAsync("chordsTheme.set", State.IsDark);
         }
+        if (SideInsets.Known && renderedSideInsets != (SideInsets.Left, SideInsets.Right))
+        {
+            renderedSideInsets = (SideInsets.Left, SideInsets.Right);
+            await JS.InvokeVoidAsync("chordsSideInsets.set", SideInsets.Left, SideInsets.Right);
+        }
     }
 
     private void OnThemeChanged() => InvokeAsync(StateHasChanged);
+
+    private void OnSideInsetsChanged() => InvokeAsync(StateHasChanged);
 
     private void OnLanguageChanged()
     {
@@ -52,5 +62,6 @@
     {
         L.LanguageChanged -= OnLanguageChanged;
         State.ThemeChanged -= OnThemeChanged;
+        SideInsets.Changed -= OnSideInsetsChanged;
     }
 }
