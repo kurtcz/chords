@@ -41,6 +41,10 @@
 - **Rozpoznání akordu z mikrofonu** – zahraj akord a aplikace určí jeho název.
 - **Widget „akord dne“** pro Android/iOS.
 
+## Technické
+
+- **Optimalizace DEX pro Google Play (Android)** – Play od února 2027 vyžaduje u aplikací s více než 10 MB nekomprimovaného DEX kódu aspoň 25 % optimalizace, obfuskace i zmenšení (jinak hrozí nižší viditelnost a varování v obchodě). ✅ Release build zmenšuje DEX přes R8 (`AndroidLinkTool=r8`, soubor mapování pro stack trace): 16,0 MB → 8,9 MB, takže jsme pod hranicí (rezerva jen ~1 MB – před vydáním kontrolovat velikost DEX v .aab). Obfuskace zůstává ~0 %, protože .NET Android SDK vždy předává R8 `-dontobfuscate` ([dotnet/android#12535](https://github.com/dotnet/android/issues/12535)). Zbývá: přejít na .NET 11 SDK a kompatibilní MAUI/Android workloady (ideálně po prvním servisním vydání), přepnout na CoreCLR a zapnout obfuskaci (`AndroidR8ObfuscationMode=runtime-remapping`, `AndroidTypeMapImplementation=trimmable`); důkladně otestovat Blazor WebView a zvuk v reálném čase (ladička, metronom).
+
 ## Záměrně ne
 
 - **Zpěvník / katalog písní** – texty písní jsou chráněné (licence OSA/SOZA nebo vydavatelů), ruční zadávání písní uživatele neláká a zpěvníkových webů a aplikací je dost. Aplikace se drží akordů, teorie a ladičky.

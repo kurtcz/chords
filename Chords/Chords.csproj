@@ -34,6 +34,14 @@
   <PropertyGroup Condition="$(TargetFramework.Contains('-android')) and '$(Configuration)' == 'Release'">
     <AndroidPackageFormat>aab</AndroidPackageFormat>
     <AndroidKeyStore Condition="'$(AndroidSigningKeyStore)' != ''">true</AndroidKeyStore>
+    <!--
+      Shrink the Java/DEX side with R8 (otherwise the build only dexes with D8). This takes the bundle's DEX from
+      ~16 MB to ~9 MB, under the 10 MB size at which Google Play enforces its 25% code optimisation thresholds
+      (February 2027). R8 cannot obfuscate here: the .NET Android SDK always passes -dontobfuscate
+      (dotnet/android#12535), so keep the DEX under 10 MB. The mapping file is for Play's crash stack traces.
+    -->
+    <AndroidLinkTool>r8</AndroidLinkTool>
+    <AndroidCreateProguardMappingFile>true</AndroidCreateProguardMappingFile>
   </PropertyGroup>
 
   <ItemGroup>
