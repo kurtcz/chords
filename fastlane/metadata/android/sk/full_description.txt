@@ -1,0 +1,38 @@
+Chord Expert spája akordy, hudobnú teóriu, ladičku a metronóm pre gitaru, ukulele, mandolínu, basgitaru a banjo – v jednej aplikácii, ktorá funguje úplne offline, bez reklám, bez účtu a bez sledovania.
+
+PREČO CHORD EXPERT
+• Akordy počítané z hudobnej teórie, nie z databázy – každý akord sa skladá z tónov a hmaty sa vypočítajú pre váš nástroj, ladenie aj kapodaster, takže žiadny akord ani poloha nechýba
+• Plynulé progresie – hmaty sa vyberajú pre celú progresiu naraz, aby ruka skákala čo najmenej
+• Funguje oboma smermi – nakliknite hmat a uvidíte názov akordu, zadajte pár akordov a zistíte tóninu
+• Skutočné zvuky nástrojov – každý akord si vypočujete úderom alebo rozložený
+• Súkromie od základu – aplikácia nemá vôbec prístup na internet
+
+AKORDY
+• Diagramy ľubovoľného akordu vo všetkých polohách na hmatníku
+• Hodnotenie obtiažnosti a čísla prstov pri každom hmate, voliteľne len ľahké hmaty
+• Obraty a slash akordy ako C/E alebo D/F#
+• Hľadanie akordu podľa hmatu, vrátane obratov a neúplných akordov
+• Obľúbené pre každý nástroj
+
+TEÓRIA
+• Tóniny a stupnice: diatonické kvintakordy aj septakordy pre dur, mol, cirkevné módy, pentatoniku, blues a ďalšie
+• Najpravdepodobnejšia tónina podľa akordov piesne
+• Interaktívny kvintový kruh
+• Stupnice a tóny akordu na hmatníku, s intervalmi alebo názvami tónov
+• Najľahšie pozície kapodastra pre každú tóninu
+
+PROGRESIE
+• Typické progresie pre pop, rock, jazz, blues, klasiku a flamenco v ľubovoľnej tónine
+• Náhodné progresie podľa funkčnej harmónie
+• Hrajte dokola s metronómom
+
+NÁSTROJE
+• Chromatická ladička s referenčnými tónmi a kalibráciou A4 (430–450 Hz)
+• Alternatívne aj vlastné ladenia: Drop D, DADGAD, Open G, o poltón nižšie aj vaše vlastné
+• Metronóm s tap tempom, taktom, delením doby a dôrazom
+
+PRE VÁS
+• Režim pre ľavákov
+• Tmavý režim a rozloženie pre tablet
+• Anglické, nemecké (H) alebo latinské (Do Re Mi) názvy tónov
+• Vo viac ako 60 jazykoch

@@ -1,0 +1,38 @@
+Chord Expert menggabungkan akor, teori musik, tuner, dan metronom untuk gitar, ukulele, mandolin, bass, dan banjo – dalam satu aplikasi yang bekerja sepenuhnya offline, tanpa iklan, tanpa akun, dan tanpa pelacakan.
+
+KENAPA CHORD EXPERT
+• Dihitung dari teori musik, bukan dari database – setiap akor disusun dari nada-nadanya dan posisi jari dihitung untuk instrumen, stem, dan capo Anda, jadi tidak ada akor atau posisi yang terlewat
+• Progresi yang mulus – posisi dipilih untuk seluruh progresi agar tangan bergerak sesedikit mungkin
+• Bekerja dua arah – ketuk posisi jari untuk mengetahui nama akor, masukkan beberapa akor untuk mengetahui nada dasarnya
+• Suara instrumen asli – dengarkan setiap akor digenjreng atau dipetik
+• Privat sejak awal – aplikasi ini sama sekali tidak punya akses internet
+
+AKOR
+• Diagram akor apa pun di semua posisi pada fretboard
+• Nilai kesulitan dan nomor jari untuk setiap posisi, bisa menampilkan yang mudah saja
+• Inversi dan slash chord seperti C/E atau D/F#
+• Cari akor dari posisi jari, termasuk inversi dan akor tidak lengkap
+• Favorit untuk setiap instrumen
+
+TEORI
+• Nada dasar dan tangga nada: trinada dan akor septim diatonis untuk mayor, minor, modus, pentatonik, blues, dan lainnya
+• Temukan nada dasar yang paling mungkin dari akor sebuah lagu
+• Lingkaran kuint interaktif
+• Tangga nada dan nada akor di fretboard, dengan interval atau nama nada
+• Posisi capo termudah untuk setiap nada dasar
+
+PROGRESI
+• Progresi khas pop, rock, jazz, blues, klasik, dan flamenco di nada dasar apa pun
+• Progresi acak berdasarkan harmoni fungsional
+• Bermain berulang bersama metronom
+
+ALAT
+• Tuner kromatik dengan nada referensi dan kalibrasi A4 (430–450 Hz)
+• Stem alternatif dan buatan sendiri: Drop D, DADGAD, Open G, turun setengah nada, dan milik Anda
+• Metronom dengan tap tempo, birama, subdivisi, dan aksen
+
+DIBUAT UNTUK ANDA
+• Mode kidal
+• Mode gelap dan tata letak tablet
+• Nama nada Inggris, Jerman (H), atau Latin (Do Re Mi)
+• Tersedia dalam lebih dari 60 bahasa

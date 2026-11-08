@@ -1,0 +1,38 @@
+Chord Expert réunit accords, théorie musicale, accordeur et métronome pour guitare, ukulélé, mandoline, basse et banjo – dans une application qui fonctionne entièrement hors ligne, sans publicité, sans compte et sans pistage.
+
+POURQUOI CHORD EXPERT
+• Calculé à partir de la théorie musicale, pas d'une base de données – chaque accord est construit à partir de ses notes et les doigtés sont calculés pour votre instrument, votre accordage et votre capodastre, donc aucun accord ni aucune position ne manque
+• Enchaînements fluides – les doigtés sont choisis pour toute la grille afin que la main bouge le moins possible
+• Dans les deux sens – touchez un doigté pour obtenir le nom de l'accord, saisissez quelques accords pour trouver la tonalité
+• De vrais sons d'instruments – écoutez chaque accord gratté ou arpégé
+• Confidentiel par conception – l'application n'a aucun accès à Internet
+
+ACCORDS
+• Diagrammes de n'importe quel accord dans toutes les positions du manche
+• Note de difficulté et numéros de doigts pour chaque doigté, avec l'option de n'afficher que les faciles
+• Renversements et accords slash comme C/E ou D/F#
+• Trouver un accord à partir d'un doigté, y compris renversements et accords incomplets
+• Favoris pour chaque instrument
+
+THÉORIE
+• Tonalités et gammes : accords diatoniques et septièmes pour majeur, mineur, modes, pentatonique, blues et plus
+• Trouver la tonalité la plus probable à partir des accords d'une chanson
+• Cycle des quintes interactif
+• Gammes et notes de l'accord sur le manche, avec intervalles ou noms de notes
+• Les positions de capodastre les plus faciles pour chaque tonalité
+
+GRILLES D'ACCORDS
+• Grilles typiques pop, rock, jazz, blues, classique et flamenco dans toutes les tonalités
+• Grilles aléatoires fondées sur l'harmonie fonctionnelle
+• Jouez en boucle avec le métronome
+
+OUTILS
+• Accordeur chromatique avec notes de référence et calibrage du La (430–450 Hz)
+• Accordages alternatifs et personnalisés : Drop D, DADGAD, Open G, un demi-ton plus bas et les vôtres
+• Métronome avec tap tempo, mesures, subdivisions et accents
+
+FAIT POUR VOUS
+• Mode gaucher
+• Mode sombre et mise en page tablette
+• Notation anglaise, allemande (H) ou latine (Do Ré Mi)
+• Disponible dans plus de 60 langues

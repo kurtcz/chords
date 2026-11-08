@@ -1,0 +1,38 @@
+O Chord Expert reúne acordes, teoria musical, afinador e metrónomo para guitarra, ukulele, bandolim, baixo e banjo – numa só aplicação que funciona totalmente offline, sem anúncios, sem conta e sem rastreio.
+
+PORQUÊ O CHORD EXPERT
+• Calculado a partir da teoria musical, não de uma base de dados – cada acorde é construído a partir das suas notas e as posições são calculadas para o seu instrumento, afinação e capotraste, por isso não falta nenhum acorde nem posição
+• Progressões fluidas – as posições são escolhidas para toda a progressão, para que a mão se mova o menos possível
+• Funciona nos dois sentidos – toque numa posição para ver o nome do acorde, introduza alguns acordes para descobrir a tonalidade
+• Sons reais de instrumentos – ouça cada acorde rasgueado ou dedilhado
+• Privada por natureza – a aplicação não tem qualquer acesso à internet
+
+ACORDES
+• Diagramas de qualquer acorde em todas as posições do braço
+• Classificação de dificuldade e numeração dos dedos em cada posição, com opção de mostrar só as fáceis
+• Inversões e acordes com baixo como C/E ou D/F#
+• Encontre um acorde pela posição dos dedos, incluindo inversões e acordes incompletos
+• Favoritos para cada instrumento
+
+TEORIA
+• Tonalidades e escalas: tríades e tétrades diatónicas para maior, menor, modos, pentatónica, blues e mais
+• Descubra a tonalidade mais provável a partir dos acordes de uma música
+• Ciclo das quintas interativo
+• Escalas e notas do acorde no braço, com intervalos ou nomes das notas
+• As posições de capotraste mais fáceis para cada tonalidade
+
+PROGRESSÕES
+• Progressões típicas de pop, rock, jazz, blues, clássica e flamenco em qualquer tonalidade
+• Progressões aleatórias baseadas na harmonia funcional
+• Toque em ciclo com o metrónomo
+
+FERRAMENTAS
+• Afinador cromático com notas de referência e calibração do Lá (430–450 Hz)
+• Afinações alternativas e personalizadas: Drop D, DADGAD, Open G, meio tom abaixo e as suas
+• Metrónomo com tap tempo, compassos, subdivisões e acentos
+
+FEITA PARA SI
+• Modo para canhotos
+• Modo escuro e esquema para tablet
+• Notação inglesa, alemã (H) ou latina (Dó Ré Mi)
+• Disponível em mais de 60 idiomas

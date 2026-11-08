@@ -1,0 +1,38 @@
+Chord Expert samler akkorder, musikteori, stemmeapparat og metronom til guitar, ukulele, mandolin, bas og banjo – i én app, der fungerer helt offline, uden reklamer, uden konto og uden sporing.
+
+HVORFOR CHORD EXPERT
+• Beregnet ud fra musikteori, ikke fra en database – hver akkord bygges ud fra sine toner, og grebene beregnes til dit instrument, din stemning og din capo, så ingen akkord eller position mangler
+• Glidende akkordforløb – grebene vælges for hele forløbet, så hånden flytter sig så lidt som muligt
+• Virker begge veje – tryk et greb ind og se akkordens navn, indtast nogle akkorder og find tonearten
+• Ægte instrumentlyde – hør hver akkord slået an eller plukket
+• Privat fra bunden – appen har slet ingen internetadgang
+
+AKKORDER
+• Diagrammer for enhver akkord i alle positioner på halsen
+• Sværhedsgrad og fingersætning for hvert greb, med mulighed for kun at vise de nemme
+• Omvendinger og slash-akkorder som C/E eller D/F#
+• Find en akkord ud fra et greb, også omvendinger og ufuldstændige akkorder
+• Favoritter for hvert instrument
+
+TEORI
+• Tonearter og skalaer: diatoniske treklange og septimakkorder for dur, mol, modale skalaer, pentatonik, blues og mere
+• Find den mest sandsynlige toneart ud fra en sangs akkorder
+• Interaktiv kvintcirkel
+• Skalaer og akkordtoner på halsen, med intervaller eller tonenavne
+• De nemmeste capopositioner for enhver toneart
+
+AKKORDFORLØB
+• Typiske forløb inden for pop, rock, jazz, blues, klassisk og flamenco i enhver toneart
+• Tilfældige forløb baseret på funktionsharmonik
+• Spil med i loop sammen med metronomen
+
+VÆRKTØJER
+• Kromatisk stemmeapparat med referencetoner og A4-kalibrering (430–450 Hz)
+• Alternative og egne stemninger: Drop D, DADGAD, Open G, en halv tone ned og dine egne
+• Metronom med tap tempo, taktarter, underdelinger og accenter
+
+LAVET TIL DIG
+• Venstrehåndstilstand
+• Mørk tilstand og tabletlayout
+• Engelske, tyske (H) eller latinske (Do Re Mi) tonenavne
+• Fås på mere end 60 sprog

@@ -1,0 +1,38 @@
+A Chord Expert egyesíti az akkordokat, a zeneelméletet, a hangolót és a metronómot gitárra, ukulelére, mandolinra, basszusgitárra és bendzsóra – egyetlen alkalmazásban, amely teljesen offline működik, reklám, fiók és követés nélkül.
+
+MIÉRT A CHORD EXPERT
+• Zeneelméletből számolva, nem adatbázisból – minden akkordot a hangjaiból épít fel, a fogásokat pedig az Ön hangszerére, hangolására és kapodaszterére számolja ki, így egyetlen akkord vagy fekvés sem hiányzik
+• Gördülékeny akkordmenetek – a fogásokat az egész menetre választja ki, hogy a kéz a lehető legkevesebbet mozduljon
+• Mindkét irányban működik – koppintson egy fogásra és megkapja az akkord nevét, adjon meg néhány akkordot és megtudja a hangnemet
+• Valódi hangszerhangok – minden akkordot meghallgathat pengetve vagy felbontva
+• Adatvédelem alapból – az alkalmazásnak egyáltalán nincs internet-hozzáférése
+
+AKKORDOK
+• Bármely akkord ábrái a fogólap összes fekvésében
+• Nehézségi értékelés és ujjrend minden fogásnál, igény szerint csak a könnyűek
+• Fordítások és basszusos akkordok, például C/E vagy D/F#
+• Akkord keresése fogás alapján, fordításokkal és hiányos akkordokkal együtt
+• Kedvencek hangszerenként
+
+ELMÉLET
+• Hangnemek és skálák: diatonikus hármashangzatok és szeptimakkordok dúrhoz, mollhoz, modális skálákhoz, pentatonhoz, blueshoz és máshoz
+• A legvalószínűbb hangnem egy dal akkordjai alapján
+• Interaktív kvintkör
+• Skálák és akkordhangok a fogólapon, hangközökkel vagy hangnevekkel
+• A legkönnyebb kapodaszter-pozíciók minden hangnemhez
+
+AKKORDMENETEK
+• Jellegzetes menetek popban, rockban, jazzben, bluesban, klasszikus zenében és flamencóban, bármely hangnemben
+• Véletlen menetek a funkciós harmónia alapján
+• Játsszon körbe a metronómmal
+
+ESZKÖZÖK
+• Kromatikus hangoló referenciahangokkal és A4-kalibrációval (430–450 Hz)
+• Alternatív és saját hangolások: Drop D, DADGAD, Open G, fél hanggal lejjebb és a sajátjai
+• Metronóm tap tempóval, ütemfajtákkal, osztásokkal és hangsúlyokkal
+
+ÖNNEK KÉSZÜLT
+• Balkezes mód
+• Sötét mód és táblagépes elrendezés
+• Angol, német (H) vagy latin (Dó Ré Mi) hangnevek
+• Több mint 60 nyelven

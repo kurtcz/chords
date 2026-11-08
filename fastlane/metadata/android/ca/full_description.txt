@@ -1,0 +1,38 @@
+Chord Expert reuneix acords, teoria musical, afinador i metrònom per a guitarra, ukulele, mandolina, baix i banjo, en una sola app que funciona completament fora de línia, sense anuncis, sense compte i sense seguiment.
+
+PER QUÈ CHORD EXPERT
+• Calculat amb teoria musical, no amb una base de dades: cada acord es construeix a partir de les seves notes i les posicions es calculen per al teu instrument, afinació i capodastre, de manera que no hi falta cap acord ni posició
+• Progressions fluides: les posicions es trien per a tota la progressió perquè la mà es mogui tan poc com sigui possible
+• Funciona en tots dos sentits: toca una posició i veuràs el nom de l'acord; introdueix uns quants acords i sabràs la tonalitat
+• Sons reals d'instruments: escolta cada acord rasguejat o puntejat
+• Privada per disseny: l'app no té cap accés a internet
+
+ACORDS
+• Diagrames de qualsevol acord en totes les posicions del mànec
+• Valoració de dificultat i números de dits a cada posició, amb l'opció de mostrar només les fàcils
+• Inversions i acords amb barra com C/E o D/F#
+• Troba un acord per la posició dels dits, també inversions i acords incomplets
+• Preferits per a cada instrument
+
+TEORIA
+• Tonalitats i escales: tríades i quatríades diatòniques per a major, menor, modes, pentatònica, blues i més
+• Esbrina la tonalitat més probable a partir dels acords d'una cançó
+• Cercle de quintes interactiu
+• Escales i notes de l'acord al mànec, amb intervals o noms de notes
+• Les posicions de capodastre més fàcils per a cada tonalitat
+
+PROGRESSIONS
+• Progressions típiques de pop, rock, jazz, blues, clàssica i flamenc en qualsevol tonalitat
+• Progressions aleatòries basades en l'harmonia funcional
+• Toca en bucle amb el metrònom
+
+EINES
+• Afinador cromàtic amb tons de referència i calibratge del La (430–450 Hz)
+• Afinacions alternatives i pròpies: Drop D, DADGAD, Open G, mig to avall i les teves
+• Metrònom amb tap tempo, compassos, subdivisions i accents
+
+FETA PER A TU
+• Mode per a esquerrans
+• Mode fosc i disseny per a tauleta
+• Notació anglesa, alemanya (H) o llatina (Do Re Mi)
+• Disponible en més de 60 llengües

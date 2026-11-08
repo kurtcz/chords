@@ -1,0 +1,38 @@
+Chord Expert objedinjuje akorde, glazbenu teoriju, štimer i metronom za gitaru, ukulele, mandolinu, bas-gitaru i bendžo – u jednoj aplikaciji koja radi potpuno offline, bez oglasa, bez računa i bez praćenja.
+
+ZAŠTO CHORD EXPERT
+• Izračunato iz glazbene teorije, ne iz baze podataka – svaki akord gradi se od svojih tonova, a hvatovi se izračunavaju za vaš instrument, ugađanje i kapodaster, pa ne nedostaje nijedan akord ni pozicija
+• Glatke progresije – hvatovi se biraju za cijelu progresiju kako bi se ruka pomicala što manje
+• Radi u oba smjera – dodirnite hvat i saznajte ime akorda, unesite nekoliko akorada i saznajte tonalitet
+• Pravi zvukovi instrumenata – poslušajte svaki akord udaranjem ili prebiranjem
+• Privatnost od temelja – aplikacija uopće nema pristup internetu
+
+AKORDI
+• Dijagrami bilo kojeg akorda u svim pozicijama na vratu
+• Ocjena težine i brojevi prstiju za svaki hvat, po želji samo laki hvatovi
+• Obrati i slash akordi poput C/E ili D/F#
+• Pronalaženje akorda prema hvatu, uključujući obrate i nepotpune akorde
+• Favoriti za svaki instrument
+
+TEORIJA
+• Tonaliteti i ljestvice: dijatonski trozvuci i septakordi za dur, mol, modove, pentatoniku, blues i više
+• Najvjerojatniji tonalitet prema akordima pjesme
+• Interaktivni kvintni krug
+• Ljestvice i tonovi akorda na vratu, s intervalima ili imenima tonova
+• Najlakše pozicije kapodastera za svaki tonalitet
+
+PROGRESIJE
+• Tipične progresije za pop, rock, jazz, blues, klasiku i flamenco u bilo kojem tonalitetu
+• Nasumične progresije prema funkcionalnoj harmoniji
+• Svirajte u petlji uz metronom
+
+ALATI
+• Kromatski štimer s referentnim tonovima i kalibracijom A4 (430–450 Hz)
+• Alternativna i vlastita ugađanja: Drop D, DADGAD, Open G, pola tona niže i vaša
+• Metronom s tap tempom, mjerama, podjelama i naglascima
+
+ZA VAS
+• Način za ljevake
+• Tamni način i prikaz za tablet
+• Engleski, njemački (H) ili latinski (Do Re Mi) nazivi tonova
+• Na više od 60 jezika

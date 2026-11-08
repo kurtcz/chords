@@ -1,0 +1,38 @@
+Chord Expert vereint Akkorde, Musiktheorie, Stimmgerät und Metronom für Gitarre, Ukulele, Mandoline, Bass und Banjo – in einer App, die komplett offline funktioniert, ohne Werbung, ohne Konto und ohne Tracking.
+
+WARUM CHORD EXPERT
+• Aus der Musiktheorie berechnet, nicht aus einer Datenbank – jeder Akkord wird aus seinen Tönen aufgebaut und die Griffe werden für dein Instrument, deine Stimmung und deinen Kapodaster berechnet, so fehlt kein Akkord und keine Lage
+• Flüssige Akkordfolgen – die Griffe werden für die ganze Folge gewählt, damit die Hand so wenig wie möglich springt
+• Funktioniert in beide Richtungen – Griff antippen und den Akkordnamen sehen, ein paar Akkorde eingeben und die Tonart erfahren
+• Echte Instrumentenklänge – jeden Akkord geschlagen oder gezupft anhören
+• Privat von Grund auf – die App hat überhaupt keinen Internetzugriff
+
+AKKORDE
+• Diagramme für jeden Akkord in allen Lagen auf dem Griffbrett
+• Schwierigkeitsbewertung und Fingersätze für jeden Griff, auf Wunsch nur die einfachen
+• Umkehrungen und Slash-Akkorde wie C/E oder D/F#
+• Akkord nach Griff finden, auch Umkehrungen und unvollständige Akkorde
+• Favoriten für jedes Instrument
+
+THEORIE
+• Tonarten und Tonleitern: leitereigene Dreiklänge und Septakkorde für Dur, Moll, Kirchentonarten, Pentatonik, Blues und mehr
+• Die wahrscheinlichste Tonart aus den Akkorden eines Songs ermitteln
+• Interaktiver Quintenzirkel
+• Tonleitern und Akkordtöne auf dem Griffbrett, mit Intervallen oder Tonnamen
+• Die einfachsten Kapodaster-Positionen für jede Tonart
+
+AKKORDFOLGEN
+• Typische Folgen für Pop, Rock, Jazz, Blues, Klassik und Flamenco in jeder Tonart
+• Zufällige Folgen nach funktionaler Harmonik
+• In Schleife mit dem Metronom mitspielen
+
+WERKZEUGE
+• Chromatisches Stimmgerät mit Referenztönen und A4-Kalibrierung (430–450 Hz)
+• Alternative und eigene Stimmungen: Drop D, DADGAD, Open G, einen Halbton tiefer und eigene
+• Metronom mit Tap-Tempo, Taktarten, Unterteilungen und Betonung
+
+FÜR DICH GEMACHT
+• Modus für Linkshänder
+• Dunkler Modus und Tablet-Layout
+• Englische, deutsche (H) oder lateinische (Do Re Mi) Tonnamen
+• In mehr als 60 Sprachen verfügbar

@@ -1,0 +1,1 @@
+guitarra,ukelele,afinador,metrónomo,progresión,círculo de quintas,escala,cejilla,bajo,banjo

@@ -1,0 +1,38 @@
+Chord Expert kết hợp hợp âm, nhạc lý, máy chỉnh dây và metronome cho guitar, ukulele, mandolin, bass và banjo – trong một ứng dụng hoạt động hoàn toàn ngoại tuyến, không quảng cáo, không cần tài khoản và không theo dõi.
+
+VÌ SAO CHỌN CHORD EXPERT
+• Tính từ nhạc lý, không lấy từ cơ sở dữ liệu – mỗi hợp âm được dựng từ các nốt của nó và thế bấm được tính cho nhạc cụ, kiểu lên dây và capo của bạn, nên không thiếu hợp âm hay vị trí nào
+• Vòng hợp âm mượt mà – thế bấm được chọn cho cả vòng để tay di chuyển ít nhất
+• Hoạt động hai chiều – chạm một thế bấm để biết tên hợp âm, nhập vài hợp âm để biết giọng
+• Âm thanh nhạc cụ thật – nghe mỗi hợp âm quạt chả hoặc rải
+• Riêng tư từ thiết kế – ứng dụng hoàn toàn không truy cập internet
+
+HỢP ÂM
+• Sơ đồ mọi hợp âm ở tất cả vị trí trên cần đàn
+• Điểm độ khó và số ngón tay cho mỗi thế bấm, có thể chỉ hiện các thế dễ
+• Hợp âm đảo và hợp âm có bass như C/E hoặc D/F#
+• Tìm hợp âm từ thế bấm, kể cả hợp âm đảo và hợp âm thiếu
+• Mục yêu thích cho từng nhạc cụ
+
+NHẠC LÝ
+• Giọng và âm giai: hợp âm ba và hợp âm bảy theo âm giai cho trưởng, thứ, các điệu thức, ngũ cung, blues và nhiều hơn
+• Tìm giọng có khả năng nhất từ các hợp âm của bài hát
+• Vòng quãng năm tương tác
+• Âm giai và các nốt của hợp âm trên cần đàn, theo quãng hoặc tên nốt
+• Vị trí capo dễ nhất cho mọi giọng
+
+VÒNG HỢP ÂM
+• Vòng hợp âm tiêu biểu cho pop, rock, jazz, blues, cổ điển và flamenco ở mọi giọng
+• Vòng hợp âm ngẫu nhiên theo hòa âm chức năng
+• Chơi lặp lại cùng metronome
+
+CÔNG CỤ
+• Máy chỉnh dây chromatic với âm chuẩn và hiệu chỉnh A4 (430–450 Hz)
+• Kiểu lên dây khác và tự tạo: Drop D, DADGAD, Open G, hạ nửa cung và của riêng bạn
+• Metronome với tap tempo, nhịp, chia phách và nhấn phách
+
+DÀNH CHO BẠN
+• Chế độ cho người thuận tay trái
+• Chế độ tối và bố cục cho máy tính bảng
+• Tên nốt kiểu Anh, Đức (H) hoặc Latin (Đô Rê Mi)
+• Có hơn 60 ngôn ngữ

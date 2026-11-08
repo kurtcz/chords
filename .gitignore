@@ -174,3 +174,9 @@ UpgradeLog*.htm
 
 # Microsoft Fakes
 FakesAssemblies/
+
+# IDE / OS / Python caches
+.idea/
+.vs/
+.DS_Store
+__pycache__/

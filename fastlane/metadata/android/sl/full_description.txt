@@ -1,0 +1,38 @@
+Chord Expert združuje akorde, glasbeno teorijo, uglaševalec in metronom za kitaro, ukulele, mandolino, bas kitaro in banjo – v eni aplikaciji, ki deluje povsem brez povezave, brez oglasov, brez računa in brez sledenja.
+
+ZAKAJ CHORD EXPERT
+• Izračunano iz glasbene teorije, ne iz baze podatkov – vsak akord je sestavljen iz svojih tonov, prijemi pa so izračunani za vaš inštrument, uglasitev in kapodaster, zato ne manjka noben akord ali lega
+• Gladke progresije – prijemi so izbrani za celotno progresijo, da se roka premika čim manj
+• Deluje v obe smeri – tapnite prijem in izveste ime akorda, vnesite nekaj akordov in izveste tonaliteto
+• Pravi zvoki inštrumentov – vsak akord slišite zaigran s trzanjem ali razloženo
+• Zasebnost že v osnovi – aplikacija sploh nima dostopa do interneta
+
+AKORDI
+• Diagrami katerega koli akorda v vseh legah na vratu
+• Ocena težavnosti in številke prstov pri vsakem prijemu, po želji samo lahki prijemi
+• Obrati in slash akordi, kot sta C/E ali D/F#
+• Iskanje akorda po prijemu, tudi obratov in nepopolnih akordov
+• Priljubljeni za vsak inštrument
+
+TEORIJA
+• Tonalitete in lestvice: diatonični trozvoki in septakordi za dur, mol, modalne lestvice, pentatoniko, blues in več
+• Najverjetnejša tonaliteta glede na akorde pesmi
+• Interaktivni kvintni krog
+• Lestvice in toni akorda na vratu, z intervali ali imeni tonov
+• Najlažji položaji kapodastra za vsako tonaliteto
+
+PROGRESIJE
+• Značilne progresije za pop, rock, jazz, blues, klasiko in flamenko v kateri koli tonaliteti
+• Naključne progresije po funkcijski harmoniji
+• Igrajte v zanki z metronomom
+
+ORODJA
+• Kromatski uglaševalec z referenčnimi toni in kalibracijo A4 (430–450 Hz)
+• Alternativne in lastne uglasitve: Drop D, DADGAD, Open G, pol tona nižje in vaše
+• Metronom s tap tempom, taktovskimi načini, delitvami in poudarki
+
+ZA VAS
+• Način za levičarje
+• Temni način in postavitev za tablico
+• Angleška, nemška (H) ali latinska (Do Re Mi) imena tonov
+• V več kot 60 jezikih

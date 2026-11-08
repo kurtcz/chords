@@ -1,0 +1,38 @@
+Chord Expert; gitar, ukulele, mandolin, bas gitar ve banjo için akorları, müzik teorisini, akort aletini ve metronomu bir araya getirir. Tamamen çevrimdışı çalışan tek bir uygulamada; reklamsız, hesapsız ve takipsiz.
+
+NEDEN CHORD EXPERT
+• Veritabanından değil, müzik teorisinden hesaplanır – her akor kendi notalarından kurulur ve basışlar enstrümanınıza, akordunuza ve kaponuza göre hesaplanır, böylece hiçbir akor ya da pozisyon eksik kalmaz
+• Akıcı akor dizileri – basışlar tüm dizi için birlikte seçilir, böylece eliniz olabildiğince az hareket eder
+• İki yönde de çalışır – bir basışa dokunun ve akorun adını görün, birkaç akor girin ve tonu bulun
+• Gerçek enstrüman sesleri – her akoru tıngırdatarak ya da arpej olarak dinleyin
+• Tasarımdan gelen gizlilik – uygulamanın hiç internet erişimi yok
+
+AKORLAR
+• Herhangi bir akorun klavyedeki tüm pozisyonlarda diyagramları
+• Her basış için zorluk puanı ve parmak numaraları, istenirse yalnızca kolay olanlar
+• C/E veya D/F# gibi çevrimler ve bas notalı akorlar
+• Basıştan akor bulma, çevrimler ve eksik akorlar dahil
+• Her enstrüman için favoriler
+
+TEORİ
+• Tonlar ve gamlar: majör, minör, modlar, pentatonik, blues ve daha fazlası için diyatonik üçlü ve yedili akorlar
+• Bir şarkının akorlarından en olası tonu bulun
+• Etkileşimli beşli çember
+• Klavyede gamlar ve akor notaları, aralıklar veya nota adlarıyla
+• Her ton için en kolay kapo pozisyonları
+
+AKOR DİZİLERİ
+• Her tonda pop, rock, caz, blues, klasik ve flamenko için tipik diziler
+• Fonksiyonel armoniye dayalı rastgele diziler
+• Metronomla döngü halinde birlikte çalın
+
+ARAÇLAR
+• Referans sesleri ve A4 kalibrasyonu (430–450 Hz) olan kromatik akort aleti
+• Alternatif ve özel akortlar: Drop D, DADGAD, Open G, yarım ses pes ve kendi akortlarınız
+• Tap tempo, ölçüler, bölünmeler ve vurgularla metronom
+
+SİZİN İÇİN
+• Solak modu
+• Karanlık mod ve tablet düzeni
+• İngilizce, Almanca (H) veya Latince (Do Re Mi) nota adları
+• 60'tan fazla dilde

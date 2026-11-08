@@ -1,0 +1,38 @@
+Chord Expert reúne acordes, teoría musical, afinador y metrónomo para guitarra, ukelele, mandolina, bajo y banjo, en una sola app que funciona totalmente sin conexión, sin anuncios, sin cuenta y sin rastreo.
+
+POR QUÉ CHORD EXPERT
+• Calculado con teoría musical, no con una base de datos: cada acorde se construye a partir de sus notas y las posturas se calculan para tu instrumento, afinación y cejilla, así que no falta ningún acorde ni posición
+• Progresiones fluidas: las posturas se eligen para toda la progresión para que la mano se mueva lo menos posible
+• Funciona en ambos sentidos: toca una postura y verás el nombre del acorde; introduce unos acordes y sabrás la tonalidad
+• Sonidos reales de instrumentos: escucha cada acorde rasgueado o punteado
+• Privada por diseño: la app no tiene ningún acceso a internet
+
+ACORDES
+• Diagramas de cualquier acorde en todas las posiciones del mástil
+• Valoración de dificultad y números de dedos en cada postura, con opción de mostrar solo las fáciles
+• Inversiones y acordes con barra como C/E o D/F#
+• Busca un acorde por su postura, incluidas inversiones y acordes incompletos
+• Favoritos para cada instrumento
+
+TEORÍA
+• Tonalidades y escalas: tríadas y cuatriadas diatónicas para mayor, menor, modos, pentatónica, blues y más
+• Averigua la tonalidad más probable a partir de los acordes de una canción
+• Círculo de quintas interactivo
+• Escalas y notas del acorde en el mástil, con intervalos o nombres de notas
+• Las posiciones de cejilla más fáciles para cada tonalidad
+
+PROGRESIONES
+• Progresiones típicas de pop, rock, jazz, blues, clásica y flamenco en cualquier tonalidad
+• Progresiones aleatorias basadas en la armonía funcional
+• Toca en bucle con el metrónomo
+
+HERRAMIENTAS
+• Afinador cromático con tonos de referencia y calibración del La (430–450 Hz)
+• Afinaciones alternativas y propias: Drop D, DADGAD, Open G, medio tono abajo y las tuyas
+• Metrónomo con tap tempo, compases, subdivisiones y acentos
+
+HECHA PARA TI
+• Modo para zurdos
+• Modo oscuro y diseño para tableta
+• Notación inglesa, alemana (H) o latina (Do Re Mi)
+• Disponible en más de 60 idiomas

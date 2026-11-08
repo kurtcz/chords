@@ -1,0 +1,38 @@
+Chord Expert reunește acorduri, teorie muzicală, un acordor și un metronom pentru chitară, ukulele, mandolină, chitară bas și banjo – într-o singură aplicație care funcționează complet offline, fără reclame, fără cont și fără urmărire.
+
+DE CE CHORD EXPERT
+• Calculat din teoria muzicii, nu dintr-o bază de date – fiecare acord este construit din notele sale, iar pozițiile sunt calculate pentru instrumentul, acordajul și capodastrul tău, așa că nu lipsește niciun acord și nicio poziție
+• Progresii fluide – pozițiile sunt alese pentru întreaga progresie, ca mâna să se miște cât mai puțin
+• Funcționează în ambele sensuri – atinge o poziție și află numele acordului, introdu câteva acorduri și află tonalitatea
+• Sunete reale de instrumente – ascultă fiecare acord ciupit sau strumat
+• Confidențialitate din construcție – aplicația nu are deloc acces la internet
+
+ACORDURI
+• Diagrame pentru orice acord în toate pozițiile de pe grif
+• Notă de dificultate și numerele degetelor pentru fiecare poziție, cu opțiunea de a le afișa doar pe cele ușoare
+• Inversiuni și acorduri slash precum C/E sau D/F#
+• Găsește un acord după poziția degetelor, inclusiv inversiuni și acorduri incomplete
+• Favorite pentru fiecare instrument
+
+TEORIE
+• Tonalități și game: trisonuri și acorduri de septimă diatonice pentru major, minor, moduri, pentatonică, blues și altele
+• Află cea mai probabilă tonalitate din acordurile unei melodii
+• Cercul cvintelor interactiv
+• Game și notele acordului pe grif, cu intervale sau nume de note
+• Cele mai ușoare poziții de capodastru pentru fiecare tonalitate
+
+PROGRESII
+• Progresii tipice pop, rock, jazz, blues, clasic și flamenco în orice tonalitate
+• Progresii aleatorii bazate pe armonia funcțională
+• Cântă în buclă cu metronomul
+
+UNELTE
+• Acordor cromatic cu tonuri de referință și calibrarea La4 (430–450 Hz)
+• Acordaje alternative și proprii: Drop D, DADGAD, Open G, cu un semiton mai jos și ale tale
+• Metronom cu tap tempo, măsuri, subdiviziuni și accente
+
+FĂCUTĂ PENTRU TINE
+• Mod pentru stângaci
+• Mod întunecat și aspect pentru tabletă
+• Notație engleză, germană (H) sau latină (Do Re Mi)
+• Disponibilă în peste 60 de limbi

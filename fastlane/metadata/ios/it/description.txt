@@ -1,0 +1,38 @@
+Chord Expert riunisce accordi, teoria musicale, accordatore e metronomo per chitarra, ukulele, mandolino, basso e banjo, in un'unica app che funziona completamente offline, senza pubblicità, senza account e senza tracciamento.
+
+PERCHÉ CHORD EXPERT
+• Calcolato dalla teoria musicale, non da un database: ogni accordo è costruito dalle sue note e le posizioni sono calcolate per il tuo strumento, la tua accordatura e il tuo capotasto, così non manca nessun accordo né posizione
+• Giri armonici fluidi: le posizioni sono scelte sull'intero giro perché la mano si sposti il meno possibile
+• Funziona nei due sensi: tocca una posizione per sapere il nome dell'accordo, inserisci alcuni accordi per trovare la tonalità
+• Suoni di strumenti veri: ascolta ogni accordo strimpellato o arpeggiato
+• Riservata per natura: l'app non ha alcun accesso a internet
+
+ACCORDI
+• Diagrammi di qualsiasi accordo in tutte le posizioni del manico
+• Valutazione di difficoltà e diteggiatura per ogni posizione, con l'opzione di mostrare solo quelle facili
+• Rivolti e accordi slash come C/E o D/F#
+• Trova un accordo dalla posizione delle dita, anche rivolti e accordi incompleti
+• Preferiti per ogni strumento
+
+TEORIA
+• Tonalità e scale: triadi e quadriadi diatoniche per maggiore, minore, modi, pentatonica, blues e altro
+• Trova la tonalità più probabile dagli accordi di una canzone
+• Circolo delle quinte interattivo
+• Scale e note dell'accordo sul manico, con intervalli o nomi delle note
+• Le posizioni di capotasto più facili per ogni tonalità
+
+GIRI ARMONICI
+• Giri tipici di pop, rock, jazz, blues, classica e flamenco in qualsiasi tonalità
+• Giri casuali basati sull'armonia funzionale
+• Suona in loop con il metronomo
+
+STRUMENTI
+• Accordatore cromatico con note di riferimento e calibrazione del La (430–450 Hz)
+• Accordature alternative e personalizzate: Drop D, DADGAD, Open G, mezzo tono sotto e le tue
+• Metronomo con tap tempo, tempi, suddivisioni e accenti
+
+FATTA PER TE
+• Modalità per mancini
+• Tema scuro e layout per tablet
+• Notazione inglese, tedesca (H) o latina (Do Re Mi)
+• Disponibile in oltre 60 lingue

@@ -1,0 +1,1 @@
+guitar,ukulele,greb,stemmeapparat,tuner,metronom,akkordforløb,kvintcirkel,skala,capo,bas

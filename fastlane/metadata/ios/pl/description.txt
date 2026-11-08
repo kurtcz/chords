@@ -1,0 +1,38 @@
+Chord Expert łączy akordy, teorię muzyki, tuner i metronom na gitarę, ukulele, mandolinę, gitarę basową i banjo – w jednej aplikacji, która działa całkowicie offline, bez reklam, bez konta i bez śledzenia.
+
+DLACZEGO CHORD EXPERT
+• Obliczane z teorii muzyki, a nie z bazy danych – każdy akord jest budowany z jego dźwięków, a chwyty są wyliczane dla Twojego instrumentu, stroju i kapodastra, więc nie brakuje żadnego akordu ani pozycji
+• Płynne progresje – chwyty są dobierane dla całej progresji, aby ręka przesuwała się jak najmniej
+• Działa w obie strony – zaznacz chwyt i zobacz nazwę akordu, wpisz kilka akordów i poznaj tonację
+• Prawdziwe brzmienie instrumentów – posłuchaj każdego akordu granego biciem lub palcami
+• Prywatność od podstaw – aplikacja w ogóle nie ma dostępu do internetu
+
+AKORDY
+• Diagramy dowolnego akordu we wszystkich pozycjach na gryfie
+• Ocena trudności i numery palców przy każdym chwycie, z opcją pokazywania tylko łatwych
+• Przewroty i akordy z basem jak C/E lub D/F#
+• Szukanie akordu po chwycie, także przewrotów i akordów niepełnych
+• Ulubione dla każdego instrumentu
+
+TEORIA
+• Tonacje i skale: diatoniczne trójdźwięki i akordy septymowe dla dur, moll, skal modalnych, pentatoniki, bluesa i innych
+• Najbardziej prawdopodobna tonacja na podstawie akordów piosenki
+• Interaktywne koło kwintowe
+• Skale i dźwięki akordu na gryfie, z interwałami lub nazwami dźwięków
+• Najłatwiejsze pozycje kapodastra dla każdej tonacji
+
+PROGRESJE
+• Typowe progresje pop, rock, jazz, blues, klasyczne i flamenco w dowolnej tonacji
+• Losowe progresje oparte na harmonii funkcyjnej
+• Graj w pętli z metronomem
+
+NARZĘDZIA
+• Tuner chromatyczny z dźwiękami odniesienia i kalibracją A4 (430–450 Hz)
+• Alternatywne i własne stroje: Drop D, DADGAD, Open G, pół tonu niżej i Twoje własne
+• Metronom z tap tempo, metrum, podziałami i akcentami
+
+DLA CIEBIE
+• Tryb dla leworęcznych
+• Tryb ciemny i układ na tablet
+• Angielskie, niemieckie (H) lub łacińskie (Do Re Mi) nazwy dźwięków
+• Dostępna w ponad 60 językach
